@@ -6,6 +6,7 @@ var path = require('path')
 var colors = require('colors')
 var webpack = require('webpack')
 var cssnano = require('cssnano')
+var CleanWebpackPlugin = require('clean-webpack-plugin')
 var webpack_merge = require('webpack-merge')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var mkdirp = require('mkdirp')
@@ -58,7 +59,7 @@ var count = 0
 // 调整配置、打包
 function build(name, file_path) {
     // console.log(file_path)
-    var output_path = path.resolve(__dirname, '../dist/components/' + name.toLowerCase() + '/')
+    var output_path = path.resolve(__dirname, '../min/ks/components/' + name.toLowerCase() + '/')
 
     var config = webpack_merge.smart(webpackConfig, {
             entry: {},
@@ -77,6 +78,11 @@ function build(name, file_path) {
                 }
             },
             plugins: [
+                new CleanWebpackPlugin(['ks'], {
+                    root: path.resolve(__dirname,'../min'),
+                    verbose: true,
+                    dry: false
+                }),
                 new webpack.optimize.UglifyJsPlugin({
                     compress: {
                         warnings: false
