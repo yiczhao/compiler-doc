@@ -69,6 +69,18 @@ export default [
         ]
       },
       {
+        name: '验证 Validate', icon: 'icon', link: '',
+        subMenu: [
+          {name: 'Validate 验证', icon: 'icon', link: 'remark'},
+          {name: '默认校验规则', icon: 'icon', link: 'rules'},
+          ////{name: '常用方法及注意问题', icon: 'icon', link: 'usage'},
+          //{name: 'API', icon: 'icon', link: 'api'},
+          //{name: '实例演示', icon: 'icon', link: 'demo'},
+
+          
+        ]
+      },
+      {
         name: '其他 Others', icon: 'icon', link: '',
         subMenu: [
           {name: 'Dialog 对话框', icon: 'icon', link: ''},
