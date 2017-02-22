@@ -30,6 +30,13 @@ export default (router) => {
             require(['./views/other/welcome.vue'], resolve)
           }
         },
+        '/home': {
+          name: 'welcome',
+          cnName: '欢迎页面',
+          component: (resolve) => {
+            require(['./views/other/welcome.vue'], resolve)
+          }
+        },
 
         /* 开发指南-安装 */
         '/install': {
