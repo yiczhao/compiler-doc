@@ -97,7 +97,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 
-/******/ 			script.src = __webpack_require__.p + "" + ({"0":"app","14":"vuecore"}[chunkId]||chunkId) + "." + {"0":"b90bdd45","1":"21889f98","2":"0fdc53f1","3":"c3072e27","4":"41fa6ad2","5":"dea51ca0","6":"d8e69565","7":"3e3be70f","8":"e2667380","9":"6738271c","10":"4dd3eac2","11":"dd5c507a","12":"140abeef","13":"bc77a6f6","14":"558d8c76"}[chunkId] + ".js";
+/******/ 			script.src = __webpack_require__.p + "" + ({"0":"app","14":"vuecore"}[chunkId]||chunkId) + "." + {"0":"a010d2c3","1":"21889f98","2":"0fdc53f1","3":"6aa4ae95","4":"41fa6ad2","5":"dea51ca0","6":"1348f73c","7":"3e3be70f","8":"9d07a892","9":"6738271c","10":"4dd3eac2","11":"dd5c507a","12":"140abeef","13":"93eab936","14":"558d8c76"}[chunkId] + ".js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};
@@ -109,7 +109,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/dist/";
+/******/ 	__webpack_require__.p = "./dist/";
 /******/ })
 /************************************************************************/
 /******/ ((function(modules) {
