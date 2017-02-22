@@ -21,7 +21,8 @@
 
 
 #### datemulti
-<ks-date-picker :value="datemulti" type="datemulti" v-on:change="datemulti_change"></ks-date-picker>
+{{datemulti}}
+<ks-date-picker :value.sync="datemulti" type="datemulti" v-on:change="datemulti_change"></ks-date-picker>
 ```html
 <ks-date-picker :value="datemulti" type="datemulti" v-on:change="datemulti_change"></ks-date-picker>
 ```
@@ -29,6 +30,7 @@
 
 
 #### daterange
+
 <ks-dater-range v-on:change="daterange_change"></ks-dater-range>
 ```html
 <ks-dater-range v-on:change="daterange_change"></ks-dater-range>
@@ -55,7 +57,7 @@
             return {
                 datetime:'2016-10-12 03:04:20',
                 date:'',
-                datemulti:'2016-11-09,2016-11-10,2016-11-11,2016-11-18,2016-11-17,2016-11-16,2016-11-15,2016-11-13,2016-11-14',
+                datemulti:'2016-11-09',
                 date_base:'2016-10-12 03:04:20',
                 date_val:'2016-11-09,2016-11-10,2016-11-11,2016-11-18,2016-11-17,2016-11-16,2016-11-15,2016-11-13,2016-11-14'
             }
@@ -70,7 +72,12 @@
             },
             datemulti_change(val){
                 // console.log('筛选 picker',val)
-                // this.date3 = val
+                if(!val){
+                    // setTimeout(()=>{
+                        this.datemulti = '2016-11-02'            
+                    // })
+                }
+                
             },
             daterange_change(){},
             date_multi_picker_change(val){
