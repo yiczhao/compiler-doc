@@ -690,7 +690,7 @@ webpackJsonp([0],[
 	      name: 'index',
 	      cnName: '主页',
 	      component: function component(resolve) {
-	        __webpack_require__.e/* require */(1, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(57)]; (function (res) {
+	        __webpack_require__.e/* require */(13, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(57)]; (function (res) {
 	          resolve(res);
 	        }.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));});
 	      },
@@ -702,7 +702,7 @@ webpackJsonp([0],[
 	          name: 'welcome',
 	          cnName: '欢迎页面',
 	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(2, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(80)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	            __webpack_require__.e/* require */(14, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(80)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	          }
 	        },
 
@@ -711,7 +711,7 @@ webpackJsonp([0],[
 	          name: 'install',
 	          cnName: '安装',
 	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(3, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(84)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	            __webpack_require__.e/* require */(15, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(84)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	          }
 	        },
 
@@ -720,7 +720,7 @@ webpackJsonp([0],[
 	          name: 'base',
 	          cnName: '基础组件',
 	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(4, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(87)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	            __webpack_require__.e/* require */(16, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(87)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	          },
 
 	          subRoutes: {
@@ -730,7 +730,7 @@ webpackJsonp([0],[
 	              name: 'layout',
 	              cnName: '布局',
 	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(5, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(90)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	                __webpack_require__.e/* require */(17, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(90)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	              }
 	            },
 
@@ -739,7 +739,7 @@ webpackJsonp([0],[
 	              name: 'button',
 	              cnName: '按钮',
 	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(6, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(93)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	                __webpack_require__.e/* require */(18, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(93)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	              }
 	            }
 	          }
@@ -749,7 +749,7 @@ webpackJsonp([0],[
 	          name: 'form',
 	          cnName: '表单',
 	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(7, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(97)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	            __webpack_require__.e/* require */(19, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(97)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	          },
 
 	          subRoutes: {
@@ -759,17 +759,18 @@ webpackJsonp([0],[
 	              name: 'datepicker',
 	              cnName: '布局',
 	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(8, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(100)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	                __webpack_require__.e/* require */(20, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(100)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	              }
 	            }
 	          }
 	        },
+
 	        /* data */
 	        '/data': {
 	          name: 'data',
 	          cnName: '数据展示',
 	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(9, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(104)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	            __webpack_require__.e/* require */(21, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(104)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	          },
 
 	          subRoutes: {
@@ -779,7 +780,35 @@ webpackJsonp([0],[
 	              name: 'page',
 	              cnName: '分页',
 	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(10, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(107)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	                __webpack_require__.e/* require */(22, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(107)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            }
+	          }
+	        },
+
+	        /* validate */
+	        '/validate': {
+	          name: 'validate',
+	          cnName: '验证',
+	          component: function component(resolve) {
+	            __webpack_require__.e/* require */(23, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(316)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	          },
+
+	          subRoutes: {
+	            /* 说明 */
+	            '/remark': {
+	              name: 'remark',
+	              cnName: '说明',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(24, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(319)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+	            /* 说明 */
+	            '/rules': {
+	              name: 'rules',
+	              cnName: '默认校验规则',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(25, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(322)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	              }
 	            }
 	          }

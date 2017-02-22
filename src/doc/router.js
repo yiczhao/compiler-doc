@@ -89,6 +89,7 @@ export default (router) => {
             }
           }
         },
+
         /* data */
         '/data': {
           name: 'data',
@@ -105,6 +106,34 @@ export default (router) => {
               cnName: '分页',
               component: (resolve) => {
                 require(['./views/data/page.md'], resolve)
+              }
+            }
+          }
+        },
+
+        /* validate */
+        '/validate': {
+          name: 'validate',
+          cnName: '验证',
+          component: (resolve) => {
+            require(['./views/validate/index.vue'], resolve)
+          },
+
+          subRoutes: {
+            /* 说明 */
+            '/remark': {
+              name: 'remark',
+              cnName: '说明',
+              component: (resolve) => {
+                require(['./views/validate/validate.md'], resolve)
+              }
+            },
+            /* 说明 */
+            '/rules': {
+              name: 'rules',
+              cnName: '默认校验规则',
+              component: (resolve) => {
+                require(['./views/validate/rules.md'], resolve)
               }
             }
           }

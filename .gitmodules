@@ -1,0 +1,3 @@
+[submodule "min"]
+    path = min
+    url = http://zhangdazhu:qazks123@gitlab.kashuo.net/uigroup/ksmin.git
