@@ -12,10 +12,6 @@ var BrowserSync = require('browser-sync-webpack-plugin');
 var HtmlWebpackPlguin = require('html-webpack-plugin');
 
 var mixinWebpackConfig = merge.smart(webpackConfig, {
-    output: {
-        path: path.resolve(__dirname, '../dist'),
-        publicPath: '/dist/'
-    },
     watch: true,
     plugins: [
         new CleanWebpackPlugin(['dist'], {
