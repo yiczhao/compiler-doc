@@ -12,10 +12,6 @@ var BrowserSync = require('browser-sync-webpack-plugin');
 var HtmlWebpackPlguin = require('html-webpack-plugin');
 
 var mixinWebpackConfig = merge.smart(webpackConfig, {
-    output: {
-        path: path.resolve(__dirname, '../dist'),
-        publicPath: '/dist/'
-    },
     watch: true,
     plugins: [
         new CleanWebpackPlugin(['dist'], {
@@ -32,8 +28,8 @@ var mixinWebpackConfig = merge.smart(webpackConfig, {
             }
         }),
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'vueCore',
-            filename: 'vueCore.js'
+            name: 'vuecore',
+            filename: 'vuecore.js'
         }),
         // new webpack.ProgressPlugin(function (percentage, msg) {
         //   console.log('进度：' + Math.round(percentage * 100) + '% ---> ' + msg)
