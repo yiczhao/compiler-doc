@@ -124,7 +124,9 @@
                 }
                 this.value = value
                 // console.log('change',value)
-                this.$emit('change',value)
+                this.$nextTick(()=>{
+                    this.$emit('change',value)
+                })
                 
             },
             // 选择时间
