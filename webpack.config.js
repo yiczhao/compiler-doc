@@ -66,7 +66,7 @@ module.exports = {
     },
 
     preprocess: function(MarkdownIt, Source) {
-        console.log(Source)
+        // console.log(Source)
       // code inline
       MarkdownIt.renderer.rules.code_inline = function(tokens, idx, options, env, slf) {
         var token = tokens[idx];
@@ -84,9 +84,18 @@ module.exports = {
         return '</table></div>';
       };
 
-      Source.match(/<script(?:\s+[^>]*)?>(.*?)<\/script\s*>/ig)
-
-      return Source;
+      function copyScript(str){
+          var MDStr =''
+          var matchArr = str.match(/<script(?:\s+[^>]*)?>(.*?)<\/script\s*>/ig)
+          matchArr && (MDStr += matchArr.map(function(item){
+              return '```javascript'+item+'``'
+          }).reduce(function(duce,item){
+              return duce+item
+          }))
+          return MDStr
+      }
+      
+      return Source+copyScript(Source);
     },
 
     use: [

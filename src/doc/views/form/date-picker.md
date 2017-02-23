@@ -106,7 +106,7 @@
 | type | dater类型 | props | String | **date**, **datetime**, **datemulti**| date |
 | value | 数据中绑定的值（可sync） | props | String | **date=>'2016-11-09'**，**datetime=>'2016-11-09 03:04:20'**，**datemulti=>'2016-11-09,2016-11-10'** | 无 |
 | readonly | 是否只读 | props | Boolean | `true`, `false` | `false` |
-| change | 组件中日期时间改变复值 | props | Function | 无 | 无 |
+| change | 组件中日期时间改变复值 | props | Function | `可不设置change` | 无 |
 
 ### 范围日期组件API（区别部分如下）
 | 参数 | 说明 | 接口类型 | 类型 | 可选值 | 默认值 |

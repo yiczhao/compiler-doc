@@ -38,12 +38,28 @@ export default (router) => {
           }
         },
 
-        /* 开发指南-安装 */
-        '/install': {
-          name: 'install',
-          cnName: '安装',
+        /* 引导 */
+        '/guide': {
+          name: 'guide',
+          cnName: '介绍',
           component: (resolve) => {
-            require(['./views/guide/install.md'], resolve)
+            require(['./views/guide/index.vue'], resolve)
+          },
+          subRoutes: {
+            '/intro': {
+              name: 'intro',
+              cnName: '介绍',
+              component: (resolve) => {
+                require(['./views/guide/intro.md'], resolve)
+              }
+            },
+            '/dir': {
+              name: 'dir',
+              cnName: '目录结构',
+              component: (resolve) => {
+                require(['./views/guide/dir.md'], resolve)
+              }
+            }
           }
         },
 
