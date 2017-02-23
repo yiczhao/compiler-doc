@@ -21,6 +21,7 @@ export default {
                     this.point_daters = this.point_daters.filter((v)=>{
                         if(v) return v
                     })
+                    
                     if(val.length > oldval.length){
                         addItem = this.point_daters[this.point_daters.length-1]
                     }else{
@@ -41,7 +42,7 @@ export default {
                 this.point_daters = []
                 ~this.value.indexOf(',') 
                     ? (this.point_daters = this.value.split(','))
-                    : (this.point_daters.push(this.value))
+                    : (this.value && this.point_daters.push(this.value))
 
                 // console.log(this.value);    
             }
