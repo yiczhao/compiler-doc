@@ -51,7 +51,7 @@
 /******/ 	// "0" means "already loaded"
 /******/ 	// Array means "loading", array contains callbacks
 /******/ 	var installedChunks = {
-/******/ 		15:0
+/******/ 		14:0
 /******/ 	};
 
 /******/ 	// The require function
@@ -97,7 +97,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 
-/******/ 			script.src = __webpack_require__.p + "" + ({"0":"app","14":"vuecore"}[chunkId]||chunkId) + "." + {"0":"a010d2c3","1":"21889f98","2":"0fdc53f1","3":"e9843ea0","4":"41fa6ad2","5":"dea51ca0","6":"1348f73c","7":"3e3be70f","8":"9970a29b","9":"6738271c","10":"4dd3eac2","11":"dd5c507a","12":"44cdf577","13":"bc77a6f6","14":"558d8c76"}[chunkId] + ".js";
+/******/ 			script.src = __webpack_require__.p + "" + ({"0":"app"}[chunkId]||chunkId) + "." + {"0":"a010d2c3","1":"21889f98","2":"0fdc53f1","3":"6aa4ae95","4":"41fa6ad2","5":"dea51ca0","6":"cca1b5c2","7":"3e3be70f","8":"f2bbab64","9":"6738271c","10":"4dd3eac2","11":"dd5c507a","12":"140abeef","13":"93eab936"}[chunkId] + ".js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};
@@ -110,6 +110,9 @@
 
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "./dist/";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
 /******/ ((function(modules) {
@@ -136,7 +139,34 @@
 	}
 	return modules;
 }([
-/* 0 */,
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _vue = __webpack_require__(5);
+
+	var _vue2 = _interopRequireDefault(_vue);
+
+	var _vuex = __webpack_require__(6);
+
+	var _vuex2 = _interopRequireDefault(_vuex);
+
+	var _vueRouter = __webpack_require__(30);
+
+	var _vueRouter2 = _interopRequireDefault(_vueRouter);
+
+	var _vueResource = __webpack_require__(31);
+
+	var _vueResource2 = _interopRequireDefault(_vueResource);
+
+	var _vueValidator = __webpack_require__(55);
+
+	var _vueValidator2 = _interopRequireDefault(_vueValidator);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ },
 /* 1 */
 /***/ function(module, exports) {
 
