@@ -66,6 +66,7 @@ module.exports = {
     },
 
     preprocess: function(MarkdownIt, Source) {
+        console.log(Source)
       // code inline
       MarkdownIt.renderer.rules.code_inline = function(tokens, idx, options, env, slf) {
         var token = tokens[idx];
@@ -82,6 +83,8 @@ module.exports = {
       MarkdownIt.renderer.rules.table_close = function() {
         return '</table></div>';
       };
+
+      Source.match(/<script(?:\s+[^>]*)?>(.*?)<\/script\s*>/ig)
 
       return Source;
     },

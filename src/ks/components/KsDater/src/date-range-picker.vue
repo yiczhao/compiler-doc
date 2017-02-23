@@ -23,7 +23,10 @@
         mixins: [props],
         props:{
             range:{
-                type:Array
+                type:Array,
+                default(){
+                    return []
+                }
             },
             placeholder:{
                 coerce(val) {
