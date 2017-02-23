@@ -113,17 +113,17 @@
                     break;
                     case 'datemulti':
                         this.point_daters = this.non(this.point_daters,dater)
-                        console.log(this.point_daters)
+                        // console.log(this.point_daters)
                         value = this.point_daters.join(',')
                     break;
                     case 'datetime':
-                        console.log(dater)
+                        // console.log(dater)
                         dater = dater || stringify(new Date())
                         value = dater+' '+this.times.join(':')
                     break;
                 }
                 this.value = value
-                console.log('change',value)
+                // console.log('change',value)
                 this.$emit('change',value)
                 
             },

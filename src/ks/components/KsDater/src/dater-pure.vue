@@ -88,11 +88,11 @@
              pick2 (e){
                 var id = event.target.id.split('_')
                 var index = +id[1] 
-                console.log(index)
+                // console.log(index)
                 if(isNaN(index) || id[2]=='disabled') return
 
                 this.value = this.dates[index].dater
-                console.log(index,this.value)
+                // console.log(index,this.value)
                 
                 // this.dates[10].status='active'
                 
@@ -131,7 +131,7 @@
                 return arr
             },
             val_change(val){
-                console.log(val)
+                // console.log(val)
                 this.val = val
                 this.val = 'val_I_'+Math.random()*1000
             }

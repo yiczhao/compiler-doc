@@ -19,7 +19,7 @@ export default {
         },
         methods: {
             today (){
-                alert('mixins today')
+                // alert('mixins today')
             },
             // 切换年
             click_year (flag) {

@@ -24,13 +24,13 @@ export default {
                     if(val.length > oldval.length){
                         addItem = this.point_daters[this.point_daters.length-1]
                     }else{
-                        console.log(this.now,'=====')
+                        // console.log(this.now,'=====')
                         addItem = stringify(this.now)
                     }
-                    console.log('addItem',addItem)
-                    console.log('oldval',oldval)
+                    // console.log('addItem',addItem)
+                    // console.log('oldval',oldval)
                     var now = (addItem && parse(addItem)) || parse(oldval)
-                    console.log('this.now = ',now)
+                    // console.log('this.now = ',now)
                     this.now = now 
 
                 }
