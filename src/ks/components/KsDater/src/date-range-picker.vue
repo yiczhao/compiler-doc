@@ -5,11 +5,11 @@
         <div class="ks-col">
             <div class="ks-row-auto">
                 <div class="ks-col">
-                    <input type="text" placeholder="{{placeholder[0]}}" :value="range[0]">
+                    <input type="text" readonly placeholder="{{placeholder[0]}}" :value="range[0]">
                 </div>
                 <i class="icon ks-col-auto scope-icon">&#xe677;</i>
                 <div class="ks-col">
-                    <input type="text" placeholder="{{placeholder[1]}}" :value="range[1]">
+                    <input type="text" readonly placeholder="{{placeholder[1]}}" :value="range[1]">
                 </div>
             </div>
         </div>
