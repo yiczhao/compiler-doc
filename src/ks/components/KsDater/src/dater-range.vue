@@ -202,6 +202,15 @@
             },
             next_now () {
                 this.next_month_dates()
+            },
+            range_dater(val){
+                // console.log(val)
+                if(val.length == 2){
+                    this.redraw(val,val)    
+                }else{
+                    this.redraw([stringify(this.now),stringify(this.next_now)],val)    
+                }
+                
             }
         },
         created(){

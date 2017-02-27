@@ -157,6 +157,10 @@
         },
         ready(){
             this.date1 = '2016-09-21 03:02:24'
+
+            setTimeout(()=>{
+                this.dateRangePicker = ['2016-09-21','2016-10-29']
+            },1000)
         }
 
     }
