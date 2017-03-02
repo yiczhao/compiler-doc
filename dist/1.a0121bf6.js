@@ -296,8 +296,8 @@ webpackJsonp([1],{
 	 */
 
 	exports.default = [{
-	  name: '开发指南 Guide',
-	  subMenu: [{ name: '安装', icon: 'icon', link: 'install' }, { name: '快速上手', icon: 'icon', link: '' }]
+	  name: '引导Guide',
+	  subMenu: [{ name: '介绍', icon: 'icon', link: 'intro' }, { name: '目录结构', icon: 'icon', link: 'dir' }]
 	}, {
 	  name: '基础组件 Base',
 	  subMenu: [{

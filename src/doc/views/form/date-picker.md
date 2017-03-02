@@ -119,7 +119,7 @@
     export default {
         data(){
             return {
-                datetime:'2016-10-12 03:04:20',
+                datetime:'',
                 date:'',
                 datemulti:'',
                 dateMultiPure:'',

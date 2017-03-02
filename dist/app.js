@@ -28,19 +28,19 @@ webpackJsonp([0],[
 
 	var _router2 = _interopRequireDefault(_router);
 
-	var _utils = __webpack_require__(120);
+	var _utils = __webpack_require__(126);
 
 	var _utils2 = _interopRequireDefault(_utils);
 
-	var _components = __webpack_require__(144);
+	var _components = __webpack_require__(150);
 
 	var _components2 = _interopRequireDefault(_components);
 
-	var _directives = __webpack_require__(308);
+	var _directives = __webpack_require__(314);
 
 	var _directives2 = _interopRequireDefault(_directives);
 
-	var _filters = __webpack_require__(315);
+	var _filters = __webpack_require__(321);
 
 	var _filters2 = _interopRequireDefault(_filters);
 
@@ -52,7 +52,7 @@ webpackJsonp([0],[
 	 * @data 16/6/1
 	 * @email pkeros@vip.qq.com
 	 */
-	__webpack_require__(318);
+	__webpack_require__(324);
 
 
 	// Vue configure
@@ -713,12 +713,28 @@ webpackJsonp([0],[
 	          }
 	        },
 
-	        /* 开发指南-安装 */
-	        '/install': {
-	          name: 'install',
-	          cnName: '安装',
+	        /* 引导 */
+	        '/guide': {
+	          name: 'guide',
+	          cnName: '介绍',
 	          component: function component(resolve) {
 	            __webpack_require__.e/* require */(3, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(84)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	          },
+	          subRoutes: {
+	            '/intro': {
+	              name: 'intro',
+	              cnName: '介绍',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(4, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(87)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+	            '/dir': {
+	              name: 'dir',
+	              cnName: '目录结构',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(5, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(90)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            }
 	          }
 	        },
 
@@ -727,7 +743,7 @@ webpackJsonp([0],[
 	          name: 'base',
 	          cnName: '基础组件',
 	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(4, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(87)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	            __webpack_require__.e/* require */(6, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(93)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	          },
 
 	          subRoutes: {
@@ -737,7 +753,7 @@ webpackJsonp([0],[
 	              name: 'layout',
 	              cnName: '布局',
 	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(5, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(90)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	                __webpack_require__.e/* require */(7, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(96)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	              }
 	            },
 
@@ -746,7 +762,7 @@ webpackJsonp([0],[
 	              name: 'button',
 	              cnName: '按钮',
 	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(6, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(93)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	                __webpack_require__.e/* require */(8, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(99)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	              }
 	            }
 	          }
@@ -756,7 +772,7 @@ webpackJsonp([0],[
 	          name: 'form',
 	          cnName: '表单',
 	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(7, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(97)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	            __webpack_require__.e/* require */(9, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(103)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	          },
 
 	          subRoutes: {
@@ -766,7 +782,7 @@ webpackJsonp([0],[
 	              name: 'datepicker',
 	              cnName: '布局',
 	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(8, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(100)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	                __webpack_require__.e/* require */(10, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(106)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	              }
 	            }
 	          }
@@ -777,7 +793,7 @@ webpackJsonp([0],[
 	          name: 'data',
 	          cnName: '数据展示',
 	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(9, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(104)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	            __webpack_require__.e/* require */(11, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(110)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	          },
 
 	          subRoutes: {
@@ -787,7 +803,7 @@ webpackJsonp([0],[
 	              name: 'page',
 	              cnName: '分页',
 	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(10, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(107)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	                __webpack_require__.e/* require */(12, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(113)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	              }
 	            }
 	          }
@@ -798,7 +814,7 @@ webpackJsonp([0],[
 	          name: 'validate',
 	          cnName: '验证',
 	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(11, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(111)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	            __webpack_require__.e/* require */(13, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(117)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	          },
 
 	          subRoutes: {
@@ -807,7 +823,7 @@ webpackJsonp([0],[
 	              name: 'remark',
 	              cnName: '说明',
 	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(12, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(114)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	                __webpack_require__.e/* require */(14, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(120)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	              }
 	            },
 	            /* 说明 */
@@ -815,7 +831,7 @@ webpackJsonp([0],[
 	              name: 'rules',
 	              cnName: '默认校验规则',
 	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(13, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(117)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	                __webpack_require__.e/* require */(15, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(123)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	              }
 	            }
 	          }
@@ -1166,7 +1182,13 @@ webpackJsonp([0],[
 /* 117 */,
 /* 118 */,
 /* 119 */,
-/* 120 */
+/* 120 */,
+/* 121 */,
+/* 122 */,
+/* 123 */,
+/* 124 */,
+/* 125 */,
+/* 126 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1175,15 +1197,15 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _defineProperties = __webpack_require__(121);
+	var _defineProperties = __webpack_require__(127);
 
 	var _defineProperties2 = _interopRequireDefault(_defineProperties);
 
-	var _Cookie = __webpack_require__(140);
+	var _Cookie = __webpack_require__(146);
 
 	var _Cookie2 = _interopRequireDefault(_Cookie);
 
-	var _Util = __webpack_require__(143);
+	var _Util = __webpack_require__(149);
 
 	var _Util2 = _interopRequireDefault(_Util);
 
@@ -1223,36 +1245,36 @@ webpackJsonp([0],[
 	exports.default = install;
 
 /***/ },
-/* 121 */
+/* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(122), __esModule: true };
+	module.exports = { "default": __webpack_require__(128), __esModule: true };
 
 /***/ },
-/* 122 */
+/* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(123);
+	__webpack_require__(129);
 	var $Object = __webpack_require__(16).Object;
 	module.exports = function defineProperties(T, D){
 	  return $Object.defineProperties(T, D);
 	};
 
 /***/ },
-/* 123 */
+/* 129 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $export = __webpack_require__(14);
 	// 19.1.2.3 / 15.2.3.7 Object.defineProperties(O, Properties)
-	$export($export.S + $export.F * !__webpack_require__(24), 'Object', {defineProperties: __webpack_require__(124)});
+	$export($export.S + $export.F * !__webpack_require__(24), 'Object', {defineProperties: __webpack_require__(130)});
 
 /***/ },
-/* 124 */
+/* 130 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var dP       = __webpack_require__(20)
 	  , anObject = __webpack_require__(21)
-	  , getKeys  = __webpack_require__(125);
+	  , getKeys  = __webpack_require__(131);
 
 	module.exports = __webpack_require__(24) ? Object.defineProperties : function defineProperties(O, Properties){
 	  anObject(O);
@@ -1265,25 +1287,25 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 125 */
+/* 131 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.14 / 15.2.3.14 Object.keys(O)
-	var $keys       = __webpack_require__(126)
-	  , enumBugKeys = __webpack_require__(139);
+	var $keys       = __webpack_require__(132)
+	  , enumBugKeys = __webpack_require__(145);
 
 	module.exports = Object.keys || function keys(O){
 	  return $keys(O, enumBugKeys);
 	};
 
 /***/ },
-/* 126 */
+/* 132 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var has          = __webpack_require__(127)
-	  , toIObject    = __webpack_require__(128)
-	  , arrayIndexOf = __webpack_require__(132)(false)
-	  , IE_PROTO     = __webpack_require__(136)('IE_PROTO');
+	var has          = __webpack_require__(133)
+	  , toIObject    = __webpack_require__(134)
+	  , arrayIndexOf = __webpack_require__(138)(false)
+	  , IE_PROTO     = __webpack_require__(142)('IE_PROTO');
 
 	module.exports = function(object, names){
 	  var O      = toIObject(object)
@@ -1299,7 +1321,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 127 */
+/* 133 */
 /***/ function(module, exports) {
 
 	var hasOwnProperty = {}.hasOwnProperty;
@@ -1308,28 +1330,28 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 128 */
+/* 134 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// to indexed object, toObject with fallback for non-array-like ES3 strings
-	var IObject = __webpack_require__(129)
-	  , defined = __webpack_require__(131);
+	var IObject = __webpack_require__(135)
+	  , defined = __webpack_require__(137);
 	module.exports = function(it){
 	  return IObject(defined(it));
 	};
 
 /***/ },
-/* 129 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// fallback for non-array-like ES3 and non-enumerable old V8 strings
-	var cof = __webpack_require__(130);
+	var cof = __webpack_require__(136);
 	module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
 	  return cof(it) == 'String' ? it.split('') : Object(it);
 	};
 
 /***/ },
-/* 130 */
+/* 136 */
 /***/ function(module, exports) {
 
 	var toString = {}.toString;
@@ -1339,7 +1361,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 131 */
+/* 137 */
 /***/ function(module, exports) {
 
 	// 7.2.1 RequireObjectCoercible(argument)
@@ -1349,14 +1371,14 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 132 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// false -> Array#indexOf
 	// true  -> Array#includes
-	var toIObject = __webpack_require__(128)
-	  , toLength  = __webpack_require__(133)
-	  , toIndex   = __webpack_require__(135);
+	var toIObject = __webpack_require__(134)
+	  , toLength  = __webpack_require__(139)
+	  , toIndex   = __webpack_require__(141);
 	module.exports = function(IS_INCLUDES){
 	  return function($this, el, fromIndex){
 	    var O      = toIObject($this)
@@ -1375,18 +1397,18 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 133 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.15 ToLength
-	var toInteger = __webpack_require__(134)
+	var toInteger = __webpack_require__(140)
 	  , min       = Math.min;
 	module.exports = function(it){
 	  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
 	};
 
 /***/ },
-/* 134 */
+/* 140 */
 /***/ function(module, exports) {
 
 	// 7.1.4 ToInteger
@@ -1397,10 +1419,10 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 135 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var toInteger = __webpack_require__(134)
+	var toInteger = __webpack_require__(140)
 	  , max       = Math.max
 	  , min       = Math.min;
 	module.exports = function(index, length){
@@ -1409,17 +1431,17 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 136 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var shared = __webpack_require__(137)('keys')
-	  , uid    = __webpack_require__(138);
+	var shared = __webpack_require__(143)('keys')
+	  , uid    = __webpack_require__(144);
 	module.exports = function(key){
 	  return shared[key] || (shared[key] = uid(key));
 	};
 
 /***/ },
-/* 137 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var global = __webpack_require__(15)
@@ -1430,7 +1452,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 138 */
+/* 144 */
 /***/ function(module, exports) {
 
 	var id = 0
@@ -1440,7 +1462,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 139 */
+/* 145 */
 /***/ function(module, exports) {
 
 	// IE 8- don't enum bug keys
@@ -1449,7 +1471,7 @@ webpackJsonp([0],[
 	).split(',');
 
 /***/ },
-/* 140 */
+/* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1458,11 +1480,11 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _classCallCheck2 = __webpack_require__(141);
+	var _classCallCheck2 = __webpack_require__(147);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _createClass2 = __webpack_require__(142);
+	var _createClass2 = __webpack_require__(148);
 
 	var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -1662,7 +1684,7 @@ webpackJsonp([0],[
 	}();
 
 /***/ },
-/* 141 */
+/* 147 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1676,7 +1698,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 142 */
+/* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1708,7 +1730,7 @@ webpackJsonp([0],[
 	}();
 
 /***/ },
-/* 143 */
+/* 149 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1777,7 +1799,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 144 */
+/* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1787,39 +1809,39 @@ webpackJsonp([0],[
 	});
 	exports.KsComponents = undefined;
 
-	var _defineProperties = __webpack_require__(121);
+	var _defineProperties = __webpack_require__(127);
 
 	var _defineProperties2 = _interopRequireDefault(_defineProperties);
 
-	var _keys = __webpack_require__(145);
+	var _keys = __webpack_require__(151);
 
 	var _keys2 = _interopRequireDefault(_keys);
 
-	var _KsSwitch = __webpack_require__(150);
+	var _KsSwitch = __webpack_require__(156);
 
 	var _KsSwitch2 = _interopRequireDefault(_KsSwitch);
 
-	var _KsCheckbox = __webpack_require__(156);
+	var _KsCheckbox = __webpack_require__(162);
 
-	var _KsRadio = __webpack_require__(165);
+	var _KsRadio = __webpack_require__(171);
 
-	var _KsDater = __webpack_require__(182);
+	var _KsDater = __webpack_require__(188);
 
-	var _KsButton = __webpack_require__(214);
+	var _KsButton = __webpack_require__(220);
 
 	var _KsButton2 = _interopRequireDefault(_KsButton);
 
-	var _KsDialog = __webpack_require__(231);
+	var _KsDialog = __webpack_require__(237);
 
 	var _KsDialog2 = _interopRequireDefault(_KsDialog);
 
-	var _KsMask = __webpack_require__(237);
+	var _KsMask = __webpack_require__(243);
 
-	var _KsToolTip = __webpack_require__(245);
+	var _KsToolTip = __webpack_require__(251);
 
 	var _KsToolTip2 = _interopRequireDefault(_KsToolTip);
 
-	var _KsPager = __webpack_require__(297);
+	var _KsPager = __webpack_require__(303);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1883,44 +1905,44 @@ webpackJsonp([0],[
 	exports.KsComponents = KsComponents;
 
 /***/ },
-/* 145 */
+/* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(146), __esModule: true };
+	module.exports = { "default": __webpack_require__(152), __esModule: true };
 
 /***/ },
-/* 146 */
+/* 152 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(147);
+	__webpack_require__(153);
 	module.exports = __webpack_require__(16).Object.keys;
 
 /***/ },
-/* 147 */
+/* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.14 Object.keys(O)
-	var toObject = __webpack_require__(148)
-	  , $keys    = __webpack_require__(125);
+	var toObject = __webpack_require__(154)
+	  , $keys    = __webpack_require__(131);
 
-	__webpack_require__(149)('keys', function(){
+	__webpack_require__(155)('keys', function(){
 	  return function keys(it){
 	    return $keys(toObject(it));
 	  };
 	});
 
 /***/ },
-/* 148 */
+/* 154 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.13 ToObject(argument)
-	var defined = __webpack_require__(131);
+	var defined = __webpack_require__(137);
 	module.exports = function(it){
 	  return Object(defined(it));
 	};
 
 /***/ },
-/* 149 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// most Object methods by ES6 should accept primitives
@@ -1935,7 +1957,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 150 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1945,7 +1967,7 @@ webpackJsonp([0],[
 	});
 	exports.KsSwitch = undefined;
 
-	var _IosSwitch = __webpack_require__(151);
+	var _IosSwitch = __webpack_require__(157);
 
 	var _IosSwitch2 = _interopRequireDefault(_IosSwitch);
 
@@ -1962,17 +1984,17 @@ webpackJsonp([0],[
 	exports.KsSwitch = _IosSwitch2.default;
 
 /***/ },
-/* 151 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(152)
-	__vue_script__ = __webpack_require__(154)
+	__webpack_require__(158)
+	__vue_script__ = __webpack_require__(160)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsSwitch/src/IosSwitch.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(155)
+	__vue_template__ = __webpack_require__(161)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -1991,13 +2013,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 152 */
+/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(153);
+	var content = __webpack_require__(159);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -2017,7 +2039,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 153 */
+/* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -2031,7 +2053,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 154 */
+/* 160 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2108,13 +2130,13 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 155 */
+/* 161 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :class=\"classesSize\">\n  <!-- IosSwitch 背景自定义 -->\n  <style type=\"text/css\">\n    {{ '.KSIosSwitch__UID--' + _uid }} .KSIosSwitch__entity:checked + .KSIosSwitch__slide {\n      {{ styleBgColor }}\n    }\n  </style>\n  <input class=\"KSIosSwitch__entity\" type=\"checkbox\"\n         v-model=\"checked\" @change.stop\n         :checked=\"defChecked && 'checked'\"\n         :disabled=\"disable && 'disabled'\"/>\n  <div class=\"KSIosSwitch__slide\">\n    <small class=\"KSIosSwitch__btn\"></small>\n    <slot name=\"checkedChildren\"></slot>\n    <slot name=\"unCheckedChildren\"></slot>\n  </div>\n</div>\n";
 
 /***/ },
-/* 156 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2124,11 +2146,11 @@ webpackJsonp([0],[
 	});
 	exports.KsCheckboxGroup = exports.KsCheckbox = undefined;
 
-	var _NrCheckbox = __webpack_require__(157);
+	var _NrCheckbox = __webpack_require__(163);
 
 	var _NrCheckbox2 = _interopRequireDefault(_NrCheckbox);
 
-	var _CheckboxGroup = __webpack_require__(162);
+	var _CheckboxGroup = __webpack_require__(168);
 
 	var _CheckboxGroup2 = _interopRequireDefault(_CheckboxGroup);
 
@@ -2147,17 +2169,17 @@ webpackJsonp([0],[
 	exports.KsCheckboxGroup = _CheckboxGroup2.default;
 
 /***/ },
-/* 157 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(158)
-	__vue_script__ = __webpack_require__(160)
+	__webpack_require__(164)
+	__vue_script__ = __webpack_require__(166)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsCheckbox/src/NrCheckbox.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(161)
+	__vue_template__ = __webpack_require__(167)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -2176,13 +2198,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 158 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(159);
+	var content = __webpack_require__(165);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -2202,7 +2224,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 159 */
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -2216,7 +2238,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 160 */
+/* 166 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2310,22 +2332,22 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 161 */
+/* 167 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :class=\"classes\">\n  <!-- NRCheckbox 选择色块自定义 -->\n  <style type=\"text/css\">\n    {{ '.KSNRCheckbox__UID--' + _uid }} .KSNRCheckbox__entity:checked + .KSNRCheckbox__skin:before {\n      {{ styleCubeColor }}\n    }\n  </style>\n  <input type=\"checkbox\" class=\"KSNRCheckbox__entity\"\n         v-model=\"checked\" @change.stop\n         :disabled=\"disable && 'disabled'\"\n         :checked=\"defChecked && 'checked'\"\n         :id=\"`KSNRCheckbox__entity--${_uid}`\" />\n  <label class=\"KSNRCheckbox__skin\" :for=\"`KSNRCheckbox__entity--${_uid}`\"></label>\n  <!-- :for=\"`KSNRCheckbox__entity--${_uid}`\" -->\n  <label class=\"KSNRCheckbox__text\" @click=\"$emit('label-click')\">\n    <slot>LABEL</slot>\n  </label>\n</div>\n";
 
 /***/ },
-/* 162 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(163)
+	__vue_script__ = __webpack_require__(169)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsCheckbox/src/CheckboxGroup.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(164)
+	__vue_template__ = __webpack_require__(170)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -2344,7 +2366,7 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 163 */
+/* 169 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2408,13 +2430,13 @@ webpackJsonp([0],[
 	// </script>
 
 /***/ },
-/* 164 */
+/* 170 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"ks-checkbox-group\">\n  <slot></slot>\n</div>\n";
 
 /***/ },
-/* 165 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2424,15 +2446,15 @@ webpackJsonp([0],[
 	});
 	exports.KsRadioGroup = exports.KsBtnRadio = exports.KsRadio = undefined;
 
-	var _NrRadio = __webpack_require__(166);
+	var _NrRadio = __webpack_require__(172);
 
 	var _NrRadio2 = _interopRequireDefault(_NrRadio);
 
-	var _BtnRadio = __webpack_require__(172);
+	var _BtnRadio = __webpack_require__(178);
 
 	var _BtnRadio2 = _interopRequireDefault(_BtnRadio);
 
-	var _RadioGroup = __webpack_require__(177);
+	var _RadioGroup = __webpack_require__(183);
 
 	var _RadioGroup2 = _interopRequireDefault(_RadioGroup);
 
@@ -2451,17 +2473,17 @@ webpackJsonp([0],[
 	exports.KsRadioGroup = _RadioGroup2.default;
 
 /***/ },
-/* 166 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(167)
-	__vue_script__ = __webpack_require__(169)
+	__webpack_require__(173)
+	__vue_script__ = __webpack_require__(175)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsRadio/src/NrRadio.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(171)
+	__vue_template__ = __webpack_require__(177)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -2480,13 +2502,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 167 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(168);
+	var content = __webpack_require__(174);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -2506,7 +2528,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 168 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -2520,7 +2542,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 169 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2529,7 +2551,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _radioLogic = __webpack_require__(170);
+	var _radioLogic = __webpack_require__(176);
 
 	var _radioLogic2 = _interopRequireDefault(_radioLogic);
 
@@ -2583,7 +2605,7 @@ webpackJsonp([0],[
 	// <script lang="babel">
 
 /***/ },
-/* 170 */
+/* 176 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2641,23 +2663,23 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 171 */
+/* 177 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :class=\"classes\">\n  <!-- NrRadio 选择色块自定义 -->\n  <style type=\"text/css\">\n    {{ '.KSNRRadio__UID--' + _uid }} .KSNRRadio__skin:before {\n      {{ styleCubeColor }}\n    }\n    {{ '.KSNRRadio__UID--' + _uid }} .KSNRRadio__entity:checked + .KSNRRadio__skin:before {\n      {{ styleCubeColor }}\n    }\n  </style>\n  <input type=\"radio\" class=\"KSNRRadio__entity\" :name=\"!!name && name\"\n         :id=\"'KSNRCheckbox__entity--' + _uid\"\n         v-model=\"checked\" :value=\"value\" @change.stop\n         :disabled=\"disable && 'disabled'\"\n         :checked=\"defChecked && 'checked'\"\n         :id=\"`KSNRRadio__entity--${_uid}`\" />\n  <label class=\"KSNRRadio__skin\" :for=\"'KSNRCheckbox__entity--' + _uid\"></label>\n  <label class=\"KSNRRadio__text\" :for=\"'KSNRCheckbox__entity--' + _uid\">\n    <slot>LABEL</slot>\n  </label>\n</div>\n";
 
 /***/ },
-/* 172 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(173)
-	__vue_script__ = __webpack_require__(175)
+	__webpack_require__(179)
+	__vue_script__ = __webpack_require__(181)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsRadio/src/BtnRadio.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(176)
+	__vue_template__ = __webpack_require__(182)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -2676,13 +2698,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 173 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(174);
+	var content = __webpack_require__(180);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -2702,7 +2724,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 174 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -2716,7 +2738,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 175 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2725,7 +2747,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _radioLogic = __webpack_require__(170);
+	var _radioLogic = __webpack_require__(176);
 
 	var _radioLogic2 = _interopRequireDefault(_radioLogic);
 
@@ -2778,23 +2800,23 @@ webpackJsonp([0],[
 	// <script lang="babel">
 
 /***/ },
-/* 176 */
+/* 182 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :class=\"classes\">\n  <!-- BtnRadio 选择色块自定义 -->\n  <style type=\"text/css\">\n    {{ '.KSBtnRadio__UID--' + _uid }} .KSBtnRadio__skin:before {\n      {{ styleCubeColor }}\n    }\n    {{ '.KSBtnRadio__UID--' + _uid }} .KSBtnRadio__entity:checked + .KSBtnRadio__skin:before {\n      {{ styleCubeColor }}\n    }\n  </style>\n  <input type=\"radio\" class=\"KSBtnRadio__entity\" :name=\"!!name && name\"\n         :id=\"'KSNRCheckbox__entity--' + _uid\"\n         v-model=\"checked\" :value=\"value\" @change.stop\n         :disabled=\"disable && 'disabled'\"\n         :checked=\"defChecked && 'checked'\"\n         :id=\"`KSBtnRadio__entity--${_uid}`\" />\n  <label class=\"KSBtnRadio__text\" :for=\"'KSNRCheckbox__entity--' + _uid\">\n    <slot>LABEL</slot>\n  </label>\n</div><!-- -->\n";
 
 /***/ },
-/* 177 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(178)
-	__vue_script__ = __webpack_require__(180)
+	__webpack_require__(184)
+	__vue_script__ = __webpack_require__(186)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsRadio/src/RadioGroup.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(181)
+	__vue_template__ = __webpack_require__(187)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -2813,13 +2835,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 178 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(179);
+	var content = __webpack_require__(185);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -2839,7 +2861,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 179 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -2853,7 +2875,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 180 */
+/* 186 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2904,13 +2926,13 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 181 */
+/* 187 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"ks-radio-group\">\n  <slot></slot>\n</div>\n";
 
 /***/ },
-/* 182 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2920,27 +2942,27 @@ webpackJsonp([0],[
 	});
 	exports.KsDateMonth = exports.KsDateRangePicker = exports.KsDaterRange = exports.KsDatePicker = exports.KsDaterPure = exports.KsDater = undefined;
 
-	var _dater = __webpack_require__(183);
+	var _dater = __webpack_require__(189);
 
 	var _dater2 = _interopRequireDefault(_dater);
 
-	var _daterPure = __webpack_require__(193);
+	var _daterPure = __webpack_require__(199);
 
 	var _daterPure2 = _interopRequireDefault(_daterPure);
 
-	var _datePicker = __webpack_require__(199);
+	var _datePicker = __webpack_require__(205);
 
 	var _datePicker2 = _interopRequireDefault(_datePicker);
 
-	var _daterRange = __webpack_require__(204);
+	var _daterRange = __webpack_require__(210);
 
 	var _daterRange2 = _interopRequireDefault(_daterRange);
 
-	var _dateRangePicker = __webpack_require__(208);
+	var _dateRangePicker = __webpack_require__(214);
 
 	var _dateRangePicker2 = _interopRequireDefault(_dateRangePicker);
 
-	var _dateMonth = __webpack_require__(211);
+	var _dateMonth = __webpack_require__(217);
 
 	var _dateMonth2 = _interopRequireDefault(_dateMonth);
 
@@ -2954,17 +2976,17 @@ webpackJsonp([0],[
 	exports.KsDateMonth = _dateMonth2.default;
 
 /***/ },
-/* 183 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(184)
-	__vue_script__ = __webpack_require__(186)
+	__webpack_require__(190)
+	__vue_script__ = __webpack_require__(192)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/dater.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(192)
+	__vue_template__ = __webpack_require__(198)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -2983,13 +3005,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 184 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(185);
+	var content = __webpack_require__(191);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -3009,7 +3031,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 185 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -3023,7 +3045,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 186 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3032,17 +3054,17 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _index = __webpack_require__(187);
+	var _index = __webpack_require__(193);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _multi = __webpack_require__(190);
+	var _multi = __webpack_require__(196);
 
 	var _multi2 = _interopRequireDefault(_multi);
 
-	var _lang = __webpack_require__(188);
+	var _lang = __webpack_require__(194);
 
-	var _apage = __webpack_require__(191);
+	var _apage = __webpack_require__(197);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3099,7 +3121,7 @@ webpackJsonp([0],[
 	        this.timer = '';
 
 	        return {
-	            times: []
+	            times: ['00', '00', '00']
 	        };
 	    },
 
@@ -3150,6 +3172,8 @@ webpackJsonp([0],[
 
 	        // emit数据
 	        putout: function putout(dater) {
+	            var _this = this;
+
 	            // console.log('putout(dater)',dater,this.type)
 	            var value = '';
 	            switch (this.type) {
@@ -3158,18 +3182,21 @@ webpackJsonp([0],[
 	                    break;
 	                case 'datemulti':
 	                    this.point_daters = this.non(this.point_daters, dater);
-	                    console.log(this.point_daters);
+	                    // console.log(this.point_daters)
 	                    value = this.point_daters.join(',');
 	                    break;
 	                case 'datetime':
-	                    console.log(dater);
+	                    // console.log(dater)
 	                    dater = dater || (0, _lang.stringify)(new Date());
+	                    console.log(this.times);
 	                    value = dater + ' ' + this.times.join(':');
 	                    break;
 	            }
 	            this.value = value;
-	            console.log('change', value);
-	            this.$emit('change', value);
+	            // console.log('change',value)
+	            this.$nextTick(function () {
+	                _this.$emit('change', value);
+	            });
 	        },
 
 	        // 选择时间
@@ -3239,7 +3266,7 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 187 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3248,9 +3275,9 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _lang = __webpack_require__(188);
+	var _lang = __webpack_require__(194);
 
-	var _props = __webpack_require__(189);
+	var _props = __webpack_require__(195);
 
 	var _props2 = _interopRequireDefault(_props);
 
@@ -3275,7 +3302,7 @@ webpackJsonp([0],[
 	    },
 	    methods: {
 	        today: function today() {
-	            alert('mixins today');
+	            // alert('mixins today')
 	        },
 
 	        // 切换年
@@ -3294,12 +3321,12 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 188 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _keys = __webpack_require__(145);
+	var _keys = __webpack_require__(151);
 
 	var _keys2 = _interopRequireDefault(_keys);
 
@@ -3509,7 +3536,7 @@ webpackJsonp([0],[
 	exports.format_conver = format_conver;
 
 /***/ },
-/* 189 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3518,13 +3545,12 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _lang = __webpack_require__(188);
+	var _lang = __webpack_require__(194);
 
 	exports.default = {
 	    props: {
 
 	        readonly: { type: Boolean, default: false },
-	        exclude: { type: Boolean, default: false },
 	        value: {
 	            type: String
 	        },
@@ -3551,7 +3577,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 190 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3560,9 +3586,9 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _lang = __webpack_require__(188);
+	var _lang = __webpack_require__(194);
 
-	var _props = __webpack_require__(189);
+	var _props = __webpack_require__(195);
 
 	var _props2 = _interopRequireDefault(_props);
 
@@ -3580,35 +3606,45 @@ webpackJsonp([0],[
 	    watch: {
 	        value: function value(val, oldval) {
 	            var addItem = '';
-	            console.log(val);
+	            // console.log(val)
 	            if (this.type == 'datemulti') {
 
-	                ~val.indexOf(',') && (this.point_daters = val.split(','));
+	                ~val.indexOf(',') ? this.point_daters = val.split(',') : this.point_daters = [val];
+	                this.point_daters = this.point_daters.filter(function (v) {
+	                    if (v) return v;
+	                });
+
 	                if (val.length > oldval.length) {
 	                    addItem = this.point_daters[this.point_daters.length - 1];
 	                } else {
+	                    // console.log(this.now,'=====')
 	                    addItem = (0, _lang.stringify)(this.now);
 	                }
-	                this.now = (0, _lang.parse)(addItem);
+	                // console.log('addItem',addItem)
+	                // console.log('oldval',oldval)
+	                var now = addItem && (0, _lang.parse)(addItem) || (0, _lang.parse)(oldval);
+	                // console.log('this.now = ',now)
+	                this.now = now;
 	            }
 	        }
 	    },
 	    created: function created() {
 	        if (this.type == 'datemulti') {
 	            this.point_daters = [];
-	            ~this.value.indexOf(',') && (this.point_daters = this.value.split(','));
+	            ~this.value.indexOf(',') ? this.point_daters = this.value.split(',') : this.value && this.point_daters.push(this.value);
+
 	            // console.log(this.value);    
 	        }
 	    }
 	};
 
 /***/ },
-/* 191 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _lang = __webpack_require__(188);
+	var _lang = __webpack_require__(194);
 
 	/**
 	 * [one_page_date 获取某页日期数据 上个月(部分) + 当前月(满月) + 下个月(部分)]
@@ -3747,22 +3783,22 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 192 */
+/* 198 */
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"KsDater\" cid=\"KsDater\">\n  <div class=\"KsDater-date\">\n    <div class=\"KsDater-date-head\">\n      <div class=\"retreat\" v-on:click.stop=\"click_month(-1)\">&lt;</div>\n      <div class=\"year\">{{now.getFullYear()}}年</div>\n      <div class=\"interstice\"></div>\n      <div class=\"month\">{{now.getMonth()+1}}月</div>\n      <div class=\"next\" v-on:click.stop=\"click_month(1)\">&gt;</div>\n    </div>\n    <div class=\"KsDater-date-week\">\n      <span v-for=\"day in days\" :class=\"{'week':day=='六'||day=='日'}\">{{day}}</span>\n    </div>\n    <div v-on:click.stop=\"pick_date($event)\">\n      <div class=\"KsDater-date-days\"\n           v-for=\"week in 6\">\n              <span\n                v-for=\"day in  7\"\n                :id=\"'dater'+_uid+'_'+(+week * 7 + day)\"\n                :class=\"{\n                      'pass':dates[week * 7 + day] && dates[week * 7 + day].status=='disabled',\n                      'active':dates[week * 7 + day] && dates[week * 7 + day].status=='active'}\">\n                      {{dates[week * 7 + day] && +dates[week * 7 + day].datetext}}</span>\n      </div>\n    </div>\n    <div class=\"KsDater-date-btn\" v-if=\"type=='datetime'\">\n      <select class=\"input\" v-model=\"times[0]\" v-on:change.stop=\"pick_time\">\n        <option v-bind:value=\"i|fr_limit\" v-for=\"i in 24\">{{i|fr_limit}}</option>\n      </select>\n      <select class=\"input mlr-10\" v-model=\"times[1]\" v-on:change.stop=\"pick_time\">\n        <option v-bind:value=\"i|fr_limit\" v-for=\"i in 60\">{{i|fr_limit}}</option>\n      </select>\n      <select class=\"input\" v-model=\"times[2]\" v-on:change.stop=\"pick_time\">\n        <option v-bind:value=\"i|fr_limit\" v-for=\"i in 60\">{{i|fr_limit}}</option>\n      </select>\n    </div>\n    <div class=\"KsDater-date-btn\" v-if=\"type!='datemulti'\">\n      <span class=\"today\" v-on:click.stop=\"today()\">今天</span>\n      <span class=\"clear\" v-on:click.stop=\"clear()\">清除</span>\n    </div>\n  </div>\n</div>\n\n";
 
 /***/ },
-/* 193 */
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(194)
+	__vue_script__ = __webpack_require__(200)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/dater-pure.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(198)
+	__vue_template__ = __webpack_require__(204)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -3781,7 +3817,7 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 194 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3790,13 +3826,13 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _sub = __webpack_require__(195);
+	var _sub = __webpack_require__(201);
 
 	var _sub2 = _interopRequireDefault(_sub);
 
-	var _lang = __webpack_require__(188);
+	var _lang = __webpack_require__(194);
 
-	var _apage = __webpack_require__(191);
+	var _apage = __webpack_require__(197);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3834,11 +3870,11 @@ webpackJsonp([0],[
 	        pick2: function pick2(e) {
 	            var id = event.target.id.split('_');
 	            var index = +id[1];
-	            console.log(index);
+	            // console.log(index)
 	            if (isNaN(index) || id[2] == 'disabled') return;
 
 	            this.value = this.dates[index].dater;
-	            console.log(index, this.value);
+	            // console.log(index,this.value)
 
 	            // this.dates[10].status='active'
 
@@ -3873,7 +3909,7 @@ webpackJsonp([0],[
 	            return arr;
 	        },
 	        val_change: function val_change(val) {
-	            console.log(val);
+	            // console.log(val)
 	            this.val = val;
 	            this.val = 'val_I_' + Math.random() * 1000;
 	        }
@@ -3954,16 +3990,16 @@ webpackJsonp([0],[
 	// <script>
 
 /***/ },
-/* 195 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(196)
+	__vue_script__ = __webpack_require__(202)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/sub.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(197)
+	__vue_template__ = __webpack_require__(203)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -3982,7 +4018,7 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 196 */
+/* 202 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4026,29 +4062,29 @@ webpackJsonp([0],[
 	// </script>
 
 /***/ },
-/* 197 */
+/* 203 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div v-on:click=\"click\">\n    {{val}}\n</div>\n";
 
 /***/ },
-/* 198 */
+/* 204 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsDater\" cid=\"KsDater\"\n    v-on:click=\"pick($event)\">\n\n<div class=\"KsDater-date\" v-for=\"(key,date) in dates\">\n<div>\n    <div class=\"KsDater-date-days\"\n        v-for=\"week in 6\">\n        <span \n            v-for=\"day in  7\"\n            :id=\"'dater'+_uid+'_'+key+'_'+(+week * 7 + day)\"\n            :class=\"{\n                'pass':date[week * 7 + day] && date[week * 7 + day].status=='disabled',\n                'active':date[week * 7 + day] && date[week * 7 + day].status=='active'}\">\n                {{date[week * 7 + day] && +date[week * 7 + day].datetext}}</span>\n    </div>\n</div>\n</div>\n\n<!-- <div class=\"date-bd\" v-for=\"(key,data) in dates\">\n<div>\n    <div class=\"date-days\"\n        v-for=\"week in 6\">\n        <span \n            v-for=\"day in  7\"\n            :id=\"'dater'+_uid+'_'+key+'_'+(+week * 7 + day)\"\n            :class=\"{\n                'pass':data.date[week * 7 + day] && data.date[week * 7 + day].status=='disabled',\n                'active':data.date[week * 7 + day] && data.date[week * 7 + day].status=='active'}\">\n                {{data.date[week * 7 + day] && +data.date[week * 7 + day].datetext}}</span>\n    </div>\n</div>\n</div> -->\n\n<!-- <div class=\"_date\">\n<div>\n    <div class=\"_days\"\n        v-for=\"week in 6\">\n        <span \n            v-for=\"day in  7\"\n            :id=\"'dater'+_uid+'_'+(+week * 7 + day)\"\n            :class=\"{\n                'pass':dates[week * 7 + day] && dates[week * 7 + day].status=='disabled',\n                'active':dates[week * 7 + day] && dates[week * 7 + day].status=='active'}\">\n                {{dates[week * 7 + day] && +dates[week * 7 + day].datetext}}</span>\n    </div>\n</div>\n</div> -->\n{{val}}\n<sub :val=\"val\" v-on:change=\"val_change\"></sub>\n</div>\n";
 
 /***/ },
-/* 199 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(200)
-	__vue_script__ = __webpack_require__(202)
+	__webpack_require__(206)
+	__vue_script__ = __webpack_require__(208)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/date-picker.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(203)
+	__vue_template__ = __webpack_require__(209)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -4067,13 +4103,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 200 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(201);
+	var content = __webpack_require__(207);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -4093,9 +4129,9 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 201 */
-185,
-/* 202 */
+/* 207 */
+191,
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4104,15 +4140,15 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _props = __webpack_require__(189);
+	var _props = __webpack_require__(195);
 
 	var _props2 = _interopRequireDefault(_props);
 
-	var _lang = __webpack_require__(188);
+	var _lang = __webpack_require__(194);
 
-	var _apage = __webpack_require__(191);
+	var _apage = __webpack_require__(197);
 
-	var _dater = __webpack_require__(183);
+	var _dater = __webpack_require__(189);
 
 	var _dater2 = _interopRequireDefault(_dater);
 
@@ -4123,7 +4159,7 @@ webpackJsonp([0],[
 	//        :class="{'readonly':readonly}">
 	//     <div class="_input" v-on:click="show=!show">
 	//       <div class="ks-col-auto date-icon"><i class="icon"></i></div>
-	//       <input type="text" class="ks-col" placeholder="{{placeholder}}" :value="value" readonly>
+	//       <input type="text" class="ks-col" placeholder="{{placeholder}}" v-model="value" readonly>
 	//     </div>
 	//     <ks-dater v-show="show" :value="value" :type="type" :readonly="readonly" v-on:change="current_change"></ks-dater>
 	//   </div>
@@ -4153,8 +4189,12 @@ webpackJsonp([0],[
 
 	        // dater callback
 	        current_change: function current_change(cur_date) {
+	            var _this = this;
+
 	            this.value = cur_date;
-	            this.$emit('change', cur_date);
+	            this.$nextTick(function () {
+	                _this.$emit('change', cur_date);
+	            });
 	            if (this.type != 'datemulti') {
 	                this.close();
 	            }
@@ -4163,7 +4203,8 @@ webpackJsonp([0],[
 	    watch: {
 	        value: function value(val) {
 
-	            console.log(val);
+	            // console.log(val)
+
 	        }
 	    },
 	    created: function created() {
@@ -4171,11 +4212,11 @@ webpackJsonp([0],[
 	        // this.value = format_conver(this.value , this.type!='datetime' ? 'YYYY-MM-DD' : '')    
 	    },
 	    ready: function ready() {
-	        var _this = this;
+	        var _this2 = this;
 
 	        document.addEventListener('click', function (e) {
-	            if (_this.$el && !_this.$el.contains(e.target)) {
-	                _this.close();
+	            if (_this2.$el && !_this2.$el.contains(e.target)) {
+	                _this2.close();
 	            }
 	        }, false);
 	    },
@@ -4189,22 +4230,22 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 203 */
+/* 209 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"KsDatePicker\" cid=\"KsDatePicker\"\n     :class=\"{'readonly':readonly}\">\n  <div class=\"KsDatePicker-input\" v-on:click=\"show=!show\">\n    <div class=\"ks-col-auto date-icon\"><i class=\"icon\"></i></div>\n    <input type=\"text\" class=\"ks-col\" placeholder=\"{{placeholder}}\" :value=\"value\" readonly>\n  </div>\n  <ks-dater v-show=\"show\" :value=\"value\" :type=\"type\" :readonly=\"readonly\" v-on:change=\"current_change\"></ks-dater>\n</div>\n";
+	module.exports = "\n<div class=\"KsDatePicker\" cid=\"KsDatePicker\"\n     :class=\"{'readonly':readonly}\">\n  <div class=\"KsDatePicker-input\" v-on:click=\"show=!show\">\n    <div class=\"ks-col-auto date-icon\"><i class=\"icon\"></i></div>\n    <input type=\"text\" class=\"ks-col\" placeholder=\"{{placeholder}}\" v-model=\"value\" readonly>\n  </div>\n  <ks-dater v-show=\"show\" :value=\"value\" :type=\"type\" :readonly=\"readonly\" v-on:change=\"current_change\"></ks-dater>\n</div>\n";
 
 /***/ },
-/* 204 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(205)
+	__vue_script__ = __webpack_require__(211)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/dater-range.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(207)
+	__vue_template__ = __webpack_require__(213)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -4223,7 +4264,7 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 205 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4232,15 +4273,15 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _index = __webpack_require__(187);
+	var _index = __webpack_require__(193);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _lang = __webpack_require__(188);
+	var _lang = __webpack_require__(194);
 
-	var _apage = __webpack_require__(191);
+	var _apage = __webpack_require__(197);
 
-	var _range = __webpack_require__(206);
+	var _range = __webpack_require__(212);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4331,7 +4372,7 @@ webpackJsonp([0],[
 	            this.value = '';
 
 	            this.range_daters = range_daters;
-	            console.log(range_daters);
+	            // console.log(range_daters)
 	            // this.point_daters = range_daters
 	            // 取具体日期
 	            range_daters.length == 2 && (this.range_daters = (0, _range.get_range_dates)(range_daters));
@@ -4375,7 +4416,7 @@ webpackJsonp([0],[
 	            range_dater = this.get_range(this.range_daters, _date.dater);
 
 	            this.redraw([(0, _lang.stringify)(this.now), (0, _lang.stringify)(this.next_now)], range_dater);
-	            console.log('range_dater', range_dater);
+	            // console.log('range_dater',range_dater)
 	            this.$emit('change', range_dater);
 	        },
 
@@ -4447,10 +4488,18 @@ webpackJsonp([0],[
 	        },
 	        next_now: function next_now() {
 	            this.next_month_dates();
+	        },
+	        range_dater: function range_dater(val) {
+	            // console.log(val)
+	            if (val.length == 2) {
+	                this.redraw(val, val);
+	            } else {
+	                this.redraw([(0, _lang.stringify)(this.now), (0, _lang.stringify)(this.next_now)], val);
+	            }
 	        }
 	    },
 	    created: function created() {
-	        console.log(this.range_dater);
+	        // console.log(this.range_dater)
 	        if (!this.range_dater || !this.range_dater.length) {
 	            this.range_dater = [(0, _lang.stringify)(this.now), (0, _lang.stringify)(this.next_now)];
 	        }
@@ -4465,14 +4514,14 @@ webpackJsonp([0],[
 	// </script>
 
 /***/ },
-/* 206 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _lang = __webpack_require__(188);
+	var _lang = __webpack_require__(194);
 
-	var _apage = __webpack_require__(191);
+	var _apage = __webpack_require__(197);
 
 	// 选择范围取值
 	function get_range_dates(range_dater) {
@@ -4588,22 +4637,22 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 207 */
+/* 213 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsDaterMulti\" cid=\"KsDaterMulti\">\n    <div class=\"KsDaterMulti-date\">\n        <div class=\"KsDaterMulti-date-head\">\n            <div class=\"retreat\" v-on:click=\"click_month(-1)\">&lt;</div>\n            <div class=\"year\">{{now.getFullYear()}}年</div>\n            <div class=\"interstice\"></div>\n            <div class=\"month\">{{now.getMonth()+1}}月</div>\n            <div class=\"next\" v-on:click=\"click_month(1)\">&gt;</div>\n        </div>\n        <div class=\"KsDaterMulti-date-week\">\n            <span v-for=\"day in days\" :class=\"{'week':day=='六'||day=='日'}\">{{day}}</span>\n        </div>\n        <div v-on:click=\"pick_date($event)\">\n            <div class=\"KsDaterMulti-date-days\" v-for=\"week in 6\">\n                <span \n                    v-for=\"day in  7\"\n                    :id=\"'dater'+_uid+'_'+(+week * 7 + day)+'_'+(dates[week * 7 + day] && dates[week * 7 + day].status)\"\n                    :class=\"{\n                        'pass':dates[week * 7 + day] && dates[week * 7 + day].status=='disabled',\n                        'scope-bg':dates[week * 7 + day] && dates[week * 7 + day].status=='scope-bg',\n                        'active':dates[week * 7 + day] && dates[week * 7 + day].status=='active'}\">\n                        {{dates[week * 7 + day] && +dates[week * 7 + day].datetext}}</span>\n            </div>\n        </div>\n        <div class=\"KsDaterMulti-date-btn\">\n            <span class=\"reset\" v-on:click=\"reset()\">重置</span>\n        </div>\n    </div>\n    <div class=\"KsDaterMulti-date\">\n        <div class=\"KsDaterMulti-date-head\">\n            <div class=\"retreat\" v-on:click=\"click_next_month(-1)\">&lt;</div>\n            <div class=\"year\">{{next_data.year}}年</div>\n            <div class=\"interstice\"></div>\n            <div class=\"month\">{{next_data.month+1}}月</div>\n            <div class=\"next\" v-on:click=\"click_next_month(1)\">&gt;</div>\n        </div>\n        <div class=\"KsDaterMulti-date-week\">\n            <span v-for=\"day in days\" :class=\"{'week':day=='六'||day=='日'}\">{{day}}</span>\n        </div>\n        <div v-on:click=\"pick_date($event)\">\n            <div class=\"KsDaterMulti-date-days\"\n                v-for=\"week in 6\">\n                <span \n                    v-for=\"day in  7\"\n                    :id=\"'dater'+_uid+'_'+(42+week * 7 + day)+'_'+(next_dates[week * 7 + day] && next_dates[week * 7 + day].status)\"\n                    :class=\"{\n                        'pass':next_dates[week * 7 + day] && next_dates[week * 7 + day].status=='disabled',\n                        'scope-bg':next_dates[week * 7 + day] && next_dates[week * 7 + day].status=='scope-bg',\n                        'active':next_dates[week * 7 + day] && next_dates[week * 7 + day].status=='active'}\">\n                        {{next_dates[week * 7 + day] && +next_dates[week * 7 + day].datetext}}</span>\n            </div>\n        </div>\n        <div class=\"KsDaterMulti-date-btn\">\n            <span class=\"selects\">已选择{{range_daters_length}}天</span>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 208 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(209)
+	__vue_script__ = __webpack_require__(215)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/date-range-picker.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(210)
+	__vue_template__ = __webpack_require__(216)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -4622,7 +4671,7 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 209 */
+/* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4631,7 +4680,7 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _props = __webpack_require__(189);
+	var _props = __webpack_require__(195);
 
 	var _props2 = _interopRequireDefault(_props);
 
@@ -4641,13 +4690,16 @@ webpackJsonp([0],[
 	    mixins: [_props2.default],
 	    props: {
 	        range: {
-	            type: Array
+	            type: Array,
+	            default: function _default() {
+	                return [];
+	            }
 	        },
 	        placeholder: {
 	            coerce: function coerce(val) {
 	                val = val || '';
 	                if (~val.indexOf(',')) {
-	                    console.log(val.split(','));
+	                    // console.log(val.split(','))
 	                    return val.split(',');
 	                }
 
@@ -4666,7 +4718,7 @@ webpackJsonp([0],[
 	            this.show = false;
 	        },
 	        change: function change(range) {
-	            console.log(range);
+	            // console.log(range)
 	            this.range = range;
 	            range.length == 2 && this.$emit('change', range);
 	        }
@@ -4692,11 +4744,11 @@ webpackJsonp([0],[
 	//         <div class="ks-col">
 	//             <div class="ks-row-auto">
 	//                 <div class="ks-col">
-	//                     <input type="text" placeholder="{{placeholder[0]}}" :value="range[0]">
+	//                     <input type="text" readonly placeholder="{{placeholder[0]}}" :value="range[0]">
 	//                 </div>
 	//                 <i class="icon ks-col-auto scope-icon">&#xe677;</i>
 	//                 <div class="ks-col">
-	//                     <input type="text" placeholder="{{placeholder[1]}}" :value="range[1]">
+	//                     <input type="text" readonly placeholder="{{placeholder[1]}}" :value="range[1]">
 	//                 </div>
 	//             </div>
 	//         </div>
@@ -4707,22 +4759,22 @@ webpackJsonp([0],[
 	// <script type="text/javascript">
 
 /***/ },
-/* 210 */
+/* 216 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"KsDaterMultiPicker\" :class=\"{'readonly':readonly}\" cid=\"KsDaterMultiPicker\">\n    <div class=\"KsDaterMultiPicker-input\" v-on:click=\"show=!show\">\n        <div class=\"ks-col-auto date-icon\"><i class=\"icon\">&#xe615;</i></div>\n        <div class=\"ks-col\">\n            <div class=\"ks-row-auto\">\n                <div class=\"ks-col\">\n                    <input type=\"text\" placeholder=\"{{placeholder[0]}}\" :value=\"range[0]\">\n                </div>\n                <i class=\"icon ks-col-auto scope-icon\">&#xe677;</i>\n                <div class=\"ks-col\">\n                    <input type=\"text\" placeholder=\"{{placeholder[1]}}\" :value=\"range[1]\">\n                </div>\n            </div>\n        </div>\n    </div>\n    <ks-dater-range v-show=\"show\" v-on:change=\"change\" :range_dater=\"range\"></ks-dater-range> \n</div>\n";
+	module.exports = "\n<div class=\"KsDaterMultiPicker\" :class=\"{'readonly':readonly}\" cid=\"KsDaterMultiPicker\">\n    <div class=\"KsDaterMultiPicker-input\" v-on:click=\"show=!show\">\n        <div class=\"ks-col-auto date-icon\"><i class=\"icon\">&#xe615;</i></div>\n        <div class=\"ks-col\">\n            <div class=\"ks-row-auto\">\n                <div class=\"ks-col\">\n                    <input type=\"text\" readonly placeholder=\"{{placeholder[0]}}\" :value=\"range[0]\">\n                </div>\n                <i class=\"icon ks-col-auto scope-icon\">&#xe677;</i>\n                <div class=\"ks-col\">\n                    <input type=\"text\" readonly placeholder=\"{{placeholder[1]}}\" :value=\"range[1]\">\n                </div>\n            </div>\n        </div>\n    </div>\n    <ks-dater-range v-show=\"show\" v-on:change=\"change\" :range_dater=\"range\"></ks-dater-range> \n</div>\n";
 
 /***/ },
-/* 211 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(212)
+	__vue_script__ = __webpack_require__(218)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/date-month.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(213)
+	__vue_template__ = __webpack_require__(219)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -4741,7 +4793,7 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 212 */
+/* 218 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4798,13 +4850,13 @@ webpackJsonp([0],[
 	// </script>
 
 /***/ },
-/* 213 */
+/* 219 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsDateMonth\" cid=\"KsDateMonth\">\n    <div class=\"KsDateMonth-date\">\n        <div class=\"KsDateMonth-date-head\">\n            <div class=\"retreat\">&lt;</div>\n            <div class=\"year\">2016年</div>\n            <div class=\"next\">&gt;</div>\n        </div>\n        <div class=\"KsDateMonth-date-days\"\n            v-for=\"row in 3\">\n            <span class=\"pass\" v-for=\"item in 4\">{{months[4*row+item]}}</span>\n        </div>\n        <!-- <div class=\"_days\">\n            <span class=\"pass\">一月</span>\n            <span class=\"pass\">二月</span>\n            <span class=\"pass\">三月</span>\n            <span class=\"pass\">四月</span>\n        </div>\n        <div class=\"_days\">\n            <span>五月</span>\n            <span>六月</span>\n            <span>七月</span>\n            <span>八月</span>\n        </div>\n        <div class=\"_days\">\n            <span>九月</span>\n            <span>十月</span>\n            <span class=\"active\">十一月</span>\n            <span>十二月</span>\n        </div> -->\n        \n        <div class=\"KsDateMonth-date-btn\">\n            <span class=\"today\">本月</span>\n            <span class=\"clear\">清除</span>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 214 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4814,15 +4866,15 @@ webpackJsonp([0],[
 	});
 	exports.GhostButton = exports.NrButton = exports.KsButton = undefined;
 
-	var _Button = __webpack_require__(215);
+	var _Button = __webpack_require__(221);
 
 	var _Button2 = _interopRequireDefault(_Button);
 
-	var _NrButton = __webpack_require__(219);
+	var _NrButton = __webpack_require__(225);
 
 	var _NrButton2 = _interopRequireDefault(_NrButton);
 
-	var _GhostButton = __webpack_require__(225);
+	var _GhostButton = __webpack_require__(231);
 
 	var _GhostButton2 = _interopRequireDefault(_GhostButton);
 
@@ -4843,17 +4895,17 @@ webpackJsonp([0],[
 	exports.GhostButton = _GhostButton2.default;
 
 /***/ },
-/* 215 */
+/* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(216)
-	__vue_script__ = __webpack_require__(218)
+	__webpack_require__(222)
+	__vue_script__ = __webpack_require__(224)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsButton/src/Button.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(230)
+	__vue_template__ = __webpack_require__(236)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -4872,13 +4924,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 216 */
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(217);
+	var content = __webpack_require__(223);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -4898,7 +4950,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 217 */
+/* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -4912,7 +4964,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 218 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4921,11 +4973,11 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _NrButton = __webpack_require__(219);
+	var _NrButton = __webpack_require__(225);
 
 	var _NrButton2 = _interopRequireDefault(_NrButton);
 
-	var _GhostButton = __webpack_require__(225);
+	var _GhostButton = __webpack_require__(231);
 
 	var _GhostButton2 = _interopRequireDefault(_GhostButton);
 
@@ -5001,17 +5053,17 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 219 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(220)
-	__vue_script__ = __webpack_require__(222)
+	__webpack_require__(226)
+	__vue_script__ = __webpack_require__(228)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsButton/src/NrButton.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(224)
+	__vue_template__ = __webpack_require__(230)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -5030,13 +5082,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 220 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(221);
+	var content = __webpack_require__(227);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -5056,7 +5108,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 221 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -5070,7 +5122,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 222 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5079,7 +5131,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _btnMixins = __webpack_require__(223);
+	var _btnMixins = __webpack_require__(229);
 
 	var _btnMixins2 = _interopRequireDefault(_btnMixins);
 
@@ -5143,7 +5195,7 @@ webpackJsonp([0],[
 	// <script lang="babel">
 
 /***/ },
-/* 223 */
+/* 229 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -5190,23 +5242,23 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 224 */
+/* 230 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :class=\"'KSNRButton KSNRButton__UID--' + _uid\">\n  <!-- 按钮颜色 -->\n  <style type=\"text/css\">\n    /* 默认状态 */\n    .KSNRButton__UID--{{ _uid }} .KSNRButton__entity {\n      background: {{ colorNormal }};\n    }\n    /* hover 状态 */\n    .KSNRButton__UID--{{ _uid }} .KSNRButton__entity[disabled]:hover {\n      background: {{ colorNormal }};\n    }\n    .KSNRButton__UID--{{ _uid }} .KSNRButton__entity:hover {\n      background: {{ colorHover }};\n    }\n    /* active 状态 */\n    .KSNRButton__UID--{{ _uid }} .KSNRButton__entity:active {\n      background: {{ colorActive }};\n    }\n    /* loading 大小 */\n    .KSNRButton__UID--{{ _uid }} .KSNRButton__loading {\n      width: {{ loadingSize }}px;\n    }\n    /* button 内容修正 */\n    .KSNRButton__UID--{{ _uid }} .KSNRButton__text {\n      padding-left: {{ loading ? loadingSize + 6 : 0 }}px;\n    }\n  </style>\n  <button class=\"KSNRButton__entity\" :type=\"nativeType\"\n          :disabled=\"(disable || loading) && 'disabled'\" :style=\"btnStyle\"\n  >\n    <svg class=\"KSNRButton__loading\" v-if=\"loading\" :width=\"loadingSize\" :height=\"loadingSize\" viewBox=\"0 0 16 16\"\n         preserveAspectRatio=\"xMidYMid meet\"\n         version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">\n      <g transform=\"scale(0.015625, 0.015625)\">\n        <path\n          d=\"M515.698303 969.127499c-97.187972 0-191.279691-31.134554-270.406182-90.479422-96.67193-72.245926-159.45708-178.206619-176.658492-297.928439s13.245087-238.9276 85.663027-335.59953C304.120947 45.239711 588.288258 4.644381 787.99664 154.124643c83.770872 62.78515 143.459768 153.092558 168.2298 254.580884 4.300353 17.373425-6.364522 34.918864-23.737947 39.047203-17.373425 4.128339-34.918864-6.364522-39.047203-23.737947-21.157736-86.867126-72.417941-164.44549-144.147825-218.285906C578.139425 77.750378 334.395431 112.669242 206.244919 283.823282c-62.097094 82.910801-88.243239 185.087183-73.450025 287.607593s68.461616 193.34386 151.372417 255.440954c171.326054 128.322526 414.898035 93.403662 543.220561-77.922392 33.542752-44.895683 56.592642-95.123803 68.289602-149.308248 3.78431-17.373425 21.157736-28.554342 38.359147-24.770032 17.373425 3.78431 28.554342 20.985721 24.770032 38.359147-13.761129 63.473207-40.59533 122.130018-79.814547 174.422308-72.417941 96.67193-178.378633 159.45708-298.100454 176.658492C559.217873 967.579372 537.372081 969.127499 515.698303 969.127499z\"\n        ></path>\n      </g>\n    </svg>\n    <slot></slot>\n  </button>\n</div>\n";
 
 /***/ },
-/* 225 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(226)
-	__vue_script__ = __webpack_require__(228)
+	__webpack_require__(232)
+	__vue_script__ = __webpack_require__(234)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsButton/src/GhostButton.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(229)
+	__vue_template__ = __webpack_require__(235)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -5225,13 +5277,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 226 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(227);
+	var content = __webpack_require__(233);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -5251,7 +5303,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 227 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -5265,7 +5317,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 228 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5274,7 +5326,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _btnMixins = __webpack_require__(223);
+	var _btnMixins = __webpack_require__(229);
 
 	var _btnMixins2 = _interopRequireDefault(_btnMixins);
 
@@ -5345,19 +5397,19 @@ webpackJsonp([0],[
 	// <script lang="babel">
 
 /***/ },
-/* 229 */
+/* 235 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :class=\"'KSGhostButton KSGhostButton__UID--' + _uid\">\n  <!-- 按钮颜色 -->\n  <style type=\"text/css\">\n    /* 默认状态 */\n    .KSGhostButton__UID--{{ _uid }} .KSGhostButton__entity {\n      color: {{ colorNormal }};\n      border: 1px solid {{ colorNormal }};\n    }\n    /* hover 状态 */\n    .KSGhostButton__UID--{{ _uid }} .KSGhostButton__entity:hover {\n      color: {{ colorNormal }};\n      border: 1px solid {{ colorHover }};\n    }\n    .KSGhostButton__UID--{{ _uid }} .KSNRButton__entity[disabled]:hover {\n      border: 1px solid {{ colorNormal }};\n    }\n    /* active 状态 */\n    .KSGhostButton__UID--{{ _uid }} .KSGhostButton__entity:active {\n      color: {{ colorNormal }};\n      border: 1px solid {{ colorActive }};\n    }\n    .KSGhostButton__UID--{{ _uid }} .KSGhostButton__entity[disabled]:active {\n      border: 1px solid {{ colorNormal }};\n      background: #FFF;\n    }\n    /* loading 大小 */\n    .KSGhostButton__UID--{{ _uid }} .KSGhostButton__loading {\n      width: {{ loadingSize }}px;\n    }\n    /* button 内容修正 */\n    .KSGhostButton__UID--{{ _uid }} .KSGhostButton__text {\n      padding-left: {{ loading ? loadingSize + 6 : 0 }}px;\n    }\n  </style>\n  <button class=\"KSGhostButton__entity\" :type=\"nativeType\"\n          :disabled=\"(disable || loading) && 'disabled'\" :style=\"btnStyle\"\n  >\n    <svg class=\"KSGhostButton__loading\" v-if=\"loading\" :width=\"loadingSize\" :height=\"loadingSize\" viewBox=\"0 0 16 16\"\n         preserveAspectRatio=\"xMidYMid meet\"\n         version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">\n      <g transform=\"scale(0.015625, 0.015625)\">\n        <path\n          d=\"M515.698303 969.127499c-97.187972 0-191.279691-31.134554-270.406182-90.479422-96.67193-72.245926-159.45708-178.206619-176.658492-297.928439s13.245087-238.9276 85.663027-335.59953C304.120947 45.239711 588.288258 4.644381 787.99664 154.124643c83.770872 62.78515 143.459768 153.092558 168.2298 254.580884 4.300353 17.373425-6.364522 34.918864-23.737947 39.047203-17.373425 4.128339-34.918864-6.364522-39.047203-23.737947-21.157736-86.867126-72.417941-164.44549-144.147825-218.285906C578.139425 77.750378 334.395431 112.669242 206.244919 283.823282c-62.097094 82.910801-88.243239 185.087183-73.450025 287.607593s68.461616 193.34386 151.372417 255.440954c171.326054 128.322526 414.898035 93.403662 543.220561-77.922392 33.542752-44.895683 56.592642-95.123803 68.289602-149.308248 3.78431-17.373425 21.157736-28.554342 38.359147-24.770032 17.373425 3.78431 28.554342 20.985721 24.770032 38.359147-13.761129 63.473207-40.59533 122.130018-79.814547 174.422308-72.417941 96.67193-178.378633 159.45708-298.100454 176.658492C559.217873 967.579372 537.372081 969.127499 515.698303 969.127499z\"\n        ></path>\n      </g>\n    </svg>\n    <slot></slot>\n  </button>\n</div>\n";
 
 /***/ },
-/* 230 */
+/* 236 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KSButton\">\n  <!-- 普通按钮 -->\n  <nr-button v-if=\"!ghost\" :native-type=\"nativeType\" :disable=\"disable\"\n             :loading.sync=\"loading\"\n             :height=\"sizeMapper[size] && sizeMapper[size].height\"\n             :width=\"sizeMapper[size] && sizeMapper[size].width\"\n             :font-size=\"sizeMapper[size] && sizeMapper[size].fSize\"\n             :color-normal=\"colorMapper[type] && colorMapper[type].normal\"\n             :color-hover=\"colorMapper[type] && colorMapper[type].hover\"\n             :color-active=\"colorMapper[type] && colorMapper[type].active\"\n  >\n    <slot></slot>\n  </nr-button>\n  <!-- 幽灵按钮 -->\n  <ghost-button v-if=\"ghost\" :native-type=\"nativeType\" :disable=\"disable\"\n                :loading.sync=\"loading\"\n                :height=\"sizeMapper[size] && sizeMapper[size].height\"\n                :width=\"sizeMapper[size] && sizeMapper[size].width\"\n                :font-size=\"sizeMapper[size] && sizeMapper[size].fSize\"\n                :color-normal=\"colorMapper[type] && colorMapper[type].normal\"\n                :color-hover=\"colorMapper[type] && colorMapper[type].hover\"\n                :color-active=\"colorMapper[type] && colorMapper[type].active\"\n  >\n    <slot></slot>\n  </ghost-button>\n</div>\n";
 
 /***/ },
-/* 231 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5367,11 +5419,11 @@ webpackJsonp([0],[
 	});
 	exports.KsDialogEntity = exports.KsDialog = undefined;
 
-	var _main = __webpack_require__(232);
+	var _main = __webpack_require__(238);
 
 	var _main2 = _interopRequireDefault(_main);
 
-	var _main3 = __webpack_require__(233);
+	var _main3 = __webpack_require__(239);
 
 	var _main4 = _interopRequireDefault(_main3);
 
@@ -5390,7 +5442,7 @@ webpackJsonp([0],[
 	exports.KsDialogEntity = _main4.default;
 
 /***/ },
-/* 232 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5404,11 +5456,11 @@ webpackJsonp([0],[
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _main = __webpack_require__(233);
+	var _main = __webpack_require__(239);
 
 	var _main2 = _interopRequireDefault(_main);
 
-	var _KsMask = __webpack_require__(237);
+	var _KsMask = __webpack_require__(243);
 
 	var _KsMask2 = _interopRequireDefault(_KsMask);
 
@@ -5617,17 +5669,17 @@ webpackJsonp([0],[
 	exports.KsDialog = _KsDialog;
 
 /***/ },
-/* 233 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(234)
-	__vue_script__ = __webpack_require__(236)
+	__webpack_require__(240)
+	__vue_script__ = __webpack_require__(242)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDialog/src/main.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(244)
+	__vue_template__ = __webpack_require__(250)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -5646,9 +5698,9 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 234 */
-[324, 235],
-/* 235 */
+/* 240 */
+[330, 241],
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -5662,7 +5714,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 236 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5671,11 +5723,11 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _KsButton = __webpack_require__(214);
+	var _KsButton = __webpack_require__(220);
 
 	var _KsButton2 = _interopRequireDefault(_KsButton);
 
-	var _KsMask = __webpack_require__(237);
+	var _KsMask = __webpack_require__(243);
 
 	var _KsMask2 = _interopRequireDefault(_KsMask);
 
@@ -5788,7 +5840,7 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 237 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5798,11 +5850,11 @@ webpackJsonp([0],[
 	});
 	exports.KsMaskEntity = exports.KsMask = undefined;
 
-	var _main = __webpack_require__(238);
+	var _main = __webpack_require__(244);
 
 	var _main2 = _interopRequireDefault(_main);
 
-	var _main3 = __webpack_require__(239);
+	var _main3 = __webpack_require__(245);
 
 	var _main4 = _interopRequireDefault(_main3);
 
@@ -5821,7 +5873,7 @@ webpackJsonp([0],[
 	exports.KsMaskEntity = _main4.default;
 
 /***/ },
-/* 238 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5835,7 +5887,7 @@ webpackJsonp([0],[
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _main = __webpack_require__(239);
+	var _main = __webpack_require__(245);
 
 	var _main2 = _interopRequireDefault(_main);
 
@@ -5969,17 +6021,17 @@ webpackJsonp([0],[
 	exports.KsMask = _KsMask;
 
 /***/ },
-/* 239 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(240)
-	__vue_script__ = __webpack_require__(242)
+	__webpack_require__(246)
+	__vue_script__ = __webpack_require__(248)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsMask/src/main.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(243)
+	__vue_template__ = __webpack_require__(249)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -5998,9 +6050,9 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 240 */
-[324, 241],
-/* 241 */
+/* 246 */
+[330, 247],
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -6014,7 +6066,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 242 */
+/* 248 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -6071,19 +6123,19 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 243 */
+/* 249 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KSMask__wrapper\">\n  <div class=\"KSMask__container\" :style=\"maskStyle\"\n       v-if=\"show\" @click.stop=\"$emit('spaceClick')\"\n  >\n    <slot></slot>\n  </div>\n</div>\n";
 
 /***/ },
-/* 244 */
+/* 250 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KSDialog__wrapper\">\n  <!-- 不想加这个 wrapper, but 不加会变成片断实例 -->\n  <div :class=\"'dialog-icon KSDialog KSDialog__UID--' + _uid\"\n       v-if=\"show\" :style=\"zIndex\">\n    <style type=\"text/css\">\n      .KSDialog {\n        background: #FFF;\n      }\n    </style>\n    <!-- 模态颜色 -->\n    <style type=\"text/css\">\n      .KSDialog__UID--{{ _uid }} .KSDialog__icon {\n        color: {{ hue.hue }};\n      }\n    </style>\n    <aside class=\"KSDialog__icon\">\n      <i :class=\"'icon ' + hue.icon\"></i>\n    </aside>\n    <article class=\"KSDialog__content\">\n      <h3 class=\"KSDialog__title\">\n        {{ title }} <slot name=\"title\"></slot>\n      </h3>\n      <p class=\"content\">\n        {{ text }} <slot name=\"text\"></slot>\n      </p>\n    </article>\n    <footer class=\"KSDialog__footer\">\n      <aside class=\"KSDialog__btnWarp\">\n        <ks-button :ghost=\"true\" type=\"other\" @click.stop=\"$emit('cancel')\"\n                   v-if=\"showCancelBtn\" style=\"margin-right: 10px\"\n        >{{ cancelBtnText }}</ks-button>\n        <ks-button :type=\"type\" @click.stop=\"$emit('confirm')\"\n        >{{ confirmBtnText }}</ks-button>\n      </aside>\n    </footer>\n  </div>\n</div>\n";
 
 /***/ },
-/* 245 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6093,7 +6145,7 @@ webpackJsonp([0],[
 	});
 	exports.KsToolTip = undefined;
 
-	var _main = __webpack_require__(246);
+	var _main = __webpack_require__(252);
 
 	var _main2 = _interopRequireDefault(_main);
 
@@ -6108,16 +6160,16 @@ webpackJsonp([0],[
 	exports.KsToolTip = _main2.default;
 
 /***/ },
-/* 246 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(247)
+	__vue_script__ = __webpack_require__(253)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsToolTip/src/main.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(296)
+	__vue_template__ = __webpack_require__(302)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -6136,7 +6188,7 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 247 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6149,7 +6201,7 @@ webpackJsonp([0],[
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _util = __webpack_require__(248);
+	var _util = __webpack_require__(254);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -6221,7 +6273,7 @@ webpackJsonp([0],[
 	// </script>
 
 /***/ },
-/* 248 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6231,15 +6283,15 @@ webpackJsonp([0],[
 	});
 	exports.VuePopper = exports.StringUtil = exports.DomUtil = undefined;
 
-	var _DomUtil = __webpack_require__(249);
+	var _DomUtil = __webpack_require__(255);
 
 	var _DomUtil2 = _interopRequireDefault(_DomUtil);
 
-	var _Popper = __webpack_require__(250);
+	var _Popper = __webpack_require__(256);
 
 	var _Popper2 = _interopRequireDefault(_Popper);
 
-	var _StringUtil = __webpack_require__(295);
+	var _StringUtil = __webpack_require__(301);
 
 	var _StringUtil2 = _interopRequireDefault(_StringUtil);
 
@@ -6254,7 +6306,7 @@ webpackJsonp([0],[
 	                                       */
 
 /***/ },
-/* 249 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -6705,7 +6757,7 @@ webpackJsonp([0],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 250 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6714,7 +6766,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _popper = __webpack_require__(251);
+	var _popper = __webpack_require__(257);
 
 	var _popper2 = _interopRequireDefault(_popper);
 
@@ -6855,24 +6907,24 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 251 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
 
-	var _getOwnPropertyDescriptor = __webpack_require__(252);
+	var _getOwnPropertyDescriptor = __webpack_require__(258);
 
 	var _getOwnPropertyDescriptor2 = _interopRequireDefault(_getOwnPropertyDescriptor);
 
-	var _keys = __webpack_require__(145);
+	var _keys = __webpack_require__(151);
 
 	var _keys2 = _interopRequireDefault(_keys);
 
-	var _assign = __webpack_require__(257);
+	var _assign = __webpack_require__(263);
 
 	var _assign2 = _interopRequireDefault(_assign);
 
-	var _typeof2 = __webpack_require__(262);
+	var _typeof2 = __webpack_require__(268);
 
 	var _typeof3 = _interopRequireDefault(_typeof2);
 
@@ -8110,44 +8162,44 @@ webpackJsonp([0],[
 	});
 
 /***/ },
-/* 252 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(253), __esModule: true };
+	module.exports = { "default": __webpack_require__(259), __esModule: true };
 
 /***/ },
-/* 253 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(254);
+	__webpack_require__(260);
 	var $Object = __webpack_require__(16).Object;
 	module.exports = function getOwnPropertyDescriptor(it, key){
 	  return $Object.getOwnPropertyDescriptor(it, key);
 	};
 
 /***/ },
-/* 254 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
-	var toIObject                 = __webpack_require__(128)
-	  , $getOwnPropertyDescriptor = __webpack_require__(255).f;
+	var toIObject                 = __webpack_require__(134)
+	  , $getOwnPropertyDescriptor = __webpack_require__(261).f;
 
-	__webpack_require__(149)('getOwnPropertyDescriptor', function(){
+	__webpack_require__(155)('getOwnPropertyDescriptor', function(){
 	  return function getOwnPropertyDescriptor(it, key){
 	    return $getOwnPropertyDescriptor(toIObject(it), key);
 	  };
 	});
 
 /***/ },
-/* 255 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var pIE            = __webpack_require__(256)
+	var pIE            = __webpack_require__(262)
 	  , createDesc     = __webpack_require__(28)
-	  , toIObject      = __webpack_require__(128)
+	  , toIObject      = __webpack_require__(134)
 	  , toPrimitive    = __webpack_require__(27)
-	  , has            = __webpack_require__(127)
+	  , has            = __webpack_require__(133)
 	  , IE8_DOM_DEFINE = __webpack_require__(23)
 	  , gOPD           = Object.getOwnPropertyDescriptor;
 
@@ -8161,44 +8213,44 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 256 */
+/* 262 */
 /***/ function(module, exports) {
 
 	exports.f = {}.propertyIsEnumerable;
 
 /***/ },
-/* 257 */
+/* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(258), __esModule: true };
+	module.exports = { "default": __webpack_require__(264), __esModule: true };
 
 /***/ },
-/* 258 */
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(259);
+	__webpack_require__(265);
 	module.exports = __webpack_require__(16).Object.assign;
 
 /***/ },
-/* 259 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.3.1 Object.assign(target, source)
 	var $export = __webpack_require__(14);
 
-	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(260)});
+	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(266)});
 
 /***/ },
-/* 260 */
+/* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// 19.1.2.1 Object.assign(target, source, ...)
-	var getKeys  = __webpack_require__(125)
-	  , gOPS     = __webpack_require__(261)
-	  , pIE      = __webpack_require__(256)
-	  , toObject = __webpack_require__(148)
-	  , IObject  = __webpack_require__(129)
+	var getKeys  = __webpack_require__(131)
+	  , gOPS     = __webpack_require__(267)
+	  , pIE      = __webpack_require__(262)
+	  , toObject = __webpack_require__(154)
+	  , IObject  = __webpack_require__(135)
 	  , $assign  = Object.assign;
 
 	// should work with symbols and should have deterministic property order (V8 bug)
@@ -8227,24 +8279,24 @@ webpackJsonp([0],[
 	} : $assign;
 
 /***/ },
-/* 261 */
+/* 267 */
 /***/ function(module, exports) {
 
 	exports.f = Object.getOwnPropertySymbols;
 
 /***/ },
-/* 262 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	exports.__esModule = true;
 
-	var _iterator = __webpack_require__(263);
+	var _iterator = __webpack_require__(269);
 
 	var _iterator2 = _interopRequireDefault(_iterator);
 
-	var _symbol = __webpack_require__(282);
+	var _symbol = __webpack_require__(288);
 
 	var _symbol2 = _interopRequireDefault(_symbol);
 
@@ -8259,28 +8311,28 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 263 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(264), __esModule: true };
+	module.exports = { "default": __webpack_require__(270), __esModule: true };
 
 /***/ },
-/* 264 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(265);
-	__webpack_require__(277);
-	module.exports = __webpack_require__(281).f('iterator');
+	__webpack_require__(271);
+	__webpack_require__(283);
+	module.exports = __webpack_require__(287).f('iterator');
 
 /***/ },
-/* 265 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var $at  = __webpack_require__(266)(true);
+	var $at  = __webpack_require__(272)(true);
 
 	// 21.1.3.27 String.prototype[@@iterator]()
-	__webpack_require__(267)(String, 'String', function(iterated){
+	__webpack_require__(273)(String, 'String', function(iterated){
 	  this._t = String(iterated); // target
 	  this._i = 0;                // next index
 	// 21.1.5.2.1 %StringIteratorPrototype%.next()
@@ -8295,11 +8347,11 @@ webpackJsonp([0],[
 	});
 
 /***/ },
-/* 266 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var toInteger = __webpack_require__(134)
-	  , defined   = __webpack_require__(131);
+	var toInteger = __webpack_require__(140)
+	  , defined   = __webpack_require__(137);
 	// true  -> String#at
 	// false -> String#codePointAt
 	module.exports = function(TO_STRING){
@@ -8317,20 +8369,20 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 267 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var LIBRARY        = __webpack_require__(268)
+	var LIBRARY        = __webpack_require__(274)
 	  , $export        = __webpack_require__(14)
-	  , redefine       = __webpack_require__(269)
+	  , redefine       = __webpack_require__(275)
 	  , hide           = __webpack_require__(19)
-	  , has            = __webpack_require__(127)
-	  , Iterators      = __webpack_require__(270)
-	  , $iterCreate    = __webpack_require__(271)
-	  , setToStringTag = __webpack_require__(274)
-	  , getPrototypeOf = __webpack_require__(276)
-	  , ITERATOR       = __webpack_require__(275)('iterator')
+	  , has            = __webpack_require__(133)
+	  , Iterators      = __webpack_require__(276)
+	  , $iterCreate    = __webpack_require__(277)
+	  , setToStringTag = __webpack_require__(280)
+	  , getPrototypeOf = __webpack_require__(282)
+	  , ITERATOR       = __webpack_require__(281)('iterator')
 	  , BUGGY          = !([].keys && 'next' in [].keys()) // Safari has buggy iterators w/o `next`
 	  , FF_ITERATOR    = '@@iterator'
 	  , KEYS           = 'keys'
@@ -8392,35 +8444,35 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 268 */
+/* 274 */
 /***/ function(module, exports) {
 
 	module.exports = true;
 
 /***/ },
-/* 269 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(19);
 
 /***/ },
-/* 270 */
+/* 276 */
 /***/ function(module, exports) {
 
 	module.exports = {};
 
 /***/ },
-/* 271 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var create         = __webpack_require__(272)
+	var create         = __webpack_require__(278)
 	  , descriptor     = __webpack_require__(28)
-	  , setToStringTag = __webpack_require__(274)
+	  , setToStringTag = __webpack_require__(280)
 	  , IteratorPrototype = {};
 
 	// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-	__webpack_require__(19)(IteratorPrototype, __webpack_require__(275)('iterator'), function(){ return this; });
+	__webpack_require__(19)(IteratorPrototype, __webpack_require__(281)('iterator'), function(){ return this; });
 
 	module.exports = function(Constructor, NAME, next){
 	  Constructor.prototype = create(IteratorPrototype, {next: descriptor(1, next)});
@@ -8428,14 +8480,14 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 272 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 	var anObject    = __webpack_require__(21)
-	  , dPs         = __webpack_require__(124)
-	  , enumBugKeys = __webpack_require__(139)
-	  , IE_PROTO    = __webpack_require__(136)('IE_PROTO')
+	  , dPs         = __webpack_require__(130)
+	  , enumBugKeys = __webpack_require__(145)
+	  , IE_PROTO    = __webpack_require__(142)('IE_PROTO')
 	  , Empty       = function(){ /* empty */ }
 	  , PROTOTYPE   = 'prototype';
 
@@ -8448,7 +8500,7 @@ webpackJsonp([0],[
 	    , gt     = '>'
 	    , iframeDocument;
 	  iframe.style.display = 'none';
-	  __webpack_require__(273).appendChild(iframe);
+	  __webpack_require__(279).appendChild(iframe);
 	  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
 	  // createDict = iframe.contentWindow.Object;
 	  // html.removeChild(iframe);
@@ -8475,29 +8527,29 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 273 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(15).document && document.documentElement;
 
 /***/ },
-/* 274 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var def = __webpack_require__(20).f
-	  , has = __webpack_require__(127)
-	  , TAG = __webpack_require__(275)('toStringTag');
+	  , has = __webpack_require__(133)
+	  , TAG = __webpack_require__(281)('toStringTag');
 
 	module.exports = function(it, tag, stat){
 	  if(it && !has(it = stat ? it : it.prototype, TAG))def(it, TAG, {configurable: true, value: tag});
 	};
 
 /***/ },
-/* 275 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var store      = __webpack_require__(137)('wks')
-	  , uid        = __webpack_require__(138)
+	var store      = __webpack_require__(143)('wks')
+	  , uid        = __webpack_require__(144)
 	  , Symbol     = __webpack_require__(15).Symbol
 	  , USE_SYMBOL = typeof Symbol == 'function';
 
@@ -8509,13 +8561,13 @@ webpackJsonp([0],[
 	$exports.store = store;
 
 /***/ },
-/* 276 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
-	var has         = __webpack_require__(127)
-	  , toObject    = __webpack_require__(148)
-	  , IE_PROTO    = __webpack_require__(136)('IE_PROTO')
+	var has         = __webpack_require__(133)
+	  , toObject    = __webpack_require__(154)
+	  , IE_PROTO    = __webpack_require__(142)('IE_PROTO')
 	  , ObjectProto = Object.prototype;
 
 	module.exports = Object.getPrototypeOf || function(O){
@@ -8527,14 +8579,14 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 277 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(278);
+	__webpack_require__(284);
 	var global        = __webpack_require__(15)
 	  , hide          = __webpack_require__(19)
-	  , Iterators     = __webpack_require__(270)
-	  , TO_STRING_TAG = __webpack_require__(275)('toStringTag');
+	  , Iterators     = __webpack_require__(276)
+	  , TO_STRING_TAG = __webpack_require__(281)('toStringTag');
 
 	for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList', 'CSSRuleList'], i = 0; i < 5; i++){
 	  var NAME       = collections[i]
@@ -8545,20 +8597,20 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 278 */
+/* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var addToUnscopables = __webpack_require__(279)
-	  , step             = __webpack_require__(280)
-	  , Iterators        = __webpack_require__(270)
-	  , toIObject        = __webpack_require__(128);
+	var addToUnscopables = __webpack_require__(285)
+	  , step             = __webpack_require__(286)
+	  , Iterators        = __webpack_require__(276)
+	  , toIObject        = __webpack_require__(134);
 
 	// 22.1.3.4 Array.prototype.entries()
 	// 22.1.3.13 Array.prototype.keys()
 	// 22.1.3.29 Array.prototype.values()
 	// 22.1.3.30 Array.prototype[@@iterator]()
-	module.exports = __webpack_require__(267)(Array, 'Array', function(iterated, kind){
+	module.exports = __webpack_require__(273)(Array, 'Array', function(iterated, kind){
 	  this._t = toIObject(iterated); // target
 	  this._i = 0;                   // next index
 	  this._k = kind;                // kind
@@ -8584,13 +8636,13 @@ webpackJsonp([0],[
 	addToUnscopables('entries');
 
 /***/ },
-/* 279 */
+/* 285 */
 /***/ function(module, exports) {
 
 	module.exports = function(){ /* empty */ };
 
 /***/ },
-/* 280 */
+/* 286 */
 /***/ function(module, exports) {
 
 	module.exports = function(done, value){
@@ -8598,58 +8650,58 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 281 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports.f = __webpack_require__(275);
+	exports.f = __webpack_require__(281);
 
 /***/ },
-/* 282 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(283), __esModule: true };
+	module.exports = { "default": __webpack_require__(289), __esModule: true };
 
 /***/ },
-/* 283 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(284);
-	__webpack_require__(292);
-	__webpack_require__(293);
-	__webpack_require__(294);
+	__webpack_require__(290);
+	__webpack_require__(298);
+	__webpack_require__(299);
+	__webpack_require__(300);
 	module.exports = __webpack_require__(16).Symbol;
 
 /***/ },
-/* 284 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// ECMAScript 6 symbols shim
 	var global         = __webpack_require__(15)
-	  , has            = __webpack_require__(127)
+	  , has            = __webpack_require__(133)
 	  , DESCRIPTORS    = __webpack_require__(24)
 	  , $export        = __webpack_require__(14)
-	  , redefine       = __webpack_require__(269)
-	  , META           = __webpack_require__(285).KEY
+	  , redefine       = __webpack_require__(275)
+	  , META           = __webpack_require__(291).KEY
 	  , $fails         = __webpack_require__(25)
-	  , shared         = __webpack_require__(137)
-	  , setToStringTag = __webpack_require__(274)
-	  , uid            = __webpack_require__(138)
-	  , wks            = __webpack_require__(275)
-	  , wksExt         = __webpack_require__(281)
-	  , wksDefine      = __webpack_require__(286)
-	  , keyOf          = __webpack_require__(287)
-	  , enumKeys       = __webpack_require__(288)
-	  , isArray        = __webpack_require__(289)
+	  , shared         = __webpack_require__(143)
+	  , setToStringTag = __webpack_require__(280)
+	  , uid            = __webpack_require__(144)
+	  , wks            = __webpack_require__(281)
+	  , wksExt         = __webpack_require__(287)
+	  , wksDefine      = __webpack_require__(292)
+	  , keyOf          = __webpack_require__(293)
+	  , enumKeys       = __webpack_require__(294)
+	  , isArray        = __webpack_require__(295)
 	  , anObject       = __webpack_require__(21)
-	  , toIObject      = __webpack_require__(128)
+	  , toIObject      = __webpack_require__(134)
 	  , toPrimitive    = __webpack_require__(27)
 	  , createDesc     = __webpack_require__(28)
-	  , _create        = __webpack_require__(272)
-	  , gOPNExt        = __webpack_require__(290)
-	  , $GOPD          = __webpack_require__(255)
+	  , _create        = __webpack_require__(278)
+	  , gOPNExt        = __webpack_require__(296)
+	  , $GOPD          = __webpack_require__(261)
 	  , $DP            = __webpack_require__(20)
-	  , $keys          = __webpack_require__(125)
+	  , $keys          = __webpack_require__(131)
 	  , gOPD           = $GOPD.f
 	  , dP             = $DP.f
 	  , gOPN           = gOPNExt.f
@@ -8772,11 +8824,11 @@ webpackJsonp([0],[
 
 	  $GOPD.f = $getOwnPropertyDescriptor;
 	  $DP.f   = $defineProperty;
-	  __webpack_require__(291).f = gOPNExt.f = $getOwnPropertyNames;
-	  __webpack_require__(256).f  = $propertyIsEnumerable;
-	  __webpack_require__(261).f = $getOwnPropertySymbols;
+	  __webpack_require__(297).f = gOPNExt.f = $getOwnPropertyNames;
+	  __webpack_require__(262).f  = $propertyIsEnumerable;
+	  __webpack_require__(267).f = $getOwnPropertySymbols;
 
-	  if(DESCRIPTORS && !__webpack_require__(268)){
+	  if(DESCRIPTORS && !__webpack_require__(274)){
 	    redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
 	  }
 
@@ -8860,12 +8912,12 @@ webpackJsonp([0],[
 	setToStringTag(global.JSON, 'JSON', true);
 
 /***/ },
-/* 285 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var META     = __webpack_require__(138)('meta')
+	var META     = __webpack_require__(144)('meta')
 	  , isObject = __webpack_require__(22)
-	  , has      = __webpack_require__(127)
+	  , has      = __webpack_require__(133)
 	  , setDesc  = __webpack_require__(20).f
 	  , id       = 0;
 	var isExtensible = Object.isExtensible || function(){
@@ -8918,13 +8970,13 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 286 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var global         = __webpack_require__(15)
 	  , core           = __webpack_require__(16)
-	  , LIBRARY        = __webpack_require__(268)
-	  , wksExt         = __webpack_require__(281)
+	  , LIBRARY        = __webpack_require__(274)
+	  , wksExt         = __webpack_require__(287)
 	  , defineProperty = __webpack_require__(20).f;
 	module.exports = function(name){
 	  var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
@@ -8932,11 +8984,11 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 287 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getKeys   = __webpack_require__(125)
-	  , toIObject = __webpack_require__(128);
+	var getKeys   = __webpack_require__(131)
+	  , toIObject = __webpack_require__(134);
 	module.exports = function(object, el){
 	  var O      = toIObject(object)
 	    , keys   = getKeys(O)
@@ -8947,13 +8999,13 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 288 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// all enumerable object keys, includes symbols
-	var getKeys = __webpack_require__(125)
-	  , gOPS    = __webpack_require__(261)
-	  , pIE     = __webpack_require__(256);
+	var getKeys = __webpack_require__(131)
+	  , gOPS    = __webpack_require__(267)
+	  , pIE     = __webpack_require__(262);
 	module.exports = function(it){
 	  var result     = getKeys(it)
 	    , getSymbols = gOPS.f;
@@ -8967,22 +9019,22 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 289 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.2.2 IsArray(argument)
-	var cof = __webpack_require__(130);
+	var cof = __webpack_require__(136);
 	module.exports = Array.isArray || function isArray(arg){
 	  return cof(arg) == 'Array';
 	};
 
 /***/ },
-/* 290 */
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
-	var toIObject = __webpack_require__(128)
-	  , gOPN      = __webpack_require__(291).f
+	var toIObject = __webpack_require__(134)
+	  , gOPN      = __webpack_require__(297).f
 	  , toString  = {}.toString;
 
 	var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
@@ -9002,37 +9054,37 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 291 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-	var $keys      = __webpack_require__(126)
-	  , hiddenKeys = __webpack_require__(139).concat('length', 'prototype');
+	var $keys      = __webpack_require__(132)
+	  , hiddenKeys = __webpack_require__(145).concat('length', 'prototype');
 
 	exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O){
 	  return $keys(O, hiddenKeys);
 	};
 
 /***/ },
-/* 292 */
+/* 298 */
 /***/ function(module, exports) {
 
 	
 
 /***/ },
-/* 293 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(286)('asyncIterator');
+	__webpack_require__(292)('asyncIterator');
 
 /***/ },
-/* 294 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(286)('observable');
+	__webpack_require__(292)('observable');
 
 /***/ },
-/* 295 */
+/* 301 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -9056,13 +9108,13 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 296 */
+/* 302 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div v-el:reference cid=\"KsToolTip\" style=\"display: inline-block\"\n      @mouseenter=\"handleShowPopper\"\n      @mouseleave=\"handleClosePopper\"\n>\n  <div style=\"display: inline-block\">\n      <slot></slot>\n  </div>\n\n  <div transition=\"KsTooltipTransition\" class=\"KsToolTip\"\n       v-el:popper v-show=\"!disabled && showPopper\">\n    <div v-text=\"content\"></div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 297 */
+/* 303 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9072,11 +9124,11 @@ webpackJsonp([0],[
 	});
 	exports.KsPageGroup = exports.KsPage = undefined;
 
-	var _page = __webpack_require__(298);
+	var _page = __webpack_require__(304);
 
 	var _page2 = _interopRequireDefault(_page);
 
-	var _pagegroup = __webpack_require__(303);
+	var _pagegroup = __webpack_require__(309);
 
 	var _pagegroup2 = _interopRequireDefault(_pagegroup);
 
@@ -9086,17 +9138,17 @@ webpackJsonp([0],[
 	exports.KsPageGroup = _pagegroup2.default;
 
 /***/ },
-/* 298 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(299)
-	__vue_script__ = __webpack_require__(301)
+	__webpack_require__(305)
+	__vue_script__ = __webpack_require__(307)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsPager/src/page.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(302)
+	__vue_template__ = __webpack_require__(308)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -9115,13 +9167,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 299 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(300);
+	var content = __webpack_require__(306);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -9141,7 +9193,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 300 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -9155,7 +9207,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 301 */
+/* 307 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -9315,23 +9367,23 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 302 */
+/* 308 */
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<ul v-show=\"total\" class=\"KsPage\" cid=\"KsPage\" @click=\"click_page_mian($event)\">\n    <li :class=\"{'disabled':page_current == 1}\">&lt;</li>\n    <li v-for=\"i in pages_array\"\n        track-by=\"$index\"\n        :class=\"{'active':page_current == i}\" v-text=\"i\"></li>\n    <li :class=\"{'disabled':page_current == total_count}\">&gt;</li>\n</ul>\n\n";
 
 /***/ },
-/* 303 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(304)
-	__vue_script__ = __webpack_require__(306)
+	__webpack_require__(310)
+	__vue_script__ = __webpack_require__(312)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsPager/src/pagegroup.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(307)
+	__vue_template__ = __webpack_require__(313)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -9350,13 +9402,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 304 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(305);
+	var content = __webpack_require__(311);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -9376,7 +9428,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 305 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -9390,7 +9442,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 306 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9399,7 +9451,7 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _page = __webpack_require__(298);
+	var _page = __webpack_require__(304);
 
 	var _page2 = _interopRequireDefault(_page);
 
@@ -9471,13 +9523,13 @@ webpackJsonp([0],[
 	// <script type="text/javascript">
 
 /***/ },
-/* 307 */
+/* 313 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsPageGroup\" cid=\"KsPageGroup\">\n    <div class=\"KsPageGroup-statistical\">共<span>{{total}}</span>条</div>\n    <div class=\"ks-col\">\n        每页\n        <select class=\"input\" v-model=\"page_size\">\n            <option \n                v-for=\"i in page_sizes\" \n                :value=\"i\">{{i}}</option>\n        </select>\n        条\n    </div>\n    <page \n        class=\"ks-col-auto\"\n        :page_current.sync=\"page_current\" \n        :pages=\"pages\"\n        :total=\"total\"\n        :page_size=\"page_size\"\n        v-on:current_change=\"current_change\"></page>    \n</div>\n";
 
 /***/ },
-/* 308 */
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9487,19 +9539,19 @@ webpackJsonp([0],[
 	});
 	exports.Directives = undefined;
 
-	var _keys = __webpack_require__(145);
+	var _keys = __webpack_require__(151);
 
 	var _keys2 = _interopRequireDefault(_keys);
 
-	var _limitInputNumber = __webpack_require__(309);
+	var _limitInputNumber = __webpack_require__(315);
 
 	var _limitInputNumber2 = _interopRequireDefault(_limitInputNumber);
 
-	var _limitNumberFixed = __webpack_require__(310);
+	var _limitNumberFixed = __webpack_require__(316);
 
 	var _limitNumberFixed2 = _interopRequireDefault(_limitNumberFixed);
 
-	var _clickOutside = __webpack_require__(314);
+	var _clickOutside = __webpack_require__(320);
 
 	var _clickOutside2 = _interopRequireDefault(_clickOutside);
 
@@ -9531,7 +9583,7 @@ webpackJsonp([0],[
 	exports.Directives = Directives;
 
 /***/ },
-/* 309 */
+/* 315 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -9591,7 +9643,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 310 */
+/* 316 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9600,7 +9652,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _isNan = __webpack_require__(311);
+	var _isNan = __webpack_require__(317);
 
 	var _isNan2 = _interopRequireDefault(_isNan);
 
@@ -9668,20 +9720,20 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 311 */
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(312), __esModule: true };
+	module.exports = { "default": __webpack_require__(318), __esModule: true };
 
 /***/ },
-/* 312 */
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(313);
+	__webpack_require__(319);
 	module.exports = __webpack_require__(16).Number.isNaN;
 
 /***/ },
-/* 313 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.1.2.4 Number.isNaN(number)
@@ -9694,7 +9746,7 @@ webpackJsonp([0],[
 	});
 
 /***/ },
-/* 314 */
+/* 320 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -9749,7 +9801,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 315 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9759,15 +9811,15 @@ webpackJsonp([0],[
 	});
 	exports.Filter = undefined;
 
-	var _keys = __webpack_require__(145);
+	var _keys = __webpack_require__(151);
 
 	var _keys2 = _interopRequireDefault(_keys);
 
-	var _filterTrim = __webpack_require__(316);
+	var _filterTrim = __webpack_require__(322);
 
 	var _filterTrim2 = _interopRequireDefault(_filterTrim);
 
-	var _toDate = __webpack_require__(317);
+	var _toDate = __webpack_require__(323);
 
 	var _toDate2 = _interopRequireDefault(_toDate);
 
@@ -9798,7 +9850,7 @@ webpackJsonp([0],[
 	exports.Filter = Filter;
 
 /***/ },
-/* 316 */
+/* 322 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -9820,7 +9872,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 317 */
+/* 323 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -9853,18 +9905,18 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 318 */
+/* 324 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 319 */,
-/* 320 */,
-/* 321 */,
-/* 322 */,
-/* 323 */,
-/* 324 */
+/* 325 */,
+/* 326 */,
+/* 327 */,
+/* 328 */,
+/* 329 */,
+/* 330 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
