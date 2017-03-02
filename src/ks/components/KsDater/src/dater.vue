@@ -55,7 +55,7 @@
             this.timer = ''
             
             return {
-                times:[]
+                times:['00','00','00']
             }
         },
         methods:{
@@ -119,6 +119,7 @@
                     case 'datetime':
                         // console.log(dater)
                         dater = dater || stringify(new Date())
+                        console.log(this.times)
                         value = dater+' '+this.times.join(':')
                     break;
                 }
