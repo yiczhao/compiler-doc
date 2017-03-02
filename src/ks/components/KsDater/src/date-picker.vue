@@ -39,7 +39,7 @@
                 this.$nextTick(()=>{
                     this.$emit('change',cur_date)    
                 })
-                if(this.type != 'datemulti'){
+                if(this.type != 'datemulti' && this.type != 'datetime' ){
                     this.close()
                 }
             }
