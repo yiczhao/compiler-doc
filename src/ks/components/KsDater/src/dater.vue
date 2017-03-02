@@ -77,6 +77,7 @@
             clear() {
                 if(!this.value || this.readonly) return
                 this.value = ''
+                this.times = ['00','00','00']
                 this.$emit('change','')
             },
             // 过滤选择
@@ -119,7 +120,7 @@
                     case 'datetime':
                         // console.log(dater)
                         dater = dater || stringify(new Date())
-                        console.log(this.times)
+                        // console.log(this.times)
                         value = dater+' '+this.times.join(':')
                     break;
                 }
