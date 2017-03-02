@@ -3,7 +3,7 @@
        :class="{'readonly':readonly}">
     <div class="_input" v-on:click="show=!show">
       <div class="ks-col-auto date-icon"><i class="icon"></i></div>
-      <input type="text" class="ks-col" placeholder="{{placeholder}}" :value="value" readonly>
+      <input type="text" class="ks-col" placeholder="{{placeholder}}" v-model="value" readonly>
     </div>
     <ks-dater v-show="show" :value="value" :type="type" :readonly="readonly" v-on:change="current_change"></ks-dater>
   </div>
@@ -36,7 +36,9 @@
             // dater callback
             current_change(cur_date){
                 this.value = cur_date
-                this.$emit('change',cur_date)
+                this.$nextTick(()=>{
+                    this.$emit('change',cur_date)    
+                })
                 if(this.type != 'datemulti'){
                     this.close()
                 }
@@ -46,7 +48,7 @@
         watch:{
             value(val){
                 
-                console.log(val)
+                // console.log(val)
 
             }
 

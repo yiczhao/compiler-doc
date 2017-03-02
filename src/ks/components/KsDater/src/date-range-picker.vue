@@ -5,11 +5,11 @@
         <div class="ks-col">
             <div class="ks-row-auto">
                 <div class="ks-col">
-                    <input type="text" placeholder="{{placeholder[0]}}" :value="range[0]">
+                    <input type="text" readonly placeholder="{{placeholder[0]}}" :value="range[0]">
                 </div>
                 <i class="icon ks-col-auto scope-icon">&#xe677;</i>
                 <div class="ks-col">
-                    <input type="text" placeholder="{{placeholder[1]}}" :value="range[1]">
+                    <input type="text" readonly placeholder="{{placeholder[1]}}" :value="range[1]">
                 </div>
             </div>
         </div>
@@ -23,13 +23,16 @@
         mixins: [props],
         props:{
             range:{
-                type:Array
+                type:Array,
+                default(){
+                    return []
+                }
             },
             placeholder:{
                 coerce(val) {
                     val = val || ''
                     if(~val.indexOf(',')){
-                        console.log(val.split(','))
+                        // console.log(val.split(','))
                         return val.split(',')
                     }
 
@@ -47,7 +50,7 @@
                 this.show = false
             },
             change(range){
-                console.log(range)
+                // console.log(range)
                 this.range = range
                 range.length == 2 && this.$emit('change',range)
             }

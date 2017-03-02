@@ -88,7 +88,7 @@
                 this.value = ''
                 
                 this.range_daters = range_daters
-                console.log(range_daters)
+                // console.log(range_daters)
                 // this.point_daters = range_daters
                 // 取具体日期
                 range_daters.length == 2 && (this.range_daters = get_range_dates(range_daters))
@@ -132,7 +132,7 @@
                 range_dater = this.get_range(this.range_daters , _date.dater)
 
                 this.redraw([stringify(this.now),stringify(this.next_now)],range_dater)
-                console.log('range_dater',range_dater)
+                // console.log('range_dater',range_dater)
                 this.$emit('change',range_dater)
             },
             // [a,b] , e => [c,d]
@@ -202,10 +202,19 @@
             },
             next_now () {
                 this.next_month_dates()
+            },
+            range_dater(val){
+                // console.log(val)
+                if(val.length == 2){
+                    this.redraw(val,val)    
+                }else{
+                    this.redraw([stringify(this.now),stringify(this.next_now)],val)    
+                }
+                
             }
         },
         created(){
-           console.log(this.range_dater)
+           // console.log(this.range_dater)
             if(!this.range_dater || !this.range_dater.length){
                 this.range_dater = [stringify(this.now),stringify(this.next_now)]    
             }
