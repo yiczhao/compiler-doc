@@ -1,7 +1,7 @@
 <template>
   <div class="KsDatePicker" cid="KsDatePicker"
        :class="{'readonly':readonly}">
-    <div class="_input" v-on:click="show=!show">
+    <div class="_input" v-on:mouseup="show=!show">
       <div class="ks-col-auto date-icon"><i class="icon"></i></div>
       <input type="text" class="ks-col" placeholder="{{placeholder}}" v-model="value" readonly>
     </div>
@@ -33,6 +33,12 @@
             close(){
                 this.show = false
             },
+            isContains(e){
+                if (this.$el && !this.$el.contains(e.target)) {
+                    this.close()
+                }
+            },
+            
             // dater callback
             current_change(cur_date){
                 this.value = cur_date
@@ -46,28 +52,14 @@
            
         },
         watch:{
-            value(val){
-                
-                // console.log(val)
-
-            }
-
+            value(val){}
         },
-        created(){
-            // console.log(this.value)
-            // this.value = format_conver(this.value , this.type!='datetime' ? 'YYYY-MM-DD' : '')    
-        },
+        created(){},
         ready(){
-
-
-            document.addEventListener('click', (e) => {
-                if (this.$el && !this.$el.contains(e.target)) {
-                    this.close()
-                }
-            }, false)
+            document.addEventListener('click',this.isContains, false)
         },
         beforeDestroy () {
-            document.removeEventListener('click', this.close, false)
+            document.removeEventListener('click', this.isContains, false)
         }
     }
 </script>

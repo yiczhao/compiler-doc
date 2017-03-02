@@ -1,6 +1,6 @@
 <template>
 <div class="KsDaterMultiPicker" :class="{'readonly':readonly}" cid="KsDaterMultiPicker">
-    <div class="_input" v-on:click="show=!show">
+    <div class="_input" v-on:mouseup="show=!show">
         <div class="ks-col-auto date-icon"><i class="icon">&#xe615;</i></div>
         <div class="ks-col">
             <div class="ks-row-auto">
@@ -49,6 +49,11 @@
             close(){
                 this.show = false
             },
+            isContains(e){
+                if (this.$el && !this.$el.contains(e.target)) {
+                    this.close()
+                }
+            },
             change(range){
                 // console.log(range)
                 this.range = range
@@ -56,14 +61,10 @@
             }
         },
         ready(){
-            document.addEventListener('click', (e) => {
-                if (this.$el && !this.$el.contains(e.target)) {
-                    this.close()
-                }
-            }, false)
+            document.addEventListener('click',this.isContains , false)
         },
         beforeDestroy () {
-            document.removeEventListener('click', this.close, false)
+            document.removeEventListener('click', this.isContains, false)
         }
 
     }

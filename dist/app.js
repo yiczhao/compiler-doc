@@ -3144,6 +3144,7 @@ webpackJsonp([0],[
 	        clear: function clear() {
 	            if (!this.value || this.readonly) return;
 	            this.value = '';
+	            this.times = ['00', '00', '00'];
 	            this.$emit('change', '');
 	        },
 
@@ -3188,7 +3189,7 @@ webpackJsonp([0],[
 	                case 'datetime':
 	                    // console.log(dater)
 	                    dater = dater || (0, _lang.stringify)(new Date());
-	                    console.log(this.times);
+	                    // console.log(this.times)
 	                    value = dater + ' ' + this.times.join(':');
 	                    break;
 	            }
@@ -4157,7 +4158,7 @@ webpackJsonp([0],[
 	// <template>
 	//   <div class="KsDatePicker" cid="KsDatePicker"
 	//        :class="{'readonly':readonly}">
-	//     <div class="_input" v-on:click="show=!show">
+	//     <div class="_input" v-on:mouseup="show=!show">
 	//       <div class="ks-col-auto date-icon"><i class="icon"></i></div>
 	//       <input type="text" class="ks-col" placeholder="{{placeholder}}" v-model="value" readonly>
 	//     </div>
@@ -4186,6 +4187,12 @@ webpackJsonp([0],[
 	        close: function close() {
 	            this.show = false;
 	        },
+	        isContains: function isContains(e) {
+	            if (this.$el && !this.$el.contains(e.target)) {
+	                this.close();
+	            }
+	        },
+
 
 	        // dater callback
 	        current_change: function current_change(cur_date) {
@@ -4201,27 +4208,14 @@ webpackJsonp([0],[
 	        }
 	    },
 	    watch: {
-	        value: function value(val) {
-
-	            // console.log(val)
-
-	        }
+	        value: function value(val) {}
 	    },
-	    created: function created() {
-	        // console.log(this.value)
-	        // this.value = format_conver(this.value , this.type!='datetime' ? 'YYYY-MM-DD' : '')    
-	    },
+	    created: function created() {},
 	    ready: function ready() {
-	        var _this2 = this;
-
-	        document.addEventListener('click', function (e) {
-	            if (_this2.$el && !_this2.$el.contains(e.target)) {
-	                _this2.close();
-	            }
-	        }, false);
+	        document.addEventListener('click', this.isContains, false);
 	    },
 	    beforeDestroy: function beforeDestroy() {
-	        document.removeEventListener('click', this.close, false);
+	        document.removeEventListener('click', this.isContains, false);
 	    }
 	};
 	// </script>
@@ -4233,7 +4227,7 @@ webpackJsonp([0],[
 /* 209 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"KsDatePicker\" cid=\"KsDatePicker\"\n     :class=\"{'readonly':readonly}\">\n  <div class=\"KsDatePicker-input\" v-on:click=\"show=!show\">\n    <div class=\"ks-col-auto date-icon\"><i class=\"icon\"></i></div>\n    <input type=\"text\" class=\"ks-col\" placeholder=\"{{placeholder}}\" v-model=\"value\" readonly>\n  </div>\n  <ks-dater v-show=\"show\" :value=\"value\" :type=\"type\" :readonly=\"readonly\" v-on:change=\"current_change\"></ks-dater>\n</div>\n";
+	module.exports = "\n<div class=\"KsDatePicker\" cid=\"KsDatePicker\"\n     :class=\"{'readonly':readonly}\">\n  <div class=\"KsDatePicker-input\" v-on:mouseup=\"show=!show\">\n    <div class=\"ks-col-auto date-icon\"><i class=\"icon\"></i></div>\n    <input type=\"text\" class=\"ks-col\" placeholder=\"{{placeholder}}\" v-model=\"value\" readonly>\n  </div>\n  <ks-dater v-show=\"show\" :value=\"value\" :type=\"type\" :readonly=\"readonly\" v-on:change=\"current_change\"></ks-dater>\n</div>\n";
 
 /***/ },
 /* 210 */
@@ -4717,6 +4711,11 @@ webpackJsonp([0],[
 	        close: function close() {
 	            this.show = false;
 	        },
+	        isContains: function isContains(e) {
+	            if (this.$el && !this.$el.contains(e.target)) {
+	                this.close();
+	            }
+	        },
 	        change: function change(range) {
 	            // console.log(range)
 	            this.range = range;
@@ -4724,22 +4723,16 @@ webpackJsonp([0],[
 	        }
 	    },
 	    ready: function ready() {
-	        var _this = this;
-
-	        document.addEventListener('click', function (e) {
-	            if (_this.$el && !_this.$el.contains(e.target)) {
-	                _this.close();
-	            }
-	        }, false);
+	        document.addEventListener('click', this.isContains, false);
 	    },
 	    beforeDestroy: function beforeDestroy() {
-	        document.removeEventListener('click', this.close, false);
+	        document.removeEventListener('click', this.isContains, false);
 	    }
 	};
 	// </script>
 	// <template>
 	// <div class="KsDaterMultiPicker" :class="{'readonly':readonly}" cid="KsDaterMultiPicker">
-	//     <div class="_input" v-on:click="show=!show">
+	//     <div class="_input" v-on:mouseup="show=!show">
 	//         <div class="ks-col-auto date-icon"><i class="icon">&#xe615;</i></div>
 	//         <div class="ks-col">
 	//             <div class="ks-row-auto">
@@ -4762,7 +4755,7 @@ webpackJsonp([0],[
 /* 216 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"KsDaterMultiPicker\" :class=\"{'readonly':readonly}\" cid=\"KsDaterMultiPicker\">\n    <div class=\"KsDaterMultiPicker-input\" v-on:click=\"show=!show\">\n        <div class=\"ks-col-auto date-icon\"><i class=\"icon\">&#xe615;</i></div>\n        <div class=\"ks-col\">\n            <div class=\"ks-row-auto\">\n                <div class=\"ks-col\">\n                    <input type=\"text\" readonly placeholder=\"{{placeholder[0]}}\" :value=\"range[0]\">\n                </div>\n                <i class=\"icon ks-col-auto scope-icon\">&#xe677;</i>\n                <div class=\"ks-col\">\n                    <input type=\"text\" readonly placeholder=\"{{placeholder[1]}}\" :value=\"range[1]\">\n                </div>\n            </div>\n        </div>\n    </div>\n    <ks-dater-range v-show=\"show\" v-on:change=\"change\" :range_dater=\"range\"></ks-dater-range> \n</div>\n";
+	module.exports = "\n<div class=\"KsDaterMultiPicker\" :class=\"{'readonly':readonly}\" cid=\"KsDaterMultiPicker\">\n    <div class=\"KsDaterMultiPicker-input\" v-on:mouseup=\"show=!show\">\n        <div class=\"ks-col-auto date-icon\"><i class=\"icon\">&#xe615;</i></div>\n        <div class=\"ks-col\">\n            <div class=\"ks-row-auto\">\n                <div class=\"ks-col\">\n                    <input type=\"text\" readonly placeholder=\"{{placeholder[0]}}\" :value=\"range[0]\">\n                </div>\n                <i class=\"icon ks-col-auto scope-icon\">&#xe677;</i>\n                <div class=\"ks-col\">\n                    <input type=\"text\" readonly placeholder=\"{{placeholder[1]}}\" :value=\"range[1]\">\n                </div>\n            </div>\n        </div>\n    </div>\n    <ks-dater-range v-show=\"show\" v-on:change=\"change\" :range_dater=\"range\"></ks-dater-range> \n</div>\n";
 
 /***/ },
 /* 217 */
