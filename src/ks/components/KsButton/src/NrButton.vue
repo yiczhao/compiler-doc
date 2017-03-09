@@ -21,10 +21,6 @@
       .KSNRButton__UID--{{ _uid }} .KSNRButton__loading {
         width: {{ loadingSize }}px;
       }
-      /* button 内容修正 */
-      .KSNRButton__UID--{{ _uid }} .KSNRButton__text {
-        padding-left: {{ loading ? loadingSize + 6 : 0 }}px;
-      }
     </style>
     <button class="KSNRButton__entity" :type="nativeType"
             :disabled="(disable || loading) && 'disabled'" :style="btnStyle"
@@ -38,7 +34,9 @@
           ></path>
         </g>
       </svg>
-      <slot></slot>
+      <span class="KSNRButton__text">
+        <slot></slot>
+      </span>
     </button>
   </div>
 </template>

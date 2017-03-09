@@ -21,7 +21,7 @@
 
   // text
   @include e(text) {
-    vertical-align: middle;
+    vertical-align: 1px;
   }
 
   @include e(entity) {
