@@ -2,23 +2,23 @@
   <div :class="classes">
     <!-- NrRadio 选择色块自定义 -->
     <style type="text/css">
-      {{ '.KSNRRadio__UID--' + _uid }} .KSNRRadio__skin:before {
-        {{ styleCubeColor }}
-      }
       {{ '.KSNRRadio__UID--' + _uid }} .KSNRRadio__entity:checked + .KSNRRadio__skin:before {
         {{ styleCubeColor }}
       }
     </style>
-    <input type="radio" class="KSNRRadio__entity" :name="!!name && name"
-           :id="'KSNRCheckbox__entity--' + _uid"
-           v-model="checked" :value="value" @change.stop
-           :disabled="disable && 'disabled'"
-           :checked="defChecked && 'checked'"
-           :id="`KSNRRadio__entity--${_uid}`" />
-    <label class="KSNRRadio__skin" :for="'KSNRCheckbox__entity--' + _uid"></label>
-    <label class="KSNRRadio__text" :for="'KSNRCheckbox__entity--' + _uid">
-      <slot>LABEL</slot>
-    </label>
+    <div class="KSNRRadio__container" :class="{disable: disable}">
+      <input type="radio" class="KSNRRadio__entity"
+             v-model="checked" :value="value"
+             :name="!!name && name"
+             :id="'KSNRCheckbox__entity--' + _uid"
+             :disabled="disable && 'disabled'"
+             :checked="defChecked && 'checked'"
+      />
+      <label class="KSNRRadio__skin" :for="'KSNRCheckbox__entity--' + _uid"></label>
+      <label class="KSNRRadio__text" :for="'KSNRCheckbox__entity--' + _uid">
+        <slot>LABEL</slot>
+      </label>
+    </div>
   </div>
 </template>
 

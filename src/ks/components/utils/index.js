@@ -3,9 +3,9 @@
  * @author pkeros.
  * @date 2016/11/11.
  */
-import DomUtil from './DomUtil.js'
+import DomUtil from './DomUtil'
 import VuePopper from './Popper'
-import StringUtil from './StringUtil.js'
+import StringUtil from './StringUtil'
 
 export {
   DomUtil,

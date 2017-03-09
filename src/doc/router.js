@@ -89,7 +89,7 @@ export default (router) => {
               component: (resolve) => {
                 require(['./views/base/button.md'], resolve)
               }
-            },
+            }
           }
         },
         /* form */
@@ -109,7 +109,16 @@ export default (router) => {
               component: (resolve) => {
                 require(['./views/form/date-picker.md'], resolve)
               }
-            }
+            },
+
+            /* 基础组件-单选框 */
+            '/radio': {
+              name: 'radio',
+              cnName: '单选框',
+              component: (resolve) => {
+                require(['./views/form/radio.md'], resolve)
+              }
+            },
           }
         },
 

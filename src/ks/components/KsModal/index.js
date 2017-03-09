@@ -8,9 +8,11 @@
 
 import KsModal from './src/main.js'
 import KsModalEntity from './src/main.vue'
+import KsModalCenter from './src/center.vue'
 
 export default KsModal
 export {
   KsModal,
-  KsModalEntity
+  KsModalEntity,
+  KsModalCenter
 }

@@ -9,7 +9,7 @@
     name: 'KsRadioGroup',
 
     props: {
-      vModel: { towWay: true }
+      vModel: { type: String, towWay: true }
     },
 
     events: {
@@ -19,20 +19,11 @@
        * @summary 负责处理子组件产生的 change 事件
        */
       CChange (value) {
-        this.vModel = value
-        this.$emit('change', value)
-      }
-    },
+        this.vModel = value;
 
-    watch: {
-      /**
-       * @description vModel 监听器
-       * @param vModel {Number} vModel 属性值
-       */
-      vModel (vModel) {
-        this.$broadcast('VMChange', vModel)
+        this.$emit('change', value);
       }
-    },
+    }
   }
 </script>
 
