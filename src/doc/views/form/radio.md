@@ -46,7 +46,7 @@
 </ks-switch><ks-radio :disable="radioDisable">幽灵按钮</ks-radio>
 
 ```html
-<ks-switch class="mr20" :checked.sync="radioDisable" :def-checked="false"></ks-switch>
+<ks-switch class="mr20" :checked.sync="radioDisable"></ks-switch>
 <ks-radio :disable="radioDisable">幽灵按钮</ks-radio>
 ```
 
@@ -97,9 +97,9 @@
 </div>
 ```
 
-#### Radio 事件的使用
+#### 获取 Radio 的选中值
 
-> radio change 事件的使用
+> 如何获取 radio 的选中值
 
 <br>
 
@@ -137,7 +137,7 @@
 
 <br>
 
-我们可以通过绑定 `v-model` 属性的方式来获取当前的选中项。
+我们可以通过给 `ks-radio-group` 绑定 `v-model` 属性的方式来获取当前的选中项, 避免了每个 `radio` 都要绑定的烦恼。
 
 ```html
 <ks-radio-group :v-model.sync="radioChange2">

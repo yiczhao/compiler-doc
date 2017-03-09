@@ -5,11 +5,11 @@
  */
 export default {
   props: {
-    name: { type: String, default: '' },
-    color: { type: String, default: '#00A5E0' },
-    value: { default: '' },
-    checked: { type: Boolean },
+    value: { default: 'KsNormalRadio' },
     vModel: { towWay: true },
+    name: { type: String, default: 'KsNormalRadio' },
+    color: { type: String, default: '#00A5E0' },
+    checked: { type: Boolean, default: false },
     defChecked: { type: Boolean, default: false },
     disable: { type: Boolean, default: false }
   },
@@ -31,6 +31,7 @@ export default {
      * @summary 用于监测改变并发送 change 事件
      */
     checked () {
+      console.log(this.name, this.value);
       this.$dispatch('CChange', this.value);
 
       this.vModel = this.value;
