@@ -9,7 +9,7 @@
     name: 'KsCheckboxGroup',
 
     props: {
-      model: {type: Array, towWay: true}
+      vModel: {type: Array, towWay: true}
     },
 
     events: {
@@ -20,7 +20,7 @@
        * @summary 负责处理子组件产生的 change 事件
        */
       CChange (value, name) {
-        let model = this.model;
+        let model = this.vModel;
         let pos = model.indexOf(name);
 
         if (pos > -1 && !value) {
@@ -39,14 +39,14 @@
        * @description model 监听器
        * @param model {Array} model 属性值
        */
-      model (model) {
+      vModel (model) {
         this.$broadcast('modelChange', model);
       }
     },
 
     ready () {
       // 通知子组件初始化状态
-      this.$broadcast('modelChange', this.model);
+      this.$broadcast('modelChange', this.vModel);
     }
   }
 </script>

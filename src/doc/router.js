@@ -105,7 +105,7 @@ export default (router) => {
             /* 基础组件-布局 */
             '/datepicker': {
               name: 'datepicker',
-              cnName: '布局',
+              cnName: '时间选择器',
               component: (resolve) => {
                 require(['./views/form/date-picker.md'], resolve)
               }
@@ -117,6 +117,15 @@ export default (router) => {
               cnName: '单选框',
               component: (resolve) => {
                 require(['./views/form/radio.md'], resolve)
+              }
+            },
+
+            /* 基础组件-复选框 */
+            '/checkbox': {
+              name: 'checkbox',
+              cnName: '复选框',
+              component: (resolve) => {
+                require(['./views/form/checkbox.md'], resolve)
               }
             },
           }

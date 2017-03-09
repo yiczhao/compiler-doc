@@ -179,7 +179,7 @@
 
 <br>
 
-#### KsRadio
+#### KsRadio 与 KsBtnRadio
 
 | 参数 | 说明 | 接口类型 | 类型 | 双向（twoWay） | 是否必须 | 可选值 | 默认值 |
 |------|-------|----------|---------|---------|---------|-------|--------|
@@ -191,23 +191,6 @@
 | disable | 用来描述当前 `radio` 是否是禁用状态 | props | Boolean | `false`| `true`, `false` | 无 | `false` |
 | vModel | 存储了当前 `radio` 组中选中的值 | props | Any | `true` | 否 | 无 | '' |
 | @change | `change` 事件 | event | - | - | 否 | - | - |
-| #slot | `radio` label 内容 | slot | - | - | 否 | - | - |
-
-<br>
-
-#### KsBtnRadio
-
-| 参数 | 说明 | 接口类型 | 类型 | 双向（twoWay） | 是否必须 | 可选值 | 默认值 |
-|------|-------|----------|---------|---------|---------|-------|--------|
-| name | 用来标记当前 `radio` 的名称作用和原生 `radio` 一样 | props | String | `false` | 否 | 无 | '' |
-| color | 用来描述 `radio` 的颜色, 一个十六进制的数值 | props | String | `false` | 否 | 无 | #00A5E0 |
-| value | 保留 | props | Any | `false` | 否 | 无 | '' |
-| checked | 用来描述当前 `radio` 是否选中 | props | Boolean | `true` | 否 | `true`, `false` | `false` |
-| defChecked | 用来描述当前 `radio` 默认是否选中 | props  | Boolean | `false` | 否 | `true`, `false` | `false` |
-| disable | 用来描述当前 `radio` 是否是禁用状态 | props | Boolean | `false`| `true`, `false` | 无 | `false` |
-| vModel | 存储了当前 `radio` 组中选中的值 | props | Any | `true` | 否 | 无 | '' |
-| @change | `change` 事件 | event | - | - | 否 | - | - |
-| #slot | `radio` label 内容 | slot | - | - | 否 | - | - |
 
 <br>
 
@@ -215,6 +198,5 @@
 
 | 参数 | 说明 | 接口类型 | 类型 | 双向（twoWay） | 是否必须 | 可选值 | 默认值 |
 |------|-------|----------|---------|---------|---------|-------|--------|
-| vModel | 存储了当前 `radio` 组中选中的值 | props | Any | `true` | 否 | 无 | '' |
-| @change | `change` 事件 | event | - | - | 否 | - | - |
-| #slot | 单选组中的单选 | slot | - | - | 否 | - | - |
+| vModel | 存储了当前 `KsRadioGroup` 组中选中的值 | props | Any | `true` | 否 | 无 | '' |
+| @change | `KsRadioGroup` 事件 | event | - | - | 否 | - | - |

@@ -29,7 +29,7 @@ export default [
         name: '表单 Form', icon: 'icon', link: '',
         subMenu: [
           {name: 'Radio 单选框', icon: 'icon', link: 'radio'},
-          {name: 'Checkbox 多选框', icon: 'icon', link: ''},
+          {name: 'Checkbox 多选框', icon: 'icon', link: 'checkbox'},
           {name: 'Input 输入框', icon: 'icon', link: ''},
           {name: 'Switch 开关', icon: 'icon', link: ''},
           {name: 'DatePicker 时间选择器', icon: 'icon', link: 'datepicker'},

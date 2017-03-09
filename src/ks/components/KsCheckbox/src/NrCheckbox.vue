@@ -1,14 +1,16 @@
 <template>
   <div class="KSNRCheckbox" cid="KSNRCheckbox">
-    <input type="checkbox" class="_entity" v-model="checked"
-           @change.stop="checkboxChangeHandle"
-           :disabled="disable && 'disabled'" :id="`KSNRCheckbox--${_uid}`" />
-    <label class="_skin" :for="`KSNRCheckbox--${_uid}`">
-      <em class="_cube" :style="{background: color}"></em>
-    </label>
-    <label class="_text" :for="`KSNRCheckbox--${_uid}`">
-      <slot>LABEL</slot>
-    </label>
+    <div class="_container" :class="{disable: disable}">
+      <input type="checkbox" class="_entity"
+             v-model="checked" @change="checkboxChangeHandle"
+             :disabled="disable && 'disabled'" :id="`KSNRCheckbox--${_uid}`" />
+      <label class="_skin" :for="`KSNRCheckbox--${_uid}`">
+        <em class="_cube" :style="{background: color}"></em>
+      </label>
+      <label class="_text" :for="`KSNRCheckbox--${_uid}`">
+        <slot>LABEL</slot>
+      </label>
+    </div>
   </div>
 </template>
 
@@ -46,5 +48,5 @@
 </script>
 
 <style lang="scss">
-  @import '../../styles/components/NrCheckbox';
+  @import '../styles/NrCheckbox';
 </style>

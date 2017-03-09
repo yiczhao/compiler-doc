@@ -31,7 +31,6 @@ export default {
      * @summary 用于监测改变并发送 change 事件
      */
     checked () {
-      console.log(this.name, this.value);
       this.$dispatch('CChange', this.value);
 
       this.vModel = this.value;
