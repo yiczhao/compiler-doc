@@ -6,7 +6,7 @@
 
 ### 基础使用
 
-#### 单选使用
+#### 单选使用（KsRadio）
 
 > 单选在使用时与原生 `Radio` 一样必须设置 `name` 属性, 只有相同名称的 `Radio` 才能形成单选
 
@@ -50,7 +50,7 @@
 <ks-radio :disable="radioDisable">幽灵按钮</ks-radio>
 ```
 
-#### 按钮类型的单选
+#### 按钮类型的单选 （KsBtnRadio）
 
 > 按钮类型的单选使用
 
@@ -97,7 +97,7 @@
 </div>
 ```
 
-#### 获取 Radio 的选中值
+#### 获取 Radio 的选中值 （KsRadioGroup）
 
 > 如何获取 radio 的选中值
 
