@@ -154,7 +154,8 @@
 | color | 用来描述 `KsCheckbox` 的颜色, 一个十六进制的数值 | props | String | `false` | 否 | 无 | #00A5E0 |
 | checked | 用来描述当前 `KsCheckbox` 是否选中 | props | Boolean | `true` | 否 | `true`, `false` | `false` |
 | disable | 用来描述当前 `KsCheckbox` 是否是禁用状态 | props | Boolean | `false`| `true`, `false` | 无 | `false` |
-| @change | `KsCheckbox` 事件 | event | - | - | 否 | - | - |
+| @change | `KsCheckbox` change 事件 | event | - | - | 否 | - | - |
+| @label-click | `KsCheckbox` 点击文字部分所发出的事件 | event | - | - | 否 | - | - |
 
 <br>
 
@@ -163,4 +164,4 @@
 | 参数 | 说明 | 接口类型 | 类型 | 双向（twoWay） | 是否必须 | 可选值 | 默认值 |
 |------|-------|----------|---------|---------|---------|-------|--------|
 | vModel | 存储了当前 `KsRadioGroup` 组中选中的值 | props | Any | `true` | 否 | 无 | '' |
-| @change | `KsRadioGroup` 事件 | event | - | - | 否 | - | - |
+| @change | `KsRadioGroup` change 事件 | event | - | - | 否 | - | - |

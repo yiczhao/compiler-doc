@@ -190,7 +190,7 @@
 | defChecked | 用来描述当前 `radio` 默认是否选中 | props  | Boolean | `false` | 否 | `true`, `false` | `false` |
 | disable | 用来描述当前 `radio` 是否是禁用状态 | props | Boolean | `false`| `true`, `false` | 无 | `false` |
 | vModel | 存储了当前 `radio` 组中选中的值 | props | Any | `true` | 否 | 无 | '' |
-| @change | `change` 事件 | event | - | - | 否 | - | - |
+| @change | `radio` change 事件 | event | - | - | 否 | - | - |
 
 <br>
 
@@ -199,4 +199,4 @@
 | 参数 | 说明 | 接口类型 | 类型 | 双向（twoWay） | 是否必须 | 可选值 | 默认值 |
 |------|-------|----------|---------|---------|---------|-------|--------|
 | vModel | 存储了当前 `KsRadioGroup` 组中选中的值 | props | Any | `true` | 否 | 无 | '' |
-| @change | `KsRadioGroup` 事件 | event | - | - | 否 | - | - |
+| @change | `KsRadioGroup` change 事件 | event | - | - | 否 | - | - |

@@ -7,7 +7,7 @@
  */
 
 // 开关组件
-import KsSwitch from './KsSwitch';
+import { KsSwitch, KsAbstractSwitch } from './KsSwitch';
 // 对话框组件
 import KsDialog from './KsDialog';
 // ToolTips 组件
@@ -20,9 +20,9 @@ import { KsMask, KsMaskEntity } from './KsMask';
 import { KsPage, KsPageGroup } from './KsPager';
 // 单选组件
 import {
-    KsRadio,
-    KsRadioGroup,
-    KsBtnRadio
+  KsRadio,
+  KsRadioGroup,
+  KsBtnRadio
 } from './KsRadio';
 // 按钮组件
 import {
@@ -33,75 +33,76 @@ import {
 
 // 日期选择组件
 import {
-    KsDater,
-    KsDaterPure,
-    KsDatePicker,
-    KsDaterRange,
-    KsDateRangePicker,
-    KsDateMonth
+  KsDater,
+  KsDaterPure,
+  KsDatePicker,
+  KsDaterRange,
+  KsDateRangePicker,
+  KsDateMonth
 } from './KsDater';
 
 const VERSION = '0.0.1';
 const KsComponents = {
-    VERSION,
-    KsPage,
-    KsPageGroup,
+  VERSION,
+  KsPage,
+  KsPageGroup,
 
-    KsSwitch,
+  KsSwitch,
+  KsAbstractSwitch,
 
-    KsCheckbox,
-    KsCheckboxGroup,
+  KsCheckbox,
+  KsCheckboxGroup,
 
-    KsRadio,
-    KsBtnRadio,
-    KsRadioGroup,
+  KsRadio,
+  KsBtnRadio,
+  KsRadioGroup,
 
-    KsButton,
-    KsNrButton,
-    KsGhostButton,
+  KsButton,
+  KsNrButton,
+  KsGhostButton,
 
-    KsMask,
-    KsMaskEntity,
+  KsMask,
+  KsMaskEntity,
 
-    KsDialog,
+  KsDialog,
 
-    KsToolTip,
+  KsToolTip,
 
-    KsDater,
-    KsDaterPure,
-    KsDatePicker,
-    KsDaterRange,
-    KsDateRangePicker,
-    KsDateMonth
+  KsDater,
+  KsDaterPure,
+  KsDatePicker,
+  KsDaterRange,
+  KsDateRangePicker,
+  KsDateMonth
 };
 
 const install = function(Vue) {
-    if (install.installed) {
-        return
+  if (install.installed) {
+    return
+  }
+
+  // register components.
+  Object.keys(KsComponents).forEach(k => {
+    // console.log(k, KsComponents[k])
+    Vue.component(k, KsComponents[k])
+  });
+
+  // register prototype methods.
+  Object.defineProperties(Vue.prototype, {
+    $KsDialog: {get() {
+      return KsDialog
     }
-
-    // register components.
-    Object.keys(KsComponents).forEach(k => {
-        // console.log(k, KsComponents[k])
-        Vue.component(k, KsComponents[k])
-    });
-
-    // register prototype methods.
-    Object.defineProperties(Vue.prototype, {
-        $KsDialog: {get() {
-                return KsDialog
-            }
-        }
-    });
+    }
+  });
 };
 
 
 // automation register components.
 if (typeof window !== 'undefined' && window.Vue) {
-    install(window.Vue);
+  install(window.Vue);
 }
 
 export default install
 export {
-    KsComponents
+  KsComponents
 }

@@ -103,8 +103,8 @@ export default (router) => {
           subRoutes: {
 
             /* 基础组件-布局 */
-            '/datepicker': {
-              name: 'datepicker',
+            '/date-picker': {
+              name: 'date-picker',
               cnName: '时间选择器',
               component: (resolve) => {
                 require(['./views/form/date-picker.md'], resolve)
@@ -126,6 +126,15 @@ export default (router) => {
               cnName: '复选框',
               component: (resolve) => {
                 require(['./views/form/checkbox.md'], resolve)
+              }
+            },
+
+            /* 基础组件-IOS 风格开关 */
+            '/switch': {
+              name: 'switch',
+              cnName: 'IOS 风格开关',
+              component: (resolve) => {
+                require(['./views/form/switch.md'], resolve)
               }
             },
           }

@@ -7,7 +7,7 @@
       <label class="_skin" :for="`KSNRCheckbox--${_uid}`">
         <em class="_cube" :style="{background: color}"></em>
       </label>
-      <label class="_text" :for="`KSNRCheckbox--${_uid}`">
+      <label class="_text" :for="`KSNRCheckbox--${_uid}`" @click="$emit('label-click')">
         <slot>LABEL</slot>
       </label>
     </div>
