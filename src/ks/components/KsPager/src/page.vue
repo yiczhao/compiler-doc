@@ -1,87 +1,78 @@
 <template>
-
-    <ul v-show="total" class="KsPage" cid="KsPage" @click="click_page_mian($event)">
-        <li :class="{'disabled':page_current == 1}">&lt;</li>
-        <li v-for="i in pages_array"
+    <ul v-show="total" class="KsPage" cid="KsPage" @click="emitClick($event)">
+        <li :class="{'disabled':current == 1}">&lt;</li>
+        <li v-for="i in pages2"
             track-by="$index"
-            :class="{'active':page_current == i}" v-text="i"></li>
-        <li :class="{'disabled':page_current == total_count}">&gt;</li>
+            :class="{'active':current == i}" v-text="i"></li>
+        <li :class="{'disabled':current == pages2[pages2.length-1]}">&gt;</li>
     </ul>
-
 </template>
 <script type="text/javascript">
-    /**
-     * <li class="frist">&lt;</li>
-     * className不合理 ，目的表达不可点击状态 ，'disabled' 相关比较合理
-     */
     
+    import props from './mixins'
     export default {
-        props: {
-            // 总条数
-            total: {type:Number, default:0 }, 
-            // 展示分页个数
-            pages: {type:Number, default:7 }, 
-            // 当前选中的页数
-            page_current: {type:Number, default:1 }, 
-            // 每页展示条数
-            page_size :{type:Number, default:10 } 
-        },
+        mixins:[props],
         data (){
-            
             return {
-                pages_array : [],
-                total_count:'',
-                pages_count : this.pages
+                pages2 : [],
             }
         },
         
         methods: {
             init (){
-                if(!this.total) return
-                if(this.pages%2==0) {
-                    this.pages = this.pages - 1
-                    console.error('分页中的参数 pages 请传入奇数 , 自动转为：'+this.pages)
-                }
-                this.total_count = this.get_total_count(this.total,this.page_size)
-                this.pages_array = this.get_page_array(1,this.pages,this.total_count)
+                this.totalLength = this.getTotalLength(this.total,this.size)
+                this.pages2 = this.buildPages(1,this.length,this.totalLength)
             },
-            // 总页数
-            get_total_count (total,page_size){
-                var mod = total % page_size
-                return  (total-mod)/page_size + (mod && 1)
+            /**
+             * [getTotalLength 总页数]
+             * @param  {[Number]} total [总条数]
+             * @param  {[Number]} size  [每页条数]
+             * @return {[Number]}       [总页数]
+             */
+            getTotalLength (total,size){
+                var mod = total % size
+                return  (total-mod)/size + (mod && 1)
             },
                 
-            // 最大页数
-            get_cur_count (cur,total){
-                return  cur > total 
-                            ? total
-                            : cur
-            },
-            // 纯净 当前数组
-            get_pure_array (page_cur,pages,total_count){
-                var arr = [],len,cur_show_max
-                if(pages > total_count){
-                    pages = total_count
-                    cur_show_max = total_count
-                    len = total_count-1
+            /**
+             * [createPurePages 生成无折叠符的分页数组]
+             * @param  {[Number]} current     [当前页数]
+             * @param  {[Number]} length      [展示长度]
+             * @param  {[Number]} totalLength [总页数]
+             * @return {[Array]}              [分页新数组]
+             */
+            createPurePages (current,length,totalLength){
+                var arr = [],len,max
+                if(length > totalLength){
+                    length = totalLength
+                    max = totalLength
+                    len = totalLength-1
                 }else{
-                    len = pages - 1
-                    var cur_show_max = page_cur + len/2
-                    page_cur <= len/2  && (cur_show_max = pages)
-                    cur_show_max > total_count && (cur_show_max = total_count)
+                    len = length - 1
+                    max = current + len/2
+                    current <= len/2  && (max = length)
+                    max > totalLength && (max = totalLength)
                 }
                     
                 
                 for (var i = len ; i>=0; i--){
-                    arr.push(cur_show_max - i)
+                    arr.push(max - i)
                 }
                 return arr
             },
-            // 折叠，添加省略号
-            has_fold (max,arr){
-                var last = arr.length-1
-
+            // 
+            /**
+             * [addFold 折叠，添加省略号]
+             * @param {[Number]} max [总页数]
+             * @param {[Array]} arr  [纯净分页数组]
+             * @return {[Array]}     [带符号的分页数组]
+             */
+            addFold (max,arr){
+                var last
+                arr = arr || []
                 arr = [].concat(arr)
+                last= arr.length-1
+                
                 if(arr[0] > 1){
                     arr[0] = 1
                     arr[1] = '···'
@@ -92,52 +83,74 @@
                 }
                 return arr
             },
+            buildPages (current,length,totalLength) {
+                var arr 
+                arr = this.createPurePages(current,length,totalLength)    
+                arr = this.addFold(totalLength,arr)
+                return arr
+                
+            },
             // 点击分页主体
-            click_page_mian (event){
+            emitClick (event){
 
                 var value = event.target.innerHTML.trim()
 
                 switch(true){
                     // left
                     case '&lt;' === value :
-                        --this.page_current
-                        this.page_current < 1 && (this.page_current = 1)
+                        --this.current
+                        this.current < 1 && (this.current = 1)
                     break;
                     // right
                     case '&gt;' === value :
-                        ++this.page_current
-                        this.page_current = this.get_cur_count(this.page_current,this.total_count)
+                        ++this.current
+                        this.current = Math.min(this.current,this.totalLength)
                     break;
                     case '···' === value :break;
                     case !isNaN(value):
-                        this.page_current = +value
+                        this.current = +value
                     break;
                 }
 
 
             },
             
-            get_page_array (page_cur,pages,total_count) {
-                var arr 
-                arr = this.get_pure_array(page_cur,pages,total_count)    
-                arr = this.has_fold(total_count,arr)
-                return arr
-                
+            warn(){
+                if(!this.total) return
+                if(this.length%2==0) {
+                    this.length = this.length - 1
+                    console.error('分页中的参数 pages 或 length 请传入奇数 , 自动转为：'+this.length)
+                }
             }
         },
         watch: {
-            'page_size'(){
-                this.page_current = 1
-            },
-            'total+page_size+pages'(){
-                this.init()
-            },
-            'page_current' (val){
+            'current' (val){
+                // console.log(val)
+                // 兼容 老API
+                this.page_current = val
                 this.$emit('current_change',val)
-                this.pages_array = this.get_page_array(val,this.pages,this.total_count)
+                // 兼容 老API END
+                if('function' == typeof this.onChange){
+                    this.onChange(val)
+                }
+                this.pages2 = this.buildPages(val,this.length,this.totalLength)
+            },
+            'size'(){
+                this.current = 1
+            },
+            'total + size + length'(){
+                this.init()
             }
         },
         created (){
+            this.warn()
+
+            // 兼容 老API
+            // this.length = this.pages
+            // this.current = this.page_current
+            // this.size = this.size
+            
+            // 兼容 老API END
             this.init()
         }
     }
