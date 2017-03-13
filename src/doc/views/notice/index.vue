@@ -1,17 +1,13 @@
 <template>
-  <div>this is template body</div>
+  <div class="base-container">
+    <router-view></router-view>
+  </div>
 </template>
-<style>
-  body{
-    background-color:#ff0000;
-  }
-</style>
-<script>
+
+<script lang="babel">
   export default{
     data () {
-      return {
-        msg:'hello vue'
-      }
+      return {}
     }
   }
 </script>
