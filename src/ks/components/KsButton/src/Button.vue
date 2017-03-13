@@ -53,7 +53,7 @@
     },
 
     props: {
-      loading: { type: Boolean, twoWay: true },
+      loading: { type: Boolean, default: false},
       disable: { type: Boolean, default: false },
       size: { type: String, default: 'normal' },
       type: { type: String, default: 'primary' },

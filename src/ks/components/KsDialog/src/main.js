@@ -118,7 +118,7 @@ let showNextDialog = function () {
  */
 KsDialog = function (options) {
   // 配置 Dialog 并加入显示队列
-  return function (confirmCb, cancelCb) {
+  return function (confirmCb = KsDialog.close, cancelCb = KsDialog.close) {
     // 参数正确性校验
     if ((typeof confirmCb !== 'undefined' && typeof confirmCb !== 'function')
     || (typeof cancelCb !== 'undefined' && typeof cancelCb !== 'function')) {

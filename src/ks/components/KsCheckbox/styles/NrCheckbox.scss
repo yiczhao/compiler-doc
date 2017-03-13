@@ -3,56 +3,51 @@
 // @author pkeros
 // @date 2016/10/11
 
-//
-// 需要的 DOM 结构
-//
-//<div class="KSNRCheckbox KSNRCheckbox__entity--ZERO">
-//  <input type="checkbox" class="KSNRCheckbox__entity" id="KSNRCheckbox__entity--3">
-//  <label class="KSNRCheckbox__skin" for="KSNRCheckbox__entity--ZERO"></label>
-//  <label class="KSNRCheckbox__text" for="KSNRCheckbox__entity--ZERO"></label>
-//</div>
-//
-//
-
 $primary-color: #00A5E0;                                        // 主色调
 $skin-size: 18px;                                               // 选择框大小
 
 .KSNRCheckbox {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  padding: 2px 3px;
-}
+  display: inline-block; padding: 2px 3px;
+  vertical-align: middle; font-size: 14px;
 
-.KSNRCheckbox__entity {
-  width: 0; height: 0; opacity: 0;
-}
-.KSNRCheckbox__text { user-select: none }
-.KSNRCheckbox__skin {
-  display: inline-block;
-  border: 1px solid #D0D0D5; border-radius: 3px;
-  width: $skin-size; height: $skin-size;
-  text-align: center; line-height: $skin-size;
+  _container {
+    // 禁用样式
+    &.disable {
+      opacity: .6;
 
-  // 选择点的样式
-  &:before {
-    content: ''; display: inline-block;
-    height: $skin-size / 1.8; width: $skin-size / 1.8;
-    border-radius: 3px;
-    //background-color: $primary-color;
-    opacity: 0;
-    transition: opacity .3s;
+      * { cursor: not-allowed }
+    }
+
+    _entity {
+      display: none;
+
+      // checked 下的选择框样式
+      &:checked + .KSNRCheckbox-container-skin > .KSNRCheckbox-container-skin-cube {
+        opacity: 1;
+      }
+    }
+
+    _text {
+      user-select: none; cursor: pointer;
+    }
+
+    _skin {
+      display: inline-block;
+      border: 1px solid #D0D0D5; border-radius: 3px;
+      width: $skin-size; height: $skin-size;
+      text-align: center; line-height: $skin-size;
+      cursor: pointer;
+
+      // 选择点的样式
+      _cube {
+        display: inline-block;
+        height: $skin-size / 1.8; width: $skin-size / 1.8;
+        border-radius: 3px;
+        background-color: $primary-color;
+        opacity: 0;
+        transition: opacity .3s;
+      }
+    }
   }
-}
-
-// checked 下的选择框样式
-.KSNRCheckbox__entity:checked + .KSNRCheckbox__skin:before {
-  opacity: 1;
-}
-// checked 禁用样式
-.KSNRCheckbox__entity[disabled] + .KSNRCheckbox__skin{
-  background: rgba(77, 77, 77, .1)
-}
-.KSNRCheckbox__entity[disabled] + .KSNRCheckbox__skin:before {
-  opacity: .6;
 }

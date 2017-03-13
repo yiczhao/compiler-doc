@@ -25,20 +25,21 @@ $skin-size: 18px;                                               // 选择框大�
   display: inline-block; padding: 2px 3px;
   vertical-align: middle; font-size: 14px;
 
+  @include e(container) {
+    // 禁用样式
+    &.disable {
+      opacity: .6;
+
+      * { cursor: not-allowed }
+    }
+  }
+
   @include e(entity) {
     display: none;
 
     // checked 下的选择框样式
     &:checked + .KSNRRadio__skin:before {
       opacity: 1;
-    }
-    // checked 禁用样式
-    &[disabled] + .KSNRRadio__skin {
-      cursor: not-allowed;
-      background: rgba(77, 77, 77, .1)
-    }
-    &[disabled] + .KSNRRadio__skin:before {
-      opacity: .6;
     }
   }
 
@@ -59,7 +60,7 @@ $skin-size: 18px;                                               // 选择框大�
       content: ''; display: inline-block;
       height: $skin-size / 1.8; width: $skin-size / 1.8;
       border-radius: 50%;
-      background-color: $primary-color;
+      //background-color: $primary-color;
       opacity: 0;
       transition: opacity .3s;
     }

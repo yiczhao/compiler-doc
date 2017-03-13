@@ -1,5 +1,5 @@
-@import '../../../sass/base/ref/index';
-@import '../../../sass/base/neat';
+@import '../../../styles/base/ref/index';
+@import '../../../styles/base/neat';
 
 %paging{
 	li{
@@ -11,7 +11,7 @@
 		border-radius: 4px;
 		color: #000;
 		cursor: pointer;
-		-webkit-user-select: none; 
+		-webkit-user-select: none;
 	    -moz-user-select: none;
 	    -ms-user-select: none;
 	    user-select: none;

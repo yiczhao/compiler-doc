@@ -7,16 +7,17 @@
         <slot></slot>
     </div>
 
-    <div transition="KsTooltipTransition" class="KsToolTip"
+    <div transition="KsTooltipTransition" :class="className"
          v-el:popper v-show="!disabled && showPopper">
       <div v-text="content"></div>
+      <slot name="content"></slot>
     </div>
   </div>
 </template>
 
 <script lang="babel">
   import Vue from 'vue'
-  import { VuePopper, DomUtil, StringUtil } from '../../util'
+  import { VuePopper, DomUtil, StringUtil } from '../../utils'
 
   export default {
     name: 'KsToolTip',
@@ -28,12 +29,14 @@
     },
 
     props: {
-      arrowClassName: { type: String, default: 'KsToolTip-arrow' },
-      openDelay: { type: Number, default: 0 },
+      className: {type: String, default: 'KsToolTip'},
+      arrowClassName: {type: String, default: 'KsToolTip-arrow'},
+      openDelay: {type: Number, default: 0},
+      closeDelay: {type: Number, default: 0},
       disabled: Boolean,
       content: String,
-      visibleArrow: { default: true },
-      transition: { type: String, default: 'fade-in-linear' },
+      visibleArrow: {default: true},
+      transition: {type: String, default: 'fade-in-linear'},
       options: {
         default() {
           return {
@@ -52,7 +55,6 @@
       },
 
       handleClosePopper() {
-        clearTimeout(this.timeout);
         this.showPopper = false;
       }
     },
@@ -65,3 +67,7 @@
     }
   }
 </script>
+
+<style lang="scss">
+  @import "../styles/index";
+</style>

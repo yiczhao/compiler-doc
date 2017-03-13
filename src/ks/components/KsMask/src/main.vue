@@ -1,7 +1,7 @@
 <template>
   <div class="KSMask__wrapper">
     <div class="KSMask__container" :style="maskStyle"
-         v-if="show" @click.stop="$emit('spaceClick')"
+         v-if="show" @click="$emit('spaceClick')"
     >
       <slot></slot>
     </div>
@@ -31,7 +31,7 @@
       maskStyle () {
         return `background: ${ this.backgroundColor };
         z-index: ${ ++this.zIndex };
-        position: ${ this.fillModel === 'full' ? 'fixed' : 'absolute' }`
+        position: ${ this.fillMode === 'full' ? 'fixed' : 'absolute' }`
       }
     }
   }

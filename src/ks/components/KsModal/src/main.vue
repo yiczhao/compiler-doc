@@ -1,21 +1,16 @@
 <template>
   <div class="KSModal__wrapper">
-    <!-- 不想加这个 wrapper, but 不加会变成片断实例 -->
-    <div :class="'KSModal KSModal__UID--' + _uid" v-if="show" transition="Zoom">
-      <!-- 模态颜色 -->
-      <style type="text/css">
-        .KSModal__UID--{{ _uid }} .KSModal__header {
-          background: {{ hue.hue }};
-          color: {{ hue.font }};
-        }
-      </style>
-      <header class="KSModal__header">
+    <div class="KSModal" v-if="show"
+         :style="modalWidth" transition="Zoom">
+
+      <header class="KSModal__header" :style="modalHeaderStyle">
         <div class="innerWrap">
           <h3 class="KSModal__title">
             {{ title }} <slot name="title"></slot>
           </h3>
-          <i class="KSModal__close" v-if="showCloseBtn" @click.stop="$emit('close') && (show = false)"
-          >
+
+          <i class="KSModal__close" v-if="showCloseBtn"
+             @click="$emit('close') && (show = false)">
             <!-- close 图标 -->
             <svg class="icon" width="24" height="24" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <g transform="scale(0.03125, 0.03125)">
@@ -25,6 +20,7 @@
               </g>
             </svg>
           </i>
+
           <!-- 神奇的分隔线 -->
           <div class="KSModal__separation" v-if="type === 'normal'"></div>
         </div>
@@ -49,6 +45,7 @@
 <script lang="babel">
   import KsButton from '../../KsButton'
   import KsMask from '../../KsMask'
+  import modalProps from '../mixins/modalProps'
 
   // 类型对色调映射
   const colorMapper = {
@@ -67,25 +64,26 @@
       return { }
     },
 
-    props: {
-      showConfirmBtn: { type: Boolean, default: true },
-      showCancelBtn: { type: Boolean, default: true },
-      showCloseBtn: { type: Boolean, default: true },
-      cancelBtnText: { type: String, default: '取消' },
-      confirmBtnText: { type: String, default: '确定' },
-      title: { type: String, default: '' },
-      content: { type: String, default: '' },
-      type: { type: String, default: 'normal' },
-      mask: { type: Boolean, default: true },
-      show: { type: Boolean, default: true, towWay: true }
-    },
+    mixins: [modalProps],
 
     computed: {
       /**
        * @description 当前模态的主色调
        * @return {*} color
        */
-      hue () { return colorMapper[this.type] }
+      hue () { return colorMapper[this.type] },
+
+      /**
+       * @description 模态的宽度样式
+       * @returns {string}
+       */
+      modalWidth () { return `width: ${this.width}px` },
+
+      /**
+       * @description 模态的 header 部分样式
+       * @returns {string}
+       */
+      modalHeaderStyle () { return `background: ${this.hue.hue};color: ${this.hue.font}`}
     },
 
     watch: {

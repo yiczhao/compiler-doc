@@ -9,7 +9,7 @@
     name: 'KsCheckboxGroup',
 
     props: {
-      vModel: { type: Array, towWay: true }
+      vModel: {type: Array, towWay: true}
     },
 
     events: {
@@ -20,31 +20,37 @@
        * @summary 负责处理子组件产生的 change 事件
        */
       CChange (value, name) {
-        let vModel = this.vModel
-        let pos = vModel.indexOf(name)
+        let model = this.vModel;
+        let pos = model.indexOf(name);
 
-        if (pos >= 0 && !value) {
-          vModel.splice(pos, 1)
-        } else if (pos < 0 && value) {
-          vModel.push(name)
+        if (pos > -1 && !value) {
+          model.splice(pos, 1)
+        } else if (pos === -1 && value) {
+          model.push(name)
         }
+
+        // TODO: 柱哥说了数据的流向要单向
+        this.$emit('change', model);
       }
     },
 
     watch: {
       /**
-       * @description vModel 监听器
-       * @param vModel {Array} vModel 属性值
+       * @description model 监听器
+       * @param model {Array} model 属性值
        */
-      vModel (vModel) {
-        this.$emit('change', vModel)
-        this.$broadcast('VMChange', vModel)
+      vModel (model) {
+        this.$broadcast('modelChange', model);
       }
     },
 
-    created () {
+    ready () {
       // 通知子组件初始化状态
-      setTimeout(() => { this.$broadcast('VMChange', this.vModel) }, 0)
+      this.$broadcast('modelChange', this.vModel);
     }
-  };
+  }
 </script>
+
+<style lang="scss">
+  .ks-checkbox-group { font-size: 0 }
+</style>
