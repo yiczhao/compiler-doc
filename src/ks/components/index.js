@@ -9,7 +9,7 @@
 // 开关组件
 import { KsSwitch, KsAbstractSwitch } from './KsSwitch';
 // 对话框组件
-import KsDialog from './KsDialog';
+import { KsDialog, KsDialogEntity } from './KsDialog';
 // ToolTips 组件
 import KsToolTip from './KsToolTip';
 // 复选组件
@@ -65,6 +65,7 @@ const KsComponents = {
   KsMaskEntity,
 
   KsDialog,
+  KsDialogEntity,
 
   KsToolTip,
 

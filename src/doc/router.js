@@ -161,6 +161,27 @@ export default (router) => {
           }
         },
 
+        /* 通知组件 */
+        '/notice': {
+          name: 'notice',
+          cnName: '通知组件',
+          component: (resolve) => {
+            require(['./views/notice/index.vue'], resolve)
+          },
+
+          subRoutes: {
+
+            /* 通知组件-对话框 */
+            '/dialog': {
+              name: 'dialog',
+              cnName: '对话框',
+              component: (resolve) => {
+                require(['./views/notice/dialog.md'], resolve)
+              }
+            }
+          }
+        },
+
         /* validate */
         '/validate': {
           name: 'validate',

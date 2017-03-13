@@ -1,22 +1,12 @@
 <template>
   <div class="KSDialog__wrapper">
     <!-- 不想加这个 wrapper, but 不加会变成片断实例 -->
-    <div :class="'dialog-icon KSDialog KSDialog__UID--' + _uid"
-         v-if="show" :style="zIndex">
-      <style type="text/css">
-        .KSDialog {
-          background: #FFF;
-        }
-      </style>
-      <!-- 模态颜色 -->
-      <style type="text/css">
-        .KSDialog__UID--{{ _uid }} .KSDialog__icon {
-          color: {{ hue.hue }};
-        }
-      </style>
-      <aside class="KSDialog__icon">
+    <div :class="'dialog-icon KSDialog KSDialog__UID--' + _uid" v-if="show" :style="zIndex">
+      <!-- 图标部分 -->
+      <aside class="KSDialog__icon" :style="'color:' + hue.hue">
         <i :class="'icon ' + hue.icon"></i>
       </aside>
+      <!-- 内容块部分 -->
       <article class="KSDialog__content">
         <h3 class="KSDialog__title">
           {{ title }} <slot name="title"></slot>
@@ -25,6 +15,7 @@
           {{ text }} <slot name="text"></slot>
         </p>
       </article>
+      <!-- 操作显示区域 -->
       <footer class="KSDialog__footer">
         <aside class="KSDialog__btnWarp">
           <ks-button :ghost="true" type="other" @click.stop="$emit('cancel')"
@@ -60,14 +51,14 @@
     },
 
     props: {
-      showCancelBtn: { type: Boolean, default: true },
+      showCancelBtn: { type: Boolean, default: false },
       cancelBtnText: { type: String, default: '取消' },
       confirmBtnText: { type: String, default: '确定' },
       title: { type: String, default: '' },
       text: { type: String, default: '' },
       type: { type: String, default: 'success' },
       mask: { type: Boolean, default: true },
-      show: { type: Boolean, default: true, towWay: true }
+      show: { type: Boolean, required: true, towWay: true }
     },
 
     computed: {
@@ -98,5 +89,5 @@
 </script>
 
 <style lang="scss">
-  @import "../styles/dialog";
+  @import "../styles/KsDialog";
 </style>

@@ -19,8 +19,8 @@ export default [
       {
         name: '基础 Base', icon: 'icon', link: '',
         subMenu: [
-          {name: 'Layout 布局', icon: 'icon', link: 'layout'},
-          {name: 'Color 色彩', icon: 'icon', link: ''},
+          // {name: 'Layout 布局', icon: 'icon', link: 'layout'},
+          // {name: 'Color 色彩', icon: 'icon', link: ''},
           {name: 'Icon 图标', icon: 'icon', link: ''},
           {name: 'Button 按钮', icon: 'icon', link: 'button'}
         ]
@@ -30,64 +30,56 @@ export default [
         subMenu: [
           {name: 'Radio 单选框', icon: 'icon', link: 'radio'},
           {name: 'Checkbox 多选框', icon: 'icon', link: 'checkbox'},
-          {name: 'Input 输入框', icon: 'icon', link: ''},
+          // {name: 'Input 输入框', icon: 'icon', link: ''},
           {name: 'Switch 开关', icon: 'icon', link: 'switch'},
           {name: 'DatePicker 时间选择器', icon: 'icon', link: 'date-picker'},
-          {name: 'DateTimePicker 时间日期选择器', icon: 'icon', link: ''},
-          {name: 'Rate 评分', icon: 'icon', link: ''},
-          {name: 'Upload 上传', icon: 'icon', link: ''},
-          {name: 'Form 表单', icon: 'icon', link: ''}
+          // {name: 'Rate 评分', icon: 'icon', link: ''},
+          // {name: 'Upload 上传', icon: 'icon', link: ''},
+          // {name: 'Form 表单', icon: 'icon', link: ''}
         ]
       },
       {
         name: '数据 Data', icon: 'icon', link: '',
         subMenu: [
-          {name: 'Table 表格', icon: 'icon', link: ''},
-          {name: 'Tag 标签', icon: 'icon', link: ''},
-          {name: 'Progress 进度条', icon: 'icon', link: ''},
-          {name: 'Tree 树形控件', icon: 'icon', link: ''},
+          // {name: 'Table 表格', icon: 'icon', link: ''},
+          // {name: 'Tag 标签', icon: 'icon', link: ''},
+          // {name: 'Progress 进度条', icon: 'icon', link: ''},
+          // {name: 'Tree 树形控件', icon: 'icon', link: ''},
           {name: 'Pagination 分页器', icon: 'icon', link: 'page'}
         ]
       },
       {
         name: '通知 Notice', icon: 'icon', link: '',
         subMenu: [
-          {name: 'Alert 警告', icon: 'icon', link: ''},
-          {name: 'Loading 加载', icon: 'icon', link: ''},
-          {name: 'Message 消息提示', icon: 'icon', link: ''},
-          {name: 'MessageBox 消息弹窗', icon: 'icon', link: ''},
-          {name: 'Notification 通知', icon: 'icon', link: ''}
+          // {name: 'Alert 警告', icon: 'icon', link: ''},
+          // {name: 'Loading 加载', icon: 'icon', link: ''},
+          {name: 'Dialog 对话框', icon: 'icon', link: 'dialog'},
+          // {name: 'Notification 通知', icon: 'icon', link: ''}
         ]
       },
       {
         name: '导航 Navigation', icon: 'icon', link: '',
         subMenu: [
-          {name: 'Tabs 标签页', icon: 'icon', link: ''},
-          {name: 'Breadcrumb 面包屑', icon: 'icon', link: ''},
-          {name: 'Dropdown 下拉菜单', icon: 'icon', link: ''},
-          {name: 'Steps 步骤条', icon: 'icon', link: ''}
+          // {name: 'Tabs 标签页', icon: 'icon', link: ''},
+          // {name: 'Breadcrumb 面包屑', icon: 'icon', link: ''},
+          // {name: 'Dropdown 下拉菜单', icon: 'icon', link: ''},
+          // {name: 'Steps 步骤条', icon: 'icon', link: ''}
         ]
       },
       {
         name: '验证 Validate', icon: 'icon', link: '',
         subMenu: [
-          {name: 'Validate 验证', icon: 'icon', link: 'remark'},
-          {name: '默认校验规则', icon: 'icon', link: 'rules'},
-          ////{name: '常用方法及注意问题', icon: 'icon', link: 'usage'},
-          //{name: 'API', icon: 'icon', link: 'api'},
-          //{name: '实例演示', icon: 'icon', link: 'demo'},
-
-
+          // {name: 'Validate 验证', icon: 'icon', link: 'remark'},
+          // {name: '默认校验规则', icon: 'icon', link: 'rules'}
         ]
       },
       {
         name: '其他 Others', icon: 'icon', link: '',
         subMenu: [
-          {name: 'Dialog 对话框', icon: 'icon', link: ''},
-          {name: 'Modal 模态框', icon: 'icon', link: ''},
-          {name: 'Popover 弹出卡片', icon: 'icon', link: ''},
-          {name: 'Carousel 走马灯', icon: 'icon', link: ''},
-          {name: 'Collapse 折叠面板', icon: 'icon', link: ''}
+          // {name: 'Modal 模态框', icon: 'icon', link: ''},
+          // {name: 'Popover 弹出卡片', icon: 'icon', link: ''},
+          // {name: 'Carousel 走马灯', icon: 'icon', link: ''},
+          // {name: 'Collapse 折叠面板', icon: 'icon', link: ''}
         ]
       }
     ]
@@ -95,7 +87,7 @@ export default [
   {
     name: '日志 Log',
     subMenu: [
-      {name: '更新日志', icon: 'icon', link: ''}
+      // {name: '更新日志', icon: 'icon', link: ''}
     ]
   }
 ]
