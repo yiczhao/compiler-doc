@@ -8,6 +8,7 @@
     "develop": "node build/dev-server.js",
     "pro": "node build/pro.js",
     "components": "node build/components.js",
+    "min": "node build/min.js",
     "build": "webpack --watch"
   },
   "dependencies": {
