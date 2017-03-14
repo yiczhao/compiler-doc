@@ -53,7 +53,6 @@ export default [
         subMenu: [
           // {name: 'Alert 警告', icon: 'icon', link: ''},
           // {name: 'Loading 加载', icon: 'icon', link: ''},
-          {name: 'Dialog 对话框', icon: 'icon', link: 'dialog'},
           // {name: 'Notification 通知', icon: 'icon', link: ''}
         ]
       },
@@ -76,7 +75,8 @@ export default [
       {
         name: '其他 Others', icon: 'icon', link: '',
         subMenu: [
-          // {name: 'Modal 模态框', icon: 'icon', link: ''},
+          {name: 'Dialog 对话框', icon: 'icon', link: 'dialog'},
+          {name: 'Modal 模态框', icon: 'icon', link: 'modal'},
           // {name: 'Popover 弹出卡片', icon: 'icon', link: ''},
           // {name: 'Carousel 走马灯', icon: 'icon', link: ''},
           // {name: 'Collapse 折叠面板', icon: 'icon', link: ''}

@@ -1,7 +1,6 @@
 <template>
   <div class="KSModal__wrapper">
-    <div class="KSModal" v-if="show"
-         :style="modalWidth" transition="Zoom">
+    <div class="KSModal" v-if="show" :style="modalWidth">
 
       <header class="KSModal__header" :style="modalHeaderStyle">
         <div class="innerWrap">

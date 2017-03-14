@@ -1,6 +1,6 @@
 <template>
   <div class="ks-modal-center" v-if="show">
-    <ks-mask-entity :fill-mode="full"
+    <ks-mask-entity :fill-mode="'full'"
                     :show.sync="show"
     >
       <ks-modal-entity

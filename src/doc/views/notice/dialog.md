@@ -123,7 +123,7 @@ $KsDialog.success('content', 'title', 'cancel')(confirmCallback, cancelCallback)
 
 ### API
 
-#### KsDialog
+#### KsDialog / KsDialogEntity
 
 | 参数 | 说明 | 接口类型 | 类型 | 双向（twoWay） | 是否必须 | 可选值 | 默认值 |
 |------|-------|----------|---------|---------|---------|-------|--------|
@@ -134,6 +134,8 @@ $KsDialog.success('content', 'title', 'cancel')(confirmCallback, cancelCallback)
 | text | 用来描述当前 `KsDialog` 内容的文字 | props | String | `false` | 否 | 无 | 无 |
 | type | 用来描述当前 `KsDialog` 的类型 | props | String | `false` | 否 | `success`, `info`, `warn`, `danger` | `success` |
 | show | 用来描述当前 `KsDialog` 是否显示 | props | Boolean | `true` | 是 | 无 | 无 |
+| @confirm | `KsDialog` 确定按钮点击 事件 | event | - | - | 否 | - | - |
+| @cancel | `KsDialog` 取消按钮点击 事件 | event | - | - | 否 | - | - |
 
 #### $KsDialog (通过原型方法调用)
 

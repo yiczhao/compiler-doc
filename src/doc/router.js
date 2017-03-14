@@ -178,6 +178,15 @@ export default (router) => {
               component: (resolve) => {
                 require(['./views/notice/dialog.md'], resolve)
               }
+            },
+
+            /* 通知组件-模态框 */
+            '/modal': {
+              name: 'modal',
+              cnName: '模态框',
+              component: (resolve) => {
+                require(['./views/notice/modal.md'], resolve)
+              }
             }
           }
         },

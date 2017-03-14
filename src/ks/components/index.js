@@ -8,8 +8,10 @@
 
 // 开关组件
 import { KsSwitch, KsAbstractSwitch } from './KsSwitch';
-// 对话框组件
+// Dialog 对话框组件
 import { KsDialog, KsDialogEntity } from './KsDialog';
+// Modal 模态框组件
+import { KsModal, KsModalEntity, KsModalCenter } from './KsModal';
 // ToolTips 组件
 import KsToolTip from './KsToolTip';
 // 复选组件
@@ -67,6 +69,10 @@ const KsComponents = {
   KsDialog,
   KsDialogEntity,
 
+  KsModal,
+  KsModalEntity,
+  KsModalCenter,
+
   KsToolTip,
 
   KsDater,
@@ -90,9 +96,14 @@ const install = function(Vue) {
 
   // register prototype methods.
   Object.defineProperties(Vue.prototype, {
-    $KsDialog: {get() {
-      return KsDialog
-    }
+    // 在 VueComponent 原型上注册 KsDialog 组件
+    $KsDialog: {
+      get() { return KsDialog }
+    },
+
+    // 在 VueComponent 原型上注册 KsModal 组件
+    $KsModal: {
+      get () { return KsModal }
     }
   });
 };
