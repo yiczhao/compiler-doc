@@ -16,7 +16,7 @@ import Utils from './utils'
 
 
 import KsComponents from '../ks/components'
-import Directives from './directives'
+import Directives from '../ks/directives'
 import Filter from './filters'
 
 // Vue configure
