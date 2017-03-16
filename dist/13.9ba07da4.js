@@ -15,7 +15,7 @@ webpackJsonp([13],{
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] node_modules/vue-markdown-loader/_cache/switch-8.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] node_modules/vue-markdown-loader/_cache/switch-6.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(121)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -26,7 +26,7 @@ webpackJsonp([13],{
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/zdzdesigner/Documents/KS/KS-FED/compiler-doc/node_modules/vue-markdown-loader/_cache/switch-8.vue"
+	  var id = "/Users/zdzdesigner/Documents/KS/KS-FED/compiler-doc/node_modules/vue-markdown-loader/_cache/switch-6.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
