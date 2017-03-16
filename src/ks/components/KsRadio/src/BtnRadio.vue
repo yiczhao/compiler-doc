@@ -2,11 +2,11 @@
   <div :class="classes">
     <!-- BtnRadio 选择色块自定义 -->
     <style type="text/css">
-      {{ '.KSBtnRadio__UID--' + _uid }} .KSBtnRadio__skin:before {
-        {{ styleCubeColor }}
+      {{ '.KSBtnRadio__UID--' + _uid }} .KSBtnRadio__text:hover {
+        color: {{color}}
       }
-      {{ '.KSBtnRadio__UID--' + _uid }} .KSBtnRadio__entity:checked + .KSBtnRadio__skin:before {
-        {{ styleCubeColor }}
+      {{ '.KSBtnRadio__UID--' + _uid }} .KSBtnRadio__entity:checked + .KSBtnRadio__text {
+        color: {{color}}; border-color: {{color}};
       }
     </style>
     <input type="radio" class="KSBtnRadio__entity" :name="!!name && name"

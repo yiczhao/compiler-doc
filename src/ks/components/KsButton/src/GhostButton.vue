@@ -28,10 +28,6 @@
       .KSGhostButton__UID--{{ _uid }} .KSGhostButton__loading {
         width: {{ loadingSize }}px;
       }
-      /* button 内容修正 */
-      .KSGhostButton__UID--{{ _uid }} .KSGhostButton__text {
-        padding-left: {{ loading ? loadingSize + 6 : 0 }}px;
-      }
     </style>
     <button class="KSGhostButton__entity" :type="nativeType"
             :disabled="(disable || loading) && 'disabled'" :style="btnStyle"
@@ -45,7 +41,9 @@
           ></path>
         </g>
       </svg>
-      <slot></slot>
+      <span class="KSGhostButton__text">
+        <slot></slot>
+      </span>
     </button>
   </div>
 </template>

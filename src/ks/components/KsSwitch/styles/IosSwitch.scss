@@ -17,7 +17,7 @@
 @import "../../styles/variables";
 @import "../../styles/sassMagic/_sassMagic";
 
-$primary-color: nth($successes, 2);                             // 主色调
+$primary-color: #4CAF50;                                        // 主色调
 $sizeMapper: (                                                  // 大小映射
   large: (28px, 28px * 2),
   normal: (24px, 24px * 2),
@@ -73,9 +73,8 @@ $sizeMapper: (                                                  // 大小映射
     opacity: 0!important; cursor: pointer;
 
     // 禁用效果
-    &[disabled] {
-      opacity: .6; cursor: not-allowed;
-    }
+    &[disabled] { cursor: not-allowed }
+    &[disabled] + .KSIosSwitch__slide { opacity: .6 }
 
     // 开关效果
     &:checked + .KSIosSwitch__slide {

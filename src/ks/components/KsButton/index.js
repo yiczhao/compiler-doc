@@ -9,12 +9,12 @@
  */
 
 import KsButton from './src/Button.vue'
-import NrButton from './src/NrButton.vue'
-import GhostButton from './src/GhostButton.vue'
+import KsNrButton from './src/NrButton.vue'
+import KsGhostButton from './src/GhostButton.vue'
 
 export default KsButton
 export {
   KsButton,
-  NrButton,
-  GhostButton
+  KsNrButton,
+  KsGhostButton
 }

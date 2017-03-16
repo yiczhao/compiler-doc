@@ -5,10 +5,11 @@
  */
 export default {
   props: {
-    name: { type: String, default: '' },
+    value: { default: 'KsNormalRadio' },
+    vModel: { towWay: true },
+    name: { type: String, default: 'KsNormalRadio' },
     color: { type: String, default: '#00A5E0' },
-    value: { default: '' },
-    checked: { twoWay: true },
+    checked: { type: Boolean, default: false },
     defChecked: { type: Boolean, default: false },
     disable: { type: Boolean, default: false }
   },
@@ -24,25 +25,15 @@ export default {
     }
   },
 
-  events: {
-    /**
-     * @description VMChange 事件响应
-     * @summary 负责接受 Group 组件的 change 事件, 改变选中状态
-     */
-    VMChange (vModel) {
-      if (this.value === vModel) {
-        this.checked = true
-      }
-    }
-  },
-
   watch: {
     /**
      * @description 监测 checked 属性
      * @summary 用于监测改变并发送 change 事件
      */
     checked () {
-      this.$dispatch('CChange', this.value)
+      this.$dispatch('CChange', this.value);
+
+      this.vModel = this.value;
     }
   }
 }

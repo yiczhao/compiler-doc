@@ -89,7 +89,7 @@ export default (router) => {
               component: (resolve) => {
                 require(['./views/base/button.md'], resolve)
               }
-            },
+            }
           }
         },
         /* form */
@@ -103,13 +103,40 @@ export default (router) => {
           subRoutes: {
 
             /* 基础组件-布局 */
-            '/datepicker': {
-              name: 'datepicker',
-              cnName: '布局',
+            '/date-picker': {
+              name: 'date-picker',
+              cnName: '时间选择器',
               component: (resolve) => {
                 require(['./views/form/date-picker.md'], resolve)
               }
-            }
+            },
+
+            /* 基础组件-单选框 */
+            '/radio': {
+              name: 'radio',
+              cnName: '单选框',
+              component: (resolve) => {
+                require(['./views/form/radio.md'], resolve)
+              }
+            },
+
+            /* 基础组件-复选框 */
+            '/checkbox': {
+              name: 'checkbox',
+              cnName: '复选框',
+              component: (resolve) => {
+                require(['./views/form/checkbox.md'], resolve)
+              }
+            },
+
+            /* 基础组件-IOS 风格开关 */
+            '/switch': {
+              name: 'switch',
+              cnName: 'IOS 风格开关',
+              component: (resolve) => {
+                require(['./views/form/switch.md'], resolve)
+              }
+            },
           }
         },
 
@@ -129,6 +156,36 @@ export default (router) => {
               cnName: '分页',
               component: (resolve) => {
                 require(['./views/data/page.md'], resolve)
+              }
+            }
+          }
+        },
+
+        /* 通知组件 */
+        '/notice': {
+          name: 'notice',
+          cnName: '通知组件',
+          component: (resolve) => {
+            require(['./views/notice/index.vue'], resolve)
+          },
+
+          subRoutes: {
+
+            /* 通知组件-对话框 */
+            '/dialog': {
+              name: 'dialog',
+              cnName: '对话框',
+              component: (resolve) => {
+                require(['./views/notice/dialog.md'], resolve)
+              }
+            },
+
+            /* 通知组件-模态框 */
+            '/modal': {
+              name: 'modal',
+              cnName: '模态框',
+              component: (resolve) => {
+                require(['./views/notice/modal.md'], resolve)
               }
             }
           }

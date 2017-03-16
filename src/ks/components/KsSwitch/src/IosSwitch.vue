@@ -7,7 +7,7 @@
       }
     </style>
     <input class="KSIosSwitch__entity" type="checkbox"
-           v-model="checked" @change.stop
+           v-model="checked"
            :checked="defChecked && 'checked'"
            :disabled="disable && 'disabled'"/>
     <div class="KSIosSwitch__slide">

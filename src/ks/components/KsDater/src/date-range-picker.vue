@@ -31,11 +31,8 @@
             placeholder:{
                 coerce(val) {
                     val = val || ''
-                    if(~val.indexOf(',')){
-                        // console.log(val.split(','))
-                        return val.split(',')
-                    }
-
+                    if(Array.isArray(val)) return val
+                    if(~val.indexOf(',')) return val.split(',')
                     return [val]
                 } 
             }
