@@ -11,7 +11,7 @@
             <div class="_week">
                 <span v-for="day in days" :class="{'week':day=='六'||day=='日'}">{{day}}</span>
             </div>
-            <div v-on:click="pick_date($event)">
+            <div v-on:mousedown="pick_date($event)">
                 <div class="_days" v-for="week in 6">
                     <span 
                         v-for="day in  7"
@@ -38,7 +38,7 @@
             <div class="_week">
                 <span v-for="day in days" :class="{'week':day=='六'||day=='日'}">{{day}}</span>
             </div>
-            <div v-on:click="pick_date($event)">
+            <div v-on:mousedown="pick_date($event)">
                 <div class="_days"
                     v-for="week in 6">
                     <span 
