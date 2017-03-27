@@ -6,6 +6,10 @@
 
 ### 基础使用 （分类）
 
+#### dateMonth
+{{datemonth}}
+<ks-date-month v-bind:value.sync="datemonth"></ks-date-month>
+
 #### date
 <ks-date-picker :value="date" type="date" v-on:change="date_change"></ks-date-picker>
 ```html
@@ -121,10 +125,13 @@
 | value | 数据中绑定的值（可sync） | props | Array | **[]**|**[]** |
 
 
+
+
 <script lang="babel">
     export default {
         data(){
             return {
+                datemonth:'2016-10',
                 datetime:'2016-10-12 03:04:20',
                 date:'',
                 datemulti:'',
@@ -172,6 +179,10 @@
             setTimeout(()=>{
                 this.dateRangePicker2 = ['','']
             },10000)
+
+            setTimeout(()=>{
+                this.datemonth = '2016-09'
+            },1000)
         }
 
     }

@@ -10,8 +10,6 @@
 </template>
 <script>
     import props from './mixins/props.js'
-    import { stringify , format_conver } from './util/lang'
-    import { one_page_date } from './util/apage'
     import dater from './dater.vue'
     export default {
         components:{

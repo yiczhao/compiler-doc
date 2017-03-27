@@ -10,6 +10,7 @@
         return ['日', '一', '二', '三', '四', '五', '六']
     }
     // 月份
+    exports.getMonths = 
     exports.get_months = function () {
         var arr = []
         for(var i=0;i<12;i++){
@@ -104,7 +105,7 @@
         }
         return { year:year, month:month ,stringify:year+'-'+(month+1) }
     }
-    exports.api_ym = api_ym
+    exports.api_ym = exports.apiYm = api_ym
     /**
      * [split_dt 分割 '2016-10-11 10:01:03']
      * @return {[type]} [description]
