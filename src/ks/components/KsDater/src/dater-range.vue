@@ -90,14 +90,12 @@
                 },[])
             },
             redraw(show_range,range_daters) {
-                //console.log(range_daters)
-                // range_daters = this.uniq(range_daters)
-                var show_start = show_range[0] , show_end = show_range[1]
-                this.value = ''
                 
+                var show_start = show_range[0] 
+                    , show_end = show_range[1]
+                this.value = ''
                 this.range_daters = range_daters
-                // //console.log(range_daters)
-                // this.point_daters = range_daters
+                
                 // 取具体日期
                 range_daters.length == 2 && (this.range_daters = get_range_dates(range_daters))
                 //console.log(range_daters,this.range_daters)
