@@ -218,6 +218,25 @@ export default (router) => {
             }
           }
         },
+        /* log */
+        '/log': {
+          name: 'log',
+          cnName: '日志',
+          component: (resolve) => {
+            require(['./views/log/index.vue'], resolve)
+          },
+
+          subRoutes: {
+            /* 更新日志 */
+            '/update': {
+              name: 'update',
+              cnName: '更新日志',
+              component: (resolve) => {
+                require(['./views/log/update.md'], resolve)
+              }
+            }
+          }
+        }
 
       }
     }
