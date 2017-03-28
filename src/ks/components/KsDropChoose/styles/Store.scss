@@ -1,5 +1,39 @@
-input{outline:none}
-.full{width:100%;}
+%store-select {
+  padding:10px;
+    .radiofir{position: relative;}
+    .p-l10{padding-left: 10px}
+    .store_pos{
+        position:absolute;
+        top:40px;
+        left:0;
+        right:0;
+        z-index: 10;
+        overflow:scroll;
+    }
+    .iconup{
+      position: absolute;
+      right:10px;
+      top:15px;
+      border-left:6px solid transparent;
+      border-right:6px solid transparent;
+      border-top: 7px solid #bfcbd9;
+      transition:all 0.5s;
+    }
+    .icondown{
+      position: absolute;
+      right:10px;
+      top:15px;
+      border-left:6px solid transparent;
+      border-right:6px solid transparent;
+      border-top: 7px solid #bfcbd9;
+      transform:rotate(180deg);
+      transition:all 0.5s;
+    }
+}
+.KsStoreClick{
+    @extend %store-select;
+    input{outline:none}
+    .full{width:100%;}
     .checkboxall{
         margin-right: 0px;
         margin-left: 0px;
@@ -30,36 +64,4 @@ input{outline:none}
         }
     }
 
-.store-select{
-    padding:10px;
-    .radiofir{position: relative;}
-    .p-l10{padding-left: 10px}
-
-    .store_pos{
-        position:absolute;
-        top:40px;
-        left:0;
-        right:0;
-        z-index: 10;
-        overflow:scroll;
-    }
-    .iconup{
-      position: absolute;
-      right:10px;
-      top:15px;
-      border-left:6px solid transparent;
-      border-right:6px solid transparent;
-      border-top: 7px solid #bfcbd9;
-      transition:all 0.5s;
-    }
-    .icondown{
-      position: absolute;
-      right:10px;
-      top:15px;
-      border-left:6px solid transparent;
-      border-right:6px solid transparent;
-      border-top: 7px solid #bfcbd9;
-      transform:rotate(180deg);
-      transition:all 0.5s;
-    }
 }

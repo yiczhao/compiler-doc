@@ -6,7 +6,7 @@
  * @date: 2016/10/11.
  */
 
-import KsDialogChoose from './src/StoreList.vue'
+import KsDialogChoose from './src/KsDialogChoose.vue'
 
 export default KsDialogChoose
 export {

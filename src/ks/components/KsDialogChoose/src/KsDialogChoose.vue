@@ -1,5 +1,5 @@
 <template>  
-<div class="store-select">              
+<div class="KsDialogChoose">            
     <div class="radiofir ">
         <input type="text" class="input full" 
             @click="clickinput()" 
@@ -7,31 +7,31 @@
             v-model="showtxt"
             />
     </div>
-</div>
-<dialogitem 
-    :title="'请选择交易门店'" 
-    :show="is_show" 
-    :cb-close="close_dialog"
-    :width = "width" >
-    <div class="trade_store">
-        <ul>
-            <li v-for = "i in list" 
-                :class="i.ischecked && 'check'"
-                @click="choosestore(i)">
-                <span>{{i.name}}</span>
-                <i></i>
-            </li>
-        </ul>
-        <div class="txtr btngroup">
-            <span class="reset" @click="reset()">重选</span>
-            <span class="checkall" @click="checkall()">全选</span>
-            <ks-button :ghost="true" type="other" style="margin-right: 10px"
-                @click="close_dialog">取消</ks-button>
-            <ks-button :type="'primary'"
-                @click="save()">确认</ks-button>
+    <dialogitem 
+        :title="'请选择交易门店'" 
+        :show="is_show" 
+        :cb-close="close_dialog"
+        :width = "width" >
+        <div class="trade_store">
+            <ul>
+                <li v-for = "i in list" 
+                    :class="i.ischecked && 'check'"
+                    @click="choosestore(i)">
+                    <span>{{i.name}}</span>
+                    <i></i>
+                </li>
+            </ul>
+            <div class="txtr btngroup">
+                <span class="reset" @click="reset()">重选</span>
+                <span class="checkall" @click="checkall()">全选</span>
+                <ks-button :ghost="true" type="other" style="margin-right: 10px"
+                    @click="close_dialog">取消</ks-button>
+                <ks-button :type="'primary'"
+                    @click="save()">确认</ks-button>
+            </div>
         </div>
-    </div>
-</dialogitem>
+    </dialogitem>
+</div>
 </template>  
   
 <script type="text/javascript">  
@@ -132,5 +132,5 @@ import dialogitem from '../../KsDialogProgram'
   }  
 </script>  
 <style lang="scss">
-  @import "../styles/Store";
+  @import "../styles/KsDialogChoose";
 </style>

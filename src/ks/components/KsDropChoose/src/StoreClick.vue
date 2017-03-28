@@ -1,5 +1,5 @@
 <template>  
-<div class="store-select" v-el:name>              
+<div class="KsStoreClick"  v-el:name>            
     <div class="radiofir ">
             <i :class="store_list_show ? 'icondown' : 'iconup'"></i>
             <input type="text" class="input-xl full" 

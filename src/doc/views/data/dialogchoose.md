@@ -10,8 +10,8 @@
 
 <ks-dialog-choose 
         :list.sync = list
-        :sid.sync = sid></ks-dialog-choose >
-<div class="p-10">
+        :sid.sync = sid></ks-dialog-choose ><br/>
+<div>
     <span>已选门店id:{{chooseid}}</span><br/>
     <span>已选门店name:{{choosename}}</span>
 </div>  
@@ -21,8 +21,8 @@
 ```html
 <ks-dialog-choose 
         :list.sync = list
-        :sid.sync = sid></ks-dialog-choose >
-<div class="p-10">
+        :sid.sync = sid></ks-dialog-choose ><br/>
+<div>
     <span>已选门店id:</span><br/>
     <span>已选门店name:</span>
 </div>  
