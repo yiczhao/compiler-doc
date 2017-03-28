@@ -38,16 +38,37 @@
             }
         },
         data(){
+            
             return {
                 year:'',
-                month:''
+                month:'',
+                interior : {
+                    year:'',
+                    month:''
+                }
             }
-        },
-        computed:{
             
+        },
+        
+        computed:{
+            value:{
+                get(){
+                    return this.interior.year+'-'+fullzero(this.interior.month)
+                },
+                set(val){
+                    if(!val || this.interior.month!=this.month) return
+                    
+                    var yearmonth = val.split('-')
+                    this.year = yearmonth[0]
+                    this.month = yearmonth[1]
+                    this.output()
+                }
+            },         
             months(){
-                var yearmonth = this.value.split('-'),monthval = ''
-                if(yearmonth[0] == this.year) monthval = yearmonth[1]
+                var monthval = ''
+                if(this.interior.year == this.year) {
+                    monthval = this.interior.month
+                }
                 
                 return months.map((month,index)=>{
                     var status = ''
@@ -69,30 +90,27 @@
                 if(!id) return
                 id = id.split('_')
                 this.month = +id[1]+1
+                this.output()
+                // console.log(this.month)
             },
             curmonth(){
                 var dater = new Date()
                 this.year = dater.getFullYear()
-                this.month = fullzero(1+dater.getMonth())
+                this.month = 1+dater.getMonth()
+                this.output()
+            },
+            output(){
+                this.interior.month = this.month
+                this.interior.year = this.year
+                this.$emit('change',this.value)    
             },
             clearmonth(){
-
+                this.interior.month = ''
+                this.$emit('change','')    
             }
         },
-        watch:{
-            value(val){
-                var yearmonth= val.split('-')
-                this.year = yearmonth[0]
-                this.month = fullzero(yearmonth[1])
-            },
-            'month'(){
-                this.value = this.year +'-'+ this.month
-                console.log('this.value',this.value)
-            }
-
-        },
-        ready(){
-            console.log('ready',this.value)
+        created(){
+            this.curmonth()
         }
 
     }
