@@ -114,7 +114,7 @@
 <label v-text="checkboxGroup2 | json 4"></label>
 ```
 
-<script lang="babel">
+<script>
   export default{
     data () {
       return {
@@ -129,7 +129,7 @@
 ### 脚本
 
 ```html
-<script lang="babel">
+<script>
   export default{
     data () {
       return {

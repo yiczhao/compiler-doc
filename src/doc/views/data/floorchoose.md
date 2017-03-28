@@ -57,7 +57,7 @@
 #### 3.代码如下
 
 ```javascript
-<script lang="babel">
+<script>
 export default {
     data(){
         return {
@@ -73,7 +73,7 @@ export default {
 }
 </script>
 ```
-<script lang="babel">
+<script>
 export default {
     data(){
         return {

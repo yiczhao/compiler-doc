@@ -147,7 +147,7 @@
 </ks-radio-group>
 ```
 
-<script lang="babel">
+<script>
   export default{
     data () {
       return {
@@ -162,7 +162,7 @@
 ### 脚本
 
 ```html
-<script lang="babel">
+<script>
   export default{
     data () {
       return {

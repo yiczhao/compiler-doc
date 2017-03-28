@@ -37,7 +37,7 @@
 #### 代码如下
 
 ```javascript
-<script lang="babel">
+<script>
 import listdata from 'SRC/doc/views/data/data.js'
 export default {
     data(){
@@ -79,7 +79,7 @@ export default {
 ```
 
 
-<script lang="babel">
+<script>
 import listdata from 'SRC/doc/views/data/data.js'
 export default {
     data(){

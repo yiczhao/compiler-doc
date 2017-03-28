@@ -6,7 +6,7 @@
   </nav>
 </template>
 
-<script lang="babel">
+<script>
 
   export default {
     data () {

@@ -128,7 +128,7 @@
 
 
 ```javascript
-<script lang="babel">
+<script>
     export default {
         data(){
             return {
@@ -192,7 +192,7 @@
 
 
 
-<script lang="babel">
+<script>
     export default {
         data(){
             return {

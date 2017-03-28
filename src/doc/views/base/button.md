@@ -88,7 +88,7 @@
 > 默认按钮的风格样式设计是根据设计原型里的标准, 可以满足大部分需求单不排除有一些定制话的需求, 故在此释出定制化接口来满足一些特殊的需求。
 
 
-<script lang="babel">
+<script>
   let btnTypeMapper = [
     'primary',
     'success',
@@ -122,7 +122,7 @@
 ### 脚本
 
 ```html
-<script lang="babel">
+<script>
   let btnTypeMapper = [
     'primary',
     'success',
