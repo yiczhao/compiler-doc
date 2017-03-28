@@ -157,6 +157,27 @@ export default (router) => {
               component: (resolve) => {
                 require(['./views/data/page.md'], resolve)
               }
+            },
+            '/dropchoose': {
+              name: 'dropchoose',
+              cnName: '下拉选择',
+              component: (resolve) => {
+                require(['./views/data/dropchoose.md'], resolve)
+              }
+            },
+            '/dialogchoose': {
+              name: 'dialogchoose',
+              cnName: '弹出层选择',
+              component: (resolve) => {
+                require(['./views/data/dialogchoose.md'], resolve)
+              }
+            },
+            '/floorchoose': {
+              name: 'floorchoose',
+              cnName: '楼层选择',
+              component: (resolve) => {
+                require(['./views/data/floorchoose.md'], resolve)
+              }
             }
           }
         },
