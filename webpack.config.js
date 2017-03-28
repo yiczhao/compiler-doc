@@ -118,6 +118,11 @@ module.exports = {
     presets: ['es2015', 'stage-0'],
     plugins: ['transform-runtime']
   },
+  resolve:{
+    alias: {
+      SRC: __dirname + '/src'
+    } 
+  },
   plugins: [
     new CleanWebpackPlugin(['dist'], {
       root: __dirname,
@@ -131,6 +136,7 @@ module.exports = {
       'VueRouter': 'vue-router',
       'VueValidator': 'vue-validator'
     }),
+
 
     // new webpack.optimize.UglifyJsPlugin({
     //     compress: {
