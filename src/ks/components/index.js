@@ -70,6 +70,14 @@ import {
 
 
 
+// 图片查看组件
+import {
+  KsImage
+} from './KsImage';
+
+
+
+
 
 const VERSION = '0.0.1';
 const KsComponents = {
@@ -119,6 +127,8 @@ const KsComponents = {
   KsItemFloor,
 
   KsDialogProgram,
+
+  KsImage,
 
   
 };
