@@ -1,10 +1,54 @@
-## Floor
+## KsItem
 
-> 常用的选择组件
+> 常用的楼层选择单组件
 
 ---
 
-### 基础使用 （分类）
+### 单组件展示
+
+<br/>
+
+<ks-item
+    :floor_value.sync = "floor_begin1"></item>
+</ks-item>
+<span style="color:red;font-size:15px">已选中楼层:{{floor_begin1}}</span>
+
+-----
+
+```javascript
+<ks-item
+    :floor_value.sync = "floor_begin"></item>
+</ks-item>
+```
+
+### API
+| 参数 | 说明 | 接口类型  | 可选值 | 默认值 | 是否必须 |
+|------|-------|----------|---------|-------|--------|
+| floor_value | 用于显示默认楼层  | String | 无 | B1  | 是 |
+
+
+<br/>
+
+```javascript
+<script lang="babel">
+export default {
+    data(){
+        return {
+            floor_begin:'B1'
+        }
+    },
+    ready(){
+    }
+}
+</script>
+```
+<br/>
+
+## KsItemFloor
+
+> 常用的楼层选择组件
+
+<br/>
 
 ### API
 | 参数 | 说明 | 接口类型  | 可选值 | 默认值 | 是否必须 |

@@ -178,6 +178,13 @@ export default (router) => {
               component: (resolve) => {
                 require(['./views/data/floorchoose.md'], resolve)
               }
+            },
+            '/addtable': {
+              name: 'addtable',
+              cnName: '表格添加',
+              component: (resolve) => {
+                require(['./views/data/addtable.md'], resolve)
+              }
             }
           }
         },

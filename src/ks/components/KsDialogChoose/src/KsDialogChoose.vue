@@ -7,7 +7,7 @@
             v-model="showtxt"
             />
     </div>
-    <dialogitem 
+    <ks-dialog-program  
         :title="'请选择交易门店'" 
         :show="is_show" 
         :cb-close="close_dialog"
@@ -30,12 +30,13 @@
                     @click="save()">确认</ks-button>
             </div>
         </div>
-    </dialogitem>
+    </ks-dialog-program>
 </div>
 </template>  
   
 <script type="text/javascript">  
-import dialogitem from '../../KsDialogProgram'
+import KsButton from '../../KsButton'
+import KsDialogProgram from '../../KsDialogProgram'
   export default {  
     props:{
         list:{
@@ -46,7 +47,8 @@ import dialogitem from '../../KsDialogProgram'
         }
     },
     components:{
-        dialogitem:dialogitem
+        KsDialogProgram:KsDialogProgram,
+        KsButton:KsButton
     },
     data() {  
         return {  

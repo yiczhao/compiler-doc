@@ -69,6 +69,11 @@ import {
 } from './KsDialogProgram';
 
 
+// 表格选择组件
+import {
+  KsAddTableItem
+} from './KsAddTable';
+
 
 
 const VERSION = '0.0.1';
@@ -119,6 +124,8 @@ const KsComponents = {
   KsItemFloor,
 
   KsDialogProgram,
+
+  KsAddTableItem
 
   
 };
