@@ -22,6 +22,7 @@
                 </li>
             </ul>
             <div class="txtr btngroup">
+                <span class="errortxt" v-show = "errorshow">*您尚未选择门店</span>
                 <span class="reset" @click="reset()">重选</span>
                 <span class="checkall" @click="checkall()">全选</span>
                 <ks-button :ghost="true" type="other" style="margin-right: 10px"
@@ -57,7 +58,9 @@ import KsDialogProgram from '../../KsDialogProgram'
             total:0,
             showtxt:'',
             onestorename:'',
-            listparse:[]
+            listparse:[],
+            num:0,
+            errorshow:false
         }  
     },
     methods:{
@@ -73,8 +76,13 @@ import KsDialogProgram from '../../KsDialogProgram'
         },
         save(){
             this.look()
-            this.is_show = false
-            this.listparse = [].concat(JSON.parse(JSON.stringify(this.list)));
+            if(this.num == 0){
+                this.errorshow = true
+            }else{
+                this.is_show = false
+                this.listparse = [].concat(JSON.parse(JSON.stringify(this.list)));
+            }
+            
         },
         look(){
             this.total = 0
@@ -85,11 +93,10 @@ import KsDialogProgram from '../../KsDialogProgram'
                     this.onestorename = t.name
                 }
             })
+            this.num = this.total
             if(this.total == 1)
             {
                 this.total = this.onestorename 
-            }else if(this.total == 0){
-                this.total = '您还未选择任何一家门店'
             }else{
                  this.total = '共有'+ this.total +'家门店'
             }
@@ -124,6 +131,7 @@ import KsDialogProgram from '../../KsDialogProgram'
                 
             })
             this.look()
+            this.errorshow = false
             this.listparse = [].concat(JSON.parse(JSON.stringify(val)));
         }
     },
