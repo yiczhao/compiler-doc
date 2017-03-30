@@ -67,10 +67,10 @@
            
         },
         ready(){
-            document.addEventListener('mouseup',this.isContains, false)
+            document.addEventListener('click',this.isContains, false)
         },
         beforeDestroy () {
-            document.removeEventListener('mouseup', this.isContains, false)
+            document.removeEventListener('click', this.isContains, false)
         }
     }
 </script>
