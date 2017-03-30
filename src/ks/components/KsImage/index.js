@@ -6,9 +6,9 @@
  * @date: 2016/10/11.
  */
 
-import KsDialogChoose from './src/KsDialogChoose.vue'
+import KsImage from './src/KsImage.vue'
 
-export default KsDialogChoose
+export default KsImage
 export {
-	KsDialogChoose
+	KsImage
 }

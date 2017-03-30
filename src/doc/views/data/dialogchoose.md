@@ -4,27 +4,24 @@
 
 ---
 
-### 基础使用 （分类）
-
-### ksDialogChoose
-
 <ks-dialog-choose 
         :list.sync = list
-        :sid.sync = sid></ks-dialog-choose >
-<div class="p-10">
+        :sid.sync = sid></ks-dialog-choose ><br/>
+<div>
     <span>已选门店id:{{chooseid}}</span><br/>
     <span>已选门店name:{{choosename}}</span>
 </div>  
 
+----
 
 
-```html
+```js
 <ks-dialog-choose 
         :list.sync = list
-        :sid.sync = sid></ks-dialog-choose >
-<div class="p-10">
-    <span>已选门店id:</span><br/>
-    <span>已选门店name:</span>
+        :sid.sync = sid></ks-dialog-choose ><br/>
+<div>
+    <span>已选门店id:{{chooseid}}</span><br/>
+    <span>已选门店name:{{choosename}}</span>
 </div>  
 ```
 ### API
@@ -32,6 +29,7 @@
 |------|-------|----------|---------|-------|--------|
 | list | 门店列表  | Array | 无 | 无 |是 |
 | sid | 用于显示已选中的门店id  | Array | 无 | 无 |否 |
+| is_storetype | 用于判断弹出层类型(true是table类型,false是基本弹出层样式)  |  Boolean | true,false | false | 否 |
 <br/>
 
 #### 代码如下
@@ -42,8 +40,7 @@ import listdata from 'SRC/doc/views/data/data.js'
 export default {
     data(){
         return {  
-            list:[],
-            sid:[]
+            list:[]
         }  
     },
     computed:{

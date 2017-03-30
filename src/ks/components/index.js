@@ -26,6 +26,7 @@ import {
   KsRadioGroup,
   KsBtnRadio
 } from './KsRadio';
+
 // 按钮组件
 import {
   KsButton,
@@ -64,6 +65,16 @@ import {
 import {
   KsDialogProgram
 } from './KsDialogProgram';
+
+// 表格选择组件
+import {
+  KsAddTableItem
+} from './KsAddTable';
+
+// 图片查看组件
+import {
+  KsImage
+} from './KsImage';
 
 const VERSION = '0.0.1';
 const KsComponents = {
@@ -108,11 +119,11 @@ const KsComponents = {
   KsStoreClick,
 
   KsDialogChoose,
-
   KsItem,
   KsItemFloor,
-
   KsDialogProgram,
+  KsImage,
+  KsAddTableItem
 
 
 };

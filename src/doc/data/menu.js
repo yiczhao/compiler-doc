@@ -49,7 +49,8 @@ export default [
           {name: 'Pagination 分页器', icon: 'icon', link: 'page'},
           {name: '下拉选择', icon: 'icon', link: 'dropchoose'},
           {name: '弹出层选择', icon: 'icon', link: 'dialogchoose'},
-          {name: '楼层选择', icon: 'icon', link: 'floorchoose'}
+          {name: '楼层选择', icon: 'icon', link: 'floorchoose'},
+          {name: '根据不同用户显示不同表格', icon: 'icon', link: 'addtable'}
         ]
       },
       {
@@ -81,6 +82,7 @@ export default [
         subMenu: [
           {name: 'Dialog 对话框', icon: 'icon', link: 'dialog'},
           {name: 'Modal 模态框', icon: 'icon', link: 'modal'},
+          {name: 'Image 查看', icon: 'icon', link: 'image'},
           // {name: 'Popover 弹出卡片', icon: 'icon', link: ''},
           // {name: 'Carousel 走马灯', icon: 'icon', link: ''},
           // {name: 'Collapse 折叠面板', icon: 'icon', link: ''}

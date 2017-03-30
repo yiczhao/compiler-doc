@@ -1,5 +1,5 @@
 <template>
-    <div class="ks-col floorleft"  
+    <div class="ks-col  KsItem"  
         v-el:floor
         @click="clickinput()" >
         <input type="text" class="input full" 
@@ -147,3 +147,7 @@
         }
     }
 </script>
+<style lang="scss">
+  @import "../styles/Floor";
+</style>
+

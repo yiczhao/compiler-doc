@@ -1,5 +1,5 @@
 <template>  
-<div class="store-select">              
+<div class="KsDialogChoose">            
     <div class="radiofir ">
         <input type="text" class="input full" 
             @click="clickinput()" 
@@ -7,35 +7,37 @@
             v-model="showtxt"
             />
     </div>
-</div>
-<dialogitem 
-    :title="'请选择交易门店'" 
-    :show="is_show" 
-    :cb-close="close_dialog"
-    :width = "width" >
-    <div class="trade_store">
-        <ul>
-            <li v-for = "i in list" 
-                :class="i.ischecked && 'check'"
-                @click="choosestore(i)">
-                <span>{{i.name}}</span>
-                <i></i>
-            </li>
-        </ul>
-        <div class="txtr btngroup">
-            <span class="reset" @click="reset()">重选</span>
-            <span class="checkall" @click="checkall()">全选</span>
-            <ks-button :ghost="true" type="other" style="margin-right: 10px"
-                @click="close_dialog">取消</ks-button>
-            <ks-button :type="'primary'"
-                @click="save()">确认</ks-button>
+    <ks-dialog-program  
+        :title="'请选择交易门店'" 
+        :show="is_show" 
+        :cb-close="close_dialog"
+        :width = "width" >
+        <div class="trade_store">
+            <ul>
+                <li v-for = "i in list" 
+                    :class="i.ischecked && 'check'"
+                    @click="choosestore(i)">
+                    <span>{{i.name}}</span>
+                    <i></i>
+                </li>
+            </ul>
+            <div class="txtr btngroup">
+                <span class="errortxt" v-show = "errorshow">*您尚未选择门店</span>
+                <span class="reset" @click="reset()">重选</span>
+                <span class="checkall" @click="checkall()">全选</span>
+                <ks-button :ghost="true" type="other" style="margin-right: 10px"
+                    @click="close_dialog">取消</ks-button>
+                <ks-button :type="'primary'"
+                    @click="save()">确认</ks-button>
+            </div>
         </div>
-    </div>
-</dialogitem>
+    </ks-dialog-program>
+</div>
 </template>  
   
 <script type="text/javascript">  
-import dialogitem from '../../KsDialogProgram'
+import KsButton from '../../KsButton'
+import KsDialogProgram from '../../KsDialogProgram'
   export default {  
     props:{
         list:{
@@ -46,7 +48,8 @@ import dialogitem from '../../KsDialogProgram'
         }
     },
     components:{
-        dialogitem:dialogitem
+        KsDialogProgram:KsDialogProgram,
+        KsButton:KsButton
     },
     data() {  
         return {  
@@ -55,7 +58,9 @@ import dialogitem from '../../KsDialogProgram'
             total:0,
             showtxt:'',
             onestorename:'',
-            listparse:[]
+            listparse:[],
+            num:0,
+            errorshow:false
         }  
     },
     methods:{
@@ -71,8 +76,13 @@ import dialogitem from '../../KsDialogProgram'
         },
         save(){
             this.look()
-            this.is_show = false
-            this.listparse = [].concat(JSON.parse(JSON.stringify(this.list)));
+            if(this.num == 0){
+                this.errorshow = true
+            }else{
+                this.is_show = false
+                this.listparse = [].concat(JSON.parse(JSON.stringify(this.list)));
+            }
+            
         },
         look(){
             this.total = 0
@@ -83,11 +93,10 @@ import dialogitem from '../../KsDialogProgram'
                     this.onestorename = t.name
                 }
             })
+            this.num = this.total
             if(this.total == 1)
             {
                 this.total = this.onestorename 
-            }else if(this.total == 0){
-                this.total = '您还未选择任何一家门店'
             }else{
                  this.total = '共有'+ this.total +'家门店'
             }
@@ -122,6 +131,7 @@ import dialogitem from '../../KsDialogProgram'
                 
             })
             this.look()
+            this.errorshow = false
             this.listparse = [].concat(JSON.parse(JSON.stringify(val)));
         }
     },
@@ -132,5 +142,5 @@ import dialogitem from '../../KsDialogProgram'
   }  
 </script>  
 <style lang="scss">
-  @import "../styles/Store";
+  @import "../styles/KsDialogChoose";
 </style>

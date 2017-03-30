@@ -1,5 +1,5 @@
 <template>  
-    <div class="store-part" 
+    <div class="KsStore" 
         :style="max_height | filter_style min_width">
         <div class="perstore ">
             <div v-if="is_havechecked" class="checkboxall">
@@ -167,3 +167,6 @@
             
   }  
 </script>  
+<style lang="scss">
+  @import "../styles/Store";
+</style>

@@ -38,13 +38,23 @@
             }
         },
         data(){
+            // console.log(this.value)
+            if(this.value){
+                var yearmonth = this.value.split('-')
+                var year = yearmonth[0]
+                var month = yearmonth[1]    
+            }else{
+                var dater = new Date()
+                var year = dater.getFullYear()
+            }
+
             
             return {
-                year:'',
-                month:'',
+                year:year,
+                month:month,
                 interior : {
-                    year:'',
-                    month:''
+                    year:year,
+                    month:month
                 }
             }
             
@@ -53,9 +63,11 @@
         computed:{
             value:{
                 get(){
+                    // console.log(this.interior.year+'-'+fullzero(this.interior.month))
                     return this.interior.year+'-'+fullzero(this.interior.month)
                 },
                 set(val){
+                    
                     if(!val || this.interior.month!=this.month) return
                     
                     var yearmonth = val.split('-')
@@ -110,7 +122,12 @@
             }
         },
         created(){
-            this.curmonth()
+            // if(this.value)
+            // console.log(this.value)
+            // var dater = new Date()
+            // this.year = dater.getFullYear()
+            // this.value = this.value
+            // this.curmonth()
         }
 
     }
