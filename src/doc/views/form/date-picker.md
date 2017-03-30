@@ -133,7 +133,7 @@
         data(){
             return {
                 datemonth:'2016-10',
-                datemonth2:'2016-10',
+                datemonth2:'',
                 datetime:'2016-10-12 03:04:20',
                 date:'',
                 datemulti:'',
@@ -246,7 +246,7 @@
             },10000)
 
             setTimeout(()=>{
-                this.datemonth = '2016-09'
+                this.datemonth2 = '2016-09'
             },1000)
         }
 
