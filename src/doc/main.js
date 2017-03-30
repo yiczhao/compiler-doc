@@ -35,8 +35,6 @@ Vue.use(Directives)
 // attach components
 Vue.use(KsComponents)
 
-
-
 // router configure.
 let router = new VueRouter({
   history: false,

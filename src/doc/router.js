@@ -158,6 +158,16 @@ export default (router) => {
                 require(['./views/data/page.md'], resolve)
               }
             },
+
+            /* 数据展示-树形组件 */
+            '/tree': {
+              name: 'tree',
+              cnName: '树形组件',
+              component: (resolve) => {
+                require(['./views/data/tree.md'], resolve)
+              }
+            },
+
             '/dropchoose': {
               name: 'dropchoose',
               cnName: '下拉选择',
@@ -165,6 +175,7 @@ export default (router) => {
                 require(['./views/data/dropchoose.md'], resolve)
               }
             },
+
             '/dialogchoose': {
               name: 'dialogchoose',
               cnName: '弹出层选择',
@@ -172,6 +183,7 @@ export default (router) => {
                 require(['./views/data/dialogchoose.md'], resolve)
               }
             },
+
             '/floorchoose': {
               name: 'floorchoose',
               cnName: '楼层选择',

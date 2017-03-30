@@ -49,12 +49,10 @@ import {
   KsStoreClick
 } from './KsDropChoose';
 
-
 // 弹出层选择组件
 import {
   KsDialogChoose
 } from './KsDialogChoose';
-
 
 // 楼层选择组件
 import {
@@ -62,14 +60,10 @@ import {
   KsItemFloor
 } from './KsFloorSelect';
 
-
 // 项目中弹出层组件
 import {
   KsDialogProgram
 } from './KsDialogProgram';
-
-
-
 
 const VERSION = '0.0.1';
 const KsComponents = {
@@ -120,7 +114,7 @@ const KsComponents = {
 
   KsDialogProgram,
 
-  
+
 };
 
 const install = function(Vue) {
