@@ -1,7 +1,9 @@
 <template>  
     <div class="ks-image-box" v-show="show">
-        <img :src="url">
-        <i class="icon" @click="close">&#xe60d;</i>
+        <div class="image-content">
+            <img :src="url">
+            <i class="icon" @click="close">&#xe60d;</i>
+        </div>
     </div>
 </template>   
 
