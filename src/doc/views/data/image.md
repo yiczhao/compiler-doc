@@ -4,21 +4,31 @@
 
 ---
 
-### 基础使用 （分类）
 
-<ks-button @click="imageShow = true">呼出 ksImage 组件</ks-button>
+### 如果查看图片后，直接关闭，不需要在关闭时添加操作
+
+<br>
+
+<ks-button @click="imageShow1 = true">呼出 ksImage 组件</ks-button>
 
 <ks-image 
-    :image-show.sync="imageShow" 
-    :img-url="imgUrl"></ks-image>
+    v-bind:show.sync="imageShow1" 
+    v-bind:url="imgUrl"
+    ></ks-image>
+
+```html
+<ks-button @click="imageShow = true">呼出 ksImage 组件</ks-button>
+```
 
 ```html
 <ks-image 
-    :image-show.sync="imageShow" 
-    :img-url="imgUrl"></ks-image>
+    v-bind:show.sync="imageShow" 
+    v-bind:url="imgUrl"
+    ></ks-image>
 ```
 
 ```javascript
+
     export default{
         data () {
             return {
@@ -27,7 +37,56 @@
             }
         }
     }
+
 ```
+
+### 如果查看图片后，关闭时需要添加事件
+
+<br>
+
+<ks-button @click="imageShow2 = true">呼出 ksImage 组件</ks-button>
+
+<ks-image 
+    v-bind:show="imageShow2" 
+    v-bind:url="imgUrl"
+    v-on:change="close"
+    ></ks-image>
+
+```html
+<ks-button @click="imageShow = true">呼出 ksImage 组件</ks-button>
+```
+
+```html
+<ks-image 
+    v-bind:show="imageShow" 
+    v-bind:url="imgUrl"
+    v-on:change="close"
+    ></ks-image>
+```
+
+
+```javascript
+
+    export default{
+        data () {
+            return {
+                imageShow:false,
+                imgUrl:" "
+            }
+        },
+        methods: {
+            close(staut){
+                this.imageShow2 = staut
+                ...... 
+                添加操作
+                ......
+            }
+        }
+    }
+
+```
+
+
 
 ### API
 | 参数 | 说明 | 接口类型  | 可选值 | 默认值 | 是否必须 |
@@ -44,11 +103,16 @@
     export default{
         data () {
             return {
-                imageShow:false,
-                imgUrl:"https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1490775129&di=bbbf41c41be43d9a2c0e72242a85f208&src=http://img4q.duitang.com/uploads/item/201501/27/20150127133007_dEmyC.jpeg"
+                imageShow1:false,
+                imageShow2:false,
+                imgUrl:"http://img02.tooopen.com/images/20140504/sy_60294738471.jpg"
             }
         },
         methods: {
+            close(staut){
+                this.imageShow2 = staut
+                console.log('close',staut)
+            }
         }
     }
 </script>
