@@ -188,7 +188,8 @@ export default (router) => {
               cnName: '图片',
               component: (resolve) => {
                 require(['./views/data/image.md'], resolve)
-
+              }
+            },
             '/addtable': {
               name: 'addtable',
               cnName: '表格添加',
