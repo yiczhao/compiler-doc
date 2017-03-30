@@ -181,12 +181,20 @@ export default (router) => {
                 require(['./views/data/floorchoose.md'], resolve)
               }
             },
+
             /* 基础组件-图片 */
             '/image': {
               name: 'image',
               cnName: '图片',
               component: (resolve) => {
                 require(['./views/data/image.md'], resolve)
+
+            '/addtable': {
+              name: 'addtable',
+              cnName: '表格添加',
+              component: (resolve) => {
+                require(['./views/data/addtable.md'], resolve)
+
               }
             }
           }

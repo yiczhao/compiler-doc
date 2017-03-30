@@ -48,7 +48,8 @@ export default [
           {name: 'Pagination 分页器', icon: 'icon', link: 'page'},
           {name: '下拉选择', icon: 'icon', link: 'dropchoose'},
           {name: '弹出层选择', icon: 'icon', link: 'dialogchoose'},
-          {name: '楼层选择', icon: 'icon', link: 'floorchoose'}
+          {name: '楼层选择', icon: 'icon', link: 'floorchoose'},
+          {name: '根据不同用户显示不同表格', icon: 'icon', link: 'addtable'}
         ]
       },
       {

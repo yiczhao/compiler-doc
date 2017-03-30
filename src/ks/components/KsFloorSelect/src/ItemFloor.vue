@@ -1,5 +1,5 @@
 <template>
-    <div class="floor ks-row">
+    <div class="KsItemFloor ks-row">
         <item
             :floor_value.sync = "floor_begin"
             :limit_before.sync = "limit_before"></item>

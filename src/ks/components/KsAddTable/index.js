@@ -6,9 +6,9 @@
  * @date: 2016/10/11.
  */
 
-import KsDialogChoose from './src/KsDialogChoose.vue'
+import KsAddTableItem from './src/AddTableItem.vue'
 
-export default KsDialogChoose
+export default KsAddTableItem
 export {
-	KsDialogChoose
+  KsAddTableItem
 }

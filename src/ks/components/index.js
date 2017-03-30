@@ -69,6 +69,11 @@ import {
 } from './KsDialogProgram';
 
 
+// 表格选择组件
+import {
+  KsAddTableItem
+} from './KsAddTable';
+
 
 // 图片查看组件
 import {
@@ -122,13 +127,11 @@ const KsComponents = {
   KsStoreClick,
 
   KsDialogChoose,
-
   KsItem,
   KsItemFloor,
-
   KsDialogProgram,
-
   KsImage,
+  KsAddTableItem
 
   
 };
