@@ -63,6 +63,11 @@ import KsDialogProgram from '../../KsDialogProgram'
             errorshow:false
         }  
     },
+    watch:{
+        num(val){
+
+        }
+    },
     methods:{
         close_dialog(){
             this.is_show = false
@@ -73,16 +78,25 @@ import KsDialogProgram from '../../KsDialogProgram'
         },
         choosestore(t){
             t.ischecked = !t.ischecked
+            this.look()
+            this.showhide()
+        },
+        showhide(){
+            if(this.num == 0){
+                this.errorshow = true
+            }else{
+                this.errorshow = false
+            }
         },
         save(){
             this.look()
             if(this.num == 0){
                 this.errorshow = true
             }else{
+                this.errorshow = false
                 this.is_show = false
                 this.listparse = [].concat(JSON.parse(JSON.stringify(this.list)));
-            }
-            
+            }  
         },
         look(){
             this.total = 0
@@ -97,8 +111,12 @@ import KsDialogProgram from '../../KsDialogProgram'
             if(this.total == 1)
             {
                 this.total = this.onestorename 
+            }else if(this.total == 0){
+                this.total = ''
+            }else if(this.total == this.list.length){
+                this.total = '全部门店'
             }else{
-                 this.total = '共有'+ this.total +'家门店'
+                this.total = '共有'+ this.total +'家门店'
             }
 
             this.showtxt = this.total
@@ -117,6 +135,7 @@ import KsDialogProgram from '../../KsDialogProgram'
             this.list.forEach(t=>{
                 t.ischecked = true
             })
+            this.errorshow = false
         }
     },
     watch:{
@@ -136,7 +155,6 @@ import KsDialogProgram from '../../KsDialogProgram'
         }
     },
     ready(){  
-
     }
             
   }  
