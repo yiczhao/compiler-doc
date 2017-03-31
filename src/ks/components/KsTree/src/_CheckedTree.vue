@@ -2,13 +2,14 @@
   <div class="checked-tree-inner" cid="checkedTreeInner">
 
     <ul class="_ul">
-      <li class="_li" @click="nodeClicked(node)" :_PUid="node._PUid" :PDeep="node._PDeep">
+      <li class="_li" @click="nodeClicked(node)"
+          :_PUid="node._PUid" :PDeep="node._PDeep" :_PPath="node._PPath">
         <span class="operation" @click="open = !open">
           <slot name="shut" v-if="!decorate && open && node[config['children']]['length']">[-]</slot>
           <slot name="open" v-if="!decorate && !open && node[config['children']]['length']">[+]</slot>
           <slot name="end" v-if="!decorate && !node[config['children']]['length']">[=]</slot>
         </span>
-        <ks-checkbox>{{node[config['text']]}}</ks-checkbox>
+        <ks-checkbox :name="node._PPath">{{node[config['text']]}}</ks-checkbox>
       </li>
 
       <checked-tree :node="n" :config="config" v-show="open"

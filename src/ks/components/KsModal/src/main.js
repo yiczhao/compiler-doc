@@ -89,13 +89,19 @@ let showNextModal = function () {
 
   // 绑定事件
   let {
-    confirmCb = KsModal.close,
-    cancelCb = KsModal.close
+    confirmCb,
+    cancelCb
   } = currentMsg
   instance.$off('confirm')
   instance.$off('cancel')
-  instance.$on('confirm', confirmCb)
-  instance.$on('cancel', cancelCb)
+  instance.$on('confirm', (...args) => {
+    confirmCb && confirmCb.apply(null, args);
+    KsModal.close();
+  })
+  instance.$on('cancel', (...args) => {
+    cancelCb && cancelCb.apply(null, args);
+    KsModal.close();
+  })
 
   // 实例化 mask
   if (typeof currentMsg.maskInstance !== 'undefined') {
@@ -116,7 +122,7 @@ KsModal = function (options) {
   return function (confirmCb, cancelCb) {
     // 参数正确性校验
     if ((typeof confirmCb !== 'undefined' && typeof confirmCb !== 'function')
-    || (typeof cancelCb !== 'undefined' && typeof cancelCb !== 'function')) {
+      || (typeof cancelCb !== 'undefined' && typeof cancelCb !== 'function')) {
       throw new TypeError('KsModal: Parameter is not correct, member not a function!')
     }
 
