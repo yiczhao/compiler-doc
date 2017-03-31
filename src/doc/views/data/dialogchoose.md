@@ -5,25 +5,48 @@
 ---
 
 <ks-dialog-choose 
-        :list.sync = list
-        :sid.sync = sid></ks-dialog-choose ><br/>
+        :list.sync = list1
+        :sid.sync = sid1></ks-dialog-choose ><br/>
 <div>
-    <span>已选门店id:{{chooseid}}</span><br/>
-    <span>已选门店name:{{choosename}}</span>
+    <span>已选门店id:{{sid1}}</span><br/>
 </div>  
 
 ----
 
 
 ```js
+<!-- sid双向绑定,返回已经选中的门店id -->
 <ks-dialog-choose 
-        :list.sync = list
-        :sid.sync = sid></ks-dialog-choose ><br/>
+        :list.sync = list1
+        :sid.sync = sid1></ks-dialog-choose ><br/>
 <div>
-    <span>已选门店id:{{chooseid}}</span><br/>
-    <span>已选门店name:{{choosename}}</span>
+    <span>已选门店id:{{sid1}}</span><br/>
 </div>  
 ```
+
+
+<ks-dialog-choose 
+        :list.sync = list2
+        :sid = sid2
+        @change = getSid ></ks-dialog-choose ><br/>
+<div>
+    <span>已选门店id:{{sid2}}</span><br/>
+</div>  
+
+----
+
+
+```js
+<!-- sid单向绑定,提供了一个onchange事件,返回已经选中的门店id -->
+<ks-dialog-choose 
+        :list.sync = list2
+        :sid = sid2
+        @change = getSid ></ks-dialog-choose ><br/>
+<div>
+    <span>已选门店id:{{sid2}}</span><br/>
+</div>  
+```
+
 ### API
 | 参数 | 说明 | 接口类型  | 可选值 | 默认值 | 是否必须 |
 |------|-------|----------|---------|-------|--------|
@@ -40,36 +63,23 @@ import listdata from 'SRC/doc/views/data/data.js'
 export default {
     data(){
         return {  
-            list:[]
+            list1:[],
+            list2:[],
+            sid1:[],
+            sid2:[],
         }  
     },
-    computed:{
-        chooseid(){
-            var listarr = []
-            this.list.forEach(t=>{
-                if(t.ischecked)
-                {
-                   listarr.push(t.id) 
-                }
-            })
-            return listarr.join(' , ')
-        },
-        choosename(){
-            var listarr = []
-            this.list.forEach(t=>{
-                if(t.ischecked)
-                {
-                   listarr.push(t.name) 
-                }
-            })
-            return listarr.join(' , ')
-        } 
+    methods:{
+        getsid(val){
+            this.sid2 = val
+        }
     },
     ready(){
         listdata.forEach(item=>{
             item.ischecked = false
         })
-        this.list = listdata
+        this.list1 = JSON.parse(JSON.stringify(listdata))
+        this.list2 = JSON.parse(JSON.stringify(listdata))
     }
 }
 </script>
@@ -81,37 +91,23 @@ import listdata from 'SRC/doc/views/data/data.js'
 export default {
     data(){
         return {  
-            list:[],
-            sid:[]
+            list1:[],
+            list2:[],
+            sid1:['086021000000006'],
+            sid2:['086021000000006'],
         }  
     },
-    computed:{
-        chooseid(){
-            var listarr = []
-            this.list.forEach(t=>{
-                if(t.ischecked)
-                {
-                   listarr.push(t.id) 
-                }
-            })
-            return listarr.join(' , ')
-        },
-        choosename(){
-            var listarr = []
-            this.list.forEach(t=>{
-                if(t.ischecked)
-                {
-                   listarr.push(t.name) 
-                }
-            })
-            return listarr.join(' , ')
-        } 
+    methods:{
+        getSid(val){
+            this.sid2 = val
+        }
     },
     ready(){
         listdata.forEach(item=>{
             item.ischecked = false
         })
-        this.list = listdata
+        this.list1 = JSON.parse(JSON.stringify(listdata))
+        this.list2 = JSON.parse(JSON.stringify(listdata))
     }
 }
 </script>

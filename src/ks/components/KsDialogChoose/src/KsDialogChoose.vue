@@ -63,30 +63,31 @@ import KsDialogProgram from '../../KsDialogProgram'
             errorshow:false
         }  
     },
-    watch:{
-        num(val){
-
-        }
-    },
     methods:{
         close_dialog(){
             this.is_show = false
             this.list = [].concat(JSON.parse(JSON.stringify(this.listparse)));
+            this.changeGetSid()
+            this.$emit('change',this.getId())
         },
         clickinput(){
             this.is_show = true
         },
+        changeGetSid(){
+            if(this.num != 0){
+                this.sid = this.getId()
+            }else{
+                this.sid = []
+            }
+        },
         choosestore(t){
             t.ischecked = !t.ischecked
             this.look()
+            this.changeGetSid()
             this.showhide()
         },
         showhide(){
-            if(this.num == 0){
-                this.errorshow = true
-            }else{
-                this.errorshow = false
-            }
+            (this.num == 0) ? (this.errorshow = true) :  (this.errorshow = false)
         },
         save(){
             this.look()
@@ -97,6 +98,18 @@ import KsDialogProgram from '../../KsDialogProgram'
                 this.is_show = false
                 this.listparse = [].concat(JSON.parse(JSON.stringify(this.list)));
             }  
+            this.$emit('change',this.getId())
+        },
+        getId(){
+            var listarr = []
+            this.list.forEach(t=>{
+                if(t.ischecked)
+                {
+                   listarr.push(t.id) 
+                }
+            })
+
+            return listarr;
         },
         look(){
             this.total = 0
@@ -118,11 +131,7 @@ import KsDialogProgram from '../../KsDialogProgram'
             }else{
                 this.total = '共有'+ this.total +'家门店'
             }
-
-            this.showtxt = this.total
-
-
-          
+            this.showtxt = this.total       
         },
         reset(){
             this.total = 0
@@ -135,6 +144,7 @@ import KsDialogProgram from '../../KsDialogProgram'
             this.list.forEach(t=>{
                 t.ischecked = true
             })
+            this.sid = this.getId()
             this.errorshow = false
         }
     },
