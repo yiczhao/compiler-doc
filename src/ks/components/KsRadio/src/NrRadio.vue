@@ -22,7 +22,7 @@
   </div>
 </template>
 
-<script lang="babel">
+<script>
   import radioLogic from '../mixins/radioLogic'
 
   export default{

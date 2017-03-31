@@ -41,7 +41,7 @@
   </div>
 </template>
 
-<script lang="babel">
+<script>
   import KsButton from '../../KsButton'
   import KsMask from '../../KsMask'
   import modalProps from '../mixins/modalProps'

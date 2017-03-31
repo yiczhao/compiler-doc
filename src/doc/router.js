@@ -89,7 +89,9 @@ export default (router) => {
               component: (resolve) => {
                 require(['./views/base/button.md'], resolve)
               }
-            }
+            },
+
+            
           }
         },
         /* form */
@@ -157,6 +159,44 @@ export default (router) => {
               component: (resolve) => {
                 require(['./views/data/page.md'], resolve)
               }
+            },
+            '/dropchoose': {
+              name: 'dropchoose',
+              cnName: '下拉选择',
+              component: (resolve) => {
+                require(['./views/data/dropchoose.md'], resolve)
+              }
+            },
+            '/dialogchoose': {
+              name: 'dialogchoose',
+              cnName: '弹出层选择',
+              component: (resolve) => {
+                require(['./views/data/dialogchoose.md'], resolve)
+              }
+            },
+            '/floorchoose': {
+              name: 'floorchoose',
+              cnName: '楼层选择',
+              component: (resolve) => {
+                require(['./views/data/floorchoose.md'], resolve)
+              }
+            },
+
+            /* 基础组件-图片 */
+            '/image': {
+              name: 'image',
+              cnName: '图片',
+              component: (resolve) => {
+                require(['./views/data/image.md'], resolve)
+              }
+            },
+            '/addtable': {
+              name: 'addtable',
+              cnName: '表格添加',
+              component: (resolve) => {
+                require(['./views/data/addtable.md'], resolve)
+
+              }
             }
           }
         },
@@ -218,6 +258,25 @@ export default (router) => {
             }
           }
         },
+        /* log */
+        '/log': {
+          name: 'log',
+          cnName: '日志',
+          component: (resolve) => {
+            require(['./views/log/index.vue'], resolve)
+          },
+
+          subRoutes: {
+            /* 更新日志 */
+            '/update': {
+              name: 'update',
+              cnName: '更新日志',
+              component: (resolve) => {
+                require(['./views/log/update.md'], resolve)
+              }
+            }
+          }
+        }
 
       }
     }

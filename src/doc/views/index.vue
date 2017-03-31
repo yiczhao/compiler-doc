@@ -17,7 +17,7 @@
   </div>
 </template>
 
-<script lang="babel">
+<script>
   import KHeader from './core/KHeader.vue'
   import KMenu from './core/KMenu.vue'
   import KFooter from './core/KFooter.vue'

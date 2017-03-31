@@ -11,7 +11,7 @@
             <div class="_week">
                 <span v-for="day in days" :class="{'week':day=='六'||day=='日'}">{{day}}</span>
             </div>
-            <div v-on:click="pick_date($event)">
+            <div v-on:mousedown="pick_date($event)">
                 <div class="_days" v-for="week in 6">
                     <span 
                         v-for="day in  7"
@@ -38,7 +38,7 @@
             <div class="_week">
                 <span v-for="day in days" :class="{'week':day=='六'||day=='日'}">{{day}}</span>
             </div>
-            <div v-on:click="pick_date($event)">
+            <div v-on:mousedown="pick_date($event)">
                 <div class="_days"
                     v-for="week in 6">
                     <span 
@@ -83,16 +83,22 @@
             }
         },
         methods:{
+            uniq(data){
+                return (data||[]).reduce((arr,val)=>{
+                    if(val) arr.push(val)
+                    return arr
+                },[])
+            },
             redraw(show_range,range_daters) {
-                var show_start = show_range[0] , show_end = show_range[1]
-                this.value = ''
                 
+                var show_start = show_range[0] 
+                    , show_end = show_range[1]
+                this.value = ''
                 this.range_daters = range_daters
-                // console.log(range_daters)
-                // this.point_daters = range_daters
+                
                 // 取具体日期
                 range_daters.length == 2 && (this.range_daters = get_range_dates(range_daters))
-                // console.log(range_daters,this.range_daters)
+                //console.log(range_daters,this.range_daters)
                 // 视图中选中长度
                 this.range_daters_length = this.range_daters.length
                 if(this.range_daters.length == 2 
@@ -100,12 +106,12 @@
                     this.range_daters_length = 1
                 }
 
-                // console.log(show_start,show_end)
+                // //console.log(show_start,show_end)
                 // 比较展示
                 if(this.compared_month(show_end,show_start)){
                     var ym = split_ym(show_end)
                     show_end = next_month(ym.year,ym.month).stringify+'-01'
-                    // console.log('show_end',show_end)
+                    // //console.log('show_end',show_end)
                 }
 
                 this.now = new Date(show_start)
@@ -132,7 +138,7 @@
                 range_dater = this.get_range(this.range_daters , _date.dater)
 
                 this.redraw([stringify(this.now),stringify(this.next_now)],range_dater)
-                // console.log('range_dater',range_dater)
+                // //console.log('range_dater',range_dater)
                 this.$emit('change',range_dater)
             },
             // [a,b] , e => [c,d]
@@ -165,7 +171,7 @@
             click_month (flag) {
                 this.now.setMonth(this.now.getMonth() + flag,1)
                 this.now = new Date(this.now)
-                // console.log(this.stringify(this.next_now) , this.stringify(this.now))
+                // //console.log(this.stringify(this.next_now) , this.stringify(this.now))
                 if(this.compared_month(stringify(this.next_now) , stringify(this.now))){
                     this.click_next_month(1)
                 }
@@ -184,7 +190,7 @@
                 this.next_dates = one_page_date( this.next_data.year , this.next_data.month ,this.selectd)
             },
             selectd(dater){
-                // console.log(this.range_daters)
+                // //console.log(this.range_daters)
                 if(~this.range_daters.indexOf(dater)){
                     if(this.range_daters[0] == dater || this.range_daters[this.range_daters.length-1] == dater ) {
                         return 'active'
@@ -204,8 +210,10 @@
                 this.next_month_dates()
             },
             range_dater(val){
-                // console.log(val)
+                val = this.uniq(val)
+                // //console.log(val)
                 if(val.length == 2){
+
                     this.redraw(val,val)    
                 }else{
                     this.redraw([stringify(this.now),stringify(this.next_now)],val)    
@@ -214,17 +222,12 @@
             }
         },
         created(){
-           // console.log(this.range_dater)
+           
+           this.range_dater = this.uniq(this.range_dater)
             if(!this.range_dater || !this.range_dater.length){
                 this.range_dater = [stringify(this.now),stringify(this.next_now)]    
             }
             
-
-
-            // this.next_month_dates()
-            // this.click_next_month (1) 
-            // this.dates = one_page_date(this.now.getFullYear(),this.now.getMonth(),this.selectd)
-            // this.range_dater
             this.redraw(this.range_dater,this.range_dater)
 
         }

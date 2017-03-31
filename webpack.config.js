@@ -109,7 +109,7 @@ module.exports = {
 
   vue: {
     loaders: {
-      scss: 'vue-style-loader!ks-autobem-loader?type=css!sass-loader',
+      scss: 'vue-style-loader!css-loader!ks-autobem-loader?type=css!sass-loader',
       html: 'vue-html-loader!ks-autobem-loader?type=html',
       markdown: 'vue-markdown-loader'
     }
@@ -117,6 +117,11 @@ module.exports = {
   babel: {
     presets: ['es2015', 'stage-0'],
     plugins: ['transform-runtime']
+  },
+  resolve:{
+    alias: {
+      SRC: __dirname + '/src'
+    } 
   },
   plugins: [
     new CleanWebpackPlugin(['dist'], {
@@ -131,6 +136,7 @@ module.exports = {
       'VueRouter': 'vue-router',
       'VueValidator': 'vue-validator'
     }),
+
 
     // new webpack.optimize.UglifyJsPlugin({
     //     compress: {

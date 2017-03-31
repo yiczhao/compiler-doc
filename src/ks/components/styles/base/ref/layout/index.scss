@@ -31,3 +31,31 @@
 %ks-col{
     @extend %tb-cell;
 }
+
+
+
+
+.ks-col-top {
+    @extend %ks-col-top;
+}
+
+.ks-col-auto-top {
+    @extend %ks-col-auto-top;
+}
+
+
+.ks-row-auto {
+    @extend %ks-row-auto;
+}
+
+.ks-col-auto {
+    @extend %ks-col-auto;
+}
+
+.ks-row {
+    @extend %ks-row;
+}
+
+.ks-col {
+    @extend %ks-col;
+}

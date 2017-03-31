@@ -55,7 +55,7 @@ page_current:{{page_current}}
 | on-change | 分页改变时调用（val,type`sizes变化输出SIZE-CHANGE`） | props  | Function | `非必填` | 无 |
 
 ```javascript
-<script lang="babel">
+<script>
     export default {
         data(){
             return {
@@ -77,7 +77,7 @@ page_current:{{page_current}}
     }
 </script>
 ```
-<script lang="babel">
+<script>
     export default {
         data(){
             return {

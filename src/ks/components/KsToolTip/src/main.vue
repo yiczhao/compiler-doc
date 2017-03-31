@@ -15,7 +15,7 @@
   </div>
 </template>
 
-<script lang="babel">
+<script>
   import Vue from 'vue'
   import { VuePopper, DomUtil, StringUtil } from '../../utils'
 

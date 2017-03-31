@@ -25,7 +25,7 @@
   </div>
 </template>
 
-<script lang="babel">
+<script>
   import {KsMaskEntity} from '../../KsMask';
   import KsModalEntity from './main.vue';
   import modalProps from '../mixins/modalProps'

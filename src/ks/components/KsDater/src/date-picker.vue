@@ -5,17 +5,31 @@
       <div class="ks-col-auto date-icon"><i class="icon"></i></div>
       <input type="text" class="ks-col" placeholder="{{placeholder}}" v-model="value" readonly>
     </div>
-    <ks-dater v-show="show" :value="value" :type="type" :readonly="readonly" v-on:change="current_change"></ks-dater>
+    <ks-dater
+        v-if="type!='datemonth'"
+        v-show="show" 
+        v-bind:value="value" 
+        v-bind:type="type" 
+        v-bind:readonly="readonly" 
+        v-on:change="change"></ks-dater>
+    <ks-date-month 
+        v-if="type=='datemonth'"
+        v-show="show" 
+        v-bind:value="value" 
+        v-bind:type="type" 
+        v-bind:readonly="readonly" 
+        v-on:change="change"></ks-date-month>
+
   </div>
 </template>
 <script>
     import props from './mixins/props.js'
-    import { stringify , format_conver } from './util/lang'
-    import { one_page_date } from './util/apage'
     import dater from './dater.vue'
+    import dateMonth from './date-month.vue'
     export default {
         components:{
-            'ks-dater':dater
+            'ks-dater':dater,
+            'ks-date-month':dateMonth
         },
         mixins: [props],
         props:{
@@ -25,10 +39,11 @@
 
             return {
                 show:false,
-                input_value : ''
             }
         },
+        computed:{
 
+        },
         methods:{
             close(){
                 this.show = false
@@ -40,7 +55,7 @@
             },
             
             // dater callback
-            current_change(cur_date){
+            change(cur_date){
                 this.value = cur_date
                 this.$nextTick(()=>{
                     this.$emit('change',cur_date)    
@@ -51,10 +66,6 @@
             }
            
         },
-        watch:{
-            value(val){}
-        },
-        created(){},
         ready(){
             document.addEventListener('click',this.isContains, false)
         },

@@ -48,7 +48,7 @@
   </div>
 </template>
 
-<script lang="babel">
+<script>
   import BtnMixins from '../mixins/btnMixins'
 
   export default {

@@ -43,6 +43,47 @@ import {
   KsDateMonth
 } from './KsDater';
 
+// 下拉选择组件
+import {
+  KsStore,
+  KsStoreClick
+} from './KsDropChoose';
+
+
+// 弹出层选择组件
+import {
+  KsDialogChoose
+} from './KsDialogChoose';
+
+
+// 楼层选择组件
+import {
+  KsItem,
+  KsItemFloor
+} from './KsFloorSelect';
+
+
+// 项目中弹出层组件
+import {
+  KsDialogProgram
+} from './KsDialogProgram';
+
+
+// 表格选择组件
+import {
+  KsAddTableItem
+} from './KsAddTable';
+
+
+// 图片查看组件
+import {
+  KsImage
+} from './KsImage';
+
+
+
+
+
 const VERSION = '0.0.1';
 const KsComponents = {
   VERSION,
@@ -80,7 +121,19 @@ const KsComponents = {
   KsDatePicker,
   KsDaterRange,
   KsDateRangePicker,
-  KsDateMonth
+  KsDateMonth,
+
+  KsStore,
+  KsStoreClick,
+
+  KsDialogChoose,
+  KsItem,
+  KsItemFloor,
+  KsDialogProgram,
+  KsImage,
+  KsAddTableItem
+
+  
 };
 
 const install = function(Vue) {

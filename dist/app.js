@@ -28,19 +28,19 @@ webpackJsonp([0],[
 
 	var _router2 = _interopRequireDefault(_router);
 
-	var _utils = __webpack_require__(149);
+	var _utils = __webpack_require__(179);
 
 	var _utils2 = _interopRequireDefault(_utils);
 
-	var _components = __webpack_require__(173);
+	var _components = __webpack_require__(203);
 
 	var _components2 = _interopRequireDefault(_components);
 
-	var _directives = __webpack_require__(360);
+	var _directives = __webpack_require__(436);
 
 	var _directives2 = _interopRequireDefault(_directives);
 
-	var _filters = __webpack_require__(362);
+	var _filters = __webpack_require__(438);
 
 	var _filters2 = _interopRequireDefault(_filters);
 
@@ -52,7 +52,7 @@ webpackJsonp([0],[
 	 * @data 16/6/1
 	 * @email pkeros@vip.qq.com
 	 */
-	__webpack_require__(365);
+	__webpack_require__(441);
 
 
 	// Vue configure
@@ -136,7 +136,7 @@ webpackJsonp([0],[
 	  store: _store2.default
 	};
 	// </script>
-	// <script lang="babel">
+	// <script>
 
 /***/ },
 /* 4 */
@@ -765,6 +765,7 @@ webpackJsonp([0],[
 	                __webpack_require__.e/* require */(8, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(99)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	              }
 	            }
+
 	          }
 	        },
 	        /* form */
@@ -832,6 +833,43 @@ webpackJsonp([0],[
 	              component: function component(resolve) {
 	                __webpack_require__.e/* require */(15, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(125)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	              }
+	            },
+	            '/dropchoose': {
+	              name: 'dropchoose',
+	              cnName: '下拉选择',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(16, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(129)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+	            '/dialogchoose': {
+	              name: 'dialogchoose',
+	              cnName: '弹出层选择',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(17, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(134)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+	            '/floorchoose': {
+	              name: 'floorchoose',
+	              cnName: '楼层选择',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(18, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(138)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+
+	            /* 基础组件-图片 */
+	            '/image': {
+	              name: 'image',
+	              cnName: '图片',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(19, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(142)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+	            '/addtable': {
+	              name: 'addtable',
+	              cnName: '表格添加',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(20, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(146)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
 	            }
 	          }
 	        },
@@ -841,7 +879,7 @@ webpackJsonp([0],[
 	          name: 'notice',
 	          cnName: '通知组件',
 	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(16, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(129)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	            __webpack_require__.e/* require */(21, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(153)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	          },
 
 	          subRoutes: {
@@ -851,7 +889,7 @@ webpackJsonp([0],[
 	              name: 'dialog',
 	              cnName: '对话框',
 	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(17, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(132)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	                __webpack_require__.e/* require */(22, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(156)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	              }
 	            },
 
@@ -860,7 +898,7 @@ webpackJsonp([0],[
 	              name: 'modal',
 	              cnName: '模态框',
 	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(18, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(136)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	                __webpack_require__.e/* require */(23, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(160)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	              }
 	            }
 	          }
@@ -871,7 +909,7 @@ webpackJsonp([0],[
 	          name: 'validate',
 	          cnName: '验证',
 	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(19, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(140)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	            __webpack_require__.e/* require */(24, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(164)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	          },
 
 	          subRoutes: {
@@ -880,7 +918,7 @@ webpackJsonp([0],[
 	              name: 'remark',
 	              cnName: '说明',
 	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(20, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(143)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	                __webpack_require__.e/* require */(25, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(167)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	              }
 	            },
 	            /* 说明 */
@@ -888,7 +926,26 @@ webpackJsonp([0],[
 	              name: 'rules',
 	              cnName: '默认校验规则',
 	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(21, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(146)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	                __webpack_require__.e/* require */(26, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(170)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            }
+	          }
+	        },
+	        /* log */
+	        '/log': {
+	          name: 'log',
+	          cnName: '日志',
+	          component: function component(resolve) {
+	            __webpack_require__.e/* require */(27, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(173)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	          },
+
+	          subRoutes: {
+	            /* 更新日志 */
+	            '/update': {
+	              name: 'update',
+	              cnName: '更新日志',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(28, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(176)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	              }
 	            }
 	          }
@@ -1271,21 +1328,65 @@ webpackJsonp([0],[
 /* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = { "default": __webpack_require__(150), __esModule: true };
+
+/***/ },
+/* 150 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var core  = __webpack_require__(16)
+	  , $JSON = core.JSON || (core.JSON = {stringify: JSON.stringify});
+	module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
+	  return $JSON.stringify.apply($JSON, arguments);
+	};
+
+/***/ },
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */,
+/* 157 */,
+/* 158 */,
+/* 159 */,
+/* 160 */,
+/* 161 */,
+/* 162 */,
+/* 163 */,
+/* 164 */,
+/* 165 */,
+/* 166 */,
+/* 167 */,
+/* 168 */,
+/* 169 */,
+/* 170 */,
+/* 171 */,
+/* 172 */,
+/* 173 */,
+/* 174 */,
+/* 175 */,
+/* 176 */,
+/* 177 */,
+/* 178 */,
+/* 179 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _defineProperties = __webpack_require__(150);
+	var _defineProperties = __webpack_require__(180);
 
 	var _defineProperties2 = _interopRequireDefault(_defineProperties);
 
-	var _Cookie = __webpack_require__(169);
+	var _Cookie = __webpack_require__(199);
 
 	var _Cookie2 = _interopRequireDefault(_Cookie);
 
-	var _Util = __webpack_require__(172);
+	var _Util = __webpack_require__(202);
 
 	var _Util2 = _interopRequireDefault(_Util);
 
@@ -1325,36 +1426,36 @@ webpackJsonp([0],[
 	exports.default = install;
 
 /***/ },
-/* 150 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(151), __esModule: true };
+	module.exports = { "default": __webpack_require__(181), __esModule: true };
 
 /***/ },
-/* 151 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(152);
+	__webpack_require__(182);
 	var $Object = __webpack_require__(16).Object;
 	module.exports = function defineProperties(T, D){
 	  return $Object.defineProperties(T, D);
 	};
 
 /***/ },
-/* 152 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $export = __webpack_require__(14);
 	// 19.1.2.3 / 15.2.3.7 Object.defineProperties(O, Properties)
-	$export($export.S + $export.F * !__webpack_require__(24), 'Object', {defineProperties: __webpack_require__(153)});
+	$export($export.S + $export.F * !__webpack_require__(24), 'Object', {defineProperties: __webpack_require__(183)});
 
 /***/ },
-/* 153 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var dP       = __webpack_require__(20)
 	  , anObject = __webpack_require__(21)
-	  , getKeys  = __webpack_require__(154);
+	  , getKeys  = __webpack_require__(184);
 
 	module.exports = __webpack_require__(24) ? Object.defineProperties : function defineProperties(O, Properties){
 	  anObject(O);
@@ -1367,25 +1468,25 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 154 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.14 / 15.2.3.14 Object.keys(O)
-	var $keys       = __webpack_require__(155)
-	  , enumBugKeys = __webpack_require__(168);
+	var $keys       = __webpack_require__(185)
+	  , enumBugKeys = __webpack_require__(198);
 
 	module.exports = Object.keys || function keys(O){
 	  return $keys(O, enumBugKeys);
 	};
 
 /***/ },
-/* 155 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var has          = __webpack_require__(156)
-	  , toIObject    = __webpack_require__(157)
-	  , arrayIndexOf = __webpack_require__(161)(false)
-	  , IE_PROTO     = __webpack_require__(165)('IE_PROTO');
+	var has          = __webpack_require__(186)
+	  , toIObject    = __webpack_require__(187)
+	  , arrayIndexOf = __webpack_require__(191)(false)
+	  , IE_PROTO     = __webpack_require__(195)('IE_PROTO');
 
 	module.exports = function(object, names){
 	  var O      = toIObject(object)
@@ -1401,7 +1502,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 156 */
+/* 186 */
 /***/ function(module, exports) {
 
 	var hasOwnProperty = {}.hasOwnProperty;
@@ -1410,28 +1511,28 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 157 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// to indexed object, toObject with fallback for non-array-like ES3 strings
-	var IObject = __webpack_require__(158)
-	  , defined = __webpack_require__(160);
+	var IObject = __webpack_require__(188)
+	  , defined = __webpack_require__(190);
 	module.exports = function(it){
 	  return IObject(defined(it));
 	};
 
 /***/ },
-/* 158 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// fallback for non-array-like ES3 and non-enumerable old V8 strings
-	var cof = __webpack_require__(159);
+	var cof = __webpack_require__(189);
 	module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
 	  return cof(it) == 'String' ? it.split('') : Object(it);
 	};
 
 /***/ },
-/* 159 */
+/* 189 */
 /***/ function(module, exports) {
 
 	var toString = {}.toString;
@@ -1441,7 +1542,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 160 */
+/* 190 */
 /***/ function(module, exports) {
 
 	// 7.2.1 RequireObjectCoercible(argument)
@@ -1451,14 +1552,14 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 161 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// false -> Array#indexOf
 	// true  -> Array#includes
-	var toIObject = __webpack_require__(157)
-	  , toLength  = __webpack_require__(162)
-	  , toIndex   = __webpack_require__(164);
+	var toIObject = __webpack_require__(187)
+	  , toLength  = __webpack_require__(192)
+	  , toIndex   = __webpack_require__(194);
 	module.exports = function(IS_INCLUDES){
 	  return function($this, el, fromIndex){
 	    var O      = toIObject($this)
@@ -1477,18 +1578,18 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 162 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.15 ToLength
-	var toInteger = __webpack_require__(163)
+	var toInteger = __webpack_require__(193)
 	  , min       = Math.min;
 	module.exports = function(it){
 	  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
 	};
 
 /***/ },
-/* 163 */
+/* 193 */
 /***/ function(module, exports) {
 
 	// 7.1.4 ToInteger
@@ -1499,10 +1600,10 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 164 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var toInteger = __webpack_require__(163)
+	var toInteger = __webpack_require__(193)
 	  , max       = Math.max
 	  , min       = Math.min;
 	module.exports = function(index, length){
@@ -1511,17 +1612,17 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 165 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var shared = __webpack_require__(166)('keys')
-	  , uid    = __webpack_require__(167);
+	var shared = __webpack_require__(196)('keys')
+	  , uid    = __webpack_require__(197);
 	module.exports = function(key){
 	  return shared[key] || (shared[key] = uid(key));
 	};
 
 /***/ },
-/* 166 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var global = __webpack_require__(15)
@@ -1532,7 +1633,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 167 */
+/* 197 */
 /***/ function(module, exports) {
 
 	var id = 0
@@ -1542,7 +1643,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 168 */
+/* 198 */
 /***/ function(module, exports) {
 
 	// IE 8- don't enum bug keys
@@ -1551,7 +1652,7 @@ webpackJsonp([0],[
 	).split(',');
 
 /***/ },
-/* 169 */
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1560,11 +1661,11 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _classCallCheck2 = __webpack_require__(170);
+	var _classCallCheck2 = __webpack_require__(200);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _createClass2 = __webpack_require__(171);
+	var _createClass2 = __webpack_require__(201);
 
 	var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -1764,7 +1865,7 @@ webpackJsonp([0],[
 	}();
 
 /***/ },
-/* 170 */
+/* 200 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1778,7 +1879,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 171 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1810,7 +1911,7 @@ webpackJsonp([0],[
 	}();
 
 /***/ },
-/* 172 */
+/* 202 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1879,7 +1980,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 173 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1889,37 +1990,57 @@ webpackJsonp([0],[
 	});
 	exports.KsComponents = undefined;
 
-	var _defineProperties = __webpack_require__(150);
+	var _defineProperties = __webpack_require__(180);
 
 	var _defineProperties2 = _interopRequireDefault(_defineProperties);
 
-	var _keys = __webpack_require__(174);
+	var _keys = __webpack_require__(204);
 
 	var _keys2 = _interopRequireDefault(_keys);
 
-	var _KsSwitch = __webpack_require__(179);
+	var _KsSwitch = __webpack_require__(209);
 
-	var _KsDialog = __webpack_require__(190);
+	var _KsDialog = __webpack_require__(220);
 
-	var _KsModal = __webpack_require__(221);
+	var _KsModal = __webpack_require__(251);
 
-	var _KsToolTip = __webpack_require__(234);
+	var _KsToolTip = __webpack_require__(264);
 
 	var _KsToolTip2 = _interopRequireDefault(_KsToolTip);
 
-	var _KsCheckbox = __webpack_require__(288);
+	var _KsCheckbox = __webpack_require__(318);
 
-	var _KsMask = __webpack_require__(213);
+	var _KsMask = __webpack_require__(243);
 
-	var _KsPager = __webpack_require__(299);
+	var _KsPager = __webpack_require__(329);
 
-	var _KsRadio = __webpack_require__(311);
+	var _KsRadio = __webpack_require__(341);
 
-	var _KsButton = __webpack_require__(196);
+	var _KsButton = __webpack_require__(226);
 
-	var _KsDater = __webpack_require__(328);
+	var _KsDater = __webpack_require__(358);
+
+	var _KsDropChoose = __webpack_require__(390);
+
+	var _KsDialogChoose = __webpack_require__(401);
+
+	var _KsFloorSelect = __webpack_require__(413);
+
+	var _KsDialogProgram = __webpack_require__(406);
+
+	var _KsAddTable = __webpack_require__(424);
+
+	var _KsImage = __webpack_require__(430);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	// 表格选择组件
+
+
+	// 楼层选择组件
+
+
+	// 下拉选择组件
 
 	// 按钮组件
 
@@ -1938,6 +2059,15 @@ webpackJsonp([0],[
 
 	// 开关组件
 	var VERSION = '0.0.1';
+
+	// 图片查看组件
+
+
+	// 项目中弹出层组件
+
+
+	// 弹出层选择组件
+
 
 	// 日期选择组件
 
@@ -1985,7 +2115,18 @@ webpackJsonp([0],[
 	  KsDatePicker: _KsDater.KsDatePicker,
 	  KsDaterRange: _KsDater.KsDaterRange,
 	  KsDateRangePicker: _KsDater.KsDateRangePicker,
-	  KsDateMonth: _KsDater.KsDateMonth
+	  KsDateMonth: _KsDater.KsDateMonth,
+
+	  KsStore: _KsDropChoose.KsStore,
+	  KsStoreClick: _KsDropChoose.KsStoreClick,
+
+	  KsDialogChoose: _KsDialogChoose.KsDialogChoose,
+	  KsItem: _KsFloorSelect.KsItem,
+	  KsItemFloor: _KsFloorSelect.KsItemFloor,
+	  KsDialogProgram: _KsDialogProgram.KsDialogProgram,
+	  KsImage: _KsImage.KsImage,
+	  KsAddTableItem: _KsAddTable.KsAddTableItem
+
 	};
 
 	var install = function install(Vue) {
@@ -2026,44 +2167,44 @@ webpackJsonp([0],[
 	exports.KsComponents = KsComponents;
 
 /***/ },
-/* 174 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(175), __esModule: true };
+	module.exports = { "default": __webpack_require__(205), __esModule: true };
 
 /***/ },
-/* 175 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(176);
+	__webpack_require__(206);
 	module.exports = __webpack_require__(16).Object.keys;
 
 /***/ },
-/* 176 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.14 Object.keys(O)
-	var toObject = __webpack_require__(177)
-	  , $keys    = __webpack_require__(154);
+	var toObject = __webpack_require__(207)
+	  , $keys    = __webpack_require__(184);
 
-	__webpack_require__(178)('keys', function(){
+	__webpack_require__(208)('keys', function(){
 	  return function keys(it){
 	    return $keys(toObject(it));
 	  };
 	});
 
 /***/ },
-/* 177 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.13 ToObject(argument)
-	var defined = __webpack_require__(160);
+	var defined = __webpack_require__(190);
 	module.exports = function(it){
 	  return Object(defined(it));
 	};
 
 /***/ },
-/* 178 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// most Object methods by ES6 should accept primitives
@@ -2078,7 +2219,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 179 */
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2088,11 +2229,11 @@ webpackJsonp([0],[
 	});
 	exports.KsAbstractSwitch = exports.KsSwitch = undefined;
 
-	var _IosSwitch = __webpack_require__(180);
+	var _IosSwitch = __webpack_require__(210);
 
 	var _IosSwitch2 = _interopRequireDefault(_IosSwitch);
 
-	var _AbstractSwitch = __webpack_require__(185);
+	var _AbstractSwitch = __webpack_require__(215);
 
 	var _AbstractSwitch2 = _interopRequireDefault(_AbstractSwitch);
 
@@ -2111,17 +2252,17 @@ webpackJsonp([0],[
 	exports.KsAbstractSwitch = _AbstractSwitch2.default;
 
 /***/ },
-/* 180 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(181)
-	__vue_script__ = __webpack_require__(183)
+	__webpack_require__(211)
+	__vue_script__ = __webpack_require__(213)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsSwitch/src/IosSwitch.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(184)
+	__vue_template__ = __webpack_require__(214)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -2140,13 +2281,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 181 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(182);
+	var content = __webpack_require__(212);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -2155,8 +2296,8 @@ webpackJsonp([0],[
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./IosSwitch.vue", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./IosSwitch.vue");
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./IosSwitch.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./IosSwitch.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2166,7 +2307,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 182 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -2180,7 +2321,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 183 */
+/* 213 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2208,7 +2349,7 @@ webpackJsonp([0],[
 	//   </div>
 	// </template>
 	//
-	// <script lang="babel">
+	// <script>
 	exports.default = {
 	  name: 'KsIosSwitch',
 
@@ -2257,23 +2398,23 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 184 */
+/* 214 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :class=\"classesSize\">\n  <!-- IosSwitch 背景自定义 -->\n  <style type=\"text/css\">\n    {{ '.KSIosSwitch__UID--' + _uid }} .KSIosSwitch__entity:checked + .KSIosSwitch__slide {\n      {{ styleBgColor }}\n    }\n  </style>\n  <input class=\"KSIosSwitch__entity\" type=\"checkbox\"\n         v-model=\"checked\"\n         :checked=\"defChecked && 'checked'\"\n         :disabled=\"disable && 'disabled'\"/>\n  <div class=\"KSIosSwitch__slide\">\n    <small class=\"KSIosSwitch__btn\"></small>\n    <slot name=\"checkedChildren\"></slot>\n    <slot name=\"unCheckedChildren\"></slot>\n  </div>\n</div>\n";
 
 /***/ },
-/* 185 */
+/* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(186)
-	__vue_script__ = __webpack_require__(188)
+	__webpack_require__(216)
+	__vue_script__ = __webpack_require__(218)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsSwitch/src/AbstractSwitch.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(189)
+	__vue_template__ = __webpack_require__(219)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -2292,13 +2433,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 186 */
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(187);
+	var content = __webpack_require__(217);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -2307,8 +2448,8 @@ webpackJsonp([0],[
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./AbstractSwitch.vue", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./AbstractSwitch.vue");
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./AbstractSwitch.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./AbstractSwitch.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2318,7 +2459,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 187 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -2332,7 +2473,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 188 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2341,7 +2482,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _keys = __webpack_require__(174);
+	var _keys = __webpack_require__(204);
 
 	var _keys2 = _interopRequireDefault(_keys);
 
@@ -2377,7 +2518,7 @@ webpackJsonp([0],[
 	//   </div>
 	// </template>
 	//
-	// <script lang="babel">
+	// <script>
 	exports.default = {
 	  name: 'AbstractSwitch',
 
@@ -2484,13 +2625,13 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 189 */
+/* 219 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :class=\"classes\">\n  <style type=\"text/css\">\n    {{ '.KSAbstractSwitch__UID--' + _uid }} .KSAbstractSwitch__slide {\n      {{ slideStyles }}\n    }\n    {{ '.KSAbstractSwitch__UID--' + _uid }} .KSAbstractSwitch__dot {\n      {{ dotStyles }}\n    }\n    {{ '.KSAbstractSwitch__UID--' + _uid }} .KSAbstractSwitch__slide--selected {\n      {{ selectedSlide }}\n    }\n    {{ '.KSAbstractSwitch__UID--' + _uid }} .KSAbstractSwitch__text {\n      {{ textStyles }}\n    }\n    {{ '.KSAbstractSwitch__UID--' + _uid }} .KSAbstractSwitch__dot--selected {\n      {{ selectedDot }}\n    }\n  </style>\n  <div class=\"KSAbstractSwitch__slide\" @click=\"slideClickHandle\"\n       :class=\"{'KSAbstractSwitch__slide--selected': count % 2}\"\n  >\n    <span class=\"KSAbstractSwitch__text\" :class=\"{'KSAbstractSwitch__text--selected': count % 2}\">\n      <slot></slot> {{statusMapper[status].text}}\n    </span>\n    <div class=\"KSAbstractSwitch__dot\" :class=\"{'KSAbstractSwitch__dot--selected': count % 2}\"></div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 190 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2500,11 +2641,11 @@ webpackJsonp([0],[
 	});
 	exports.KsDialogEntity = exports.KsDialog = undefined;
 
-	var _main = __webpack_require__(191);
+	var _main = __webpack_require__(221);
 
 	var _main2 = _interopRequireDefault(_main);
 
-	var _main3 = __webpack_require__(192);
+	var _main3 = __webpack_require__(222);
 
 	var _main4 = _interopRequireDefault(_main3);
 
@@ -2523,7 +2664,7 @@ webpackJsonp([0],[
 	exports.KsDialogEntity = _main4.default;
 
 /***/ },
-/* 191 */
+/* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2537,11 +2678,11 @@ webpackJsonp([0],[
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _main = __webpack_require__(192);
+	var _main = __webpack_require__(222);
 
 	var _main2 = _interopRequireDefault(_main);
 
-	var _KsMask = __webpack_require__(213);
+	var _KsMask = __webpack_require__(243);
 
 	var _KsMask2 = _interopRequireDefault(_KsMask);
 
@@ -2753,17 +2894,17 @@ webpackJsonp([0],[
 	exports.KsDialog = _KsDialog;
 
 /***/ },
-/* 192 */
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(193)
-	__vue_script__ = __webpack_require__(195)
+	__webpack_require__(223)
+	__vue_script__ = __webpack_require__(225)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDialog/src/main.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(220)
+	__vue_template__ = __webpack_require__(250)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -2782,9 +2923,9 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 193 */
-[371, 194],
-/* 194 */
+/* 223 */
+[447, 224],
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -2798,7 +2939,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 195 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2807,11 +2948,11 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _KsButton = __webpack_require__(196);
+	var _KsButton = __webpack_require__(226);
 
 	var _KsButton2 = _interopRequireDefault(_KsButton);
 
-	var _KsMask = __webpack_require__(213);
+	var _KsMask = __webpack_require__(243);
 
 	var _KsMask2 = _interopRequireDefault(_KsMask);
 
@@ -2849,7 +2990,7 @@ webpackJsonp([0],[
 	//   </div>
 	// </template>
 	//
-	// <script lang="babel">
+	// <script>
 	var colorMapper = {
 	  success: { hue: '#4CAF50', icon: 'icon-chenggongtubiao' },
 	  info: { hue: '#00BCD4', icon: 'icon-xinxitubiao' },
@@ -2915,7 +3056,7 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 196 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2925,15 +3066,15 @@ webpackJsonp([0],[
 	});
 	exports.KsGhostButton = exports.KsNrButton = exports.KsButton = undefined;
 
-	var _Button = __webpack_require__(197);
+	var _Button = __webpack_require__(227);
 
 	var _Button2 = _interopRequireDefault(_Button);
 
-	var _NrButton = __webpack_require__(201);
+	var _NrButton = __webpack_require__(231);
 
 	var _NrButton2 = _interopRequireDefault(_NrButton);
 
-	var _GhostButton = __webpack_require__(207);
+	var _GhostButton = __webpack_require__(237);
 
 	var _GhostButton2 = _interopRequireDefault(_GhostButton);
 
@@ -2954,17 +3095,17 @@ webpackJsonp([0],[
 	exports.KsGhostButton = _GhostButton2.default;
 
 /***/ },
-/* 197 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(198)
-	__vue_script__ = __webpack_require__(200)
+	__webpack_require__(228)
+	__vue_script__ = __webpack_require__(230)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsButton/src/Button.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(212)
+	__vue_template__ = __webpack_require__(242)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -2983,13 +3124,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 198 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(199);
+	var content = __webpack_require__(229);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -2998,8 +3139,8 @@ webpackJsonp([0],[
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Button.vue", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Button.vue");
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Button.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Button.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -3009,7 +3150,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 199 */
+/* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -3023,7 +3164,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 200 */
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3032,11 +3173,11 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _NrButton = __webpack_require__(201);
+	var _NrButton = __webpack_require__(231);
 
 	var _NrButton2 = _interopRequireDefault(_NrButton);
 
-	var _GhostButton = __webpack_require__(207);
+	var _GhostButton = __webpack_require__(237);
 
 	var _GhostButton2 = _interopRequireDefault(_GhostButton);
 
@@ -3071,7 +3212,7 @@ webpackJsonp([0],[
 	//   </div>
 	// </template>
 	//
-	// <script lang="babel">
+	// <script>
 	exports.default = {
 	  name: 'KsButton',
 
@@ -3112,17 +3253,17 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 201 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(202)
-	__vue_script__ = __webpack_require__(204)
+	__webpack_require__(232)
+	__vue_script__ = __webpack_require__(234)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsButton/src/NrButton.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(206)
+	__vue_template__ = __webpack_require__(236)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -3141,13 +3282,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 202 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(203);
+	var content = __webpack_require__(233);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -3156,8 +3297,8 @@ webpackJsonp([0],[
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NrButton.vue", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NrButton.vue");
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NrButton.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NrButton.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -3167,7 +3308,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 203 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -3181,7 +3322,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 204 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3190,7 +3331,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _btnMixins = __webpack_require__(205);
+	var _btnMixins = __webpack_require__(235);
 
 	var _btnMixins2 = _interopRequireDefault(_btnMixins);
 
@@ -3249,10 +3390,10 @@ webpackJsonp([0],[
 	//   </div>
 	// </template>
 	//
-	// <script lang="babel">
+	// <script>
 
 /***/ },
-/* 205 */
+/* 235 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -3299,23 +3440,23 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 206 */
+/* 236 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :class=\"'KSNRButton KSNRButton__UID--' + _uid\">\n  <!-- 按钮颜色 -->\n  <style type=\"text/css\">\n    /* 默认状态 */\n    .KSNRButton__UID--{{ _uid }} .KSNRButton__entity {\n      background: {{ colorNormal }};\n    }\n    /* hover 状态 */\n    .KSNRButton__UID--{{ _uid }} .KSNRButton__entity[disabled]:hover {\n      background: {{ colorNormal }};\n    }\n    .KSNRButton__UID--{{ _uid }} .KSNRButton__entity:hover {\n      background: {{ colorHover }};\n    }\n    /* active 状态 */\n    .KSNRButton__UID--{{ _uid }} .KSNRButton__entity:active {\n      background: {{ colorActive }};\n    }\n    /* loading 大小 */\n    .KSNRButton__UID--{{ _uid }} .KSNRButton__loading {\n      width: {{ loadingSize }}px;\n    }\n  </style>\n  <button class=\"KSNRButton__entity\" :type=\"nativeType\"\n          :disabled=\"(disable || loading) && 'disabled'\" :style=\"btnStyle\"\n  >\n    <svg class=\"KSNRButton__loading\" v-if=\"loading\" :width=\"loadingSize\" :height=\"loadingSize\" viewBox=\"0 0 16 16\"\n         preserveAspectRatio=\"xMidYMid meet\"\n         version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">\n      <g transform=\"scale(0.015625, 0.015625)\">\n        <path\n          d=\"M515.698303 969.127499c-97.187972 0-191.279691-31.134554-270.406182-90.479422-96.67193-72.245926-159.45708-178.206619-176.658492-297.928439s13.245087-238.9276 85.663027-335.59953C304.120947 45.239711 588.288258 4.644381 787.99664 154.124643c83.770872 62.78515 143.459768 153.092558 168.2298 254.580884 4.300353 17.373425-6.364522 34.918864-23.737947 39.047203-17.373425 4.128339-34.918864-6.364522-39.047203-23.737947-21.157736-86.867126-72.417941-164.44549-144.147825-218.285906C578.139425 77.750378 334.395431 112.669242 206.244919 283.823282c-62.097094 82.910801-88.243239 185.087183-73.450025 287.607593s68.461616 193.34386 151.372417 255.440954c171.326054 128.322526 414.898035 93.403662 543.220561-77.922392 33.542752-44.895683 56.592642-95.123803 68.289602-149.308248 3.78431-17.373425 21.157736-28.554342 38.359147-24.770032 17.373425 3.78431 28.554342 20.985721 24.770032 38.359147-13.761129 63.473207-40.59533 122.130018-79.814547 174.422308-72.417941 96.67193-178.378633 159.45708-298.100454 176.658492C559.217873 967.579372 537.372081 969.127499 515.698303 969.127499z\"\n        ></path>\n      </g>\n    </svg>\n    <span class=\"KSNRButton__text\">\n      <slot></slot>\n    </span>\n  </button>\n</div>\n";
 
 /***/ },
-/* 207 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(208)
-	__vue_script__ = __webpack_require__(210)
+	__webpack_require__(238)
+	__vue_script__ = __webpack_require__(240)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsButton/src/GhostButton.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(211)
+	__vue_template__ = __webpack_require__(241)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -3334,13 +3475,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 208 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(209);
+	var content = __webpack_require__(239);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -3349,8 +3490,8 @@ webpackJsonp([0],[
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./GhostButton.vue", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./GhostButton.vue");
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./GhostButton.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./GhostButton.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -3360,7 +3501,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 209 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -3374,7 +3515,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 210 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3383,7 +3524,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _btnMixins = __webpack_require__(205);
+	var _btnMixins = __webpack_require__(235);
 
 	var _btnMixins2 = _interopRequireDefault(_btnMixins);
 
@@ -3449,22 +3590,22 @@ webpackJsonp([0],[
 	//   </div>
 	// </template>
 	//
-	// <script lang="babel">
+	// <script>
 
 /***/ },
-/* 211 */
+/* 241 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :class=\"'KSGhostButton KSGhostButton__UID--' + _uid\">\n  <!-- 按钮颜色 -->\n  <style type=\"text/css\">\n    /* 默认状态 */\n    .KSGhostButton__UID--{{ _uid }} .KSGhostButton__entity {\n      color: {{ colorNormal }};\n      border: 1px solid {{ colorNormal }};\n    }\n    /* hover 状态 */\n    .KSGhostButton__UID--{{ _uid }} .KSGhostButton__entity:hover {\n      color: {{ colorNormal }};\n      border: 1px solid {{ colorHover }};\n    }\n    .KSGhostButton__UID--{{ _uid }} .KSNRButton__entity[disabled]:hover {\n      border: 1px solid {{ colorNormal }};\n    }\n    /* active 状态 */\n    .KSGhostButton__UID--{{ _uid }} .KSGhostButton__entity:active {\n      color: {{ colorNormal }};\n      border: 1px solid {{ colorActive }};\n    }\n    .KSGhostButton__UID--{{ _uid }} .KSGhostButton__entity[disabled]:active {\n      border: 1px solid {{ colorNormal }};\n      background: #FFF;\n    }\n    /* loading 大小 */\n    .KSGhostButton__UID--{{ _uid }} .KSGhostButton__loading {\n      width: {{ loadingSize }}px;\n    }\n  </style>\n  <button class=\"KSGhostButton__entity\" :type=\"nativeType\"\n          :disabled=\"(disable || loading) && 'disabled'\" :style=\"btnStyle\"\n  >\n    <svg class=\"KSGhostButton__loading\" v-if=\"loading\" :width=\"loadingSize\" :height=\"loadingSize\" viewBox=\"0 0 16 16\"\n         preserveAspectRatio=\"xMidYMid meet\"\n         version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">\n      <g transform=\"scale(0.015625, 0.015625)\">\n        <path\n          d=\"M515.698303 969.127499c-97.187972 0-191.279691-31.134554-270.406182-90.479422-96.67193-72.245926-159.45708-178.206619-176.658492-297.928439s13.245087-238.9276 85.663027-335.59953C304.120947 45.239711 588.288258 4.644381 787.99664 154.124643c83.770872 62.78515 143.459768 153.092558 168.2298 254.580884 4.300353 17.373425-6.364522 34.918864-23.737947 39.047203-17.373425 4.128339-34.918864-6.364522-39.047203-23.737947-21.157736-86.867126-72.417941-164.44549-144.147825-218.285906C578.139425 77.750378 334.395431 112.669242 206.244919 283.823282c-62.097094 82.910801-88.243239 185.087183-73.450025 287.607593s68.461616 193.34386 151.372417 255.440954c171.326054 128.322526 414.898035 93.403662 543.220561-77.922392 33.542752-44.895683 56.592642-95.123803 68.289602-149.308248 3.78431-17.373425 21.157736-28.554342 38.359147-24.770032 17.373425 3.78431 28.554342 20.985721 24.770032 38.359147-13.761129 63.473207-40.59533 122.130018-79.814547 174.422308-72.417941 96.67193-178.378633 159.45708-298.100454 176.658492C559.217873 967.579372 537.372081 969.127499 515.698303 969.127499z\"\n        ></path>\n      </g>\n    </svg>\n    <span class=\"KSGhostButton__text\">\n      <slot></slot>\n    </span>\n  </button>\n</div>\n";
 
 /***/ },
-/* 212 */
+/* 242 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KSButton\">\n  <!-- 普通按钮 -->\n  <nr-button v-if=\"!ghost\" :native-type=\"nativeType\" :disable=\"disable\"\n             :loading.sync=\"loading\"\n             :height=\"sizeMapper[size] && sizeMapper[size].height\"\n             :width=\"sizeMapper[size] && sizeMapper[size].width\"\n             :font-size=\"sizeMapper[size] && sizeMapper[size].fSize\"\n             :color-normal=\"colorMapper[type] && colorMapper[type].normal\"\n             :color-hover=\"colorMapper[type] && colorMapper[type].hover\"\n             :color-active=\"colorMapper[type] && colorMapper[type].active\"\n  >\n    <slot></slot>\n  </nr-button>\n  <!-- 幽灵按钮 -->\n  <ghost-button v-if=\"ghost\" :native-type=\"nativeType\" :disable=\"disable\"\n                :loading.sync=\"loading\"\n                :height=\"sizeMapper[size] && sizeMapper[size].height\"\n                :width=\"sizeMapper[size] && sizeMapper[size].width\"\n                :font-size=\"sizeMapper[size] && sizeMapper[size].fSize\"\n                :color-normal=\"colorMapper[type] && colorMapper[type].normal\"\n                :color-hover=\"colorMapper[type] && colorMapper[type].hover\"\n                :color-active=\"colorMapper[type] && colorMapper[type].active\"\n  >\n    <slot></slot>\n  </ghost-button>\n</div>\n";
 
 /***/ },
-/* 213 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3474,11 +3615,11 @@ webpackJsonp([0],[
 	});
 	exports.KsMaskEntity = exports.KsMask = undefined;
 
-	var _main = __webpack_require__(214);
+	var _main = __webpack_require__(244);
 
 	var _main2 = _interopRequireDefault(_main);
 
-	var _main3 = __webpack_require__(215);
+	var _main3 = __webpack_require__(245);
 
 	var _main4 = _interopRequireDefault(_main3);
 
@@ -3497,7 +3638,7 @@ webpackJsonp([0],[
 	exports.KsMaskEntity = _main4.default;
 
 /***/ },
-/* 214 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3511,7 +3652,7 @@ webpackJsonp([0],[
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _main = __webpack_require__(215);
+	var _main = __webpack_require__(245);
 
 	var _main2 = _interopRequireDefault(_main);
 
@@ -3645,17 +3786,17 @@ webpackJsonp([0],[
 	exports.KsMask = _KsMask;
 
 /***/ },
-/* 215 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(216)
-	__vue_script__ = __webpack_require__(218)
+	__webpack_require__(246)
+	__vue_script__ = __webpack_require__(248)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsMask/src/main.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(219)
+	__vue_template__ = __webpack_require__(249)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -3674,9 +3815,9 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 216 */
-[371, 217],
-/* 217 */
+/* 246 */
+[447, 247],
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -3690,7 +3831,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 218 */
+/* 248 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -3708,7 +3849,7 @@ webpackJsonp([0],[
 	//   </div>
 	// </template>
 	//
-	// <script lang="babel">
+	// <script>
 	exports.default = {
 	  name: 'KsMask',
 
@@ -3747,19 +3888,19 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 219 */
+/* 249 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KSMask__wrapper\">\n  <div class=\"KSMask__container\" :style=\"maskStyle\"\n       v-if=\"show\" @click=\"$emit('spaceClick')\"\n  >\n    <slot></slot>\n  </div>\n</div>\n";
 
 /***/ },
-/* 220 */
+/* 250 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KSDialog__wrapper\">\n  <!-- 不想加这个 wrapper, but 不加会变成片断实例 -->\n  <div :class=\"'dialog-icon KSDialog KSDialog__UID--' + _uid\" v-if=\"show\" :style=\"zIndex\">\n    <!-- 图标部分 -->\n    <aside class=\"KSDialog__icon\" :style=\"'color:' + hue.hue\">\n      <i :class=\"'icon ' + hue.icon\"></i>\n    </aside>\n    <!-- 内容块部分 -->\n    <article class=\"KSDialog__content\">\n      <h3 class=\"KSDialog__title\">\n        {{ title }} <slot name=\"title\"></slot>\n      </h3>\n      <p class=\"content\">\n        {{ text }} <slot name=\"text\"></slot>\n      </p>\n    </article>\n    <!-- 操作显示区域 -->\n    <footer class=\"KSDialog__footer\">\n      <aside class=\"KSDialog__btnWarp\">\n        <ks-button :ghost=\"true\" type=\"other\" @click.stop=\"$emit('cancel')\"\n                   v-if=\"showCancelBtn\" style=\"margin-right: 10px\"\n        >{{ cancelBtnText }}</ks-button>\n        <ks-button :type=\"type\" @click.stop=\"$emit('confirm')\"\n        >{{ confirmBtnText }}</ks-button>\n      </aside>\n    </footer>\n  </div>\n</div>\n";
 
 /***/ },
-/* 221 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3769,15 +3910,15 @@ webpackJsonp([0],[
 	});
 	exports.KsModalCenter = exports.KsModalEntity = exports.KsModal = undefined;
 
-	var _main = __webpack_require__(222);
+	var _main = __webpack_require__(252);
 
 	var _main2 = _interopRequireDefault(_main);
 
-	var _main3 = __webpack_require__(223);
+	var _main3 = __webpack_require__(253);
 
 	var _main4 = _interopRequireDefault(_main3);
 
-	var _center = __webpack_require__(229);
+	var _center = __webpack_require__(259);
 
 	var _center2 = _interopRequireDefault(_center);
 
@@ -3796,7 +3937,7 @@ webpackJsonp([0],[
 	exports.KsModalCenter = _center2.default;
 
 /***/ },
-/* 222 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3810,11 +3951,11 @@ webpackJsonp([0],[
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _main = __webpack_require__(223);
+	var _main = __webpack_require__(253);
 
 	var _main2 = _interopRequireDefault(_main);
 
-	var _KsMask = __webpack_require__(213);
+	var _KsMask = __webpack_require__(243);
 
 	var _KsMask2 = _interopRequireDefault(_KsMask);
 
@@ -4049,17 +4190,17 @@ webpackJsonp([0],[
 	exports.KsModal = _KsModal;
 
 /***/ },
-/* 223 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(224)
-	__vue_script__ = __webpack_require__(226)
+	__webpack_require__(254)
+	__vue_script__ = __webpack_require__(256)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsModal/src/main.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(228)
+	__vue_template__ = __webpack_require__(258)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -4078,9 +4219,9 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 224 */
-[371, 225],
-/* 225 */
+/* 254 */
+[447, 255],
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -4094,7 +4235,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 226 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4103,15 +4244,15 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _KsButton = __webpack_require__(196);
+	var _KsButton = __webpack_require__(226);
 
 	var _KsButton2 = _interopRequireDefault(_KsButton);
 
-	var _KsMask = __webpack_require__(213);
+	var _KsMask = __webpack_require__(243);
 
 	var _KsMask2 = _interopRequireDefault(_KsMask);
 
-	var _modalProps = __webpack_require__(227);
+	var _modalProps = __webpack_require__(257);
 
 	var _modalProps2 = _interopRequireDefault(_modalProps);
 
@@ -4168,7 +4309,7 @@ webpackJsonp([0],[
 	//   </div>
 	// </template>
 	//
-	// <script lang="babel">
+	// <script>
 	exports.default = {
 	  name: 'KsModal',
 
@@ -4226,7 +4367,7 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 227 */
+/* 257 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4257,23 +4398,23 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 228 */
+/* 258 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KSModal__wrapper\">\n  <div class=\"KSModal\" v-if=\"show\" :style=\"modalWidth\">\n\n    <header class=\"KSModal__header\" :style=\"modalHeaderStyle\">\n      <div class=\"innerWrap\">\n        <h3 class=\"KSModal__title\">\n          {{ title }} <slot name=\"title\"></slot>\n        </h3>\n\n        <i class=\"KSModal__close\" v-if=\"showCloseBtn\"\n           @click=\"$emit('close') && (show = false)\">\n          <!-- close 图标 -->\n          <svg class=\"icon\" width=\"24\" height=\"24\" viewBox=\"0 0 32 32\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">\n            <g transform=\"scale(0.03125, 0.03125)\">\n              <path\n                d=\"M557.312 513.248l265.28-263.904c12.544-12.48 12.608-32.704 0.128-45.248-12.512-12.576-32.704-12.608-45.248-0.128l-265.344 263.936-263.04-263.84C236.64 191.584 216.384 191.52 203.84 204 191.328 216.48 191.296 236.736 203.776 249.28l262.976 263.776L201.6 776.8c-12.544 12.48-12.608 32.704-0.128 45.248 6.24 6.272 14.464 9.44 22.688 9.44 8.16 0 16.32-3.104 22.56-9.312l265.216-263.808 265.44 266.24c6.24 6.272 14.432 9.408 22.656 9.408 8.192 0 16.352-3.136 22.592-9.344 12.512-12.48 12.544-32.704 0.064-45.248L557.312 513.248z\">\n              </path>\n            </g>\n          </svg>\n        </i>\n\n        <!-- 神奇的分隔线 -->\n        <div class=\"KSModal__separation\" v-if=\"type === 'normal'\"></div>\n      </div>\n    </header>\n    <article class=\"KSModal__content\">\n      {{ content }} <slot name=\"content\"></slot>\n    </article>\n    <footer class=\"KSModal__footer\" :style=\"type !== 'normal' && 'padding-top: 0'\">\n      <aside class=\"KSModal__btnWarp\">\n        <ks-button :ghost=\"true\" type=\"other\" @click.stop=\"$emit('cancel')\"\n                   v-if=\"showCancelBtn\" style=\"margin-right: 10px\"\n        >{{ cancelBtnText }}</ks-button>\n        <ks-button :type=\"type === 'normal' ? 'primary' : type\" @click.stop=\"$emit('confirm')\"\n                   v-if=\"showConfirmBtn\"\n        >{{ confirmBtnText }}</ks-button>\n      </aside>\n    </footer>\n  </div>\n</div>\n";
 
 /***/ },
-/* 229 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(230)
-	__vue_script__ = __webpack_require__(232)
+	__webpack_require__(260)
+	__vue_script__ = __webpack_require__(262)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsModal/src/center.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(233)
+	__vue_template__ = __webpack_require__(263)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -4292,13 +4433,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 230 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(231);
+	var content = __webpack_require__(261);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -4307,8 +4448,8 @@ webpackJsonp([0],[
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./center.vue", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./center.vue");
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./center.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./center.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -4318,7 +4459,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 231 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -4332,7 +4473,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 232 */
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4341,13 +4482,13 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _KsMask = __webpack_require__(213);
+	var _KsMask = __webpack_require__(243);
 
-	var _main = __webpack_require__(223);
+	var _main = __webpack_require__(253);
 
 	var _main2 = _interopRequireDefault(_main);
 
-	var _modalProps = __webpack_require__(227);
+	var _modalProps = __webpack_require__(257);
 
 	var _modalProps2 = _interopRequireDefault(_modalProps);
 
@@ -4407,16 +4548,16 @@ webpackJsonp([0],[
 	//   </div>
 	// </template>
 	//
-	// <script lang="babel">
+	// <script>
 
 /***/ },
-/* 233 */
+/* 263 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"ks-modal-center\" v-if=\"show\">\n  <ks-mask-entity :fill-mode=\"'full'\"\n                  :show.sync=\"show\"\n  >\n    <ks-modal-entity\n      class=\"ks-modal-center\"\n      :show-confirm-btn=\"showConfirmBtn\"\n      :show-cancel-btn=\"showCancelBtn\"\n      :show-close-btn=\"showCloseBtn\"\n      :confirm-btn-text=\"confirmBtnText\"\n      :title=\"title\"\n      :content=\"content\"\n      :type=\"type\"\n      :width=\"width\"\n      :mask=\"mask\"\n      :show.sync=\"show\"\n      @cancel=\"$emit('cancel')\"\n      @confirm=\"$emit('confirm')\"\n      @close=\"$emit('close')\"\n    >\n      <slot name=\"content\" slot=\"content\"></slot>\n    </ks-modal-entity>\n  </ks-mask-entity>\n</div>\n";
 
 /***/ },
-/* 234 */
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4426,7 +4567,7 @@ webpackJsonp([0],[
 	});
 	exports.KsToolTip = undefined;
 
-	var _main = __webpack_require__(235);
+	var _main = __webpack_require__(265);
 
 	var _main2 = _interopRequireDefault(_main);
 
@@ -4441,17 +4582,17 @@ webpackJsonp([0],[
 	exports.KsToolTip = _main2.default;
 
 /***/ },
-/* 235 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(236)
-	__vue_script__ = __webpack_require__(238)
+	__webpack_require__(266)
+	__vue_script__ = __webpack_require__(268)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsToolTip/src/main.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(287)
+	__vue_template__ = __webpack_require__(317)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -4470,9 +4611,9 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 236 */
-[371, 237],
-/* 237 */
+/* 266 */
+[447, 267],
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -4486,7 +4627,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 238 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4499,7 +4640,7 @@ webpackJsonp([0],[
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _utils = __webpack_require__(239);
+	var _utils = __webpack_require__(269);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4520,7 +4661,7 @@ webpackJsonp([0],[
 	//   </div>
 	// </template>
 	//
-	// <script lang="babel">
+	// <script>
 	exports.default = {
 	  name: 'KsToolTip',
 
@@ -4577,7 +4718,7 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 239 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4587,15 +4728,15 @@ webpackJsonp([0],[
 	});
 	exports.VuePopper = exports.StringUtil = exports.DomUtil = undefined;
 
-	var _DomUtil = __webpack_require__(240);
+	var _DomUtil = __webpack_require__(270);
 
 	var _DomUtil2 = _interopRequireDefault(_DomUtil);
 
-	var _Popper = __webpack_require__(241);
+	var _Popper = __webpack_require__(271);
 
 	var _Popper2 = _interopRequireDefault(_Popper);
 
-	var _StringUtil = __webpack_require__(286);
+	var _StringUtil = __webpack_require__(316);
 
 	var _StringUtil2 = _interopRequireDefault(_StringUtil);
 
@@ -4610,7 +4751,7 @@ webpackJsonp([0],[
 	                                       */
 
 /***/ },
-/* 240 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -5061,7 +5202,7 @@ webpackJsonp([0],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 241 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5070,7 +5211,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _popper = __webpack_require__(242);
+	var _popper = __webpack_require__(272);
 
 	var _popper2 = _interopRequireDefault(_popper);
 
@@ -5211,24 +5352,24 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 242 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
 
-	var _getOwnPropertyDescriptor = __webpack_require__(243);
+	var _getOwnPropertyDescriptor = __webpack_require__(273);
 
 	var _getOwnPropertyDescriptor2 = _interopRequireDefault(_getOwnPropertyDescriptor);
 
-	var _keys = __webpack_require__(174);
+	var _keys = __webpack_require__(204);
 
 	var _keys2 = _interopRequireDefault(_keys);
 
-	var _assign = __webpack_require__(248);
+	var _assign = __webpack_require__(278);
 
 	var _assign2 = _interopRequireDefault(_assign);
 
-	var _typeof2 = __webpack_require__(253);
+	var _typeof2 = __webpack_require__(283);
 
 	var _typeof3 = _interopRequireDefault(_typeof2);
 
@@ -6466,44 +6607,44 @@ webpackJsonp([0],[
 	});
 
 /***/ },
-/* 243 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(244), __esModule: true };
+	module.exports = { "default": __webpack_require__(274), __esModule: true };
 
 /***/ },
-/* 244 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(245);
+	__webpack_require__(275);
 	var $Object = __webpack_require__(16).Object;
 	module.exports = function getOwnPropertyDescriptor(it, key){
 	  return $Object.getOwnPropertyDescriptor(it, key);
 	};
 
 /***/ },
-/* 245 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
-	var toIObject                 = __webpack_require__(157)
-	  , $getOwnPropertyDescriptor = __webpack_require__(246).f;
+	var toIObject                 = __webpack_require__(187)
+	  , $getOwnPropertyDescriptor = __webpack_require__(276).f;
 
-	__webpack_require__(178)('getOwnPropertyDescriptor', function(){
+	__webpack_require__(208)('getOwnPropertyDescriptor', function(){
 	  return function getOwnPropertyDescriptor(it, key){
 	    return $getOwnPropertyDescriptor(toIObject(it), key);
 	  };
 	});
 
 /***/ },
-/* 246 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var pIE            = __webpack_require__(247)
+	var pIE            = __webpack_require__(277)
 	  , createDesc     = __webpack_require__(28)
-	  , toIObject      = __webpack_require__(157)
+	  , toIObject      = __webpack_require__(187)
 	  , toPrimitive    = __webpack_require__(27)
-	  , has            = __webpack_require__(156)
+	  , has            = __webpack_require__(186)
 	  , IE8_DOM_DEFINE = __webpack_require__(23)
 	  , gOPD           = Object.getOwnPropertyDescriptor;
 
@@ -6517,44 +6658,44 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 247 */
+/* 277 */
 /***/ function(module, exports) {
 
 	exports.f = {}.propertyIsEnumerable;
 
 /***/ },
-/* 248 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(249), __esModule: true };
+	module.exports = { "default": __webpack_require__(279), __esModule: true };
 
 /***/ },
-/* 249 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(250);
+	__webpack_require__(280);
 	module.exports = __webpack_require__(16).Object.assign;
 
 /***/ },
-/* 250 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.3.1 Object.assign(target, source)
 	var $export = __webpack_require__(14);
 
-	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(251)});
+	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(281)});
 
 /***/ },
-/* 251 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// 19.1.2.1 Object.assign(target, source, ...)
-	var getKeys  = __webpack_require__(154)
-	  , gOPS     = __webpack_require__(252)
-	  , pIE      = __webpack_require__(247)
-	  , toObject = __webpack_require__(177)
-	  , IObject  = __webpack_require__(158)
+	var getKeys  = __webpack_require__(184)
+	  , gOPS     = __webpack_require__(282)
+	  , pIE      = __webpack_require__(277)
+	  , toObject = __webpack_require__(207)
+	  , IObject  = __webpack_require__(188)
 	  , $assign  = Object.assign;
 
 	// should work with symbols and should have deterministic property order (V8 bug)
@@ -6583,24 +6724,24 @@ webpackJsonp([0],[
 	} : $assign;
 
 /***/ },
-/* 252 */
+/* 282 */
 /***/ function(module, exports) {
 
 	exports.f = Object.getOwnPropertySymbols;
 
 /***/ },
-/* 253 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	exports.__esModule = true;
 
-	var _iterator = __webpack_require__(254);
+	var _iterator = __webpack_require__(284);
 
 	var _iterator2 = _interopRequireDefault(_iterator);
 
-	var _symbol = __webpack_require__(273);
+	var _symbol = __webpack_require__(303);
 
 	var _symbol2 = _interopRequireDefault(_symbol);
 
@@ -6615,28 +6756,28 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 254 */
+/* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(255), __esModule: true };
+	module.exports = { "default": __webpack_require__(285), __esModule: true };
 
 /***/ },
-/* 255 */
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(256);
-	__webpack_require__(268);
-	module.exports = __webpack_require__(272).f('iterator');
+	__webpack_require__(286);
+	__webpack_require__(298);
+	module.exports = __webpack_require__(302).f('iterator');
 
 /***/ },
-/* 256 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var $at  = __webpack_require__(257)(true);
+	var $at  = __webpack_require__(287)(true);
 
 	// 21.1.3.27 String.prototype[@@iterator]()
-	__webpack_require__(258)(String, 'String', function(iterated){
+	__webpack_require__(288)(String, 'String', function(iterated){
 	  this._t = String(iterated); // target
 	  this._i = 0;                // next index
 	// 21.1.5.2.1 %StringIteratorPrototype%.next()
@@ -6651,11 +6792,11 @@ webpackJsonp([0],[
 	});
 
 /***/ },
-/* 257 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var toInteger = __webpack_require__(163)
-	  , defined   = __webpack_require__(160);
+	var toInteger = __webpack_require__(193)
+	  , defined   = __webpack_require__(190);
 	// true  -> String#at
 	// false -> String#codePointAt
 	module.exports = function(TO_STRING){
@@ -6673,20 +6814,20 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 258 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var LIBRARY        = __webpack_require__(259)
+	var LIBRARY        = __webpack_require__(289)
 	  , $export        = __webpack_require__(14)
-	  , redefine       = __webpack_require__(260)
+	  , redefine       = __webpack_require__(290)
 	  , hide           = __webpack_require__(19)
-	  , has            = __webpack_require__(156)
-	  , Iterators      = __webpack_require__(261)
-	  , $iterCreate    = __webpack_require__(262)
-	  , setToStringTag = __webpack_require__(265)
-	  , getPrototypeOf = __webpack_require__(267)
-	  , ITERATOR       = __webpack_require__(266)('iterator')
+	  , has            = __webpack_require__(186)
+	  , Iterators      = __webpack_require__(291)
+	  , $iterCreate    = __webpack_require__(292)
+	  , setToStringTag = __webpack_require__(295)
+	  , getPrototypeOf = __webpack_require__(297)
+	  , ITERATOR       = __webpack_require__(296)('iterator')
 	  , BUGGY          = !([].keys && 'next' in [].keys()) // Safari has buggy iterators w/o `next`
 	  , FF_ITERATOR    = '@@iterator'
 	  , KEYS           = 'keys'
@@ -6748,35 +6889,35 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 259 */
+/* 289 */
 /***/ function(module, exports) {
 
 	module.exports = true;
 
 /***/ },
-/* 260 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(19);
 
 /***/ },
-/* 261 */
+/* 291 */
 /***/ function(module, exports) {
 
 	module.exports = {};
 
 /***/ },
-/* 262 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var create         = __webpack_require__(263)
+	var create         = __webpack_require__(293)
 	  , descriptor     = __webpack_require__(28)
-	  , setToStringTag = __webpack_require__(265)
+	  , setToStringTag = __webpack_require__(295)
 	  , IteratorPrototype = {};
 
 	// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-	__webpack_require__(19)(IteratorPrototype, __webpack_require__(266)('iterator'), function(){ return this; });
+	__webpack_require__(19)(IteratorPrototype, __webpack_require__(296)('iterator'), function(){ return this; });
 
 	module.exports = function(Constructor, NAME, next){
 	  Constructor.prototype = create(IteratorPrototype, {next: descriptor(1, next)});
@@ -6784,14 +6925,14 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 263 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 	var anObject    = __webpack_require__(21)
-	  , dPs         = __webpack_require__(153)
-	  , enumBugKeys = __webpack_require__(168)
-	  , IE_PROTO    = __webpack_require__(165)('IE_PROTO')
+	  , dPs         = __webpack_require__(183)
+	  , enumBugKeys = __webpack_require__(198)
+	  , IE_PROTO    = __webpack_require__(195)('IE_PROTO')
 	  , Empty       = function(){ /* empty */ }
 	  , PROTOTYPE   = 'prototype';
 
@@ -6804,7 +6945,7 @@ webpackJsonp([0],[
 	    , gt     = '>'
 	    , iframeDocument;
 	  iframe.style.display = 'none';
-	  __webpack_require__(264).appendChild(iframe);
+	  __webpack_require__(294).appendChild(iframe);
 	  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
 	  // createDict = iframe.contentWindow.Object;
 	  // html.removeChild(iframe);
@@ -6831,29 +6972,29 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 264 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(15).document && document.documentElement;
 
 /***/ },
-/* 265 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var def = __webpack_require__(20).f
-	  , has = __webpack_require__(156)
-	  , TAG = __webpack_require__(266)('toStringTag');
+	  , has = __webpack_require__(186)
+	  , TAG = __webpack_require__(296)('toStringTag');
 
 	module.exports = function(it, tag, stat){
 	  if(it && !has(it = stat ? it : it.prototype, TAG))def(it, TAG, {configurable: true, value: tag});
 	};
 
 /***/ },
-/* 266 */
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var store      = __webpack_require__(166)('wks')
-	  , uid        = __webpack_require__(167)
+	var store      = __webpack_require__(196)('wks')
+	  , uid        = __webpack_require__(197)
 	  , Symbol     = __webpack_require__(15).Symbol
 	  , USE_SYMBOL = typeof Symbol == 'function';
 
@@ -6865,13 +7006,13 @@ webpackJsonp([0],[
 	$exports.store = store;
 
 /***/ },
-/* 267 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
-	var has         = __webpack_require__(156)
-	  , toObject    = __webpack_require__(177)
-	  , IE_PROTO    = __webpack_require__(165)('IE_PROTO')
+	var has         = __webpack_require__(186)
+	  , toObject    = __webpack_require__(207)
+	  , IE_PROTO    = __webpack_require__(195)('IE_PROTO')
 	  , ObjectProto = Object.prototype;
 
 	module.exports = Object.getPrototypeOf || function(O){
@@ -6883,14 +7024,14 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 268 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(269);
+	__webpack_require__(299);
 	var global        = __webpack_require__(15)
 	  , hide          = __webpack_require__(19)
-	  , Iterators     = __webpack_require__(261)
-	  , TO_STRING_TAG = __webpack_require__(266)('toStringTag');
+	  , Iterators     = __webpack_require__(291)
+	  , TO_STRING_TAG = __webpack_require__(296)('toStringTag');
 
 	for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList', 'CSSRuleList'], i = 0; i < 5; i++){
 	  var NAME       = collections[i]
@@ -6901,20 +7042,20 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 269 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var addToUnscopables = __webpack_require__(270)
-	  , step             = __webpack_require__(271)
-	  , Iterators        = __webpack_require__(261)
-	  , toIObject        = __webpack_require__(157);
+	var addToUnscopables = __webpack_require__(300)
+	  , step             = __webpack_require__(301)
+	  , Iterators        = __webpack_require__(291)
+	  , toIObject        = __webpack_require__(187);
 
 	// 22.1.3.4 Array.prototype.entries()
 	// 22.1.3.13 Array.prototype.keys()
 	// 22.1.3.29 Array.prototype.values()
 	// 22.1.3.30 Array.prototype[@@iterator]()
-	module.exports = __webpack_require__(258)(Array, 'Array', function(iterated, kind){
+	module.exports = __webpack_require__(288)(Array, 'Array', function(iterated, kind){
 	  this._t = toIObject(iterated); // target
 	  this._i = 0;                   // next index
 	  this._k = kind;                // kind
@@ -6940,13 +7081,13 @@ webpackJsonp([0],[
 	addToUnscopables('entries');
 
 /***/ },
-/* 270 */
+/* 300 */
 /***/ function(module, exports) {
 
 	module.exports = function(){ /* empty */ };
 
 /***/ },
-/* 271 */
+/* 301 */
 /***/ function(module, exports) {
 
 	module.exports = function(done, value){
@@ -6954,58 +7095,58 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 272 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports.f = __webpack_require__(266);
+	exports.f = __webpack_require__(296);
 
 /***/ },
-/* 273 */
+/* 303 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(274), __esModule: true };
+	module.exports = { "default": __webpack_require__(304), __esModule: true };
 
 /***/ },
-/* 274 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(275);
-	__webpack_require__(283);
-	__webpack_require__(284);
-	__webpack_require__(285);
+	__webpack_require__(305);
+	__webpack_require__(313);
+	__webpack_require__(314);
+	__webpack_require__(315);
 	module.exports = __webpack_require__(16).Symbol;
 
 /***/ },
-/* 275 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// ECMAScript 6 symbols shim
 	var global         = __webpack_require__(15)
-	  , has            = __webpack_require__(156)
+	  , has            = __webpack_require__(186)
 	  , DESCRIPTORS    = __webpack_require__(24)
 	  , $export        = __webpack_require__(14)
-	  , redefine       = __webpack_require__(260)
-	  , META           = __webpack_require__(276).KEY
+	  , redefine       = __webpack_require__(290)
+	  , META           = __webpack_require__(306).KEY
 	  , $fails         = __webpack_require__(25)
-	  , shared         = __webpack_require__(166)
-	  , setToStringTag = __webpack_require__(265)
-	  , uid            = __webpack_require__(167)
-	  , wks            = __webpack_require__(266)
-	  , wksExt         = __webpack_require__(272)
-	  , wksDefine      = __webpack_require__(277)
-	  , keyOf          = __webpack_require__(278)
-	  , enumKeys       = __webpack_require__(279)
-	  , isArray        = __webpack_require__(280)
+	  , shared         = __webpack_require__(196)
+	  , setToStringTag = __webpack_require__(295)
+	  , uid            = __webpack_require__(197)
+	  , wks            = __webpack_require__(296)
+	  , wksExt         = __webpack_require__(302)
+	  , wksDefine      = __webpack_require__(307)
+	  , keyOf          = __webpack_require__(308)
+	  , enumKeys       = __webpack_require__(309)
+	  , isArray        = __webpack_require__(310)
 	  , anObject       = __webpack_require__(21)
-	  , toIObject      = __webpack_require__(157)
+	  , toIObject      = __webpack_require__(187)
 	  , toPrimitive    = __webpack_require__(27)
 	  , createDesc     = __webpack_require__(28)
-	  , _create        = __webpack_require__(263)
-	  , gOPNExt        = __webpack_require__(281)
-	  , $GOPD          = __webpack_require__(246)
+	  , _create        = __webpack_require__(293)
+	  , gOPNExt        = __webpack_require__(311)
+	  , $GOPD          = __webpack_require__(276)
 	  , $DP            = __webpack_require__(20)
-	  , $keys          = __webpack_require__(154)
+	  , $keys          = __webpack_require__(184)
 	  , gOPD           = $GOPD.f
 	  , dP             = $DP.f
 	  , gOPN           = gOPNExt.f
@@ -7128,11 +7269,11 @@ webpackJsonp([0],[
 
 	  $GOPD.f = $getOwnPropertyDescriptor;
 	  $DP.f   = $defineProperty;
-	  __webpack_require__(282).f = gOPNExt.f = $getOwnPropertyNames;
-	  __webpack_require__(247).f  = $propertyIsEnumerable;
-	  __webpack_require__(252).f = $getOwnPropertySymbols;
+	  __webpack_require__(312).f = gOPNExt.f = $getOwnPropertyNames;
+	  __webpack_require__(277).f  = $propertyIsEnumerable;
+	  __webpack_require__(282).f = $getOwnPropertySymbols;
 
-	  if(DESCRIPTORS && !__webpack_require__(259)){
+	  if(DESCRIPTORS && !__webpack_require__(289)){
 	    redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
 	  }
 
@@ -7216,12 +7357,12 @@ webpackJsonp([0],[
 	setToStringTag(global.JSON, 'JSON', true);
 
 /***/ },
-/* 276 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var META     = __webpack_require__(167)('meta')
+	var META     = __webpack_require__(197)('meta')
 	  , isObject = __webpack_require__(22)
-	  , has      = __webpack_require__(156)
+	  , has      = __webpack_require__(186)
 	  , setDesc  = __webpack_require__(20).f
 	  , id       = 0;
 	var isExtensible = Object.isExtensible || function(){
@@ -7274,13 +7415,13 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 277 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var global         = __webpack_require__(15)
 	  , core           = __webpack_require__(16)
-	  , LIBRARY        = __webpack_require__(259)
-	  , wksExt         = __webpack_require__(272)
+	  , LIBRARY        = __webpack_require__(289)
+	  , wksExt         = __webpack_require__(302)
 	  , defineProperty = __webpack_require__(20).f;
 	module.exports = function(name){
 	  var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
@@ -7288,11 +7429,11 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 278 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getKeys   = __webpack_require__(154)
-	  , toIObject = __webpack_require__(157);
+	var getKeys   = __webpack_require__(184)
+	  , toIObject = __webpack_require__(187);
 	module.exports = function(object, el){
 	  var O      = toIObject(object)
 	    , keys   = getKeys(O)
@@ -7303,13 +7444,13 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 279 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// all enumerable object keys, includes symbols
-	var getKeys = __webpack_require__(154)
-	  , gOPS    = __webpack_require__(252)
-	  , pIE     = __webpack_require__(247);
+	var getKeys = __webpack_require__(184)
+	  , gOPS    = __webpack_require__(282)
+	  , pIE     = __webpack_require__(277);
 	module.exports = function(it){
 	  var result     = getKeys(it)
 	    , getSymbols = gOPS.f;
@@ -7323,22 +7464,22 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 280 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.2.2 IsArray(argument)
-	var cof = __webpack_require__(159);
+	var cof = __webpack_require__(189);
 	module.exports = Array.isArray || function isArray(arg){
 	  return cof(arg) == 'Array';
 	};
 
 /***/ },
-/* 281 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
-	var toIObject = __webpack_require__(157)
-	  , gOPN      = __webpack_require__(282).f
+	var toIObject = __webpack_require__(187)
+	  , gOPN      = __webpack_require__(312).f
 	  , toString  = {}.toString;
 
 	var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
@@ -7358,37 +7499,37 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 282 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-	var $keys      = __webpack_require__(155)
-	  , hiddenKeys = __webpack_require__(168).concat('length', 'prototype');
+	var $keys      = __webpack_require__(185)
+	  , hiddenKeys = __webpack_require__(198).concat('length', 'prototype');
 
 	exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O){
 	  return $keys(O, hiddenKeys);
 	};
 
 /***/ },
-/* 283 */
+/* 313 */
 /***/ function(module, exports) {
 
 	
 
 /***/ },
-/* 284 */
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(277)('asyncIterator');
+	__webpack_require__(307)('asyncIterator');
 
 /***/ },
-/* 285 */
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(277)('observable');
+	__webpack_require__(307)('observable');
 
 /***/ },
-/* 286 */
+/* 316 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -7412,13 +7553,13 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 287 */
+/* 317 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div v-el:reference cid=\"KsToolTip\" style=\"display: inline-block\"\n      @mouseenter=\"handleShowPopper\"\n      @mouseleave=\"handleClosePopper\"\n>\n  <div style=\"display: inline-block\">\n      <slot></slot>\n  </div>\n\n  <div transition=\"KsTooltipTransition\" :class=\"className\"\n       v-el:popper v-show=\"!disabled && showPopper\">\n    <div v-text=\"content\"></div>\n    <slot name=\"content\"></slot>\n  </div>\n</div>\n";
 
 /***/ },
-/* 288 */
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7428,11 +7569,11 @@ webpackJsonp([0],[
 	});
 	exports.KsCheckboxGroup = exports.KsCheckbox = undefined;
 
-	var _NrCheckbox = __webpack_require__(289);
+	var _NrCheckbox = __webpack_require__(319);
 
 	var _NrCheckbox2 = _interopRequireDefault(_NrCheckbox);
 
-	var _CheckboxGroup = __webpack_require__(294);
+	var _CheckboxGroup = __webpack_require__(324);
 
 	var _CheckboxGroup2 = _interopRequireDefault(_CheckboxGroup);
 
@@ -7451,17 +7592,17 @@ webpackJsonp([0],[
 	exports.KsCheckboxGroup = _CheckboxGroup2.default;
 
 /***/ },
-/* 289 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(290)
-	__vue_script__ = __webpack_require__(292)
+	__webpack_require__(320)
+	__vue_script__ = __webpack_require__(322)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsCheckbox/src/NrCheckbox.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(293)
+	__vue_template__ = __webpack_require__(323)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -7480,13 +7621,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 290 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(291);
+	var content = __webpack_require__(321);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -7495,8 +7636,8 @@ webpackJsonp([0],[
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NrCheckbox.vue", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NrCheckbox.vue");
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NrCheckbox.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NrCheckbox.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -7506,7 +7647,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 291 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -7520,7 +7661,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 292 */
+/* 322 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7544,7 +7685,7 @@ webpackJsonp([0],[
 	//   </div>
 	// </template>
 	//
-	// <script lang="babel">
+	// <script>
 	exports.default = {
 	  name: 'KsNormalCheckbox',
 
@@ -7582,23 +7723,23 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 293 */
+/* 323 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KSNRCheckbox\" cid=\"KSNRCheckbox\">\n  <div class=\"KSNRCheckbox-container\" :class=\"{disable: disable}\">\n    <input type=\"checkbox\" class=\"KSNRCheckbox-container-entity\"\n           v-model=\"checked\" @change=\"checkboxChangeHandle\"\n           :disabled=\"disable && 'disabled'\" :id=\"`KSNRCheckbox--${_uid}`\" />\n    <label class=\"KSNRCheckbox-container-skin\" :for=\"`KSNRCheckbox--${_uid}`\">\n      <em class=\"KSNRCheckbox-container-skin-cube\" :style=\"{background: color}\"></em>\n    </label>\n    <label class=\"KSNRCheckbox-container-text\" :for=\"`KSNRCheckbox--${_uid}`\" @click=\"$emit('label-click')\">\n      <slot>LABEL</slot>\n    </label>\n  </div>\n</div>\n";
 
 /***/ },
-/* 294 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(295)
-	__vue_script__ = __webpack_require__(297)
+	__webpack_require__(325)
+	__vue_script__ = __webpack_require__(327)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsCheckbox/src/CheckboxGroup.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(298)
+	__vue_template__ = __webpack_require__(328)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -7617,13 +7758,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 295 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(296);
+	var content = __webpack_require__(326);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -7632,8 +7773,8 @@ webpackJsonp([0],[
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./CheckboxGroup.vue", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./CheckboxGroup.vue");
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./CheckboxGroup.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./CheckboxGroup.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -7643,7 +7784,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 296 */
+/* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -7657,7 +7798,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 297 */
+/* 327 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7671,7 +7812,7 @@ webpackJsonp([0],[
 	//   </div>
 	// </template>
 	//
-	// <script lang="babel">
+	// <script>
 	exports.default = {
 	  name: 'KsCheckboxGroup',
 
@@ -7723,13 +7864,13 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 298 */
+/* 328 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"ks-checkbox-group\">\n  <slot></slot>\n</div>\n";
 
 /***/ },
-/* 299 */
+/* 329 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7739,11 +7880,11 @@ webpackJsonp([0],[
 	});
 	exports.KsPageGroup = exports.KsPage = undefined;
 
-	var _page = __webpack_require__(300);
+	var _page = __webpack_require__(330);
 
 	var _page2 = _interopRequireDefault(_page);
 
-	var _pagegroup = __webpack_require__(306);
+	var _pagegroup = __webpack_require__(336);
 
 	var _pagegroup2 = _interopRequireDefault(_pagegroup);
 
@@ -7753,17 +7894,17 @@ webpackJsonp([0],[
 	exports.KsPageGroup = _pagegroup2.default;
 
 /***/ },
-/* 300 */
+/* 330 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(301)
-	__vue_script__ = __webpack_require__(303)
+	__webpack_require__(331)
+	__vue_script__ = __webpack_require__(333)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsPager/src/page.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(305)
+	__vue_template__ = __webpack_require__(335)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -7782,13 +7923,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 301 */
+/* 331 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(302);
+	var content = __webpack_require__(332);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -7797,8 +7938,8 @@ webpackJsonp([0],[
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./page.vue", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./page.vue");
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./page.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./page.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -7808,7 +7949,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 302 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -7816,13 +7957,13 @@ webpackJsonp([0],[
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n.KsPageGroup-statistical {\n  display: table-cell;\n  vertical-align: middle;\n  word-break: break-all; }\n\n.KsPageGroup {\n  box-sizing: border-box;\n  width: 100%;\n  display: table;\n  border-spacing: 0;\n  table-layout: auto; }\n\n.KsPageGroup-statistical {\n  width: 1px;\n  white-space: nowrap; }\n\n/**\n* @file:      Neat.css V1.1.0\n* @author:    一丝\n* @update:    2013-11-22 14:55:29;\n* @copyright: 基于 normalize.css | MIT License\n* @doc:\n*/\n/**\n* Neat.css 解决的问题\n* 基于业务需要兼容的浏览器做到以下几点：\n* 1.解决BUG，特别是低级浏览器的常见BUG；\n* 2.统一效果，但不盲目追求重置为0；\n* 3.向后兼容；\n* 4.考虑响应式；\n* 5.考虑移动设备。\n*/\n/* ==========================================================================\n 有即是无，无即是有\n ========================================================================== */\nbody, dl, dd, ul, ol, h1, h2, h3, h4, h5, h6, pre, form, fieldset, legend, input, textarea, optgroup,\np, blockquote, figure, hr, menu, dir,\nthead, tbody, tfoot, th, td {\n  margin: 0;\n  padding: 0; }\n\n/**\n* 非大面积文字排版网站通常不需要列表项，如果需要可单独设置\n*/\nul, ol {\n  list-style-type: none;\n  list-style-image: none; }\n\n/* ==========================================================================\n 链接\n ========================================================================== */\n/**\n* 去除链接默认的下划线，提高文字可读性\n*/\na {\n  text-decoration: none; }\n\n/**\n* 去掉 IE 10+ 点击链接时的灰色背景\n*/\na:active {\n  background-color: transparent; }\n\n/**\n* 去掉点击时的焦点框，同时保证使用键盘可以显示焦点框\n*/\na:active,\na:hover {\n  outline: 0 none; }\n\n/**\n* 统一 Chrome 和 Safari 的焦点框样式\n* Chrome 中 thin 关键字放大页面后焦点框不会放大 http://jsbin.com/ehakom/1\n* Firefox 中 box-shadow 会导致焦点框位置偏移，需用「outline-offset」修正\n*\n*/\n/* ==========================================================================\n 字体和基础排版\n ========================================================================== */\n/**\n* 1.防止 iOS 横屏字号放大，同时保证在PC上 zoom 功能正常\n*/\nhtml {\n  -webkit-text-size-adjust: 100%;\n  -ms-text-size-adjust: 100%;\n  text-size-adjust: 100%;\n  /* 1 */\n  font-size: 62.5%;\n  /* 10/16=62.5% */ }\n\n/**\n* 所有 font-family 小写，存在空格的字体名加单引号\n* @default-font: 'helvetica neue', tahoma, \\5B8B\\4F53, sans-serif;\n* @heading-font: 'helvetica neue', tahoma, 'hiragino sans gb', stheiti,\n  \\5FAE\\8F6F\\96C5\\9ED1, \\5B8B\\4F53, 'wenquanyi micro hei', sans-serif;\n* @code-font: monaco, menlo, consolas, monospace;\n*/\n/**\n* 中文优先使用冬青黑体简体(OS X)、微软雅黑(Windows)和文泉驿微米黑(Linux)\n* 西文使用 tahoma\n* 1. 防止元素中「font-family」不能继承\n* 2. 西文字体和 OS X 字体写在前面\n* 3. Opera 12.1 之前版本不支持中文字体的英文名称\n* 4. 微软雅黑「\\5FAE\\8F6F\\96C5\\9ED1」,中易宋体「\\5B8B\\4F53」\n*/\nbody,\nbutton, input, select, textarea {\n  font-family: 'helvetica neue',arial,'hiragino sans gb',stheiti,'wenquanyi micro hei',\\5FAE\\8F6F\\96C5\\9ED1,\\5B8B\\4F53,sans-serif;\n  -ms-text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis;\n  /* 5 */\n  -ms-text-spacing: ideograph-alpha ideograph-numeric ideograph-parenthesis;\n      text-spacing: ideograph-alpha ideograph-numeric ideograph-parenthesis;\n  /* 5 */ }\n\n/**\n* 中文小于 12px 可读性很差\n* 1. 统一 IE 6-7 中字体大小\n* 2. 统一 Firefox 4+，Safari 5 和 Chrome 中「section」和「article」内的字体大小\n*/\nh1, h2, h3, h4, h5, h6 {\n  font-weight: normal; }\n\nh1 {\n  font-size: 36px; }\n\nh2 {\n  font-size: 30px; }\n\nh3 {\n  font-size: 22px; }\n\nh4 {\n  font-size: 18px; }\n\nh5 {\n  font-size: 14px; }\n\nh6 {\n  font-size: 12px; }\n\n/**\n* 修正「abbr」元素在 Firefox 外其他浏览器没有下划线的问题\n* 添加问号光标，明确语义\n*/\nabbr,\nacronym {\n  border-bottom: 1px dotted;\n  /* 1 */\n  cursor: help;\n  /* 2 */ }\n\n/**\n* Firefox3+，Safari4/5 和 Chrome 中统一设置为粗体\n*/\nb,\nstrong {\n  font-weight: bold; }\n\n/**\n* 修正 Safari5 和 Chrome 中没有样式的问题\n*/\ndfn {\n  font-style: italic; }\n\n/**\n* 修正 Firefox 和其他浏览器之间的差异\n*/\nhr {\n  box-sizing: content-box;\n  height: 0; }\n\n/**\n* 网页标记，荧光笔\n* 修正 IE6-11 中没有样式的问题\n*/\nmark {\n  background-color: #D2E5FF;\n  color: #000; }\n\n/**\n* 统一代码的字体设置\n* 字体要能明确区分数字 0 和字母 o\n* Mac 优先使用 Monaco，Windows 优先使用 Consolas\n* XP自带 Courier New\n* Windows 7开始自带的 Consolas\n* Mac上自带的Monaco，Osaka-Mono\n*/\ncode,\nkbd,\npre,\nsamp {\n  font-family: monaco, menlo, consolas, 'courier new', courier, monospace; }\n\n/**\n* 增强所有浏览器中 pre 标签中文本的可读性\n* 1. IE 6-7 不支持 pre-wrap\n* 2. pre 标签应当包含滚溢出\n*/\npre {\n  white-space: pre;\n  white-space: pre-wrap;\n  /* 1 */\n  word-wrap: break-word;\n  overflow: auto; }\n\n/**\n* 行内引用\n* IE 6-7 不支持 quotes 属性\n* 现代浏览器去除 quotes 内容\n*/\nq {\n  quotes: none; }\n\n/**\n* Safari 4 不支持<q>标签\n*/\nq:before,\nq:after {\n  content: '';\n  content: none; }\n\n/**\n* 中文网页<small>元素字号小于 12px 不易阅读\n*/\nsmall {\n  font-size: 85.7%;\n  /* 12/14=0.8571428571 */ }\n\n/**\n* 防止所有浏览器中的<sub>和<sup>影响行高\n* http://jsbin.com/usoyal/1/edit\n*/\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* ==========================================================================\n 表格\n ========================================================================== */\n/**\n* 合并单元格边框\n*/\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n/**\n* 修复 IE 中 th 不能继承 text-align 的问题并统一左对齐\n* http://jsbin.com/evoxif/2/edit\n*/\nth {\n  text-align: left; }\n\n/**\n* 单元格添加边框\n*/\n/**\n* 表头底部边框\n*/\n/* ==========================================================================\n 嵌入元素\n ========================================================================== */\n/**\n* 1. 去除 IE6-9 和 Firefox 3 中 a 内部 img 元素默认的边框\n* 2. 修正 IE8 图片消失bug\n* 3. 防止 img 指定「height」时图片高度不能按照宽度等比缩放，导致图片变形\n    http://jsbin.com/aJoTUca/2\n* 4. 让图片支持响应式\n* 5. 去除现代浏览器图片底部的空隙\n* 6. 修复 IE7 图片缩放失真\n*/\nimg {\n  border: 0 none;\n  /* 1 */\n  width: auto\\9;\n  /* 2 */\n  height: auto;\n  /* 3 */\n  max-width: 100%;\n  /* 4 */\n  vertical-align: top;\n  /* 5 */\n  -ms-interpolation-mode: bicubic;\n  /* 6 */ }\n\n/**\n* 修复 IE9 中的「overflow」的怪异表现\n*/\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* ==========================================================================\n 表单\n ========================================================================== */\n/**\n* 定义一致的边框、外边距和内边距\n*/\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em; }\n\n/**\n* 1. 修正 IE 6-9 中颜色不能继承的问题\n* 2. 修正 Firefox3 中文字不换行的问题\n* 3. 修正 IE6-7 中怪异的对齐方式\n*/\nlegend {\n  border: 0 none;\n  /* 1 */\n  white-space: normal;\n  /* 2 */\n  *margin-left: -7px;\n  /* 3 */ }\n\n/**\n* 1. 修正所有浏览器中字体不继承的问题\n* 2. 修正所有浏览器中字号不继承的问题\n* 3. 修正 Firefox 3+， Safari5 和 Chrome 中外边距不同的问题\n* 4. 改善在所有浏览器下的垂直对齐方式\n*/\nbutton,\ninput,\nselect,\ntextarea {\n  font-family: inherit;\n  /* 1 */\n  font-size: 100%;\n  /* 2 */\n  margin: 0;\n  /* 3 */\n  vertical-align: baseline;\n  /* 4 */\n  *vertical-align: middle;\n  /* 4 */ }\n\n/**\n* 修正 IE7 随着字数增加边距不断增加的问题\n*/\ninput,\nbutton {\n  *overflow: visible; }\n\n/**\n* 统一各浏览器「text-transform」不会继承的问题\n* http://jsbin.com/iqecic/1/edit\n* http://tjvantoll.com/2012/07/10/default-browser-handling-of-the-css-text-transform-property/\n*/\nbutton,\nselect {\n  text-transform: none; }\n\n/**\n* 1. 避免 Android 4.0.* 中的 WebKit bug ，该bug会破坏原生的\n 「audio」 和「video」的控制器\n* 2. 更正 iOS 中无法设置可点击的「input」的问题\n* 3. 统一其他类型的「input」的光标样式\n*/\nbutton,\nhtml input[type=\"button\"], input[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */\n  cursor: pointer;\n  /* 3 */ }\n\n/**\n* 重置按钮禁用时光标样式\n*/\nbutton[disabled],\ninput[disabled] {\n  cursor: default;\n  opacity: .6; }\n\n/**\n* 1. 修正 IE 8/9 box-sizing 被设置为「content-box」的问题\n* 2. 移除 IE 8/9 中多余的内边距\n* 3. 移除 IE7 中多余的内边距(IE6 中任然存在)\n*/\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */\n  *height: 13px;\n  /* 3 */\n  *width: 13px;\n  /* 3 */ }\n\n/**\n* 1. 修正 Safari 5 和 Chrome 中「appearance」被设置为「searchfield」的问题\n* 2. 修正 Safari 5 和 Chrome 中「box-sizing」被设置为 「border-box」的问题\n*/\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  box-sizing: content-box; }\n\n/**\n* 1.移除 OS X 中 Safari5 和 Chrome 搜索框内侧的左边距\n* 2.如果需要隐藏清除按钮需要加上\n input[type=\"search\"]::-webkit-search-cancel-button\n*/\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n* 移除 Firefox 3+ 的内边距\n*/\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0; }\n\n/**\n* 修正 Chrome 中 input [type=\"number\"] 在特定高度和 font-size 时,\n* 下面一个箭头光标变成「cursor: text」\n* @demo: http://jsfiddle.net/FFXEc/\n* 动画演示：http://gtms04.alicdn.com/tps/i4/T18kd8FCtaXXc_FhcF-330-350.gif\n*/\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n* 1. 移除 IE6-11 中默认的垂直滚动条\n* 2. 禁止水平拖动，防止破坏布局\n*/\ntextarea {\n  overflow: auto;\n  /* 1 */\n  resize: vertical;\n  /* 2 */ }\n\n/**\n* 修正 Chrome 30- option 中文字无法显示的问题\n* http://jsbin.com/avujas/1/edit\n*/\nselect:disabled option:checked,\noption:disabled:checked {\n  color: #D2D2D2; }\n\n/**\n* 修正 Safari 3+, Chrome 1+ Placeholder 居中问题\n*/\n@media screen and (-webkit-min-device-pixel-ratio: 0) {\n  input {\n    line-height: normal !important; } }\n\n/**\n* 修正 Firefox 19+ Placeholder 设置了opacity 的问题\n*/\ninput::-moz-placeholder, textarea::-moz-placeholder {\n  color: darkGray;\n  opacity: 1; }\n\n/**\n* label 元素给予手型，暗示此处可点击\n*/\nlabel {\n  cursor: pointer; }\n\n/**\n* 统一 select 样式, Firefox 中有 padding:1px 0\n* http://jsbin.com/avujas/1/edit\n*/\nselect[size],\nselect[multiple],\nselect[size][multiple] {\n  border: 1px solid #AAA;\n  padding: 0; }\n\n/* ==========================================================================\n HTML5 元素\n ========================================================================== */\n/**\n* 修正未定义为「block」的元素\n*/\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nnav,\nsection,\nsummary {\n  display: block; }\n\n/**\n* 1. 修正未定义为「inline-block」的元素\n* 2. 修正 Chrome、Firefox、Opera 中 「progress」元素 vertical-align 默认值不一致\n*/\naudio,\ncanvas,\nvideo,\nprogress {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n* 1.防止现代浏览器将没有「controls」属性的 「audio」元素显示出来\n* 2.去掉 iOS 5 中多余的高度\n*/\naudio:not([controls]) {\n  display: none;\n  /* 1 */\n  height: 0;\n  /* 2 */ }\n\n/**\n* 修复 IE 7/8/9，Firefox 3 和 Safari 4 中 「hidden」属性不起作用的问题\n* 在IE、Safari、Firefox 22- 中隐藏「template」元素\n*/\n[hidden], template {\n  display: none; }\n\n/**\n* 为可拖动元素添加拖动的光标\n* http://jsbin.com/apavod/1/edit\n*/\n[draggable] {\n  cursor: move; }\n\n/**\n* 居中 HTML5 dialog 元素\n* Chrome 31 支持，需开启 chrome://flags/#enable-experimental-web-platform-features\n* Chrome 28 之前、Firefox 中不支持 height:fit-content;\n https://src.chromium.org/viewvc/blink?revision=148314&view=revision\n* ::backdrop 定义遮罩样式\n* @demo: http://jsbin.com/iPACab/1\n*/\ndialog {\n  border: 1px solid;\n  padding: 0;\n  margin: auto;\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content; }\n\ndialog::-webkit-backdrop {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.3); }\n\ndialog::backdrop {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.3); }\n\n.KsPage li, .KsPageGroup li {\n  display: inline-block;\n  width: 36px;\n  height: 36px;\n  line-height: 36px;\n  text-align: center;\n  border-radius: 4px;\n  color: #000;\n  cursor: pointer;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; }\n  .KsPage li:hover, .KsPageGroup li:hover {\n    background: #f5f5f5;\n    color: #000; }\n  .KsPage li.active:hover, .KsPageGroup li.active:hover {\n    background: #2196f3;\n    color: #fff; }\n\n.KsPage .active, .KsPageGroup .active {\n  background: #2196f3;\n  color: #fff; }\n\n.KsPage .disabled, .KsPageGroup .disabled {\n  color: #999;\n  cursor: not-allowed; }\n  .KsPage .disabled:hover, .KsPageGroup .disabled:hover {\n    background: transparent;\n    color: #999; }\n\n.KsPageGroup {\n  color: #999;\n  line-height: 36px; }\n  .KsPageGroup-statistical {\n    padding-right: 20px; }\n    .KsPageGroup-statistical span {\n      color: #000;\n      padding: 0 5px; }\n", ""]);
+	exports.push([module.id, ".ks-row {\n  display: table;\n  table-layout: fixed;\n  border-spacing: 0; }\n\n.ks-col-top, .ks-col-auto-top, .ks-col-auto, .KsPageGroup-statistical, .ks-col {\n  display: table-cell;\n  vertical-align: middle;\n  word-break: break-all; }\n\n.ks-col-top {\n  vertical-align: top; }\n\n.ks-col-auto-top {\n  vertical-align: top; }\n\n.ks-row-auto, .KsPageGroup {\n  box-sizing: border-box;\n  width: 100%;\n  display: table;\n  border-spacing: 0;\n  table-layout: auto; }\n\n.ks-col-auto-top, .ks-col-auto, .KsPageGroup-statistical {\n  width: 1px;\n  white-space: nowrap; }\n\n.ks-row {\n  box-sizing: border-box;\n  width: 100%; }\n\n.KsPage li, .KsPageGroup li {\n  display: inline-block;\n  width: 36px;\n  height: 36px;\n  line-height: 36px;\n  text-align: center;\n  border-radius: 4px;\n  color: #000;\n  cursor: pointer;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; }\n  .KsPage li:hover, .KsPageGroup li:hover {\n    background: #f5f5f5;\n    color: #000; }\n  .KsPage li.active:hover, .KsPageGroup li.active:hover {\n    background: #2196f3;\n    color: #fff; }\n\n.KsPage .active, .KsPageGroup .active {\n  background: #2196f3;\n  color: #fff; }\n\n.KsPage .disabled, .KsPageGroup .disabled {\n  color: #999;\n  cursor: not-allowed; }\n  .KsPage .disabled:hover, .KsPageGroup .disabled:hover {\n    background: transparent;\n    color: #999; }\n\n.KsPageGroup {\n  color: #999;\n  line-height: 36px; }\n  .KsPageGroup-statistical {\n    padding-right: 20px; }\n    .KsPageGroup-statistical span {\n      color: #000;\n      padding: 0 5px; }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 303 */
+/* 333 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7831,7 +7972,7 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _mixins = __webpack_require__(304);
+	var _mixins = __webpack_require__(334);
 
 	var _mixins2 = _interopRequireDefault(_mixins);
 
@@ -8001,7 +8142,7 @@ webpackJsonp([0],[
 	// <script type="text/javascript">
 
 /***/ },
-/* 304 */
+/* 334 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -8027,23 +8168,23 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 305 */
+/* 335 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<ul v-show=\"total\" class=\"KsPage\" cid=\"KsPage\" @click=\"emitClick($event)\">\n    <li :class=\"{'disabled':current == 1}\">&lt;</li>\n    <li v-for=\"i in pages2\"\n        track-by=\"$index\"\n        :class=\"{'active':current == i}\" v-text=\"i\"></li>\n    <li :class=\"{'disabled':current == pages2[pages2.length-1]}\">&gt;</li>\n</ul>\n";
 
 /***/ },
-/* 306 */
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(307)
-	__vue_script__ = __webpack_require__(309)
+	__webpack_require__(337)
+	__vue_script__ = __webpack_require__(339)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsPager/src/pagegroup.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(310)
+	__vue_template__ = __webpack_require__(340)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -8062,13 +8203,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 307 */
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(308);
+	var content = __webpack_require__(338);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -8077,8 +8218,8 @@ webpackJsonp([0],[
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./pagegroup.vue", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./pagegroup.vue");
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./pagegroup.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./pagegroup.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -8088,7 +8229,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 308 */
+/* 338 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -8102,7 +8243,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 309 */
+/* 339 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8111,11 +8252,11 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _mixins = __webpack_require__(304);
+	var _mixins = __webpack_require__(334);
 
 	var _mixins2 = _interopRequireDefault(_mixins);
 
-	var _page = __webpack_require__(300);
+	var _page = __webpack_require__(330);
 
 	var _page2 = _interopRequireDefault(_page);
 
@@ -8188,13 +8329,13 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 310 */
+/* 340 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsPageGroup\" cid=\"KsPageGroup\">\n    <div class=\"KsPageGroup-statistical\">共<span>{{total}}</span>条</div>\n    <div class=\"ks-col\">\n        每页\n        <select class=\"input\" v-model=\"size\">\n            <option \n                v-for=\"i in sizes\" \n                :value=\"i\">{{i}}</option>\n        </select>\n        条\n    </div>\n    <page \n        class=\"ks-col-auto\"\n        :current.sync=\"current\" \n        :length=\"length\"\n        :total=\"total\"\n        :size=\"size\"\n        v-bind:on-change=\"currentChange\"></page>    \n</div>\n";
 
 /***/ },
-/* 311 */
+/* 341 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8204,15 +8345,15 @@ webpackJsonp([0],[
 	});
 	exports.KsRadioGroup = exports.KsBtnRadio = exports.KsRadio = undefined;
 
-	var _NrRadio = __webpack_require__(312);
+	var _NrRadio = __webpack_require__(342);
 
 	var _NrRadio2 = _interopRequireDefault(_NrRadio);
 
-	var _BtnRadio = __webpack_require__(318);
+	var _BtnRadio = __webpack_require__(348);
 
 	var _BtnRadio2 = _interopRequireDefault(_BtnRadio);
 
-	var _RadioGroup = __webpack_require__(323);
+	var _RadioGroup = __webpack_require__(353);
 
 	var _RadioGroup2 = _interopRequireDefault(_RadioGroup);
 
@@ -8231,17 +8372,17 @@ webpackJsonp([0],[
 	exports.KsRadioGroup = _RadioGroup2.default;
 
 /***/ },
-/* 312 */
+/* 342 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(313)
-	__vue_script__ = __webpack_require__(315)
+	__webpack_require__(343)
+	__vue_script__ = __webpack_require__(345)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsRadio/src/NrRadio.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(317)
+	__vue_template__ = __webpack_require__(347)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -8260,13 +8401,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 313 */
+/* 343 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(314);
+	var content = __webpack_require__(344);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -8275,8 +8416,8 @@ webpackJsonp([0],[
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NrRadio.vue", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NrRadio.vue");
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NrRadio.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NrRadio.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -8286,7 +8427,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 314 */
+/* 344 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -8300,7 +8441,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 315 */
+/* 345 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8309,7 +8450,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _radioLogic = __webpack_require__(316);
+	var _radioLogic = __webpack_require__(346);
 
 	var _radioLogic2 = _interopRequireDefault(_radioLogic);
 
@@ -8360,10 +8501,10 @@ webpackJsonp([0],[
 	//   </div>
 	// </template>
 	//
-	// <script lang="babel">
+	// <script>
 
 /***/ },
-/* 316 */
+/* 346 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8412,23 +8553,23 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 317 */
+/* 347 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :class=\"classes\">\n  <!-- NrRadio 选择色块自定义 -->\n  <style type=\"text/css\">\n    {{ '.KSNRRadio__UID--' + _uid }} .KSNRRadio__entity:checked + .KSNRRadio__skin:before {\n      {{ styleCubeColor }}\n    }\n  </style>\n  <div class=\"KSNRRadio__container\" :class=\"{disable: disable}\">\n    <input type=\"radio\" class=\"KSNRRadio__entity\"\n           v-model=\"checked\" :value=\"value\"\n           :name=\"!!name && name\"\n           :id=\"'KSNRCheckbox__entity--' + _uid\"\n           :disabled=\"disable && 'disabled'\"\n           :checked=\"defChecked && 'checked'\"\n    />\n    <label class=\"KSNRRadio__skin\" :for=\"'KSNRCheckbox__entity--' + _uid\"></label>\n    <label class=\"KSNRRadio__text\" :for=\"'KSNRCheckbox__entity--' + _uid\">\n      <slot>LABEL</slot>\n    </label>\n  </div>\n</div>\n";
 
 /***/ },
-/* 318 */
+/* 348 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(319)
-	__vue_script__ = __webpack_require__(321)
+	__webpack_require__(349)
+	__vue_script__ = __webpack_require__(351)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsRadio/src/BtnRadio.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(322)
+	__vue_template__ = __webpack_require__(352)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -8447,13 +8588,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 319 */
+/* 349 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(320);
+	var content = __webpack_require__(350);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -8462,8 +8603,8 @@ webpackJsonp([0],[
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./BtnRadio.vue", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./BtnRadio.vue");
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./BtnRadio.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./BtnRadio.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -8473,7 +8614,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 320 */
+/* 350 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -8487,7 +8628,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 321 */
+/* 351 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8496,7 +8637,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _radioLogic = __webpack_require__(316);
+	var _radioLogic = __webpack_require__(346);
 
 	var _radioLogic2 = _interopRequireDefault(_radioLogic);
 
@@ -8546,26 +8687,26 @@ webpackJsonp([0],[
 	//   </div><!-- -->
 	// </template>
 	//
-	// <script lang="babel">
+	// <script>
 
 /***/ },
-/* 322 */
+/* 352 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :class=\"classes\">\n  <!-- BtnRadio 选择色块自定义 -->\n  <style type=\"text/css\">\n    {{ '.KSBtnRadio__UID--' + _uid }} .KSBtnRadio__text:hover {\n      color: {{color}}\n    }\n    {{ '.KSBtnRadio__UID--' + _uid }} .KSBtnRadio__entity:checked + .KSBtnRadio__text {\n      color: {{color}}; border-color: {{color}};\n    }\n  </style>\n  <input type=\"radio\" class=\"KSBtnRadio__entity\" :name=\"!!name && name\"\n         :id=\"'KSNRCheckbox__entity--' + _uid\"\n         v-model=\"checked\" :value=\"value\" @change.stop\n         :disabled=\"disable && 'disabled'\"\n         :checked=\"defChecked && 'checked'\"\n         :id=\"`KSBtnRadio__entity--${_uid}`\" />\n  <label class=\"KSBtnRadio__text\" :for=\"'KSNRCheckbox__entity--' + _uid\">\n    <slot>LABEL</slot>\n  </label>\n</div><!-- -->\n";
 
 /***/ },
-/* 323 */
+/* 353 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(324)
-	__vue_script__ = __webpack_require__(326)
+	__webpack_require__(354)
+	__vue_script__ = __webpack_require__(356)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsRadio/src/RadioGroup.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(327)
+	__vue_template__ = __webpack_require__(357)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -8584,13 +8725,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 324 */
+/* 354 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(325);
+	var content = __webpack_require__(355);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -8599,8 +8740,8 @@ webpackJsonp([0],[
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./RadioGroup.vue", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./RadioGroup.vue");
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./RadioGroup.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./RadioGroup.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -8610,7 +8751,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 325 */
+/* 355 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -8624,7 +8765,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 326 */
+/* 356 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8638,7 +8779,7 @@ webpackJsonp([0],[
 	//   </div>
 	// </template>
 	//
-	// <script lang="babel">
+	// <script>
 	exports.default = {
 	  name: 'KsRadioGroup',
 
@@ -8666,13 +8807,13 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 327 */
+/* 357 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"ks-radio-group\">\n  <slot></slot>\n</div>\n";
 
 /***/ },
-/* 328 */
+/* 358 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8682,27 +8823,27 @@ webpackJsonp([0],[
 	});
 	exports.KsDateMonth = exports.KsDateRangePicker = exports.KsDaterRange = exports.KsDatePicker = exports.KsDaterPure = exports.KsDater = undefined;
 
-	var _dater = __webpack_require__(329);
+	var _dater = __webpack_require__(359);
 
 	var _dater2 = _interopRequireDefault(_dater);
 
-	var _daterPure = __webpack_require__(339);
+	var _daterPure = __webpack_require__(369);
 
 	var _daterPure2 = _interopRequireDefault(_daterPure);
 
-	var _datePicker = __webpack_require__(345);
+	var _datePicker = __webpack_require__(375);
 
 	var _datePicker2 = _interopRequireDefault(_datePicker);
 
-	var _daterRange = __webpack_require__(350);
+	var _daterRange = __webpack_require__(383);
 
 	var _daterRange2 = _interopRequireDefault(_daterRange);
 
-	var _dateRangePicker = __webpack_require__(354);
+	var _dateRangePicker = __webpack_require__(387);
 
 	var _dateRangePicker2 = _interopRequireDefault(_dateRangePicker);
 
-	var _dateMonth = __webpack_require__(357);
+	var _dateMonth = __webpack_require__(379);
 
 	var _dateMonth2 = _interopRequireDefault(_dateMonth);
 
@@ -8716,17 +8857,17 @@ webpackJsonp([0],[
 	exports.KsDateMonth = _dateMonth2.default;
 
 /***/ },
-/* 329 */
+/* 359 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(330)
-	__vue_script__ = __webpack_require__(332)
+	__webpack_require__(360)
+	__vue_script__ = __webpack_require__(362)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/dater.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(338)
+	__vue_template__ = __webpack_require__(368)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -8745,13 +8886,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 330 */
+/* 360 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(331);
+	var content = __webpack_require__(361);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -8760,8 +8901,8 @@ webpackJsonp([0],[
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dater.vue", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dater.vue");
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dater.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dater.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -8771,7 +8912,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 331 */
+/* 361 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(75)();
@@ -8779,13 +8920,13 @@ webpackJsonp([0],[
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n.ks-row, .tb, .KsDater-date-days, .KsDaterMulti-date-days, .KsDateMonth-date-days, .KsDateYear-date-days, .KsDater-date-btn, .KsDaterMulti-date-btn, .KsDateMonth-date-btn, .KsDateYear-date-btn, .KsDater-date-week, .KsDaterMulti-date-week, .KsDateMonth-date-week, .KsDateYear-date-week, .KsDatePicker .KsDater, .KsDaterMultiPicker .KsDater, .KsDater, .KsDaterMulti, .KsDateMonth, .KsDateYear {\n  display: table;\n  table-layout: fixed;\n  border-spacing: 0; }\n\n.ks-col-auto, .KsDater-date-head .year, .KsDaterMulti-date-head .year, .KsDateMonth-date-head .year, .KsDateYear-date-head .year, .KsDater-date-head .month, .KsDaterMulti-date-head .month, .KsDateMonth-date-head .month, .KsDateYear-date-head .month, .ks-col, .KsDater-date-days span, .KsDaterMulti-date-days span, .KsDateMonth-date-days span, .KsDateYear-date-days span, .KsDater-date-btn span, .KsDaterMulti-date-btn span, .KsDateMonth-date-btn span, .KsDateYear-date-btn span, .KsDater-date-week span, .KsDaterMulti-date-week span, .KsDateMonth-date-week span, .KsDateYear-date-week span, .KsDater-date, .KsDaterMulti-date, .KsDateMonth-date, .KsDateYear-date, .KsDater-date-head .retreat, .KsDaterMulti-date-head .retreat, .KsDateMonth-date-head .retreat, .KsDateYear-date-head .retreat, .KsDater-date-head .next, .KsDaterMulti-date-head .next, .KsDateMonth-date-head .next, .KsDateYear-date-head .next, .KsDater-date-head .interstice, .KsDaterMulti-date-head .interstice, .KsDateMonth-date-head .interstice, .KsDateYear-date-head .interstice, .tb-cell {\n  display: table-cell;\n  vertical-align: middle;\n  word-break: break-all; }\n\n.ib-w, .ib-w.ib {\n  letter-spacing: -0.31em;\n  word-spacing: -0.43em;\n  text-rendering: optimizespeed;\n  font-family: PingFangSC-Regular, microsoft yahei, Arial, sans-serif;\n  display: -webkit-flex;\n  -webkit-flex-flow: row wrap;\n  display: -ms-flexbox;\n  -ms-flex-flow: row wrap;\n  -ms-align-content: flex-start;\n  -ms-flex-line-pack: start;\n      align-content: flex-start; }\n\n.ib {\n  display: inline-block;\n  zoom: 1;\n  letter-spacing: normal;\n  word-spacing: normal;\n  vertical-align: top;\n  text-rendering: auto;\n  box-sizing: border-box; }\n\n.ks-row-auto, .KsDatePicker-input, .KsDaterMultiPicker-input, .KsDateMonthPicker-input, .KsDateYearPicker-input, .KsDater-date-head, .KsDaterMulti-date-head, .KsDateMonth-date-head, .KsDateYear-date-head {\n  box-sizing: border-box;\n  width: 100%;\n  display: table;\n  border-spacing: 0;\n  table-layout: auto; }\n\n.ks-col-auto, .KsDater-date-head .year, .KsDaterMulti-date-head .year, .KsDateMonth-date-head .year, .KsDateYear-date-head .year, .KsDater-date-head .month, .KsDaterMulti-date-head .month, .KsDateMonth-date-head .month, .KsDateYear-date-head .month {\n  width: 1px;\n  white-space: nowrap; }\n\n.ks-row, .tb, .KsDater-date-days, .KsDaterMulti-date-days, .KsDateMonth-date-days, .KsDateYear-date-days, .KsDater-date-btn, .KsDaterMulti-date-btn, .KsDateMonth-date-btn, .KsDateYear-date-btn, .KsDater-date-week, .KsDaterMulti-date-week, .KsDateMonth-date-week, .KsDateYear-date-week, .KsDatePicker .KsDater, .KsDaterMultiPicker .KsDater, .KsDater, .KsDaterMulti, .KsDateMonth, .KsDateYear {\n  box-sizing: border-box;\n  width: 100%; }\n\n/* h1 ~ h6 字体大小 */\n.h1 {\n  font-size: 30px; }\n\n.h2 {\n  font-size: 24px; }\n\n.h3 {\n  font-size: 18px; }\n\n.h4 {\n  font-size: 16px; }\n\n.h5 {\n  font-size: 14px; }\n\n.h6 {\n  font-size: 12px; }\n\n/* 颜色  primary danger info warning dark gray */\n.primary {\n  color: #2196F3;\n  border-color: #2196F3; }\n\n.primary-light {\n  color: #42A5F5;\n  border-color: #42A5F5; }\n\n.primary-deep {\n  color: #1E88E5;\n  border-color: #1E88E5; }\n\n.success {\n  color: #4CAF50;\n  border-color: #4CAF50; }\n\n.success-light {\n  color: #66BB6A;\n  border-color: #66BB6A; }\n\n.success-deep {\n  color: #43A047;\n  border-color: #43A047; }\n\n.info {\n  color: #00BCD4;\n  border-color: #00BCD4; }\n\n.info-light {\n  color: #26C6DA;\n  border-color: #26C6DA; }\n\n.info-deep {\n  color: #00ACC1;\n  border-color: #00ACC1; }\n\n.danger {\n  color: #F44336;\n  border-color: #F44336; }\n\n.danger-light {\n  color: #EF5350;\n  border-color: #EF5350; }\n\n.danger-deep {\n  color: #E53935;\n  border-color: #E53935; }\n\n.warning {\n  color: #FF5722;\n  border-color: #FF5722; }\n\n.warning-light {\n  color: #FF7043;\n  border-color: #FF7043; }\n\n.warning-deep {\n  color: #F4511E;\n  border-color: #F4511E; }\n\n.dark {\n  color: #777777;\n  border-color: #777777; }\n\n.dark-light {\n  color: #999999;\n  border-color: #999999; }\n\n.dark-deep {\n  color: #444444;\n  border-color: #444444; }\n\n.gray {\n  color: #F5F5F5;\n  border-color: #F5F5F5; }\n\n.gray-light {\n  color: #FCFCFC;\n  border-color: #FCFCFC; }\n\n.gray-deep {\n  color: #E9E9E9;\n  border-color: #E9E9E9; }\n\n.bg-primary {\n  background: #2196F3;\n  color: #fff; }\n\n.bg-primary-light {\n  background: #42A5F5;\n  color: #fff; }\n\n.bg-primary-deep {\n  background: #1E88E5;\n  color: #fff; }\n\n.bg-success {\n  background: #4CAF50;\n  color: #fff; }\n\n.bg-success-light {\n  background: #66BB6A;\n  color: #fff; }\n\n.bg-success-deep {\n  background: #43A047;\n  color: #fff; }\n\n.bg-info {\n  background: #00BCD4;\n  color: #fff; }\n\n.bg-info-light {\n  background: #26C6DA;\n  color: #fff; }\n\n.bg-info-deep {\n  background: #00ACC1;\n  color: #fff; }\n\n.bg-danger {\n  background: #F44336;\n  color: #fff; }\n\n.bg-danger-light {\n  background: #EF5350;\n  color: #fff; }\n\n.bg-danger-deep {\n  background: #E53935;\n  color: #fff; }\n\n.bg-warning {\n  background: #FF5722;\n  color: #fff; }\n\n.bg-warning-light {\n  background: #FF7043;\n  color: #fff; }\n\n.bg-warning-deep {\n  background: #F4511E;\n  color: #fff; }\n\n.bg-dark {\n  background: #777777;\n  color: #fff; }\n\n.bg-dark-light {\n  background: #999999;\n  color: #fff; }\n\n.bg-dark-deep {\n  background: #444444;\n  color: #fff; }\n\n.bg-gray {\n  background: #F5F5F5;\n  color: #fff; }\n\n.bg-gray-light {\n  background: #FCFCFC;\n  color: #fff; }\n\n.bg-gray-deep {\n  background: #E9E9E9;\n  color: #fff; }\n\n.ks-row, .tb, .KsDater-date-days, .KsDaterMulti-date-days, .KsDateMonth-date-days, .KsDateYear-date-days, .KsDater-date-btn, .KsDaterMulti-date-btn, .KsDateMonth-date-btn, .KsDateYear-date-btn, .KsDater-date-week, .KsDaterMulti-date-week, .KsDateMonth-date-week, .KsDateYear-date-week, .KsDatePicker .KsDater, .KsDaterMultiPicker .KsDater, .KsDater, .KsDaterMulti, .KsDateMonth, .KsDateYear {\n  display: table;\n  table-layout: fixed;\n  border-spacing: 0; }\n\n.ks-col-auto, .KsDater-date-head .year, .KsDaterMulti-date-head .year, .KsDateMonth-date-head .year, .KsDateYear-date-head .year, .KsDater-date-head .month, .KsDaterMulti-date-head .month, .KsDateMonth-date-head .month, .KsDateYear-date-head .month, .ks-col, .KsDater-date-days span, .KsDaterMulti-date-days span, .KsDateMonth-date-days span, .KsDateYear-date-days span, .KsDater-date-btn span, .KsDaterMulti-date-btn span, .KsDateMonth-date-btn span, .KsDateYear-date-btn span, .KsDater-date-week span, .KsDaterMulti-date-week span, .KsDateMonth-date-week span, .KsDateYear-date-week span, .KsDater-date, .KsDaterMulti-date, .KsDateMonth-date, .KsDateYear-date, .KsDater-date-head .retreat, .KsDaterMulti-date-head .retreat, .KsDateMonth-date-head .retreat, .KsDateYear-date-head .retreat, .KsDater-date-head .next, .KsDaterMulti-date-head .next, .KsDateMonth-date-head .next, .KsDateYear-date-head .next, .KsDater-date-head .interstice, .KsDaterMulti-date-head .interstice, .KsDateMonth-date-head .interstice, .KsDateYear-date-head .interstice, .tb-cell {\n  display: table-cell;\n  vertical-align: middle;\n  word-break: break-all; }\n\n.ib-w, .ib-w.ib {\n  letter-spacing: -0.31em;\n  word-spacing: -0.43em;\n  text-rendering: optimizespeed;\n  font-family: PingFangSC-Regular, microsoft yahei, Arial, sans-serif;\n  display: -webkit-flex;\n  -webkit-flex-flow: row wrap;\n  display: -ms-flexbox;\n  -ms-flex-flow: row wrap;\n  -ms-align-content: flex-start;\n  -ms-flex-line-pack: start;\n      align-content: flex-start; }\n\n.ib {\n  display: inline-block;\n  zoom: 1;\n  letter-spacing: normal;\n  word-spacing: normal;\n  vertical-align: top;\n  text-rendering: auto;\n  box-sizing: border-box; }\n\n.ks-row-auto, .KsDatePicker-input, .KsDaterMultiPicker-input, .KsDateMonthPicker-input, .KsDateYearPicker-input, .KsDater-date-head, .KsDaterMulti-date-head, .KsDateMonth-date-head, .KsDateYear-date-head {\n  box-sizing: border-box;\n  width: 100%;\n  display: table;\n  border-spacing: 0;\n  table-layout: auto; }\n\n.ks-col-auto, .KsDater-date-head .year, .KsDaterMulti-date-head .year, .KsDateMonth-date-head .year, .KsDateYear-date-head .year, .KsDater-date-head .month, .KsDaterMulti-date-head .month, .KsDateMonth-date-head .month, .KsDateYear-date-head .month {\n  width: 1px;\n  white-space: nowrap; }\n\n.ks-row, .tb, .KsDater-date-days, .KsDaterMulti-date-days, .KsDateMonth-date-days, .KsDateYear-date-days, .KsDater-date-btn, .KsDaterMulti-date-btn, .KsDateMonth-date-btn, .KsDateYear-date-btn, .KsDater-date-week, .KsDaterMulti-date-week, .KsDateMonth-date-week, .KsDateYear-date-week, .KsDatePicker .KsDater, .KsDaterMultiPicker .KsDater, .KsDater, .KsDaterMulti, .KsDateMonth, .KsDateYear {\n  box-sizing: border-box;\n  width: 100%; }\n\n.KsDatePicker-input, .KsDaterMultiPicker-input, .KsDateMonthPicker-input, .KsDateYearPicker-input {\n  background: #fff;\n  border: 1px solid #c8c8c8;\n  border-radius: 4px; }\n  .KsDatePicker-input .date-icon, .KsDaterMultiPicker-input .date-icon, .KsDateMonthPicker-input .date-icon, .KsDateYearPicker-input .date-icon {\n    border-right: 1px solid #c8c8c8; }\n    .KsDatePicker-input .date-icon i, .KsDaterMultiPicker-input .date-icon i, .KsDateMonthPicker-input .date-icon i, .KsDateYearPicker-input .date-icon i {\n      padding: 11px; }\n  .KsDatePicker-input input, .KsDaterMultiPicker-input input, .KsDateMonthPicker-input input, .KsDateYearPicker-input input {\n    height: 36px;\n    border: 0;\n    outline: 0;\n    padding: 0 10px;\n    width: 100%;\n    box-sizing: border-box;\n    background: transparent; }\n\n.KsDater-date-days, .KsDaterMulti-date-days, .KsDateMonth-date-days, .KsDateYear-date-days, .KsDater-date-btn, .KsDaterMulti-date-btn, .KsDateMonth-date-btn, .KsDateYear-date-btn, .KsDater-date-week, .KsDaterMulti-date-week, .KsDateMonth-date-week, .KsDateYear-date-week {\n  padding: 0 32px;\n  text-align: center;\n  line-height: 36px; }\n\n.KsDater-date-days, .KsDaterMulti-date-days, .KsDateMonth-date-days, .KsDateYear-date-days, .KsDater-date-btn, .KsDaterMulti-date-btn, .KsDateMonth-date-btn, .KsDateYear-date-btn {\n  padding-bottom: 5px; }\n  .KsDater-date-days span, .KsDaterMulti-date-days span, .KsDateMonth-date-days span, .KsDateYear-date-days span, .KsDater-date-btn span, .KsDaterMulti-date-btn span, .KsDateMonth-date-btn span, .KsDateYear-date-btn span {\n    cursor: pointer;\n    border-radius: 4px; }\n    .KsDater-date-days span:hover, .KsDaterMulti-date-days span:hover, .KsDateMonth-date-days span:hover, .KsDateYear-date-days span:hover, .KsDater-date-btn span:hover, .KsDaterMulti-date-btn span:hover, .KsDateMonth-date-btn span:hover, .KsDateYear-date-btn span:hover {\n      background: #f5f5f5; }\n    .KsDater-date-days span.active, .KsDaterMulti-date-days span.active, .KsDateMonth-date-days span.active, .KsDateYear-date-days span.active, .KsDater-date-btn span.active, .KsDaterMulti-date-btn span.active, .KsDateMonth-date-btn span.active, .KsDateYear-date-btn span.active {\n      color: #fff;\n      background: #2196F3; }\n  .KsDater-date-days .pass, .KsDaterMulti-date-days .pass, .KsDateMonth-date-days .pass, .KsDateYear-date-days .pass, .KsDater-date-btn .pass, .KsDaterMulti-date-btn .pass, .KsDateMonth-date-btn .pass, .KsDateYear-date-btn .pass, .KsDater-date-days .future, .KsDaterMulti-date-days .future, .KsDateMonth-date-days .future, .KsDateYear-date-days .future, .KsDater-date-btn .future, .KsDaterMulti-date-btn .future, .KsDateMonth-date-btn .future, .KsDateYear-date-btn .future, .KsDater-date-days .collect, .KsDaterMulti-date-days .collect, .KsDateMonth-date-days .collect, .KsDateYear-date-days .collect, .KsDater-date-btn .collect, .KsDaterMulti-date-btn .collect, .KsDateMonth-date-btn .collect, .KsDateYear-date-btn .collect {\n    color: #c8c8c8; }\n  .KsDater-date-days .scope-bg, .KsDaterMulti-date-days .scope-bg, .KsDateMonth-date-days .scope-bg, .KsDateYear-date-days .scope-bg, .KsDater-date-btn .scope-bg, .KsDaterMulti-date-btn .scope-bg, .KsDateMonth-date-btn .scope-bg, .KsDateYear-date-btn .scope-bg {\n    background: #f5f5f5;\n    border-radius: 0; }\n\n.KsDatePicker .KsDater, .KsDaterMultiPicker .KsDater, .KsDater, .KsDaterMulti, .KsDateMonth, .KsDateYear {\n  display: inline-block;\n  margin-top: -1px; }\n  .KsDater-date, .KsDaterMulti-date, .KsDateMonth-date, .KsDateYear-date {\n    border: 1px solid #c8c8c8;\n    border-left: transparent;\n    width: 314px;\n    background: #fff; }\n    .KsDater-date-head, .KsDaterMulti-date-head, .KsDateMonth-date-head, .KsDateYear-date-head {\n      padding: 30px 18px 15px;\n      font-size: 14px; }\n      .KsDater-date-head .retreat, .KsDaterMulti-date-head .retreat, .KsDateMonth-date-head .retreat, .KsDateYear-date-head .retreat, .KsDater-date-head .next, .KsDaterMulti-date-head .next, .KsDateMonth-date-head .next, .KsDateYear-date-head .next {\n        cursor: pointer; }\n      .KsDater-date-head .next, .KsDaterMulti-date-head .next, .KsDateMonth-date-head .next, .KsDateYear-date-head .next {\n        text-align: right; }\n    .KsDater-date-week, .KsDaterMulti-date-week, .KsDateMonth-date-week, .KsDateYear-date-week {\n      font-weight: bold;\n      color: #c8c8c8; }\n      .KsDater-date-week .week, .KsDaterMulti-date-week .week, .KsDateMonth-date-week .week, .KsDateYear-date-week .week {\n        color: #ef5350; }\n    .KsDater-date-days:last-child, .KsDaterMulti-date-days:last-child, .KsDateMonth-date-days:last-child, .KsDateYear-date-days:last-child {\n      margin-bottom: 10px; }\n    .KsDater-date-btn select, .KsDaterMulti-date-btn select, .KsDateMonth-date-btn select, .KsDateYear-date-btn select {\n      width: 70px;\n      border-color: #e5e5e5; }\n    .KsDater-date-btn .mlr-10, .KsDaterMulti-date-btn .mlr-10, .KsDateMonth-date-btn .mlr-10, .KsDateYear-date-btn .mlr-10 {\n      margin: 0 10px; }\n    .KsDater-date-btn .today, .KsDaterMulti-date-btn .today, .KsDateMonth-date-btn .today, .KsDateYear-date-btn .today, .KsDater-date-btn .reset, .KsDaterMulti-date-btn .reset, .KsDateMonth-date-btn .reset, .KsDateYear-date-btn .reset {\n      color: #2196F3; }\n    .KsDater-date-btn .clear, .KsDaterMulti-date-btn .clear, .KsDateMonth-date-btn .clear, .KsDateYear-date-btn .clear {\n      color: #F44336; }\n    .KsDater-date-btn .today:hover, .KsDaterMulti-date-btn .today:hover, .KsDateMonth-date-btn .today:hover, .KsDateYear-date-btn .today:hover, .KsDater-date-btn .clear:hover, .KsDaterMulti-date-btn .clear:hover, .KsDateMonth-date-btn .clear:hover, .KsDateYear-date-btn .clear:hover, .KsDater-date-btn .reset:hover, .KsDaterMulti-date-btn .reset:hover, .KsDateMonth-date-btn .reset:hover, .KsDateYear-date-btn .reset:hover, .KsDater-date-btn .collect:hover, .KsDaterMulti-date-btn .collect:hover, .KsDateMonth-date-btn .collect:hover, .KsDateYear-date-btn .collect:hover, .KsDater-date-btn .selects:hover, .KsDaterMulti-date-btn .selects:hover, .KsDateMonth-date-btn .selects:hover, .KsDateYear-date-btn .selects:hover {\n      background: transparent; }\n    .KsDater-date-btn .today, .KsDaterMulti-date-btn .today, .KsDateMonth-date-btn .today, .KsDateYear-date-btn .today, .KsDater-date-btn .clear, .KsDaterMulti-date-btn .clear, .KsDateMonth-date-btn .clear, .KsDateYear-date-btn .clear {\n      padding-bottom: 20px; }\n  .KsDater-date:first-child, .KsDaterMulti-date:first-child, .KsDateMonth-date:first-child, .KsDateYear-date:first-child {\n    border-left: 1px solid #c8c8c8; }\n\n.KsDatePicker .KsDater, .KsDaterMultiPicker .KsDater, .KsDater, .KsDaterMulti, .KsDateMonth, .KsDateYear {\n  z-index: 1;\n  width: auto; }\n  .KsDater-date-head .interstice, .KsDaterMulti-date-head .interstice, .KsDateMonth-date-head .interstice, .KsDateYear-date-head .interstice {\n    width: 16px; }\n  .KsDater-date-head .month, .KsDaterMulti-date-head .month, .KsDateMonth-date-head .month, .KsDateYear-date-head .month {\n    font-weight: bold; }\n\n.KsDatePicker .KsDater, .KsDaterMultiPicker .KsDater, .KsDateMonthPicker .KsDater, .KsDateYearPicker .KsDater {\n  position: absolute; }\n\n.KsDatePicker .KsDater-head .year, .KsDaterMultiPicker .KsDater-head .year {\n  color: #c8c8c8; }\n\n.KsDateMonthPicker .KsDater-date-head .year, .KsDateYearPicker .KsDater-date-head .year {\n  font-weight: bold; }\n\n.KsDateMonthPicker .KsDater-days, .KsDateYearPicker .KsDater-days {\n  margin: 28px 0; }\n\n.readonly.KsDatePicker .KsDater-date, .readonly.KsDaterMultiPicker .KsDaterMulti-date {\n  background: #f5f5f5; }\n  .readonly.KsDatePicker .KsDater-date-days span, .readonly.KsDaterMultiPicker .KsDaterMulti-date-days span {\n    pointer-events: none;\n    color: #c8c8c8; }\n    .readonly.KsDatePicker .KsDater-date-days span.begin-active, .readonly.KsDaterMultiPicker .KsDaterMulti-date-days span.begin-active, .readonly.KsDatePicker .KsDater-date-days span.end-active, .readonly.KsDaterMultiPicker .KsDaterMulti-date-days span.end-active, .readonly.KsDatePicker .KsDater-date-days span.active, .readonly.KsDaterMultiPicker .KsDaterMulti-date-days span.active {\n      background: #777;\n      border-radius: 0;\n      color: #fff; }\n  .readonly.KsDatePicker .KsDater-date-days-btn, .readonly.KsDaterMultiPicker .KsDaterMulti-date-days-btn {\n    padding: 0; }\n    .readonly.KsDatePicker .KsDater-date-days-btn .reset, .readonly.KsDaterMultiPicker .KsDaterMulti-date-days-btn .reset, .readonly.KsDatePicker .KsDater-date-days-btn .collect, .readonly.KsDaterMultiPicker .KsDaterMulti-date-days-btn .collect {\n      padding: 0 32px 5px;\n      pointer-events: none; }\n    .readonly.KsDatePicker .KsDater-date-days-btn .reset, .readonly.KsDaterMultiPicker .KsDaterMulti-date-days-btn .reset {\n      text-align: left;\n      padding-left: 42px; }\n    .readonly.KsDatePicker .KsDater-date-days-btn .collect, .readonly.KsDaterMultiPicker .KsDaterMulti-date-days-btn .collect {\n      border-left: 8px solid #f5f5f5;\n      margin-left: -5px;\n      display: block; }\n\n.KsDatePicker {\n  position: relative; }\n\n.KsDaterMulti-date-btn {\n  border-top: 1px solid #c8c8c8; }\n\n.KsDaterMultiPicker {\n  position: relative; }\n  .KsDaterMultiPicker-input input {\n    text-align: center;\n    min-width: 100px; }\n  .KsDaterMultiPicker-input .scope-icon {\n    color: #26c6da; }\n  .KsDaterMultiPicker .KsDaterMulti {\n    position: absolute; }\n  .KsDaterMultiPicker-btn {\n    margin-top: 20px;\n    border-top: 1px solid #c8c8c8; }\n    .KsDaterMultiPicker-btn .reset, .KsDaterMultiPicker-btn .collect {\n      line-height: 44px;\n      height: 44px; }\n\n.KsDateMonthPicker {\n  position: absolute; }\n\n.KsDateYear {\n  position: absolute; }\n\n.readonly.KsDatePicker .KsDatePicker-input {\n  background: #e9e9e9; }\n\n.readonly.KsDaterMultiPicker .KsDaterMultiPicker-input {\n  background: #e9e9e9; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n.ks-row, .tb, .KsDater-date-days, .KsDaterMulti-date-days, .KsDateMonth-date-days, .KsDateYear-date-days, .KsDater-date-btn, .KsDaterMulti-date-btn, .KsDateMonth-date-btn, .KsDateYear-date-btn, .KsDater-date-week, .KsDaterMulti-date-week, .KsDateMonth-date-week, .KsDateYear-date-week, .KsDatePicker .KsDater, .KsDaterMultiPicker .KsDater, .KsDater, .KsDaterMulti, .KsDateMonth, .KsDateYear {\n  display: table;\n  table-layout: fixed;\n  border-spacing: 0; }\n\n.ks-col-top, .ks-col-auto-top, .ks-col-auto, .KsDater-date-head .year, .KsDaterMulti-date-head .year, .KsDateMonth-date-head .year, .KsDateYear-date-head .year, .KsDater-date-head .month, .KsDaterMulti-date-head .month, .KsDateMonth-date-head .month, .KsDateYear-date-head .month, .ks-col, .KsDater-date-days span, .KsDaterMulti-date-days span, .KsDateMonth-date-days span, .KsDateYear-date-days span, .KsDater-date-btn span, .KsDaterMulti-date-btn span, .KsDateMonth-date-btn span, .KsDateYear-date-btn span, .KsDater-date-week span, .KsDaterMulti-date-week span, .KsDateMonth-date-week span, .KsDateYear-date-week span, .KsDater-date, .KsDaterMulti-date, .KsDateMonth-date, .KsDateYear-date, .KsDater-date-head .retreat, .KsDaterMulti-date-head .retreat, .KsDateMonth-date-head .retreat, .KsDateYear-date-head .retreat, .KsDater-date-head .next, .KsDaterMulti-date-head .next, .KsDateMonth-date-head .next, .KsDateYear-date-head .next, .KsDater-date-head .interstice, .KsDaterMulti-date-head .interstice, .KsDateMonth-date-head .interstice, .KsDateYear-date-head .interstice, .tb-cell {\n  display: table-cell;\n  vertical-align: middle;\n  word-break: break-all; }\n\n.ib-w, .ib-w.ib {\n  letter-spacing: -0.31em;\n  word-spacing: -0.43em;\n  text-rendering: optimizespeed;\n  font-family: PingFangSC-Regular, microsoft yahei, Arial, sans-serif;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  -ms-flex-flow: row wrap;\n  -ms-align-content: flex-start;\n  -ms-flex-line-pack: start;\n      align-content: flex-start; }\n\n.ib {\n  display: inline-block;\n  zoom: 1;\n  letter-spacing: normal;\n  word-spacing: normal;\n  vertical-align: top;\n  text-rendering: auto;\n  box-sizing: border-box; }\n\n.ks-col-top {\n  vertical-align: top; }\n\n.ks-col-auto-top {\n  vertical-align: top; }\n\n.ks-row-auto, .KsDatePicker-input, .KsDaterMultiPicker-input, .KsDateMonthPicker-input, .KsDateYearPicker-input, .KsDater-date-head, .KsDaterMulti-date-head, .KsDateMonth-date-head, .KsDateYear-date-head {\n  box-sizing: border-box;\n  width: 100%;\n  display: table;\n  border-spacing: 0;\n  table-layout: auto; }\n\n.ks-col-auto-top, .ks-col-auto, .KsDater-date-head .year, .KsDaterMulti-date-head .year, .KsDateMonth-date-head .year, .KsDateYear-date-head .year, .KsDater-date-head .month, .KsDaterMulti-date-head .month, .KsDateMonth-date-head .month, .KsDateYear-date-head .month {\n  width: 1px;\n  white-space: nowrap; }\n\n.ks-row, .tb, .KsDater-date-days, .KsDaterMulti-date-days, .KsDateMonth-date-days, .KsDateYear-date-days, .KsDater-date-btn, .KsDaterMulti-date-btn, .KsDateMonth-date-btn, .KsDateYear-date-btn, .KsDater-date-week, .KsDaterMulti-date-week, .KsDateMonth-date-week, .KsDateYear-date-week, .KsDatePicker .KsDater, .KsDaterMultiPicker .KsDater, .KsDater, .KsDaterMulti, .KsDateMonth, .KsDateYear {\n  box-sizing: border-box;\n  width: 100%; }\n\n/* h1 ~ h6 字体大小 */\n.h1 {\n  font-size: 30px; }\n\n.h2 {\n  font-size: 24px; }\n\n.h3 {\n  font-size: 18px; }\n\n.h4 {\n  font-size: 16px; }\n\n.h5 {\n  font-size: 14px; }\n\n.h6 {\n  font-size: 12px; }\n\n/* 颜色  primary danger info warning dark gray */\n.primary {\n  color: #2196F3;\n  border-color: #2196F3; }\n\n.primary-light {\n  color: #42A5F5;\n  border-color: #42A5F5; }\n\n.primary-deep {\n  color: #1E88E5;\n  border-color: #1E88E5; }\n\n.success {\n  color: #4CAF50;\n  border-color: #4CAF50; }\n\n.success-light {\n  color: #66BB6A;\n  border-color: #66BB6A; }\n\n.success-deep {\n  color: #43A047;\n  border-color: #43A047; }\n\n.info {\n  color: #00BCD4;\n  border-color: #00BCD4; }\n\n.info-light {\n  color: #26C6DA;\n  border-color: #26C6DA; }\n\n.info-deep {\n  color: #00ACC1;\n  border-color: #00ACC1; }\n\n.danger {\n  color: #F44336;\n  border-color: #F44336; }\n\n.danger-light {\n  color: #EF5350;\n  border-color: #EF5350; }\n\n.danger-deep {\n  color: #E53935;\n  border-color: #E53935; }\n\n.warning {\n  color: #FF5722;\n  border-color: #FF5722; }\n\n.warning-light {\n  color: #FF7043;\n  border-color: #FF7043; }\n\n.warning-deep {\n  color: #F4511E;\n  border-color: #F4511E; }\n\n.dark {\n  color: #777777;\n  border-color: #777777; }\n\n.dark-light {\n  color: #999999;\n  border-color: #999999; }\n\n.dark-deep {\n  color: #444444;\n  border-color: #444444; }\n\n.gray {\n  color: #F5F5F5;\n  border-color: #F5F5F5; }\n\n.gray-light {\n  color: #FCFCFC;\n  border-color: #FCFCFC; }\n\n.gray-deep {\n  color: #E9E9E9;\n  border-color: #E9E9E9; }\n\n.bg-primary {\n  background: #2196F3;\n  color: #fff; }\n\n.bg-primary-light {\n  background: #42A5F5;\n  color: #fff; }\n\n.bg-primary-deep {\n  background: #1E88E5;\n  color: #fff; }\n\n.bg-success {\n  background: #4CAF50;\n  color: #fff; }\n\n.bg-success-light {\n  background: #66BB6A;\n  color: #fff; }\n\n.bg-success-deep {\n  background: #43A047;\n  color: #fff; }\n\n.bg-info {\n  background: #00BCD4;\n  color: #fff; }\n\n.bg-info-light {\n  background: #26C6DA;\n  color: #fff; }\n\n.bg-info-deep {\n  background: #00ACC1;\n  color: #fff; }\n\n.bg-danger {\n  background: #F44336;\n  color: #fff; }\n\n.bg-danger-light {\n  background: #EF5350;\n  color: #fff; }\n\n.bg-danger-deep {\n  background: #E53935;\n  color: #fff; }\n\n.bg-warning {\n  background: #FF5722;\n  color: #fff; }\n\n.bg-warning-light {\n  background: #FF7043;\n  color: #fff; }\n\n.bg-warning-deep {\n  background: #F4511E;\n  color: #fff; }\n\n.bg-dark {\n  background: #777777;\n  color: #fff; }\n\n.bg-dark-light {\n  background: #999999;\n  color: #fff; }\n\n.bg-dark-deep {\n  background: #444444;\n  color: #fff; }\n\n.bg-gray {\n  background: #F5F5F5;\n  color: #fff; }\n\n.bg-gray-light {\n  background: #FCFCFC;\n  color: #fff; }\n\n.bg-gray-deep {\n  background: #E9E9E9;\n  color: #fff; }\n\n.ks-row, .tb, .KsDater-date-days, .KsDaterMulti-date-days, .KsDateMonth-date-days, .KsDateYear-date-days, .KsDater-date-btn, .KsDaterMulti-date-btn, .KsDateMonth-date-btn, .KsDateYear-date-btn, .KsDater-date-week, .KsDaterMulti-date-week, .KsDateMonth-date-week, .KsDateYear-date-week, .KsDatePicker .KsDater, .KsDaterMultiPicker .KsDater, .KsDater, .KsDaterMulti, .KsDateMonth, .KsDateYear {\n  display: table;\n  table-layout: fixed;\n  border-spacing: 0; }\n\n.ks-col-top, .ks-col-auto-top, .ks-col-auto, .KsDater-date-head .year, .KsDaterMulti-date-head .year, .KsDateMonth-date-head .year, .KsDateYear-date-head .year, .KsDater-date-head .month, .KsDaterMulti-date-head .month, .KsDateMonth-date-head .month, .KsDateYear-date-head .month, .ks-col, .KsDater-date-days span, .KsDaterMulti-date-days span, .KsDateMonth-date-days span, .KsDateYear-date-days span, .KsDater-date-btn span, .KsDaterMulti-date-btn span, .KsDateMonth-date-btn span, .KsDateYear-date-btn span, .KsDater-date-week span, .KsDaterMulti-date-week span, .KsDateMonth-date-week span, .KsDateYear-date-week span, .KsDater-date, .KsDaterMulti-date, .KsDateMonth-date, .KsDateYear-date, .KsDater-date-head .retreat, .KsDaterMulti-date-head .retreat, .KsDateMonth-date-head .retreat, .KsDateYear-date-head .retreat, .KsDater-date-head .next, .KsDaterMulti-date-head .next, .KsDateMonth-date-head .next, .KsDateYear-date-head .next, .KsDater-date-head .interstice, .KsDaterMulti-date-head .interstice, .KsDateMonth-date-head .interstice, .KsDateYear-date-head .interstice, .tb-cell {\n  display: table-cell;\n  vertical-align: middle;\n  word-break: break-all; }\n\n.ib-w, .ib-w.ib {\n  letter-spacing: -0.31em;\n  word-spacing: -0.43em;\n  text-rendering: optimizespeed;\n  font-family: PingFangSC-Regular, microsoft yahei, Arial, sans-serif;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  -ms-flex-flow: row wrap;\n  -ms-align-content: flex-start;\n  -ms-flex-line-pack: start;\n      align-content: flex-start; }\n\n.ib {\n  display: inline-block;\n  zoom: 1;\n  letter-spacing: normal;\n  word-spacing: normal;\n  vertical-align: top;\n  text-rendering: auto;\n  box-sizing: border-box; }\n\n.ks-col-top {\n  vertical-align: top; }\n\n.ks-col-auto-top {\n  vertical-align: top; }\n\n.ks-row-auto, .KsDatePicker-input, .KsDaterMultiPicker-input, .KsDateMonthPicker-input, .KsDateYearPicker-input, .KsDater-date-head, .KsDaterMulti-date-head, .KsDateMonth-date-head, .KsDateYear-date-head {\n  box-sizing: border-box;\n  width: 100%;\n  display: table;\n  border-spacing: 0;\n  table-layout: auto; }\n\n.ks-col-auto-top, .ks-col-auto, .KsDater-date-head .year, .KsDaterMulti-date-head .year, .KsDateMonth-date-head .year, .KsDateYear-date-head .year, .KsDater-date-head .month, .KsDaterMulti-date-head .month, .KsDateMonth-date-head .month, .KsDateYear-date-head .month {\n  width: 1px;\n  white-space: nowrap; }\n\n.ks-row, .tb, .KsDater-date-days, .KsDaterMulti-date-days, .KsDateMonth-date-days, .KsDateYear-date-days, .KsDater-date-btn, .KsDaterMulti-date-btn, .KsDateMonth-date-btn, .KsDateYear-date-btn, .KsDater-date-week, .KsDaterMulti-date-week, .KsDateMonth-date-week, .KsDateYear-date-week, .KsDatePicker .KsDater, .KsDaterMultiPicker .KsDater, .KsDater, .KsDaterMulti, .KsDateMonth, .KsDateYear {\n  box-sizing: border-box;\n  width: 100%; }\n\n.KsDatePicker-input, .KsDaterMultiPicker-input, .KsDateMonthPicker-input, .KsDateYearPicker-input {\n  background: #fff;\n  border: 1px solid #c8c8c8;\n  border-radius: 4px; }\n  .KsDatePicker-input .date-icon, .KsDaterMultiPicker-input .date-icon, .KsDateMonthPicker-input .date-icon, .KsDateYearPicker-input .date-icon {\n    border-right: 1px solid #c8c8c8; }\n    .KsDatePicker-input .date-icon i, .KsDaterMultiPicker-input .date-icon i, .KsDateMonthPicker-input .date-icon i, .KsDateYearPicker-input .date-icon i {\n      padding: 11px; }\n  .KsDatePicker-input input, .KsDaterMultiPicker-input input, .KsDateMonthPicker-input input, .KsDateYearPicker-input input {\n    height: 36px;\n    border: 0;\n    outline: 0;\n    padding: 0 10px;\n    width: 100%;\n    box-sizing: border-box;\n    background: transparent; }\n\n.KsDater-date-days, .KsDaterMulti-date-days, .KsDateMonth-date-days, .KsDateYear-date-days, .KsDater-date-btn, .KsDaterMulti-date-btn, .KsDateMonth-date-btn, .KsDateYear-date-btn, .KsDater-date-week, .KsDaterMulti-date-week, .KsDateMonth-date-week, .KsDateYear-date-week {\n  padding: 0 32px;\n  text-align: center;\n  line-height: 36px; }\n\n.KsDater-date-days, .KsDaterMulti-date-days, .KsDateMonth-date-days, .KsDateYear-date-days, .KsDater-date-btn, .KsDaterMulti-date-btn, .KsDateMonth-date-btn, .KsDateYear-date-btn {\n  padding-bottom: 5px; }\n  .KsDater-date-days span, .KsDaterMulti-date-days span, .KsDateMonth-date-days span, .KsDateYear-date-days span, .KsDater-date-btn span, .KsDaterMulti-date-btn span, .KsDateMonth-date-btn span, .KsDateYear-date-btn span {\n    cursor: pointer;\n    border-radius: 4px; }\n    .KsDater-date-days span:hover, .KsDaterMulti-date-days span:hover, .KsDateMonth-date-days span:hover, .KsDateYear-date-days span:hover, .KsDater-date-btn span:hover, .KsDaterMulti-date-btn span:hover, .KsDateMonth-date-btn span:hover, .KsDateYear-date-btn span:hover {\n      background: #f5f5f5; }\n    .KsDater-date-days span.active, .KsDaterMulti-date-days span.active, .KsDateMonth-date-days span.active, .KsDateYear-date-days span.active, .KsDater-date-btn span.active, .KsDaterMulti-date-btn span.active, .KsDateMonth-date-btn span.active, .KsDateYear-date-btn span.active {\n      color: #fff;\n      background: #2196F3; }\n  .KsDater-date-days .pass, .KsDaterMulti-date-days .pass, .KsDateMonth-date-days .pass, .KsDateYear-date-days .pass, .KsDater-date-btn .pass, .KsDaterMulti-date-btn .pass, .KsDateMonth-date-btn .pass, .KsDateYear-date-btn .pass, .KsDater-date-days .future, .KsDaterMulti-date-days .future, .KsDateMonth-date-days .future, .KsDateYear-date-days .future, .KsDater-date-btn .future, .KsDaterMulti-date-btn .future, .KsDateMonth-date-btn .future, .KsDateYear-date-btn .future, .KsDater-date-days .collect, .KsDaterMulti-date-days .collect, .KsDateMonth-date-days .collect, .KsDateYear-date-days .collect, .KsDater-date-btn .collect, .KsDaterMulti-date-btn .collect, .KsDateMonth-date-btn .collect, .KsDateYear-date-btn .collect {\n    color: #c8c8c8; }\n  .KsDater-date-days .scope-bg, .KsDaterMulti-date-days .scope-bg, .KsDateMonth-date-days .scope-bg, .KsDateYear-date-days .scope-bg, .KsDater-date-btn .scope-bg, .KsDaterMulti-date-btn .scope-bg, .KsDateMonth-date-btn .scope-bg, .KsDateYear-date-btn .scope-bg {\n    background: #f5f5f5;\n    border-radius: 0; }\n\n.KsDatePicker .KsDater, .KsDaterMultiPicker .KsDater, .KsDater, .KsDaterMulti, .KsDateMonth, .KsDateYear {\n  display: inline-block;\n  margin-top: -1px; }\n  .KsDater-date, .KsDaterMulti-date, .KsDateMonth-date, .KsDateYear-date {\n    border: 1px solid #c8c8c8;\n    border-left: transparent;\n    width: 314px;\n    background: #fff; }\n    .KsDater-date-head, .KsDaterMulti-date-head, .KsDateMonth-date-head, .KsDateYear-date-head {\n      padding: 30px 18px 15px;\n      font-size: 14px; }\n      .KsDater-date-head .retreat, .KsDaterMulti-date-head .retreat, .KsDateMonth-date-head .retreat, .KsDateYear-date-head .retreat, .KsDater-date-head .next, .KsDaterMulti-date-head .next, .KsDateMonth-date-head .next, .KsDateYear-date-head .next {\n        cursor: pointer; }\n      .KsDater-date-head .next, .KsDaterMulti-date-head .next, .KsDateMonth-date-head .next, .KsDateYear-date-head .next {\n        text-align: right; }\n    .KsDater-date-week, .KsDaterMulti-date-week, .KsDateMonth-date-week, .KsDateYear-date-week {\n      font-weight: bold;\n      color: #c8c8c8; }\n      .KsDater-date-week .week, .KsDaterMulti-date-week .week, .KsDateMonth-date-week .week, .KsDateYear-date-week .week {\n        color: #ef5350; }\n    .KsDater-date-days:last-child, .KsDaterMulti-date-days:last-child, .KsDateMonth-date-days:last-child, .KsDateYear-date-days:last-child {\n      margin-bottom: 10px; }\n    .KsDater-date-btn select, .KsDaterMulti-date-btn select, .KsDateMonth-date-btn select, .KsDateYear-date-btn select {\n      width: 70px;\n      border-color: #e5e5e5; }\n    .KsDater-date-btn .mlr-10, .KsDaterMulti-date-btn .mlr-10, .KsDateMonth-date-btn .mlr-10, .KsDateYear-date-btn .mlr-10 {\n      margin: 0 10px; }\n    .KsDater-date-btn .today, .KsDaterMulti-date-btn .today, .KsDateMonth-date-btn .today, .KsDateYear-date-btn .today, .KsDater-date-btn .reset, .KsDaterMulti-date-btn .reset, .KsDateMonth-date-btn .reset, .KsDateYear-date-btn .reset {\n      color: #2196F3; }\n    .KsDater-date-btn .clear, .KsDaterMulti-date-btn .clear, .KsDateMonth-date-btn .clear, .KsDateYear-date-btn .clear {\n      color: #F44336; }\n    .KsDater-date-btn .today:hover, .KsDaterMulti-date-btn .today:hover, .KsDateMonth-date-btn .today:hover, .KsDateYear-date-btn .today:hover, .KsDater-date-btn .clear:hover, .KsDaterMulti-date-btn .clear:hover, .KsDateMonth-date-btn .clear:hover, .KsDateYear-date-btn .clear:hover, .KsDater-date-btn .reset:hover, .KsDaterMulti-date-btn .reset:hover, .KsDateMonth-date-btn .reset:hover, .KsDateYear-date-btn .reset:hover, .KsDater-date-btn .collect:hover, .KsDaterMulti-date-btn .collect:hover, .KsDateMonth-date-btn .collect:hover, .KsDateYear-date-btn .collect:hover, .KsDater-date-btn .selects:hover, .KsDaterMulti-date-btn .selects:hover, .KsDateMonth-date-btn .selects:hover, .KsDateYear-date-btn .selects:hover {\n      background: transparent; }\n    .KsDater-date-btn .today, .KsDaterMulti-date-btn .today, .KsDateMonth-date-btn .today, .KsDateYear-date-btn .today, .KsDater-date-btn .clear, .KsDaterMulti-date-btn .clear, .KsDateMonth-date-btn .clear, .KsDateYear-date-btn .clear {\n      padding-bottom: 20px; }\n  .KsDater-date:first-child, .KsDaterMulti-date:first-child, .KsDateMonth-date:first-child, .KsDateYear-date:first-child {\n    border-left: 1px solid #c8c8c8; }\n\n.KsDatePicker .KsDater, .KsDaterMultiPicker .KsDater, .KsDater, .KsDaterMulti, .KsDateMonth, .KsDateYear {\n  z-index: 1;\n  width: auto;\n  min-width: 316px; }\n  .KsDater-date-head .interstice, .KsDaterMulti-date-head .interstice, .KsDateMonth-date-head .interstice, .KsDateYear-date-head .interstice {\n    width: 16px; }\n  .KsDater-date-head .month, .KsDaterMulti-date-head .month, .KsDateMonth-date-head .month, .KsDateYear-date-head .month {\n    font-weight: bold; }\n\n.KsDatePicker .KsDater, .KsDaterMultiPicker .KsDater, .KsDateMonthPicker .KsDater, .KsDateYearPicker .KsDater {\n  position: absolute; }\n\n.KsDatePicker .KsDateMonth, .KsDaterMultiPicker .KsDateMonth, .KsDateMonthPicker .KsDateMonth, .KsDateYearPicker .KsDateMonth {\n  position: absolute; }\n\n.KsDatePicker .KsDater-head .year, .KsDaterMultiPicker .KsDater-head .year {\n  color: #c8c8c8; }\n\n.KsDateMonthPicker .KsDater-date-head .year, .KsDateYearPicker .KsDater-date-head .year {\n  font-weight: bold; }\n\n.KsDateMonthPicker .KsDater-days, .KsDateYearPicker .KsDater-days {\n  margin: 28px 0; }\n\n.readonly.KsDatePicker .KsDater-date, .readonly.KsDaterMultiPicker .KsDaterMulti-date {\n  background: #f5f5f5; }\n  .readonly.KsDatePicker .KsDater-date-days span, .readonly.KsDaterMultiPicker .KsDaterMulti-date-days span {\n    pointer-events: none;\n    color: #c8c8c8; }\n    .readonly.KsDatePicker .KsDater-date-days span.begin-active, .readonly.KsDaterMultiPicker .KsDaterMulti-date-days span.begin-active, .readonly.KsDatePicker .KsDater-date-days span.end-active, .readonly.KsDaterMultiPicker .KsDaterMulti-date-days span.end-active, .readonly.KsDatePicker .KsDater-date-days span.active, .readonly.KsDaterMultiPicker .KsDaterMulti-date-days span.active {\n      background: #777;\n      border-radius: 0;\n      color: #fff; }\n  .readonly.KsDatePicker .KsDater-date-days-btn, .readonly.KsDaterMultiPicker .KsDaterMulti-date-days-btn {\n    padding: 0; }\n    .readonly.KsDatePicker .KsDater-date-days-btn .reset, .readonly.KsDaterMultiPicker .KsDaterMulti-date-days-btn .reset, .readonly.KsDatePicker .KsDater-date-days-btn .collect, .readonly.KsDaterMultiPicker .KsDaterMulti-date-days-btn .collect {\n      padding: 0 32px 5px;\n      pointer-events: none; }\n    .readonly.KsDatePicker .KsDater-date-days-btn .reset, .readonly.KsDaterMultiPicker .KsDaterMulti-date-days-btn .reset {\n      text-align: left;\n      padding-left: 42px; }\n    .readonly.KsDatePicker .KsDater-date-days-btn .collect, .readonly.KsDaterMultiPicker .KsDaterMulti-date-days-btn .collect {\n      border-left: 8px solid #f5f5f5;\n      margin-left: -5px;\n      display: block; }\n\n.KsDatePicker {\n  position: relative; }\n\n.KsDaterMulti-date {\n  min-width: 316px; }\n  .KsDaterMulti-date-btn {\n    border-top: 1px solid #c8c8c8; }\n\n.KsDaterMultiPicker {\n  position: relative; }\n  .KsDaterMultiPicker-input input {\n    text-align: center;\n    min-width: 100px; }\n  .KsDaterMultiPicker-input .scope-icon {\n    color: #26c6da; }\n  .KsDaterMultiPicker .KsDaterMulti {\n    position: absolute; }\n  .KsDaterMultiPicker-btn {\n    margin-top: 20px;\n    border-top: 1px solid #c8c8c8; }\n    .KsDaterMultiPicker-btn .reset, .KsDaterMultiPicker-btn .collect {\n      line-height: 44px;\n      height: 44px; }\n\n.KsDateMonthPicker {\n  position: absolute; }\n\n.KsDateYear {\n  position: absolute; }\n\n.readonly.KsDatePicker .KsDatePicker-input {\n  background: #e9e9e9; }\n\n.readonly.KsDaterMultiPicker .KsDaterMultiPicker-input {\n  background: #e9e9e9; }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 332 */
+/* 362 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8794,17 +8935,17 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _index = __webpack_require__(333);
+	var _index = __webpack_require__(363);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _multi = __webpack_require__(336);
+	var _multi = __webpack_require__(366);
 
 	var _multi2 = _interopRequireDefault(_multi);
 
-	var _lang = __webpack_require__(334);
+	var _lang = __webpack_require__(364);
 
-	var _apage = __webpack_require__(337);
+	var _apage = __webpack_require__(367);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -9007,7 +9148,7 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 333 */
+/* 363 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9016,9 +9157,9 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _lang = __webpack_require__(334);
+	var _lang = __webpack_require__(364);
 
-	var _props = __webpack_require__(335);
+	var _props = __webpack_require__(365);
 
 	var _props2 = _interopRequireDefault(_props);
 
@@ -9062,12 +9203,12 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 334 */
+/* 364 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _keys = __webpack_require__(174);
+	var _keys = __webpack_require__(204);
 
 	var _keys2 = _interopRequireDefault(_keys);
 
@@ -9085,7 +9226,7 @@ webpackJsonp([0],[
 	    return ['日', '一', '二', '三', '四', '五', '六'];
 	};
 	// 月份
-	exports.get_months = function () {
+	exports.getMonths = exports.get_months = function () {
 	    var arr = [];
 	    for (var i = 0; i < 12; i++) {
 	        arr.push(i + 1 + '月');
@@ -9175,7 +9316,7 @@ webpackJsonp([0],[
 	    }
 	    return { year: year, month: month, stringify: year + '-' + (month + 1) };
 	}
-	exports.api_ym = api_ym;
+	exports.api_ym = exports.apiYm = api_ym;
 	/**
 	 * [split_dt 分割 '2016-10-11 10:01:03']
 	 * @return {[type]} [description]
@@ -9277,7 +9418,7 @@ webpackJsonp([0],[
 	exports.format_conver = format_conver;
 
 /***/ },
-/* 335 */
+/* 365 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9286,7 +9427,7 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _lang = __webpack_require__(334);
+	var _lang = __webpack_require__(364);
 
 	exports.default = {
 	    props: {
@@ -9318,7 +9459,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 336 */
+/* 366 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9327,9 +9468,9 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _lang = __webpack_require__(334);
+	var _lang = __webpack_require__(364);
 
-	var _props = __webpack_require__(335);
+	var _props = __webpack_require__(365);
 
 	var _props2 = _interopRequireDefault(_props);
 
@@ -9380,12 +9521,12 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 337 */
+/* 367 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _lang = __webpack_require__(334);
+	var _lang = __webpack_require__(364);
 
 	/**
 	 * [one_page_date 获取某页日期数据 上个月(部分) + 当前月(满月) + 下个月(部分)]
@@ -9524,22 +9665,22 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 338 */
+/* 368 */
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"KsDater\" cid=\"KsDater\">\n  <div class=\"KsDater-date\">\n    <div class=\"KsDater-date-head\">\n      <div class=\"retreat\" v-on:click.stop=\"click_month(-1)\">&lt;</div>\n      <div class=\"year\">{{now.getFullYear()}}年</div>\n      <div class=\"interstice\"></div>\n      <div class=\"month\">{{now.getMonth()+1}}月</div>\n      <div class=\"next\" v-on:click.stop=\"click_month(1)\">&gt;</div>\n    </div>\n    <div class=\"KsDater-date-week\">\n      <span v-for=\"day in days\" :class=\"{'week':day=='六'||day=='日'}\">{{day}}</span>\n    </div>\n    <div v-on:click.stop=\"pick_date($event)\">\n      <div class=\"KsDater-date-days\"\n           v-for=\"week in 6\">\n              <span\n                v-for=\"day in  7\"\n                :id=\"'dater'+_uid+'_'+(+week * 7 + day)\"\n                :class=\"{\n                      'pass':dates[week * 7 + day] && dates[week * 7 + day].status=='disabled',\n                      'active':dates[week * 7 + day] && dates[week * 7 + day].status=='active'}\">\n                      {{dates[week * 7 + day] && +dates[week * 7 + day].datetext}}</span>\n      </div>\n    </div>\n    <div class=\"KsDater-date-btn\" v-if=\"type=='datetime'\">\n      <select class=\"input\" v-model=\"times[0]\" v-on:change.stop=\"pick_time\">\n        <option v-bind:value=\"i|fr_limit\" v-for=\"i in 24\">{{i|fr_limit}}</option>\n      </select>\n      <select class=\"input mlr-10\" v-model=\"times[1]\" v-on:change.stop=\"pick_time\">\n        <option v-bind:value=\"i|fr_limit\" v-for=\"i in 60\">{{i|fr_limit}}</option>\n      </select>\n      <select class=\"input\" v-model=\"times[2]\" v-on:change.stop=\"pick_time\">\n        <option v-bind:value=\"i|fr_limit\" v-for=\"i in 60\">{{i|fr_limit}}</option>\n      </select>\n    </div>\n    <div class=\"KsDater-date-btn\" v-if=\"type!='datemulti'\">\n      <span class=\"today\" v-on:click.stop=\"today()\">今天</span>\n      <span class=\"clear\" v-on:click.stop=\"clear()\">清除</span>\n    </div>\n  </div>\n</div>\n\n";
 
 /***/ },
-/* 339 */
+/* 369 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(340)
+	__vue_script__ = __webpack_require__(370)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/dater-pure.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(344)
+	__vue_template__ = __webpack_require__(374)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -9558,7 +9699,7 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 340 */
+/* 370 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9567,13 +9708,13 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _sub = __webpack_require__(341);
+	var _sub = __webpack_require__(371);
 
 	var _sub2 = _interopRequireDefault(_sub);
 
-	var _lang = __webpack_require__(334);
+	var _lang = __webpack_require__(364);
 
-	var _apage = __webpack_require__(337);
+	var _apage = __webpack_require__(367);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -9731,16 +9872,16 @@ webpackJsonp([0],[
 	// <script>
 
 /***/ },
-/* 341 */
+/* 371 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(342)
+	__vue_script__ = __webpack_require__(372)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/sub.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(343)
+	__vue_template__ = __webpack_require__(373)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -9759,7 +9900,7 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 342 */
+/* 372 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -9803,29 +9944,29 @@ webpackJsonp([0],[
 	// </script>
 
 /***/ },
-/* 343 */
+/* 373 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div v-on:click=\"click\">\n    {{val}}\n</div>\n";
 
 /***/ },
-/* 344 */
+/* 374 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsDater\" cid=\"KsDater\"\n    v-on:click=\"pick($event)\">\n\n<div class=\"KsDater-date\" v-for=\"(key,date) in dates\">\n<div>\n    <div class=\"KsDater-date-days\"\n        v-for=\"week in 6\">\n        <span \n            v-for=\"day in  7\"\n            :id=\"'dater'+_uid+'_'+key+'_'+(+week * 7 + day)\"\n            :class=\"{\n                'pass':date[week * 7 + day] && date[week * 7 + day].status=='disabled',\n                'active':date[week * 7 + day] && date[week * 7 + day].status=='active'}\">\n                {{date[week * 7 + day] && +date[week * 7 + day].datetext}}</span>\n    </div>\n</div>\n</div>\n\n<!-- <div class=\"date-bd\" v-for=\"(key,data) in dates\">\n<div>\n    <div class=\"date-days\"\n        v-for=\"week in 6\">\n        <span \n            v-for=\"day in  7\"\n            :id=\"'dater'+_uid+'_'+key+'_'+(+week * 7 + day)\"\n            :class=\"{\n                'pass':data.date[week * 7 + day] && data.date[week * 7 + day].status=='disabled',\n                'active':data.date[week * 7 + day] && data.date[week * 7 + day].status=='active'}\">\n                {{data.date[week * 7 + day] && +data.date[week * 7 + day].datetext}}</span>\n    </div>\n</div>\n</div> -->\n\n<!-- <div class=\"_date\">\n<div>\n    <div class=\"_days\"\n        v-for=\"week in 6\">\n        <span \n            v-for=\"day in  7\"\n            :id=\"'dater'+_uid+'_'+(+week * 7 + day)\"\n            :class=\"{\n                'pass':dates[week * 7 + day] && dates[week * 7 + day].status=='disabled',\n                'active':dates[week * 7 + day] && dates[week * 7 + day].status=='active'}\">\n                {{dates[week * 7 + day] && +dates[week * 7 + day].datetext}}</span>\n    </div>\n</div>\n</div> -->\n{{val}}\n<sub :val=\"val\" v-on:change=\"val_change\"></sub>\n</div>\n";
 
 /***/ },
-/* 345 */
+/* 375 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(346)
-	__vue_script__ = __webpack_require__(348)
+	__webpack_require__(376)
+	__vue_script__ = __webpack_require__(378)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/date-picker.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(349)
+	__vue_template__ = __webpack_require__(382)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -9844,13 +9985,13 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 346 */
+/* 376 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(347);
+	var content = __webpack_require__(377);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(76)(content, {});
@@ -9859,8 +10000,8 @@ webpackJsonp([0],[
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./date-picker.vue", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./date-picker.vue");
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./date-picker.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./date-picker.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -9870,9 +10011,9 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 347 */
-331,
-/* 348 */
+/* 377 */
+361,
+/* 378 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9881,34 +10022,24 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _props = __webpack_require__(335);
+	var _props = __webpack_require__(365);
 
 	var _props2 = _interopRequireDefault(_props);
 
-	var _lang = __webpack_require__(334);
-
-	var _apage = __webpack_require__(337);
-
-	var _dater = __webpack_require__(329);
+	var _dater = __webpack_require__(359);
 
 	var _dater2 = _interopRequireDefault(_dater);
 
+	var _dateMonth = __webpack_require__(379);
+
+	var _dateMonth2 = _interopRequireDefault(_dateMonth);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// <template>
-	//   <div class="KsDatePicker" cid="KsDatePicker"
-	//        :class="{'readonly':readonly}">
-	//     <div class="_input" v-on:mouseup="show=!show">
-	//       <div class="ks-col-auto date-icon"><i class="icon"></i></div>
-	//       <input type="text" class="ks-col" placeholder="{{placeholder}}" v-model="value" readonly>
-	//     </div>
-	//     <ks-dater v-show="show" :value="value" :type="type" :readonly="readonly" v-on:change="current_change"></ks-dater>
-	//   </div>
-	// </template>
-	// <script>
 	exports.default = {
 	    components: {
-	        'ks-dater': _dater2.default
+	        'ks-dater': _dater2.default,
+	        'ks-date-month': _dateMonth2.default
 	    },
 	    mixins: [_props2.default],
 	    props: {
@@ -9917,12 +10048,11 @@ webpackJsonp([0],[
 	    data: function data() {
 
 	        return {
-	            show: false,
-	            input_value: ''
+	            show: false
 	        };
 	    },
 
-
+	    computed: {},
 	    methods: {
 	        close: function close() {
 	            this.show = false;
@@ -9935,7 +10065,7 @@ webpackJsonp([0],[
 
 
 	        // dater callback
-	        current_change: function current_change(cur_date) {
+	        change: function change(cur_date) {
 	            var _this = this;
 
 	            this.value = cur_date;
@@ -9947,10 +10077,6 @@ webpackJsonp([0],[
 	            }
 	        }
 	    },
-	    watch: {
-	        value: function value(val) {}
-	    },
-	    created: function created() {},
 	    ready: function ready() {
 	        document.addEventListener('click', this.isContains, false);
 	    },
@@ -9962,24 +10088,224 @@ webpackJsonp([0],[
 	// <style lang="scss">
 	//     @import '../styles/date';
 	// </style>
+	// <template>
+	//   <div class="KsDatePicker" cid="KsDatePicker"
+	//        :class="{'readonly':readonly}">
+	//     <div class="_input" v-on:mouseup="show=!show">
+	//       <div class="ks-col-auto date-icon"><i class="icon"></i></div>
+	//       <input type="text" class="ks-col" placeholder="{{placeholder}}" v-model="value" readonly>
+	//     </div>
+	//     <ks-dater
+	//         v-if="type!='datemonth'"
+	//         v-show="show" 
+	//         v-bind:value="value" 
+	//         v-bind:type="type" 
+	//         v-bind:readonly="readonly" 
+	//         v-on:change="change"></ks-dater>
+	//     <ks-date-month 
+	//         v-if="type=='datemonth'"
+	//         v-show="show" 
+	//         v-bind:value="value" 
+	//         v-bind:type="type" 
+	//         v-bind:readonly="readonly" 
+	//         v-on:change="change"></ks-date-month>
+	//
+	//   </div>
+	// </template>
+	// <script>
 
 /***/ },
-/* 349 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"KsDatePicker\" cid=\"KsDatePicker\"\n     :class=\"{'readonly':readonly}\">\n  <div class=\"KsDatePicker-input\" v-on:mouseup=\"show=!show\">\n    <div class=\"ks-col-auto date-icon\"><i class=\"icon\"></i></div>\n    <input type=\"text\" class=\"ks-col\" placeholder=\"{{placeholder}}\" v-model=\"value\" readonly>\n  </div>\n  <ks-dater v-show=\"show\" :value=\"value\" :type=\"type\" :readonly=\"readonly\" v-on:change=\"current_change\"></ks-dater>\n</div>\n";
-
-/***/ },
-/* 350 */
+/* 379 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(351)
+	__vue_script__ = __webpack_require__(380)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/ks/components/KsDater/src/date-month.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(381)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/zdzdesigner/Documents/KS/KS-FED/compiler-doc/src/ks/components/KsDater/src/date-month.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 380 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _lang = __webpack_require__(364);
+
+	var _months = (0, _lang.getMonths)(); // <template>
+	//     <div class="KsDateMonth" cid="KsDateMonth">
+	//         <div class="_date">
+	//             <div class="_head">
+	//                 <div class="retreat" v-on:click="prev">&lt;</div>
+	//                 <div class="year" v-text="year+'年'"></div>
+	//                 <div class="next" v-on:click="next">&gt;</div>
+	//             </div>
+	//             <div v-on:click="pick($event)">
+	//                 <div class="_days"
+	//                     v-for="row in 3">
+	//                     <span id="month{{_uid}}_{{[4*row+index]}}" v-bind:class="{
+	//                         'pass':months[4*row+index] 
+	//                                && months[4*row+index].status == 'disabled',
+	//                         'active':months[4*row+index] 
+	//                                && months[4*row+index].status == 'active',
+	//                         }" 
+	//                         v-for="(index,item) in 4">{{months[4*row+index].val}}</span>
+	//                 </div>
+	//             </div>
+	//             <div class="_btn">
+	//                 <span class="today" v-on:click="curmonth">本月</span>
+	//                 <span class="clear" v-on:click="clearmonth">清除</span>
+	//             </div>
+	//         </div>
+	//     </div>
+	// </template>
+	// <script type="text/javascript">
+	exports.default = {
+	    props: {
+	        value: {
+	            type: String,
+	            default: ''
+	        }
+	    },
+	    data: function data() {
+	        // console.log(this.value)
+	        if (this.value) {
+	            var yearmonth = this.value.split('-');
+	            var year = yearmonth[0];
+	            var month = yearmonth[1];
+	        } else {
+	            var dater = new Date();
+	            var year = dater.getFullYear();
+	        }
+
+	        return {
+	            year: year,
+	            month: month,
+	            interior: {
+	                year: year,
+	                month: month
+	            }
+	        };
+	    },
+
+
+	    computed: {
+	        value: {
+	            get: function get() {
+	                // console.log(this.interior.year+'-'+fullzero(this.interior.month))
+	                return this.interior.year + '-' + (0, _lang.fullzero)(this.interior.month);
+	            },
+	            set: function set(val) {
+
+	                if (!val || this.interior.month != this.month) return;
+
+	                var yearmonth = val.split('-');
+	                this.year = yearmonth[0];
+	                this.month = yearmonth[1];
+	                this.output();
+	            }
+	        },
+	        months: function months() {
+	            var monthval = '';
+	            if (this.interior.year == this.year) {
+	                monthval = this.interior.month;
+	            }
+
+	            return _months.map(function (month, index) {
+	                var status = '';
+	                if (index + 1 == monthval) status = 'active';
+	                return { val: month, status: status };
+	            });
+	        }
+	    },
+	    methods: {
+	        prev: function prev() {
+	            this.year = +this.year - 1;
+	        },
+	        next: function next() {
+	            this.year = +this.year + 1;
+	        },
+	        pick: function pick(event) {
+	            var id = event.target.id,
+	                index;
+	            if (!id) return;
+	            id = id.split('_');
+	            this.month = +id[1] + 1;
+	            this.output();
+	            // console.log(this.month)
+	        },
+	        curmonth: function curmonth() {
+	            var dater = new Date();
+	            this.year = dater.getFullYear();
+	            this.month = 1 + dater.getMonth();
+	            this.output();
+	        },
+	        output: function output() {
+	            this.interior.month = this.month;
+	            this.interior.year = this.year;
+	            this.$emit('change', this.value);
+	        },
+	        clearmonth: function clearmonth() {
+	            this.interior.month = '';
+	            this.$emit('change', '');
+	        }
+	    },
+	    created: function created() {
+	        // if(this.value)
+	        // console.log(this.value)
+	        // var dater = new Date()
+	        // this.year = dater.getFullYear()
+	        // this.value = this.value
+	        // this.curmonth()
+	    }
+	};
+	// </script>
+
+/***/ },
+/* 381 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"KsDateMonth\" cid=\"KsDateMonth\">\n    <div class=\"KsDateMonth-date\">\n        <div class=\"KsDateMonth-date-head\">\n            <div class=\"retreat\" v-on:click=\"prev\">&lt;</div>\n            <div class=\"year\" v-text=\"year+'年'\"></div>\n            <div class=\"next\" v-on:click=\"next\">&gt;</div>\n        </div>\n        <div v-on:click=\"pick($event)\">\n            <div class=\"KsDateMonth-date-days\"\n                v-for=\"row in 3\">\n                <span id=\"month{{_uid}}_{{[4*row+index]}}\" v-bind:class=\"{\n                    'pass':months[4*row+index] \n                           && months[4*row+index].status == 'disabled',\n                    'active':months[4*row+index] \n                           && months[4*row+index].status == 'active',\n                    }\" \n                    v-for=\"(index,item) in 4\">{{months[4*row+index].val}}</span>\n            </div>\n        </div>\n        <div class=\"KsDateMonth-date-btn\">\n            <span class=\"today\" v-on:click=\"curmonth\">本月</span>\n            <span class=\"clear\" v-on:click=\"clearmonth\">清除</span>\n        </div>\n    </div>\n</div>\n";
+
+/***/ },
+/* 382 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"KsDatePicker\" cid=\"KsDatePicker\"\n     :class=\"{'readonly':readonly}\">\n  <div class=\"KsDatePicker-input\" v-on:mouseup=\"show=!show\">\n    <div class=\"ks-col-auto date-icon\"><i class=\"icon\"></i></div>\n    <input type=\"text\" class=\"ks-col\" placeholder=\"{{placeholder}}\" v-model=\"value\" readonly>\n  </div>\n  <ks-dater\n      v-if=\"type!='datemonth'\"\n      v-show=\"show\" \n      v-bind:value=\"value\" \n      v-bind:type=\"type\" \n      v-bind:readonly=\"readonly\" \n      v-on:change=\"change\"></ks-dater>\n  <ks-date-month \n      v-if=\"type=='datemonth'\"\n      v-show=\"show\" \n      v-bind:value=\"value\" \n      v-bind:type=\"type\" \n      v-bind:readonly=\"readonly\" \n      v-on:change=\"change\"></ks-date-month>\n\n</div>\n";
+
+/***/ },
+/* 383 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(384)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/dater-range.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(353)
+	__vue_template__ = __webpack_require__(386)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -9998,7 +10324,7 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 351 */
+/* 384 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10007,15 +10333,15 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _index = __webpack_require__(333);
+	var _index = __webpack_require__(363);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _lang = __webpack_require__(334);
+	var _lang = __webpack_require__(364);
 
-	var _apage = __webpack_require__(337);
+	var _apage = __webpack_require__(367);
 
-	var _range = __webpack_require__(352);
+	var _range = __webpack_require__(385);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10032,7 +10358,7 @@ webpackJsonp([0],[
 	//             <div class="_week">
 	//                 <span v-for="day in days" :class="{'week':day=='六'||day=='日'}">{{day}}</span>
 	//             </div>
-	//             <div v-on:click="pick_date($event)">
+	//             <div v-on:mousedown="pick_date($event)">
 	//                 <div class="_days" v-for="week in 6">
 	//                     <span 
 	//                         v-for="day in  7"
@@ -10059,7 +10385,7 @@ webpackJsonp([0],[
 	//             <div class="_week">
 	//                 <span v-for="day in days" :class="{'week':day=='六'||day=='日'}">{{day}}</span>
 	//             </div>
-	//             <div v-on:click="pick_date($event)">
+	//             <div v-on:mousedown="pick_date($event)">
 	//                 <div class="_days"
 	//                     v-for="week in 6">
 	//                     <span 
@@ -10100,29 +10426,34 @@ webpackJsonp([0],[
 	    },
 
 	    methods: {
+	        uniq: function uniq(data) {
+	            return (data || []).reduce(function (arr, val) {
+	                if (val) arr.push(val);
+	                return arr;
+	            }, []);
+	        },
 	        redraw: function redraw(show_range, range_daters) {
+
 	            var show_start = show_range[0],
 	                show_end = show_range[1];
 	            this.value = '';
-
 	            this.range_daters = range_daters;
-	            // console.log(range_daters)
-	            // this.point_daters = range_daters
+
 	            // 取具体日期
 	            range_daters.length == 2 && (this.range_daters = (0, _range.get_range_dates)(range_daters));
-	            // console.log(range_daters,this.range_daters)
+	            //console.log(range_daters,this.range_daters)
 	            // 视图中选中长度
 	            this.range_daters_length = this.range_daters.length;
 	            if (this.range_daters.length == 2 && this.range_daters[0] == this.range_daters[this.range_daters.length - 1]) {
 	                this.range_daters_length = 1;
 	            }
 
-	            // console.log(show_start,show_end)
+	            // //console.log(show_start,show_end)
 	            // 比较展示
 	            if (this.compared_month(show_end, show_start)) {
 	                var ym = (0, _range.split_ym)(show_end);
 	                show_end = (0, _lang.next_month)(ym.year, ym.month).stringify + '-01';
-	                // console.log('show_end',show_end)
+	                // //console.log('show_end',show_end)
 	            }
 
 	            this.now = new Date(show_start);
@@ -10150,7 +10481,7 @@ webpackJsonp([0],[
 	            range_dater = this.get_range(this.range_daters, _date.dater);
 
 	            this.redraw([(0, _lang.stringify)(this.now), (0, _lang.stringify)(this.next_now)], range_dater);
-	            // console.log('range_dater',range_dater)
+	            // //console.log('range_dater',range_dater)
 	            this.$emit('change', range_dater);
 	        },
 
@@ -10184,7 +10515,7 @@ webpackJsonp([0],[
 	        click_month: function click_month(flag) {
 	            this.now.setMonth(this.now.getMonth() + flag, 1);
 	            this.now = new Date(this.now);
-	            // console.log(this.stringify(this.next_now) , this.stringify(this.now))
+	            // //console.log(this.stringify(this.next_now) , this.stringify(this.now))
 	            if (this.compared_month((0, _lang.stringify)(this.next_now), (0, _lang.stringify)(this.now))) {
 	                this.click_next_month(1);
 	            }
@@ -10206,7 +10537,7 @@ webpackJsonp([0],[
 	            this.next_dates = (0, _apage.one_page_date)(this.next_data.year, this.next_data.month, this.selectd);
 	        },
 	        selectd: function selectd(dater) {
-	            // console.log(this.range_daters)
+	            // //console.log(this.range_daters)
 	            if (~this.range_daters.indexOf(dater)) {
 	                if (this.range_daters[0] == dater || this.range_daters[this.range_daters.length - 1] == dater) {
 	                    return 'active';
@@ -10224,8 +10555,10 @@ webpackJsonp([0],[
 	            this.next_month_dates();
 	        },
 	        range_dater: function range_dater(val) {
-	            // console.log(val)
+	            val = this.uniq(val);
+	            // //console.log(val)
 	            if (val.length == 2) {
+
 	                this.redraw(val, val);
 	            } else {
 	                this.redraw([(0, _lang.stringify)(this.now), (0, _lang.stringify)(this.next_now)], val);
@@ -10233,29 +10566,26 @@ webpackJsonp([0],[
 	        }
 	    },
 	    created: function created() {
-	        // console.log(this.range_dater)
+
+	        this.range_dater = this.uniq(this.range_dater);
 	        if (!this.range_dater || !this.range_dater.length) {
 	            this.range_dater = [(0, _lang.stringify)(this.now), (0, _lang.stringify)(this.next_now)];
 	        }
 
-	        // this.next_month_dates()
-	        // this.click_next_month (1) 
-	        // this.dates = one_page_date(this.now.getFullYear(),this.now.getMonth(),this.selectd)
-	        // this.range_dater
 	        this.redraw(this.range_dater, this.range_dater);
 	    }
 	};
 	// </script>
 
 /***/ },
-/* 352 */
+/* 385 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _lang = __webpack_require__(334);
+	var _lang = __webpack_require__(364);
 
-	var _apage = __webpack_require__(337);
+	var _apage = __webpack_require__(367);
 
 	// 选择范围取值
 	function get_range_dates(range_dater) {
@@ -10371,22 +10701,22 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 353 */
+/* 386 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"KsDaterMulti\" cid=\"KsDaterMulti\">\n    <div class=\"KsDaterMulti-date\">\n        <div class=\"KsDaterMulti-date-head\">\n            <div class=\"retreat\" v-on:click=\"click_month(-1)\">&lt;</div>\n            <div class=\"year\">{{now.getFullYear()}}年</div>\n            <div class=\"interstice\"></div>\n            <div class=\"month\">{{now.getMonth()+1}}月</div>\n            <div class=\"next\" v-on:click=\"click_month(1)\">&gt;</div>\n        </div>\n        <div class=\"KsDaterMulti-date-week\">\n            <span v-for=\"day in days\" :class=\"{'week':day=='六'||day=='日'}\">{{day}}</span>\n        </div>\n        <div v-on:click=\"pick_date($event)\">\n            <div class=\"KsDaterMulti-date-days\" v-for=\"week in 6\">\n                <span \n                    v-for=\"day in  7\"\n                    :id=\"'dater'+_uid+'_'+(+week * 7 + day)+'_'+(dates[week * 7 + day] && dates[week * 7 + day].status)\"\n                    :class=\"{\n                        'pass':dates[week * 7 + day] && dates[week * 7 + day].status=='disabled',\n                        'scope-bg':dates[week * 7 + day] && dates[week * 7 + day].status=='scope-bg',\n                        'active':dates[week * 7 + day] && dates[week * 7 + day].status=='active'}\">\n                        {{dates[week * 7 + day] && +dates[week * 7 + day].datetext}}</span>\n            </div>\n        </div>\n        <div class=\"KsDaterMulti-date-btn\">\n            <span class=\"reset\" v-on:click=\"reset()\">重置</span>\n        </div>\n    </div>\n    <div class=\"KsDaterMulti-date\">\n        <div class=\"KsDaterMulti-date-head\">\n            <div class=\"retreat\" v-on:click=\"click_next_month(-1)\">&lt;</div>\n            <div class=\"year\">{{next_data.year}}年</div>\n            <div class=\"interstice\"></div>\n            <div class=\"month\">{{next_data.month+1}}月</div>\n            <div class=\"next\" v-on:click=\"click_next_month(1)\">&gt;</div>\n        </div>\n        <div class=\"KsDaterMulti-date-week\">\n            <span v-for=\"day in days\" :class=\"{'week':day=='六'||day=='日'}\">{{day}}</span>\n        </div>\n        <div v-on:click=\"pick_date($event)\">\n            <div class=\"KsDaterMulti-date-days\"\n                v-for=\"week in 6\">\n                <span \n                    v-for=\"day in  7\"\n                    :id=\"'dater'+_uid+'_'+(42+week * 7 + day)+'_'+(next_dates[week * 7 + day] && next_dates[week * 7 + day].status)\"\n                    :class=\"{\n                        'pass':next_dates[week * 7 + day] && next_dates[week * 7 + day].status=='disabled',\n                        'scope-bg':next_dates[week * 7 + day] && next_dates[week * 7 + day].status=='scope-bg',\n                        'active':next_dates[week * 7 + day] && next_dates[week * 7 + day].status=='active'}\">\n                        {{next_dates[week * 7 + day] && +next_dates[week * 7 + day].datetext}}</span>\n            </div>\n        </div>\n        <div class=\"KsDaterMulti-date-btn\">\n            <span class=\"selects\">已选择{{range_daters_length}}天</span>\n        </div>\n    </div>\n</div>\n";
+	module.exports = "\n<div class=\"KsDaterMulti\" cid=\"KsDaterMulti\">\n    <div class=\"KsDaterMulti-date\">\n        <div class=\"KsDaterMulti-date-head\">\n            <div class=\"retreat\" v-on:click=\"click_month(-1)\">&lt;</div>\n            <div class=\"year\">{{now.getFullYear()}}年</div>\n            <div class=\"interstice\"></div>\n            <div class=\"month\">{{now.getMonth()+1}}月</div>\n            <div class=\"next\" v-on:click=\"click_month(1)\">&gt;</div>\n        </div>\n        <div class=\"KsDaterMulti-date-week\">\n            <span v-for=\"day in days\" :class=\"{'week':day=='六'||day=='日'}\">{{day}}</span>\n        </div>\n        <div v-on:mousedown=\"pick_date($event)\">\n            <div class=\"KsDaterMulti-date-days\" v-for=\"week in 6\">\n                <span \n                    v-for=\"day in  7\"\n                    :id=\"'dater'+_uid+'_'+(+week * 7 + day)+'_'+(dates[week * 7 + day] && dates[week * 7 + day].status)\"\n                    :class=\"{\n                        'pass':dates[week * 7 + day] && dates[week * 7 + day].status=='disabled',\n                        'scope-bg':dates[week * 7 + day] && dates[week * 7 + day].status=='scope-bg',\n                        'active':dates[week * 7 + day] && dates[week * 7 + day].status=='active'}\">\n                        {{dates[week * 7 + day] && +dates[week * 7 + day].datetext}}</span>\n            </div>\n        </div>\n        <div class=\"KsDaterMulti-date-btn\">\n            <span class=\"reset\" v-on:click=\"reset()\">重置</span>\n        </div>\n    </div>\n    <div class=\"KsDaterMulti-date\">\n        <div class=\"KsDaterMulti-date-head\">\n            <div class=\"retreat\" v-on:click=\"click_next_month(-1)\">&lt;</div>\n            <div class=\"year\">{{next_data.year}}年</div>\n            <div class=\"interstice\"></div>\n            <div class=\"month\">{{next_data.month+1}}月</div>\n            <div class=\"next\" v-on:click=\"click_next_month(1)\">&gt;</div>\n        </div>\n        <div class=\"KsDaterMulti-date-week\">\n            <span v-for=\"day in days\" :class=\"{'week':day=='六'||day=='日'}\">{{day}}</span>\n        </div>\n        <div v-on:mousedown=\"pick_date($event)\">\n            <div class=\"KsDaterMulti-date-days\"\n                v-for=\"week in 6\">\n                <span \n                    v-for=\"day in  7\"\n                    :id=\"'dater'+_uid+'_'+(42+week * 7 + day)+'_'+(next_dates[week * 7 + day] && next_dates[week * 7 + day].status)\"\n                    :class=\"{\n                        'pass':next_dates[week * 7 + day] && next_dates[week * 7 + day].status=='disabled',\n                        'scope-bg':next_dates[week * 7 + day] && next_dates[week * 7 + day].status=='scope-bg',\n                        'active':next_dates[week * 7 + day] && next_dates[week * 7 + day].status=='active'}\">\n                        {{next_dates[week * 7 + day] && +next_dates[week * 7 + day].datetext}}</span>\n            </div>\n        </div>\n        <div class=\"KsDaterMulti-date-btn\">\n            <span class=\"selects\">已选择{{range_daters_length}}天</span>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 354 */
+/* 387 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(355)
+	__vue_script__ = __webpack_require__(388)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/date-range-picker.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(356)
+	__vue_template__ = __webpack_require__(389)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -10405,7 +10735,7 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 355 */
+/* 388 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10414,7 +10744,7 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _props = __webpack_require__(335);
+	var _props = __webpack_require__(365);
 
 	var _props2 = _interopRequireDefault(_props);
 
@@ -10444,6 +10774,11 @@ webpackJsonp([0],[
 	        };
 	    },
 
+	    computed: {
+	        titles: function titles() {
+	            return this.range || [];
+	        }
+	    },
 	    methods: {
 	        close: function close() {
 	            this.show = false;
@@ -10474,11 +10809,11 @@ webpackJsonp([0],[
 	//         <div class="ks-col">
 	//             <div class="ks-row-auto">
 	//                 <div class="ks-col">
-	//                     <input type="text" readonly placeholder="{{placeholder[0]}}" :value="range[0]">
+	//                     <input type="text" readonly placeholder="{{placeholder[0]}}" :value="titles[0]">
 	//                 </div>
 	//                 <i class="icon ks-col-auto scope-icon">&#xe677;</i>
 	//                 <div class="ks-col">
-	//                     <input type="text" readonly placeholder="{{placeholder[1]}}" :value="range[1]">
+	//                     <input type="text" readonly placeholder="{{placeholder[1]}}" :value="titles[1]">
 	//                 </div>
 	//             </div>
 	//         </div>
@@ -10489,22 +10824,56 @@ webpackJsonp([0],[
 	// <script type="text/javascript">
 
 /***/ },
-/* 356 */
+/* 389 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"KsDaterMultiPicker\" :class=\"{'readonly':readonly}\" cid=\"KsDaterMultiPicker\">\n    <div class=\"KsDaterMultiPicker-input\" v-on:mouseup=\"show=!show\">\n        <div class=\"ks-col-auto date-icon\"><i class=\"icon\">&#xe615;</i></div>\n        <div class=\"ks-col\">\n            <div class=\"ks-row-auto\">\n                <div class=\"ks-col\">\n                    <input type=\"text\" readonly placeholder=\"{{placeholder[0]}}\" :value=\"range[0]\">\n                </div>\n                <i class=\"icon ks-col-auto scope-icon\">&#xe677;</i>\n                <div class=\"ks-col\">\n                    <input type=\"text\" readonly placeholder=\"{{placeholder[1]}}\" :value=\"range[1]\">\n                </div>\n            </div>\n        </div>\n    </div>\n    <ks-dater-range v-show=\"show\" v-on:change=\"change\" :range_dater=\"range\"></ks-dater-range> \n</div>\n";
+	module.exports = "\n<div class=\"KsDaterMultiPicker\" :class=\"{'readonly':readonly}\" cid=\"KsDaterMultiPicker\">\n    <div class=\"KsDaterMultiPicker-input\" v-on:mouseup=\"show=!show\">\n        <div class=\"ks-col-auto date-icon\"><i class=\"icon\">&#xe615;</i></div>\n        <div class=\"ks-col\">\n            <div class=\"ks-row-auto\">\n                <div class=\"ks-col\">\n                    <input type=\"text\" readonly placeholder=\"{{placeholder[0]}}\" :value=\"titles[0]\">\n                </div>\n                <i class=\"icon ks-col-auto scope-icon\">&#xe677;</i>\n                <div class=\"ks-col\">\n                    <input type=\"text\" readonly placeholder=\"{{placeholder[1]}}\" :value=\"titles[1]\">\n                </div>\n            </div>\n        </div>\n    </div>\n    <ks-dater-range v-show=\"show\" v-on:change=\"change\" :range_dater=\"range\"></ks-dater-range> \n</div>\n";
 
 /***/ },
-/* 357 */
+/* 390 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.KsStoreClick = exports.KsStore = undefined;
+
+	var _Store = __webpack_require__(391);
+
+	var _Store2 = _interopRequireDefault(_Store);
+
+	var _StoreClick = __webpack_require__(396);
+
+	var _StoreClick2 = _interopRequireDefault(_StoreClick);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * @description: 封装了一些列的的复选框组件。
+	 * @summary:
+	 *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
+	 * @author: pkeros.
+	 * @date: 2016/10/11.
+	 */
+
+	exports.default = _Store2.default;
+	exports.KsStore = _Store2.default;
+	exports.KsStoreClick = _StoreClick2.default;
+
+/***/ },
+/* 391 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(358)
+	__webpack_require__(392)
+	__vue_script__ = __webpack_require__(394)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/ks/components/KsDater/src/date-month.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(359)
+	  console.warn("[vue-loader] src/ks/components/KsDropChoose/src/Store.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(395)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -10514,7 +10883,7 @@ webpackJsonp([0],[
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/zdzdesigner/Documents/KS/KS-FED/compiler-doc/src/ks/components/KsDater/src/date-month.vue"
+	  var id = "/Users/zdzdesigner/Documents/KS/KS-FED/compiler-doc/src/ks/components/KsDropChoose/src/Store.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -10523,70 +10892,47 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 358 */
-/***/ function(module, exports) {
+/* 392 */
+/***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	// style-loader: Adds some css to the DOM by adding a <style> tag
 
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	// <template>
-	//     <div class="KsDateMonth" cid="KsDateMonth">
-	//         <div class="_date">
-	//             <div class="_head">
-	//                 <div class="retreat">&lt;</div>
-	//                 <div class="year">2016年</div>
-	//                 <div class="next">&gt;</div>
-	//             </div>
-	//             <div class="_days"
-	//                 v-for="row in 3">
-	//                 <span class="pass" v-for="item in 4">{{months[4*row+item]}}</span>
-	//             </div>
-	//             <!-- <div class="_days">
-	//                 <span class="pass">一月</span>
-	//                 <span class="pass">二月</span>
-	//                 <span class="pass">三月</span>
-	//                 <span class="pass">四月</span>
-	//             </div>
-	//             <div class="_days">
-	//                 <span>五月</span>
-	//                 <span>六月</span>
-	//                 <span>七月</span>
-	//                 <span>八月</span>
-	//             </div>
-	//             <div class="_days">
-	//                 <span>九月</span>
-	//                 <span>十月</span>
-	//                 <span class="active">十一月</span>
-	//                 <span>十二月</span>
-	//             </div> -->
-	//
-	//             <div class="_btn">
-	//                 <span class="today">本月</span>
-	//                 <span class="clear">清除</span>
-	//             </div>
-	//         </div>
-	//     </div>
-	// </template>
-	// <script type="text/javascript">
-	exports.default = {
-	    data: function data() {
-	        return {
-	            months: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
-	        };
-	    }
-	};
-	// </script>
+	// load the styles
+	var content = __webpack_require__(393);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(76)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Store.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Store.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
-/* 359 */
-/***/ function(module, exports) {
+/* 393 */
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n<div class=\"KsDateMonth\" cid=\"KsDateMonth\">\n    <div class=\"KsDateMonth-date\">\n        <div class=\"KsDateMonth-date-head\">\n            <div class=\"retreat\">&lt;</div>\n            <div class=\"year\">2016年</div>\n            <div class=\"next\">&gt;</div>\n        </div>\n        <div class=\"KsDateMonth-date-days\"\n            v-for=\"row in 3\">\n            <span class=\"pass\" v-for=\"item in 4\">{{months[4*row+item]}}</span>\n        </div>\n        <!-- <div class=\"_days\">\n            <span class=\"pass\">一月</span>\n            <span class=\"pass\">二月</span>\n            <span class=\"pass\">三月</span>\n            <span class=\"pass\">四月</span>\n        </div>\n        <div class=\"_days\">\n            <span>五月</span>\n            <span>六月</span>\n            <span>七月</span>\n            <span>八月</span>\n        </div>\n        <div class=\"_days\">\n            <span>九月</span>\n            <span>十月</span>\n            <span class=\"active\">十一月</span>\n            <span>十二月</span>\n        </div> -->\n        \n        <div class=\"KsDateMonth-date-btn\">\n            <span class=\"today\">本月</span>\n            <span class=\"clear\">清除</span>\n        </div>\n    </div>\n</div>\n";
+	exports = module.exports = __webpack_require__(75)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".KsStoreClick {\n  padding: 10px; }\n  .KsStoreClick .radiofir {\n    position: relative; }\n  .KsStoreClick .p-l10 {\n    padding-left: 10px; }\n  .KsStoreClick .KsStore {\n    position: absolute;\n    top: 40px;\n    left: 0;\n    right: 0;\n    z-index: 10; }\n  .KsStoreClick .iconup {\n    position: absolute;\n    right: 10px;\n    top: 15px;\n    border-left: 6px solid transparent;\n    border-right: 6px solid transparent;\n    border-top: 7px solid #bfcbd9;\n    -webkit-transition: all 0.5s;\n    transition: all 0.5s; }\n  .KsStoreClick .icondown {\n    position: absolute;\n    right: 10px;\n    top: 15px;\n    border-left: 6px solid transparent;\n    border-right: 6px solid transparent;\n    border-top: 7px solid #bfcbd9;\n    -webkit-transform: rotate(180deg);\n            transform: rotate(180deg);\n    -webkit-transition: all 0.5s;\n    transition: all 0.5s; }\n\n.KsStoreClick .full, .KsStore .full {\n  width: 100%; }\n\n.KsStoreClick .perstore, .KsStore .perstore {\n  border: 1px solid #efefef; }\n\n.KsStoreClick .checkboxall, .KsStore .checkboxall {\n  margin-right: 0px;\n  margin-left: 0px;\n  padding: 0px 15px;\n  background: #fff;\n  line-height: 40px;\n  cursor: pointer; }\n  .KsStoreClick .checkboxall input[type=checkbox], .KsStore .checkboxall input[type=checkbox] {\n    width: 18px;\n    height: 18px;\n    vertical-align: middle;\n    margin-top: -3px; }\n\n.KsStoreClick .checkboxwhole, .KsStore .checkboxwhole {\n  margin-right: 0px;\n  margin-left: 0px;\n  padding: 0px 15px;\n  background: #fff; }\n\n.KsStoreClick .whole, .KsStore .whole {\n  border-top: 1px dashed #efefef;\n  line-height: 40px; }\n  .KsStoreClick .whole:first-child, .KsStore .whole:first-child {\n    border-top: 0px; }\n\n.KsStoreClick input {\n  outline: none; }\n\n.KsStore {\n  overflow: scroll; }\n", ""]);
+
+	// exports
+
 
 /***/ },
-/* 360 */
+/* 394 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10595,13 +10941,1733 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _keys = __webpack_require__(174);
+	var _typeof2 = __webpack_require__(283);
+
+	var _typeof3 = _interopRequireDefault(_typeof2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	// <template>  
+	//     <div class="KsStore" 
+	//         :style="max_height | filter_style min_width">
+	//         <div class="perstore ">
+	//             <div v-if="is_havechecked" class="checkboxall">
+	//                      <input type="checkbox" 
+	//                      @change = "checkAll()"
+	//                      v-model = "allchecked">
+	//                      <span>全选</span>
+	//             </div>
+	//             <div class="checkboxwhole">
+	//                 <div class="whole" v-show="!list.length && list.xhr">
+	//                     您还未配置门店~
+	//                 </div>
+	//
+	//                 <div class="checkbox1 whole" v-for="t in list">
+	//                   <label>
+	//                     <!-- <input type="checkbox" name="" :value="3" v-model="[3,4]"> -->
+	//                     <!-- {{checkeds}} -->
+	//                     <input type="checkbox" :value="t.id" v-model="checkeds">
+	//                     <span class="wholetext" v-text="t.name"></span>
+	//                     <span class="wholeaddress" v-text="t.addr"></span>
+	//                   </label>
+	//                 </div>
+	//
+	//             </div>
+	//         </div>
+	//     </div>
+	// </template>  
+	//
+	// <script type="text/javascript">
+
+	exports.default = {
+	    props: {
+	        store_part: {
+	            // toWay:true,
+	            type: Object,
+	            coerce: function coerce(val) {
+	                if (!val) {
+	                    val = {
+	                        choose_store: []
+	                    };
+	                }
+	                return val;
+	            }
+	        },
+	        is_havechecked: {
+	            type: Boolean,
+	            default: false
+	        },
+	        verify: {
+	            type: Boolean,
+	            default: false
+	        },
+	        // change后回调钩子
+	        changeCb: {},
+	        max_height: {
+	            type: Number
+	        },
+	        min_width: {
+	            type: Number
+	        },
+	        list: {
+	            type: Array
+	        }
+	    },
+	    data: function data() {
+	        return {
+	            checkeds: [],
+	            allchecked: false
+	        };
+	    },
+
+	    filters: {
+	        filter_style: function filter_style(height, width) {
+
+	            if (height && !width) {
+	                return {
+	                    'max-height': this.max_height + 'px'
+	                };
+	            } else if (!height && width) {
+	                return {
+	                    'min-width': this.min_width + 'px'
+	                };
+	            } else if (height && width) {
+	                return {
+	                    'max-height': this.max_height + 'px',
+	                    'min-width': this.min_width + 'px'
+	                };
+	            } else {
+	                return;
+	            }
+	        }
+	    },
+	    watch: {
+	        checkeds: function checkeds(val) {
+	            this.watch_checkeds(val);
+	            this.verify = !!val.length;
+	        },
+	        store_part: function store_part(val) {
+	            this.checkeds = val.choose_store;
+	        },
+	        list: function list(_list) {
+	            this.list = _list;
+	            var val = this.store_part;
+	            //直接输数组
+	            if ((0, _typeof3.default)(val.choose_store[0]) != 'object') {
+	                this.checkeds = val.choose_store;
+	            } else {
+	                this.checkeds = val.choose_store.map(function (t) {
+	                    return t.id;
+	                });
+	            }
+	        }
+	    },
+	    methods: {
+	        watch_checkeds: function watch_checkeds(val) {
+	            if (val.length == this.list.length) {
+	                this.allchecked = true;
+	            } else {
+	                this.allchecked = false;
+	            }
+
+	            var list = this.list.filter(function (t) {
+	                if (~val.indexOf(t.id)) {
+	                    return true;
+	                }
+	            }).map(function (arr) {
+	                return {
+	                    name: arr.name,
+	                    id: arr.id
+	                };
+	            });
+	            if (this.list.length && val) {
+	                this.store_part.choose_store = list;
+	            }
+
+	            if (typeof this.changeCb == 'function') {
+	                //console.log(this.$parse(this.list))
+	                var index = this.$parse(this.list).map(function (item) {
+	                    return item.id;
+	                }).indexOf(val[val.length - 1]);
+
+	                this.changeCb(index);
+	            }
+	        },
+	        checkAll: function checkAll() {
+	            var allstore = this.list.map(function (t) {
+	                return t.id;
+	            });
+
+	            this.allchecked ? this.checkeds = allstore : this.checkeds = [];
+	        }
+	    },
+	    ready: function ready() {
+	        //console.log(this.list)
+	        //this.list = list
+	    }
+	};
+	// </script>  
+	// <style lang="scss">
+	//   @import "../styles/Store";
+	// </style>
+
+/***/ },
+/* 395 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"KsStore\" \n    :style=\"max_height | filter_style min_width\">\n    <div class=\"perstore \">\n        <div v-if=\"is_havechecked\" class=\"checkboxall\">\n                 <input type=\"checkbox\" \n                 @change = \"checkAll()\"\n                 v-model = \"allchecked\">\n                 <span>全选</span>\n        </div>\n        <div class=\"checkboxwhole\">\n            <div class=\"whole\" v-show=\"!list.length && list.xhr\">\n                您还未配置门店~\n            </div>\n      \n            <div class=\"checkbox1 whole\" v-for=\"t in list\">\n              <label>\n                <!-- <input type=\"checkbox\" name=\"\" :value=\"3\" v-model=\"[3,4]\"> -->\n                <!-- {{checkeds}} -->\n                <input type=\"checkbox\" :value=\"t.id\" v-model=\"checkeds\">\n                <span class=\"wholetext\" v-text=\"t.name\"></span>\n                <span class=\"wholeaddress\" v-text=\"t.addr\"></span>\n              </label>\n            </div>\n\n        </div>\n    </div>\n</div>\n";
+
+/***/ },
+/* 396 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(397)
+	__vue_script__ = __webpack_require__(399)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/ks/components/KsDropChoose/src/StoreClick.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(400)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/zdzdesigner/Documents/KS/KS-FED/compiler-doc/src/ks/components/KsDropChoose/src/StoreClick.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 397 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(398);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(76)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./StoreClick.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./StoreClick.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 398 */
+393,
+/* 399 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _Store = __webpack_require__(391);
+
+	var _Store2 = _interopRequireDefault(_Store);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	    components: {
+	        'store': _Store2.default
+	    },
+	    props: {
+	        store_part: {
+	            // toWay:true,
+	            type: Object,
+	            coerce: function coerce(val) {
+	                if (!val) {
+	                    val = {
+	                        choose_store: []
+	                    };
+	                }
+	                return val;
+	            }
+	        },
+	        is_havechecked: {
+	            type: Boolean,
+	            default: false
+	        },
+	        // change后回调钩子
+	        changeCb: {},
+	        max_height: {
+	            type: Number
+	        },
+	        min_width: {
+	            type: Number
+	        },
+	        store_list_show: {
+	            type: Boolean,
+	            default: false
+	        },
+	        list: {
+	            type: Array
+	        }
+	    },
+	    data: function data() {
+	        return {
+	            choose_part: []
+	        };
+	    },
+
+	    filters: {
+	        filter_name: function filter_name(val) {
+	            var choose_part = [];
+	            if (val.choose_store.length) {
+	                val.choose_store.forEach(function (k) {
+	                    choose_part.push(k.name);
+	                });
+	            }
+	            return choose_part.join(' , ');
+	        }
+	    },
+	    methods: {
+	        clickinput: function clickinput() {
+	            //debugger
+	            this.store_list_show = !this.store_list_show;
+	        }
+	    },
+	    ready: function ready() {
+	        var _this = this;
+
+	        window.addEventListener('click', function (e) {
+	            if (_this.$els.name == null) return;
+	            if (!_this.$els.name.contains(e.target)) {
+	                _this.store_list_show = false;
+	            }
+	        });
+	    }
+	};
+	// </script>  
+	// <style lang="scss">
+	//   @import "../styles/Store";
+	// </style>
+	// <template>  
+	// <div class="KsStoreClick"  v-el:name>            
+	//     <div class="radiofir ">
+	//             <i :class="store_list_show ? 'icondown' : 'iconup'"></i>
+	//             <input type="text" class="input-xl full" 
+	//                 @click="clickinput()" 
+	//                 readonly="readonly"
+	//                 value="{{store_part | filter_name}}"
+	//                 />
+	//                 <store class="store_pos"
+	//                     v-show="store_list_show"
+	//                     :store_part.sync = "store_part"
+	//                     :list.sync = "list"
+	//                     :is_havechecked = "is_havechecked"
+	//                     :max_height = "max_height"
+	//                     :min_width = "min_width"></store>
+	//     </div>
+	// </div>
+	// </template>  
+	//
+	// <script type="text/javascript">
+
+/***/ },
+/* 400 */
+/***/ function(module, exports) {
+
+	module.exports = "  \n<div class=\"KsStoreClick\"  v-el:name>            \n    <div class=\"radiofir \">\n            <i :class=\"store_list_show ? 'icondown' : 'iconup'\"></i>\n            <input type=\"text\" class=\"input-xl full\" \n                @click=\"clickinput()\" \n                readonly=\"readonly\"\n                value=\"{{store_part | filter_name}}\"\n                />\n                <store class=\"store_pos\"\n                    v-show=\"store_list_show\"\n                    :store_part.sync = \"store_part\"\n                    :list.sync = \"list\"\n                    :is_havechecked = \"is_havechecked\"\n                    :max_height = \"max_height\"\n                    :min_width = \"min_width\"></store>\n    </div>\n</div>\n";
+
+/***/ },
+/* 401 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.KsDialogChoose = undefined;
+
+	var _KsDialogChoose = __webpack_require__(402);
+
+	var _KsDialogChoose2 = _interopRequireDefault(_KsDialogChoose);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _KsDialogChoose2.default; /**
+	                                             * @description: 封装了一些列的的复选框组件。
+	                                             * @summary:
+	                                             *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
+	                                             * @author: pkeros.
+	                                             * @date: 2016/10/11.
+	                                             */
+
+	exports.KsDialogChoose = _KsDialogChoose2.default;
+
+/***/ },
+/* 402 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(403)
+	__vue_script__ = __webpack_require__(405)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/ks/components/KsDialogChoose/src/KsDialogChoose.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(412)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/zdzdesigner/Documents/KS/KS-FED/compiler-doc/src/ks/components/KsDialogChoose/src/KsDialogChoose.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 403 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(404);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(76)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./KsDialogChoose.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./KsDialogChoose.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 404 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(75)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".KsDialogChoose .radiofir {\n  position: relative; }\n  .KsDialogChoose .radiofir .full {\n    width: 100%; }\n\n.KsDialogChoose .store_pos {\n  position: absolute;\n  top: 40px;\n  left: 0;\n  right: 0;\n  z-index: 10;\n  overflow: scroll; }\n\n.KsDialogChoose .txtr {\n  text-align: right; }\n\n.KsDialogChoose .btngroup .mr-10 {\n  margin-right: 10px; }\n\n.KsDialogChoose .btngroup .mt-20 {\n  margin-top: 20px; }\n\n.KsDialogChoose .btngroup .checkall {\n  margin-right: 20px;\n  font-family: PingFangSC-Regular;\n  font-size: 13px;\n  color: #2196F3;\n  line-height: 13px;\n  cursor: pointer; }\n\n.KsDialogChoose .btngroup .reset {\n  margin-right: 10px;\n  font-family: PingFangSC-Regular;\n  font-size: 13px;\n  color: #2196F3;\n  line-height: 13px;\n  cursor: pointer; }\n\n.KsDialogChoose .btngroup .errortxt {\n  float: left;\n  color: red; }\n\n.KsDialogChoose ul {\n  overflow: hidden;\n  margin-top: 20px; }\n  .KsDialogChoose ul li {\n    margin-right: 10px;\n    margin-bottom: 20px;\n    float: left;\n    cursor: pointer; }\n    .KsDialogChoose ul li span {\n      padding: 5px 10px;\n      background-color: #f5f5f5;\n      display: block;\n      border-radius: 2px;\n      border: 1px solid #f5f5f5; }\n    .KsDialogChoose ul li.check span {\n      color: #2196F3;\n      background: #FFFFFF;\n      border: 1px solid #2196F3; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 405 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _stringify = __webpack_require__(149);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _KsButton = __webpack_require__(226);
+
+	var _KsButton2 = _interopRequireDefault(_KsButton);
+
+	var _KsDialogProgram = __webpack_require__(406);
+
+	var _KsDialogProgram2 = _interopRequireDefault(_KsDialogProgram);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	// <template>  
+	// <div class="KsDialogChoose">            
+	//     <div class="radiofir ">
+	//         <input type="text" class="input full" 
+	//             @click="clickinput()" 
+	//             readonly="readonly"
+	//             v-model="showtxt"
+	//             />
+	//     </div>
+	//     <ks-dialog-program  
+	//         :title="'请选择交易门店'" 
+	//         :show="is_show" 
+	//         :cb-close="close_dialog"
+	//         :width = "width" >
+	//         <div class="trade_store">
+	//             <ul>
+	//                 <li v-for = "i in list" 
+	//                     :class="i.ischecked && 'check'"
+	//                     @click="choosestore(i)">
+	//                     <span>{{i.name}}</span>
+	//                     <i></i>
+	//                 </li>
+	//             </ul>
+	//             <div class="txtr btngroup">
+	//                 <span class="errortxt" v-show = "errorshow">*您尚未选择门店</span>
+	//                 <span class="reset" @click="reset()">重选</span>
+	//                 <span class="checkall" @click="checkall()">全选</span>
+	//                 <ks-button :ghost="true" type="other" style="margin-right: 10px"
+	//                     @click="close_dialog">取消</ks-button>
+	//                 <ks-button :type="'primary'"
+	//                     @click="save()">确认</ks-button>
+	//             </div>
+	//         </div>
+	//     </ks-dialog-program>
+	// </div>
+	// </template>  
+	//
+	// <script type="text/javascript">  
+	exports.default = {
+	    props: {
+	        list: {
+	            type: Array
+	        },
+	        sid: {
+	            type: Array
+	        }
+	    },
+	    components: {
+	        KsDialogProgram: _KsDialogProgram2.default,
+	        KsButton: _KsButton2.default
+	    },
+	    data: function data() {
+	        return {
+	            is_show: false,
+	            width: 600,
+	            total: 0,
+	            showtxt: '',
+	            onestorename: '',
+	            listparse: [],
+	            num: 0,
+	            errorshow: false
+	        };
+	    },
+
+	    methods: {
+	        close_dialog: function close_dialog() {
+	            this.is_show = false;
+	            this.list = [].concat(JSON.parse((0, _stringify2.default)(this.listparse)));
+	        },
+	        clickinput: function clickinput() {
+	            this.is_show = true;
+	        },
+	        choosestore: function choosestore(t) {
+	            t.ischecked = !t.ischecked;
+	        },
+	        save: function save() {
+	            this.look();
+	            if (this.num == 0) {
+	                this.errorshow = true;
+	            } else {
+	                this.is_show = false;
+	                this.listparse = [].concat(JSON.parse((0, _stringify2.default)(this.list)));
+	            }
+	        },
+	        look: function look() {
+	            var _this = this;
+
+	            this.total = 0;
+	            this.list.forEach(function (t) {
+	                if (t.ischecked) {
+	                    _this.total++;
+	                    _this.onestorename = t.name;
+	                }
+	            });
+	            this.num = this.total;
+	            if (this.total == 1) {
+	                this.total = this.onestorename;
+	            } else {
+	                this.total = '共有' + this.total + '家门店';
+	            }
+
+	            this.showtxt = this.total;
+	        },
+	        reset: function reset() {
+	            this.total = 0;
+	            this.list.forEach(function (t) {
+	                t.ischecked = false;
+	            });
+	        },
+	        checkall: function checkall() {
+	            this.total = this.list.length;
+	            this.list.forEach(function (t) {
+	                t.ischecked = true;
+	            });
+	        }
+	    },
+	    watch: {
+	        list: function list(val) {
+	            var _this2 = this;
+
+	            val.forEach(function (t) {
+	                _this2.sid.forEach(function (item) {
+	                    if (t.id == item) {
+	                        t.ischecked = true;
+	                    }
+	                });
+	            });
+	            this.look();
+	            this.errorshow = false;
+	            this.listparse = [].concat(JSON.parse((0, _stringify2.default)(val)));
+	        }
+	    },
+	    ready: function ready() {}
+	};
+	// </script>  
+	// <style lang="scss">
+	//   @import "../styles/KsDialogChoose";
+	// </style>
+
+/***/ },
+/* 406 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.KsDialogProgram = undefined;
+
+	var _Dialog = __webpack_require__(407);
+
+	var _Dialog2 = _interopRequireDefault(_Dialog);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _Dialog2.default; /**
+	                                     * @description: 封装了一些列的的复选框组件。
+	                                     * @summary:
+	                                     *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
+	                                     * @author: pkeros.
+	                                     * @date: 2016/10/11.
+	                                     */
+
+	exports.KsDialogProgram = _Dialog2.default;
+
+/***/ },
+/* 407 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(408)
+	__vue_script__ = __webpack_require__(410)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/ks/components/KsDialogProgram/src/Dialog.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(411)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/zdzdesigner/Documents/KS/KS-FED/compiler-doc/src/ks/components/KsDialogProgram/src/Dialog.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 408 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(409);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(76)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Dialog.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Dialog.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 409 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(75)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".dialog-mask {\n  position: fixed;\n  top: 0;\n  right: 0;\n  z-index: 100;\n  width: 100%;\n  height: 100%;\n  background: #222;\n  opacity: 0.3; }\n\n.dialog {\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  z-index: 13;\n  -webkit-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  border-radius: 3px;\n  overflow: hidden;\n  min-width: 400px;\n  width: 40%;\n  background-color: #fff;\n  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);\n  z-index: 9999;\n  max-height: 90%;\n  overflow-y: auto; }\n\n.dialog-hd {\n  position: relative; }\n\n.dialog-hd a {\n  float: right;\n  position: absolute;\n  top: 20px;\n  right: 0; }\n\n.dialog-hd h2 {\n  padding: 20px 0; }\n\n.dialog-primary-title {\n  margin: 0 20px; }\n  .dialog-primary-title h2 {\n    color: #444;\n    font-size: 24px;\n    line-height: 24px;\n    border-bottom: 1px solid #e0e0e0; }\n  .dialog-primary-title a {\n    border-radius: 50%;\n    line-height: 1em;\n    width: 22px;\n    height: 22px;\n    line-height: 22px;\n    text-align: center;\n    color: #777; }\n  .dialog-primary-title a:hover {\n    background-color: #EF5350;\n    color: #fff; }\n  .dialog-primary-title a:active {\n    background-color: #E53935;\n    color: #fff; }\n  .dialog-primary-title i {\n    font-size: 10px; }\n\n.dialog-bd {\n  padding: 0 20px 20px; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 410 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	// <template>
+	//     <div  v-show="show">
+	//     <div class="dialog" :style="{width:width+'px'}">
+	//         <div class="dialog-hd dialog-primary-title" v-show="!is_storetype">
+	//             <h2 v-text="title"></h2>
+	//             <a href="javascript:;" class="icon-clear" @click="_close()"><i class="icon">&#xe611;</i></a>
+	//         </div>
+	//
+	//
+	//         <div class="dialog-bd" v-show="!is_storetype">
+	//             <slot></slot>
+	//         </div>
+	//         <div v-show="is_storetype">
+	//             <slot></slot>
+	//         </div>
+	//
+	//     </div>
+	//     <div class="dialog-mask"></div>
+	// </div>
+	// </template>
+	// <script type="text/javascript">
+	exports.default = {
+	    props: {
+	        title: { type: String },
+	        show: { type: Boolean, default: false },
+	        width: { type: Number },
+	        is_storetype: { type: Boolean, default: false },
+	        cbClose: {}
+	    },
+	    data: function data() {
+	        return {
+	            align: {
+	                points: ['cc', 'cc']
+	            },
+	            monitor: true
+	        };
+	    },
+
+	    methods: {
+	        _close: function _close() {
+	            if (this.cbClose) {
+	                this.cbClose('cancel');
+	            }
+	            this.show = false;
+	        }
+	    },
+	    created: function created() {
+	        this.title = this.title || '标题';
+	    },
+	    ready: function ready() {}
+	};
+	// </script>
+	// <style lang="scss">
+	//   @import "../styles/Dialog";
+	// </style>
+
+/***/ },
+/* 411 */
+/***/ function(module, exports) {
+
+	module.exports = "\n    <div  v-show=\"show\">\n    <div class=\"dialog\" :style=\"{width:width+'px'}\">\n        <div class=\"dialog-hd dialog-primary-title\" v-show=\"!is_storetype\">\n            <h2 v-text=\"title\"></h2>\n            <a href=\"javascript:;\" class=\"icon-clear\" @click=\"_close()\"><i class=\"icon\">&#xe611;</i></a>\n        </div>\n\n\n        <div class=\"dialog-bd\" v-show=\"!is_storetype\">\n            <slot></slot>\n        </div>\n        <div v-show=\"is_storetype\">\n            <slot></slot>\n        </div>\n        \n    </div>\n    <div class=\"dialog-mask\"></div>\n</div>\n";
+
+/***/ },
+/* 412 */
+/***/ function(module, exports) {
+
+	module.exports = "  \n<div class=\"KsDialogChoose\">            \n    <div class=\"radiofir \">\n        <input type=\"text\" class=\"input full\" \n            @click=\"clickinput()\" \n            readonly=\"readonly\"\n            v-model=\"showtxt\"\n            />\n    </div>\n    <ks-dialog-program  \n        :title=\"'请选择交易门店'\" \n        :show=\"is_show\" \n        :cb-close=\"close_dialog\"\n        :width = \"width\" >\n        <div class=\"trade_store\">\n            <ul>\n                <li v-for = \"i in list\" \n                    :class=\"i.ischecked && 'check'\"\n                    @click=\"choosestore(i)\">\n                    <span>{{i.name}}</span>\n                    <i></i>\n                </li>\n            </ul>\n            <div class=\"txtr btngroup\">\n                <span class=\"errortxt\" v-show = \"errorshow\">*您尚未选择门店</span>\n                <span class=\"reset\" @click=\"reset()\">重选</span>\n                <span class=\"checkall\" @click=\"checkall()\">全选</span>\n                <ks-button :ghost=\"true\" type=\"other\" style=\"margin-right: 10px\"\n                    @click=\"close_dialog\">取消</ks-button>\n                <ks-button :type=\"'primary'\"\n                    @click=\"save()\">确认</ks-button>\n            </div>\n        </div>\n    </ks-dialog-program>\n</div>\n";
+
+/***/ },
+/* 413 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.KsItemFloor = exports.KsItem = undefined;
+
+	var _Item = __webpack_require__(414);
+
+	var _Item2 = _interopRequireDefault(_Item);
+
+	var _ItemFloor = __webpack_require__(419);
+
+	var _ItemFloor2 = _interopRequireDefault(_ItemFloor);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * @description: 封装了一些列的的复选框组件。
+	 * @summary:
+	 *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
+	 * @author: pkeros.
+	 * @date: 2016/10/11.
+	 */
+
+	exports.default = _Item2.default;
+	exports.KsItem = _Item2.default;
+	exports.KsItemFloor = _ItemFloor2.default;
+
+/***/ },
+/* 414 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(415)
+	__vue_script__ = __webpack_require__(417)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/ks/components/KsFloorSelect/src/Item.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(418)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/zdzdesigner/Documents/KS/KS-FED/compiler-doc/src/ks/components/KsFloorSelect/src/Item.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 415 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(416);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(76)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Item.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Item.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 416 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(75)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".KsItemFloor {\n  border: 1px solid #C8C8C8;\n  border-radius: 2px; }\n  .KsItemFloor .input {\n    border: 0;\n    background: none;\n    padding: 8px;\n    box-sizing: border-box; }\n  .KsItemFloor .full {\n    width: 100%; }\n  .KsItemFloor .turnright {\n    width: 40px;\n    text-align: center;\n    border-left: 1px solid #C8C8C8;\n    border-right: 1px solid #C8C8C8;\n    position: relative; }\n  .KsItemFloor .iconright {\n    position: absolute;\n    top: 18px;\n    right: 12px;\n    background-color: #26C6DA;\n    height: 2px;\n    width: 20px; }\n  .KsItemFloor .iconarrow {\n    position: absolute;\n    top: 14px;\n    right: 11px;\n    width: 8px;\n    height: 8px;\n    border-top: 2px solid #26C6DA;\n    border-right: 2px solid #26C6DA;\n    -webkit-transform: rotate(45deg);\n            transform: rotate(45deg); }\n  .KsItemFloor .iconup {\n    position: absolute;\n    right: 10px;\n    top: 11px;\n    width: 8px;\n    height: 8px;\n    border-left: 1px solid #C8C8C8;\n    border-bottom: 1px solid #C8C8C8;\n    -webkit-transform: rotate(-45deg);\n            transform: rotate(-45deg);\n    -webkit-transition: all 0.2s;\n    transition: all 0.2s; }\n  .KsItemFloor .icondown {\n    position: absolute;\n    right: 10px;\n    top: 16px;\n    width: 8px;\n    height: 8px;\n    border-left: 1px solid #C8C8C8;\n    border-bottom: 1px solid #C8C8C8;\n    -webkit-transform: rotate(-225deg);\n            transform: rotate(-225deg);\n    -webkit-transition: all 0.2s;\n    transition: all 0.2s; }\n\n.KsItem, .KsItemFloor {\n  position: relative; }\n  .KsItem ul, .KsItemFloor ul {\n    position: absolute;\n    top: 36px;\n    left: -1px;\n    border: 1px solid #C8C8C8;\n    border-radius: 2px;\n    max-height: 367px;\n    overflow-y: scroll;\n    z-index: 2;\n    background-color: #fff; }\n    .KsItem ul li, .KsItemFloor ul li {\n      line-height: 36px;\n      text-align: center;\n      width: 120px; }\n      .KsItem ul li span, .KsItemFloor ul li span {\n        font-family: PingFangSC-Regular;\n        font-size: 13px;\n        color: #444444; }\n      .KsItem ul li:hover, .KsItemFloor ul li:hover {\n        background-color: #F5F5F5;\n        cursor: pointer; }\n      .KsItem ul li.check, .KsItemFloor ul li.check {\n        background-color: #2196F3; }\n        .KsItem ul li.check span, .KsItemFloor ul li.check span {\n          color: #fff; }\n      .KsItem ul li.disabled, .KsItemFloor ul li.disabled {\n        background-color: #000;\n        opacity: 0.2;\n        cursor: not-allowed; }\n        .KsItem ul li.disabled span, .KsItemFloor ul li.disabled span {\n          color: #fff; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 417 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	// <template>
+	//     <div class="ks-col  KsItem"  
+	//         v-el:floor
+	//         @click="clickinput()" >
+	//         <input type="text" class="input full" 
+	//             readonly="readonly"
+	//             v-model="floor_value" />
+	//         <i :class="floor_show ? 'icondown' : 'iconup'"></i>
+	//         <ul v-show = "floor_show">
+	//             <li 
+	//                 v-for="item in floorlist"
+	//                 :class="{
+	//                     'check':ischeck == $index ,
+	//                     'disabled': item.isdisabled ? true :false
+	//                 }"
+	//                 @click="choosefloor(item)">
+	//                 <span>{{item.name }}</span>
+	//                 <i></i>
+	//             </li>
+	//         </ul>
+	//     </div>
+	// </template>
+	// <script type="text/javascript">
+	exports.default = {
+	    props: {
+	        floor_value: {
+	            type: String,
+	            default: 'B1'
+	        },
+	        limit_before: {
+	            type: String,
+	            default: ''
+	        },
+	        limit_after: {
+	            type: String,
+	            default: ''
+	        },
+	        isdisabled: {
+	            type: Boolean,
+	            default: true
+	        }
+	    },
+	    data: function data() {
+	        return {
+	            floorlist: [],
+	            floorlistafter: [],
+	            floor_show: false,
+	            ischeck: -1
+	        };
+	    },
+
+	    methods: {
+	        clickinput: function clickinput() {
+	            var _this = this;
+
+	            if (!this.limit_before) {
+	                this.floorlistafter.forEach(function (m) {
+	                    m.isdisabled = false;
+	                });
+	            }
+	            var isdisabledarray = [];
+	            if (this.limit_after) {
+
+	                this.floorlist = this.floorlistafter.concat();
+	                this.floorlist.forEach(function (t, index) {
+	                    if (t.name == _this.limit_after) {
+	                        if (_this.isdisabled) {
+	                            //console.log(index)
+	                            //console.log(this.limit_after)
+	                            for (var j = index + 1; j < _this.floorlist.length; j++) {
+	                                _this.floorlist[j].isdisabled = true;
+	                            }
+	                        } else {
+	                            _this.floorlist.splice(index + 1, _this.floorlist.length - 1);
+	                        }
+	                    }
+	                });
+	            }
+
+	            this.floor_show = !this.floor_show;
+	            if (this.floor_value) {
+	                this.floorlist.forEach(function (t, index) {
+	                    if (t.name == _this.floor_value) {
+	                        _this.ischeck = index;
+	                    }
+	                });
+	            }
+	        },
+	        choosefloor: function choosefloor(item) {
+	            //this.floor_show = !this.floor_show
+	            if (item.isdisabled) return;
+
+	            this.floor_value = item.name;
+	            if (this.limit_before) {
+	                if (!~this.floor_value.indexOf('B')) {
+	                    //有F---
+	                    //有F-
+	                    if (!~this.limit_before.indexOf('B')) {
+	                        if (+this.floor_value.split('F')[1] > +this.limit_before.split('F')[1]) {
+	                            this.limit_before = '';
+	                        }
+	                    } else {
+	                        //有B-
+	                        this.limit_before = '';
+	                    }
+	                } else {
+	                    //有B---
+	                    if (this.limit_before.indexOf('B') != -1) {
+	                        //有B-
+	                        if (+this.floor_value.split('B')[1] < +this.limit_before.split('B')[1]) {
+	                            this.limit_before = '';
+	                        }
+	                    }
+	                }
+	            }
+	        }
+	    },
+	    ready: function ready() {
+	        var _this2 = this;
+
+	        for (var i = 20; i >= 1; i--) {
+	            this.floorlist.push({ name: 'F' + i, isdisabled: false });
+	            this.floorlistafter.push({ name: 'F' + i, isdisabled: false });
+	        }
+
+	        for (var j = 1; j <= 5; j++) {
+	            this.floorlist.push({ name: 'B' + j, isdisabled: false });
+	            this.floorlistafter.push({ name: 'B' + j, isdisabled: false });
+	        }
+
+	        window.addEventListener('click', function (e) {
+	            if (_this2.$els.floor == null) return;
+	            if (!_this2.$els.floor.contains(e.target)) {
+	                _this2.floor_show = false;
+	            }
+	        });
+	    }
+	};
+	// </script>
+	// <style lang="scss">
+	//   @import "../styles/Floor";
+	// </style>
+	//
+
+/***/ },
+/* 418 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"ks-col  KsItem\"  \n    v-el:floor\n    @click=\"clickinput()\" >\n    <input type=\"text\" class=\"input full\" \n        readonly=\"readonly\"\n        v-model=\"floor_value\" />\n    <i :class=\"floor_show ? 'icondown' : 'iconup'\"></i>\n    <ul v-show = \"floor_show\">\n        <li \n            v-for=\"item in floorlist\"\n            :class=\"{\n                'check':ischeck == $index ,\n                'disabled': item.isdisabled ? true :false\n            }\"\n            @click=\"choosefloor(item)\">\n            <span>{{item.name }}</span>\n            <i></i>\n        </li>\n    </ul>\n</div>\n";
+
+/***/ },
+/* 419 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(420)
+	__vue_script__ = __webpack_require__(422)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/ks/components/KsFloorSelect/src/ItemFloor.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(423)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/zdzdesigner/Documents/KS/KS-FED/compiler-doc/src/ks/components/KsFloorSelect/src/ItemFloor.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 420 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(421);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(76)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./ItemFloor.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./ItemFloor.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 421 */
+416,
+/* 422 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _Item = __webpack_require__(414);
+
+	var _Item2 = _interopRequireDefault(_Item);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	    props: {
+	        floor_begin: {
+	            type: String,
+	            default: ''
+	        },
+	        floor_end: {
+	            type: String,
+	            default: ''
+	        },
+	        isdisabled: {
+	            type: Boolean,
+	            default: false
+	        }
+	    },
+	    components: {
+	        item: _Item2.default
+	    },
+	    data: function data() {
+	        return {
+	            limit_before: this.floor_end,
+	            limit_after: this.floor_begin
+	        };
+	    },
+
+	    watch: {
+	        floor_begin: function floor_begin(val) {
+	            this.limit_after = val;
+	        },
+	        floor_end: function floor_end(val) {
+	            this.limit_before = val;
+	        },
+	        limit_before: function limit_before(val) {
+	            //debugger
+	            this.floor_end = val;
+	        },
+	        limit_after: function limit_after(val) {
+	            this.floor_begin = val;
+	        }
+	    },
+	    methods: {},
+	    ready: function ready() {}
+	};
+	// </script>
+	// <style lang="scss">
+	//   @import "../styles/Floor";
+	// </style>
+	// <template>
+	//     <div class="KsItemFloor ks-row">
+	//         <item
+	//             :floor_value.sync = "floor_begin"
+	//             :limit_before.sync = "limit_before"></item>
+	//         <div class="ks-col turnright">
+	//             <span class="iconright"></span>
+	//             <span class="iconarrow"></span>
+	//         </div>
+	//
+	//         <item
+	//             :floor_value.sync = "floor_end"
+	//             :limit_after.sync = "limit_after"
+	//             :isdisabled.sync = "isdisabled"></item>
+	//     </div>
+	// </template>
+	// <script type="text/javascript">
+
+/***/ },
+/* 423 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"KsItemFloor ks-row\">\n    <item\n        :floor_value.sync = \"floor_begin\"\n        :limit_before.sync = \"limit_before\"></item>\n    <div class=\"ks-col turnright\">\n        <span class=\"iconright\"></span>\n        <span class=\"iconarrow\"></span>\n    </div>\n    \n    <item\n        :floor_value.sync = \"floor_end\"\n        :limit_after.sync = \"limit_after\"\n        :isdisabled.sync = \"isdisabled\"></item>\n</div>\n";
+
+/***/ },
+/* 424 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.KsAddTableItem = undefined;
+
+	var _AddTableItem = __webpack_require__(425);
+
+	var _AddTableItem2 = _interopRequireDefault(_AddTableItem);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _AddTableItem2.default; /**
+	                                           * @description: 封装了一些列的的复选框组件。
+	                                           * @summary:
+	                                           *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
+	                                           * @author: pkeros.
+	                                           * @date: 2016/10/11.
+	                                           */
+
+	exports.KsAddTableItem = _AddTableItem2.default;
+
+/***/ },
+/* 425 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(426)
+	__vue_script__ = __webpack_require__(428)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/ks/components/KsAddTable/src/AddTableItem.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(429)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/zdzdesigner/Documents/KS/KS-FED/compiler-doc/src/ks/components/KsAddTable/src/AddTableItem.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 426 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(427);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(76)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./AddTableItem.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./AddTableItem.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 427 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(75)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".AddTableItem .btn-group {\n  background: #E9F5FF;\n  padding: 20px; }\n  .AddTableItem .btn-group ul {\n    overflow: hidden;\n    display: inline-block; }\n    .AddTableItem .btn-group ul li {\n      background: #E9E9E9;\n      border-radius: 23px;\n      height: 24px;\n      line-height: 24px;\n      margin-right: 10px;\n      text-align: center;\n      float: left;\n      cursor: pointer;\n      margin-top: 10px; }\n      .AddTableItem .btn-group ul li span {\n        color: #999999;\n        padding: 3px 11px; }\n      .AddTableItem .btn-group ul li.check {\n        background: #2196F3; }\n        .AddTableItem .btn-group ul li.check span {\n          color: #fff;\n          padding: 3px 11px; }\n  .AddTableItem .btn-group .btn-add {\n    display: inline-block;\n    background: #4CAF50;\n    border-radius: 50%;\n    width: 24px;\n    height: 24px;\n    position: relative;\n    cursor: pointer; }\n    .AddTableItem .btn-group .btn-add:before {\n      position: absolute;\n      top: 11px;\n      left: 5px;\n      background: #fff;\n      content: '';\n      width: 14px;\n      height: 2px; }\n    .AddTableItem .btn-group .btn-add:after {\n      position: absolute;\n      left: 11px;\n      top: 5px;\n      background: #fff;\n      content: '';\n      height: 14px;\n      width: 2px; }\n\n.AddTableItem .top {\n  padding: 20px;\n  background: #E8F5FF; }\n  .AddTableItem .top .btn-input {\n    margin-bottom: 20px; }\n    .AddTableItem .top .btn-input input {\n      border: none;\n      background: #D3DFE8;\n      border: 1px solid #D3DFE8;\n      color: #444444; }\n      .AddTableItem .top .btn-input input.disabled {\n        background: #FFFFFF;\n        border: 1px solid #C8C8C8;\n        border-radius: 2px;\n        border-radius: 2px;\n        font-size: 13px; }\n      .AddTableItem .top .btn-input input:focus {\n        background: #FFFFFF;\n        border: 1px solid #C8C8C8;\n        border-radius: 2px;\n        border-radius: 2px;\n        font-size: 13px; }\n    .AddTableItem .top .btn-input span {\n      margin-left: 10px;\n      cursor: pointer;\n      color: #C8C8C8; }\n  .AddTableItem .top .table-default {\n    margin-bottom: 6px; }\n    .AddTableItem .top .table-default ul {\n      overflow: hidden; }\n      .AddTableItem .top .table-default ul li {\n        border: 1px solid #DAE4ED;\n        border-radius: 2px;\n        margin-right: 10px;\n        margin-bottom: 20px;\n        float: left;\n        cursor: pointer; }\n        .AddTableItem .top .table-default ul li span {\n          font-size: 14px;\n          padding: 5px 10px;\n          color: #444444;\n          display: block; }\n        .AddTableItem .top .table-default ul li.alreadychoose {\n          background: #FFFFFF;\n          border-radius: 2px; }\n\n.AddTableItem .middle {\n  padding: 20px; }\n  .AddTableItem .middle .mb-20 {\n    margin-bottom: 20px; }\n  .AddTableItem .middle .title {\n    font-size: 13px;\n    color: #999999;\n    width: 53px;\n    height: 30px;\n    line-height: 30px;\n    text-align: right;\n    padding-right: 10px; }\n  .AddTableItem .middle ul {\n    display: inline-block; }\n    .AddTableItem .middle ul li {\n      background: #999999;\n      border-radius: 2px;\n      float: left;\n      margin-right: 10px; }\n      .AddTableItem .middle ul li span {\n        padding: 5px 10px;\n        color: #fff;\n        display: block;\n        cursor: pointer;\n        font-size: 14px; }\n      .AddTableItem .middle ul li.disabled {\n        background: #000;\n        opacity: 0.2; }\n        .AddTableItem .middle ul li.disabled span {\n          cursor: not-allowed; }\n\n.AddTableItem .bottom {\n  position: relative;\n  margin: 20px; }\n  .AddTableItem .bottom .tip {\n    height: 18px;\n    font-size: 13px;\n    color: #C8C8C8;\n    position: absolute;\n    bottom: 0;\n    left: 0; }\n  .AddTableItem .bottom .txtr {\n    text-align: right; }\n  .AddTableItem .bottom .btngroup .mr-10 {\n    margin-right: 10px; }\n  .AddTableItem .bottom .btngroup .mt-20 {\n    margin-top: 20px; }\n  .AddTableItem .bottom .btngroup .checkall {\n    margin-right: 20px;\n    font-size: 13px;\n    color: #2196F3;\n    line-height: 13px;\n    cursor: pointer; }\n  .AddTableItem .bottom .btngroup .reset {\n    margin-right: 20px;\n    font-family: PingFangSC-Regular;\n    font-size: 13px;\n    color: #2196F3;\n    line-height: 13px;\n    cursor: pointer; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 428 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _stringify = __webpack_require__(149);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	var _KsButton = __webpack_require__(226);
+
+	var _KsButton2 = _interopRequireDefault(_KsButton);
+
+	var _KsDialogProgram = __webpack_require__(406);
+
+	var _KsDialogProgram2 = _interopRequireDefault(_KsDialogProgram);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	// <template>
+	// <div class="AddTableItem">
+	//     <ks-dialog-program  
+	//         :show="is_show" 
+	//         :cb-close="close_dialog" 
+	//         :width="width"
+	//         :is_storetype = "is_storetype">
+	//         <div class="dialog-main" id = "dialog">
+	//             <div class="btn-group">
+	//                 <ul>
+	//                     <li v-for="i in list"
+	//                         @click="clicktablehead($index)"
+	//                         :class="(showindex == $index) && 'check'">
+	//                         <span>{{i.title}}</span>
+	//                     </li>
+	//                     <li class="btn-add"
+	//                         @click="addtablename()"
+	//                         v-show = "addicon && list.length < 11"></li>
+	//                 </ul>   
+	//             </div>
+	//             <div 
+	//                 v-for = "listitem in list"
+	//                 v-show = "showindex == $index">
+	//                 <div class="top" >
+	//                     <div class="btn-input">
+	//                         <input type="text" class="input" 
+	//                             v-model = "listitem.title"
+	//                             @click = "modifyname($event,$index)"
+	//                             @keyup.enter="savetablename($event,$index)">
+	//                         <span 
+	//                             @click="deletetable($index)"
+	//                             v-show="$index != 0">删除当前分组</span>
+	//                     </div>
+	//                     <div class="table-default">
+	//                         <ul>
+	//                             <li 
+	//                                 v-for = "n in listitem.defaultlist"
+	//                                 :class = "n.ischeck && 'alreadychoose'"
+	//                                 @click="removedefault(n,$index)">
+	//                                 <span>{{n.name}}</span>
+	//                             </li>
+	//                         </ul>
+	//                     </div>
+	//                 </div>
+	//                 <div class="middle" >
+	//                     <div class="ks-row mb-20" v-for="first in listitem.addlist">
+	//                         <div class="ks-col title">{{first.title}}</div>
+	//                         <ul class="ks-col">
+	//                             <li 
+	//                                 v-for="item in first.list_data"
+	//                                 :class="(item.isdisabled) && 'disabled'"
+	//                                 @click="adddefault(item,$index,first)">
+	//                                 <span>{{item.name}}</span>
+	//                             </li>
+	//                         </ul>
+	//                     </div>
+	//                 </div>
+	//                 <div class="bottom" >
+	//                     <span class="tip">点击你需要的表格项添加或移除，也可以拖拽进行排序</span>
+	//                     <div class="txtr btngroup">
+	//                         <span class="reset" @click="reset($index)">重选</span>
+	//                         <span class="checkall" @click="checkall($index)">全选</span>
+	//                         <ks-button :ghost="true" type="other" style="margin-right: 10px"
+	//                             @click="close_dialog">取消</ks-button>
+	//                         <ks-button :type="'primary'"
+	//                             @click="savetable()">确认</ks-button>
+	//                     </div>
+	//                 </div>
+	//             </div>
+	//         </div>
+	//     </ks-dialog-program>
+	// </div>
+	// </template>
+	// <script type="text/javascript">
+
+
+	exports.default = {
+	    components: {
+	        KsDialogProgram: _KsDialogProgram2.default,
+	        KsButton: _KsButton2.default
+	    },
+	    props: {
+	        list: {
+	            type: Array
+	        },
+	        checkalllist: {
+	            type: Array
+	        },
+	        datasource: {
+	            type: Object
+	        },
+	        is_show: {
+	            type: Boolean,
+	            default: false
+	        },
+	        width: {
+	            type: Number
+	        },
+	        is_storetype: {
+	            type: Boolean,
+	            default: false
+	        },
+	        prefix: {
+	            type: String
+	        }
+	    },
+	    data: function data() {
+	        return {
+	            showindex: 0,
+	            addicon: true,
+	            tableindex: -1,
+	            addIndex: -1
+	        };
+	    },
+
+	    methods: {
+	        //点击全部选择
+	        checkall: function checkall(index) {
+	            var data = JSON.parse((0, _stringify2.default)(this.checkalllist));
+	            this.list[index].defaultlist = data;
+
+	            this.list[index].addlist.forEach(function (t) {
+	                t.list_data.forEach(function (i) {
+	                    i.isdisabled = true;
+	                });
+	            });
+	        },
+
+	        //重新选择
+	        reset: function reset(index) {
+	            var data = JSON.parse((0, _stringify2.default)(this.datasource.defaultlist));
+	            this.list[index].defaultlist = data;
+	            this.list[index].addlist.forEach(function (t) {
+	                t.list_data.forEach(function (i) {
+	                    i.isdisabled = false;
+	                });
+	            });
+	        },
+
+	        //删除当前分组
+	        deletetable: function deletetable(index) {
+	            this.list.splice(index, 1);
+	            this.showindex = index - 1;
+	        },
+
+	        //更改表头名字,点击input
+	        modifyname: function modifyname(event, index) {
+	            event.target.focus();
+	        },
+
+	        //不可更改表头名字,按下enter
+	        savetablename: function savetablename(event, index) {
+	            event.target.blur();
+	        },
+
+	        //点击表头
+	        clicktablehead: function clicktablehead(index) {
+	            this.showindex = index;
+	        },
+
+	        //保存表格
+	        savetable: function savetable() {
+	            var prefix = this.prefix + '_list';
+	            if (!this.addicon) {
+	                var data = JSON.parse(localStorage.getItem(prefix));
+	                data[this.tableindex] = this.list[0];
+	                localStorage.setItem(prefix, (0, _stringify2.default)(data));
+	            } else {
+	                localStorage.setItem(prefix, (0, _stringify2.default)(this.list));
+	            }
+	            //console.log(JSON.parse(localStorage.getItem('list')))
+	            this.is_show = false;
+	        },
+
+	        //点击下面上去
+	        adddefault: function adddefault(n, index, parent) {
+	            if (n.isdisabled) {
+	                return;
+	            }
+	            this.list[this.showindex].defaultlist.push({
+	                title: parent.title,
+	                id: n.id,
+	                name: n.name,
+	                ischeck: true
+	            });
+
+	            parent.list_data[index].isdisabled = true;
+	        },
+
+	        //点击上面撤销
+	        removedefault: function removedefault(n, index) {
+	            if (!n.title) {
+	                return;
+	            }
+	            this.list[this.showindex].addlist.forEach(function (t, index) {
+	                if (t.title == n.title) {
+	                    t.list_data.forEach(function (i) {
+	                        if (i.name == n.name) {
+	                            i.isdisabled = false;
+	                        }
+	                    });
+	                }
+	            });
+
+	            this.list[this.showindex].defaultlist.splice(index, 1);
+	        },
+
+	        //点击增加一个表,+
+	        addtablename: function addtablename(event) {
+	            //var num = {1:"一",2:"二",3:"三",4:"四",5:"五",6:"六",7:"七",8:"八",9:"九",10:"十"}
+	            var data = JSON.parse((0, _stringify2.default)(this.datasource));
+	            //data.title = "自定义" + num[this.list.length]
+	            data.title = "自定义表";
+	            data.tableid = this.list.length;
+	            this.list.push(data);
+	            this.showindex = this.list.length - 1;
+	        },
+	        close_dialog: function close_dialog() {
+	            this.is_show = false;
+	        }
+	    },
+	    events: {
+	        'show_dialog': function show_dialog(index) {
+
+	            var prefix = this.prefix + '_list';
+	            this.showindex = 0;
+	            this.tableindex = index;
+	            if (localStorage.getItem(prefix) != null) {
+	                this.list = JSON.parse(localStorage.getItem(prefix));
+	            }
+	            if (index != -1) {
+	                this.list = [JSON.parse((0, _stringify2.default)(this.list[index]))];
+	                this.addicon = false;
+	            } else {
+	                this.addicon = true;
+	            }
+	            this.is_show = true;
+	        }
+	    },
+	    watch: {
+	        'list': function list(val) {
+	            this.list = val;
+	        }
+	    },
+	    ready: function ready() {}
+	};
+	// </script>
+	// <style lang="scss">
+	//   @import "../styles/AddTable";
+	// </style>
+
+/***/ },
+/* 429 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"AddTableItem\">\n    <ks-dialog-program  \n        :show=\"is_show\" \n        :cb-close=\"close_dialog\" \n        :width=\"width\"\n        :is_storetype = \"is_storetype\">\n        <div class=\"dialog-main\" id = \"dialog\">\n            <div class=\"btn-group\">\n                <ul>\n                    <li v-for=\"i in list\"\n                        @click=\"clicktablehead($index)\"\n                        :class=\"(showindex == $index) && 'check'\">\n                        <span>{{i.title}}</span>\n                    </li>\n                    <li class=\"btn-add\"\n                        @click=\"addtablename()\"\n                        v-show = \"addicon && list.length < 11\"></li>\n                </ul>   \n            </div>\n            <div \n                v-for = \"listitem in list\"\n                v-show = \"showindex == $index\">\n                <div class=\"top\" >\n                    <div class=\"btn-input\">\n                        <input type=\"text\" class=\"input\" \n                            v-model = \"listitem.title\"\n                            @click = \"modifyname($event,$index)\"\n                            @keyup.enter=\"savetablename($event,$index)\">\n                        <span \n                            @click=\"deletetable($index)\"\n                            v-show=\"$index != 0\">删除当前分组</span>\n                    </div>\n                    <div class=\"table-default\">\n                        <ul>\n                            <li \n                                v-for = \"n in listitem.defaultlist\"\n                                :class = \"n.ischeck && 'alreadychoose'\"\n                                @click=\"removedefault(n,$index)\">\n                                <span>{{n.name}}</span>\n                            </li>\n                        </ul>\n                    </div>\n                </div>\n                <div class=\"middle\" >\n                    <div class=\"ks-row mb-20\" v-for=\"first in listitem.addlist\">\n                        <div class=\"ks-col title\">{{first.title}}</div>\n                        <ul class=\"ks-col\">\n                            <li \n                                v-for=\"item in first.list_data\"\n                                :class=\"(item.isdisabled) && 'disabled'\"\n                                @click=\"adddefault(item,$index,first)\">\n                                <span>{{item.name}}</span>\n                            </li>\n                        </ul>\n                    </div>\n                </div>\n                <div class=\"bottom\" >\n                    <span class=\"tip\">点击你需要的表格项添加或移除，也可以拖拽进行排序</span>\n                    <div class=\"txtr btngroup\">\n                        <span class=\"reset\" @click=\"reset($index)\">重选</span>\n                        <span class=\"checkall\" @click=\"checkall($index)\">全选</span>\n                        <ks-button :ghost=\"true\" type=\"other\" style=\"margin-right: 10px\"\n                            @click=\"close_dialog\">取消</ks-button>\n                        <ks-button :type=\"'primary'\"\n                            @click=\"savetable()\">确认</ks-button>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </ks-dialog-program>\n</div>\n";
+
+/***/ },
+/* 430 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.KsImage = undefined;
+
+	var _KsImage = __webpack_require__(431);
+
+	var _KsImage2 = _interopRequireDefault(_KsImage);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _KsImage2.default; /**
+	                                      * @description: 封装了一些列的的复选框组件。
+	                                      * @summary:
+	                                      *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
+	                                      * @author: pkeros.
+	                                      * @date: 2016/10/11.
+	                                      */
+
+	exports.KsImage = _KsImage2.default;
+
+/***/ },
+/* 431 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(432)
+	__vue_script__ = __webpack_require__(434)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/ks/components/KsImage/src/KsImage.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(435)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/zdzdesigner/Documents/KS/KS-FED/compiler-doc/src/ks/components/KsImage/src/KsImage.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 432 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(433);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(76)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./KsImage.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./KsImage.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 433 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(75)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".ks-image-box {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: rgba(0, 0, 0, 0.5); }\n  .ks-image-box .image-content {\n    position: fixed;\n    top: 54px;\n    left: 54px;\n    right: 54px;\n    bottom: 54px;\n    background: #444; }\n  .ks-image-box img {\n    max-width: 100%;\n    max-height: 100%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%); }\n  .ks-image-box i {\n    position: absolute;\n    right: 10px;\n    top: 10px;\n    width: 54px;\n    height: 54px;\n    text-align: center;\n    line-height: 54px;\n    color: #fff;\n    background: rgba(0, 0, 0, 0.25);\n    font-size: 33px;\n    cursor: pointer;\n    border-radius: 2px; }\n    .ks-image-box i:hover {\n      background: #f44336; }\n    .ks-image-box i:active {\n      background: #ea1c0d; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 434 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	// <template>  
+	//     <div class="ks-image-box" v-show="show">
+	//         <div class="image-content">
+	//             <img :src="url">
+	//             <i class="icon" @click="close">&#xe60d;</i>
+	//         </div>
+	//     </div>
+	// </template>   
+	//
+	//
+	// <script type="text/javascript">
+	exports.default = {
+	    props: {
+	        show: { type: Boolean, default: false },
+	        url: { type: String, default: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1490777740832&di=29af36b1dddd1d1a6cf8848d27049175&imgtype=0&src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201510%2F03%2F20151003150321_EuYFh.jpeg" }
+	    },
+	    data: function data() {
+	        return {};
+	    },
+
+	    methods: {
+	        close: function close() {
+	            this.show = false;
+	            this.$emit('change', this.show);
+	        }
+	    }
+	};
+	// </script>
+	//
+	// <style lang="scss">
+	//     @import "../styles/Image";
+	// </style>
+
+/***/ },
+/* 435 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"ks-image-box\" v-show=\"show\">\n    <div class=\"image-content\">\n        <img :src=\"url\">\n        <i class=\"icon\" @click=\"close\">&#xe60d;</i>\n    </div>\n</div>\n";
+
+/***/ },
+/* 436 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _keys = __webpack_require__(204);
 
 	var _keys2 = _interopRequireDefault(_keys);
 
 	exports.default = install;
 
-	var _KsLimitNumberFixed = __webpack_require__(361);
+	var _KsLimitNumberFixed = __webpack_require__(437);
 
 	var _KsLimitNumberFixed2 = _interopRequireDefault(_KsLimitNumberFixed);
 
@@ -10620,7 +12686,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 361 */
+/* 437 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -10715,7 +12781,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 362 */
+/* 438 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10725,15 +12791,15 @@ webpackJsonp([0],[
 	});
 	exports.Filter = undefined;
 
-	var _keys = __webpack_require__(174);
+	var _keys = __webpack_require__(204);
 
 	var _keys2 = _interopRequireDefault(_keys);
 
-	var _filterTrim = __webpack_require__(363);
+	var _filterTrim = __webpack_require__(439);
 
 	var _filterTrim2 = _interopRequireDefault(_filterTrim);
 
-	var _toDate = __webpack_require__(364);
+	var _toDate = __webpack_require__(440);
 
 	var _toDate2 = _interopRequireDefault(_toDate);
 
@@ -10764,7 +12830,7 @@ webpackJsonp([0],[
 	exports.Filter = Filter;
 
 /***/ },
-/* 363 */
+/* 439 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -10786,7 +12852,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 364 */
+/* 440 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -10819,18 +12885,18 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 365 */
+/* 441 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 366 */,
-/* 367 */,
-/* 368 */,
-/* 369 */,
-/* 370 */,
-/* 371 */
+/* 442 */,
+/* 443 */,
+/* 444 */,
+/* 445 */,
+/* 446 */,
+/* 447 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
@@ -10845,8 +12911,8 @@ webpackJsonp([0],[
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./main.vue", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../../../node_modules/ks-autobem-loader/index.js?type=css!./../../../../../node_modules/sass-loader/index.js!./../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./main.vue");
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./main.vue", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js!../../../../../node_modules/ks-autobem-loader/index.js?type=css!../../../../../node_modules/sass-loader/index.js!../../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./main.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});

@@ -1,4 +1,4 @@
-<script lang="babel">
+<script>
   import store from './vuex/store'
 
   export default{

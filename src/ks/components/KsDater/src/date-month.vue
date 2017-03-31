@@ -2,46 +2,132 @@
     <div class="KsDateMonth" cid="KsDateMonth">
         <div class="_date">
             <div class="_head">
-                <div class="retreat">&lt;</div>
-                <div class="year">2016年</div>
-                <div class="next">&gt;</div>
+                <div class="retreat" v-on:click="prev">&lt;</div>
+                <div class="year" v-text="year+'年'"></div>
+                <div class="next" v-on:click="next">&gt;</div>
             </div>
-            <div class="_days"
-                v-for="row in 3">
-                <span class="pass" v-for="item in 4">{{months[4*row+item]}}</span>
+            <div v-on:click="pick($event)">
+                <div class="_days"
+                    v-for="row in 3">
+                    <span id="month{{_uid}}_{{[4*row+index]}}" v-bind:class="{
+                        'pass':months[4*row+index] 
+                               && months[4*row+index].status == 'disabled',
+                        'active':months[4*row+index] 
+                               && months[4*row+index].status == 'active',
+                        }" 
+                        v-for="(index,item) in 4">{{months[4*row+index].val}}</span>
+                </div>
             </div>
-            <!-- <div class="_days">
-                <span class="pass">一月</span>
-                <span class="pass">二月</span>
-                <span class="pass">三月</span>
-                <span class="pass">四月</span>
-            </div>
-            <div class="_days">
-                <span>五月</span>
-                <span>六月</span>
-                <span>七月</span>
-                <span>八月</span>
-            </div>
-            <div class="_days">
-                <span>九月</span>
-                <span>十月</span>
-                <span class="active">十一月</span>
-                <span>十二月</span>
-            </div> -->
-            
             <div class="_btn">
-                <span class="today">本月</span>
-                <span class="clear">清除</span>
+                <span class="today" v-on:click="curmonth">本月</span>
+                <span class="clear" v-on:click="clearmonth">清除</span>
             </div>
         </div>
     </div>
 </template>
 <script type="text/javascript">
+    import { getMonths , fullzero} from './util/lang'
+
+    var months = getMonths()
+    
     export default {
-        data(){
-            return {
-                months:['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
+        props:{
+            value:{
+                type:String,
+                default:''
             }
+        },
+        data(){
+            // console.log(this.value)
+            if(this.value){
+                var yearmonth = this.value.split('-')
+                var year = yearmonth[0]
+                var month = yearmonth[1]    
+            }else{
+                var dater = new Date()
+                var year = dater.getFullYear()
+            }
+
+            
+            return {
+                year:year,
+                month:month,
+                interior : {
+                    year:year,
+                    month:month
+                }
+            }
+            
+        },
+        
+        computed:{
+            value:{
+                get(){
+                    // console.log(this.interior.year+'-'+fullzero(this.interior.month))
+                    return this.interior.year+'-'+fullzero(this.interior.month)
+                },
+                set(val){
+                    
+                    if(!val || this.interior.month!=this.month) return
+                    
+                    var yearmonth = val.split('-')
+                    this.year = yearmonth[0]
+                    this.month = yearmonth[1]
+                    this.output()
+                }
+            },         
+            months(){
+                var monthval = ''
+                if(this.interior.year == this.year) {
+                    monthval = this.interior.month
+                }
+                
+                return months.map((month,index)=>{
+                    var status = ''
+                    if(index+1 == monthval) status = 'active'
+                    return {val:month,status:status}
+                })
+                
+            }
+        },
+        methods:{
+            prev(){
+                this.year = +this.year - 1
+            },
+            next(){
+                this.year = +this.year + 1
+            },
+            pick(event){
+                var id = event.target.id,index
+                if(!id) return
+                id = id.split('_')
+                this.month = +id[1]+1
+                this.output()
+                // console.log(this.month)
+            },
+            curmonth(){
+                var dater = new Date()
+                this.year = dater.getFullYear()
+                this.month = 1+dater.getMonth()
+                this.output()
+            },
+            output(){
+                this.interior.month = this.month
+                this.interior.year = this.year
+                this.$emit('change',this.value)    
+            },
+            clearmonth(){
+                this.interior.month = ''
+                this.$emit('change','')    
+            }
+        },
+        created(){
+            // if(this.value)
+            // console.log(this.value)
+            // var dater = new Date()
+            // this.year = dater.getFullYear()
+            // this.value = this.value
+            // this.curmonth()
         }
 
     }

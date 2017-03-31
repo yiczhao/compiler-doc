@@ -73,7 +73,7 @@ $KsDialog.success('content', 'title', 'cancel')(confirmCallback, cancelCallback)
 
 > **这里在叨唠一句通过 `$KsDialog` 方式调用的会话框是设计成队列的，也就是说不管你同时或者非同时调用多个对话框，它都会显示出来，在上一个关闭的时候显示下一个。**
 
-<script lang="babel">
+<script>
   export default{
     data () {
       return {
@@ -98,7 +98,7 @@ $KsDialog.success('content', 'title', 'cancel')(confirmCallback, cancelCallback)
 ### 脚本
 
 ```html
-<script lang="babel">
+<script>
   export default{
     data () {
       return {

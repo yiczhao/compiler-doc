@@ -59,8 +59,8 @@
 	    	color: #c8c8c8;
 	    	.week{ color: #ef5350;}
 	    }
-	    _days{
-	    	@extend %date-days;
+	    _days{ 
+	    	@extend %date-days; 
 	    	&:last-child{margin-bottom: 10px;}
 	    }
 	    _btn{
@@ -79,7 +79,7 @@
 	    	}
 	    	.today,.clear{ padding-bottom: 20px; }
 	    }
-    }
+    } 
     _date:first-child{ border-left: 1px solid $bor-color; }
 }
 
@@ -88,14 +88,15 @@
 	@extend %picker-wrap-use;
 	z-index: 1;
 	width: auto;
+	min-width: 316px;
     _date-head{
-    	.interstice{
-    		@extend %ks-col;
+    	.interstice{ 
+    		@extend %ks-col; 
     		width: 16px;
     	}
-    	.month{
-    		@extend %ks-col-auto;
-    		font-weight: bold;
+    	.month{ 
+    		@extend %ks-col-auto; 
+    		font-weight: bold; 
     	}
     }
 }
@@ -104,9 +105,10 @@
 %date-month{
 	_input{ @extend %icon-input;}
 	.KsDater{ position: absolute; }
+	.KsDateMonth{ position: absolute; }
 }
 
-//
+// 
 %date{
 	@extend %date-month;
 	.KsDater{
@@ -117,7 +119,7 @@
 
 // 月，年，日历的公共样式
 %KsDateMonth{
-	@extend %date-month;
+	@extend %date-month; 
 	.KsDater {
 	    _date-head .year{ font-weight: bold; }
 	    _days{ margin: 28px 0; }
@@ -165,9 +167,10 @@
 .KsDatePicker{ @extend %date; position: relative; }
 
 // 日期样式——周——范围——纯净
-.KsDaterMulti{
+.KsDaterMulti{ 
 	@extend %picker-wrap;
 	_date{
+		min-width: 316px;
 		_btn{ border-top: 1px solid $bor-color; }
 	}
 }
@@ -175,7 +178,7 @@
 // 日期样式——周——范围
 .KsDaterMultiPicker{
 	@extend %date;
-	position: relative;
+	position: relative; 
 	_input{
 		input{
 			text-align: center;
@@ -204,8 +207,8 @@
 }
 
 // 日期默认样式——年——纯净
-.KsDateYear{
-	@extend %picker-wrap;
+.KsDateYear{ 
+	@extend %picker-wrap;  
 	position: absolute;
 }
 
