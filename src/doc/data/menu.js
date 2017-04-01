@@ -81,7 +81,7 @@ export default [
           {name: 'Dialog 对话框', icon: 'icon', link: 'dialog'},
           {name: 'Modal 模态框', icon: 'icon', link: 'modal'},
           {name: 'Image 查看', icon: 'icon', link: 'image'},
-          // {name: 'Popover 弹出卡片', icon: 'icon', link: ''},
+          {name: '多标题表格', icon: 'icon', link: 'multiple-table'},
           // {name: 'Carousel 走马灯', icon: 'icon', link: ''},
           // {name: 'Collapse 折叠面板', icon: 'icon', link: ''}
         ]

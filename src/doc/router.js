@@ -181,6 +181,8 @@ export default (router) => {
                 require(['./views/data/floorchoose.md'], resolve)
               }
             },
+
+
             /* 基础组件-图片 */
             '/image': {
               name: 'image',
@@ -188,7 +190,17 @@ export default (router) => {
               component: (resolve) => {
                 require(['./views/data/image.md'], resolve)
               }
+            },
+
+            /* 多标题表格 */
+            '/multiple-table': {
+              name: 'multiple-table',
+              cnName: '图片',
+              component: (resolve) => {
+                require(['./views/table/multiple-table.md'], resolve)
+              }
             }
+
           }
         },
 
