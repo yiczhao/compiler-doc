@@ -114,7 +114,6 @@ let showNextDialog = function () {
     document.body.appendChild(instance.$el)
   }
 
-  Vue.nextTick(() => instance.show = true)
 }
 
 /**

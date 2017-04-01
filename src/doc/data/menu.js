@@ -56,7 +56,9 @@ export default [
       {
         name: '通知 Notice', icon: 'icon', link: '',
         subMenu: [
-          // {name: 'Alert 警告', icon: 'icon', link: ''},
+          {name: 'NoticeCenter 通知中心', icon: 'icon', link: 'notice-center'},
+          {name: 'Dialog 对话框', icon: 'icon', link: 'dialog'},
+          {name: 'Modal 模态框', icon: 'icon', link: 'modal'},
           // {name: 'Loading 加载', icon: 'icon', link: ''},
           // {name: 'Notification 通知', icon: 'icon', link: ''}
         ]
@@ -80,8 +82,6 @@ export default [
       {
         name: '其他 Others', icon: 'icon', link: '',
         subMenu: [
-          {name: 'Dialog 对话框', icon: 'icon', link: 'dialog'},
-          {name: 'Modal 模态框', icon: 'icon', link: 'modal'},
           {name: 'Image 查看', icon: 'icon', link: 'image'},
           // {name: 'Popover 弹出卡片', icon: 'icon', link: ''},
           // {name: 'Carousel 走马灯', icon: 'icon', link: ''},

@@ -6,6 +6,8 @@
  * @date 2016/11/11.
  */
 
+// 通知中心
+import KsNoticeCenter from './KsNoticeCenter'
 // 开关组件
 import { KsSwitch, KsAbstractSwitch } from './KsSwitch';
 // Dialog 对话框组件
@@ -149,6 +151,10 @@ const install = function(Vue) {
     // 在 VueComponent 原型上注册 KsModal 组件
     $KsModal: {
       get () { return KsModal }
+    },
+
+    $KsNotice: {
+      get: () => KsNoticeCenter
     }
   });
 };
