@@ -93,8 +93,8 @@
 
 | 参数 | 说明 | 接口类型 | 类型 | 双向（twoWay） | 是否必须 | 可选值 | 默认值 |
 |------|-------|----------|---------|---------|---------|-------|--------|
-| title | 用来描述 `KsModal` 是否显示关闭按钮 | props | Boolean | `false` | 否 | 无 | `true` |
-| content | 用来描述 `KsModal` 是否显示确定按钮 | props | Boolean | `false` | 否 | 无 | `true` |
-| type | 用来描述 `KsModal` 是否显示取消按钮 | props | Boolean | `false` | 否 | 无 | `true` |
-| timeout | 用来描述当前 `KsModal` 取消按钮的文字 | props | String | `false` | 否 | 无 | 取消 |
-| closeCallback | 用来描述当前 `KsModal` 确定按钮的文字 | props | String | `false`| 否 | 无 | 确定 |
+| title | 通知内容的标题 | param | String | - | 否 | - | `'title'` |
+| content | 通知内容的主体 | param | String | - | 否 | - | `'content...'` |
+| type | 通知内容的类型 | param | String | - | 否 | `primary`, `danger`, `warn`, `success`, `info` | `primary` |
+| timeout | 通知消息销毁的时间 | param | Number | - | 否 | - | `4500` |
+| closeCallback | 当前通知消息销毁时的回调 | param | Function | - | 否 | - | - |
