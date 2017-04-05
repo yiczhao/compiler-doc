@@ -38,6 +38,10 @@
       }
     },
 
+    props: {
+      decorate: {type: Boolean, default: 'false'}
+    },
+
     mixins: [TreeMixin],
 
     components: { CheckedTree }

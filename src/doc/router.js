@@ -91,7 +91,7 @@ export default (router) => {
               }
             },
 
-            
+
           }
         },
         /* form */
@@ -235,6 +235,15 @@ export default (router) => {
           },
 
           subRoutes: {
+
+            /* 通知组件-通知中心 */
+            '/notice-center': {
+              name: 'notice-center',
+              cnName: '对话框',
+              component: (resolve) => {
+                require(['./views/notice/notice-center.md'], resolve)
+              }
+            },
 
             /* 通知组件-对话框 */
             '/dialog': {
