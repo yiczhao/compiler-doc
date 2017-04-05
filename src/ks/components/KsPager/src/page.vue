@@ -130,6 +130,7 @@
                 this.page_current = val
                 this.$emit('current_change',val)
                 // 兼容 老API END
+                this.$emit('change',val)
                 if('function' == typeof this.onChange){
                     this.onChange(val)
                 }
