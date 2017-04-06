@@ -27,7 +27,7 @@ webpackConfig.plugins = plugins
 
 
 var dirMap = {
-    // directives:path.resolve(__dirname, '../src/ks/directives'),
+    directives:path.resolve(__dirname, '../src/ks/directives'),
     components:path.resolve(__dirname, '../src/ks/components')
 }
 
