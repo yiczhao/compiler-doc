@@ -6,16 +6,16 @@
             <select class="input" v-model="size">
                 <option 
                     v-for="i in sizes" 
-                    :value="i">{{i}}</option>
+                    v-bind:value="i">{{i}}</option>
             </select>
             条
         </div>
         <page 
             class="ks-col-auto"
-            :current.sync="current" 
-            :length="length"
-            :total="total"
-            :size="size"
+            v-bind:current.sync="current" 
+            v-bind:length="length"
+            v-bind:total="total"
+            v-bind:size="size"
             v-bind:on-change="currentChange"
             v-on:change="currentChange2"></page>    
     </div>
@@ -24,6 +24,7 @@
     import props from './mixins'
     import page from './page.vue'
     export default {
+        VERSION:'1.0.0',
         components:{
             'page':page
         },

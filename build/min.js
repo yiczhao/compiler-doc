@@ -12,7 +12,19 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var mkdirp = require('mkdirp')
 var webpackConfig = require('../webpack.config.js')
 var _package = require('../package.json')
-var dependFile = require('./util')
+var util = require('./util')
+
+var dependFile = util.getFilePath
+var readFile = util.readFile
+
+
+
+var plugins = webpackConfig.plugins.filter((plugin)=>{
+    if(plugin instanceof CleanWebpackPlugin) return false
+    return true
+})
+webpackConfig.plugins = plugins
+
 
 var dirMap = {
     directives:path.resolve(__dirname, '../src/ks/directives'),
@@ -26,8 +38,11 @@ Object.keys(dirMap).map((key)=>{
             // console.log(vals)
             vals.forEach((val)=>{
                 // console.log(val)
-                build(val.fileName,val.filePath,key)
+                build(val.fileName,val.filePath,val.version,key)
             })
+        })
+        .catch((err)=>{
+            console.log(err.red)
         })
 })
 
@@ -39,16 +54,18 @@ Object.keys(dirMap).map((key)=>{
 var count = 0
 
 // 调整配置、打包
-function build(name, file_path,root) {
+function build(name, file_path,version,root) {
     // console.log(file_path)
     var output_path = path.resolve(__dirname, '../min/ks/'+ root +'/' + name.toLowerCase() + '/')
+    version = version ? '.'+version : ''
+    // console.log(output_path)
 
     var config = webpack_merge.smart(webpackConfig, {
             entry: {},
             output: {
                 path: output_path,
                 libraryTarget: 'umd',
-                filename: 'index.js'
+                filename: 'index'+version+'.js'
                     // library : converName(name)
             },
             vue: {
@@ -60,11 +77,11 @@ function build(name, file_path,root) {
                 }
             },
             plugins: [
-                new CleanWebpackPlugin(['ks'], {
-                    root: path.resolve(__dirname,'../min'),
-                    verbose: true,
-                    dry: false
-                }),
+                // new CleanWebpackPlugin(['ks'], {
+                //     root: path.resolve(__dirname,'../min'),
+                //     verbose: true,
+                //     dry: false
+                // }),
                 new webpack.optimize.UglifyJsPlugin({
                     compress: {
                         warnings: false
@@ -86,16 +103,17 @@ function build(name, file_path,root) {
         // return 
         ++count
         // console.log(count)
-        read_file(path.resolve(output_path, './app.css'))
-            .then((data) => {
-                return cssnano.process(data.toString(), {
+        readFile(path.resolve(output_path, './app.css'))
+            .then((res) => {
+                return cssnano.process(res.data.toString(), {
                     zindex: false
                 })
             }).then((result) => {
-                fs.writeFileSync(path.resolve(output_path, './style.css'), result.css)
+                fs.writeFileSync(path.resolve(output_path, './style'+version+'.css'), result.css)
+                fs.unlinkSync(path.resolve(output_path, './app.css'))
                 trace_progress(stats, name, count, time_start)
             }).catch((e) => {
-                // console.log('无样式...')
+                console.log('无样式...'.red)
                 trace_progress(stats, name, count, time_start)
             })
 
@@ -111,23 +129,6 @@ function trace_progress(stats, name, count, time_start) {
     console.log(message.green)
 }
 
-
-
-
-
-// 读取文件，返回内容
-function read_file(file_path) {
-    return new Promise(function(resolve, reject) {
-        fs.readFile(file_path, function(err, data) {
-            if (err) {
-                console.log('read_file error',file_path)
-                reject(err)
-            }
-
-            resolve(data)
-        })
-    })
-}
 
 // 创建目录
 var touch = function(filePath) {
