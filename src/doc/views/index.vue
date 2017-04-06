@@ -22,42 +22,12 @@
   import KMenu from './core/KMenu.vue'
   import KFooter from './core/KFooter.vue'
   import KCrumbs from './core/KCrumbs.vue'
-  import LoadingMask from '../components/LoadingMask.vue'
 
   export default{
     data () {
       return { }
     },
 
-    events: {
-
-      /**
-       * @description 错误处理处理
-       * @param message {String} 错误信息
-       */
-      errHandle (message) {
-        // 创建一个 dialog 实例
-        let dialog = this.$KsDialog.create({ container: '.work-container' })
-
-        dialog.show(message, '信息', 'danger')(() => dialog.close())
-      },
-
-      /**
-       * @description 主容器滚动条是否显示
-       * @param sw
-       */
-      scrollSwitch (sw) {
-        let container = this.$els.mainContainer
-
-        if (sw) {
-          container.style.overflow = 'hidden'
-          container.scrollTop = 0
-        } else {
-          container.style.overflow = ''
-        }
-      }
-    },
-
-    components: { KHeader, KMenu, KFooter, KCrumbs, LoadingMask }
+    components: { KHeader, KMenu, KFooter, KCrumbs }
   }
 </script>
