@@ -16,7 +16,8 @@
             :length="length"
             :total="total"
             :size="size"
-            v-bind:on-change="currentChange"></page>    
+            v-bind:on-change="currentChange"
+            v-on:change="currentChange2"></page>    
     </div>
 </template>
 <script type="text/javascript">
@@ -39,10 +40,12 @@
                 this.size = this.sizes[0]
             },
             currentChange(val){
-                // console.log(val,this.onChange);
                 if('function' == typeof this.onChange){
                     this.onChange(val)
                 }
+            },
+            currentChange2(val){
+                this.$emit('change',val)
             }
         },
         created (){
@@ -50,6 +53,9 @@
         },
         watch:{
             size(val){
+                event && event.preventDefault()
+                event && event.stopPropagation()
+                this.$emit('change',val,'SIZE-CHANGE')
                 if('function' == typeof this.onChange){
                     this.onChange(val,'SIZE-CHANGE')
                 }
