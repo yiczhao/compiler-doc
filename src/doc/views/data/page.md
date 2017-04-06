@@ -9,11 +9,14 @@
 ### page
 page_current:{{page_current}}
 <ks-page 
-    :current.sync="page_current" 
-    :length="7"
-    :total="100"
-    :size="13"
-    :on-change="change"></ks-page>
+    v-bind:current="page_current" 
+    v-bind:length="7"
+    v-bind:total="10000"
+    v-bind:size="13"
+    v-on:change="change"></ks-page>
+
+
+
 ```html
 <ks-page 
     v-bind:current.sync="page_current" 
@@ -21,6 +24,14 @@ page_current:{{page_current}}
     v-bind:total="100"
     v-bind:size="13"
     v-bind:on-change="change"></ks-page>
+
+// 新版本
+<ks-page 
+    v-bind:current.sync="page_current" 
+    v-bind:length="7"
+    v-bind:total="100"
+    v-bind:size="13"
+    v-on:change="change"></ks-page>
 ```
 ### API
 | 参数 | 说明 | 接口类型 | 类型 | 可选值 | 默认值 |
@@ -59,7 +70,7 @@ page_current:{{page_current}}
     export default {
         data(){
             return {
-                page_current:4,
+                page_current:24,
                 page_current2:4
             }
         },
@@ -81,7 +92,7 @@ page_current:{{page_current}}
     export default {
         data(){
             return {
-                page_current:4,
+                page_current:24,
                 page_current2:4
             }
         },
