@@ -9,8 +9,8 @@ module.exports = {
     readFile:readFile
 }
 
-var VERSION_REG = /VERSION[\s+]?:[\s+]?['|"](.+?)['|"]/gm
-var IMPORT_REG = /import\s+([\s\S]+?)\s+from\s+'(.+?)'/gm
+var VERSION_RE = /VERSION[\s+]?:[\s+]?['|"](.+?)['|"]/gm
+var IMPORT_RE = /import\s+([\s\S]+?)\s+from\s+'(.+?)'/gm
 
 function getFilePath(dir){
     
@@ -88,14 +88,14 @@ function getDirs(data,dir){
                                 
                             res.forEach((item)=>{
                                 // console.log(item.path)    
-                                if(item.data.match(VERSION_REG)){
+                                if(item.data.match(VERSION_RE)){
                                     // console.log(dirs)
                                     dirs.forEach((sub)=>{
                                         if(sub.filePath == item.path){
-                                            sub.version = VERSION_REG.exec(item.data)[1]
+                                            sub.version = VERSION_RE.exec(item.data)[1]
                                         }
                                     })
-                                    // console.log(item.path,VERSION_REG.exec(item.data)[1])
+                                    // console.log(item.path,VERSION_RE.exec(item.data)[1])
                                 }
                             })
                             // console.log(dirs)
@@ -130,7 +130,7 @@ function matchFromVal(data){
  */
 function matchFrom(data){
     var fileInfos = []
-    data.replace(IMPORT_REG,function(val,$1,$2){
+    data.replace(IMPORT_RE,function(val,$1,$2){
         fileInfos.push({name:$1,val:$2})
     })
     return fileInfos
@@ -147,6 +147,19 @@ function readFile(filePath) {
             }
 
             resolve({path:filePath,data:data})
+        })
+    })
+}
+
+function read_file(file_path) {
+    return new Promise(function(resolve, reject) {
+        fs.readFile(file_path, function(err, data) {
+            if (err) {
+                console.log('read_file error',file_path)
+                reject(err)
+            }
+
+            resolve(data)
         })
     })
 }
