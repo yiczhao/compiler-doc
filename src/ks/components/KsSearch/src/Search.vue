@@ -38,7 +38,7 @@
     export default {
         props: {
             disabled: {type: Boolean, default: false},
-            placeholder: {type: String, default: '输入关键字搜索'},    
+            placeholder: {type: String, default: '输入关键词搜索'},    
             resultattr: {type: String, default: 'key'}, 
             fuzzydata: {type: Array},
             datalabel: {type: String, default: 'label'},
