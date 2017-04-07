@@ -52,6 +52,8 @@ import {
   KsStoreClick
 } from './KsDropChoose';
 
+import { KsSearch } from './KsSearch';
+
 // 弹出层选择组件
 import {
   KsDialogChoose
@@ -119,6 +121,8 @@ const KsComponents = {
 
   KsStore,
   KsStoreClick,
+
+  KsSearch,
 
   KsDialogChoose,
   KsItem,

@@ -178,6 +178,14 @@ export default (router) => {
               }
             },
 
+            '/search': {
+                name: 'search',
+                cnName: '模糊搜索',
+                component: (resolve) => {
+                    require(['./views/data/search.md'], resolve)
+                }
+            },
+
             '/dialogchoose': {
               name: 'dialogchoose',
               cnName: '弹出层选择',
