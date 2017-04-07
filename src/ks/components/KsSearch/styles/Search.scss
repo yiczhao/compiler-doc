@@ -1,0 +1,107 @@
+.KsSearch {
+    position: relative;
+    width: 100%;
+    z-index: 999;
+    input {
+        width: 100%;
+    }
+    .SearchIcon {
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        font-size: 16px;
+        color: #444;
+        background: #fcfcfc;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        padding: 8px 8px 8px 10px;
+        &:hover {
+            background: #f6f6f6;
+        }
+        &:hover:active {
+            background: #e8e8e8;
+        }
+    }
+    .SearchResult {
+        position: absolute;
+        top: 33px;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        ul {
+            max-height: 250px;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #00bcd4;
+            border-radius: 3px;
+            overflow-y: scroll;
+            li {
+                background: #fff;
+                cursor: pointer;
+                height: 25px;
+                line-height: 25px;
+                padding-left: 10px;
+                &:hover {
+                    color: #fff;
+                    background: #00bcd4;
+                }
+            }
+        }
+    }
+}
+
+
+// .fuzzy_wrapper {
+//         position: relative;
+//         width: 100%;
+//         z-index: 999;
+// }
+// .fuzzy_wrapper > input {
+//     width: 100%;
+// }
+// .search_icon {
+//     position: absolute;
+//     top: 1px;
+//     right: 1px;
+//     font-size: 16px;
+//     color: #444;
+//     background: #fcfcfc;
+//     border-top-right-radius: 3px;
+//     border-bottom-right-radius: 3px;
+//     padding: 8px 8px 8px 10px;
+// }
+
+// .search_icon:hover {
+//     background: #f6f6f6;
+// }
+// .search_icon:active {
+//     background: #e8e8e8;
+// }
+
+
+// .fuzzy_box {
+//     position: absolute;
+//     top: 33px;
+//     left: 0;
+//     width: 100%;
+//     box-sizing: border-box;
+// }
+// ul.result_list {
+//     max-height: 250px;
+//     width: 100%;
+//     box-sizing: border-box;
+//     border: 1px solid #00bcd4;
+//     border-radius: 3px;
+//     overflow-y: scroll;
+// }
+// ul.result_list li {
+//     background: #fff;
+//     cursor: pointer;
+//     height: 25px;
+//     line-height: 25px;
+//     padding-left: 10px;
+// }
+// ul.result_list li:hover {
+//     color: #fff;
+//     background: #00bcd4;
+// }
