@@ -3,10 +3,10 @@
 > 模糊搜索
 
 ---
->> ##调用组件的文件内部信息显示：
->>当前结果集查询的关键词：{{keywords}}
->>提交选中item的名称：{{dataName}}
->>提交选中item的id：{{dataId}}
+>> 调用模糊搜索组件的文件内部信息显示：
+>> 当前结果集查询的关键词 -- {{keywords}}
+>> 提交选中item的名称 -- {{dataName}}
+>> 提交选中item的id -- {{dataId}}
 ---
 
 <ks-search 
@@ -76,6 +76,9 @@
 			},
 			actionSelect (dataId, dataName) {
 
+				// dataId是选中项的关键属性，与resultattr有关
+				// 传入的resultattr是'id'时，dataId就是对应选中项的id属性
+				// dataName是选中项的名称
 				this.dataId = dataId
 				this.dataName = dataName
 			}
@@ -122,6 +125,9 @@
 			},
 			actionSelect (dataId, dataName) {
 
+				// dataId是选中项的关键属性，与resultattr有关
+				// 传入的resultattr是'id'时，dataId就是对应选中项的id属性
+				// dataName是选中项的名称
 				this.dataId = dataId
 				this.dataName = dataName
 			}
