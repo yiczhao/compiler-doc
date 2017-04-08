@@ -16,23 +16,13 @@ var util = require('./util')
 
 var dependFile = util.getFilePath
 var readFile = util.readFile
-
-
-var argv
-try {
-    argv = JSON.parse(process.env.npm_config_argv).original
-} catch (ex) {
-    argv = process.argv
-}
-
-argv = argv.slice(2)
+var argv = getArgv()
 // console.log(argv)
 
-var plugins = webpackConfig.plugins.filter((plugin)=>{
+webpackConfig.plugins = webpackConfig.plugins.filter((plugin)=>{
     if(plugin instanceof CleanWebpackPlugin) return false
     return true
 })
-webpackConfig.plugins = plugins
 
 
 var dirMap = {
@@ -143,7 +133,7 @@ function build(name, file_path,version,root) {
                     zindex: false
                 })
             }).then((result) => {
-                fs.writeFileSync(path.resolve(outPath, './style'+version+'.css'), result.css)
+                fs.writeFileSync(path.resolve(outPath, './style'+dotVersion+'.css'), result.css)
                 fs.unlinkSync(path.resolve(outPath, './app.css'))
                 traceProgress(stats, name, version, count, time_start)
             }).catch((e) => {
@@ -178,4 +168,18 @@ var touch = function(filePath) {
 // 补齐命令行中的空白
 function fillWhiteSpace(str, len) {
     return (str + ' '.repeat(20)).substr(0, len)
+}
+
+/**
+ * [getArgv 获取npm run 中的参数]
+ * @return {[type]} [description]
+ */
+function getArgv() {
+    var argv
+    try {
+        argv = JSON.parse(process.env.npm_config_argv).original
+    } catch (ex) {
+        argv = process.argv
+    }
+    return argv.slice(2)
 }

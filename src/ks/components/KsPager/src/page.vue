@@ -11,7 +11,7 @@
     
     import props from './mixins'
     export default {
-        VERSION:'1.2.0',
+        VERSION:'',
         mixins:[props],
         data (){
             return {
