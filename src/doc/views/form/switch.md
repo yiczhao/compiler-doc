@@ -73,7 +73,7 @@
 > `AbstractSwitch` 组件可以自定义 高度, 宽度, 每个状态下都有对应的 slide 颜色 dot 颜色 font 颜色
 > font 大小 以及 text 内容设置
 
-<script lang="babel">
+<script>
   let statusMapper = {
      off: {slideColor: '#FFF', dotColor: '#FFF', fontColor: '#E1E1E1', fontSize: '14', text: 'OFF'},
      on: {slideColor: '#55C45A', dotColor: '#FFF', fontColor: '#FFF', fontSize: '16', text: 'ON'}
@@ -94,7 +94,7 @@
 ### 脚本
 
 ```html
-<script lang="babel">
+<script>
   let statusMapper = {
      off: {slideColor: '#FFF', dotColor: '#FFF', fontColor: '#E1E1E1', fontSize: '14', text: 'OFF'},
      on: {slideColor: '#55C45A', dotColor: '#FFF', fontColor: '#FFF', fontSize: '16', text: 'ON'}

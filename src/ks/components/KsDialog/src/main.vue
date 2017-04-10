@@ -29,7 +29,7 @@
   </div>
 </template>
 
-<script lang="babel">
+<script>
   import KsButton from '../../KsButton'
   import KsMask from '../../KsMask'
 
@@ -44,7 +44,6 @@
   let zIndex = 19941026
 
   export default {
-    name: 'KSDialog',
 
     data () {
       return { }

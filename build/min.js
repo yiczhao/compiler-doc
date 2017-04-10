@@ -12,22 +12,67 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var mkdirp = require('mkdirp')
 var webpackConfig = require('../webpack.config.js')
 var _package = require('../package.json')
-var dependFile = require('./util')
+var util = require('./util')
+
+var dependFile = util.getFilePath
+var readFile = util.readFile
+
+
+var argv
+try {
+    argv = JSON.parse(process.env.npm_config_argv).original
+} catch (ex) {
+    argv = process.argv
+}
+
+argv = argv.slice(2)
+// console.log(argv)
+
+var plugins = webpackConfig.plugins.filter((plugin)=>{
+    if(plugin instanceof CleanWebpackPlugin) return false
+    return true
+})
+webpackConfig.plugins = plugins
+
 
 var dirMap = {
     directives:path.resolve(__dirname, '../src/ks/directives'),
     components:path.resolve(__dirname, '../src/ks/components')
 }
 
+
 Object.keys(dirMap).map((key)=>{
     
     dependFile(dirMap[key])
         .then((vals)=>{
             // console.log(vals)
+            var matchStrs = ''
+            if(argv.length){
+                vals = vals.filter((val)=>{
+                    return ~argv.indexOf(val.fileName)
+                })
+                matchStrs = vals.map((val)=>{
+                    return val.fileName
+                })
+
+                // console.log((argv.join(' ')))
+                // console.log((matchStrs.join(' ')))
+                matchStrs = (argv.join(' ')).replace(matchStrs.join(' '),'')
+                if(matchStrs) {
+                    console.warn((key+'中没找到模块:'+matchStrs).grey.bgWhite)
+                }
+                    
+            }
             vals.forEach((val)=>{
                 // console.log(val)
-                build(val.fileName,val.filePath,key)
+                build(val.fileName,val.filePath,val.version,key)
+                
             })
+        
+            
+        })
+        .catch((err)=>{
+            console.log(err.red)
         })
 })
 
@@ -39,16 +84,21 @@ Object.keys(dirMap).map((key)=>{
 var count = 0
 
 // 调整配置、打包
-function build(name, file_path,root) {
+function build(name, file_path,version,root) {
     // console.log(file_path)
-    var output_path = path.resolve(__dirname, '../min/ks/'+ root +'/' + name.toLowerCase() + '/')
+    var outPath = path.resolve(__dirname, '../min/ks/'+ root +'/' + name.toLowerCase() + '/')
+    var dotVersion = ''
+
+    version = version || ''
+    dotVersion = version && '.'+version
+    // console.log(outPath)
 
     var config = webpack_merge.smart(webpackConfig, {
             entry: {},
             output: {
-                path: output_path,
+                path: outPath,
                 libraryTarget: 'umd',
-                filename: 'index.js'
+                filename: 'index'+dotVersion+'.js'
                     // library : converName(name)
             },
             vue: {
@@ -60,11 +110,11 @@ function build(name, file_path,root) {
                 }
             },
             plugins: [
-                new CleanWebpackPlugin(['ks'], {
-                    root: path.resolve(__dirname,'../min'),
-                    verbose: true,
-                    dry: false
-                }),
+                // new CleanWebpackPlugin(['ks'], {
+                //     root: path.resolve(__dirname,'../min'),
+                //     verbose: true,
+                //     dry: false
+                // }),
                 new webpack.optimize.UglifyJsPlugin({
                     compress: {
                         warnings: false
@@ -78,25 +128,27 @@ function build(name, file_path,root) {
 
     var time_start = new Date().getTime()
         // touch(config.output.path)
+
         // return
     webpack(config, function(err, stats) {
         if (err) throw err
 
-        // console.log(path.resolve(output_path, './style.css'))
+        // console.log(path.resolve(outPath, './style.css'))
         // return 
         ++count
         // console.log(count)
-        read_file(path.resolve(output_path, './app.css'))
-            .then((data) => {
-                return cssnano.process(data.toString(), {
+        readFile(path.resolve(outPath, './app.css'))
+            .then((res) => {
+                return cssnano.process(res.data.toString(), {
                     zindex: false
                 })
             }).then((result) => {
-                fs.writeFileSync(path.resolve(output_path, './style.css'), result.css)
-                trace_progress(stats, name, count, time_start)
+                fs.writeFileSync(path.resolve(outPath, './style'+version+'.css'), result.css)
+                fs.unlinkSync(path.resolve(outPath, './app.css'))
+                traceProgress(stats, name, version, count, time_start)
             }).catch((e) => {
-                // console.log('无样式...')
-                trace_progress(stats, name, count, time_start)
+                console.warn('无样式...'.yellow)
+                traceProgress(stats, name, version, count, time_start)
             })
 
     })
@@ -104,30 +156,17 @@ function build(name, file_path,root) {
 
 
 // 打印进度
-function trace_progress(stats, name, count, time_start) {
+function traceProgress(stats, name, version, count, time_start) {
     var assets = stats.toJson().assets[0]
     var offset = Math.round((new Date().getTime() - time_start) / 1000)
-    var message = `[${count < 10 ? ('0' + count) : count}]  ` + fill_white_space(`${offset}s`, 10) + fill_white_space('umd ' + name, 25) + `${(name, assets.size / 1024).toFixed(2)}k`
+    var message = `[${count < 10 ? ('0' + count) : count}]  `
+                    + fillWhiteSpace(`${offset}s`, 10) 
+                    + fillWhiteSpace('umd ' + name , 25) 
+                    + fillWhiteSpace('V:' + version , 15) 
+                    + `${(name, assets.size / 1024).toFixed(2)}k`
     console.log(message.green)
 }
 
-
-
-
-
-// 读取文件，返回内容
-function read_file(file_path) {
-    return new Promise(function(resolve, reject) {
-        fs.readFile(file_path, function(err, data) {
-            if (err) {
-                console.log('read_file error',file_path)
-                reject(err)
-            }
-
-            resolve(data)
-        })
-    })
-}
 
 // 创建目录
 var touch = function(filePath) {
@@ -137,6 +176,6 @@ var touch = function(filePath) {
 }
 
 // 补齐命令行中的空白
-function fill_white_space(str, len) {
+function fillWhiteSpace(str, len) {
     return (str + ' '.repeat(20)).substr(0, len)
 }

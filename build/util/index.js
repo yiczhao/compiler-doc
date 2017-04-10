@@ -4,7 +4,13 @@ var path = require('path')
 
 // console.log(path.extname('/Users/zdzdesigner/Documents/KS/KS-FED/compiler-doc/src/ks/directives/index.js/KsLimitNumberFixed.js/index.js'))
 
-module.exports = getFilePath
+module.exports = {
+    getFilePath:getFilePath,
+    readFile:readFile
+}
+
+var VERSION_RE = /VERSION[\s+]?:[\s+]?['|"](.+?)['|"]/gm
+var IMPORT_RE = /import\s+([\s\S]+?)\s+from\s+'(.+?)'/gm
 
 function getFilePath(dir){
     
@@ -14,11 +20,11 @@ function getFilePath(dir){
     
     return new Promise((resolve,reject)=>{
 
-        read_file(dir)
-            .then((data)=>{
-                // console.log(data)
-                getDirs(data,rootDir).then((inners)=>{
-                    
+        readFile(dir)
+            .then((result)=>{
+                // console.log(result.data)
+                getDirs(result.data,rootDir).then((inners)=>{
+                        // console.log(inners)
                         // console.log(Array.prototype.slice.call(inners))
                         
                         var files = inners.reduce((arr,inner)=>{
@@ -40,13 +46,20 @@ function getFilePath(dir){
 
 
 
-
+/**
+ * [getDirs 解析文件中的 import key from path ,返回fileName and filePath]
+ * @param  {[type]} data [内容]
+ * @param  {[type]} dir  [文件路径]
+ * @return {[type]}      [Promise]
+ */
 function getDirs(data,dir){
+    // console.log(data,dir)
     
     var dirs = matchFrom(data)
-    
     // console.log(dirs)
+
     // return
+    
     var filePaths = []
     
     var promiseAllDir = dirs.map((file)=>{
@@ -60,18 +73,49 @@ function getDirs(data,dir){
                     fileName:file.name,
                     filePath:subDirPath
                 })
+                return
             }
-            
-            read_file(subDirPath+'/index.js')
-                .then((inner)=>{
+            // console.log(subDirPath)
+            readFile(subDirPath+'/index.js')
+                .then((result)=>{
                     // console.log(inner)
-                    var dirs = matchFrom(inner).map((file)=>{
+                    var dirs = matchFrom(result.data).map((file)=>{
                         return {
                             fileName:file.name,
                             filePath:path.resolve(subDirPath,file.val)
                         }
                     })
-                    resolve(dirs)
+                    // console.log(dirs.length)
+                    
+                    var fileInfos = dirs.map((fileInfo)=>{
+                        return readFile(fileInfo.filePath)
+                    })
+                    // console.log(fileInfos)
+                    Promise.all(fileInfos)
+                        .then((res)=>{
+                                
+                            res.forEach((item)=>{
+                                // console.log(item.path)    
+                                if(item.data.match(VERSION_RE)){
+                                    // console.log(dirs)
+                                    dirs.forEach((sub)=>{
+                                        if(sub.filePath == item.path){
+                                            sub.version = VERSION_RE.exec(item.data)[1]
+                                        }
+                                    })
+                                    // console.log(item.path,VERSION_RE.exec(item.data)[1])
+                                }
+                            })
+                            // console.log(dirs)
+                            resolve(dirs)
+                            
+                        }).catch((err)=>{
+                            console.log(err)
+                        })
+                    
+                })
+                .catch((err)=>{
+                    console.error(err)
                 })
         })
     })
@@ -94,22 +138,23 @@ function matchFromVal(data){
  */
 function matchFrom(data){
     var fileInfos = []
-    data.replace(/import\s+([\s\S]+?)\s+from\s+'(.+?)'/gm,function(val,$1,$2){
+    data.replace(IMPORT_RE,function(val,$1,$2){
         fileInfos.push({name:$1,val:$2})
     })
     return fileInfos
 }
 
 // 读取文件，返回内容
-function read_file(file_path) {
+function readFile(filePath) {
     return new Promise(function(resolve, reject) {
-        fs.readFile(file_path,'utf8', function(err, data) {
+        filePath = path.extname(filePath) ? filePath : filePath+'.js'
+        fs.readFile(filePath,'utf8', function(err, data) {
             if (err) {
-                console.log('read file error',file_path)
+                // console.log('read file error',filePath)
                 reject(err)
             }
 
-            resolve(data)
+            resolve({path:filePath,data:data})
         })
     })
 }

@@ -6,6 +6,8 @@
  * @date 2016/11/11.
  */
 
+// 通知中心
+import KsNoticeCenter from './KsNoticeCenter'
 // 开关组件
 import { KsSwitch, KsAbstractSwitch } from './KsSwitch';
 // Dialog 对话框组件
@@ -26,6 +28,7 @@ import {
   KsRadioGroup,
   KsBtnRadio
 } from './KsRadio';
+
 // 按钮组件
 import {
   KsButton,
@@ -49,12 +52,12 @@ import {
   KsStoreClick
 } from './KsDropChoose';
 
+import { KsSearch } from './KsSearch';
 
 // 弹出层选择组件
 import {
   KsDialogChoose
 } from './KsDialogChoose';
-
 
 // 楼层选择组件
 import {
@@ -62,12 +65,10 @@ import {
   KsItemFloor
 } from './KsFloorSelect';
 
-
 // 项目中弹出层组件
 import {
   KsDialogProgram
 } from './KsDialogProgram';
-
 
 // 表格选择组件
 import {
@@ -79,6 +80,12 @@ import {
 import {
   KsTipDialog
 } from './KsTipDialog';
+
+// 图片查看组件
+import {
+  KsImage
+} from './KsImage';
+
 
 const VERSION = '0.0.1';
 const KsComponents = {
@@ -122,18 +129,23 @@ const KsComponents = {
   KsStore,
   KsStoreClick,
 
-  KsDialogChoose,
+  KsSearch,
 
+  KsDialogChoose,
   KsItem,
   KsItemFloor,
-
   KsDialogProgram,
+
 
   KsAddTableItem,
 
   KsTipDialog
 
-  
+  KsImage,
+  KsAddTableItem
+
+
+
 };
 
 const install = function(Vue) {
@@ -157,6 +169,10 @@ const install = function(Vue) {
     // 在 VueComponent 原型上注册 KsModal 组件
     $KsModal: {
       get () { return KsModal }
+    },
+
+    $KsNotice: {
+      get: () => KsNoticeCenter
     }
   });
 };

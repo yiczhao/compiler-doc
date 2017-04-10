@@ -94,7 +94,7 @@ module.exports = {
           }))
           return MDStr
       }
-      
+
       return Source+copyScript(Source);
     },
 
@@ -114,15 +114,20 @@ module.exports = {
       markdown: 'vue-markdown-loader'
     }
   },
+
   babel: {
     presets: ['es2015', 'stage-0'],
     plugins: ['transform-runtime']
   },
+
   resolve:{
     alias: {
-      SRC: __dirname + '/src'
-    } 
+      SRC: __dirname + '/src',
+      DATA: __dirname + '/src/doc/data',
+      KsComponents: __dirname + '/src/ks/components'
+    }
   },
+
   plugins: [
     new CleanWebpackPlugin(['dist'], {
       root: __dirname,

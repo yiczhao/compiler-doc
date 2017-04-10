@@ -89,7 +89,9 @@ export default (router) => {
               component: (resolve) => {
                 require(['./views/base/button.md'], resolve)
               }
-            }
+            },
+
+
           }
         },
         /* form */
@@ -158,6 +160,16 @@ export default (router) => {
                 require(['./views/data/page.md'], resolve)
               }
             },
+
+            /* 数据展示-树形组件 */
+            '/tree': {
+              name: 'tree',
+              cnName: '树形组件',
+              component: (resolve) => {
+                require(['./views/data/tree.md'], resolve)
+              }
+            },
+
             '/dropchoose': {
               name: 'dropchoose',
               cnName: '下拉选择',
@@ -165,6 +177,15 @@ export default (router) => {
                 require(['./views/data/dropchoose.md'], resolve)
               }
             },
+
+            '/search': {
+                name: 'search',
+                cnName: '模糊搜索',
+                component: (resolve) => {
+                    require(['./views/data/search.md'], resolve)
+                }
+            },
+
             '/dialogchoose': {
               name: 'dialogchoose',
               cnName: '弹出层选择',
@@ -172,6 +193,7 @@ export default (router) => {
                 require(['./views/data/dialogchoose.md'], resolve)
               }
             },
+
             '/floorchoose': {
               name: 'floorchoose',
               cnName: '楼层选择',
@@ -179,11 +201,33 @@ export default (router) => {
                 require(['./views/data/floorchoose.md'], resolve)
               }
             },
+
+
+            /* 基础组件-图片 */
+            '/image': {
+              name: 'image',
+              cnName: '图片',
+              component: (resolve) => {
+                require(['./views/data/image.md'], resolve)
+              }
+            },
+
             '/addtable': {
               name: 'addtable',
               cnName: '表格添加',
               component: (resolve) => {
                 require(['./views/data/addtable.md'], resolve)
+
+                }
+            },
+
+            /* 多标题表格 */
+            '/multiple-table': {
+              name: 'multiple-table',
+              cnName: '图片',
+              component: (resolve) => {
+                require(['./views/table/multiple-table.md'], resolve)
+
               }
             },
             '/tipdialog': {
@@ -193,6 +237,7 @@ export default (router) => {
                 require(['./views/data/tipdialog.md'], resolve)
               }
             }
+
           }
         },
 
@@ -205,6 +250,15 @@ export default (router) => {
           },
 
           subRoutes: {
+
+            /* 通知组件-通知中心 */
+            '/notice-center': {
+              name: 'notice-center',
+              cnName: '对话框',
+              component: (resolve) => {
+                require(['./views/notice/notice-center.md'], resolve)
+              }
+            },
 
             /* 通知组件-对话框 */
             '/dialog': {

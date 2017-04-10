@@ -30,7 +30,7 @@
   </nav>
 </template>
 
-<script lang="babel">
+<script>
   import Menu from '../../data/menu'
 
   export default {

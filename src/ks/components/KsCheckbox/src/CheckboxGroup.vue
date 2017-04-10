@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script lang="babel">
+<script>
   export default {
     name: 'KsCheckboxGroup',
 
@@ -30,7 +30,8 @@
         }
 
         // TODO: 柱哥说了数据的流向要单向
-        this.$emit('change', model);
+        this.$emit('model-change', model);
+        this.$emit('node-change', name, value);
       }
     },
 

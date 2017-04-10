@@ -1,10 +1,7 @@
-<script lang="babel">
-  import store from './vuex/store'
-
+<script>
   export default{
     data () {
       return {  }
-    },
-    store
+    }
   }
 </script>

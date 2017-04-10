@@ -127,7 +127,7 @@ let defaults = {
 
 ### 脚本
 
-<script lang="babel">
+<script>
   export default{
     data () {
       return {
@@ -149,7 +149,7 @@ let defaults = {
 </script>
 
 ```html
-<script lang="babel">
+<script>
   export default{
     data () {
       return {

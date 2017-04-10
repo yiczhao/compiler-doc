@@ -6,12 +6,8 @@
  */
 
 @import "variables";
-@import "base/index";
-@import "common/index";
-@import "mixins/index";
 @import "library/index";
 @import "views/boot";
-@import "global";
 @import "components/index";
 
 html, body {
