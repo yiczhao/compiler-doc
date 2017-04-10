@@ -22,9 +22,6 @@
         width: {{ loadingSize }}px;
       }
     </style>
-    <abstract-button :disabled="true" width="100" height="100">
-      我是按钮
-    </abstract-button>
     <button class="KSNRButton__entity" :type="nativeType"
             :disabled="(disable || loading) && 'disabled'" :style="btnStyle"
     >
@@ -46,14 +43,11 @@
 
 <script>
   import BtnMixins from '../mixins/btnMixins'
-  import AbstractButton from './AbstractButton.vue'
 
   export default {
     name: 'KsNrButton',
 
-    mixins: [BtnMixins],
-
-    components: {AbstractButton}
+    mixins: [BtnMixins]
   }
 </script>
 

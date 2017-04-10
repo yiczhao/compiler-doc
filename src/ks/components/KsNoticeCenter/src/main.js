@@ -61,16 +61,25 @@ KsNoticeCenter.clear = function () {
  * @param title {String} 标题
  * @param content {String} 内容
  * @param hue {String} 色调
- * @param timeout {Number} 超时时间 单位毫秒 默认 3s
+ * @param delay {Number} 超时时间 单位毫秒 默认 3s
  * @param closeCb {Function} close 回调
  */
-KsNoticeCenter.post = function (title, content, hue, timeout, closeCb) {
+KsNoticeCenter.post = function (title, content, hue, delay, closeCb) {
+  // 如果没有设置 delay 参数, delay 参数位置为 closeCb 回调
+  let _closeCb = null, _delay = 4500;
+  if (delay && typeof delay === 'function') {
+    _closeCb = delay;
+  } else {
+    _closeCb = closeCb;
+    _delay = delay;
+  }
+
   let msg = KsNoticeCenter({
     hue: hue ? hue : 'primary',
     title: title,
     content: content,
-    timeout: timeout ? timeout : 4500
-  }, closeCb);
+    delay: _delay
+  }, _closeCb);
 
   noticeCenter.queue.push(msg);
 };

@@ -8,7 +8,7 @@
                             :hue="msg['options'].hue"
                             :title="msg['options'].title"
                             :content="msg['options'].content"
-                            :timeout="msg['options'].timeout"
+                            :delay="msg['options'].delay"
                             :close-btn="msg['options'].closeBtn"
                             @close="closeHandle(msg._uid)"
         ></notice-center-item>
@@ -20,7 +20,9 @@
 <script>
   import NoticeCenterItem from './item.vue'
 
-  export default{
+  export default {
+    VERSION: '0.0.1',
+
     data () {
       return {
         show: false
