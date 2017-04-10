@@ -119,6 +119,7 @@
             },
             reset() {
                 this.redraw([stringify(this.now),stringify(this.next_now)],[])
+                this.$emit('change',[])
             },
             // 点击日期
             pick_date (event) {

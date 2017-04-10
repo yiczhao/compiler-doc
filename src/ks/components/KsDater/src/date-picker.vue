@@ -5,7 +5,9 @@
       <div class="ks-col-auto date-icon"><i class="icon"></i></div>
       <input type="text" class="ks-col" placeholder="{{placeholder}}" v-model="value" readonly>
     </div>
-    <ks-dater
+    <ks-dater 
+        v-bind:min="min" 
+        v-bind:max="max"
         v-if="type!='datemonth'"
         v-show="show" 
         v-bind:value="value" 
@@ -13,6 +15,8 @@
         v-bind:readonly="readonly" 
         v-on:change="change"></ks-dater>
     <ks-date-month 
+        v-bind:min="min" 
+        v-bind:max="max"
         v-if="type=='datemonth'"
         v-show="show" 
         v-bind:value="value" 
@@ -27,6 +31,7 @@
     import dater from './dater.vue'
     import dateMonth from './date-month.vue'
     export default {
+        VERSION:'1.0.0',
         components:{
             'ks-dater':dater,
             'ks-date-month':dateMonth

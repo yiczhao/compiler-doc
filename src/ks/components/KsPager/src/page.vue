@@ -11,6 +11,7 @@
     
     import props from './mixins'
     export default {
+        VERSION:'',
         mixins:[props],
         data (){
             return {
@@ -21,7 +22,7 @@
         methods: {
             init (){
                 this.totalLength = this.getTotalLength(this.total,this.size)
-                this.pages2 = this.buildPages(1,this.length,this.totalLength)
+                this.pages2 = this.buildPages(this.current,this.length,this.totalLength)
             },
             /**
              * [getTotalLength 总页数]
@@ -130,6 +131,7 @@
                 this.page_current = val
                 this.$emit('current_change',val)
                 // 兼容 老API END
+                this.$emit('change',val)
                 if('function' == typeof this.onChange){
                     this.onChange(val)
                 }

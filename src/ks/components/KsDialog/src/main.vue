@@ -44,7 +44,6 @@
   let zIndex = 19941026
 
   export default {
-    name: 'KSDialog',
 
     data () {
       return { }

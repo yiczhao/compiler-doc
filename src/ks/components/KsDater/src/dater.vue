@@ -17,8 +17,10 @@
              v-for="week in 6">
                 <span
                   v-for="day in  7"
-                  :id="'dater'+_uid+'_'+(+week * 7 + day)"
-                  :class="{
+                  v-bind:id="'dater'+_uid
+                            +'_'+(+week * 7 + day)
+                            +'_'+(dates[week * 7 + day] && dates[week * 7 + day].status)"
+                  v-bind:class="{
                         'pass':dates[week * 7 + day] && dates[week * 7 + day].status=='disabled',
                         'active':dates[week * 7 + day] && dates[week * 7 + day].status=='active'}">
                         {{dates[week * 7 + day] && +dates[week * 7 + day].datetext}}</span>
@@ -48,12 +50,18 @@
     import multi from './mixins/multi'
     import { stringify , split_dt , parse,format_conver} from './util/lang'
     import { one_page_date } from './util/apage'
+    
     export default {
+        VERSION:'1.0.0',
         mixins: [mixins,multi],
         data(){
+            
             this.dater = ''
             this.timer = ''
-            
+            this.min = this.min.replace(/-/g,'')
+            this.max = this.max.replace(/-/g,'')
+
+
             return {
                 times:['00','00','00']
             }
@@ -70,6 +78,8 @@
                     return 
                 }
                 
+                if(this.banLimit(dater.replace(/-/g,''))) return
+
                 this.putout(dater)
                
             },
@@ -80,20 +90,33 @@
                 this.times = ['00','00','00']
                 this.$emit('change','')
             },
+            // 限制范围
+            banLimit(val){
+                console.log(val,this.min)
+                if((this.min && val < this.min)
+                    || (this.max && val > this.max)) {
+                    return true
+                }
+                return false
+            }, 
             // 过滤选择
             selectd(dater){
                 
-                var status = ''
+                var status = '',
+                    bond = dater.replace(/-/g,'')
                 
                 if(this.type == 'datemulti'){
                     ~this.point_daters.indexOf(dater) && (status = 'active')
                 }else if(dater == this.dater ){
-
                     status = 'active'
                 }
+
+                if(this.banLimit(bond)) status = 'disabled'
+                
                 return status
 
             },
+
             pick_date (event) {
                 var id = event.target.id.split('_');
                 var index = +id[1]

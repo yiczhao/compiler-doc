@@ -88,13 +88,19 @@ let showNextDialog = function () {
 
   // 绑定事件
   let {
-    confirmCb = KsDialog.close,
-    cancelCb = KsDialog.close
+    confirmCb,
+    cancelCb
   } = currentMsg
   instance.$off('confirm')
   instance.$off('cancel')
-  instance.$on('confirm', confirmCb)
-  instance.$on('cancel', cancelCb)
+  instance.$on('confirm', (...args) => {
+    confirmCb && confirmCb.apply(null, args);
+    KsDialog.close();
+  })
+  instance.$on('cancel', (...args) => {
+    cancelCb && cancelCb.apply(null, args);
+    KsDialog.close();
+  })
 
   // 实例化 mask
   if (typeof currentMsg.maskInstance !== 'undefined') {
@@ -118,10 +124,10 @@ let showNextDialog = function () {
  */
 KsDialog = function (options) {
   // 配置 Dialog 并加入显示队列
-  return function (confirmCb = KsDialog.close, cancelCb = KsDialog.close) {
+  return function (confirmCb, cancelCb) {
     // 参数正确性校验
     if ((typeof confirmCb !== 'undefined' && typeof confirmCb !== 'function')
-    || (typeof cancelCb !== 'undefined' && typeof cancelCb !== 'function')) {
+      || (typeof cancelCb !== 'undefined' && typeof cancelCb !== 'function')) {
       throw new TypeError('KsDialog: Parameter is not correct, member not a function!')
     }
 

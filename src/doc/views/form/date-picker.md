@@ -1,56 +1,76 @@
 ## DatePicker 
-
+> **Author:张大柱**
 > 常用的日期组件
 
 ---
 
 ### 基础使用 （分类）
 
-> #### dateMonth
+> ####  **KsDateMonth => {{datemonth}}**
 
-{{datemonth}}
 <ks-date-month v-bind:value.sync="datemonth"></ks-date-month>
-
 ```html
 <ks-date-month v-bind:value.sync="datemonth"></ks-date-month>
 ```
-{{datemonth2}}
+
+>> ####  **KsDatePicker  => {{datemonth2}}**
+
 <ks-date-picker type="datemonth" 
     v-bind:value.sync="datemonth2"></ks-date-picker>
-
 ```html
 <ks-date-picker type="datemonth" 
     v-bind:value.sync="datemonth2"></ks-date-picker>
 ```
-> #### date
 
-<ks-date-picker type="date"
-    v-bind:value="date" 
+>> ####  **KsDatePicker V1.0.0 【min、max】=> {{datemonth3}}**
+
+<ks-date-picker type="datemonth" min="2017-11" max="2018-09"
+    v-bind:value.sync="datemonth3"></ks-date-picker>
+```html
+<ks-date-picker type="datemonth" min="2017-09" max="2018-09"
+    v-bind:value.sync="datemonth3"></ks-date-picker>
+```
+
+
+> #### **date => {{date}}**
+
+<ks-dater type="date"
+    v-bind:value.sync="date" 
+    v-on:change="date_change"></ks-dater>
+```html
+<ks-dater type="date"
+    v-bind:value.sync="date" 
+    v-on:change="date_change"></ks-dater>
+```
+
+>> #### **date on KsDatePicker V1.0.0 【min、max】=> {{date}}**
+
+<ks-date-picker type="date" min="2016-10-12" max="2017-10-17"
+    v-bind:value.sync="date" 
     v-on:change="date_change"></ks-date-picker>
 
 ```html
-<ks-date-picker type="date"
-    v-bind:value="date" 
+<ks-date-picker type="date" min="2016-10-12" max="2017-10-17"
+    v-bind:value.sync="date" 
     v-on:change="date_change"></ks-date-picker>
 ```
 
-
-> #### datetime
+> #### **datetime on KsDatePicker => {{datetime}}**
 
 
 <ks-date-picker type="datetime" 
-    v-bind:value="datetime" 
+    v-bind:value.sync="datetime" 
     v-on:change="datetime_change"></ks-date-picker> 
 ```html
 <ks-date-picker type="datetime" 
-    v-bind:value="datetime" 
+    v-bind:value.sync="datetime" 
     v-on:change="datetime_change"></ks-date-picker> 
 ```
 
 
-> #### datemulti
+> #### **datemulti on KsDater => {{dateMultiPure}}**
 
-{{dateMultiPure}}
+
 <ks-dater type="datemulti" 
     v-bind:value.sync="dateMultiPure" 
     v-on:change="dateMultiPureChange"></ks-dater>
@@ -59,7 +79,8 @@
     v-bind:value.sync="dateMultiPure" 
     v-on:change="dateMultiPureChange"></ks-dater>
 ```
-{{datemulti}}
+> #### **datemulti on KsDatePicker => {{datemulti}}**
+
 <ks-date-picker type="datemulti" 
     v-bind:value.sync="datemulti" 
     v-on:change="datemulti_change"></ks-date-picker>
@@ -71,7 +92,7 @@
 
 
 
-> #### daterange
+> #### **daterange**
 
 
 <ks-dater-range 
@@ -84,9 +105,9 @@
 ```
 
 
-> #### daterange picker
+> #### **daterange picker => {{dateRangePicker}}**
 
-{{dateRangePicker}}
+
 <ks-date-range-picker placeholder="开始,结束" 
         v-bind:range.sync="dateRangePicker"
         v-bind:readonly="false"
@@ -99,12 +120,12 @@
 ```
 <ks-date-range-picker placeholder="开始,结束" 
         v-bind:range.sync="dateRangePicker2"
-        v-bind:readonly="false"
+        v-bind:readonly="true"
         v-on:change="daterange_picker_change"></ks-date-range-picker>
 ```html
 <ks-date-range-picker placeholder="开始,结束" 
         v-bind:range.sync="dateRangePicker2"
-        v-bind:readonly="false"
+        v-bind:readonly="true"
         v-on:change="daterange_picker_change"></ks-date-range-picker>
 ```
 
@@ -113,12 +134,14 @@
 
 
 ### 非范围日期组件API
-| 参数 | 说明 | 接口类型 | 类型 | 可选值 | 默认值 |
-|------|-------|----------|---------|-------|--------|
-| type | dater类型 | props | String | **date**, **datetime**,**datemonth**, **datemulti**| date |
-| value | 数据中绑定的值（可sync） | props | String | **date=>'2016-11-09'**，**datemonth=>'2016-09'**，**datetime=>'2016-11-09 03:04:20'**，**datemulti=>'2016-11-09,2016-11-10'** | 无 |
-| readonly | 是否只读 | props | Boolean | `true`, `false` | `false` |
-| change | 组件中日期时间改变复值 | props | Function | `可不设置change` | 无 |
+| 参数 | 版本 | 说明 | 接口类型 | 类型 | 可选值 | 默认值 |
+|------|-------|-------|----------|---------|-------|--------|
+| type || dater类型 | props | String | **date**, **datetime**,**datemonth**, **datemulti**| date |
+| value || 数据中绑定的值（可sync） | props | String | **date=>'2016-11-09'**，**datemonth=>'2016-09'**，**datetime=>'2016-11-09 03:04:20'**，**datemulti=>'2016-11-09,2016-11-10'** | 无 |
+| min | V1.0.0 |最小范围 | props | String | **date=>'2016-11-09'**，**datemonth=>'2016-09'** | 无 |
+| max | V1.0.0 |最大范围 | props | String | **date=>'2016-11-09'**，**datemonth=>'2016-09'** | 无 |
+| readonly || 是否只读 | props | Boolean | `true`, `false` | `false` |
+| change || 组件中日期时间改变复值 | props | Function | `可不设置change` | 无 |
 
 ### 范围日期组件API（区别部分如下）
 | 参数 | 说明 | 接口类型 | 类型 | 可选值 | 默认值 |
@@ -133,7 +156,8 @@
         data(){
             return {
                 datemonth:'2016-10',
-                datemonth2:'',
+                datemonth2:'2016-10',
+                datemonth3:'2016-10',
                 datetime:'2016-10-12 03:04:20',
                 date:'',
                 datemulti:'',
@@ -155,7 +179,7 @@
                 // console.log('筛选 picker',val)
                 if(!val){
                     // setTimeout(()=>{
-                        this.datemulti = '2016-11-02'            
+                        // this.datemulti = '2016-11-02'            
                     // })
                 }
                 
@@ -182,7 +206,7 @@
             },10000)
 
             setTimeout(()=>{
-                this.datemonth = '2016-09'
+                this.datemonth2 = '2016-09'
             },1000)
         }
 
@@ -199,6 +223,7 @@
 
                 datemonth:'2016-10',
                 datemonth2:'2016-10',
+                datemonth3:'2016-10',
                 datetime:'2016-10-12 03:04:20',
                 date:'',
                 datemulti:'',
@@ -218,11 +243,11 @@
             },
             datemulti_change(val){
                 // console.log('筛选 picker',val)
-                if(!val){
-                    // setTimeout(()=>{
-                        this.datemulti = '2016-11-02'            
-                    // })
-                }
+                // if(!val){
+                //     // setTimeout(()=>{
+                //         this.datemulti = '2016-11-02'            
+                //     // })
+                // }
                 
             },
             dateMultiPureChange(){
