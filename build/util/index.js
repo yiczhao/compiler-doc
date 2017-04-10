@@ -46,13 +46,20 @@ function getFilePath(dir){
 
 
 
-
+/**
+ * [getDirs 解析文件中的 import key from path ,返回fileName and filePath]
+ * @param  {[type]} data [内容]
+ * @param  {[type]} dir  [文件路径]
+ * @return {[type]}      [Promise]
+ */
 function getDirs(data,dir){
+    // console.log(data,dir)
     
     var dirs = matchFrom(data)
-    
     // console.log(dirs)
+
     // return
+    
     var filePaths = []
     
     var promiseAllDir = dirs.map((file)=>{
@@ -66,8 +73,9 @@ function getDirs(data,dir){
                     fileName:file.name,
                     filePath:subDirPath
                 })
+                return
             }
-            
+            // console.log(subDirPath)
             readFile(subDirPath+'/index.js')
                 .then((result)=>{
                     // console.log(inner)
@@ -147,19 +155,6 @@ function readFile(filePath) {
             }
 
             resolve({path:filePath,data:data})
-        })
-    })
-}
-
-function read_file(file_path) {
-    return new Promise(function(resolve, reject) {
-        fs.readFile(file_path, function(err, data) {
-            if (err) {
-                console.log('read_file error',file_path)
-                reject(err)
-            }
-
-            resolve(data)
         })
     })
 }
