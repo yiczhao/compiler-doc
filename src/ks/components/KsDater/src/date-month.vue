@@ -1,15 +1,19 @@
 <template>
     <div class="KsDateMonth" cid="KsDateMonth">
-        <div class="_date">
-            <div class="_head">
+        <div class="KsDateMonth-date">
+            <div class="KsDateMonth-date-head">
                 <div class="retreat" v-on:click="prev">&lt;</div>
                 <div class="year" v-text="year+'年'"></div>
                 <div class="next" v-on:click="next">&gt;</div>
             </div>
             <div v-on:click="pick($event)">
-                <div class="_days"
+                <div class="KsDateMonth-date-days"
                     v-for="row in 3">
-                    <span id="month{{_uid}}_{{[4*row+index]}}" v-bind:class="{
+                    <span v-bind:id="'month'+_uid
+                              +'_'+[4*row+index]
+                              +'_'+(months[4*row+index] 
+                               && months[4*row+index].status)" 
+                        v-bind:class="{
                         'pass':months[4*row+index] 
                                && months[4*row+index].status == 'disabled',
                         'active':months[4*row+index] 
@@ -18,7 +22,7 @@
                         v-for="(index,item) in 4">{{months[4*row+index].val}}</span>
                 </div>
             </div>
-            <div class="_btn">
+            <div class="KsDateMonth-date-btn">
                 <span class="today" v-on:click="curmonth">本月</span>
                 <span class="clear" v-on:click="clearmonth">清除</span>
             </div>
@@ -31,10 +35,19 @@
     var months = getMonths()
     
     export default {
+        VERSION:'1.0.0',
         props:{
             value:{
                 type:String,
                 default:''
+            },
+            min:{
+                type:String,
+                default:''  
+            },
+            max:{
+                type:String,
+                default:''  
             }
         },
         data(){
@@ -48,6 +61,8 @@
                 var year = dater.getFullYear()
             }
 
+            this.min = this.min.replace(/-/g,'')
+            this.max = this.max.replace(/-/g,'')
             
             return {
                 year:year,
@@ -83,8 +98,14 @@
                 }
                 
                 return months.map((month,index)=>{
-                    var status = ''
+                    var status = '',
+                        bond = this.year+''+fullzero(index+1)
+
+                    
                     if(index+1 == monthval) status = 'active'
+                    if(this.banLimit(bond)) {
+                        status = 'disabled'
+                    }
                     return {val:month,status:status}
                 })
                 
@@ -97,10 +118,18 @@
             next(){
                 this.year = +this.year + 1
             },
+            banLimit(val){
+                if((this.min && val < this.min)
+                    || (this.max && val > this.max)) {
+                    return true
+                }
+                return false
+            }, 
             pick(event){
                 var id = event.target.id,index
                 if(!id) return
                 id = id.split('_')
+                if('disabled' == id[2]) return
                 this.month = +id[1]+1
                 this.output()
                 // console.log(this.month)
@@ -109,7 +138,10 @@
                 var dater = new Date()
                 this.year = dater.getFullYear()
                 this.month = 1+dater.getMonth()
-                this.output()
+                if(!this.banLimit(this.year+''+fullzero(1+dater.getMonth()))){
+                    this.output()    
+                }
+                
             },
             output(){
                 this.interior.month = this.month

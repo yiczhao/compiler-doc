@@ -6,34 +6,53 @@
 
 ### 基础使用 （分类）
 
-> #### dateMonth
+> #### KsDateMonth => {{datemonth}}
 
-{{datemonth}}
 <ks-date-month v-bind:value.sync="datemonth"></ks-date-month>
-
 ```html
 <ks-date-month v-bind:value.sync="datemonth"></ks-date-month>
 ```
-{{datemonth2}}
+>> ##### KsDatePicker type:datemonth => {{datemonth2}}
+
 <ks-date-picker type="datemonth" 
     v-bind:value.sync="datemonth2"></ks-date-picker>
-
 ```html
 <ks-date-picker type="datemonth" 
     v-bind:value.sync="datemonth2"></ks-date-picker>
 ```
+
+>> ##### KsDatePicker type:datemonth 【limit】=> {{datemonth3}}
+
+<ks-date-picker type="datemonth" min="2017-11" max="2018-09"
+    v-bind:value.sync="datemonth3"></ks-date-picker>
+```html
+<ks-date-picker type="datemonth" min="2017-09" max="2018-09"
+    v-bind:value.sync="datemonth3"></ks-date-picker>
+```
+
+
 > #### date
 
-<ks-date-picker type="date"
+<ks-dater type="date"
+    v-bind:value="date" 
+    v-on:change="date_change"></ks-dater>
+```html
+<ks-dater type="date"
+    v-bind:value="date" 
+    v-on:change="date_change"></ks-dater>
+```
+
+>> ##### KsDatePicker type:date 【limit】=> {{date}}
+
+<ks-date-picker type="date" min="2016-10-12" max="2017-10-17"
     v-bind:value="date" 
     v-on:change="date_change"></ks-date-picker>
 
 ```html
-<ks-date-picker type="date"
+<ks-date-picker type="date" min="2016-10-12" max="2017-10-17"
     v-bind:value="date" 
     v-on:change="date_change"></ks-date-picker>
 ```
-
 
 > #### datetime
 
@@ -198,6 +217,7 @@
             return {
                 datemonth:'2016-10',
                 datemonth2:'2016-10',
+                datemonth3:'2016-10',
                 datetime:'2016-10-12 03:04:20',
                 date:'',
                 datemulti:'',
