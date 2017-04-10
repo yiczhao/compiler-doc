@@ -9,6 +9,7 @@ import Vue from 'vue'
 import NoticeCenter from './container.vue'
 import { ObjectUtil } from '../../utils'
 
+const types = ['danger', 'warn', 'primary', 'success', 'info'];
 let defaults = {
   closeBtn: true,
   title: 'Title',
@@ -57,23 +58,48 @@ KsNoticeCenter.clear = function () {
 };
 
 /**
- * @description 投递一个信息向通知中心
+ * @description 向通知中心投递一个信息
  * @param title {String} 标题
  * @param content {String} 内容
  * @param hue {String} 色调
- * @param timeout {Number} 超时时间 单位毫秒 默认 3s
+ * @param delay {Number} 超时时间 单位毫秒 默认 3s
  * @param closeCb {Function} close 回调
  */
-KsNoticeCenter.post = function (title, content, hue, timeout, closeCb) {
+KsNoticeCenter.post = function (title, content, hue, delay, closeCb) {
+  // 如果没有设置 delay 参数, delay 参数位置为 closeCb 回调
+  let _closeCb = null, _delay = 4500;
+  if (delay && typeof delay === 'function') {
+    _closeCb = delay;
+  } else {
+    _closeCb = closeCb;
+    _delay = delay ? delay : _delay;
+  }
+
   let msg = KsNoticeCenter({
     hue: hue ? hue : 'primary',
     title: title,
     content: content,
-    timeout: timeout ? timeout : 4500
-  }, closeCb);
+    delay: _delay
+  }, _closeCb);
 
   noticeCenter.queue.push(msg);
 };
+
+//
+// 注册不同类型的通知函数
+//
+types.forEach(type => {
+  /**
+   * @description 向通知中心投递一个指定类型的信息
+   * @param title {String} 标题
+   * @param content {String} 内容
+   * @param delay {Number} 超时时间 单位毫秒 默认 3s
+   * @param closeCb {Function} close 回调
+   */
+  KsNoticeCenter[type] = function (title, content, delay, closeCb) {
+    KsNoticeCenter.post(title, content, type, delay, closeCb)
+  }
+});
 
 export default KsNoticeCenter
 export { KsNoticeCenter }

@@ -21,7 +21,6 @@
 </template>
 
 <script>
-
   /**
    * @description 色调映射
    * @type {{}}
@@ -35,6 +34,8 @@
   };
 
   export default{
+    VERSION: '0.0.1',
+
     data () {
       return {
         hueMapper
@@ -44,14 +45,14 @@
     props: {
       id: {type: Number, default: -1},
       closeBtn: {type: Boolean, default: true},
-      timeout: {type: Number, default: 4500},
+      delay: {type: Number, default: 4500},
       hue: {type: String, default: 'primary'},
       title: {type: String, default: 'title'},
       content: {type: String, default: 'content...'}
     },
 
     created () {
-      setTimeout(() => this.$emit('close', this.id), this.timeout);
+      setTimeout(() => this.$emit('close', this.id), this.delay);
     }
   }
 </script>
