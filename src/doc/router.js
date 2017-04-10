@@ -185,6 +185,13 @@ export default (router) => {
               component: (resolve) => {
                 require(['./views/data/addtable.md'], resolve)
               }
+            },
+            '/tipdialog': {
+              name: 'tipdialog',
+              cnName: '提示信息弹出层',
+              component: (resolve) => {
+                require(['./views/data/tipdialog.md'], resolve)
+              }
             }
           }
         },

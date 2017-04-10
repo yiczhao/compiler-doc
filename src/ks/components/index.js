@@ -75,6 +75,10 @@ import {
 } from './KsAddTable';
 
 
+//提示信息弹出层
+import {
+  KsTipDialog
+} from './KsTipDialog';
 
 const VERSION = '0.0.1';
 const KsComponents = {
@@ -125,7 +129,9 @@ const KsComponents = {
 
   KsDialogProgram,
 
-  KsAddTableItem
+  KsAddTableItem,
+
+  KsTipDialog
 
   
 };

@@ -49,7 +49,8 @@ export default [
           {name: '下拉选择', icon: 'icon', link: 'dropchoose'},
           {name: '弹出层选择', icon: 'icon', link: 'dialogchoose'},
           {name: '楼层选择', icon: 'icon', link: 'floorchoose'},
-          {name: '根据不同用户显示不同表格', icon: 'icon', link: 'addtable'}
+          {name: '根据不同用户显示不同表格', icon: 'icon', link: 'addtable'},
+          {name: '提示信息弹出层', icon: 'icon', link: 'tipdialog'}
         ]
       },
       {
