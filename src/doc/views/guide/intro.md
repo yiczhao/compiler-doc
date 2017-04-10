@@ -6,9 +6,18 @@
 -------------
 
 ### 组件打包
+
 ```js
+// 全量打包
 npm run min 
+
+// 指定组件打包
+npm run min -a KsDatePicker
+
+// 指定多个组件打包
+npm run min -a KsDatePicker KsPage
 ```
+
 
 > #### 在min目录下生成ks目录 ,此目录下会生成相应独立的组件、指令、过滤器
 > 【以上单独导出组件要符合一定的目录结构，具体在 <a v-link="{name:'dir'}" title="">目录结构</a> 查看】

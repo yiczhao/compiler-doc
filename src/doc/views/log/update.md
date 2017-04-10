@@ -2,6 +2,12 @@
 
 > 日志更新记录
 
+
+
+>> 添加 <a v-link="{name:'date-picker'}">KsDatePicker min,max 范围限制</a>【2017.04.10】
+
+>> 添加 <a v-link="{name:'intro'}">添加指定组件打包功能</a> 【2017.04.07】
+
 >> 添加 <a v-link="{name: 'search'}">模糊搜索组件和相关文档</a> 【2017.04.06】
 
 >> 添加 <a v-link="{name:'multiple-table'}">多标题表格样式 </a> 【2017.03.31】
@@ -14,3 +20,4 @@
 >> 添加 <a v-link="{name:'dir'}">ks-autobem-loader</a>描述
 
 >> 添加 <a v-link="{name:'intro'}">npm run min 介绍</a> 和 <a v-link="{name:'dir'}">组件目录结构文档描述</a> 【2017.03.27】
+
