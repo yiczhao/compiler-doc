@@ -306,6 +306,7 @@ webpackJsonp([10],{
 	exports.default = {
 	    data: function data() {
 	        return {
+
 	            datemonth: '2016-10',
 	            datemonth2: '2016-10',
 	            datemonth3: '2016-10',
