@@ -36,6 +36,7 @@
       content: String,
       visibleArrow: {default: true},
       transition: {type: String, default: 'fade-in-linear'},
+      show:Boolean,
       options: {
         default() {
           return {
@@ -50,6 +51,8 @@
       handleShowPopper() {
         this.timeout = setTimeout(() => {
           this.showPopper = !this.showPopper;
+          this.show =  this.showPopper
+          this.$emit('change',this.show)
         }, this.openDelay);
       },
 

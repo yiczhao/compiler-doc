@@ -15,7 +15,7 @@ import { KsDialog, KsDialogEntity } from './KsDialog';
 // Modal 模态框组件
 import { KsModal, KsModalEntity, KsModalCenter } from './KsModal';
 // ToolTips 组件
-import {KsToolTip,KsToolTipNew,KsToolTipWebsite} from './KsToolTip';
+import {KsToolTip,KsToolTipContent,KsToolTipWebsite} from './KsToolTip';
 // 复选组件
 import { KsCheckbox, KsCheckboxGroup } from './KsCheckbox';
 // 遮罩组件
@@ -119,7 +119,7 @@ const KsComponents = {
   KsModalCenter,
 
   KsToolTip,
-  KsToolTipNew,
+  KsToolTipContent,
   KsToolTipWebsite,
 
   KsDater,

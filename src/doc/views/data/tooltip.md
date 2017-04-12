@@ -6,12 +6,31 @@
 
 <div class="ks-row" style="margin-bottom:200px">
     <div class="ks-col">
-        <ks-tool-tip-new  placement="left-start">
-            <div>案例一(左偏上)</div>
+        <ks-tool-tip-content  placement="bottom-start" 
+        :show.sync = "showTip1">
+            <div>案例一(底偏上){{showTip1}}</div>
             <div slot="content">
-                <div :style="{width:width + 'px'}">我是案例1,箭头指向的是文字剧中的地方,相对于弹框而言,里面的内容是自适应的,箭头是左偏上的</div>
+                <div :style="{width:width + 'px'}" >我是案例1,箭头指向的是文字剧中的地方,相对于弹框而言,里面的内容是自适应的,箭头是底偏上的</div>
             </div>
-        </ks-tool-tip-new>
+        </ks-tool-tip-content>
+    </div>
+    <div class="ks-col">
+        <ks-tool-tip-content  placement="bottom-end"
+        :show = "showTip2"
+        @change = "showTipInfo">
+            <div>案例一(底偏下){{showTip2}}</div>
+            <div slot="content">
+                <div :style="{width:width + 'px'}">我是案例1,箭头指向的是文字剧中的地方,相对于弹框而言,里面的内容是自适应的,箭头是底偏下的</div>
+            </div>
+        </ks-tool-tip-content>
+    </div>
+    <div class="ks-col">
+        <ks-tool-tip-content  placement="bottom">
+            <div>案例一(底)</div>
+            <div slot="content">
+                <div :style="{width:width + 'px'}">我是案例1,箭头指向的是文字剧中的地方,相对于弹框而言,里面的内容是自适应的,箭头是底的</div>
+            </div>
+        </ks-tool-tip-content>
     </div>
 </div>
 
@@ -23,9 +42,15 @@ export default {
     data(){
         return {  
             width:500,
+            showTip1:false,
+            showTip2:false
         }  
     },
-    methods:{},
+    methods:{
+        showTipInfo(val){
+            this.showTip2 = val
+        }
+    },
     ready(){}
 }
 </script>
