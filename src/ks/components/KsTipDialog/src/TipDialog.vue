@@ -1,6 +1,8 @@
 <template>        
 <div class="KsTipDialog toast-current" v-show="show_toast">
     <slot></slot>
+    <div class="toast-trangle"></div>
+    <div class="toast-trangletop"></div>
 </div>
 
 </template>  
@@ -18,7 +20,6 @@
                 
             }  
         },
-       
         methods:{
            
         },

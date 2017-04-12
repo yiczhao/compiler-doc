@@ -236,6 +236,13 @@ export default (router) => {
               component: (resolve) => {
                 require(['./views/data/tipdialog.md'], resolve)
               }
+            },
+            '/tooltip': {
+              name: 'tooltip',
+              cnName: '提示信息弹出层',
+              component: (resolve) => {
+                require(['./views/data/tooltip.md'], resolve)
+              }
             }
 
           }

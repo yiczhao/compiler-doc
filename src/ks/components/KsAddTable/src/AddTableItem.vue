@@ -30,6 +30,7 @@
                         <span 
                             @click="deletetable($index)"
                             v-show="$index != 0">删除当前分组</span>
+                        <div class="errormsg" v-if="!listitem.title">分组姓名不能为空</div>
                     </div>
                     <div class="table-default">
                         <ul>
@@ -56,7 +57,6 @@
                     </div>
                 </div>
                 <div class="bottom" >
-                    <span class="tip">点击你需要的表格项添加或移除，也可以拖拽进行排序</span>
                     <div class="txtr btngroup">
                         <span class="reset" @click="reset($index)">重选</span>
                         <span class="checkall" @click="checkall($index)">全选</span>
@@ -77,6 +77,7 @@
 import KsButton from '../../KsButton'
 import KsDialogProgram from '../../KsDialogProgram'
 export default {
+    VERSION:'1.0.0',
     components:{
         KsDialogProgram:KsDialogProgram,
         KsButton:KsButton
@@ -111,7 +112,7 @@ export default {
             showindex:0,
             addicon:true,
             tableindex:-1,
-            addIndex:-1
+            addIndex:-1,
         }
     },
     methods:{
@@ -160,12 +161,28 @@ export default {
             {
                 var data = JSON.parse(localStorage.getItem(prefix))
                 data[this.tableindex] = this.list[0]
+                var title = data[this.tableindex].title
+                if(!title) {
+                    this.is_show = true 
+                }else{
+                    this.is_show = false 
+                }
                 localStorage.setItem(prefix,JSON.stringify(data)) 
             }else{
+                var title = this.list.map(item=>{
+                    return item.title
+                })
+                if(title.indexOf('')!=-1) {
+                    this.is_show = true 
+                }else{
+                    this.is_show = false 
+                }
                 localStorage.setItem(prefix,JSON.stringify(this.list)) 
             }
             //console.log(JSON.parse(localStorage.getItem('list')))
-            this.is_show = false
+            
+            //console.log(this.showindex)
+            this.$emit('save',this.showindex)
         },
         //点击下面上去
         adddefault(n,index,parent){

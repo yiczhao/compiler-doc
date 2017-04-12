@@ -1,5 +1,6 @@
 ## ksAddTableItem
 
+> Author:左晶晶
 > 常用的添加表格控件
 
 ---
@@ -13,7 +14,8 @@
     :datasource = datasource
     :list.sync = list
     :checkalllist = checkalllist
-    :prefix = prefix ></ks-add-table-item>
+    :prefix = prefix 
+    @save = save></ks-add-table-item>
 
 ----
 
@@ -28,7 +30,8 @@
     :datasource = datasource
     :list.sync = list
     :checkalllist = checkalllist
-    :prefix = prefix ></ks-add-table-item>
+    :prefix = prefix 
+    @save = save></ks-add-table-item>
 ```
 ### API
 | 参数 | 说明 | 接口类型  | 可选值 | 默认值 | 是否必须 |
@@ -62,6 +65,9 @@ export default {
     methods:{
        show_dialog(index){
             this.$broadcast('show_dialog',index)
+       },
+       save(){
+            console("2")
        }
     },
     ready(){
@@ -99,6 +105,9 @@ export default {
     methods:{
        show_dialog(index){
             this.$broadcast('show_dialog',index)
+       },
+       save(){
+            console("2")
        }
     },
     ready(){

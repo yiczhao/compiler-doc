@@ -1,7 +1,6 @@
 <template>
   <div v-el:reference cid="KsToolTip" style="display: inline-block;position:relative"
-        @mouseenter="handleShowPopper"
-        @mouseleave="handleClosePopper"
+        @click="handleShowPopper"
   >
     <div style="display: inline-block">
         <slot></slot>
@@ -50,13 +49,10 @@
     methods: {
       handleShowPopper() {
         this.timeout = setTimeout(() => {
-          this.showPopper = true;
+          this.showPopper = !this.showPopper;
         }, this.openDelay);
       },
 
-      handleClosePopper() {
-        this.showPopper = false;
-      }
     },
 
     created () {
@@ -69,5 +65,5 @@
 </script>
 
 <style lang="scss">
-  @import "../styles/index";
+  @import "../styles/tip";
 </style>

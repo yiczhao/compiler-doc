@@ -15,7 +15,7 @@ import { KsDialog, KsDialogEntity } from './KsDialog';
 // Modal 模态框组件
 import { KsModal, KsModalEntity, KsModalCenter } from './KsModal';
 // ToolTips 组件
-import KsToolTip from './KsToolTip';
+import {KsToolTip,KsToolTipNew,KsToolTipWebsite} from './KsToolTip';
 // 复选组件
 import { KsCheckbox, KsCheckboxGroup } from './KsCheckbox';
 // 遮罩组件
@@ -81,6 +81,7 @@ import {
   KsTipDialog
 } from './KsTipDialog';
 
+
 // 图片查看组件
 import {
   KsImage
@@ -118,6 +119,8 @@ const KsComponents = {
   KsModalCenter,
 
   KsToolTip,
+  KsToolTipNew,
+  KsToolTipWebsite,
 
   KsDater,
   KsDaterPure,
@@ -139,10 +142,10 @@ const KsComponents = {
 
   KsAddTableItem,
 
-  KsTipDialog
+  KsTipDialog,
 
   KsImage,
-  KsAddTableItem
+  KsAddTableItem,
 
 
 
