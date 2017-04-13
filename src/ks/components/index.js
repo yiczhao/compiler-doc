@@ -84,6 +84,7 @@ const install = function(Vue) {
     Vue.component(k, Components[k])
   });
 
+
   // install plugins.
   Object.keys(Plugins).forEach(k => {
     if (k === 'VERSION') return;
