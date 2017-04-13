@@ -28,6 +28,7 @@ $hue: rgba(68, 68, 68, .08);                                     // 主色调
   -ms-filter: progid:DXImageTransform.Microsoft.Shadow(Color=#444444,Direction=120,strength=5);
   padding: 7px 18px;
   border-radius: 4px;
+  z-index:1;
   //text-align: center;
 
   //_wrap, _container { display: inline-block;position: relative }
