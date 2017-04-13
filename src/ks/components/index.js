@@ -65,6 +65,10 @@ const KsComponents = {
   KsAddTableItem
 };
 
+const VueInstances = {
+  KsNoticeCenter
+}
+
 const install = function(Vue) {
   if (install.installed) {
     return
@@ -76,8 +80,12 @@ const install = function(Vue) {
     Vue.component(k, KsComponents[k])
   });
 
+
   // install plugins.
-  KsNoticeCenter.install(Vue);
+  Object.keys(VueInstances).forEach(k => {
+    VueInstances[k].install(Vue);
+  });
+  
 };
 
 // automation register components.
