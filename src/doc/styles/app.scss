@@ -16,3 +16,16 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
 }
+
+.base-container {
+  font-size: 13px;
+
+  ul {
+    padding: 0 0 10px 30px;
+    list-style-type: circle;
+
+    li {
+      padding: 3px;
+    }
+  }
+}

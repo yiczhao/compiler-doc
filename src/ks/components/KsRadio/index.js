@@ -10,9 +10,6 @@ import KsRadio from './src/NrRadio.vue'
 import KsBtnRadio from './src/BtnRadio.vue'
 import KsRadioGroup from './src/RadioGroup.vue'
 
+KsRadio.btnRadio = KsBtnRadio;
+KsRadio.group = KsRadioGroup;
 export default KsRadio
-export {
-  KsRadio,
-  KsBtnRadio,
-  KsRadioGroup
-}

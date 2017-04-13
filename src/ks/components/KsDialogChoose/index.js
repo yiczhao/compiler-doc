@@ -9,6 +9,3 @@
 import KsDialogChoose from './src/KsDialogChoose.vue'
 
 export default KsDialogChoose
-export {
-	KsDialogChoose
-}

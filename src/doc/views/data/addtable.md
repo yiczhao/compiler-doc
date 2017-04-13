@@ -47,7 +47,7 @@
 ```javascript
 
 <script lang="babel">
-import listdata from 'SRC/doc/views/data/tabledata.js'
+import listdata from 'Src/doc/views/data/tabledata.js'
 export default {
     data(){
         return {  
@@ -83,7 +83,7 @@ export default {
 
 
 <script lang="babel">
-import listdata from 'SRC/doc/views/data/tabledata.js'
+import listdata from 'Src/doc/views/data/tabledata.js'
 export default {
     data(){
         return {  
@@ -108,7 +108,7 @@ export default {
         {
             listitem =  JSON.parse(localStorage.getItem(prefix))
             this.list = listitem
-        }else{
+        }else{dialogchoose
             listitem =  JSON.parse(JSON.stringify(listdata.list))
             this.list = listitem
         }

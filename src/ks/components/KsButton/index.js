@@ -8,9 +8,6 @@ import KsButton from './src/Button.vue'
 import KsNrButton from './src/NrButton.vue'
 import KsGhostButton from './src/GhostButton.vue'
 
+KsButton.normal = KsNrButton;
+KsButton.ghost = KsGhostButton;
 export default KsButton
-export {
-  KsButton,
-  KsNrButton,
-  KsGhostButton
-}

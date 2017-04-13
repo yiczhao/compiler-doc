@@ -9,6 +9,3 @@
 import KsDialogProgram from './src/Dialog.vue'
 
 export default KsDialogProgram
-export {
-  KsDialogProgram
-}

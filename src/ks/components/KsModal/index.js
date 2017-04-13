@@ -10,9 +10,6 @@ import KsModal from './src/main.js'
 import KsModalEntity from './src/main.vue'
 import KsModalCenter from './src/center.vue'
 
+KsModal.entity = KsModalEntity;
+KsModal.center = KsModalCenter;
 export default KsModal
-export {
-  KsModal,
-  KsModalEntity,
-  KsModalCenter
-}

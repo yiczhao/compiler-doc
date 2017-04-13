@@ -15,7 +15,7 @@
 //
 
 @import "../../styles/variables";
-@import "../../styles/sassMagic/_sassMagic";
+@import "../../foundation/SassMagic-master/src/sassMagic";
 
 $primary-color: nth($primarys, 2);                              // 主色调
 $primary-border-color: nth($darks, 3);                          // 主边框色调

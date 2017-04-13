@@ -1,4 +1,4 @@
-@import "../../styles/sassMagic/_sassMagic";
+@import "../../foundation/SassMagic-master/src/sassMagic";
 @import "../../styles/variables";
 
 %store-select {
@@ -43,7 +43,7 @@
           float: left;
           color:red;
         }
-        
+
     }
     ul {
         overflow:hidden;

@@ -1,8 +1,6 @@
 # 更新记录
 
-> 日志更新记录
-
-
+### 请不要再这个文件添加相关组件跟新的历史记录，请移步到项目根目录下得 `CHANGELOG.md` 文件中添加相关描述
 
 >> 添加 <a v-link="{name:'date-picker'}">KsDatePicker min,max 范围限制</a>【2017.04.10】
 
@@ -20,4 +18,3 @@
 >> 添加 <a v-link="{name:'dir'}">ks-autobem-loader</a>描述
 
 >> 添加 <a v-link="{name:'intro'}">npm run min 介绍</a> 和 <a v-link="{name:'dir'}">组件目录结构文档描述</a> 【2017.03.27】
-

@@ -36,7 +36,7 @@
 
 ```javascript
 <script>
-import listdata from 'SRC/doc/views/data/data.js'
+import listdata from 'Src/doc/views/data/data.js'
 export default {
     data(){
         return {  
@@ -77,7 +77,7 @@ export default {
 
 
 <script>
-import listdata from 'SRC/doc/views/data/data.js'
+import listdata from 'Src/doc/views/data/data.js'
 export default {
     data(){
         return {  

@@ -4,7 +4,7 @@
 // @date: 2016/10/18.
 //
 
-@import "../../styles/sassMagic/_sassMagic";
+@import "../../foundation/SassMagic-master/src/sassMagic";
 
 @include b(KSButton) {
   display: inline-block;

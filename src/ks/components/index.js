@@ -6,78 +6,90 @@
  * @date 2016/11/11.
  */
 
-import KsToolTip from './KsToolTip';
+import KsPopup from './KsPopup';
 import KsNoticeCenter from './KsNoticeCenter'
-import { KsSwitch, KsAbstractSwitch } from './KsSwitch';
-import { KsDialog, KsDialogEntity } from './KsDialog';
-import { KsModal, KsModalEntity, KsModalCenter } from './KsModal';
-import { KsCheckbox, KsCheckboxGroup } from './KsCheckbox';
-import { KsMask, KsMaskEntity } from './KsMask';
-import { KsPage, KsPageGroup } from './KsPager';
-import { KsRadio, KsRadioGroup, KsBtnRadio } from './KsRadio';
-import { KsButton, KsNrButton, KsGhostButton } from './KsButton';
-import { KsDater, KsDaterPure, KsDatePicker, KsDaterRange, KsDateRangePicker, KsDateMonth} from './KsDater';
-import { KsStore, KsStoreClick } from './KsDropChoose';
-import { KsSearch } from './KsSearch';
-import { KsDialogChoose } from './KsDialogChoose';
-import { KsItem, KsItemFloor } from './KsFloorSelect';
-import { KsDialogProgram } from './KsDialogProgram';
-import { KsAddTableItem } from './KsAddTable';
-import { KsImage } from './KsImage';
+import KsSwitch from './KsSwitch';
+import KsDialog from './KsDialog';
+import KsModal from './KsModal';
+import KsCheckbox from './KsCheckbox';
+import KsMask from './KsMask';
+import KsRadio from './KsRadio';
+import KsButton from './KsButton';
+import KsPage from './KsPager';
+import KsDater from './KsDater';
+import KsStore from './KsDropChoose';
+import KsSearch from './KsSearch';
+import KsDialogChoose from './KsDialogChoose';
+import KsItem from './KsFloorSelect';
+import KsDialogProgram from './KsDialogProgram';
+import KsAddTableItem from './KsAddTable';
+import KsImage from './KsImage';
+import KsIcon from './KsIcon'
 
-const VERSION = '0.0.1';
-const KsComponents = {
+// 版本
+const VERSION = '1.0.0';
+
+// 组件
+const Components = {
   VERSION,
   KsMask,
-  KsModal,
-  KsDialog,
   KsPage,
-  KsPageGroup,
+  KsIcon,
+  KsPageGroup: KsPage.group,
   KsSwitch,
-  KsAbstractSwitch,
+  KsAbstractSwitch: KsSwitch.abstract,
   KsCheckbox,
-  KsCheckboxGroup,
+  KsCheckboxGroup: KsCheckbox.group,
   KsRadio,
-  KsBtnRadio,
-  KsRadioGroup,
+  KsBtnRadio: KsRadio.btnRadio,
+  KsRadioGroup: KsRadio.group,
   KsButton,
-  KsNrButton,
-  KsGhostButton,
-  KsMaskEntity,
-  KsDialogEntity,
-  KsModalEntity,
-  KsModalCenter,
-  KsToolTip,
+  KsNrButton: KsButton.normal,
+  KsGhostButton: KsButton.ghost,
+  KsMaskEntity: KsMask.entity,
+  KsModalEntity: KsModal.entity,
+  KsModalCenter: KsModal.center,
+  KsDialogEntity: KsDialog.entity,
+  KsToolTip: KsPopup.tips,
   KsDater,
-  KsDaterPure,
-  KsDatePicker,
-  KsDaterRange,
-  KsDateRangePicker,
-  KsDateMonth,
+  KsDaterPure: KsDater.pure,
+  KsDatePicker: KsDater.picker,
+  KsDaterRange: KsDater.range,
+  KsDateRangePicker: KsDater.rangePicker,
+  KsDateMonth: KsDater.month,
   KsStore,
-  KsStoreClick,
+  KsStoreClick: KsStore.click,
   KsSearch,
   KsDialogChoose,
   KsItem,
-  KsItemFloor,
+  KsItemFloor: KsItem.floor,
   KsDialogProgram,
   KsImage,
   KsAddTableItem
 };
 
+// 插件
+const Plugins = {
+  VERSION,
+  KsNoticeCenter
+};
+
 const install = function(Vue) {
-  if (install.installed) {
-    return
-  }
+  if (install.installed) return;
 
   // register components.
-  Object.keys(KsComponents).forEach(k => {
-    // console.log(k, KsComponents[k])
-    Vue.component(k, KsComponents[k])
+  Object.keys(Components).forEach(k => {
+    if (k === 'VERSION') return;
+
+    Vue.component(k, Components[k])
   });
 
   // install plugins.
-  KsNoticeCenter.install(Vue);
+  Object.keys(Plugins).forEach(k => {
+    if (k === 'VERSION') return;
+
+    Plugins[k].install(Vue);
+  });
 };
 
 // automation register components.
@@ -86,6 +98,4 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default install
-export {
-  KsComponents
-}
+export { Components, Plugins }

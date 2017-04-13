@@ -21,7 +21,7 @@ export default [
         subMenu: [
           // {name: 'Layout 布局', icon: 'icon', link: 'layout'},
           // {name: 'Color 色彩', icon: 'icon', link: ''},
-          {name: 'Icon 图标', icon: 'icon', link: ''},
+          {name: 'Icon 图标', icon: 'icon', link: 'icons'},
           {name: 'Button 按钮', icon: 'icon', link: 'button'}
         ]
       },
@@ -83,6 +83,7 @@ export default [
       {
         name: '其他 Others', icon: 'icon', link: '',
         subMenu: [
+          {name: 'Tooltips 弹出提示', icon: 'icon', link: 'tooltips'},
           {name: 'Image 查看', icon: 'icon', link: 'image'},
           {name: '多标题表格', icon: 'icon', link: 'multiple-table'},
           // {name: 'Carousel 走马灯', icon: 'icon', link: ''},

@@ -9,6 +9,3 @@
 import KsImage from './src/KsImage.vue'
 
 export default KsImage
-export {
-	KsImage
-}
