@@ -13,7 +13,8 @@
              :id="'KSNRCheckbox__entity--' + _uid"
              :disabled="disable && 'disabled'"
              :checked="defChecked && 'checked'"
-      />
+      >
+      {{checked}}
       <label class="KSNRRadio__skin" :for="'KSNRCheckbox__entity--' + _uid"></label>
       <label class="KSNRRadio__text" :for="'KSNRCheckbox__entity--' + _uid">
         <slot>LABEL</slot>
