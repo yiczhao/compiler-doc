@@ -24,6 +24,7 @@ import { KsItem, KsItemFloor } from './KsFloorSelect';
 import { KsDialogProgram } from './KsDialogProgram';
 import { KsAddTableItem } from './KsAddTable';
 import { KsImage } from './KsImage';
+import { KsTable } from './KsTable';
 
 const VERSION = '0.0.1';
 const KsComponents = {
@@ -62,7 +63,8 @@ const KsComponents = {
   KsItemFloor,
   KsDialogProgram,
   KsImage,
-  KsAddTableItem
+  KsAddTableItem,
+  
 };
 
 const install = function(Vue) {
@@ -78,6 +80,7 @@ const install = function(Vue) {
 
   // install plugins.
   KsNoticeCenter.install(Vue);
+  KsTable.install(Vue)
 };
 
 // automation register components.
