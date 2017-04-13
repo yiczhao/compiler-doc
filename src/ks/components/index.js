@@ -19,7 +19,7 @@ import { KsButton, KsNrButton, KsGhostButton } from './KsButton';
 import { KsDater, KsDaterPure, KsDatePicker, KsDaterRange, KsDateRangePicker, KsDateMonth} from './KsDater';
 import { KsStore, KsStoreClick } from './KsDropChoose';
 import { KsSearch } from './KsSearch';
-import { KsDialogChoose } from './KsDialogChoose';
+import { KsDialogChoose,KsList } from './KsDialogChoose';
 import { KsItem, KsItemFloor } from './KsFloorSelect';
 import { KsDialogProgram } from './KsDialogProgram';
 import { KsAddTableItem } from './KsAddTable';
@@ -58,6 +58,7 @@ const KsComponents = {
   KsStoreClick,
   KsSearch,
   KsDialogChoose,
+  KsList,
   KsItem,
   KsItemFloor,
   KsDialogProgram,
