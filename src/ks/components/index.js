@@ -19,12 +19,14 @@ import KsPage from './KsPager';
 import KsDater from './KsDater';
 import KsStore from './KsDropChoose';
 import KsSearch from './KsSearch';
+// KsList from KsDialogChoose 组件
 import KsDialogChoose from './KsDialogChoose';
 import KsItem from './KsFloorSelect';
 import KsDialogProgram from './KsDialogProgram';
 import KsAddTableItem from './KsAddTable';
 import KsImage from './KsImage';
 import KsIcon from './KsIcon'
+
 
 console.log(KsMaskEntity)
 console.log(KsPage)
@@ -56,11 +58,6 @@ const Components = {
   KsDialogEntity: KsDialog.entity,
   KsToolTip: KsPopup.tips,
   KsDater,
-  // KsDaterPure: KsDater.pure,
-  // KsDatePicker: KsDater.picker,
-  // KsDaterRange: KsDater.range,
-  // KsDateRangePicker: KsDater.rangePicker,
-  // KsDateMonth: KsDater.month,
   KsStore,
   KsStoreClick: KsStore.click,
   KsSearch,
@@ -81,14 +78,6 @@ const Plugins = {
 const install = function(Vue) {
   if (install.installed) return;
 
-  // register components.
-  // Object.keys(Components).forEach(k => {
-  //   if (k === 'VERSION') return;
-  //   // console.log(Components[k].template)
-
-  //   // Vue.component(k, Components[k])
-  // });
-
   Object.keys(Components).reduce((arr,k) => {
     var temp
     if(Components[k].template){
@@ -105,7 +94,6 @@ const install = function(Vue) {
       }) 
     }
     return arr.concat(temp)
-    // Vue.component(k, Components[k])
   },[]).forEach((item)=>{
     Vue.component(item.name, item.val)
   })
@@ -114,7 +102,6 @@ const install = function(Vue) {
   // install plugins.
   Object.keys(Plugins).forEach(k => {
     if (k === 'VERSION') return;
-
     Plugins[k].install(Vue);
   });
 };

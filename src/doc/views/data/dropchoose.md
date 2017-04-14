@@ -40,7 +40,7 @@
 ```javascript
 <script lang="babel">
 
-import list from 'Src/doc/views/data/data.js'
+import list from 'SRC/doc/views/data/data.js'
 
 export default {
     data(){
@@ -146,7 +146,7 @@ export default {
 
 ```javascript
 <script>
-import list from 'Src/doc/views/data/data.js'
+import list from 'SRC/doc/views/data/data.js'
 export default {
     data(){
         return {  
@@ -164,7 +164,7 @@ export default {
 </script>
 ```
 <script>
-import list from 'Src/doc/views/data/data.js'
+import list from 'SRC/doc/views/data/data.js'
 export default {
     data(){
         return {  
