@@ -47,7 +47,7 @@
 ```javascript
 
 <script lang="babel">
-import listdata from 'Src/doc/views/data/tabledata.js'
+import listdata from 'SRC/doc/views/data/tabledata.js'
 export default {
     data(){
         return {  
@@ -83,7 +83,7 @@ export default {
 
 
 <script lang="babel">
-import listdata from 'Src/doc/views/data/tabledata.js'
+import listdata from 'SRC/doc/views/data/tabledata.js'
 export default {
     data(){
         return {  

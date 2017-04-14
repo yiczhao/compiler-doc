@@ -134,7 +134,7 @@ module.exports = {
 
   resolve:{
     alias: {
-      Src: __dirname + '/src',
+      SRC: __dirname + '/src',
       Data: __dirname + '/src/doc/data',
       KsComponents: __dirname + '/src/ks/components'
     }
