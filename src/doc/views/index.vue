@@ -5,7 +5,6 @@
       <k-menu></k-menu>
       <div class="work-container" v-el:main-container>
         <k-crumbs></k-crumbs>
-        <loading-mask></loading-mask>
         <div class="router-container">
           <div class="router-wrap">
             <router-view class="p20"></router-view>
