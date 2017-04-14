@@ -12,7 +12,7 @@ import KsSwitch from './KsSwitch';
 import KsDialog from './KsDialog';
 import KsModal from './KsModal';
 import KsCheckbox from './KsCheckbox';
-import KsMask from './KsMask';
+import {KsMask,KsMaskEntity} from './KsMask';
 import KsRadio from './KsRadio';
 import KsButton from './KsButton';
 import KsPage from './KsPager';
@@ -26,13 +26,17 @@ import KsAddTableItem from './KsAddTable';
 import KsImage from './KsImage';
 import KsIcon from './KsIcon'
 
+console.log(KsMaskEntity)
+console.log(KsPage)
+// console.log(KsNoticeCenter)
 // 版本
 const VERSION = '1.0.0';
 
 // 组件
 const Components = {
-  VERSION,
-  KsMask,
+  // VERSION,
+  // KsMask,
+  KsMaskEntity,
   KsPage,
   KsIcon,
   KsPageGroup: KsPage.group,
@@ -46,17 +50,17 @@ const Components = {
   KsButton,
   KsNrButton: KsButton.normal,
   KsGhostButton: KsButton.ghost,
-  KsMaskEntity: KsMask.entity,
+  // KsMaskEntity: KsMask.entity,
   KsModalEntity: KsModal.entity,
   KsModalCenter: KsModal.center,
   KsDialogEntity: KsDialog.entity,
   KsToolTip: KsPopup.tips,
   KsDater,
-  KsDaterPure: KsDater.pure,
-  KsDatePicker: KsDater.picker,
-  KsDaterRange: KsDater.range,
-  KsDateRangePicker: KsDater.rangePicker,
-  KsDateMonth: KsDater.month,
+  // KsDaterPure: KsDater.pure,
+  // KsDatePicker: KsDater.picker,
+  // KsDaterRange: KsDater.range,
+  // KsDateRangePicker: KsDater.rangePicker,
+  // KsDateMonth: KsDater.month,
   KsStore,
   KsStoreClick: KsStore.click,
   KsSearch,
@@ -78,12 +82,34 @@ const install = function(Vue) {
   if (install.installed) return;
 
   // register components.
-  Object.keys(Components).forEach(k => {
-    if (k === 'VERSION') return;
+  // Object.keys(Components).forEach(k => {
+  //   if (k === 'VERSION') return;
+  //   // console.log(Components[k].template)
 
-    Vue.component(k, Components[k])
-  });
+  //   // Vue.component(k, Components[k])
+  // });
 
+  Object.keys(Components).reduce((arr,k) => {
+    var temp
+    if(Components[k].template){
+      temp = {
+        name:k,
+        val:Components[k]
+      }
+    }else{
+      temp = Object.keys(Components[k]).map((key)=>{
+        return {
+          name:key,
+          val:Components[k][key]
+        }
+      }) 
+    }
+    return arr.concat(temp)
+    // Vue.component(k, Components[k])
+  },[]).forEach((item)=>{
+    Vue.component(item.name, item.val)
+  })
+  
 
   // install plugins.
   Object.keys(Plugins).forEach(k => {
