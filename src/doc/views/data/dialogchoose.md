@@ -148,6 +148,8 @@ export default {
         listdata.forEach(item=>{
             item.ischecked = false
         })
+
+
         this.list1 = JSON.parse(JSON.stringify(listdata))
         this.list2 = JSON.parse(JSON.stringify(listdata))
         this.list3 = JSON.parse(JSON.stringify(listdata))
@@ -166,11 +168,12 @@ export default {
             list1:[],
             list2:[],
             list3:[],
+            sex:[{'id':'0',name:'男'},{'id':'1',name:'女'}],
             list4:[],
             sid1:['086021000000006'],
             sid2:['086021000000006'],
             sid3:['086021000000006'],
-            sid4:['086021000000006'],
+            sid4:['0'],
         }  
     },
     methods:{
@@ -182,13 +185,17 @@ export default {
         }
     },
     ready(){
+        //var sex = []
+        this.sex.forEach(item=>{
+            item.ischecked = false
+        })
         listdata.forEach(item=>{
             item.ischecked = false
         })
         this.list1 = JSON.parse(JSON.stringify(listdata))
         this.list2 = JSON.parse(JSON.stringify(listdata))
         this.list3 = JSON.parse(JSON.stringify(listdata))
-        this.list4 = JSON.parse(JSON.stringify(listdata))
+        this.list4 = JSON.parse(JSON.stringify(this.sex))
     }
 }
 </script>

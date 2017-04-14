@@ -36,6 +36,21 @@
             this.$emit('change',listarr)
         }
     },
+    watch:{
+    	list(val){
+            val.forEach(t=>{
+                this.sid.forEach(item=>{
+                    if(t.id == item)
+                    {
+                        t.ischecked = true
+                    }
+                })
+                
+            })
+
+            
+        }
+    },
     ready(){
 
     }
