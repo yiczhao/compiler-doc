@@ -6,7 +6,7 @@
  * @date 2016/11/11.
  */
 
-import KsPopup from './KsPopup'
+import { KsPopup, KsToolTips } from './KsPopup'
 import KsNoticeCenter from './KsNoticeCenter'
 import KsSwitch from './KsSwitch'
 import { KsDialog, KsDialogEntity } from './KsDialog'
@@ -87,7 +87,7 @@ const install = function(Vue) {
   });
 };
 
-// automation register components.
+// automation register components .
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
