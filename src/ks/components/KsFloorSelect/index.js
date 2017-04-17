@@ -9,5 +9,7 @@
 import KsItem from './src/Item.vue'
 import KsItemFloor from './src/ItemFloor.vue'
 
-KsItem.floor = KsItemFloor;
-export default KsItem
+export default {
+  KsItem,
+  KsItemFloor
+}

@@ -7,5 +7,7 @@
 import KsPopup from './src/abstract.vue'
 import KsToolTips from './src/tips.vue'
 
-KsPopup.tips = KsToolTips;
-export default KsPopup
+export default {
+  KsPopup,
+  KsToolTips
+}

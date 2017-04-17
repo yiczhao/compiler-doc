@@ -8,4 +8,6 @@
 
 import KsAddTableItem from './src/AddTableItem.vue'
 
-export default KsAddTableItem
+export default {
+  KsAddTableItem
+}

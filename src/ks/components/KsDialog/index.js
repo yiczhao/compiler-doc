@@ -9,5 +9,7 @@
 import KsDialog from './src/main'
 import KsDialogEntity from './src/main.vue'
 
-KsDialog.entity = KsDialogEntity;
-export default KsDialog
+export default {
+  KsDialog,
+  KsDialogEntity
+}
