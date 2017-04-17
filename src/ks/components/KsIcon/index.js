@@ -7,6 +7,4 @@
 
 import KsIcon from './src/icon.vue'
 
-export default {
-  KsIcon
-}
+export default KsIcon;

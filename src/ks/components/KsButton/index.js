@@ -6,7 +6,9 @@
  */
 
 import KsButton from './src/main.vue'
+import KsButtonAbstract from './src/abstract.vue'
 
-export default {
-  KsButton
+export {
+  KsButton,
+  KsButtonAbstract
 }

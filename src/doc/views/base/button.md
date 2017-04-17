@@ -40,7 +40,7 @@
 <ks-button type="normal">按钮类型</ks-button>
 ```
 
-#### Mode 属性 （正常还是幽灵按钮）
+#### Mode 属性 （正常/幽灵 按钮）
 
 <br>
 
@@ -56,37 +56,106 @@
 
 #### Loading 属性 （按钮是否处于等待状态）
 
-<ks-switch class="mr20" :checked.sync="btnSwitch"></ks-switch><ks-button :loading="btnSwitch">幽灵按钮</ks-button>
+> 通过将 `loading` 设置为 `ture` 我们可以将按钮的状态设置为加载。
+
+<br>
+
+<ks-switch class="mr20" :checked.sync="btnSwitch"></ks-switch><ks-button :loading="btnSwitch">幽灵按钮</ks-button> <ks-button :loading="btnSwitch" mode="ghost">幽灵加载按钮</ks-button>
 
 ```html
-<ks-switch class="mr20" :checked.sync="btnSwitch"></ks-switch>
 <ks-button :loading="btnSwitch">加载按钮</ks-button>
+<ks-button :loading="btnSwitch" mode="ghost">幽灵加载按钮</ks-button>
 ```
 
-#### 按钮禁用
+#### Disabled 属性 （按钮是否处于禁用状态）
 
-<ks-switch class="mr20" :checked.sync="btnDisable"></ks-switch><ks-button :disable="btnDisable">按钮禁用</ks-button>
+> 通过将 `disabled` 设置为 `ture` 我们可以将按钮的状态设置为禁用。
+
+<br>
+
+<ks-switch class="mr20" :checked.sync="btnDisable"></ks-switch><ks-button :disabled="btnDisable">按钮禁用</ks-button> <ks-button :disabled="btnDisable" mode="ghost">幽灵按钮禁用</ks-button>
 
 ```html
-<ks-switch class="mr20" :checked.sync="btnDisable"></ks-switch>
-<ks-button :disable="btnDisable">按钮禁用</ks-button>
+<ks-button :disabled="btnDisable">按钮禁用</ks-button>
+<ks-button :disabled="btnDisable" mode="ghost">幽灵按钮禁用</ks-button>
 ```
 
-#### 按钮的拓展使用 (KsNrButton) 与 (KsGhostButton)
+#### 事件绑定 
 
-> `KsButton` 的默认状态是由 `KsNrButton` 组件来提供的实现, 下面我来简述一下 `KsNrButton` 与 `KsButton` 组件 Api 的差异
-> 与 `KsNrButton` 暴露的更加具有自定义的一些 Api。
+> 通过 `@click`, `v-on:click` 等 `vue` 支持的事件绑定式就可以绑定处理相关事件。禁用之后不再产生 `click` 事件。
 
-> 默认不管是 `KsNrButton` 还是 `KsGhostButton` 都是不提供颜色的需要自己实现 `colorNormal` `colorHover` `colorAcitve` 来提供按钮主题
+<br>
+
+<ks-switch class="mr20" :checked.sync="btnEventDisable"></ks-switch><ks-button :disabled="btnEventDisable" @click="clickTest">按钮禁用</ks-button>
 
 ```html
-<ks-nr-button :width="100" :height="30"> AAA </ks-nr-button>
-<ks-ghost-button :width="130" :height="60"> BBB </ks-ghost-button>
-<ks-nr-button :width="500" :height="32" :color-normal="#FF0000" :color-hover="#00FF00" :color-active="#0000FF"> CCC </ks-nr-button>
+<ks-button :disabled="btnEventDisable" @click="clickTest">按钮禁用</ks-button>
 ```
 
-> 默认按钮的风格样式设计是根据设计原型里的标准, 可以满足大部分需求单不排除有一些定制话的需求, 故在此释出定制化接口来满足一些特殊的需求。
+#### 高级使用 使用抽象的按钮组件来实现一个自定义的按钮
 
+> 上面的我们简述了一些 `KsButton` 一些常用的属性。默认按钮的风格样式设计是根据设计原型里的标准。
+> 可以满足大部分需求单不排除有一些定制话的需求，亦或我们需要拓展出一些组件。
+> 下面介绍如何使用 `ks-button-abstract` 组件自定义实现一个 `button`, `ks-button` 内部也是使用 `ks-button-abstract` 实现的。
+
+<br>
+
+##### 1. 自定义按钮主题颜色
+
+<br>
+
+> 我们可以使用 `ks-button-abstract` 提供的 `width`，`height`， `fontSize`， `colorNormal`， `colorHover`， `colorActive` 接口
+> 来自定义按钮的宽度，高度，字体大小，等外观。
+
+<br>
+
+<ks-button-abstract width="66px" height="66px" font-size="22px" 
+                    color-normal="#AACD21" color-hover="#A3421A"
+                    color-active="#D23D21">TEST</ks-button-abstract>
+
+```html
+<ks-button-abstract width="66px" height="66px" font-size="22px" 
+                    color-normal="#AACD21" color-hover="#A3421A"
+                    color-active="#D23D21">TEST</ks-button-abstract>
+```
+
+<br>
+
+> 在上面的代码中我们就通过一些列的属性设置自定义了一个按钮，当然的这是 `mode='normal'` 类型的按钮，如果我们需要一个幽灵按钮
+> 只要把 `mode` 属性设置为 `ghost` 就可以了。按钮默认都是有个 `padding: 3px 18px` 的值这是设计规范所规定。
+
+<br>
+
+##### 2. 完全自定义样式
+
+<br>
+
+> 在有的情况下我们可能需要完全自定义样式，那么我们就只能通过重写样式这种方式来实现，比如我们要是一线一个圆形按钮
+> 建议有这种需求的时候新增一个组件，继承 `ks-button-abstract` 来实现，一并提交到公共样式库中。
+
+<br>
+
+<style>
+  .round-button .KSBtnAbstract { border-radius: 50%; padding: 0 }
+</style>
+
+<div class="round-button">
+  <ks-button-abstract width="66px" height="66px" font-size="14px" 
+                      color-normal="#AACD21" color-hover="#A3421A"
+                      color-active="#D23D21">TEST</ks-button-abstract>
+</div>
+
+```html
+<style>
+  .round-button .KSBtnAbstract { border-radius: 50%; padding: 0 }
+</style>
+
+<div class="round-button">
+  <ks-button-abstract width="66px" height="66px" font-size="14px" 
+                      color-normal="#AACD21" color-hover="#A3421A"
+                      color-active="#D23D21">TEST</ks-button-abstract>
+</div>
+```
 
 <script>
   let btnTypeMapper = [
@@ -113,9 +182,14 @@
         
         btnSwitch: false,
         btnDisable: false,
+        btnEventDisable: false,
         btnType: 'primary',
         btnSize: 'normal'
       }
+    },
+    
+    methods: {
+      clickTest () { alert('click me!') }
     }
   }
 </script>
@@ -126,23 +200,29 @@
 
 | 参数 | 说明 | 接口类型 | 类型 |  双向（twoWay） | 是否必须 | 可选值 | 默认值 |
 |------|-------|----------|---------|-------|---------|-------|--------|
-| type | 用来描述按钮的类型 | props | String | `false` | 否 | **primary**, **success**, **info**, **warn**, **danger**, **other**| primary |
-| size | 用来描述按钮的大小 | props | String | `false` | 否 |**normal**, **middle**, **large** | normal |
-| ghost | 用来描述按钮是否是 `幽灵` 类型按钮 | props | Boolean | `false` | 否 | `true`, `false` | `false` |
-| loading | 同步属性，用来控制按钮是否是加载状态 | props | Boolean | `false` | 否 | 无 | 无 |
-| disable | 用来描述按钮是禁用 | props  | Boolean | `false` | 否 | `true`, `false` | `false` |
-| nativeType | 用来描述按钮原生类型 | props | String | `false` | 否 | 无 | `button` |
+| mode | 用来描述按钮的模式 正常/幽灵 | props  | String | `false` | 否 | `normal`, `ghost` | `normal` |
+| form | 原生属性 `form` | props  | String | `false` | 否 | - | - |
+| autoFocus | 原生属性 `autofocus` | props  | Boolean | `false` | 否 | - | `false` |
+| name | 原生属性 `name` | props  | String | `false` | 否 | - | `KSButton` |
+| nativeType | 用来描述按钮原生类型 | props | String | `false` | 否 | - | `button` |
+| disabled | 用来描述按钮是禁用 | props  | Boolean | `false` | 否 | `true`, `false` | `false` |
+| type | 用来描述按钮的类型 | props | String | `false` | 否 | `primary`, `success`, `info`, `warn`, `danger`, `other`| `primary` |
+| size | 用来描述按钮的大小 | props | String | `false` | 否 | `small`, `normal`, `middle`, `large` | `normal` |
+| loading | 同步属性，用来控制按钮是否是加载状态 | props | Boolean | `false` | 否 | - | - |
 
-#### (KsNrButton) 与 (KsGhostButton)
+#### KsButtonAbstract
 
 | 参数 | 说明 | 接口类型 | 类型 |  双向（twoWay） | 是否必须 | 可选值 | 默认值 |
 |------|-------|----------|---------|-------|---------|-------|--------|
-| loading | 同步属性，用来控制按钮是否是加载状态 | props | Boolean | `false` | 否 | 无 | 无 |
-| disable | 用来描述按钮是禁用 | props  | Boolean | `false` | 否 | `true`, `false` | `false` |
-| nativeType | 用来描述按钮原生类型 | props | String | `false` | 否 | 无 | `button` |
-| fontSize | 用来描述按钮内文字大小 | props | Number | `false` | 是 | 无 | 无 |
-| width | 用来描述按钮的宽度 | props | Number | `false` | 是 | 无 | 无 |
-| height | 用来描述按钮的高度 | props | Number | `false` | 是 | 无 | 无 |
-| colorNormal | 用来描述按钮 normal （默认） 时的颜色, 十六进制颜色值 | props | String | `false` | 是 | 无 | 无 |
-| colorHover | 用来描述按钮 hover （鼠标悬浮） 时的颜色, 十六进制颜色值 | props | String | `false` | 是 | 无 | 无 |
-| colorActive | 用来描述按钮 active （按钮按下） 是的颜色, 十六进制颜色值 | props | String | `false` | 是 | 无 | 无 |
+| mode | 用来描述按钮的模式 正常/幽灵 | props  | String | `false` | 否 | `normal`, `ghost` | `normal` |
+| form | 原生属性 `form` | props  | String | `false` | 否 | - | - |
+| autoFocus | 原生属性 `autofocus` | props  | Boolean | `false` | 否 | - | `false` |
+| name | 原生属性 `name` | props  | String | `false` | 否 | - | `KSButton` |
+| nativeType | 用来描述按钮原生类型 | props | String | `false` | 否 | - | `button` |
+| disabled | 用来描述按钮是禁用 | props  | Boolean | `false` | 否 | `true`, `false` | `false` |
+| fontSize | 用来描述按钮内文字大小 | props | Number | `false` | 是 | - | - |
+| width | 用来描述按钮的宽度 | props | Number | `false` | 是 | - | - |
+| height | 用来描述按钮的高度 | props | Number | `false` | 是 | - | - |
+| colorNormal | 用来描述按钮 normal （默认） 时的颜色, 十六进制颜色值 | props | String | `false` | 是 | - | - |
+| colorHover | 用来描述按钮 hover （鼠标悬浮） 时的颜色, 十六进制颜色值 | props | String | `false` | 是 | - | - |
+| colorActive | 用来描述按钮 active （按钮按下） 是的颜色, 十六进制颜色值 | props | String | `false` | 是 | - | - |

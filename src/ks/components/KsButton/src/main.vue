@@ -9,7 +9,8 @@
               :color-hover="hueMapper[type].hover"
               :color-active="hueMapper[type].active"
     >
-      <ks-icon name="circle-o-notch" animate="spin" :color="hueMapper[type].normal"
+      <ks-icon name="circle-o-notch" animate="spin"
+               :color="mode === 'normal' ? 'white' : hueMapper[type].normal"
                :size="sizeMapper[size].fontSize" v-if="loading"
       ></ks-icon>
       <slot></slot>

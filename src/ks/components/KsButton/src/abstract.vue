@@ -11,9 +11,15 @@
       .KSBtnAbstract__UID--{{ _uid }} .KSBtnAbstract:hover {
         background: {{ colorHover }};
       }
+      .KSBtnAbstract__UID--{{ _uid }} .KSBtnAbstract[disabled]:hover {
+        background: {{ colorNormal }};
+      }
       /* active 状态 */
       .KSBtnAbstract__UID--{{ _uid }} .KSBtnAbstract:active {
         background: {{ colorActive }};
+      }
+      .KSBtnAbstract__UID--{{ _uid }} .KSBtnAbstract[disabled]:active {
+        background: {{ colorNormal }};
       }
     </style>
   </template>
@@ -31,10 +37,18 @@
         color: {{ colorHover }};
         border: 1px solid {{ colorHover }};
       }
+      .KSBtnAbstract__UID--{{ _uid }} .KSBtnAbstract[disabled]:hover {
+        color: {{ colorNormal }};
+        border: 1px solid {{ colorNormal }};
+      }
       /* active 状态 */
       .KSBtnAbstract__UID--{{ _uid }} .KSBtnAbstract:active {
         color: {{ colorActive }};
         border: 1px solid {{ colorActive }};
+      }
+      .KSBtnAbstract__UID--{{ _uid }} .KSBtnAbstract[disabled]:active {
+        color: {{ colorNormal }};
+        border: 1px solid {{ colorNormal }};
       }
     </style>
   </template>
