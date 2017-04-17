@@ -9,5 +9,7 @@
 import KsSwitch from './src/IosSwitch.vue'
 import KsAbstractSwitch from './src/AbstractSwitch.vue'
 
-KsSwitch.abstract = KsAbstractSwitch;
-export default KsSwitch;
+export default {
+  KsSwitch,
+  KsAbstractSwitch
+}
