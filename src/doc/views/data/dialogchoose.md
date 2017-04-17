@@ -6,7 +6,9 @@
 
 <ks-list 
         :list.sync = list3
-        :sid.sync = sid3></ks-list><br/>
+        :sid.sync = sid3
+        :type-mate = "typemate"
+        :name-mate = "namemate"></ks-list><br/>
 <div>
     <span style="color:red;font-size:15px">已选门店id:{{sid3}}</span><br/>
 </div>  
@@ -115,6 +117,8 @@
 | sid | 用于显示已选中的门店id  | Array | 无 | 无 |否 |
 | is_storetype | 用于判断弹出层类型(true是table类型,false是基本弹出层样式)  |  Boolean | true,false | false | 否 |
 | errorinfo | 用于显示一个没选中的错误信息  | String | 无 | *您尚未选择门店 |否 |
+| type-mate | 用于显示一个没选中的错误信息  | String | 无 | id |否 |
+| name-mate | 用于显示一个没选中的错误信息  | String | 无 | name |否 |
 
 <br/>
 
@@ -133,6 +137,7 @@ export default {
             list2:[],
             list3:[],
             list4:[],
+            sex:[{'level':'0',levelname:'男'},{'level':'1',levelname:'女'}],
             sid1:['086021000000006'],
             sid2:['086021000000006'],
             sid3:['086021000000006'],
@@ -151,12 +156,14 @@ export default {
         listdata.forEach(item=>{
             item.ischecked = false
         })
-
+        this.sex.forEach(item=>{
+            item.ischecked = false
+        })
 
         this.list1 = JSON.parse(JSON.stringify(listdata))
         this.list2 = JSON.parse(JSON.stringify(listdata))
         this.list3 = JSON.parse(JSON.stringify(listdata))
-        this.list4 = JSON.parse(JSON.stringify(listdata))
+        this.list4 = JSON.parse(JSON.stringify(this.sex))
     }
 }
 </script>
@@ -173,12 +180,14 @@ export default {
             list1:[],
             list2:[],
             list3:[],
-            sex:[{'id':'0',name:'男'},{'id':'1',name:'女'}],
             list4:[],
+            sex:[{'level':'0',levelname:'男'},{'level':'1',levelname:'女'}],
             sid1:['086021000000006'],
             sid2:['086021000000006'],
-            sid3:['086021000000006'],
-            sid4:['0'],
+            sid4:['086021000000006'],
+            sid3:['0'],
+            typemate:'level',
+            namemate:'levelname'
         }  
     },
     methods:{
@@ -190,17 +199,17 @@ export default {
         }
     },
     ready(){
-        //var sex = []
-        this.sex.forEach(item=>{
-            item.ischecked = false
-        })
         listdata.forEach(item=>{
             item.ischecked = false
         })
+        this.sex.forEach(item=>{
+            item.ischecked = false
+        })
+
         this.list1 = JSON.parse(JSON.stringify(listdata))
         this.list2 = JSON.parse(JSON.stringify(listdata))
-        this.list3 = JSON.parse(JSON.stringify(listdata))
-        this.list4 = JSON.parse(JSON.stringify(this.sex))
+        this.list4 = JSON.parse(JSON.stringify(listdata))
+        this.list3 = JSON.parse(JSON.stringify(this.sex))
     }
 }
 </script>
