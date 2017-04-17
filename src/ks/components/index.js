@@ -26,7 +26,7 @@ import KsDialogProgram from './KsDialogProgram'
 import KsAddTableItem from './KsAddTable'
 import KsImage from './KsImage'
 import KsIcon from './KsIcon'
-
+import { KsAbstract,KsTips } from './KsTip'
 
 // 版本
 const VERSION = '1.0.0';
@@ -53,7 +53,9 @@ const Components = {
   KsDialogProgram,
   KsImage,
   KsAddTableItem,
-  
+
+  KsAbstract,
+  KsTips
 };
 
 // 插件
