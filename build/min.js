@@ -75,8 +75,8 @@ var count = 0
 
 // 调整配置、打包
 function build(name, file_path,version,root) {
-    // console.log(file_path)
-    var outPath = path.resolve(__dirname, '../min/ks/'+ root +'/' + name.toLowerCase() + '/')
+    // console.log(file_path,name)
+    var outPath = path.resolve(__dirname, '../min/ks/'+ root +'/' + name + '/')
     var dotVersion = ''
 
     version = version || ''

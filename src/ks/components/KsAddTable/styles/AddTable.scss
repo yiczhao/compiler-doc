@@ -1,5 +1,6 @@
-@import "../../styles/sassMagic/_sassMagic";
+@import "../../foundation/SassMagic-master/src/sassMagic";
 @import "../../styles/variables";
+
 .AddTableItem{
     .btn-group{
         background: #E9F5FF;
@@ -138,7 +139,7 @@
                     color:#fff;
                     display: block;
                     cursor: pointer;
-                    font-size: 14px;    
+                    font-size: 14px;
                 }
                 &.disabled{
                     background:#000;
@@ -146,7 +147,7 @@
                     span{
                         cursor: not-allowed;
                     }
-                    
+
                 }
             }
         }
@@ -181,7 +182,7 @@
                 line-height: 13px;
                 cursor: pointer;
             }
-            
+
         }
     }
 

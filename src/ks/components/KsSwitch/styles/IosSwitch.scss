@@ -15,7 +15,7 @@
 //
 
 @import "../../styles/variables";
-@import "../../styles/sassMagic/_sassMagic";
+@import "../../foundation/SassMagic-master/src/sassMagic";
 
 $primary-color: #4CAF50;                                        // 主色调
 $sizeMapper: (                                                  // 大小映射

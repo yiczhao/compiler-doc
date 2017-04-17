@@ -38,7 +38,7 @@
 </script>
 
 <style lang="scss">
-  @import "../../styles/sassMagic/_sassMagic";
+  @import "../../foundation/SassMagic-master/src/sassMagic";
 
   @include b(KSMask) {
     @include e(container) {

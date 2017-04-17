@@ -30,7 +30,7 @@
 
 <script>
   export default{
-    name: 'AbstractSwitch',
+    VERSION: '1.0.0',
 
     data () {
       return {

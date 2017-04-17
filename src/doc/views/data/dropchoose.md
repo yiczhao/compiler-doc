@@ -39,7 +39,9 @@
 
 ```javascript
 <script lang="babel">
+
 import list from 'SRC/doc/views/data/data.js'
+
 export default {
     data(){
         return {  

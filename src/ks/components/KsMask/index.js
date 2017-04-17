@@ -9,5 +9,8 @@
 import KsMask from './src/main.js'
 import KsMaskEntity from './src/main.vue'
 
-export default KsMask
-export { KsMask, KsMaskEntity }
+// KsMask.entity = KsMaskEntity;
+export {
+    KsMask,
+    KsMaskEntity
+}

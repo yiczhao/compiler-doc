@@ -9,8 +9,7 @@
 import KsStore from './src/Store.vue'
 import KsStoreClick from './src/StoreClick.vue'
 
-export default KsStore
-export {
+export default {
   KsStore,
   KsStoreClick
 }

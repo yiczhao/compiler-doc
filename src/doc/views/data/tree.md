@@ -13,7 +13,7 @@
 ___
 
 <script>
-  import { company } from 'DATA/tree-data'
+  import { company } from 'Data/tree-data'
   import { AbstractTree } from 'KsComponents/KsTree'
   import { FoldTree } from 'KsComponents/KsTree'
   import { CheckedTree } from 'KsComponents/KsTree'
@@ -41,7 +41,7 @@ ___
 
 ```html
 <script>
-  import { company } from 'DATA/tree-data'
+  import { company } from 'Data/tree-data'
   import { AbstractTree } from 'KsComponents/KsTree'
   import { FoldTree } from 'KsComponents/KsTree'
   import { CheckedTree } from 'KsComponents/KsTree'

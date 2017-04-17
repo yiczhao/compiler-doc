@@ -108,7 +108,7 @@ export default {
         {
             listitem =  JSON.parse(localStorage.getItem(prefix))
             this.list = listitem
-        }else{
+        }else{dialogchoose
             listitem =  JSON.parse(JSON.stringify(listdata.list))
             this.list = listitem
         }
