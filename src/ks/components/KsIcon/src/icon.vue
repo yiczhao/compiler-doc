@@ -1,5 +1,7 @@
 <template>
-  <i :class="classes" :style="styles"></i>
+  <span class="KsIcon">
+    <i :class="classes" :style="styles"></i>
+  </span>
 </template>
 
 <script>

@@ -1,46 +1,60 @@
 # Button 按钮
 
-> 常用的操作按钮，触发业务逻辑时使用。
+> Button 按钮组件
+> 作者: pkeros(张杰)
+> 最后修改时间: 2017-04-17
 
 ---
 
 ### 基础使用
 
-#### 按钮类型 （KsButton）
+#### Type 属性 （按钮类型）
+
+<br>
+
+> 通过 `type` 属性我们可以设置不同类型的按钮，预置的按钮类型有 `primary`, `success`, `info`, `warn`, `danger`, `other`。
+
+<br>
 
 <select class="mr20" name="btnType" v-model="btnType">
   <option v-for="type in btnTypeMapper" :value="type" v-text="type"></option>
 </select><ks-button :type="btnType">按钮类型</ks-button>
 
 ```html
-<select class="mr20" name="btnType" v-model="btnType">
-  <option v-for="type in btnTypeMapper" :value="type" v-text="type"></option>
-</select>
-<ks-button :type="btnType">按钮类型</ks-button>
+<ks-button type="primary">按钮类型</ks-button>
 ```
 
-#### 按钮大小
+#### Size 属性 （按钮尺寸）
+
+<br>
+
+> 通过 `size` 属性我们可以设置不同按钮尺寸，预置的值有 `mini`, `normal`, `middle`, `large`。
+
+<br>
 
 <select class="mr20" name="btnSize" v-model="btnSize">
   <option v-for="size in btnSizeMapper" :value="size" v-text="size"></option>
 </select><ks-button :size="btnSize">按钮大小</ks-button>
 
 ```html
-<select class="mr20" name="btnSize" v-model="btnSize">
-  <option v-for="size in btnSizeMapper" :value="size" v-text="size"></option>
-</select>
-<ks-button :size="btnSize">按钮大小</ks-button>
+<ks-button type="normal">按钮类型</ks-button>
 ```
 
-#### 幽灵按钮
+#### Mode 属性 （正常还是幽灵按钮）
 
-<ks-button :ghost="true">幽灵按钮</ks-button>
+<br>
+
+> 通过 `mode` 设置值为 `ghost` 可以将按钮变成幽灵按钮模式。 
+
+<br>
+
+<ks-button mode="ghost">幽灵按钮</ks-button>
 
 ```html
-<ks-button :ghost="true">幽灵按钮</ks-button>
+<ks-button mode="ghost">幽灵按钮</ks-button>
 ```
 
-#### 加载按钮
+#### Loading 属性 （按钮是否处于等待状态）
 
 <ks-switch class="mr20" :checked.sync="btnSwitch"></ks-switch><ks-button :loading="btnSwitch">幽灵按钮</ks-button>
 
@@ -62,20 +76,6 @@
 
 > `KsButton` 的默认状态是由 `KsNrButton` 组件来提供的实现, 下面我来简述一下 `KsNrButton` 与 `KsButton` 组件 Api 的差异
 > 与 `KsNrButton` 暴露的更加具有自定义的一些 Api。
-
-<br>
-
-<ks-nr-button :width="100" :height="30"> AAA </ks-nr-button>
-
-<br>
-
-<ks-ghost-button :width="300" :height="40"> BBB </ks-ghost-button>
-
-<br>
-
-<ks-nr-button :width="500" :height="32" color-normal="#FF0000" color-hover="#00FF00" color-active="#0000FF"> CCC </ks-nr-button>
-
-<br>
 
 > 默认不管是 `KsNrButton` 还是 `KsGhostButton` 都是不提供颜色的需要自己实现 `colorNormal` `colorHover` `colorAcitve` 来提供按钮主题
 
@@ -99,40 +99,7 @@
   ];
   
   let btnSizeMapper = [
-    'normal',
-    'middle',
-    'large'
-  ]
-
-  export default{
-    data () {
-      return {
-        btnTypeMapper,
-        btnSizeMapper,
-        
-        btnSwitch: false,
-        btnDisable: false,
-        btnType: 'primary',
-        btnSize: 'normal'
-      }
-    }
-  }
-</script>
-
-### 脚本
-
-```html
-<script>
-  let btnTypeMapper = [
-    'primary',
-    'success',
-    'info',
-    'warn',
-    'danger',
-    'other'
-  ];
-  
-  let btnSizeMapper = [
+    'small',
     'normal',
     'middle',
     'large'
@@ -152,7 +119,7 @@
     }
   }
 </script>
-```
+
 ### API
 
 #### KsButton

@@ -34,9 +34,9 @@
       arrowClassName: {type: String, default: 'KsToolTip-arrow'},
       openDelay: {type: Number, default: 0},
       closeDelay: {type: Number, default: 0},
-      disabled: Boolean,
-      content: String,
-      visibleArrow: {default: true},
+      disabled: {type: Boolean, default: false},
+      content: {type: String, default: ''},
+      visibleArrow: {type: Boolean, default: true},
       transition: {type: String, default: 'fade-in-linear'},
       options: {
         default() {

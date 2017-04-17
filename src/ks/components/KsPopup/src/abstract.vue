@@ -26,15 +26,16 @@
     props: {
       className: {type: String, default: 'KsPopupAbstract'},
       arrowClassName: {type: String, default: 'KsPopupAbstract-arrow'},
-      disabled: Boolean,
-      content: String,
-      visibleArrow: {default: true},
+      showPopper: {type: Boolean, toWay: true},
+      disabled: {type: Boolean, default: false},
+      content: {type: String, default: ''},
+      visibleArrow: {type: Boolean, default: true},
       transition: {type: String, default: 'fade-in-linear'},
       options: {
         default() {
           return {
             boundariesPadding: 10,
-            gpuAcceleration: false
+            gpuAcceleration: true
           }
         }
       }
