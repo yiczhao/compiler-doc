@@ -82,6 +82,15 @@ export default (router) => {
               }
             },
 
+            /* 基础组件-图标 */
+            '/icons-list': {
+              name: 'icons-list',
+              cnName: '卡说图标库',
+              component: (resolve) => {
+                require(['./views/base/icons-list.vue'], resolve)
+              }
+            },
+
             /* 基础组件-布局 */
             '/layout': {
               name: 'layout',

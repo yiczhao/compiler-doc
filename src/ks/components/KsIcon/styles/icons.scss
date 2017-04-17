@@ -1,0 +1,122 @@
+/*
+// @description 所有的图标样式.
+// @author pkeros
+// @data 2017/4/17
+// @email pkeros@vip.qq.com
+*/
+
+.ks-icon-nanrentouxiang:before { content: "\e651"; }                                                                    // 男人头像
+.ks-icon-xiajiantou:before { content: "\e622"; }                                                                        // 下箭头
+.ks-icon-shangjiantou:before { content: "\e623"; }                                                                      // 上箭头
+.ks-icon-sanjiaojiantouxia:before { content: "\e656"; }                                                                 // 三角箭头-下
+.ks-icon-lock:before { content: "\e650"; }                                                                              // 锁
+.ks-icon-jianhao:before { content: "\e64e"; }                                                                           // 减号
+.ks-icon-chengshishitu:before { content: "\e668"; }                                                                     // 城市视图
+.ks-icon-zhexianquyuxingupolylineshapedregion:before { content: "\e655"; }                                              // 折线区域形uPolyline shaped region
+.ks-icon-shizhong:before { content: "\e624"; }                                                                          // 时钟
+.ks-icon-xiangyoujiantou2:before { content: "\e654"; }                                                                  // XYJT2
+.ks-icon-right-arrow:before { content: "\e667"; }                                                                       // 向右箭头
+.ks-icon-weixinzhifu:before { content: "\e625"; }                                                                       // 微信支付
+.ks-icon-appshusandian:before { content: "\e626"; }                                                                     // app竖三点
+.ks-icon-chenggong:before { content: "\e627"; }                                                                         // 成功
+.ks-icon-arrow-right:before { content: "\e659"; }                                                                       // 箭头右
+.ks-icon-huoxuanzhong:before { content: "\e652"; }                                                                      // 火选中
+.ks-icon-jiahao:before { content: "\e64f"; }                                                                            // 加号
+.ks-icon-triangle-copy-copy:before { content: "\e628"; }                                                                // 三角形
+.ks-icon-loading-copy:before { content: "\e629"; }                                                                      // 加载
+.ks-icon-chenggong1:before { content: "\e62a"; }                                                                        // 成功
+.ks-icon-iconzhenghe31:before { content: "\e62b"; }                                                                     // 人
+.ks-icon-1-copy-copy:before { content: "\e677"; }                                                                       // 向右箭头
+.ks-icon-icohongbao:before { content: "\e62c"; }                                                                        // ico-_红包
+.ks-icon-icohongbaoyouhui:before { content: "\e62d"; }                                                                  // ico-_红包优惠
+.ks-icon-icohuiyuan:before { content: "\e62e"; }                                                                        // ico-_会员
+.ks-icon-icohui:before { content: "\e62f"; }                                                                            // ico-_惠
+.ks-icon-icoji:before { content: "\e630"; }                                                                             // ico-_积
+.ks-icon-icohome:before { content: "\e631"; }                                                                           // ico-_home
+.ks-icon-icomap:before { content: "\e632"; }                                                                            // ico-_map
+.ks-icon-icostar:before { content: "\e633"; }                                                                           // ico-_star
+.ks-icon-icowifi:before { content: "\e634"; }                                                                           // ico-_wifi
+.ks-icon-icochongzhihuodong:before { content: "\e635"; }                                                                // ico-_充值活动
+.ks-icon-icochu:before { content: "\e636"; }                                                                            // ico-_储
+.ks-icon-icochuzhiqia:before { content: "\e637"; }                                                                      // ico-_储值卡
+.ks-icon-icoerweima:before { content: "\e638"; }                                                                        // ico-_二维码
+.ks-icon-icofanhui:before { content: "\e639"; }                                                                         // ico-_返回
+.ks-icon-icofujinmendian:before { content: "\e63a"; }                                                                   // ico-_附近门店
+.ks-icon-icoyanzhengma:before { content: "\e63b"; }                                                                     // ico-_验证码
+.ks-icon-icoyouhuiquan:before { content: "\e63c"; }                                                                     // ico-_优惠券
+.ks-icon-icozhekou:before { content: "\e63d"; }                                                                         // ico-_折扣
+.ks-icon-ico12:before { content: "\e63e"; }                                                                             // ico--12
+.ks-icon-icojifen:before { content: "\e63f"; }                                                                          // ico-_积分
+.ks-icon-icojifenhuodong:before { content: "\e640"; }                                                                   // ico-_积分活动
+.ks-icon-icojiasu:before { content: "\e641"; }                                                                          // ico-_加速
+.ks-icon-icolipin:before { content: "\e642"; }                                                                          // ico-_礼品
+.ks-icon-icomendian:before { content: "\e643"; }                                                                        // ico-_门店
+.ks-icon-icoshengri:before { content: "\e644"; }                                                                        // ico-_生日
+.ks-icon-icoshouji:before { content: "\e645"; }                                                                         // ico-_手机
+.ks-icon-icotequan:before { content: "\e646"; }                                                                         // ico-_特权
+.ks-icon-icoxiaofeiyouhui:before { content: "\e647"; }                                                                  // ico-_消费优惠
+.ks-icon-icoxingbie:before { content: "\e648"; }                                                                        // ico-_性别
+.ks-icon-bangzhu:before { content: "\e649"; }                                                                           // 帮助
+.ks-icon-daohangico:before { content: "\e64a"; }                                                                        // 导航ico
+.ks-icon-kongico:before { content: "\e64b"; }                                                                           // kong ico
+.ks-icon-jiayouzhanico:before { content: "\e64c"; }                                                                     // 加油站ico
+.ks-icon-jiantou:before { content: "\e64d"; }                                                                           // 箭头
+.ks-icon-rentouliangrenhover:before { content: "\e653"; }                                                               // 人头-两人，江苏新东方
+.ks-icon-copy:before { content: "\e600"; }                                                                              // % copy
+.ks-icon-anonymous-iconfont:before { content: "\e601"; }                                                                // ￥
+.ks-icon-copy1:before { content: "\e602"; }                                                                             // 加号
+.ks-icon-copy2:before { content: "\e603"; }                                                                             // 减号
+.ks-icon-anonymous-iconfont1:before { content: "\e604"; }                                                               // $
+.ks-icon-danxuanweixuan:before { content: "\e605"; }                                                                    // 单选-未选
+.ks-icon-danxuanxuanze:before { content: "\e606"; }                                                                     // 单选-选择
+.ks-icon-fuxuanbukexuan:before { content: "\e607"; }                                                                    // 复选-不可选
+.ks-icon-fuxuanweixuan:before { content: "\e608"; }                                                                     // 复选-未选
+.ks-icon-fuxuanxuanze:before { content: "\e609"; }                                                                      // 复选-选择
+.ks-icon-anquanzhongxin:before { content: "\e60a"; }                                                                    // 安全中心
+.ks-icon-chenggongtubiao:before { content: "\e60b"; }                                                                   // 成功图标
+.ks-icon-cuowu:before { content: "\e60c"; }                                                                             // 错误
+.ks-icon-cuowutubiao:before { content: "\e60d"; }                                                                       // 错误图标
+.ks-icon-jibenshezhi:before { content: "\e60e"; }                                                                       // 基本设置
+.ks-icon-jiaoyiguanli:before { content: "\e60f"; }                                                                      // 交易管理
+.ks-icon-mendian:before { content: "\e610"; }                                                                           // 门店
+.ks-icon-guanbitubiaoanniu:before { content: "\e611"; }                                                                 // 关闭图标按钮
+.ks-icon-huiyuanqia:before { content: "\e612"; }                                                                        // 会员卡
+.ks-icon-jifen:before { content: "\e613"; }                                                                             // 积分
+.ks-icon-quedingxiaotubiao:before { content: "\e614"; }                                                                 // 确定小图标
+.ks-icon-rili:before { content: "\e615"; }                                                                              // 日历
+.ks-icon-shijian:before { content: "\e616"; }                                                                           // 时间
+.ks-icon-sousuo:before { content: "\e617"; }                                                                            // 搜索
+.ks-icon-quxiaoxiaotubiao:before { content: "\e618"; }                                                                  // 取消小图标
+.ks-icon-xialajiantou:before { content: "\e619"; }                                                                      // 下拉箭头
+.ks-icon-xianjinhongbao:before { content: "\e61a"; }                                                                    // 现金红包
+.ks-icon-xinxitubiao:before { content: "\e61b"; }                                                                       // 信息图标
+.ks-icon-yingxiao:before { content: "\e61c"; }                                                                          // 营销
+.ks-icon-yonghu:before { content: "\e61d"; }                                                                            // 用户
+.ks-icon-zhengque:before { content: "\e61e"; }                                                                          // 正确
+.ks-icon-zhuyi:before { content: "\e61f"; }                                                                             // 注意
+.ks-icon-xialajiantoufuben:before { content: "\e620"; }                                                                 // 下拉箭头-副本
+.ks-icon-chuzhiqia:before { content: "\e621"; }                                                                         // 储值卡
+.ks-icon-hongbaoicocopy:before { content: "\e65a"; }                                                                    // 红包ico copy
+.ks-icon-shuzi:before { content: "\e65b"; }                                                                             // 数字-.
+.ks-icon-shuzi0:before { content: "\e65c"; }                                                                            // 数字-0
+.ks-icon-shuzi01:before { content: "\e65d"; }                                                                           // 数字-01
+.ks-icon-shuzi02:before { content: "\e65e"; }                                                                           // 数字-02
+.ks-icon-shuzi03:before { content: "\e65f"; }                                                                           // 数字-03
+.ks-icon-shuzi04:before { content: "\e660"; }                                                                           // 数字-04
+.ks-icon-shuzi05:before { content: "\e661"; }                                                                           // 数字-05
+.ks-icon-shuzi06:before { content: "\e662"; }                                                                           // 数字-06
+.ks-icon-shuzi08:before { content: "\e663"; }                                                                           // 数字-08
+.ks-icon-shuzi09:before { content: "\e664"; }                                                                           // 数字-09
+.ks-icon-jiazai:before { content: "\e666"; }                                                                            // 加载
+.ks-icon-jiahao1:before { content: "\e657"; }                                                                           // 加号
+.ks-icon-jianhao1:before { content: "\e658"; }                                                                          // 减号
+.ks-icon-buzoupen:before { content: "\e665"; }                                                                          // 步骤-pen
+.ks-icon-biaogegengduoneirongico:before { content: "\e6c0"; }                                                           // 表格更多内容ico
+.ks-icon-quanxiancaozuoico:before { content: "\e6c1"; }                                                                 // 权限操作ico
+.ks-icon-shanchuico:before { content: "\e6c2"; }                                                                        // 删除ico
+.ks-icon-shezhiico:before { content: "\e6c3"; }                                                                         // 设置ico
+.ks-icon-shouyeico:before { content: "\e6c4"; }                                                                         // 首页ico
+.ks-icon-excel:before { content: "\e6ce"; }                                                                             // excel
+.ks-icon-gongsi:before { content: "\e6cf"; }                                                                            // 公司
+.ks-icon-bumen:before { content: "\e6d0"; }                                                                             // 部门
+.ks-icon-daqu:before { content: "\e6d1"; }                                                                              // 大区

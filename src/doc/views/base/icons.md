@@ -1,4 +1,4 @@
-# Icon 图标
+## Icon 图标 [卡说图标库](#!/base/icons-list)
 
 > Icon 图标组件
 > 作者: pkeros(张杰)
@@ -11,12 +11,12 @@
 #### - 图标的使用
 <br>
 
-<ks-icon name="camera-retro"></ks-icon> <ks-icon name="bandcamp"></ks-icon> <ks-icon name="circle-o"></ks-icon>
+<ks-icon name="camera-retro" library="fa"></ks-icon> <ks-icon name="bandcamp" library="fa"></ks-icon> <ks-icon name="circle-o" library="fa"></ks-icon>
 
 ```html
-<ks-icon name="camera-retro"></ks-icon>
-<ks-icon name="bandcamp"></ks-icon>
-<ks-icon name="circle-o"></ks-icon>
+<ks-icon name="camera-retro" library="fa"></ks-icon>
+<ks-icon name="bandcamp" library="fa"></ks-icon>
+<ks-icon name="circle-o" library="fa"></ks-icon>
 ```
 
 上面列举了几种图标，`library="fa"` 模式采用的 `font-awesome` 的图标字体库。
@@ -31,37 +31,35 @@
 #### - 设置图标的颜色
 <br>
 
-<ks-icon name="camera-retro" color="#FF00FF"></ks-icon> <ks-icon name="bandcamp" color="#00FF00"></ks-icon> <ks-icon name="circle-o" color="#FFAA11"></ks-icon>
+<ks-icon name="camera-retro" style="color: #FF00FF" library="fa"></ks-icon>
 
 ```html
-<ks-icon name="camera-retro" color="#FF00FF"></ks-icon>
-<ks-icon name="bandcamp" color="#00FF00"></ks-icon>
-<ks-icon name="circle-o" color="#FFAA11"></ks-icon>
+<ks-icon name="camera-retro" style="color: #FF00FF" library="fa"></ks-icon>
 ```
 
-直接使用 `color` 参数就可以设置图标的颜色了。
+直接使用设置文字的方式就可以了设置颜色了。
  
 <br>
 
 #### - 设置图标大小
 <br>
 
-<ks-icon name="camera-retro" size="2x"></ks-icon>
-<ks-icon name="camera-retro" size="3x"></ks-icon>
-<ks-icon name="camera-retro" size="4x"></ks-icon>
-<ks-icon name="camera-retro" size="5x"></ks-icon>
+<ks-icon name="camera-retro" size="2x" library="fa"></ks-icon>
+<ks-icon name="camera-retro" size="3x" library="fa"></ks-icon>
+<ks-icon name="camera-retro" size="4x" library="fa"></ks-icon>
+<ks-icon name="camera-retro" size="5x" library="fa"></ks-icon>
 
-<ks-icon name="bandcamp" size="20px"></ks-icon>
-<ks-icon name="circle-o" size="4em"></ks-icon>
+<ks-icon name="bandcamp" size="20px" library="fa"></ks-icon>
+<ks-icon name="circle-o" size="4em" library="fa"></ks-icon>
 
 ```html
-<ks-icon name="camera-retro" size="2x"></ks-icon>
-<ks-icon name="camera-retro" size="3x"></ks-icon>
-<ks-icon name="camera-retro" size="4x"></ks-icon>
-<ks-icon name="camera-retro" size="5x"></ks-icon>
+<ks-icon name="camera-retro" size="2x" library="fa"></ks-icon>
+<ks-icon name="camera-retro" size="3x" library="fa"></ks-icon>
+<ks-icon name="camera-retro" size="4x" library="fa"></ks-icon>
+<ks-icon name="camera-retro" size="5x" library="fa"></ks-icon>
 
-<ks-icon name="bandcamp" size="20px"></ks-icon>
-<ks-icon name="circle-o" size="4em"></ks-icon>
+<ks-icon name="bandcamp" size="20px" library="fa"></ks-icon>
+<ks-icon name="circle-o" size="4em" library="fa"></ks-icon>
 ```
 
 `size` 参数就除了可以设置 `2x`, `3x`, `4x`, `5x` 还可以设置任何有效的 css 单位。
@@ -71,26 +69,26 @@
 #### - 设置旋转角度
 <br>
 
-<ks-icon name="camera-retro" size="4x" rotate="90"></ks-icon>
-<ks-icon name="camera-retro" size="4x" rotate="180"></ks-icon>
-<ks-icon name="camera-retro" size="4x" rotate="270"></ks-icon>
+<ks-icon name="camera-retro" size="4x" rotate="90" library="fa"></ks-icon>
+<ks-icon name="camera-retro" size="4x" rotate="180" library="fa"></ks-icon>
+<ks-icon name="camera-retro" size="4x" rotate="270" library="fa"></ks-icon>
 
 ```html
-<ks-icon name="camera-retro" size="4x" rotate="90"></ks-icon>
-<ks-icon name="camera-retro" size="4x" rotate="180"></ks-icon>
-<ks-icon name="camera-retro" size="4x" rotate="270"></ks-icon>
+<ks-icon name="camera-retro" size="4x" rotate="90" library="fa"></ks-icon>
+<ks-icon name="camera-retro" size="4x" rotate="180" library="fa"></ks-icon>
+<ks-icon name="camera-retro" size="4x" rotate="270" library="fa"></ks-icon>
 ```
 
 可以通过 `rotate` 来设置图标的旋转角度，预置的有 `90`, `180`, `270` 几个值。
 
 #### - 图标旋转动画
 
-<ks-icon name="camera-retro" size="4x" animate="spin"></ks-icon>
-<ks-icon name="camera-retro" size="4x" animate="pulse"></ks-icon>
+<ks-icon name="camera-retro" size="4x" animate="spin" library="fa"></ks-icon>
+<ks-icon name="camera-retro" size="4x" animate="pulse" library="fa"></ks-icon>
 
 ```html
-<ks-icon name="camera-retro" size="4x" animate="spin"></ks-icon>
-<ks-icon name="camera-retro" size="4x" animate="pulse"></ks-icon>
+<ks-icon name="camera-retro" size="4x" animate="spin" library="fa"></ks-icon>
+<ks-icon name="camera-retro" size="4x" animate="pulse" library="fa"></ks-icon>
 ```
 
 可以通过 `animate` 来设置图标的旋转动画，预置的 `spin`, `pulse` 两个值。
@@ -104,6 +102,5 @@
 | library | 需要引用的图标库 | props | String | `false` | 否 | `ks`, `fd` | **ks** |
 | name | 需要引用的图标 | props | String | `false` | 是 |  - | - |
 | size | 图标大小 | props | String | `false` | 否 | `2x`, `3x`, `4x`, `5x` | `13px` |
-| color | 图标颜色 | props | String | `false` | 否 | 无 | `#333` |
 | rotate | 图标旋转角度 | props  | String | `false` | 否 | `90`, `180`, `270` | `0` | 
 | animate | 图标动画类型 | props | String | `false` | 否 | `spin`, `pulse` | `stop` |
