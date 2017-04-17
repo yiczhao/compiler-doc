@@ -67,7 +67,7 @@ const install = function(Vue) {
 
   Object.keys(Components).reduce((arr, k) => {
     let temp;
-    console.log(Components[k],k)
+    // console.log(Components[k],k)
     if(Components[k].template){
       temp = { name: k, val: Components[k] };
     }else{
