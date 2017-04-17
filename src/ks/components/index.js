@@ -14,7 +14,7 @@ import KsModal from './KsModal';
 import KsCheckbox from './KsCheckbox';
 import {KsMask,KsMaskEntity} from './KsMask';
 import KsRadio from './KsRadio';
-import KsButton from './KsButton';
+import { KsButton } from './KsButton';
 import KsPage from './KsPager';
 import KsDater from './KsDater';
 import KsStore from './KsDropChoose';
@@ -91,13 +91,13 @@ const install = function(Vue) {
           name:key,
           val:Components[k][key]
         }
-      }) 
+      })
     }
     return arr.concat(temp)
   },[]).forEach((item)=>{
     Vue.component(item.name, item.val)
   })
-  
+
 
   // install plugins.
   Object.keys(Plugins).forEach(k => {

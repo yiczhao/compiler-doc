@@ -2,6 +2,7 @@
  * @description button 的复合
  * @author: pkeros.
  * @date: 2016/10/18.
+ * @email pkeros@vip.qq.com
  */
 
 export default {
