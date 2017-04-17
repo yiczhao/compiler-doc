@@ -27,6 +27,7 @@ import KsAddTableItem from './KsAddTable'
 import KsImage from './KsImage'
 import KsIcon from './KsIcon'
 
+
 // 版本
 const VERSION = '1.0.0';
 
@@ -51,7 +52,8 @@ const Components = {
   KsItem,
   KsDialogProgram,
   KsImage,
-  KsAddTableItem
+  KsAddTableItem,
+  
 };
 
 // 插件
@@ -82,10 +84,12 @@ const install = function(Vue) {
   });
 
   // install plugins.
+
   Object.keys(Plugins).forEach(k => {
     if (k === 'VERSION') return;
     Plugins[k].install(Vue);
   });
+
 };
 
 // automation register components.
