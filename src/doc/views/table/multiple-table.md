@@ -2,29 +2,67 @@
 
 ---
 
-#### table组件
+#### table2组件
+<ks-table2
+    v-bind:columns="columns"
+    v-bind:data="tableData"
+    v-bind:options="options"></ks-table2>
 
-<ks-table 
+
+#### table组件
+<!-- {{tableData}} -->
+<!-- <ks-table 
     v-bind:data="tableData" 
     v-bind:columns="columns" 
-    v-bind:options="options"></ks-table>
+    v-bind:options="options"></ks-table> -->
 
 
 <script type="text/javascript">
     export default {
         data(){
             return {
-                columns:['id','name','age'],
+                columns:['id','name','age','操作'],
                 tableData: [
-                  {id:1, name:"John",age:"20"},
-                  {id:2, name:"Jane",age:"24"},
-                  {id:3, name:"Susan",age:"16"},
-                  {id:4, name:"Chris",age:"55"},
-                  {id:5, name:"Dan",age:"40"}
+                  {id:1, name:"John",age:"sss",operator:''},
+                  {id:2, name:"Jane",age:"24",operator:''},
+                  {id:3, name:"Susan",age:"16",operator:''},
+                  {id:4, name:"Chris",age:"55",operator:''},
+                  {id:5, name:"Dan",age:"40",operator:''},
+                  {id:6, name:"Jane",age:"24",operator:''},
+                  {id:7, name:"Susan",age:"16",operator:''},
+                  {id:8, name:"Chris",age:"55",operator:''},
+                  {id:9, name:"Dan",age:"40",operator:''},
+                  {id:10, name:"Jane",age:"24",operator:''},
+                  {id:11, name:"Susan",age:"16",operator:''},
+                  {id:12, name:"Chris",age:"55",operator:''},
+                  {id:13, name:"Dan",age:"40",operator:''}
                 ],
                 options: {
                   // see the options API
+                  templates:{
+                    age(val){
+                        // console.log(this)
+                        return val.name
+                    },
+                    age2(val){
+                        // console.log(this)
+                        return this.add(val.name)
+                    },
+                    operator(val){
+                        return `
+                            <a href="javascript:;" @click="output(${val})" >操作</a><span>|</span>
+                        `
+                    }
+                  }
                 }
+            }
+        },
+        methods:{
+            add(val){
+                return val+'---'
+            },
+            output(val){
+                console.log(val)
             }
         }
     }

@@ -5,11 +5,11 @@ var data = require('./mixins/data');
 var created = require('./mixins/created');
 var ready = require('./mixins/ready');
 var template = require('./helpers/generate-table-html');
-var VuePagination = require('v-pagination');
+// var VuePagination = require('v-pagination');
 
 exports.install = function(Vue, globalOptions, customOptions) {
 
-  Vue.use(VuePagination);
+  // Vue.use(VuePagination);
 
   var customTemplate = customOptions && customOptions.template
     ? customOptions.template

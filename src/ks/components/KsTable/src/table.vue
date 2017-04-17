@@ -2,35 +2,16 @@
 <div class="KsTable-multiple">
     <table>  
         <thead>    
-            <tr>      
-                <th rowspan="2">表头一</th>      
-                <th rowspan="2">表头二</th>      
-                <th colspan="2"><div>表头三</div></th>      
-                <th colspan="3"><div>表头四</div></th>
-                <th rowspan="2">表头五</th>     
-            </tr>    
-            <!-- 此行中添加的是 向右合并的单元格的表头 -->     
             <tr> 
-                <th>当月</th>      
-                <th>上月</th>      
-                <th>当月</th>      
-                <th>上月</th>      
-                <th>其他</th>      
+                <th v-for="key in columns" v-text="key"></th>      
             </tr>  
             
         </thead>  
-        <tbody>    
-            <tr>      
-                <td>...</td>      
-                <td>...</td>      
-                <td>...</td>      
-                <td>...</td>      
-                <td>...</td>      
-                <td>...</td>      
-                <td>...</td>      
-                <td>...</td> 
-                <td>...</td>    
+        <tbody v-el:tbody>    
+            <tr v-for="item in data">      
+                <td v-for="(key,val) in item" v-html="val | render key item"></td>      
             </tr>
+            
             <!-- ...... 添加多行     -->
         </tbody>
     </table>
@@ -39,15 +20,54 @@
 <script type="text/javascript">
     export default {
         props:{
-
+            columns:{
+                type:Array,
+                default(){
+                    return []
+                }
+            },
+            data:{
+                type:Array,
+                default(){
+                    return []
+                }
+            },
+            options:{
+                type:Object,
+                default(){
+                    return {}
+                }
+            }
         },
         data(){
+            this._ksparent = this.$parent
             return {
 
             }
         },
-        methods:{
+        filters:{
+            render(val,key,item){
+                var operator = (this.options.templates || {})[key]
+                if('function' == typeof operator){
 
+                    return operator.call(this._ksparent,item)
+                }else{
+                    return val
+                }
+
+            }
+        },
+        methods:{
+            output(val){
+                // console.log(val)
+            }
+        },
+        created(){
+            console.log()
+            setTimeout(()=>{
+                this.$compile(this.$els.tbody)
+            },3000)
+            // 
         }
     }
 </script>
