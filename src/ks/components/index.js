@@ -67,14 +67,15 @@ const install = function(Vue) {
 
   Object.keys(Components).reduce((arr, k) => {
     let temp;
-
-    if(Components[k].template)
+    console.log(Components[k],k)
+    if(Components[k].template){
       temp = { name: k, val: Components[k] };
-    else
+    }else{
       temp = Object.keys(Components[k]).map((key) => {
         return { name: key, val: Components[k][key] }
       });
-
+    }
+    
     return arr.concat(temp)
   }, []).forEach((item) => {
     Vue.component(item.name, item.val)
