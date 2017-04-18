@@ -22,18 +22,23 @@ export default {
      */
     styleCubeColor () {
       return `background: ${this.color}!important;`
-    }
+    },
   },
+  ready(){ 
+    setTimeout(()=>{
+        console.log(this.value,'___',this.vModel);
+      (this.value == this.vModel) && ( document.querySelector(`.radio__${this._uid}`).click()); //判断初始化时是否应该选中//this.defChecked=true
 
-  watch: {
-    /**
-     * @description 监测 checked 属性
-     * @summary 用于监测改变并发送 change 事件
-     */
-    checked () {
-      this.$dispatch('CChange', this.value);
-
-      this.vModel = this.value;
-    }
+      this.defChecked && (document.querySelector(`.radio__${this._uid}`).click());  //默认选中时，执行对应赋值操作this.vModel = this.value,this.checked =this.vModel
+  },100)
+    
+  },
+  watch:{
+        vModel(){//当不通过点击方式修改vModel值时
+            if(this.value == this.vModel) {
+                document.querySelector(`.radio__${this._uid}`).click()
+               //this.checked = this.vModel;
+            }
+        }
   }
 }

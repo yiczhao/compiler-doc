@@ -23,6 +23,21 @@
 
         this.$emit('change', value);
       }
+    },
+    methods:{
+      changeModel(){
+        this.$children.forEach((item) => {
+          item.$data.vModel = this.vModel;
+        })
+      }
+    },
+    ready(){
+      this.changeModel();
+    },
+    watch:{
+      vModel(){
+        this.changeModel();
+      }
     }
   }
 </script>

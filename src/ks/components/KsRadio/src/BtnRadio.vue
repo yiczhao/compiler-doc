@@ -14,7 +14,10 @@
            v-model="checked" :value="value" @change.stop
            :disabled="disable && 'disabled'"
            :checked="defChecked && 'checked'"
-           :id="`KSBtnRadio__entity--${_uid}`" />
+           :id="`KSBtnRadio__entity--${_uid}`" 
+           :class="'radio__'+_uid"
+            @click='change()'
+           />
     <label class="KSBtnRadio__text" :for="'KSNRCheckbox__entity--' + _uid">
       <slot>LABEL</slot>
     </label>
@@ -36,6 +39,13 @@
        * @return {string}
        */
       classes () { return `KSBtnRadio KSBtnRadio__UID--${this._uid}` },
+    },
+    methods:{
+      change() {
+        this.$dispatch('CChange', this.value);
+
+        this.vModel = this.value;
+      }
     }
   }
 </script>

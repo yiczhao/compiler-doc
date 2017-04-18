@@ -13,6 +13,8 @@
              :id="'KSNRCheckbox__entity--' + _uid"
              :disabled="disable && 'disabled'"
              :checked="defChecked && 'checked'"
+             @click='change()'
+             :class="'radio__'+_uid"
       >
       {{checked}}
       <label class="KSNRRadio__skin" :for="'KSNRCheckbox__entity--' + _uid"></label>
@@ -39,6 +41,13 @@
        */
       classes () { return `KSNRRadio KSNRRadio__UID--${this._uid}` }
     },
+    methods:{
+      change() {
+        this.$dispatch('CChange', this.value);
+
+        this.vModel = this.value;
+      }
+    }
   }
 </script>
 
