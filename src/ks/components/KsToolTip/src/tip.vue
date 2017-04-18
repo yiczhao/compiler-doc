@@ -1,8 +1,6 @@
 <template>
-  <div v-el:reference cid="KsToolTip" style="display: inline-block;position:relative"
-        @click="handleShowPopper"
-  >
-    <div style="display: inline-block">
+  <div v-el:reference cid="KsToolTip" style="display: inline-block;position:relative">
+    <div style="display: inline-block" @click="handleShowPopper">
         <slot></slot>
     </div>
 
@@ -52,12 +50,16 @@
         this.timeout = setTimeout(() => {
           this.showPopper = !this.showPopper;
           this.show =  this.showPopper
-          this.$emit('change',this.show)
+          this.$emit('change',this.showPopper)
         }, this.openDelay);
       },
 
     },
-
+    watch:{
+      show(val){
+        this.showPopper = val
+      }
+    },
     created () {
       // 初始化
       Vue.transition('KsTooltipTransition', {

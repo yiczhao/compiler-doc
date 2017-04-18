@@ -1,11 +1,13 @@
 import limitInputNumber from './limitInputNumber'
 import limitNumberFixed from './limitNumberFixed'
 import clickOutside from './clickOutside'
+import KsClickOutside from './KsClickOutside'
 
 const Directives = {
   limitInputNumber,
   limitNumberFixed,
-  clickOutside
+  clickOutside,
+  KsClickOutside
 }
 
 const install = function(Vue) {
@@ -15,12 +17,16 @@ const install = function(Vue) {
   Object.keys(Directives).forEach(k => {
     Vue.directive(k, Directives[k])
   })
+
+  console.log(Vue)
 }
 
 // automation register components.
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
+
+
 
 export default install
 export { Directives }

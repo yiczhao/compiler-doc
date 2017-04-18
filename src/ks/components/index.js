@@ -56,7 +56,8 @@ import { KsSearch } from './KsSearch';
 
 // 弹出层选择组件
 import {
-  KsDialogChoose
+  KsDialogChoose,
+  KsList
 } from './KsDialogChoose';
 
 // 楼层选择组件
@@ -135,6 +136,8 @@ const KsComponents = {
   KsSearch,
 
   KsDialogChoose,
+  KsList,
+  
   KsItem,
   KsItemFloor,
   KsDialogProgram,

@@ -1,7 +1,9 @@
 import KsLimitNumberFixed from './KsLimitNumberFixed.js'
+import KsClickOutside from './KsClickOutside'
 
 var directives = {
-    KsLimitNumberFixed
+    KsLimitNumberFixed,
+  	KsClickOutside
 }
 export default function install(Vue) {
     if(!Vue) {console.error('please install Vue')}
