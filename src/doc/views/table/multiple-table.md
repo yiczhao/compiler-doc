@@ -3,10 +3,17 @@
 ---
 
 #### table2组件
+{{tableData}}
+
 <ks-table2
-    v-bind:columns="columns"
+    v-bind:columns="columns2"
     v-bind:data="tableData"
     v-bind:options="options"></ks-table2>
+
+<!-- <ks-table2
+    v-bind:columns="columns"
+    v-bind:data="tableData"
+    v-bind:options="options"></ks-table2> -->
 
 
 #### table组件
@@ -22,34 +29,35 @@
         data(){
             return {
                 columns:['id','name','age','操作'],
+                columns2:[
+                    {key:'table-idx',title:'序号'},
+                    {key:'id',title:'下标值'},
+                    {key:'name',title:'名字',sortable:true},
+                    {key:'age',title:'年龄',sortable:'asc'},
+                    {
+                        key:'operator',
+                        title:'操作',
+                        tpl(val,index){
+                            return `<a href="javascript:;" v-on:click.stop="output('${val.name}')" >操作</a><span>|</span><a href="javascript:;" v-on:click.stop="remove('${index}')" >删除</a>`
+                        }
+                    }
+                ],
                 tableData: [
-                  {id:1, name:"John",age:"sss",operator:''},
-                  {id:2, name:"Jane",age:"24",operator:''},
-                  {id:3, name:"Susan",age:"16",operator:''},
-                  {id:4, name:"Chris",age:"55",operator:''},
-                  {id:5, name:"Dan",age:"40",operator:''},
-                  {id:6, name:"Jane",age:"24",operator:''},
-                  {id:7, name:"Susan",age:"16",operator:''},
-                  {id:8, name:"Chris",age:"55",operator:''},
-                  {id:9, name:"Dan",age:"40",operator:''},
-                  {id:10, name:"Jane",age:"24",operator:''},
-                  {id:11, name:"Susan",age:"16",operator:''},
-                  {id:12, name:"Chris",age:"55",operator:''},
-                  {id:13, name:"Dan",age:"40",operator:''}
+                  {id:1, name:"John",age:"sss"}
                 ],
                 options: {
                   // see the options API
                   templates:{
                     age(val){
                         // console.log(this)
-                        return val.name
+                        return val.age
                     },
                     age2(val){
                         // console.log(this)
-                        return this.add(val.name)
+                        return this.add(val.age)
                     },
-                    operator(val){
-                        return `<a href="javascript:;" v-on:click.stop="output('${val.name}')" >操作</a><span>|</span>`
+                    operator(val,index){
+                        return `<a href="javascript:;" v-on:click.stop="output('${val.name}')" >操作</a><span>|</span><a href="javascript:;" v-on:click.stop="remove('${index}')" >删除</a>`
                         
                     }
                   }
@@ -62,8 +70,18 @@
             },
             output(val){
                 console.log(val)
-                this.tableData.push({id:13, name:"aaaa",age:"40",operator:''})
+                this.tableData.push({id:13, name:val,age:"40",operator:''})
+            },
+            remove(index){
+                console.log('delete',index)
+                this.tableData.splice(index,1)
             }
+        },
+        created(){
+            setTimeout(()=>{
+                this.tableData = [{id:1, name:"John--",age:"sss",work:'IT',work2:'IT2',operator:''}]    
+            },10000)
+            
         }
     }
 </script>
