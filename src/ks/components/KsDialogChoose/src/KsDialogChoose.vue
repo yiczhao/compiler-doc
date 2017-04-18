@@ -15,7 +15,9 @@
         <div class="trade_store">
             <list-store
                 :list = "list"
-                :sid.sync = "sid">
+                :sid.sync = "sid"
+                :type-mate = "typeMate"
+                :name-mate = "nameMate">
                 <!-- @change = getsid -->
             </list-store>
             <div class="txtr btngroup">
@@ -47,6 +49,14 @@ import KsDialogProgram from '../../KsDialogProgram'
         errorInfo:{
             type:String,
             default:'*您尚未选择门店'
+        },
+        typeMate:{
+            type:String,
+            default:'id'
+        },
+        nameMate:{
+            type:String,
+            default:'name'
         }
     },
     components:{
@@ -111,7 +121,7 @@ import KsDialogProgram from '../../KsDialogProgram'
             this.list.forEach(t=>{
                 if(t.ischecked)
                 {
-                   listarr.push(t.id) 
+                   listarr.push(t[this.nameMate]) 
                 }
             })
 
@@ -167,7 +177,7 @@ import KsDialogProgram from '../../KsDialogProgram'
                 if(t.ischecked)
                 {
                     this.total ++;
-                    this.onestorename = t.name
+                    this.onestorename = t[this.typeMate]
                 }
             })
             
@@ -178,10 +188,12 @@ import KsDialogProgram from '../../KsDialogProgram'
         list(val){
             //console.log('list')
             //var total = ''
+            
             this.total = 0
             val.forEach(t=>{
                 this.sid.forEach(item=>{
-                    if(t.id == item)
+
+                    if(t[this.typeMate] == item)
                     {
                         t.ischecked = true
                         this.total ++;
@@ -190,6 +202,7 @@ import KsDialogProgram from '../../KsDialogProgram'
                 })
                 
             })
+            console.log(this.typeMate)
             //this.sidchange = this.sid
             //this.look()
             this.inputShowTxt();
@@ -201,7 +214,7 @@ import KsDialogProgram from '../../KsDialogProgram'
         }
     },
     ready(){  
-        
+        //console.log(this.typeMate)
     }
             
   }  

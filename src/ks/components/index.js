@@ -9,7 +9,6 @@
 import { KsToolTips } from './KsPopup'
 import KsNoticeCenter from './KsNoticeCenter'
 import KsSwitch from './KsSwitch'
-import KsIcon from './KsIcon'
 import { KsDialog, KsDialogEntity } from './KsDialog'
 import { KsModal, KsModalEntity, KsModalCenter } from './KsModal'
 import KsCheckbox from './KsCheckbox'
@@ -26,6 +25,8 @@ import KsItem from './KsFloorSelect'
 import KsDialogProgram from './KsDialogProgram'
 import KsAddTableItem from './KsAddTable'
 import KsImage from './KsImage'
+import KsIcon from './KsIcon'
+import { KsAbstract,KsTips } from './KsTip'
 
 
 // 版本
@@ -55,6 +56,8 @@ const Components = {
   KsDialogProgram,
   KsImage,
   KsAddTableItem,
+  KsAbstract,
+  KsTips
 
 };
 
