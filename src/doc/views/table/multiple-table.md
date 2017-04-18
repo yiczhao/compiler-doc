@@ -49,9 +49,8 @@
                         return this.add(val.name)
                     },
                     operator(val){
-                        return `
-                            <a href="javascript:;" @click="output(${val})" >操作</a><span>|</span>
-                        `
+                        return `<a href="javascript:;" v-on:click.stop="output('${val.name}')" >操作</a><span>|</span>`
+                        
                     }
                   }
                 }
@@ -63,6 +62,7 @@
             },
             output(val){
                 console.log(val)
+                this.tableData.push({id:13, name:"aaaa",age:"40",operator:''})
             }
         }
     }

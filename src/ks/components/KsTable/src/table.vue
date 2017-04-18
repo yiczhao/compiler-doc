@@ -8,7 +8,7 @@
             
         </thead>  
         <tbody v-el:tbody>    
-            <tr v-for="item in data">      
+            <tr v-for="item in data" v-on:click="output">      
                 <td v-for="(key,val) in item" v-html="val | render key item"></td>      
             </tr>
             
@@ -39,10 +39,26 @@
                 }
             }
         },
+        
         data(){
             this._ksparent = this.$parent
             return {
+                tempData : this.data
+            }
+        },
+        computed:{
+            data:{
+                get(){
+                    return this.tempData
+                },
+                set(val){
 
+                    this.$nextTick(()=>{
+                        this.$parent.$compile(this.$els.tbody)    
+                        // console.log(val);
+                    })
+                    
+                }
             }
         },
         filters:{
@@ -59,15 +75,18 @@
         },
         methods:{
             output(val){
-                // console.log(val)
+                console.log('output',this)
             }
         },
         created(){
-            console.log()
-            setTimeout(()=>{
-                this.$compile(this.$els.tbody)
-            },3000)
-            // 
+            console.log(this)
+            this.$nextTick(()=>{
+
+                // this.$parent.$compile(this.$parent.$el)
+                // this.$parent.$destroy()
+                this.$parent.$compile(this.$els.tbody)
+                // this.$compile(this.$els.tbody)
+            })
         }
     }
 </script>
