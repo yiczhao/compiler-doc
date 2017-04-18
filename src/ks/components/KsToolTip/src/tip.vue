@@ -8,6 +8,7 @@
          v-el:popper v-show="!disabled && showPopper">
       <div v-text="content"></div>
       <slot name="content"></slot>
+      <slot name="btngroup"></slot>
     </div>
   </div>
 </template>
@@ -50,7 +51,7 @@
         this.timeout = setTimeout(() => {
           this.showPopper = !this.showPopper;
           this.show =  this.showPopper
-          this.$emit('change',this.showPopper)
+          this.$emit('change',this.show)
         }, this.openDelay);
       },
 

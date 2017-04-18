@@ -1,5 +1,5 @@
 import KsLimitNumberFixed from './KsLimitNumberFixed.js'
-import KsClickOutside from './KsClickOutside'
+import KsClickOutside from './KsClickOutside.js'
 
 var directives = {
     KsLimitNumberFixed,
