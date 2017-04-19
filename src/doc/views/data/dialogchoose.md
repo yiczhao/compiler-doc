@@ -139,7 +139,7 @@ export default {
             list4:[],
             sex:[{'level':'0',levelname:'男'},{'level':'1',levelname:'女'}],
             sid1:['086021000000006'],
-            sid2:['086021000000006'],
+            sid2:[],
             sid3:['086021000000006'],
             sid4:['086021000000006'],
         }  
@@ -183,7 +183,7 @@ export default {
             list4:[],
             sex:[{'level':'0',levelname:'男'},{'level':'1',levelname:'女'}],
             sid1:['086021000000006'],
-            sid2:['086021000000006'],
+            sid2:[],
             sid4:['086021000000006'],
             sid3:['0'],
             typemate:'level',
