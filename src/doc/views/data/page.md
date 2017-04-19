@@ -44,6 +44,7 @@ page_current:{{page_current}}
 
 
 ### pageGroup
+page_current2:{{page_current2}}
 <ks-page-group
     :current.sync="page_current2" 
     :length="7"

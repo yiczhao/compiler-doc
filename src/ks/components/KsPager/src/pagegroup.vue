@@ -48,7 +48,10 @@
         },
         watch:{
             size(val){
+                this.current = 1
                 this.$emit('change',val,'SIZE-CHANGE')
+
+                // console.log(this.current)
             }
         }
     }
