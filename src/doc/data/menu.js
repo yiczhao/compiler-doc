@@ -41,7 +41,7 @@ export default [
       {
         name: '数据 Data', icon: 'icon', link: '',
         subMenu: [
-          // {name: 'Table 表格', icon: 'icon', link: ''},
+          {name: 'Table 表格', icon: 'icon', link: 'multiple-table'},
           // {name: 'Tag 标签', icon: 'icon', link: ''},
           // {name: 'Progress 进度条', icon: 'icon', link: ''},
           // {name: 'Tree 树形控件', icon: 'icon', link: ''},
