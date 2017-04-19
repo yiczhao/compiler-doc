@@ -18,7 +18,7 @@ export default {
                 this.vm[equ.name] = equ.value
             }else{
                 
-                ~Object.getOwnPropertyNames(this.vm).indexOf('show')
+                this.vm.hasOwnProperty('show')
                 && (this.vm['show'] = false)
                 
             }

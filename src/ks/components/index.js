@@ -27,6 +27,9 @@ import KsAddTableItem from './KsAddTable'
 import KsImage from './KsImage'
 import KsIcon from './KsIcon'
 import { KsAbstract,KsTips } from './KsTip'
+import { KsTable2 } from './KsTable'
+
+
 
 
 // 版本
@@ -39,7 +42,6 @@ const Components = {
   KsDialogEntity,
   KsModalEntity,
   KsModalCenter,
-
   KsPage,
   KsIcon,
   KsSwitch,
@@ -57,14 +59,15 @@ const Components = {
   KsImage,
   KsAddTableItem,
   KsAbstract,
-  KsTips
+  KsTips,
+  KsTable2
 
 };
 
 // 插件
 const Plugins = {
   VERSION,
-  KsNoticeCenter,
+  KsNoticeCenter
   // KsDialog,
   // KsModal
 };
