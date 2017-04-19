@@ -1,26 +1,21 @@
 <template>
 <div class="KsTable-multiple">
-{{columns|json}}
     <table>  
         <thead v-el:thead>    
             <tr> 
                 <th v-for="item in columns" v-bind:style="{'width':item.width}">
-                {{item.sortable | getIcon}}
                     <ks-icon v-bind:name="item.sortable | getIcon" 
                         v-if="item.sortable"
                         v-on:click="sort($index)"></ks-icon>
                     <span v-text="item.title"></span>
-                    {{item.width}}
                 </th>      
             </tr>  
         </thead>  
         <tbody v-el:tbody>    
             <tr v-for="(index, item) in data" v-on:click="output">      
-                <!-- <td v-if="hasIDX" v-text="index"></td> -->
                 <td v-for="(key, val) in item" v-html="val | render key item index"></td>      
             </tr>
             
-            <!-- ...... 添加多行     -->
         </tbody>
     </table>
 </div>
@@ -59,9 +54,7 @@
             }
         },
         computed:{
-            // hasIDX(){
-            //     return ~this._columnkeys.indexOf('table-idx')
-            // },
+            
             columns:{
                 get(){
                     return this.tempColumns
@@ -75,7 +68,7 @@
                         return item.key
                     })
 
-                    console.log(this._columnkeys)
+                    
                 }
             },
             data:{
@@ -85,7 +78,7 @@
                 set(val){
                     
                     this.tempData = this.filterData(val,this._columnkeys)
-                    // console.log(this.tempData)
+                    
                     this.$nextTick(()=>{
                         this.$parent.$compile(this.$els.tbody)    
                     })
@@ -93,21 +86,13 @@
                 }
             }
         },
-        watch:{
-            // data(){
-            //     this.$nextTick(()=>{
-            //         this.$parent.$compile(this.$els.tbody)    
-            //         // console.log(val);
-            //     })
-            // }
-        },
+        watch:{},
         filters:{
             // 图标名
             getIcon(val){
 
                 var temp = 'xiajiantou'
                 
-                // if('desc' == val) return 
                 if('asc' == val) temp = 'shangjiantou'
                 return temp
             },
