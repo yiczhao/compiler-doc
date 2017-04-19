@@ -24,7 +24,7 @@
     import props from './mixins'
     import page from './page.vue'
     export default {
-        VERSION:'',
+        VERSION:'1.0.1',
         components:{
             'page':page
         },
@@ -38,7 +38,7 @@
         },
         methods: {
             init (){
-                this.size = this.sizes[0]
+                this.size = this.size||this.sizes[0]
             },
             currentChange(val){
                 if('function' == typeof this.onChange){
