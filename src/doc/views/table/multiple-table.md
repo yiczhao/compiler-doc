@@ -2,36 +2,27 @@
 
 ---
 
-#### table2组件
+#### table组件
 {{tableData}}
 
-<ks-table2
-    v-bind:columns="columns2"
+<ks-table
+    v-bind:columns="columns"
     v-bind:data="tableData"
-    v-on:change-sort="sortChange"></ks-table2>
+    v-on:change-sort="sortChange"></ks-table>
 
 <ks-button v-on:click="addOneData">添加一条</ks-button>
 
-<!-- <ks-table2
-    v-bind:columns="columns"
-    v-bind:data="tableData"
-    v-bind:options="options"></ks-table2> -->
 
 
-#### table组件
-<!-- {{tableData}} -->
-<!-- <ks-table 
-    v-bind:data="tableData" 
-    v-bind:columns="columns" 
-    v-bind:options="options"></ks-table> -->
+
 
 
 <script type="text/javascript">
     export default {
         data(){
             return {
-                columns:['id','name','age','操作'],
-                columns2:[
+                
+                columns:[
                     {
                         key:'table-idx',
                         title:'序号',
@@ -62,21 +53,18 @@
                 this.tableData.push({id:1, name:"John--",age:"sss",work:'IT',work2:'IT2',operator:''})   
             },
             output(val){
-                this.$KsNotice.info('点击序列',val)
+                this.$KsNotice.info('内容',`点击序列为：${val}`)
             },
             remove(index){
                 // alert('delete: '+index)
                 this.tableData.splice(index,1)
             },
             sortChange(key,val){
-                // alert(key,val)
+                this.$KsNotice.info('内容',`排序的字段为：${key}，顺序为：${val}`)
                 
             }
         },
         created(){
-            // setTimeout(()=>{
-            //     this.tableData = [{id:1, name:"John--",age:"sss",work:'IT',work2:'IT2',operator:''}]    
-            // },10000)
             
         }
     }

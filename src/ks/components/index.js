@@ -27,7 +27,7 @@ import KsAddTableItem from './KsAddTable'
 import KsImage from './KsImage'
 import KsIcon from './KsIcon'
 import { KsAbstract,KsTips } from './KsTip'
-import { KsTable2 } from './KsTable'
+import KsTable from './KsTable'
 
 
 
@@ -60,7 +60,7 @@ const Components = {
   KsAddTableItem,
   KsAbstract,
   KsTips,
-  KsTable2
+  KsTable
 
 };
 

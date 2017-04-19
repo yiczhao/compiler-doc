@@ -21,6 +21,7 @@
 </div>
 </template>
 <script type="text/javascript">
+
     export default {
         props:{
             columns:{
@@ -39,6 +40,15 @@
                 type:Object,
                 default(){
                     return {}
+                }
+            },
+            icons:{
+                type:Object,
+                default(){
+                    return {
+                        desc:'xiajiantou',
+                        asc:'shangjiantou'
+                    }
                 }
             }
         },
@@ -91,9 +101,9 @@
             // 图标名
             getIcon(val){
 
-                var temp = 'xiajiantou'
+                var temp = this.icons.desc
                 
-                if('asc' == val) temp = 'shangjiantou'
+                if('asc' == val) temp = this.icons.asc
                 return temp
             },
             render(val,key,item,index){
