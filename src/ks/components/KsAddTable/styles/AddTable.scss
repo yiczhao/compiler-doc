@@ -64,6 +64,10 @@
         background: #E8F5FF;
         .btn-input{
             margin-bottom: 20px;
+            .errormsg{
+                color:red;
+                margin:10px 0;
+            }
             input{
                 border:none;
                 background: #D3DFE8;

@@ -37,6 +37,7 @@ const VERSION = '1.0.0';
 
 // 组件
 const Components = {
+
   VERSION,
   KsMaskEntity,
   KsDialogEntity,
@@ -54,13 +55,17 @@ const Components = {
   KsStore,
   KsSearch,
   KsDialogChoose,
+  KsList,
   KsItem,
   KsDialogProgram,
+  KsAddTableItem,
+  KsTipDialog,
   KsImage,
   KsAddTableItem,
   KsAbstract,
   KsTips,
   KsTable
+
 
 };
 

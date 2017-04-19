@@ -190,19 +190,23 @@ import KsDialogProgram from '../../KsDialogProgram'
             //var total = ''
             
             this.total = 0
-            val.forEach(t=>{
-                this.sid.forEach(item=>{
 
-                    if(t[this.typeMate] == item)
-                    {
-                        t.ischecked = true
-                        this.total ++;
-                        this.onestorename = t.name
-                    }
+            if(this.sid){
+                val.forEach(t=>{
+                    this.sid.forEach(item=>{
+
+                        if(t[this.typeMate] == item)
+                        {
+                            t.ischecked = true
+                            this.total ++;
+                            this.onestorename = t.name
+                        }
+                    })
+                    
                 })
-                
-            })
-            console.log(this.typeMate)
+            }
+            //console.log(this.typeMate)
+
             //this.sidchange = this.sid
             //this.look()
             this.inputShowTxt();

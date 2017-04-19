@@ -1,6 +1,7 @@
 export default {
     bind () {
         this.contains = (e) => {
+
             var equ
 
             if (this.el.contains(e.target)) return false
@@ -28,6 +29,7 @@ export default {
     unbind () {
         document.removeEventListener('click', this.contains,false)
     }
+
 };
 
 function splitEqu(expression){
@@ -38,3 +40,4 @@ function splitEqu(expression){
             : false
 
 }
+

@@ -6,13 +6,9 @@
  * @date: 2016/10/11.
  */
 
-import KsDialogChoose from './src/KsDialogChoose.vue'
-import KsList from './src/ListStore.vue'
+import KsTipDialog from './src/TipDialog.vue'
 
-
-export default {
-	KsDialogChoose,
-	KsList
+export default KsTipDialog
+export {
+  KsTipDialog
 }
-
-

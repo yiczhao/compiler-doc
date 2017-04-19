@@ -54,16 +54,54 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="bottom" >
-            <span class="tip">点击你需要的表格项添加或移除，也可以拖拽进行排序</span>
-            <div class="txtr btngroup">
-              <span class="reset" @click="reset($index)">重选</span>
-              <span class="checkall" @click="checkall($index)">全选</span>
-              <ks-button :ghost="true" type="other" style="margin-right: 10px"
-                         @click="close_dialog">取消</ks-button>
-              <ks-button :type="'primary'"
-                         @click="savetable()">确认</ks-button>
+            <div 
+                v-for = "listitem in list"
+                v-show = "showindex == $index">
+                <div class="top" >
+                    <div class="btn-input">
+                        <input type="text" class="input" 
+                            v-model = "listitem.title"
+                            @click = "modifyname($event,$index)"
+                            @keyup.enter="savetablename($event,$index)">
+                        <span 
+                            @click="deletetable($index)"
+                            v-show="$index != 0">删除当前分组</span>
+                        <div class="errormsg" v-if="!listitem.title">分组姓名不能为空</div>
+                    </div>
+                    <div class="table-default">
+                        <ul>
+                            <li 
+                                v-for = "n in listitem.defaultlist"
+                                :class = "n.ischeck && 'alreadychoose'"
+                                @click="removedefault(n,$index)">
+                                <span>{{n.name}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="middle" >
+                    <div class="ks-row mb-20" v-for="first in listitem.addlist">
+                        <div class="ks-col title">{{first.title}}</div>
+                        <ul class="ks-col">
+                            <li 
+                                v-for="item in first.list_data"
+                                :class="(item.isdisabled) && 'disabled'"
+                                @click="adddefault(item,$index,first)">
+                                <span>{{item.name}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom" >
+                    <div class="txtr btngroup">
+                        <span class="reset" @click="reset($index)">重选</span>
+                        <span class="checkall" @click="checkall($index)">全选</span>
+                        <ks-button :ghost="true" type="other" style="margin-right: 10px"
+                            @click="close_dialog">取消</ks-button>
+                        <ks-button :type="'primary'"
+                            @click="savetable()">确认</ks-button>
+                    </div>
+                </div>
             </div>
           </div>
         </div>
@@ -72,9 +110,12 @@
   </div>
 </template>
 <script type="text/javascript">
-  import KsButton from '../../KsButton'
-  import KsDialogProgram from '../../KsDialogProgram'
-  export default {
+
+
+import KsButton from '../../KsButton'
+import KsDialogProgram from '../../KsDialogProgram'
+export default {
+    VERSION:'1.0.0',
     components:{
       KsDialogProgram:KsDialogProgram,
       KsButton:KsButton
@@ -105,12 +146,13 @@
       }
     },
     data() {
-      return {
-        showindex:0,
-        addicon:true,
-        tableindex:-1,
-        addIndex:-1
-      }
+
+        return {
+            showindex:0,
+            addicon:true,
+            tableindex:-1,
+            addIndex:-1,
+        }
     },
     methods:{
       //点击全部选择
@@ -190,6 +232,98 @@
                 i.isdisabled = false
               }
 
+
+            this.list[index].addlist.forEach((t)=>{
+                t.list_data.forEach((i)=>{
+                        i.isdisabled = true   
+                })
+            })
+        },
+        //重新选择
+        reset(index){
+          
+            var data = JSON.parse(JSON.stringify(this.datasource.defaultlist))
+            this.list[index].defaultlist = data
+            this.list[index].addlist.forEach((t)=>{
+                t.list_data.forEach((i)=>{
+                        i.isdisabled = false   
+                })
+            })
+        },
+        //删除当前分组
+        deletetable(index){
+            this.list.splice(index,1)
+            this.showindex = index-1
+        },
+        //更改表头名字,点击input
+        modifyname(event,index){
+            event.target.focus()
+        },
+        //不可更改表头名字,按下enter
+        savetablename(event,index){
+            event.target.blur()
+        },
+        //点击表头
+        clicktablehead(index){
+            this.showindex = index
+        },
+        //保存表格
+        savetable(){
+            var prefix = this.prefix + '_list'
+            if(!this.addicon)
+            {
+                var data = JSON.parse(localStorage.getItem(prefix))
+                data[this.tableindex] = this.list[0]
+                var title = data[this.tableindex].title
+                if(!title) {
+                    this.is_show = true 
+                }else{
+                    this.is_show = false 
+                }
+                localStorage.setItem(prefix,JSON.stringify(data)) 
+            }else{
+                var title = this.list.map(item=>{
+                    return item.title
+                })
+                if(title.indexOf('')!=-1) {
+                    this.is_show = true 
+                }else{
+                    this.is_show = false 
+                }
+                localStorage.setItem(prefix,JSON.stringify(this.list)) 
+            }
+            //console.log(JSON.parse(localStorage.getItem('list')))
+            
+            //console.log(this.showindex)
+            this.$emit('save',this.showindex)
+        },
+        //点击下面上去
+        adddefault(n,index,parent){
+            if(n.isdisabled) { return }
+            this.list[this.showindex].defaultlist.push(
+            {   
+                title:parent.title,
+                id:n.id,
+                name:n.name,
+                ischeck:true
+            })
+            
+            parent.list_data[index].isdisabled = true
+        },
+        //点击上面撤销
+        removedefault(n,index){
+            if(!n.title){ return }
+            this.list[this.showindex].addlist.forEach((t,index)=>{
+                if(t.title == n.title)
+                {
+                    t.list_data.forEach((i)=>{
+                        if(i.name == n.name)
+                        {
+                            i.isdisabled = false
+                        }
+                        
+                    })
+                }
             })
           }
         })

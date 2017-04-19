@@ -246,6 +246,20 @@ export default (router) => {
                 require(['./views/table/multiple-table.md'], resolve)
 
               }
+            },
+            '/tipdialog': {
+              name: 'tipdialog',
+              cnName: '提示信息弹出层',
+              component: (resolve) => {
+                require(['./views/data/tipdialog.md'], resolve)
+              }
+            },
+            '/tooltip': {
+              name: 'tooltip',
+              cnName: '提示信息弹出层',
+              component: (resolve) => {
+                require(['./views/data/tooltip.md'], resolve)
+              }
             }
 
           }

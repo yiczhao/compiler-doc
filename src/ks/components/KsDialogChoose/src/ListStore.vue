@@ -3,7 +3,7 @@
 	<ul>
 	    <li v-for = "i in list" 
 	        :class="i.ischecked && 'check'"
-	        @click="choosestore(i)">
+	        @click="choosestore($index)">
 	        <span>{{i[nameMate]}}</span>
 	        <i></i>
 	    </li>
@@ -29,8 +29,11 @@
         }
     },
     methods:{
-    	choosestore(t){
-            t.ischecked = !t.ischecked
+
+    	choosestore(index){
+            //debugger
+            //t.ischecked = !t.ischecked
+            this.list[index].ischecked = !this.list[index].ischecked
             //console.log(this.sid)
             var listarr = []
             this.list.forEach(t=>{
@@ -46,16 +49,19 @@
     },
     watch:{
         list(val){
-            val.forEach(t=>{
-                this.sid.forEach(item=>{
 
-                    if(t[this.typeMate] == item)
-                    {
-                        t.ischecked = true
-                    }
+            if(this.sid){
+                val.forEach(t=>{
+                    this.sid.forEach(item=>{
+
+                        if(t[this.typeMate] == item)
+                        {
+                            t.ischecked = true
+                        }
+                    })
+                    
                 })
-                
-            })
+            }
 
             
         }
