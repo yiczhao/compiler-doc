@@ -29,7 +29,7 @@ import KsIcon from './KsIcon'
 import { KsAbstract,KsTips } from './KsTip'
 import KsTable from './KsTable'
 
-
+// console.log(KsDialogChoose)
 
 
 // 版本
@@ -55,11 +55,9 @@ const Components = {
   KsStore,
   KsSearch,
   KsDialogChoose,
-  KsList,
   KsItem,
   KsDialogProgram,
   KsAddTableItem,
-  KsTipDialog,
   KsImage,
   KsAddTableItem,
   KsAbstract,
