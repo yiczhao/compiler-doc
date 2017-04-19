@@ -2,34 +2,27 @@
 
 ---
 
-#### table2组件
+#### table组件
 {{tableData}}
 
-<ks-table2
-    v-bind:columns="columns2"
-    v-bind:data="tableData"
-    v-on:change-sort="sortChange"></ks-table2>
-
-<!-- <ks-table2
+<ks-table
     v-bind:columns="columns"
     v-bind:data="tableData"
-    v-bind:options="options"></ks-table2> -->
+    v-on:change-sort="sortChange"></ks-table>
+
+<ks-button v-on:click="addOneData">添加一条</ks-button>
 
 
-#### table组件
-<!-- {{tableData}} -->
-<!-- <ks-table 
-    v-bind:data="tableData" 
-    v-bind:columns="columns" 
-    v-bind:options="options"></ks-table> -->
+
+
 
 
 <script type="text/javascript">
     export default {
         data(){
             return {
-                columns:['id','name','age','操作'],
-                columns2:[
+                
+                columns:[
                     {
                         key:'table-idx',
                         title:'序号',
@@ -46,42 +39,32 @@
                         key:'operator',
                         title:'操作',
                         template(val,index){
-                            return `<a href="javascript:;" v-on:click.stop="output('${val.name}')" >操作</a><span>|</span><a href="javascript:;" v-on:click.stop="remove('${index}')" >删除</a>`
+                            return `<a href="javascript:;" v-on:click.stop="output('${index}')" >操作</a><span>|</span><a href="javascript:;" v-on:click.stop="remove('${index}')" >删除</a>`
                         }
                     }
                 ],
                 tableData: [
                     {id:1, name:"John",age:"sss"}
-                ],
-                // options: {
-                //     sortable(){
-                //         console.log(arguments)
-                //         this.tableData = [{id:1, name:"John--",age:"sss",work:'IT',work2:'IT2',operator:''}]    
-                //     }
-                // }
+                ]
             }
         },
         methods:{
-            add(val){
-                return val+'---'
+            addOneData(val){
+                this.tableData.push({id:1, name:"John--",age:"sss",work:'IT',work2:'IT2',operator:''})   
             },
             output(val){
-                console.log(val)
-                this.tableData.push({id:13, name:val,age:"40",operator:''})
+                this.$KsNotice.info('内容',`点击序列为：${val}`)
             },
             remove(index){
-                console.log('delete',index)
+                // alert('delete: '+index)
                 this.tableData.splice(index,1)
             },
             sortChange(key,val){
-                console.log(key,val)
-                this.output('cc')
+                this.$KsNotice.info('内容',`排序的字段为：${key}，顺序为：${val}`)
+                
             }
         },
         created(){
-            // setTimeout(()=>{
-            //     this.tableData = [{id:1, name:"John--",age:"sss",work:'IT',work2:'IT2',operator:''}]    
-            // },10000)
             
         }
     }
@@ -93,6 +76,9 @@
 
 <br>
 
+<!-- 
+rowspan="2"  意思是向下合并两个单元格
+colspan="2"  意思是向右合并两个单元格
 <div class="multiple-table">
     <table>  
         <thead>    
@@ -123,44 +109,8 @@
             </tr> 
         </tbody>
     </table>
-</div>
+</div> -->
 
-```html
-<div class="multiple-table">
-    <table>  
-        <thead>    
-            <tr>      
-                <th rowspan="2">表头一</th>      
-                <th rowspan="2">表头二</th>      
-                <th colspan="2"><div>表头三</div></th>      
-                <th colspan="3"><div>表头四</div></th>
-                <th rowspan="2">表头五</th>     
-            </tr>    
-            <tr> // 此行中添加的是 向右合并的单元格的表头     
-                <th>当月</th>      
-                <th>上月</th>      
-                <th>当月</th>      
-                <th>上月</th>      
-                <th>其他</th>      
-            </tr>  
-        </thead>  
-        <tbody>    
-            <tr>      
-                <td>...</td>      
-                <td>...</td>      
-                <td>...</td>      
-                <td>...</td>      
-                <td>...</td>      
-                <td>...</td>      
-                <td>...</td>      
-                <td>...</td> 
-                <td>...</td>    
-            </tr>
-            ...... 添加多行    
-        </tbody>
-    </table>
-</div>
-```
 
-rowspan="2"  意思是向下合并两个单元格
-colspan="2"  意思是向右合并两个单元格
+
+
