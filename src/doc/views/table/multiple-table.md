@@ -8,7 +8,7 @@
 <ks-table2
     v-bind:columns="columns2"
     v-bind:data="tableData"
-    v-bind:options="options"></ks-table2>
+    v-on:change-sort="sortChange"></ks-table2>
 
 <!-- <ks-table2
     v-bind:columns="columns"
@@ -30,38 +30,35 @@
             return {
                 columns:['id','name','age','操作'],
                 columns2:[
-                    {key:'table-idx',title:'序号'},
+                    {
+                        key:'table-idx',
+                        title:'序号',
+                        width:'60px'
+                    },
                     {key:'id',title:'下标值'},
-                    {key:'name',title:'名字',sortable:true},
+                    {key:'name',title:'名字',sortable:true,
+                        template(val,index){
+                            return val.name+'==='
+                        }
+                    },
                     {key:'age',title:'年龄',sortable:'asc'},
                     {
                         key:'operator',
                         title:'操作',
-                        tpl(val,index){
+                        template(val,index){
                             return `<a href="javascript:;" v-on:click.stop="output('${val.name}')" >操作</a><span>|</span><a href="javascript:;" v-on:click.stop="remove('${index}')" >删除</a>`
                         }
                     }
                 ],
                 tableData: [
-                  {id:1, name:"John",age:"sss"}
+                    {id:1, name:"John",age:"sss"}
                 ],
-                options: {
-                  // see the options API
-                  templates:{
-                    age(val){
-                        // console.log(this)
-                        return val.age
-                    },
-                    age2(val){
-                        // console.log(this)
-                        return this.add(val.age)
-                    },
-                    operator(val,index){
-                        return `<a href="javascript:;" v-on:click.stop="output('${val.name}')" >操作</a><span>|</span><a href="javascript:;" v-on:click.stop="remove('${index}')" >删除</a>`
-                        
-                    }
-                  }
-                }
+                // options: {
+                //     sortable(){
+                //         console.log(arguments)
+                //         this.tableData = [{id:1, name:"John--",age:"sss",work:'IT',work2:'IT2',operator:''}]    
+                //     }
+                // }
             }
         },
         methods:{
@@ -75,12 +72,16 @@
             remove(index){
                 console.log('delete',index)
                 this.tableData.splice(index,1)
+            },
+            sortChange(key,val){
+                console.log(key,val)
+                this.output('cc')
             }
         },
         created(){
-            setTimeout(()=>{
-                this.tableData = [{id:1, name:"John--",age:"sss",work:'IT',work2:'IT2',operator:''}]    
-            },10000)
+            // setTimeout(()=>{
+            //     this.tableData = [{id:1, name:"John--",age:"sss",work:'IT',work2:'IT2',operator:''}]    
+            // },10000)
             
         }
     }

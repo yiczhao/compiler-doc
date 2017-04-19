@@ -4,11 +4,12 @@
     <table>  
         <thead v-el:thead>    
             <tr> 
-                <th v-for="item in columns">
+                <th v-for="item in columns" v-bind:style="{'width':item.width}">
                     <ks-icon v-bind:name="item.sortable | getIcon" 
                         v-if="item.sortable"
                         v-on:click="sort($index)"></ks-icon>
                     <span v-text="item.title"></span>
+                    {{item.width}}
                 </th>      
             </tr>  
         </thead>  
@@ -49,6 +50,7 @@
         data(){
             this._ksparent = this.$parent
             this._columnkeys = []
+            this.options['templates'] = this.options['templates'] || {}
 
             return {
                 tempData : this.data,
@@ -65,6 +67,10 @@
                 },
                 set(val){
                     this._columnkeys = this.columns.map((item)=>{
+                        
+                        item.template 
+                        && (this.options['templates'][item.key] = item.template)
+
                         return item.key
                     })
 
@@ -76,31 +82,11 @@
                     return this.tempData
                 },
                 set(val){
-                    var selfSchema = this.selfSchema(this._columnkeys
-                                                    ,Object.keys(val[0]||[]))
-                    console.log(selfSchema)
-                    this.tempData = val.map((item,index)=>{
-                        var temp = {}
-
-
-                        item['table-idx'] = index
-
-                        this._columnkeys.forEach((key)=>{
-                            if(~selfSchema.indexOf(key)){
-
-                                temp[key] = ''
-                            }
-                            if(item.hasOwnProperty(key)){
-                                temp[key] = item[key]
-                            }
-                        })
-                        
-                        return temp
-                    })
-                    console.log(this.tempData)
+                    
+                    this.tempData = this.filterData(val,this._columnkeys)
+                    // console.log(this.tempData)
                     this.$nextTick(()=>{
                         this.$parent.$compile(this.$els.tbody)    
-                        // console.log(val);
                     })
                     
                 }
@@ -124,10 +110,10 @@
             },
             render(val,key,item,index){
 
-                var operator = (this.options.templates || {})[key]
-                if('function' == typeof operator){
+                var template = (this.options.templates || {})[key]
+                if('function' == typeof template){
 
-                    return operator.call(this._ksparent,item,index)
+                    return template.call(this._ksparent,item,index)
                 }else{
                     return val
                 }
@@ -137,13 +123,14 @@
         methods:{
             // 排序
             sort(index){
-                var direction = this.columns[index].sortable
-                direction = direction == 'asc'
+                var column = this.columns[index]
+                var direction = column.sortable == 'asc'
                                 ? 'desc'
                                 : 'asc'
                     
                 this.columns[index].sortable = direction
-
+                // this.options.sortable.call(this._ksparent, column.key, direction)
+                this.$emit('change-sort',column.key, direction)
             },
             output(val){
                 console.log('output',this)
@@ -151,14 +138,42 @@
             // 
             /**
              * [selfSchema 获取自定义的 Schema column]
-             * @param  {[type]} schema [columns模式]
-             * @param  {[type]} real   [真实数据]
-             * @return {[type]}        [description]
+             * @param  {[Array]} schema [columns模式]
+             * @param  {[Array]} real   [真实数据]
+             * @return {[Array]}        []
              */
             selfSchema(schema = [],real = []){
-                console.log(schema,real)
+                // console.log(schema,real)
                 return schema.filter((key)=>{
                     return !~real.indexOf(key)
+                })
+            },
+            /**
+             * [filterData 根据自定义]
+             * @param  {[Array]} data       [原始数据]
+             * @param  {[Array]} columnkeys [定义的 Schema]
+             * @return {[Array]}            []
+             */
+            filterData(data,columnkeys){
+                var selfSchema = this.selfSchema(columnkeys
+                                                    ,Object.keys(data[0]||[]))
+                    // console.log(selfSchema)
+                return data.map((item,index)=>{
+                    var temp = {}
+
+                    columnkeys.forEach((key)=>{
+                        if(~selfSchema.indexOf(key)){
+
+                            temp[key] = 'table-idx' == key 
+                                            ? index
+                                            : ''
+                        }
+                        if(item.hasOwnProperty(key)){
+                            temp[key] = item[key]
+                        }
+                    })
+                    
+                    return temp
                 })
             }
 
