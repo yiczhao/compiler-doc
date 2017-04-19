@@ -54,6 +54,18 @@
                 </li>
               </ul>
             </div>
+<<<<<<< HEAD
+          </div>
+          <div class="bottom" >
+            <span class="tip">点击你需要的表格项添加或移除，也可以拖拽进行排序</span>
+            <div class="txtr btngroup">
+              <span class="reset" @click="reset($index)">重选</span>
+              <span class="checkall" @click="checkall($index)">全选</span>
+              <ks-button :ghost="true" type="other" style="margin-right: 10px"
+                         @click="close_dialog">取消</ks-button>
+              <ks-button :type="'primary'"
+                         @click="savetable()">确认</ks-button>
+=======
             <div 
                 v-for = "listitem in list"
                 v-show = "showindex == $index">
@@ -102,6 +114,7 @@
                             @click="savetable()">确认</ks-button>
                     </div>
                 </div>
+>>>>>>> origin/zjj-deve-comp
             </div>
           </div>
         </div>
@@ -110,12 +123,18 @@
   </div>
 </template>
 <script type="text/javascript">
+<<<<<<< HEAD
+  import KsButton from '../../KsButton'
+  import KsDialogProgram from '../../KsDialogProgram'
+  export default {
+=======
 
 
 import KsButton from '../../KsButton'
 import KsDialogProgram from '../../KsDialogProgram'
 export default {
     VERSION:'1.0.0',
+>>>>>>> origin/zjj-deve-comp
     components:{
       KsDialogProgram:KsDialogProgram,
       KsButton:KsButton
@@ -146,13 +165,21 @@ export default {
       }
     },
     data() {
-
+<<<<<<< HEAD
+      return {
+        showindex:0,
+        addicon:true,
+        tableindex:-1,
+        addIndex:-1
+      }
+=======
         return {
             showindex:0,
             addicon:true,
             tableindex:-1,
             addIndex:-1,
         }
+>>>>>>> origin/zjj-deve-comp
     },
     methods:{
       //点击全部选择
@@ -232,7 +259,8 @@ export default {
                 i.isdisabled = false
               }
 
-
+<<<<<<< HEAD
+=======
             this.list[index].addlist.forEach((t)=>{
                 t.list_data.forEach((i)=>{
                         i.isdisabled = true   
@@ -241,7 +269,6 @@ export default {
         },
         //重新选择
         reset(index){
-          
             var data = JSON.parse(JSON.stringify(this.datasource.defaultlist))
             this.list[index].defaultlist = data
             this.list[index].addlist.forEach((t)=>{
@@ -324,6 +351,7 @@ export default {
                         
                     })
                 }
+>>>>>>> origin/zjj-deve-comp
             })
           }
         })
