@@ -5,6 +5,7 @@
         <thead v-el:thead>    
             <tr> 
                 <th v-for="item in columns" v-bind:style="{'width':item.width}">
+                {{item.sortable | getIcon}}
                     <ks-icon v-bind:name="item.sortable | getIcon" 
                         v-if="item.sortable"
                         v-on:click="sort($index)"></ks-icon>
@@ -103,9 +104,11 @@
         filters:{
             // 图标名
             getIcon(val){
-                var temp = 'arrow-down'
+
+                var temp = 'xiajiantou'
+                
                 // if('desc' == val) return 
-                if('asc' == val) temp = 'arrow-up'
+                if('asc' == val) temp = 'shangjiantou'
                 return temp
             },
             render(val,key,item,index){
