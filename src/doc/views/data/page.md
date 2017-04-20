@@ -9,7 +9,7 @@
 ### page
 page_current:{{page_current}}
 <ks-page 
-    v-bind:current="page_current" 
+    v-bind:current.sync="page_current" 
     v-bind:length="7"
     v-bind:total="10000"
     v-bind:size="13"
@@ -40,20 +40,23 @@ page_current:{{page_current}}
 
 
 ### pageGroup
-page_current2:{{page_current2}}
+current:{{page_current2}}<br>
+size:{{size}}
 <ks-page-group
-    :current.sync="page_current2" 
-    :length="7"
-    :total="100"
-    :sizes="[10,17,30]"
+    v-bind:current.sync="page_current2" 
+    v-bind:size.sync = 'size'
+    v-bind:length="7"
+    v-bind:total="100"
+    v-bind:sizes="[10,17,30]"
     v-on:change="change2"></ks-page-group>
 
 ```html
 <ks-page-group
-    :current.sync="page_current2" 
-    :length="7"
-    :total="100"
-    :sizes="[10,17,30]"
+    v-bind:current.sync="page_current2" 
+    v-bind:size = 'size'
+    v-bind:length="7"
+    v-bind:total="100"
+    v-bind:sizes="[10,17,30]"
     v-on:change="change2"></ks-page-group>
 ```
 `比 ks-page 组件多的接口`
@@ -69,7 +72,8 @@ page_current2:{{page_current2}}
         data(){
             return {
                 page_current:24,
-                page_current2:4
+                page_current2:4,
+                size:''
             }
         },
         methods:{
@@ -91,7 +95,8 @@ page_current2:{{page_current2}}
         data(){
             return {
                 page_current:24,
-                page_current2:4
+                page_current2:4,
+                size:10
             }
         },
         methods:{
