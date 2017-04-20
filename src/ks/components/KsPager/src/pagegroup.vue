@@ -52,7 +52,6 @@
         },
         watch:{
             size(val,oldVal){
-                console.log(val,oldVal)
                 this.current = 1
                 this.$emit('change',this.size,this.current)
 
