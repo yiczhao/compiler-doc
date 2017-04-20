@@ -42,11 +42,11 @@
 
 <br/>
 
-#### 自定义列
+#### 自定义列模板
 
 <br/>
 
-通过columns添加自定义列，每项的key与列表数据的字段一一对应，title为表头的每项的名称，设置sortable即可对对应项进行排序，template为列表的数据设置模板。
+通过columns添加自定义列，每项的key与列表数据data的字段一一对应，title为表头的每列的名称，设置sortable为true即可对该列进行排序，默认为降序，template为该列数据的模板。
 
 
 <br/>
