@@ -1,4 +1,4 @@
-
+@import '../../styles/components/input.scss';
 %store-select {
     .radiofir{
       position: relative;
@@ -73,8 +73,13 @@
     }
 
     @extend %KsList;
+    .KsDialogChoose-input{
+      @extend %input;
+    }
     
 }
 .KsList{
   @extend %KsList;
 }
+
+

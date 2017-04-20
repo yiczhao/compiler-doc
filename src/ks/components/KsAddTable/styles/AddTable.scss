@@ -1,6 +1,6 @@
 @import "../../foundation/SassMagic-master/src/sassMagic";
 @import "../../styles/variables";
-
+@import '../../styles/components/input.scss';
 .AddTableItem{
     .btn-group{
         background: #E9F5FF;
@@ -190,4 +190,8 @@
         }
     }
 
+    
+   .AddTableItem-input{
+      @extend %input;
+    }
 }

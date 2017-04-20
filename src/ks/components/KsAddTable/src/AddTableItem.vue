@@ -23,7 +23,7 @@
           v-show = "showindex == $index">
           <div class="top" >
             <div class="btn-input">
-              <input type="text" class="input"
+              <input type="text" class="AddTableItem-input"
                      v-model = "listitem.title"
                      @click = "modifyname($event,$index)"
                      @keyup.enter="savetablename($event,$index)">
