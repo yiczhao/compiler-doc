@@ -221,6 +221,7 @@
 | nativeType | 用来描述按钮原生类型 | props | String | `false` | 否 | - | `button` |
 | disabled | 用来描述按钮是禁用 | props  | Boolean | `false` | 否 | `true`, `false` | `false` |
 | fontSize | 用来描述按钮内文字大小 | props | Number | `false` | 是 | - | - |
+| truth | 是否是用 `button` 元素实现按钮，设置为 `false` 使用 `a` 标签实现按钮，原生关于 `button` 的属性不可用 | props | Boolean | `false` | 否 | - | `true` |
 | width | 用来描述按钮的宽度 | props | Number | `false` | 是 | - | - |
 | height | 用来描述按钮的高度 | props | Number | `false` | 是 | - | - |
 | colorNormal | 用来描述按钮 normal （默认） 时的颜色, 十六进制颜色值 | props | String | `false` | 是 | - | - |

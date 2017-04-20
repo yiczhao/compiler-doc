@@ -1,5 +1,5 @@
 <template>
-  <div class="KSButton">
+  <div class="KsButton">
     <abstract :form="form" :disabled="disable" :auto-focus="autoFocus"
               :name="name" :native-type="nativeType" :mode="mode"
               :width="sizeMapper[size].width"
@@ -9,7 +9,7 @@
               :color-hover="hueMapper[type].hover"
               :color-active="hueMapper[type].active"
     >
-      <ks-icon name="circle-o-notch" animate="spin"
+      <ks-icon name="circle-o-notch" animate="spin" library="fa"
                :size="sizeMapper[size].fontSize" v-if="loading"
       ></ks-icon>
       <slot></slot>
@@ -19,7 +19,7 @@
 
 <script>
   import KsIcon from '../../KsIcon'
-  import abstract from './abstract.vue'
+  import Abstract from './abstract.vue'
   import baseBtnProps from '../mixins/baseBtnProps'
   import sizeMapper from '../data/sizeMapper'
   import hueMapper from '../data/hueMapper'
@@ -27,7 +27,7 @@
   export default {
     VERSION: '1.0.0',
 
-    name: 'KSButton',
+    name: 'KsButton',
 
     mixins: [baseBtnProps],
 
@@ -48,14 +48,14 @@
       disable () {return this.disabled || this.loading}
     },
 
-    components: { abstract, KsIcon }
+    components: { Abstract, KsIcon }
   }
 </script>
 
 <style lang="scss">
   @import "../../foundation/SassMagic-master/src/sassMagic";
 
-  @include b(KSButton) {
+  @include b(KsButton) {
     display: inline-block;
   }
 </style>

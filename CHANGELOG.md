@@ -2,6 +2,9 @@
 
 ### 1.0.0
 
+**2017.04.20**
+- 重构了 `KsRadio` `KsBtnRadio` `KsRadioGroup` 组件。
+- 更新完善了 [KsRadio](#!/form/radio)。
 
 **2017.04.17**
 - 建立了 [卡说图标库](#!/base/icons-list)。
