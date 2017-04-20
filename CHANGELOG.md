@@ -3,6 +3,7 @@
 ### 1.0.0
 
 **2017.04.20**
+- 修改了 `KsIcon` `ks` 字体库的样式 class 前缀。
 - 重构了 `KsRadio` `KsBtnRadio` `KsRadioGroup` 组件。
 - 更新完善了 [KsRadio](#!/form/radio)。
 
