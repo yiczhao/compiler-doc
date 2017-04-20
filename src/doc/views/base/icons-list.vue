@@ -29,9 +29,6 @@
       this.clipboard.on('success', () => {
         this.$KsNotice.success('复制成功', `恭喜你成功复制了 ${this.currentIcon} 图标`);
       });
-      this.clipboard.on('error', () => {
-        this.$KsNotice.warn('复制成功', `恭喜你成功复制了 ${this.currentIcon} 图标`);
-      })
     },
 
     destroy () {

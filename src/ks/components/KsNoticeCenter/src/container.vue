@@ -21,7 +21,7 @@
   import NoticeCenterItem from './item.vue'
 
   export default {
-    VERSION: '0.0.1',
+    VERSION: '1.0.0',
 
     data () {
       return {
@@ -59,7 +59,7 @@
 
   .noticeCenterContainer {
     z-index: 19941026;
-    position: fixed; top: 0; right: 0; bottom: 0;
+    position: fixed; top: 0; right: 0;
     overflow: scroll;
     width: $width; min-height: 32px;
     padding: 6px 12px;
