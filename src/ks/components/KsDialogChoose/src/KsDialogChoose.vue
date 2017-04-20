@@ -1,7 +1,7 @@
 <template>  
 <div class="KsDialogChoose">            
     <div class="radiofir ">
-        <input type="text" class="input full" 
+        <input type="text" class="KsDialogChoose-input full" 
             @click="clickinput()" 
             readonly="readonly"
             v-model="showtxt"

@@ -1,12 +1,7 @@
+@import '../../styles/components/input.scss';
 .KsItemFloor{
   border:1px solid #C8C8C8;
   border-radius: 2px;
-  .input{
-    border:0;
-    background: none;
-    padding:8px;
-    box-sizing:border-box;
-  }
   .full{width:100%}
   .turnright{
     width:40px;
@@ -58,6 +53,7 @@
   }
   @extend .KsItem;
 
+
 }
 .KsItem{
     position:relative; 
@@ -99,6 +95,12 @@
                 }
             }
         }
+    }
+
+    .KsItem-input{
+        @extend %input;
+        border:0;
+        background: none;
     }
 }
 
