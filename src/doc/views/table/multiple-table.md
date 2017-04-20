@@ -46,7 +46,7 @@
 
 <br/>
 
-通过columns添加自定义列，每项的key与列表数据data的字段一一对应，title为表头的每列的名称，设置sortable为true即可对对应项进行排序，默认为降序，template为该列数据的模板。
+通过columns添加自定义列，每项的key与列表数据data的字段一一对应，title为表头的每列的名称，设置sortable为true即可对该列进行排序，默认为降序，template为该列数据的模板。
 
 
 <br/>
