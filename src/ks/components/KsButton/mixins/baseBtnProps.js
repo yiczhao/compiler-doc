@@ -14,11 +14,6 @@ export default {
     autoFocus: {type: Boolean, default: false},
     name: {type: String, default: 'KSButton'},
     nativeType: {type: String, default: 'button'}
-  },
-
-  computed: {
-    style () {return `min-width: ${this.width}; height: ${this.height};
-     font-size: ${this.fontSize}`}
   }
 
 }

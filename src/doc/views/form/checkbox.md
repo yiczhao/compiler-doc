@@ -1,6 +1,8 @@
 ## Checkbox 复选框
 
-> 在一组备选项中进行多选。
+> Checkbox 复选框组件
+> 作者: pkeros(张杰)
+> 最后修改时间: 2017-04-18
 
 ---
 
@@ -126,25 +128,7 @@
   }
 </script>
 
-### 脚本
-
-```html
-<script>
-  export default{
-    data () {
-      return {
-        checkboxGroup1: [],
-        checkboxGroup2: [],
-        checkboxDisable: false
-      }
-    }
-  }
-</script>
-```
-
 ### API
-
-<br>
 
 #### KsCheckbox
 

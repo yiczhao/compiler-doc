@@ -3,22 +3,22 @@
   <template v-if="mode === 'normal'">
     <style type="text/css">
       /* 默认状态 */
-      .KSBtnAbstract__UID--{{ _uid }} .KSBtnAbstract {
+      .KsBtnAbstract--UID-{{ _uid }} .KsBtnAbstract {
         color: white;
         background: {{ colorNormal }};
       }
       /* hover 状态 */
-      .KSBtnAbstract__UID--{{ _uid }} .KSBtnAbstract:hover {
+      .KsBtnAbstract--UID-{{ _uid }} .KsBtnAbstract:hover {
         background: {{ colorHover }};
       }
-      .KSBtnAbstract__UID--{{ _uid }} .KSBtnAbstract[disabled]:hover {
+      .KsBtnAbstract--UID-{{ _uid }} .KsBtnAbstract[disabled]:hover {
         background: {{ colorNormal }};
       }
       /* active 状态 */
-      .KSBtnAbstract__UID--{{ _uid }} .KSBtnAbstract:active {
+      .KsBtnAbstract--UID-{{ _uid }} .KsBtnAbstract:active {
         background: {{ colorActive }};
       }
-      .KSBtnAbstract__UID--{{ _uid }} .KSBtnAbstract[disabled]:active {
+      .KsBtnAbstract--UID-{{ _uid }} .KsBtnAbstract[disabled]:active {
         background: {{ colorNormal }};
       }
     </style>
@@ -27,38 +27,46 @@
   <template v-if="mode === 'ghost'">
     <style type="text/css">
       /* 默认状态 */
-      .KSBtnAbstract__UID--{{ _uid }} .KSBtnAbstract {
+      .KsBtnAbstract--UID-{{ _uid }} .KsBtnAbstract {
         color: {{ colorNormal }};
         background: white;
         border: 1px solid {{ colorNormal }};
       }
       /* hover 状态 */
-      .KSBtnAbstract__UID--{{ _uid }} .KSBtnAbstract:hover {
+      .KsBtnAbstract--UID-{{ _uid }} .KsBtnAbstract:hover {
         color: {{ colorHover }};
         border: 1px solid {{ colorHover }};
       }
-      .KSBtnAbstract__UID--{{ _uid }} .KSBtnAbstract[disabled]:hover {
+      .KsBtnAbstract--UID-{{ _uid }} .KsBtnAbstract[disabled]:hover {
         color: {{ colorNormal }};
         border: 1px solid {{ colorNormal }};
       }
       /* active 状态 */
-      .KSBtnAbstract__UID--{{ _uid }} .KSBtnAbstract:active {
+      .KsBtnAbstract--UID-{{ _uid }} .KsBtnAbstract:active {
         color: {{ colorActive }};
         border: 1px solid {{ colorActive }};
       }
-      .KSBtnAbstract__UID--{{ _uid }} .KSBtnAbstract[disabled]:active {
+      .KsBtnAbstract--UID-{{ _uid }} .KsBtnAbstract[disabled]:active {
         color: {{ colorNormal }};
         border: 1px solid {{ colorNormal }};
       }
     </style>
   </template>
-  <div :class="'KSBtnAbstract__UID--' + _uid">
-    <button :type="nativeType" :autofocus="autoFocus" :name="name"
+  <div :class="'KsBtnAbstract--UID-' + _uid">
+    <button :type="nativeType" :autofocus="autoFocus" :name="name" v-if="truth"
             :disabled="disabled" :form="form" :style="style"
-            class="KSBtnAbstract" :class="{'KSBtnAbstract--disabled': disabled}"
+            class="KsBtnAbstract" :class="{'KsBtnAbstract--disabled': disabled}"
+            :id="'KsBtnAbstract--UID-' + _uid"
     >
       <slot></slot>
     </button>
+
+    <a :disabled="disabled" :style="style" v-if="!truth"
+       class="KsBtnAbstract" :class="{'KsBtnAbstract--disabled': disabled}"
+       :id="'KsBtnAbstract--UID-' + _uid"
+    >
+      <slot></slot>
+    </a>
   </div>
 </template>
 
@@ -78,9 +86,15 @@
       width: {type: String, require: true},
       height: {type: String, require: true},
       fontSize: {type: String, default: '14px'},
+      truth: {type: Boolean, default: true},
       colorNormal: { type: String, require: true },
       colorHover: { type: String, require: true },
       colorActive: { type: String, require: true }
+    },
+
+    computed: {
+      style () {return `min-width: ${this.width}; height: ${this.height};
+     font-size: ${this.fontSize}; line-height: ${!this.truth && this.height}`}
     }
 
   }
@@ -89,7 +103,7 @@
 <style lang="scss">
   @import "../../foundation/SassMagic-master/src/sassMagic";
 
-  @include b(KSBtnAbstract) {
+  @include b (KsBtnAbstract) {
     min-width: 90px; outline: none;
     border: 1px solid transparent; border-radius: 3px;
     padding: 3px 18px; display: inline-block;
@@ -98,7 +112,7 @@
     touch-action: manipulation; user-select: none;
 
     // 禁用状态
-    @include m(disabled) {
+    @include m (disabled) {
       opacity: .6; cursor: not-allowed;
     }
   }
