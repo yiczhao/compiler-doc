@@ -6,6 +6,14 @@
 - 重构了 `KsRadio` `KsBtnRadio` `KsRadioGroup` 组件。
 - 更新完善了 [KsRadio](#!/form/radio)。
 
+
+**2017.04.20**
+- 添加[KsTable](#!/data/multiple-table)组件
+
+**2017.04.19**
+- [KsPageGroup（V1.1.0）](#!/data/page)优化 ：改变页面展示条数时派发事件两次问题。
+
+
 **2017.04.17**
 - 建立了 [卡说图标库](#!/base/icons-list)。
 - 调整了完善了 [KsButton](#!/base/button) 组件的文档。
