@@ -3,6 +3,7 @@
 ### 1.0.0
 
 **2017.04.20**
+- 修复了 `KsNoticeCneter` 组件区域含有隐形遮罩的问题。
 - 重构了 `KsRadio` `KsBtnRadio` `KsRadioGroup` 组件。
 - 更新完善了 [KsRadio](#!/form/radio)。
 
