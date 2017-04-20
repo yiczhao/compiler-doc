@@ -1,28 +1,28 @@
 <template>
     <ul v-show="total" class="KsPage" cid="KsPage" @click="emitClick($event)">
         <li :class="{'disabled':current == 1}">&lt;</li>
-        <li v-for="i in pages2"
+        <li v-for="i in pages"
             track-by="$index"
             :class="{'active':current == i}" v-text="i"></li>
-        <li :class="{'disabled':current == pages2[pages2.length-1]}">&gt;</li>
+        <li :class="{'disabled':current == pages[pages.length-1]}">&gt;</li>
     </ul>
 </template>
 <script type="text/javascript">
     
     import props from './mixins'
     export default {
-        VERSION:'',
+        VERSION:'1.1.0',
         mixins:[props],
         data (){
             return {
-                pages2 : [],
+                pages : [],
             }
         },
         
         methods: {
             init (){
                 this.totalLength = this.getTotalLength(this.total,this.size)
-                this.pages2 = this.buildPages(this.current,this.length,this.totalLength)
+                this.pages = this.buildPages(this.current,this.length,this.totalLength)
             },
             /**
              * [getTotalLength 总页数]
@@ -113,7 +113,7 @@
                     break;
                 }
 
-
+                this.$emit('change',this.current)
             },
             
             warn(){
@@ -127,15 +127,8 @@
         watch: {
             'current' (val){
                 // console.log(val)
-                // 兼容 老API
-                this.page_current = val
-                this.$emit('current_change',val)
-                // 兼容 老API END
-                this.$emit('change',val)
-                if('function' == typeof this.onChange){
-                    this.onChange(val)
-                }
-                this.pages2 = this.buildPages(val,this.length,this.totalLength)
+                
+                this.pages = this.buildPages(val,this.length,this.totalLength)
             },
             'size'(){
                 this.current = 1
@@ -146,13 +139,6 @@
         },
         created (){
             this.warn()
-
-            // 兼容 老API
-            // this.length = this.pages
-            // this.current = this.page_current
-            // this.size = this.size
-            
-            // 兼容 老API END
             this.init()
         }
     }

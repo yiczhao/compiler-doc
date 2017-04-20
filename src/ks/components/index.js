@@ -9,7 +9,6 @@
 import { KsToolTips } from './KsPopup'
 import KsNoticeCenter from './KsNoticeCenter'
 import KsSwitch from './KsSwitch'
-import KsIcon from './KsIcon'
 import { KsDialog, KsDialogEntity } from './KsDialog'
 import { KsModal, KsModalEntity, KsModalCenter } from './KsModal'
 import KsCheckbox from './KsCheckbox'
@@ -25,6 +24,11 @@ import KsItem from './KsFloorSelect'
 import KsDialogProgram from './KsDialogProgram'
 import KsAddTableItem from './KsAddTable'
 import KsImage from './KsImage'
+import KsIcon from './KsIcon'
+import { KsAbstract,KsTips } from './KsTip'
+import KsTable from './KsTable'
+
+// console.log(KsDialogChoose)
 
 
 // 版本
@@ -32,12 +36,12 @@ const VERSION = '1.0.0';
 
 // 组件
 const Components = {
+
   VERSION,
   KsMaskEntity,
   KsDialogEntity,
   KsModalEntity,
   KsModalCenter,
-
   KsPage,
   KsIcon,
   KsSwitch,
@@ -52,15 +56,20 @@ const Components = {
   KsDialogChoose,
   KsItem,
   KsDialogProgram,
+  KsAddTableItem,
   KsImage,
   KsAddTableItem,
+  KsAbstract,
+  KsTips,
+  KsTable
+
 
 };
 
 // 插件
 const Plugins = {
   VERSION,
-  KsNoticeCenter,
+  KsNoticeCenter
   // KsDialog,
   // KsModal
 };

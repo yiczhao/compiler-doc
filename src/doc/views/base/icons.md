@@ -1,5 +1,6 @@
 ## Icon 图标 [卡说图标库](#!/base/icons-list)
 
+
 > Icon 图标组件
 > 作者: pkeros(张杰)
 > 最后修改时间: 2017-04-12
@@ -11,12 +12,14 @@
 #### - 图标的使用
 <br>
 
+
 <ks-icon name="camera-retro" library="fa"></ks-icon> <ks-icon name="bandcamp" library="fa"></ks-icon> <ks-icon name="circle-o" library="fa"></ks-icon>
 
 ```html
 <ks-icon name="camera-retro" library="fa"></ks-icon>
 <ks-icon name="bandcamp" library="fa"></ks-icon>
 <ks-icon name="circle-o" library="fa"></ks-icon>
+
 ```
 
 上面列举了几种图标，`library="fa"` 模式采用的 `font-awesome` 的图标字体库。
@@ -31,6 +34,7 @@
 #### - 设置图标的颜色
 <br>
 
+
 <ks-icon name="camera-retro" style="color: #FF00FF" library="fa"></ks-icon>
 
 ```html
@@ -38,11 +42,23 @@
 ```
 
 直接使用设置文字的方式就可以了设置颜色了。
+=======
+<ks-icon name="camera-retro" color="#FF00FF"></ks-icon> <ks-icon name="bandcamp" color="#00FF00"></ks-icon> <ks-icon name="circle-o" color="#FFAA11"></ks-icon>
+
+```html
+<ks-icon name="camera-retro" color="#FF00FF"></ks-icon>
+<ks-icon name="bandcamp" color="#00FF00"></ks-icon>
+<ks-icon name="circle-o" color="#FFAA11"></ks-icon>
+```
+
+直接使用 `color` 参数就可以设置图标的颜色了。
+>>>>>>> origin/zjj-deve-comp
  
 <br>
 
 #### - 设置图标大小
 <br>
+
 
 <ks-icon name="camera-retro" size="2x" library="fa"></ks-icon>
 <ks-icon name="camera-retro" size="3x" library="fa"></ks-icon>
@@ -60,6 +76,7 @@
 
 <ks-icon name="bandcamp" size="20px" library="fa"></ks-icon>
 <ks-icon name="circle-o" size="4em" library="fa"></ks-icon>
+
 ```
 
 `size` 参数就除了可以设置 `2x`, `3x`, `4x`, `5x` 还可以设置任何有效的 css 单位。
@@ -69,6 +86,7 @@
 #### - 设置旋转角度
 <br>
 
+
 <ks-icon name="camera-retro" size="4x" rotate="90" library="fa"></ks-icon>
 <ks-icon name="camera-retro" size="4x" rotate="180" library="fa"></ks-icon>
 <ks-icon name="camera-retro" size="4x" rotate="270" library="fa"></ks-icon>
@@ -77,18 +95,21 @@
 <ks-icon name="camera-retro" size="4x" rotate="90" library="fa"></ks-icon>
 <ks-icon name="camera-retro" size="4x" rotate="180" library="fa"></ks-icon>
 <ks-icon name="camera-retro" size="4x" rotate="270" library="fa"></ks-icon>
+
 ```
 
 可以通过 `rotate` 来设置图标的旋转角度，预置的有 `90`, `180`, `270` 几个值。
 
 #### - 图标旋转动画
 
+
 <ks-icon name="camera-retro" size="4x" animate="spin" library="fa"></ks-icon>
 <ks-icon name="camera-retro" size="4x" animate="pulse" library="fa"></ks-icon>
 
 ```html
 <ks-icon name="camera-retro" size="4x" animate="spin" library="fa"></ks-icon>
 <ks-icon name="camera-retro" size="4x" animate="pulse" library="fa"></ks-icon>
+
 ```
 
 可以通过 `animate` 来设置图标的旋转动画，预置的 `spin`, `pulse` 两个值。

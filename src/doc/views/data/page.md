@@ -23,9 +23,9 @@ page_current:{{page_current}}
     v-bind:length="7"
     v-bind:total="100"
     v-bind:size="13"
-    v-bind:on-change="change"></ks-page>
+    v-on:change="change"></ks-page>
 
-// 新版本
+// 新版本1.1.0 去除了老API v-bind:on-change 回掉方法 
 <ks-page 
     v-bind:current.sync="page_current" 
     v-bind:length="7"
@@ -44,12 +44,13 @@ page_current:{{page_current}}
 
 
 ### pageGroup
+page_current2:{{page_current2}}
 <ks-page-group
     :current.sync="page_current2" 
     :length="7"
     :total="100"
     :sizes="[10,17,30]"
-    :on-change="change2"></ks-page-group>
+    v-on:change="change2"></ks-page-group>
 
 ```html
 <ks-page-group
@@ -57,7 +58,7 @@ page_current:{{page_current}}
     :length="7"
     :total="100"
     :sizes="[10,17,30]"
-    :on-change="change2"></ks-page-group>
+    v-on:change="change2"></ks-page-group>
 ```
 `比 ks-page 组件多的接口`
 | 参数 | 说明 | 接口类型 | 类型 | 可选值 | 默认值 |

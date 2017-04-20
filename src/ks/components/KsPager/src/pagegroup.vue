@@ -3,7 +3,7 @@
         <div class="_statistical">共<span>{{total}}</span>条</div>
         <div class="ks-col">
             每页
-            <select class="input" v-model="size">
+            <select class="input" v-on:change.stop v-model="size">
                 <option 
                     v-for="i in sizes" 
                     v-bind:value="i">{{i}}</option>
@@ -16,15 +16,14 @@
             v-bind:length="length"
             v-bind:total="total"
             v-bind:size="size"
-            v-bind:on-change="currentChange"
-            v-on:change="currentChange2"></page>    
+            v-on:change="currentChange"></page>    
     </div>
 </template>
 <script type="text/javascript">
     import props from './mixins'
     import page from './page.vue'
     export default {
-        VERSION:'',
+        VERSION:'1.1.0',
         components:{
             'page':page
         },
@@ -38,14 +37,9 @@
         },
         methods: {
             init (){
-                this.size = this.sizes[0]
+                this.size = this.size||this.sizes[0]
             },
             currentChange(val){
-                if('function' == typeof this.onChange){
-                    this.onChange(val)
-                }
-            },
-            currentChange2(val){
                 this.$emit('change',val)
             }
         },
@@ -54,12 +48,10 @@
         },
         watch:{
             size(val){
-                event && event.preventDefault()
-                event && event.stopPropagation()
+                this.current = 1
                 this.$emit('change',val,'SIZE-CHANGE')
-                if('function' == typeof this.onChange){
-                    this.onChange(val,'SIZE-CHANGE')
-                }
+
+                // console.log(this.current)
             }
         }
     }

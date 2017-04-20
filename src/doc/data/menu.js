@@ -41,17 +41,19 @@ export default [
       {
         name: '数据 Data', icon: 'icon', link: '',
         subMenu: [
-          // {name: 'Table 表格', icon: 'icon', link: ''},
+          {name: 'Table 表格', icon: 'icon', link: 'multiple-table'},
           // {name: 'Tag 标签', icon: 'icon', link: ''},
           // {name: 'Progress 进度条', icon: 'icon', link: ''},
           // {name: 'Tree 树形控件', icon: 'icon', link: ''},
           {name: 'Tree 树形组件', icon: 'icon', link: 'tree'},
           {name: 'Pagination 分页器', icon: 'icon', link: 'page'},
+          {name: '提示信息弹出层', icon: 'icon', link: 'tipdialog'},
           {name: 'Search 模糊搜索', icon: 'icon', link: 'search'},
           {name: 'DropChoose 下拉选择', icon: 'icon', link: 'dropchoose'},
           {name: 'DialogChoose 弹出层选择', icon: 'icon', link: 'dialogchoose'},
           {name: 'FloorChoose 楼层选择', icon: 'icon', link: 'floorchoose'},
-          {name: '根据不同用户显示不同表格', icon: 'icon', link: 'addtable'}
+          {name: '根据不同用户显示不同表格', icon: 'icon', link: 'addtable'},
+          {name: 'ToolTip 提示信息', icon: 'icon', link: 'tooltip'}
         ]
       },
       {
