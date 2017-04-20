@@ -2,7 +2,7 @@
 <div class="KsStoreClick"  v-el:name>            
     <div class="radiofir ">
             <i :class="store_list_show ? 'icondown' : 'iconup'"></i>
-            <input type="text" class="input-xl full" 
+            <input type="text" class="KsStoreClick-input full" 
                 @click="clickinput()" 
                 readonly="readonly"
                 value="{{store_part | filter_name}}"
