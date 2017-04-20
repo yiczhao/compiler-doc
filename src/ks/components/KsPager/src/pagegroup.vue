@@ -40,7 +40,7 @@
                 this.size = this.size||this.sizes[0]
             },
             currentChange(val){
-                this.$emit('change',val)
+                this.$emit('change',this.size,this.current)
             }
         },
         created (){
@@ -49,9 +49,8 @@
         watch:{
             size(val){
                 this.current = 1
-                this.$emit('change',val,'SIZE-CHANGE')
+                this.$emit('change',this.size,this.current)
 
-                // console.log(this.current)
             }
         }
     }
