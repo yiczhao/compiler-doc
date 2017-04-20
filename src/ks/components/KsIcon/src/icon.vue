@@ -7,7 +7,7 @@
 
   // 对应图标库对应 class 的映射
   const libraryMapper = {
-    ks: 'ks-icon',
+    ks: 'icon',
     fa: 'fa'
   };
 

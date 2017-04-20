@@ -42,17 +42,32 @@
 ```
 
 直接使用设置文字的方式就可以了设置颜色了。
-=======
-<ks-icon name="camera-retro" color="#FF00FF"></ks-icon> <ks-icon name="bandcamp" color="#00FF00"></ks-icon> <ks-icon name="circle-o" color="#FFAA11"></ks-icon>
+
+<br>
+
+<span style="color: #FF00FF">
+  <ks-icon name="camera-retro" library="fa"></ks-icon>
+</span>
+<span style="color: #00FF00">
+  <ks-icon name="bandcamp" library="fa"></ks-icon>
+</span>
+<span style="color: #FFAA11">
+  <ks-icon name="circle-o" library="fa"></ks-icon>
+</span>
 
 ```html
-<ks-icon name="camera-retro" color="#FF00FF"></ks-icon>
-<ks-icon name="bandcamp" color="#00FF00"></ks-icon>
-<ks-icon name="circle-o" color="#FFAA11"></ks-icon>
+<span style="color: #FF00FF">
+  <ks-icon name="camera-retro" library="fa"></ks-icon>
+</span>
+<span style="color: #00FF00">
+  <ks-icon name="bandcamp" library="fa"></ks-icon>
+</span>
+<span style="color: #FFAA11">
+  <ks-icon name="circle-o" library="fa"></ks-icon>
+</span>
 ```
 
 直接使用 `color` 参数就可以设置图标的颜色了。
->>>>>>> origin/zjj-deve-comp
  
 <br>
 

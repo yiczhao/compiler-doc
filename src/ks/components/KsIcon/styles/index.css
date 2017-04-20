@@ -15,7 +15,7 @@
   url('../fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
-.ks-icon {
+.icon {
   font: normal normal normal 14px/1 KsIonts;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
