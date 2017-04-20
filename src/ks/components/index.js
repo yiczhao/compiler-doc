@@ -20,7 +20,6 @@ import KsPage from './KsPager'
 import KsDater from './KsDater'
 import KsStore from './KsDropChoose'
 import KsSearch from './KsSearch'
-// KsList from KsDialogChoose 组件
 import KsDialogChoose from './KsDialogChoose'
 import KsItem from './KsFloorSelect'
 import KsDialogProgram from './KsDialogProgram'
