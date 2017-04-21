@@ -49,7 +49,10 @@ Object.keys(dirMap).map((key)=>{
                 // console.log((matchStrs.join(' ')))
                 matchStrs = (argv.join(' ')).replace(matchStrs.join(' '),'')
                 if(matchStrs) {
-                    console.warn((key+'中没找到模块:'+matchStrs).grey.bgWhite)
+                    console.warn((`${key}中没找到模块:${matchStrs}`).grey.bgWhite)
+                }else{
+                    console.log((`${key}中找到模块:${argv.join(' ')} ️✔`).green)
+                    console.log(('构建中 ...').green)
                 }
                     
             }
