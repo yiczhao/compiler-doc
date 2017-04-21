@@ -6,6 +6,7 @@
                 <th v-for="item in columns" v-bind:style="{'width':item.width}">
                     <ks-icon v-bind:name="item.sortable | getIcon" 
                         v-if="item.sortable"
+                        size="1x"
                         v-on:click="sort($index)"></ks-icon>
                     <span v-text="item.title"></span>
                 </th>      
@@ -46,8 +47,8 @@
                 type:Object,
                 default(){
                     return {
-                        desc:'xiajiantou',
-                        asc:'shangjiantou'
+                        desc:'xiangxiajiantou',
+                        asc:'xiangshangjiantou'
                     }
                 }
             }

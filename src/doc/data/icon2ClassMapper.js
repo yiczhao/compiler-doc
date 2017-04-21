@@ -120,5 +120,8 @@ export default {
   'excel': {des:  'excel'},
   'gongsi': {des:  '公司'},
   'bumen': {des:  '部门'},
-  'daqu': {des:  '大区'}
+  'daqu': {des:  '大区'},
+  'xiangshangjiantou':{des:'向上箭头'},
+  'xiangxiajiantou':{des:'向下箭头'}
+
 }
