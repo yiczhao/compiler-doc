@@ -2,7 +2,7 @@
     <div class="ks-col  KsItem"  
         v-el:floor
         @click="clickinput()" >
-        <input type="text" class="input full" 
+        <input type="text" class="KsItem-input full" 
             readonly="readonly"
             v-model="floor_value" />
         <i :class="floor_show ? 'icondown' : 'iconup'"></i>

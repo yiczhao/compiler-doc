@@ -37,21 +37,24 @@
         },
         methods: {
             init (){
-                this.size = this.size||this.sizes[0]
+                var size = this.size
+                if(!~this.sizes.indexOf(size)){
+                    size = this.sizes[0]
+                }
+                this.size = size
             },
             currentChange(val){
-                this.$emit('change',val)
+                this.$emit('change',this.size,this.current)
             }
         },
         created (){
             this.init()
         },
         watch:{
-            size(val){
+            size(val,oldVal){
                 this.current = 1
-                this.$emit('change',val,'SIZE-CHANGE')
+                this.$emit('change',this.size,this.current)
 
-                // console.log(this.current)
             }
         }
     }
