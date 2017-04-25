@@ -18,15 +18,16 @@ let defaults = {
   hue: 'success'
 };
 
-const install = function (Vue) {
+const install = function(Vue) {
   if (install.installed) return;
+
+  let constructor = Vue.extend(NoticeCenter);
 
   // 实例化通知中心
   let initNoticeCenter = function () {
-    let constructor = Vue.extend(NoticeCenter);
-
     noticeCenter = new constructor({ el: document.createElement('div') });
     noticeCenter.show = false;
+
     noticeCenter.$on('empty', KsNoticeCenter.clear)
   };
 
@@ -37,8 +38,8 @@ const install = function (Vue) {
    * @constructor
    */
   KsNoticeCenter = function (options, closeCb) {
-    if (closeCb && typeof closeCb !== 'function')
-      throw new TypeError('KsNoticeCenter: `closeCb` 参数必须为一个函数!');
+    if ((typeof closeCb !== 'undefined' && typeof closeCb !== 'function'))
+      throw new TypeError('KsNoticeCenter: `closeCb` 参数必须是一个函数!');
 
     if (!noticeCenter) initNoticeCenter();
     document.body.appendChild(noticeCenter.$el);

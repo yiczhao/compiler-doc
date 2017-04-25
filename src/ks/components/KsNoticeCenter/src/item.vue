@@ -51,7 +51,6 @@
 </script>
 
 <style lang="scss">
-
   $width: 300px;                                 // 提示信息框的长度
 
   .noticeCenterItem {

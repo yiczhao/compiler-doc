@@ -124,6 +124,7 @@
 ```html
 <ks-icon name="camera-retro" size="4x" animate="spin" library="fa"></ks-icon>
 <ks-icon name="camera-retro" size="4x" animate="pulse" library="fa"></ks-icon>
+
 ```
 
 可以通过 `animate` 来设置图标的旋转动画，预置的 `spin`, `pulse` 两个值。

@@ -407,7 +407,25 @@ let removeNodeRange = function (start, end, vm, frag, cb) {
 
 let isFragment = function (node) {
   return node && node.nodeType === 11
-};
+}
+
+/**
+ * Get outerHTML of elements, taking care
+ * of SVG elements in IE as well.
+ *
+ * @param {Element} el
+ * @return {String}
+ */
+
+let getOuterHTML = function (el) {
+  if (el.outerHTML) {
+    return el.outerHTML
+  } else {
+    var container = document.createElement('div')
+    container.appendChild(el.cloneNode(true))
+    return container.innerHTML
+  }
+}
 
 
 export default {
@@ -430,6 +448,7 @@ export default {
   trimNode,
   isTemplate,
   findRef,
+  getOuterHTML,
   mapNodeRange,
   removeNodeRange,
   isFragment
