@@ -28,9 +28,6 @@ import KsIcon from './KsIcon'
 import { KsAbstract,KsTips } from './KsTip'
 import KsTable from './KsTable'
 
-// console.log(KsDialogChoose)
-
-
 // 版本
 const VERSION = '1.0.0';
 
@@ -56,22 +53,23 @@ const Components = {
   KsDialogChoose,
   KsItem,
   KsDialogProgram,
-  KsAddTableItem,
   KsImage,
   KsAddTableItem,
   KsAbstract,
   KsTips,
   KsTable
 
-
 };
 
 // 插件
 const Plugins = {
+
   VERSION,
-  KsNoticeCenter
-  // KsDialog,
+  KsNoticeCenter,
+  KsDialog,
+  KsMask,
   // KsModal
+
 };
 
 const install = function(Vue) {
@@ -79,22 +77,21 @@ const install = function(Vue) {
 
   Object.keys(Components).reduce((arr, k) => {
     let temp;
-    // console.log(Components[k],k)
-    if(Components[k].template){
+
+    if(Components[k].template) {
       temp = { name: k, val: Components[k] };
-    }else{
+    } else {
       temp = Object.keys(Components[k]).map((key) => {
         return { name: key, val: Components[k][key] }
       });
     }
 
-    return arr.concat(temp)
+    return arr.concat(temp);
   }, []).forEach((item) => {
     Vue.component(item.name, item.val)
   });
 
   // install plugins.
-
   Object.keys(Plugins).forEach(k => {
     if (k === 'VERSION') return;
     Plugins[k].install(Vue);
