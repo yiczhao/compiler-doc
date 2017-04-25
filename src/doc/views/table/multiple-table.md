@@ -110,7 +110,7 @@
         },
         methods:{
             addOneData(val){
-                this.tableData.push({id:1, name:"John--",age:"sss",work:'IT',work2:'IT2',operator:''})   
+                this.tableData.push({checked:false,id:1, name:"John--",age:"sss",work:'IT',work2:'IT2',operator:''})   
             },
             output(val){
                 this.$KsNotice.info('内容',`点击序列为：${val}`)
