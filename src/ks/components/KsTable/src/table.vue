@@ -1,20 +1,32 @@
 <template>
 <div class="KsTable-multiple">
-    <table>  
+    <table v-on:change="change">  
         <thead v-el:thead>    
             <tr> 
-                <th v-for="item in columns" v-bind:style="{'width':item.width}">
+                <th v-for="item in columns">
                     <ks-icon v-bind:name="item.sortable | getIcon" 
                         v-if="item.sortable"
                         size="1x"
                         v-on:click="sort($index)"></ks-icon>
-                    <span v-text="item.title"></span>
+                    <input type="checkbox" name="ks-table-allchecked"
+                        v-model="allchecked"
+                        v-if="item.checked"/>
+                    <div v-text="item.title" 
+                        style="display: inline-block;" 
+                         v-bind:style="{'width':item.width}"></div>
                 </th>      
             </tr>  
         </thead>  
         <tbody v-el:tbody>    
-            <tr v-for="(index, item) in data" v-on:click="output">      
-                <td v-for="(key, val) in item" v-html="val | render key item index"></td>      
+            <tr v-for="(index, item) in data" 
+                v-on:click="output">      
+                <td v-for="(key, val) in item" >
+                    <input type="checkbox" 
+                           v-if="key=='checked'"
+                           v-model="item.checked" />
+                    <div v-html="val | render key item index">
+                    </div>        
+                </td>      
             </tr>
             
         </tbody>
@@ -61,7 +73,8 @@
 
             return {
                 tempData : this.data,
-                tempColumns: this.columns
+                tempColumns: this.columns,
+                allchecked:false
             }
         },
         computed:{
@@ -89,7 +102,7 @@
                 set(val){
                     
                     this.tempData = this.filterData(val,this._columnkeys)
-                    
+                    this.allchecked = this.isAllChecked(this.tempData)
                     this.$nextTick(()=>{
                         this.$parent.$compile(this.$els.tbody)    
                     })
@@ -132,7 +145,7 @@
                 this.$emit('change-sort',column.key, direction)
             },
             output(val){
-                console.log('output',this)
+                // console.log('output',this)
             },
             // 
             /**
@@ -171,9 +184,44 @@
                             temp[key] = item[key]
                         }
                     })
-                    
                     return temp
                 })
+            },
+            /**
+             * [change DOM change]
+             * @return {[type]} []
+             */
+            change(event){
+                
+                if('ks-table-allchecked' == event.target.name){
+                    var allchecked = false
+                    if(this.allchecked){
+                        allchecked = true
+                    }
+                    this.tempData = this.tempData.map((item)=>{
+                        item.checked = allchecked
+                        return item
+                    })
+
+                }else{
+                    this.allchecked = this.isAllChecked(this.tempData)
+                }
+
+                // console.log(event.target)
+                // console.log(this.data)
+            },
+            /**
+             * [isAllChecked 是否全选]
+             * @param  {[type]}  data [源数据]
+             * @return {Boolean}      []
+             */
+            isAllChecked(data){
+                var noCheckeds = data.filter((item)=>{
+                    if(!item.checked){
+                        return true
+                    }
+                })
+                return noCheckeds.length ? false : true 
             }
 
         },
