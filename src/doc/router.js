@@ -228,6 +228,13 @@ export default (router) => {
                 require(['./views/data/image.md'], resolve)
               }
             },
+            '/ksimg': {
+              name: 'ksimg',
+              cnName: '图片',
+              component: (resolve) => {
+                require(['./views/data/ksimg.md'], resolve)
+              }
+            },            
 
             '/addtable': {
               name: 'addtable',
