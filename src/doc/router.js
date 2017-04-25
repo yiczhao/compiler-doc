@@ -247,6 +247,18 @@ export default (router) => {
 
               }
             },
+
+            /* 定项表格 */
+            '/setitem-table': {
+              name: 'setitem-table',
+              cnName: '定项表格',
+              component: (resolve) => {
+                require(['./views/table/setitem-table.md'], resolve)
+
+              }
+            },
+
+
           }
         },
 

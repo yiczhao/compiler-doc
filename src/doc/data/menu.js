@@ -86,6 +86,7 @@ export default [
           {name: 'Tooltips 弹出提示', icon: 'icon', link: 'tooltips'},
           {name: 'Image 查看', icon: 'icon', link: 'image'},
           {name: '多标题表格', icon: 'icon', link: 'multiple-table'},
+          {name: '定项表格', icon: 'icon', link: 'setitem-table'},
           // {name: 'Carousel 走马灯', icon: 'icon', link: ''},
           // {name: 'Collapse 折叠面板', icon: 'icon', link: ''}
         ]
