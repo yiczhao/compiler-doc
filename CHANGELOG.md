@@ -2,6 +2,9 @@
 
 ### 1.0.0
 
+**2017.04.25**
+- 修改了完善优化了[KsRadio](#!/notice/dialog)组件。
+- 重构了 `KsDialog` 组件。
 
 **2017.04.20**
 - 修改了 `KsIcon` `ks` 字体库的样式 class 前缀。
@@ -9,14 +12,11 @@
 - 重构了 `KsRadio` `KsBtnRadio` `KsRadioGroup` 组件。
 - 更新完善了 [KsRadio](#!/form/radio)。
 
-
 **2017.04.20**
 - 添加[KsTable](#!/data/multiple-table)组件
 
-
 **2017.04.19**
 - [KsPageGroup（V1.1.0）](#!/data/page)优化 ：改变页面展示条数时派发事件两次问题。
-
 
 **2017.04.17**
 - 建立了 [卡说图标库](#!/base/icons-list)。
@@ -27,7 +27,6 @@
 
 **2017.04.14**
 - 重构了 KsButton 组件。
-
 
 **2017.04.12**
 - 调整了更新日志的书写位置
