@@ -17,7 +17,8 @@
 <ks-table
     v-bind:columns="columns"
     v-bind:data="tableData"
-    v-on:change-sort="sortChange"></ks-table>
+    v-on:change-sort="sortChange"
+    v-on:change-checked="checkedChange"></ks-table>
 
 <ks-button v-on:click="addOneData">添加一条</ks-button>
 
@@ -26,7 +27,8 @@
 <ks-table
     v-bind:columns="columns"
     v-bind:data="tableData"
-    v-on:change-sort="sortChange"></ks-table>
+    v-on:change-sort="sortChange"
+    v-on:change-checked="checkedChange"></ks-table>
 ```
 ### API
 
@@ -123,32 +125,14 @@
                 this.$KsNotice.info('内容',`排序的字段为：${key}，顺序为：${val}`)
                 
             },
-            // checkbox 改变
-            checkedChange(event,index){
-
-                console.log(event,index)
-                var checked = event.target.checked,
-                    id = this.tableData[index].id,i
-                
-                if(checked){
-                    this.checkeds.push(id)
-                }else{
-
-                    i = this.checkeds.indexOf(id)
-                    if(~i){
-                        this.checkeds.splice(i,1)    
-                    }
-
-                    
-                }
-                console.log(this.checkeds)
-                // this.tableData[index].checked = checked
-                
-
+            // checkbox 变化触发
+            checkedChange(data){
+                console.log(data)
             }
+            
         },
         created(){
-            
+            console.log(this)
         }
     }
 </script>

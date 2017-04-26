@@ -37,34 +37,59 @@
 
 
 
-.VueTables__sort-icon {
-  margin-left: 10px;
+/* table基础样式 */
+%table-layout{
+    padding: 10px 20px;
+    border: 0;
+    line-height: 1.7em;
 }
+%table-td{
+    @extend %table-layout;
+    border-bottom: 1px solid #e9e9e9;
+    vertical-align:top;
+    a{
+        color: #2196F3;
+        cursor: pointer;
+    }
+    i{ padding-right: 10px; }
+}
+%table{
+    width: 100%;
+    white-space: nowrap;
+    th{
+        @extend %table-layout;
+        // border-bottom: 1px solid #999;
+        // border-top:1px solid #e9e9e9;
+        font-weight: bold;
+        text-align: left;
+    }
+    td{ @extend %table-td; }
+}
+.KsTable-striped {
+    overflow-y: hidden;
+    margin: 0 -20px;
+    margin-bottom: 20px;
+    table { 
+        @extend %table; 
+        border-top: 1px solid #e9e9e9;
+    }
+    & tbody {
+        border-top: 1px solid #999;
+    }
+    & tbody tr:nth-of-type(odd) { background-color: #fcfcfc; }
 
-.VueTables__dropdown-pagination {
-  margin-left: 10px;
-}
-
-.VueTables__highlight {
-  background: yellow;
-  font-weight: normal;
-}
-
-.VueTables__sortable {
-  cursor: pointer;
-}
-
-.VueTables__date-filter {
-  border: 1px solid #ccc;
-  padding: 6px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.VueTables__filter-placeholder {
-  color: #aaa;
-}
-
-.VueTables__list-filter {
-  width: 120px;
-}
+    .multiple-tit{
+        // border-bottom: 1px solid #999;
+        // border-top:1px solid #e9e9e9;
+        .tit-bor{
+            border-bottom: 1px solid #999;
+            margin-right: -20px;
+        }
+        th{
+            font-weight: bold;
+            text-align: left;
+            padding: 0 20px;
+            font-size: 12px;
+        }
+    }
+} 

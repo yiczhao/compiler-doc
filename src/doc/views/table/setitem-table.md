@@ -254,7 +254,7 @@
 <div class="table-striped">
     <table>
         <!-- 普通表头 -->
-        <thead style="display: none;">
+        <thead >
             <tr>
                 <th v-for="1 in 8">标题{{$index+1}}</th>
             </tr>

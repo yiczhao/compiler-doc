@@ -1,5 +1,5 @@
 <template>
-<div class="KsTable-multiple">
+<div class="KsTable-striped">
     <table v-on:change="change">  
         <thead v-el:thead>    
             <tr> 
@@ -18,13 +18,12 @@
             </tr>  
         </thead>  
         <tbody v-el:tbody>    
-            <tr v-for="(index, item) in data" 
-                v-on:click="output">      
+            <tr v-for="(index, item) in data">      
                 <td v-for="(key, val) in item" >
                     <input type="checkbox" 
                            v-if="key=='checked'"
                            v-model="item.checked" />
-                    <div v-html="val | render key item index">
+                    <div v-if="key!='checked'" v-html="val | render key item index">
                     </div>        
                 </td>      
             </tr>
@@ -34,7 +33,23 @@
 </div>
 </template>
 <script type="text/javascript">
-
+    /**
+     * 1. 制定基本API columns、data、icon 图标接口
+     * 2. 数据从父级流入处理columns
+     *     get 和 set
+     *     set 处理: 
+     *     i.  map columns 数据填充 this._options
+     *         _options: {
+     *             //  储存了要重新渲染的模板内容，
+     *             //  作用：用于filters的render输出页面
+     *             templates:{},
+     *             //  获取定义的columns中的key值，
+     *             //  作用：用于 filterData 过滤源数据获取 columnkeys 中需要显示的数据
+     *             columnkeys:[] 
+     *         }
+     * 
+     * 
+     */
     export default {
         props:{
             columns:{
@@ -47,12 +62,6 @@
                 type:Array,
                 default(){
                     return []
-                }
-            },
-            options:{
-                type:Object,
-                default(){
-                    return {}
                 }
             },
             icons:{
@@ -68,8 +77,10 @@
         
         data(){
             this._ksparent = this.$parent
-            this._columnkeys = []
-            this.options['templates'] = this.options['templates'] || {}
+            this._options = {
+                templates:{},
+                columnkeys:[]
+            }
 
             return {
                 tempData : this.data,
@@ -84,10 +95,10 @@
                     return this.tempColumns
                 },
                 set(val){
-                    this._columnkeys = this.columns.map((item)=>{
+                    this._options.columnkeys = this.columns.map((item)=>{
                         
                         item.template 
-                        && (this.options['templates'][item.key] = item.template)
+                        && (this._options['templates'][item.key] = item.template)
 
                         return item.key
                     })
@@ -101,7 +112,7 @@
                 },
                 set(val){
                     
-                    this.tempData = this.filterData(val,this._columnkeys)
+                    this.tempData = this.filterData(val,this._options.columnkeys)
                     this.allchecked = this.isAllChecked(this.tempData)
                     this.$nextTick(()=>{
                         this.$parent.$compile(this.$els.tbody)    
@@ -122,7 +133,7 @@
             },
             render(val,key,item,index){
 
-                var template = (this.options.templates || {})[key]
+                var template = (this._options.templates || {})[key]
                 if('function' == typeof template){
 
                     return template.call(this._ksparent,item,index)
@@ -141,21 +152,17 @@
                                 : 'asc'
                     
                 this.columns[index].sortable = direction
-                // this.options.sortable.call(this._ksparent, column.key, direction)
                 this.$emit('change-sort',column.key, direction)
             },
-            output(val){
-                // console.log('output',this)
-            },
+            
             // 
             /**
-             * [selfSchema 获取自定义的 Schema column]
+             * [customSchema 获取自定义的 Schema column]
              * @param  {[Array]} schema [columns模式]
              * @param  {[Array]} real   [真实数据]
              * @return {[Array]}        []
              */
-            selfSchema(schema = [],real = []){
-                // console.log(schema,real)
+            customSchema(schema = [],real = []){
                 return schema.filter((key)=>{
                     return !~real.indexOf(key)
                 })
@@ -167,22 +174,30 @@
              * @return {[Array]}            []
              */
             filterData(data,columnkeys){
-                var selfSchema = this.selfSchema(columnkeys
-                                                    ,Object.keys(data[0]||[]))
-                    // console.log(selfSchema)
+                // this.customSchema(columnkeys,Object.keys(data[0]||[]))
+
                 return data.map((item,index)=>{
                     var temp = {}
 
                     columnkeys.forEach((key)=>{
-                        if(~selfSchema.indexOf(key)){
 
-                            temp[key] = 'table-idx' == key 
-                                            ? index
-                                            : ''
+                        switch(key){
+                            case 'table-idx':
+                                temp[key] = index+1
+                            break;
+
+                            case 'operator':
+                                temp[key] = ''
+                            break;
+
+                            default:
+                                item.hasOwnProperty(key)
+                                && (temp[key] = item[key])
+                                
+                            break;
                         }
-                        if(item.hasOwnProperty(key)){
-                            temp[key] = item[key]
-                        }
+                        
+                        
                     })
                     return temp
                 })
@@ -208,6 +223,8 @@
                 }
 
                 // console.log(event.target)
+                this.$emit('change-checked',this.data)
+
                 // console.log(this.data)
             },
             /**
