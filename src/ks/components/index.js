@@ -6,6 +6,7 @@
  * @date 2016/11/11.
  */
 
+import vueStyleSheet from '../plugins/packages/vue-styleSheet'
 import { KsToolTips } from './KsPopup'
 import KsNoticeCenter from './KsNoticeCenter'
 import KsSwitch from './KsSwitch'
@@ -68,6 +69,7 @@ const Plugins = {
   KsNoticeCenter,
   KsDialog,
   KsMask,
+  vueStyleSheet
   // KsModal
 
 };
