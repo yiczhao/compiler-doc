@@ -7,7 +7,7 @@
  */
 
 import KsImage from './src/KsImage.vue'
-
-export default {
-  KsImage
+import KsImgs from './src/KsImgs.vue'
+export {
+  KsImage,KsImgs
 }
