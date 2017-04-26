@@ -9,6 +9,10 @@
 - 修改了完善优化了[KsRadio](#!/notice/dialog)组件。
 - 重构了 `KsDialog` 组件。
 
+
+**2017.04.21**
+- 添加[KsIcon](#!/base/icons-list) 向上箭头、向下箭头
+
 **2017.04.20**
 - 修改了 `KsIcon` `ks` 字体库的样式 class 前缀。
 - 修复了 `KsNoticeCneter` 组件区域含有隐形遮罩的问题。

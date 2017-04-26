@@ -51,6 +51,107 @@
 
 <br/>
 
+<script type="text/javascript">
+    
+    export default {
+        data(){
+            this.checkeds = []
+            return {
+                
+                columns:[
+                    {
+                        key:'checked',
+                        title:'全选',
+                        checked:true,
+                        // template(val,index){
+                        //     console.log(val,index)
+                        //     // console.log(val.checked)
+                        //     console.log()
+                        //     // v-bind:checked="${val.checked}"
+                        //     // v-model="val.checked"
+                        //     // v-model="${this.tableData[index].checked}"
+                        //     return `<input type="checkbox"
+                        //                v-bind:checked="${val.checked}"
+                        //                v-on:change="checkedChange($event,${index},${val.id})" />`
+
+                        // }
+                    },
+                    {
+                        key:'table-idx',
+                        title:'序号',
+                        width:'60px'
+                    },
+                    {key:'id',title:'下标值'},
+                    {key:'name',title:'名字',sortable:true,
+                        template(val,index){
+                            return val.name+'==='
+                        }
+                    },
+                    {key:'age',title:'年龄',sortable:'asc'},
+                    {
+                        key:'operator',
+                        title:'操作',
+                        template(val,index){
+                            return `<a href="javascript:;" v-on:click.stop="output('${index}')" >操作</a><span>|</span><a href="javascript:;" v-on:click.stop="remove('${index}')" >删除</a>`
+                        }
+                    }
+                ],
+                tableData: [
+                    {checked:true,id:1, name:"John",age:"sss"},
+                    {checked:true,id:333, name:"John",age:"sss"},
+                    {checked:true,id:55, name:"John",age:"sss"},
+                    {checked:true,id:133, name:"John",age:"sss"},
+                    {checked:true,id:1111, name:"John",age:"sss"},
+                    {checked:true,id:155, name:"John",age:"sss"},
+                    {checked:true,id:1777, name:"John",age:"sss"}
+                ],
+                
+            }
+        },
+        methods:{
+            addOneData(val){
+                this.tableData.push({id:1, name:"John--",age:"sss",work:'IT',work2:'IT2',operator:''})   
+            },
+            output(val){
+                this.$KsNotice.info('内容',`点击序列为：${val}`)
+            },
+            remove(index){
+                // alert('delete: '+index)
+                this.tableData.splice(index,1)
+            },
+            sortChange(key,val){
+                this.$KsNotice.info('内容',`排序的字段为：${key}，顺序为：${val}`)
+                
+            },
+            // checkbox 改变
+            checkedChange(event,index){
+
+                console.log(event,index)
+                var checked = event.target.checked,
+                    id = this.tableData[index].id,i
+                
+                if(checked){
+                    this.checkeds.push(id)
+                }else{
+
+                    i = this.checkeds.indexOf(id)
+                    if(~i){
+                        this.checkeds.splice(i,1)    
+                    }
+
+                    
+                }
+                console.log(this.checkeds)
+                // this.tableData[index].checked = checked
+                
+
+            }
+        },
+        created(){
+            
+        }
+    }
+</script>
 ### 脚本
 
 ```javascript
@@ -61,11 +162,18 @@
                 
                 columns:[
                     {
+                        key:'checked',
+                        title:'全选',   
+                    },
+                    {
                         key:'table-idx',
                         title:'序号',
                         width:'60px'
                     },
                     {key:'id',title:'下标值'},
+                    {key:'val',title:'值'},
+                    {key:'val2',title:'值2'},
+                    {key:'val3',title:'值3'},
                     {key:'name',title:'名字',sortable:true,
                         template(val,index){
                             return val.name+'==='
@@ -81,48 +189,7 @@
                     }
                 ],
                 tableData: [
-                    {id:1, name:"John",age:"sss"}
-                ]
-            }
-        },
-        methods:{
-            
-        },
-        created(){
-            
-        }
-    }
-</script>
-```
-
-<script type="text/javascript">
-    export default {
-        data(){
-            return {
-                
-                columns:[
-                    {
-                        key:'table-idx',
-                        title:'序号',
-                        width:'60px'
-                    },
-                    {key:'id',title:'下标值'},
-                    {key:'name',title:'名字',sortable:true,
-                        template(val,index){
-                            return val.name+'==='
-                        }
-                    },
-                    {key:'age',title:'年龄',sortable:'asc'},
-                    {
-                        key:'operator',
-                        title:'操作',
-                        template(val,index){
-                            return `<a href="javascript:;" v-on:click.stop="output('${index}')" >操作</a><span>|</span><a href="javascript:;" v-on:click.stop="remove('${index}')" >删除</a>`
-                        }
-                    }
-                ],
-                tableData: [
-                    {id:1, name:"John",age:"sss"}
+                    {checked:1,id:1, name:"John",age:"sss"}
                 ]
             }
         },
@@ -147,6 +214,9 @@
         }
     }
 </script>
+```
+
+
 
 
 

@@ -122,7 +122,7 @@ function build(name, file_path,version,root) {
     var time_start = new Date().getTime()
         // touch(config.output.path)
 
-        return
+        // return
     webpack(config, function(err, stats) {
         if (err) throw err
 
