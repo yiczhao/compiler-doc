@@ -64,7 +64,7 @@
                     {
                         key:'checked',
                         title:'全选',
-                        checked:true,
+                        checked:true
                         // template(val,index){
                         //     console.log(val,index)
                         //     // console.log(val.checked)
@@ -126,8 +126,8 @@
                 
             },
             // checkbox 变化触发
-            checkedChange(data){
-                console.log(data)
+            checkedChange(data,index){
+                console.log(data,index)
             }
             
         },

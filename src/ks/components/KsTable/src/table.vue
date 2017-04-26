@@ -20,9 +20,9 @@
         <tbody v-el:tbody>    
             <tr v-for="(index, item) in data">      
                 <td v-for="(key, val) in item" >
-                    <input type="checkbox" 
+                    <input type="checkbox" id="KsTable_{{_uid}}_{{index}}"
                            v-if="key=='checked'"
-                           v-model="item.checked" />
+                           v-model="item.checked"/>
                     <div v-if="key!='checked'" v-html="val | render key item index">
                     </div>        
                 </td>      
@@ -207,23 +207,30 @@
              * @return {[type]} []
              */
             change(event){
-                
+                var index
                 if('ks-table-allchecked' == event.target.name){
                     var allchecked = false
                     if(this.allchecked){
                         allchecked = true
+                    }else{
+                        index = -1
                     }
                     this.tempData = this.tempData.map((item)=>{
                         item.checked = allchecked
                         return item
                     })
 
+                    
+
                 }else{
+
                     this.allchecked = this.isAllChecked(this.tempData)
+                    index = event.target.id.split('_')[2]
                 }
 
+
                 // console.log(event.target)
-                this.$emit('change-checked',this.data)
+                this.$emit('change-checked',this.data,index)
 
                 // console.log(this.data)
             },
