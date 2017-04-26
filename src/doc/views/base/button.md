@@ -136,7 +136,7 @@
 <br>
 
 <style>
-  .round-button .KSBtnAbstract { border-radius: 50%; padding: 0 }
+  .round-button .KsBtnAbstract { border-radius: 50%; padding: 0 }
 </style>
 
 <div class="round-button">
@@ -147,7 +147,7 @@
 
 ```html
 <style>
-  .round-button .KSBtnAbstract { border-radius: 50%; padding: 0 }
+  .round-button .KsBtnAbstract { border-radius: 50%; padding: 0 }
 </style>
 
 <div class="round-button">
