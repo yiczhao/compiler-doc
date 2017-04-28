@@ -36,7 +36,7 @@ page_current:{{page_current}}
 | total || 总条数 | props | Number | 无 | 无 |
 | size || 每页展示条数 | props | Number | `非必填` | 10 |
 | on-change |V1.1.0移除| 分页改变时调用 | props  | Function | `非必填` | 无 |
-| v-on:change |V1.1.0添加| 分页改变时调用 | props  | Function | `非必填` | 无 |
+| v-on:change |V1.1.0添加| 分页改变时调用 | props  | Event | `非必填` | 无 |
 
 
 ### pageGroup
@@ -64,7 +64,7 @@ size:{{size}}
 |------|-------|-------|----------|---------|-------|--------|
 | sizes || 页面展示的数据条数 | props | Array | `非必填` | [10,20,100] |
 | on-change |V1.1.0移除| 分页改变时调用（val,type`sizes变化输出SIZE-CHANGE`） | props  | Function | `非必填` | 无 |
-| v-on:change |V1.1.0添加| 分页改变时调用（val,type`sizes变化输出SIZE-CHANGE`） | props  | Function | `非必填` | 无 |
+| v-on:change |V1.1.0添加| 分页改变时调用（val,type`sizes变化输出SIZE-CHANGE`） | props  | Event | `非必填` | 无 |
 
 ```javascript
 <script>
