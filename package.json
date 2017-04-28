@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "A Vue.js project",
   "author": "zhangjie <zhangjie@kashuo.com>",
-  "private": true,
   "scripts": {
     "develop": "node build/dev-server.js",
     "pro": "node build/pro.js",
