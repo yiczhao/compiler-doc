@@ -1,7 +1,6 @@
 <template>
   <div class="KSModal__wrapper">
     <div class="KSModal" v-if="show" :style="modalWidth">
-
       <header class="KSModal__header" :style="modalHeaderStyle">
         <div class="innerWrap">
           <h3 class="KSModal__title">
@@ -29,10 +28,10 @@
       </article>
       <footer class="KSModal__footer" :style="type !== 'normal' && 'padding-top: 0'">
         <aside class="KSModal__btnWarp">
-          <ks-button :ghost="true" type="other" @click.stop="$emit('cancel')"
+          <ks-button mode="ghost" type="other" @click="$emit('cancel')"
                      v-if="showCancelBtn" style="margin-right: 10px"
           >{{ cancelBtnText }}</ks-button>
-          <ks-button :type="type === 'normal' ? 'primary' : type" @click.stop="$emit('confirm')"
+          <ks-button :type="type === 'normal' ? 'primary' : type" @click="$emit('confirm')"
                      v-if="showConfirmBtn"
           >{{ confirmBtnText }}</ks-button>
         </aside>
@@ -42,8 +41,7 @@
 </template>
 
 <script>
-  import KsButton from '../../KsButton'
-  import KsMask from '../../KsMask'
+  import { KsButton } from '../../KsButton'
   import modalProps from '../mixins/modalProps'
 
   // 类型对色调映射
@@ -95,7 +93,7 @@
       }
     },
 
-    components: { KsButton, KsMask }
+    components: { KsButton }
   }
 </script>
 

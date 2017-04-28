@@ -3,8 +3,6 @@
 </template>
 
 <script>
-  import ksIcons from '../fonts/iconfont'
-
   // 对应图标库对应 class 的映射
   const libraryMapper = {
     ks: 'icon',

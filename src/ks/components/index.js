@@ -69,7 +69,7 @@ const Plugins = {
   KsNoticeCenter,
   KsDialog,
   KsMask,
-  // KsModal
+  KsModal
 
 };
 

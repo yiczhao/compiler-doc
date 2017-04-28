@@ -8,11 +8,11 @@
 export default {
 
   props: {
-    value: {type: String, required: true},
+    value: {required: true},
     disabled: {type: Boolean, default: false},
     defChecked: {type: Boolean, default: false},
-    model: {type: String, toWay: true, required: true},
-    name: {type: String, default: 'KsRadioAbstract'}
+    model: {toWay: true, required: true},
+    name: {default: 'KsRadioAbstract'}
   }
 
 }
