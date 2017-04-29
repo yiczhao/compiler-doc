@@ -45,6 +45,8 @@ Object.keys(dirMap).map((key)=>{
                     return val.fileName
                 })
 
+                argv = argv.sort()
+                matchStrs = matchStrs.sort()
                 // console.log((argv.join(' ')))
                 // console.log((matchStrs.join(' ')))
                 matchStrs = (argv.join(' ')).replace(matchStrs.join(' '),'')
