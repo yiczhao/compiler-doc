@@ -1,17 +1,14 @@
-##  多标题表格布局
-
----
-
-#### table组件
-
+## table组件
+> **Author:张大柱**
 > 支持新增数据、排序、自定义操作等功能。
 
 ------
 
 <br/>
 
-{{tableData | json}}
-
+<p v-for="item in tableData">
+    <span style="display:inline-block;width:160px;"  v-for="(key,val) in item">{{key+':'+val}}</span>
+</p>
 <br/>
 
 <ks-table
@@ -35,8 +32,12 @@
 | 参数 | 说明 | 接口类型 | 类型 | 可选值 | 默认值 |
 |------|-------|----------|---------|-------|--------|
 | columns | 设置表格的表头 | props | Array | `必填` | 无 |
+| columns -> table-idx | 序号 |  | Boolean |  | false |
+| columns -> sortable | 排序 |  | Boolean |  | false |
+| columns -> checked | 全选功能 |  | Boolean |  | false |
 | data | 表格的数据 | props | Array | `必填` | 无 |
-| change-sort | 对表格每列数据进行排序 | props  | Function | `非必填` | 降序 |
+| change-sort | 对表格每列数据进行排序后出发 | props  | Event | `非必填` | 降序 |
+| change-checked | checkbox更改触发 | props  | Event | `非必填` |  |
 
 <br/>
 
@@ -65,18 +66,79 @@
                         key:'checked',
                         title:'全选',
                         checked:true
-                        // template(val,index){
-                        //     console.log(val,index)
-                        //     // console.log(val.checked)
-                        //     console.log()
-                        //     // v-bind:checked="${val.checked}"
-                        //     // v-model="val.checked"
-                        //     // v-model="${this.tableData[index].checked}"
-                        //     return `<input type="checkbox"
-                        //                v-bind:checked="${val.checked}"
-                        //                v-on:change="checkedChange($event,${index},${val.id})" />`
+                    },
+                    {
+                        key:'table-idx',
+                        title:'序号',
+                        width:'60px'
+                    },
+                    {key:'id',title:'下标值'},
+                    {key:'name',title:'名字',sortable:true,
+                        template(val,index){
+                            return val.name+'==='
+                        }
+                    },
+                    {key:'age',title:'年龄',sortable:'asc'},
+                    {
+                        key:'operator',
+                        title:'操作',
+                        template(val,index){
+                            return `<a href="javascript:;" v-on:click.stop="output('${index}')" >操作</a><span>|</span><a href="javascript:;" v-on:click.stop="remove('${index}')" >删除</a>`
+                        }
+                    }
+                ],
+                tableData: [
+                    {checked:true,id:1, name:"John",name1:"John",age:"sss"},
+                    {checked:true,id:333, name:"John",age:"sss"},
+                    {checked:true,id:55, name:"John",age:"sss"},
+                    {checked:true,id:133, name:"John",age:"sss"},
+                    {checked:true,id:1111, name:"John",age:"sss"},
+                    {checked:true,id:155, name:"John",age:"sss"},
+                    {checked:true,id:1777, name:"John",age:"sss"}
+                ],
+                
+            }
+        },
+        methods:{
+            addOneData(val){
+                this.tableData.push({checked:false,id:1, name:"John--",age:"sss",work:'IT',work2:'IT2',operator:''})   
+            },
+            output(val){
+                this.$KsNotice.info('内容',`点击序列为：${val}`)
+            },
+            remove(index){
+                // alert('delete: '+index)
+                this.tableData.splice(index,1)
+            },
+            sortChange(key,val){
+                this.$KsNotice.info('内容',`排序的字段为：${key}，顺序为：${val}`)
+                
+            },
+            // checkbox 变化触发
+            checkedChange(data,index){
+                console.log(data,index)
+            }
+            
+        },
+        created(){
+        }
+    }
+</script>
+### 脚本
 
-                        // }
+```javascript
+<script type="text/javascript">
+    
+    export default {
+        data(){
+            this.checkeds = []
+            return {
+                
+                columns:[
+                    {
+                        key:'checked',
+                        title:'全选',
+                        checked:true
                     },
                     {
                         key:'table-idx',
@@ -132,69 +194,6 @@
             
         },
         created(){
-            console.log(this)
-        }
-    }
-</script>
-### 脚本
-
-```javascript
-<script>
-    export default {
-        data(){
-            return {
-                
-                columns:[
-                    {
-                        key:'checked',
-                        title:'全选',   
-                    },
-                    {
-                        key:'table-idx',
-                        title:'序号',
-                        width:'60px'
-                    },
-                    {key:'id',title:'下标值'},
-                    {key:'val',title:'值'},
-                    {key:'val2',title:'值2'},
-                    {key:'val3',title:'值3'},
-                    {key:'name',title:'名字',sortable:true,
-                        template(val,index){
-                            return val.name+'==='
-                        }
-                    },
-                    {key:'age',title:'年龄',sortable:'asc'},
-                    {
-                        key:'operator',
-                        title:'操作',
-                        template(val,index){
-                            return `<a href="javascript:;" v-on:click.stop="output('${index}')" >操作</a><span>|</span><a href="javascript:;" v-on:click.stop="remove('${index}')" >删除</a>`
-                        }
-                    }
-                ],
-                tableData: [
-                    {checked:1,id:1, name:"John",age:"sss"}
-                ]
-            }
-        },
-        methods:{
-            addOneData(val){
-                this.tableData.push({id:1, name:"John--",age:"sss",work:'IT',work2:'IT2',operator:''})   
-            },
-            output(val){
-                this.$KsNotice.info('内容',`点击序列为：${val}`)
-            },
-            remove(index){
-                // alert('delete: '+index)
-                this.tableData.splice(index,1)
-            },
-            sortChange(key,val){
-                this.$KsNotice.info('内容',`排序的字段为：${key}，顺序为：${val}`)
-                
-            }
-        },
-        created(){
-            
         }
     }
 </script>

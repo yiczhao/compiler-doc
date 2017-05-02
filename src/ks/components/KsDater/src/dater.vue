@@ -92,7 +92,7 @@
             },
             // 限制范围
             banLimit(val){
-                console.log(val,this.min)
+                // console.log(val,this.min)
                 if((this.min && val < this.min)
                     || (this.max && val > this.max)) {
                     return true

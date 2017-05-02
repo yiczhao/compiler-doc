@@ -9,20 +9,23 @@
     }
     .SearchIcon {
         position: absolute;
-        top: 1px;
-        right: 1px;
+        top: 50%;
+        right: 8px;
+        margin-top: -8px;
         font-size: 16px;
         color: #444;
-        background: #fcfcfc;
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
-        padding: 6px 8px 6px 10px;
+        cursor: pointer;
+        // background: #fcfcfc;
+        // border-top-right-radius: 3px;
+        // border-bottom-right-radius: 3px;
+        // padding: 6px 8px 6px 10px;
         &:hover {
-            background: #f6f6f6;
+            color: rgba(65,3,253,.7)
+            // background: #f6f6f6;
         }
-        &:hover:active {
-            background: #e8e8e8;
-        }
+        // &:hover:active {
+        //     background: #e8e8e8;
+        // }
     }
     .SearchResult {
         position: absolute;
