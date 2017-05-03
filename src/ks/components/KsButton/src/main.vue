@@ -1,5 +1,5 @@
 <template>
-  <div class="KsButton">
+  <span class="KsButton">
     <abstract :form="form" :disabled="disable" :auto-focus="autoFocus"
               :name="name" :native-type="nativeType" :mode="mode"
               :width="sizeMapper[size].width"
@@ -14,7 +14,7 @@
       ></ks-icon>
       <slot></slot>
     </abstract>
-  </div>
+  </span>
 </template>
 
 <script>

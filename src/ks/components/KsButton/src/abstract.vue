@@ -1,13 +1,15 @@
 <template>
-  <!-- 普通按钮 -->
-  <template v-if="mode === 'normal'">
-    <style type="text/css">#normalStyle{}</style>
-  </template>
-  <!-- 幽灵按钮 -->
-  <template v-if="mode === 'ghost'">
-    <style type="text/css">#ghostStyle{}</style>
-  </template>
-  <div :class="'KsBtnAbstract--UID-' + _uid">
+  <span :class="'KsBtnAbstract--UID-' + _uid">
+
+    <!-- 普通按钮 -->
+    <template v-if="mode === 'normal'">
+      <style type="text/css">#normalStyle{}</style>
+    </template>
+    <!-- 幽灵按钮 -->
+    <template v-if="mode === 'ghost'">
+      <style type="text/css">#ghostStyle{}</style>
+    </template>
+
     <button :type="nativeType" :autofocus="autoFocus" :name="name" v-if="truth"
             :disabled="disabled" :form="form" :style="style"
             class="KsBtnAbstract" :class="{'KsBtnAbstract--disabled': disabled}"
@@ -22,7 +24,7 @@
     >
       <slot></slot>
     </a>
-  </div>
+  </span>
 </template>
 
 <script>
