@@ -50,7 +50,12 @@
      * 
      * 
      */
+    
+    import KsIcon from '../../KsIcon/src/icon.vue'
     export default {
+        components:{
+            'ks-icon':KsIcon
+        },
         props:{
             columns:{
                 type:Array,

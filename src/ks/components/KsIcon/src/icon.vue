@@ -40,8 +40,8 @@
 </script>
 
 <style lang="scss">
-  @import "../styles/icons";
+  /*@import "../styles/icons";
   @import "../styles/index.css";
 
-  @import "../../foundation/Font-Awesome-master/css/font-awesome.min.css";
+  @import "../../foundation/Font-Awesome-master/css/font-awesome.min.css";*/
 </style>
