@@ -28,13 +28,14 @@
 
     /**
         <ksimg 
-            :imgShow.sync="Boolean"  弹出 必填
+            :show.sync="Boolean"  弹出 必填
             :src="Array"  图片数组 必填
             :pindex="Number"   当前要显示 的图片下标
             ></ksimg>
      */
 
   export default{
+    VERSION: '1.0.0',
     data(){
       return {
         rot:0,
@@ -75,6 +76,7 @@
         this.sca=0;  
         this.sta=''      
         this.show=false;
+        this.$emit('close')
       },
       move:function(i){
         this.none=true;
