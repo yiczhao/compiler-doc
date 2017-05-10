@@ -14,12 +14,12 @@
 <ks-imgs 
       v-bind:show.sync="imageShow"  
       v-bind:src="src"  
-      v-bind:pindex="index"    
+      v-bind:pindex="index" 
       ></ks-imgs>
 
 ```html
 <img v-on:click="put(url,$index)" :src="i" v-for='i in url' style="width: 50px;height: 50px;cursor: pointer;" >
- 呼出 KsImgs 组件
+点击小图片 呼出 KsImgs 组件
 
 ```
 
@@ -47,11 +47,63 @@
                 this.src=src;
                 this.index=index;
                 this.imageShow=true;
-            }
-        }
+            }        }
     }
 </script>
 ```
+### 查看图片后关闭时候促发回调
+<br>
+<img v-on:click="put2(url2,$index)" :src="i" v-for='i in url2' style="width: 50px;height: 50px;cursor: pointer;" >
+
+<ks-imgs 
+      v-bind:show="imageShow2"  
+      v-bind:src="src"  
+      v-bind:pindex="index"
+      @close='close' 
+      ></ks-imgs>
+
+```html
+<img v-on:click="put2(url,$index)" :src="i" v-for='i in url2' style="width: 50px;height: 50px;cursor: pointer;" >
+点击小图片 呼出 KsImgs 组件
+
+```
+
+```html
+<ks-imgs 
+      v-bind:show="imageShow2"  
+      v-bind:src="src"  
+      v-bind:pindex="index"
+      @close='close' 
+      ></ks-imgs>
+```
+#### 脚本
+```javascript
+<script>
+    export default{
+        data () {
+            return {
+                imageShow2:false,
+                index:0,
+                src:[],
+                url2:["http://img02.tooopen.com/images/20140504/sy_60294738471.jpg",'http://joymepic.joyme.com/article/uploads/20172/211490080221647281.jpeg'],
+            }
+        },
+        methods: {
+            put2(src,index){
+                this.src=src;
+                this.index=index;
+                this.imageShow2=true;
+            },            
+            close(){
+                this.imageShow=false;
+                alert('回调')
+                添加操作
+                ............
+            }
+       }
+    }
+</script>
+```      
 
 ### API
 | 参数 | 说明 | 接口类型  | 可选值 | 默认值 | 是否必须 |
@@ -60,6 +112,8 @@
 | src | 显示图片的url数组 | Array |   无 | 无 |是
 | index | 当前要显示的图片的索引  | Number | 无 | 0 |否
 | load | 是否需要下载功能  | Boolean | true, false | true | 否   |
+| @close | 关闭时触发事件  | function | 无 | 无 | 否   |
+
 
 <br>
 
@@ -77,8 +131,10 @@
         data () {
             return {
                 imageShow:false,
+                imageShow2:false,
                 index:0,
                 src:[],
+                url2:["http://img02.tooopen.com/images/20140504/sy_60294738471.jpg",'http://joymepic.joyme.com/article/uploads/20172/211490080221647281.jpeg'],
                 url:["http://img02.tooopen.com/images/20140504/sy_60294738471.jpg",'http://joymepic.joyme.com/article/uploads/20172/211490080221647281.jpeg','http://www.40407.com/uploads/allimg/170309/1817755_170309170502_1.jpg','http://pic7.nipic.com/20100522/1263764_002013845527_2.jpg']
             }
         },
@@ -87,6 +143,15 @@
                 this.src=src;
                 this.index=index;
                 this.imageShow=true;
+            },
+            put2(src,index){
+                this.src=src;
+                this.index=index;
+                this.imageShow2=true;
+            },            
+            close(){
+                this.imageShow2=false;
+                alert('回调')
             }
         }
     }
