@@ -7,10 +7,7 @@
         </div>
 
 
-        <div class="dialog-bd" v-show="!is_storetype">
-            <slot></slot>
-        </div>
-        <div v-show="is_storetype">
+        <div class="dialog-bd"  :class="{'dialog-bd':!is_storetype}">
             <slot></slot>
         </div>
         

@@ -9,8 +9,7 @@
 import KsCheckbox from './src/NrCheckbox.vue'
 import KsCheckboxGroup from './src/CheckboxGroup.vue'
 
-export default KsCheckbox
-export {
+export default {
   KsCheckbox,
   KsCheckboxGroup
 }

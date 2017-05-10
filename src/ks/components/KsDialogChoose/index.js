@@ -7,8 +7,12 @@
  */
 
 import KsDialogChoose from './src/KsDialogChoose.vue'
+import KsList from './src/ListStore.vue'
 
-export default KsDialogChoose
-export {
-	KsDialogChoose
+
+export default {
+	KsDialogChoose,
+	KsList
 }
+
+

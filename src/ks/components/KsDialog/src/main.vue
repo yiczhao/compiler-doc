@@ -1,92 +1,99 @@
 <template>
-  <div class="KSDialog__wrapper">
-    <!-- 不想加这个 wrapper, but 不加会变成片断实例 -->
-    <div :class="'dialog-icon KSDialog KSDialog__UID--' + _uid" v-if="show" :style="zIndex">
-      <!-- 图标部分 -->
-      <aside class="KSDialog__icon" :style="'color:' + hue.hue">
-        <i :class="'icon ' + hue.icon"></i>
+  <div class="KsDialog">
+    <abstract v-if="show">
+      <aside class="KsDialog__icon" slot="icon" :style="{color: typeMapper[type].hue}">
+        <ks-icon :name="typeMapper[type].icon"></ks-icon>
       </aside>
-      <!-- 内容块部分 -->
-      <article class="KSDialog__content">
-        <h3 class="KSDialog__title">
-          {{ title }} <slot name="title"></slot>
-        </h3>
-        <p class="content">
-          {{ text }} <slot name="text"></slot>
-        </p>
-      </article>
-      <!-- 操作显示区域 -->
-      <footer class="KSDialog__footer">
-        <aside class="KSDialog__btnWarp">
-          <ks-button :ghost="true" type="other" @click.stop="$emit('cancel')"
-                     v-if="showCancelBtn" style="margin-right: 10px"
-          >{{ cancelBtnText }}</ks-button>
-          <ks-button :type="type" @click.stop="$emit('confirm')"
-          >{{ confirmBtnText }}</ks-button>
-        </aside>
-      </footer>
-    </div>
+
+      <aside class="KsDialog__article" slot="article">
+        <h3 class="KsDialog__title" v-text="title"></h3>
+        <p class="KsDialog__content" v-text="content"></p>
+      </aside>
+
+      <aside class="KsDialog__operation" slot="operation">
+        <ks-button type="other" mode="ghost" style="margin-right: 12px"
+                   v-if="showCancelBtn" @click="$emit('cancel')"
+        >
+          {{cancelBtnText}}
+        </ks-button>
+        <ks-button :type="type" @click="$emit('confirm')">
+          {{confirmBtnText}}
+        </ks-button>
+      </aside>
+    </abstract>
   </div>
 </template>
 
 <script>
-  import KsButton from '../../KsButton'
-  import KsMask from '../../KsMask'
-
-  // 类型对色调映射
-  const colorMapper = {
-    success: { hue: '#4CAF50', icon: 'icon-chenggongtubiao' },
-    info: { hue: '#00BCD4', icon: 'icon-xinxitubiao' },
-    warn: { hue: '#FF5722', icon: 'icon-cuowutubiao' },
-    danger: { hue: '#F44336', icon: 'icon-cuowutubiao' }
-  }
-  // z-index
-  let zIndex = 19941026
+  import typeMapper from '../data/typeMapper'
+  import Abstract from './abstract.vue'
+  import KsIcon from '../../KsIcon'
+  import { KsButton } from '../../KsButton'
 
   export default {
+    VERSION: '1.0.1',
 
     data () {
-      return { }
-    },
-
-    props: {
-      showCancelBtn: { type: Boolean, default: false },
-      cancelBtnText: { type: String, default: '取消' },
-      confirmBtnText: { type: String, default: '确定' },
-      title: { type: String, default: '' },
-      text: { type: String, default: '' },
-      type: { type: String, default: 'success' },
-      mask: { type: Boolean, default: true },
-      show: { type: Boolean, required: true, towWay: true }
-    },
-
-    computed: {
-      /**
-       * @description 当前模态的主色调
-       * @return {*} color
-       */
-      hue () { return colorMapper[this.type] },
-      /**
-       * @description 用于控制组件的层叠顺序
-       * @return {string} z-index
-       */
-      zIndex () { return `z-index:${zIndex++}` }
-    },
-
-    watch: {
-      show (show) {
-        let maskConfig = this.maskConfig
-
-        if (!show && maskConfig) {
-          KsMask.close()
-        }
+      return {
+        typeMapper
       }
     },
 
-    components: { KsButton, KsMask }
+    props: {
+      show: {type: Boolean, default: false},
+      showCancelBtn: {type: Boolean, default: false},
+      cancelBtnText: {type: String, default: '取消'},
+      confirmBtnText: {type: String, default: '确定'},
+      title: {type: String, default: 'Title'},
+      content: {type: String, default: 'Content...'},
+      type: {type: String, default: 'success'}
+    },
+
+    components: { Abstract, KsButton, KsIcon }
+
   }
 </script>
 
 <style lang="scss">
-  @import "../styles/KsDialog";
+  @import "../../foundation/SassMagic-master/src/sassMagic";
+
+  $icon-size: 88px;                                                       // 图标大小
+
+  @include b (KsDialog) {
+
+    // 标题部分
+    @include e (title) {
+      margin: 0; padding: 20px;
+      font-size: 20px;
+      word-wrap: break-word;
+    }
+
+    // 图标部分
+    @include e (icon) {
+      @include size($icon-size);
+
+      padding: 20px; border: 5px solid;
+      text-align: center; line-height: $icon-size;
+      border-radius: 50%; margin: auto;
+
+      .icon { font-size: $icon-size / 2; line-height: inherit }
+    }
+
+    // 内容块
+    @include e (article) {
+      text-align: center;
+    }
+    @include e (content) {
+      color: #444; font-size: 13px;
+      line-height: 22px; padding: 0 20px;
+      word-wrap: break-word;
+    }
+
+    // 操作区域
+    @include e (operation) {
+      overflow: hidden; padding: 20px 0;
+      text-align: center;
+    }
+
+  }
 </style>

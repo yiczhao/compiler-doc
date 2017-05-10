@@ -1,5 +1,6 @@
-@import "../../styles/sassMagic/_sassMagic";
+@import "../../foundation/SassMagic-master/src/sassMagic";
 @import "../../styles/variables";
+@import '../../styles/components/input.scss';
 .AddTableItem{
     .btn-group{
         background: #E9F5FF;
@@ -63,6 +64,10 @@
         background: #E8F5FF;
         .btn-input{
             margin-bottom: 20px;
+            .errormsg{
+                color:red;
+                margin:10px 0;
+            }
             input{
                 border:none;
                 background: #D3DFE8;
@@ -138,7 +143,7 @@
                     color:#fff;
                     display: block;
                     cursor: pointer;
-                    font-size: 14px;    
+                    font-size: 14px;
                 }
                 &.disabled{
                     background:#000;
@@ -146,7 +151,7 @@
                     span{
                         cursor: not-allowed;
                     }
-                    
+
                 }
             }
         }
@@ -181,8 +186,12 @@
                 line-height: 13px;
                 cursor: pointer;
             }
-            
+
         }
     }
 
+    
+   .AddTableItem-input{
+      @extend %input;
+    }
 }

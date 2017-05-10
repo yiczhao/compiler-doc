@@ -1,5 +1,5 @@
 <template>
-  <div v-el:reference cid="KsToolTip" style="display: inline-block"
+  <div v-el:reference cid="KsToolTip" style="display: inline-block;position:relative"
         @mouseenter="handleShowPopper"
         @mouseleave="handleClosePopper"
   >
@@ -17,7 +17,7 @@
 
 <script>
   import Vue from 'vue'
-  import VuePopper from '../../utils/Popper'
+  import { VuePopper, DomUtil, StringUtil } from '../../utils'
 
   export default {
     name: 'KsToolTip',

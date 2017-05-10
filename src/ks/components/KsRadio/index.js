@@ -6,12 +6,11 @@
  * @date: 2016/10/14.
  */
 
-import KsRadio from './src/NrRadio.vue'
+import KsRadio from './src/circleRadio.vue'
 import KsBtnRadio from './src/BtnRadio.vue'
-import KsRadioGroup from './src/RadioGroup.vue'
+import KsRadioGroup from './src/radioGroup.vue'
 
-export default KsRadio
-export {
+export default {
   KsRadio,
   KsBtnRadio,
   KsRadioGroup

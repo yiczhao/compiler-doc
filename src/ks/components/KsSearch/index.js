@@ -6,7 +6,6 @@
 
 import KsSearch from './src/Search.vue'
 
-export default KsSearch
-export {
+export default {
   KsSearch
 }

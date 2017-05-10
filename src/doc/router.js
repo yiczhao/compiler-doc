@@ -73,6 +73,24 @@ export default (router) => {
 
           subRoutes: {
 
+            /* 基础组件-图标 */
+            '/icons': {
+              name: 'icons',
+              cnName: '图标',
+              component: (resolve) => {
+                require(['./views/base/icons.md'], resolve)
+              }
+            },
+
+            /* 基础组件-图标 */
+            '/icons-list': {
+              name: 'icons-list',
+              cnName: '卡说图标库',
+              component: (resolve) => {
+                require(['./views/base/icons-list.vue'], resolve)
+              }
+            },
+
             /* 基础组件-布局 */
             '/layout': {
               name: 'layout',
@@ -89,11 +107,10 @@ export default (router) => {
               component: (resolve) => {
                 require(['./views/base/button.md'], resolve)
               }
-            },
-
-
+            }
           }
         },
+
         /* form */
         '/form': {
           name: 'form',
@@ -211,6 +228,13 @@ export default (router) => {
                 require(['./views/data/image.md'], resolve)
               }
             },
+            '/ksimg': {
+              name: 'ksimg',
+              cnName: '图片',
+              component: (resolve) => {
+                require(['./views/data/ksimg.md'], resolve)
+              }
+            },            
 
             '/addtable': {
               name: 'addtable',
@@ -229,7 +253,18 @@ export default (router) => {
                 require(['./views/table/multiple-table.md'], resolve)
 
               }
-            }
+            },
+
+            /* 定项表格 */
+            '/setitem-table': {
+              name: 'setitem-table',
+              cnName: '定项表格',
+              component: (resolve) => {
+                require(['./views/table/setitem-table.md'], resolve)
+
+              }
+            },
+
 
           }
         },
@@ -300,23 +335,32 @@ export default (router) => {
             }
           }
         },
+
+        /* other */
+        '/other': {
+          name: 'other',
+          cnName: '其他',
+          component: (resolve) => {
+            require(['./views/other/index.vue'], resolve)
+          },
+          subRoutes: {
+            /* 更新日志 */
+            '/tooltips': {
+              name: 'tooltips',
+              cnName: '弹出提示',
+              component: (resolve) => {
+                require(['./views/other/tooltips.md'], resolve)
+              }
+            }
+          }
+        },
+
         /* log */
         '/log': {
           name: 'log',
-          cnName: '日志',
+          cnName: '更新日志',
           component: (resolve) => {
-            require(['./views/log/index.vue'], resolve)
-          },
-
-          subRoutes: {
-            /* 更新日志 */
-            '/update': {
-              name: 'update',
-              cnName: '更新日志',
-              component: (resolve) => {
-                require(['./views/log/update.md'], resolve)
-              }
-            }
+            require(['../../CHANGELOG.md'], resolve)
           }
         }
 

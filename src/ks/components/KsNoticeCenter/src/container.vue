@@ -1,9 +1,7 @@
 <template>
   <div class="notice-center-container">
-    <ul class="noticeCenterContainer" cid="noticeCenterContainer"
-        v-if="show"
-    >
-      <li class=" _li" v-for="msg in queue">
+    <ul class="noticeCenterContainer" v-if="show">
+      <li class="noticeCenterContainer__li" v-for="msg in queue">
         <notice-center-item :id="msg._uid"
                             :hue="msg['options'].hue"
                             :title="msg['options'].title"
@@ -21,7 +19,7 @@
   import NoticeCenterItem from './item.vue'
 
   export default {
-    VERSION: '0.0.1',
+    VERSION: '1.0.0',
 
     data () {
       return {
@@ -55,15 +53,17 @@
 </script>
 
 <style lang="scss">
+  @import "../../foundation/SassMagic-master/src/sassMagic";
+
   $width: 300px;                                 // 提示信息框的长度
 
-  .noticeCenterContainer {
+  @include b (noticeCenterContainer) {
     z-index: 19941026;
-    position: fixed; top: 0; right: 0; bottom: 0;
+    position: fixed; top: 0; right: 0;
     overflow: scroll;
     width: $width; min-height: 32px;
     padding: 6px 12px;
 
-    _li { margin-top: 6px }
+    @include e (li) { margin-top: 6px }
   }
 </style>

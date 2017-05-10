@@ -84,6 +84,18 @@ module.exports = {
         return '</table></div>';
       };
 
+      // markdown 输出列表调整
+      MarkdownIt.renderer.rules.bullet_list_open = function() {
+        return '<ul class="markdown-ul">';
+      };
+      MarkdownIt.renderer.rules.bullet_list_close = function() {
+        return '</ul>';
+      };
+
+
+      MarkdownIt.core.ruler.push('my_rule', function replace(state) {
+      });
+
       function copyScript(str){
           var MDStr =''
           var matchArr = str.match(/<script(?:\s+[^>]*)?>(.*?)<\/script\s*>/ig)
@@ -123,7 +135,7 @@ module.exports = {
   resolve:{
     alias: {
       SRC: __dirname + '/src',
-      DATA: __dirname + '/src/doc/data',
+      Data: __dirname + '/src/doc/data',
       KsComponents: __dirname + '/src/ks/components'
     }
   },

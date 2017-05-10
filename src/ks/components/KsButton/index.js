@@ -1,16 +1,14 @@
 /**
- * @description modal 组件
+ * @description KsButton 组件
  * @author: pkeros.
  * @date: 2016/10/18.
+ * @email pkeros@vip.qq.com
  */
 
-import KsButton from './src/Button.vue'
-import KsNrButton from './src/NrButton.vue'
-import KsGhostButton from './src/GhostButton.vue'
+import KsButton from './src/main.vue'
+import KsButtonAbstract from './src/abstract.vue'
 
-export default KsButton
 export {
   KsButton,
-  KsNrButton,
-  KsGhostButton
+  KsButtonAbstract
 }

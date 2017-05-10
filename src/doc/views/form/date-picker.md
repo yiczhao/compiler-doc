@@ -15,7 +15,7 @@
 
 >> ####  **KsDatePicker  => {{datemonth2}}**
 
-<ks-date-picker type="datemonth" 
+<ks-date-picker  placeholder="aaa" type="datemonth" 
     v-bind:value.sync="datemonth2"></ks-date-picker>
 ```html
 <ks-date-picker type="datemonth" 
@@ -140,14 +140,15 @@
 | value || 数据中绑定的值（可sync） | props | String | **date=>'2016-11-09'**，**datemonth=>'2016-09'**，**datetime=>'2016-11-09 03:04:20'**，**datemulti=>'2016-11-09,2016-11-10'** | 无 |
 | min | V1.0.0 |最小范围 | props | String | **date=>'2016-11-09'**，**datemonth=>'2016-09'** | 无 |
 | max | V1.0.0 |最大范围 | props | String | **date=>'2016-11-09'**，**datemonth=>'2016-09'** | 无 |
+| placeholder || 提示 | props | String | 无 | 无 |
 | readonly || 是否只读 | props | Boolean | `true`, `false` | `false` |
-| change || 组件中日期时间改变复值 | props | Function | `可不设置change` | 无 |
+| change || 组件中日期时间改变复值 | props | Event | `可不设置change` | 无 |
 
 ### 范围日期组件API（区别部分如下）
 | 参数 | 说明 | 接口类型 | 类型 | 可选值 | 默认值 |
 |------|-------|----------|---------|-------|--------|
 | type | 无type类型 | null | null | null| null |
-| value | 数据中绑定的值（可sync） | props | Array | **[]**|**[]** |
+| range | 数据中绑定的值（可sync） | props | Array | **[]**|**[]** |
 
 
 ```javascript

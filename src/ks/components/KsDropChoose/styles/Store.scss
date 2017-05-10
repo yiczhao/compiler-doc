@@ -1,3 +1,4 @@
+@import '../../styles/components/input.scss';
 %store-select {
   padding:10px;
     .radiofir{position: relative;}
@@ -69,6 +70,9 @@
     @extend %store-select;
     input{outline:none}
     @extend %KsStore;
+    .KsStoreClick-input{
+        @extend %input;
+    }
 
 }
 

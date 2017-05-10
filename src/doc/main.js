@@ -14,11 +14,9 @@ import VueResource from 'vue-resource'
 import VueValidator from 'vue-validator'
 
 import RouterMap from './router'
-import Utils from './utils'
 
 import KsComponents from '../ks/components'
 import Directives from '../ks/directives'
-import Filter from './filters'
 
 // Vue configure
 Vue.config.debug = process.env.NODE_ENV !== 'production';
@@ -29,8 +27,6 @@ Vue.use(VueRouter);
 Vue.use(VueValidator);
 
 // attach utils
-Vue.use(Utils);
-Vue.use(Filter);
 Vue.use(Directives);
 
 // attach components

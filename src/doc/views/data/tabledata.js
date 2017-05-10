@@ -1,7 +1,7 @@
 var list = [
     {
         title:'默认',
-        tableid:1,
+        tableid:0,
         defaultlist:[
             {
             id:1,

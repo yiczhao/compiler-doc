@@ -1,5 +1,6 @@
 ## ksStore
 
+> Author:左晶晶
 > 常用的列表选择组件
 
 ---
@@ -39,7 +40,9 @@
 
 ```javascript
 <script lang="babel">
+
 import list from 'SRC/doc/views/data/data.js'
+
 export default {
     data(){
         return {  

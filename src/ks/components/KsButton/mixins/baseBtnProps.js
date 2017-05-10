@@ -8,18 +8,12 @@
 export default {
 
   props: {
-    width: {type: String, require: true},
-    height: {type: String, require: true},
-
+    mode: {type: String, default: 'normal'},
     form: {type: String, default: ''},
     disabled: {type: Boolean, default: false},
-    autofocus: {type: Boolean, default: false},
+    autoFocus: {type: Boolean, default: false},
     name: {type: String, default: 'KSButton'},
     nativeType: {type: String, default: 'button'}
-  },
-
-  computed: {
-    btnSize () {return `width: ${this.width}px; height: ${this.height}px`}
   }
 
 }

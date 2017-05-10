@@ -45,11 +45,16 @@ Object.keys(dirMap).map((key)=>{
                     return val.fileName
                 })
 
+                argv = argv.sort()
+                matchStrs = matchStrs.sort()
                 // console.log((argv.join(' ')))
                 // console.log((matchStrs.join(' ')))
                 matchStrs = (argv.join(' ')).replace(matchStrs.join(' '),'')
                 if(matchStrs) {
-                    console.warn((key+'中没找到模块:'+matchStrs).grey.bgWhite)
+                    console.warn((`${key}中没找到模块:${matchStrs} ✘ `).grey.bgWhite)
+                }else{
+                    console.log((`${key}中找到模块 : ${argv.join(' ')} ️✔`).green)
+                    console.log(('☞  构建中 ...').green)
                 }
                     
             }
@@ -75,8 +80,8 @@ var count = 0
 
 // 调整配置、打包
 function build(name, file_path,version,root) {
-    // console.log(file_path)
-    var outPath = path.resolve(__dirname, '../min/ks/'+ root +'/' + name.toLowerCase() + '/')
+    // console.log(file_path,name)
+    var outPath = path.resolve(__dirname, '../min/ks/'+ root +'/' + name + '/')
     var dotVersion = ''
 
     version = version || ''
