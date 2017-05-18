@@ -232,6 +232,11 @@ const install = function (Vue) {
   });
 
   Vue.prototype.$KsModal = KsModal;
+  /**
+   * return KsModal
+   *   供外部调用
+   *   service.KsModal = KsModal
+   */
 };
 
 // automation register components.

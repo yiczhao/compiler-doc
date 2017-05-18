@@ -9276,6 +9276,11 @@ webpackJsonp([0],[
 	  });
 
 	  Vue.prototype.$KsModal = _KsModal;
+	  /**
+	   * return KsModal
+	   *   供外部调用
+	   *   service.KsModal = KsModal
+	   */
 	};
 
 	// automation register components.
