@@ -104,6 +104,7 @@ const install = function (Vue) {
   });
 
   Vue.prototype.$KsNotice = KsNoticeCenter;
+  return KsNoticeCenter
 };
 
 // automation register components.

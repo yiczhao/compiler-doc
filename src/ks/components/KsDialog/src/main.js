@@ -178,6 +178,7 @@ const install = function (Vue) {
   });
 
   Vue.prototype.$KsDialog = KsDialog;
+  return KsDialog;
 };
 
 // automation register components.
