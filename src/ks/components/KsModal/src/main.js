@@ -5,8 +5,6 @@
  * @author: pkeros.
  * @date: 2016/10/19.
  */
-
-import Vue from 'vue'
 import Modal from './main.vue'
 import { KsMask } from '../../KsMask'
 
@@ -23,7 +21,7 @@ let defaults = {
   type: 'normal'
 }
 
-let KsModalConstructor = Vue.extend(Modal)
+
 
 let currentMsg, instance, KsModal, id = 0
 let modalQueue = []
@@ -51,6 +49,7 @@ let merge = function(target) {
 
 const install = function (Vue) {
   if (install.installed) return;
+  let KsModalConstructor = Vue.extend(Modal)
 
   /**
    * @description 初始化 Modal 实例
@@ -232,6 +231,7 @@ const install = function (Vue) {
   });
 
   Vue.prototype.$KsModal = KsModal;
+  return KsModal
 };
 
 // automation register components.
