@@ -126,7 +126,29 @@ export default (router) => {
               name: 'date-picker',
               cnName: '时间选择器',
               component: (resolve) => {
-                require(['./views/form/date-picker.md'], resolve)
+                require(['./views/form/datepicker/index.vue'], resolve)
+              },
+              // '/date-picker': {
+              // name: 'date-picker',
+              // cnName: '时间选择器',
+              // component: (resolve) => {
+              //   require(['./views/form/date-picker.md'], resolve)
+              // },
+              subRoutes: {
+                '/': {
+                  name: 'date-picker',
+                  cnName: '时间选择器',
+                  component: (resolve) => {
+                    require(['./views/form/datepicker/v0.0.1.md'], resolve)
+                  },
+                },
+                '/v1.0.0': {
+                  name: 'date-picker/v1.0.0',
+                  cnName: '时间选择器',
+                  component: (resolve) => {
+                    require(['./views/form/datepicker/v1.0.0.md'], resolve)
+                  },
+                }
               }
             },
 
