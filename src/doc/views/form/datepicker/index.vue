@@ -21,7 +21,7 @@
     },
     route:{
         data(transiton){
-            console.log(transiton.to)
+            // console.log(transiton.to)
             // transiton.to.title
             this.active = transiton.to.name
         }
