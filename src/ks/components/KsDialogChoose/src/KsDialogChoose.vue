@@ -8,7 +8,7 @@
             />
     </div>
     <ks-dialog-program  
-        :title="'请选择交易门店'" 
+        :title="title" 
         :show="is_show" 
         :cb-close="close_dialog"
         :width = "width" >
@@ -57,6 +57,10 @@ import KsDialogProgram from '../../KsDialogProgram'
         nameMate:{
             type:String,
             default:'name'
+        },
+        title:{
+        	type:String,
+            default:'请选择交易门店'
         }
     },
     components:{
