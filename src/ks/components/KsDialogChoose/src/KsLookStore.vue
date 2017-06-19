@@ -1,12 +1,5 @@
 <template>  
 <div class="KsDialogChoose">            
-    <div class="radiofir ">
-        <input type="text" class="KsDialogChoose-input full" 
-            @click="clickinput()" 
-            readonly="readonly"
-            v-model="showtxt"
-            />
-    </div>
     <ks-dialog-program  
         :title="title" 
         :show="is_show" 
@@ -61,6 +54,10 @@ import KsDialogProgram from '../../KsDialogProgram'
         title:{
         	type:String,
             default:'请选择交易门店'
+        },
+        is_show:{
+        	type:Boolean,
+            default:false
         }
     },
     components:{
@@ -70,7 +67,6 @@ import KsDialogProgram from '../../KsDialogProgram'
     },
     data() {  
         return {  
-            is_show:false,
             width:600,
             total:0,
             showtxt:'',
@@ -97,10 +93,7 @@ import KsDialogProgram from '../../KsDialogProgram'
             this.$emit('change',this.sid)
 
         },
-        //点击input框
-        clickinput(){
-            this.is_show = true
-        },
+
         //获取子传给父的sid,onchange事件
         getsid(val){
             this.sid = val;
