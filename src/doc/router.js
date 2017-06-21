@@ -128,28 +128,23 @@ export default (router) => {
               component: (resolve) => {
                 require(['./views/form/datepicker/index.vue'], resolve)
               },
-              // '/date-picker': {
-              // name: 'date-picker',
-              // cnName: '时间选择器',
-              // component: (resolve) => {
-              //   require(['./views/form/date-picker.md'], resolve)
-              // },
               subRoutes: {
-                '/': {
-                  name: 'date-picker',
-                  cnName: '时间选择器',
-                  component: (resolve) => {
-                    require(['./views/form/datepicker/v0.0.1.md'], resolve)
-                  },
-                },
                 '/v1.0.0': {
                   name: 'date-picker/v1.0.0',
-                  cnName: '时间选择器',
+                  cnName: 'v1.0.0',
                   component: (resolve) => {
                     require(['./views/form/datepicker/v1.0.0.md'], resolve)
-                  },
+                  }
+                },
+                '/v0.1.0': {
+                  name: 'date-picker/v0.1.0',
+                  cnName: 'v0.1.0',
+                  component: (resolve) => {
+                    require(['./views/form/datepicker/v0.1.0.md'], resolve)
+                  }
                 }
               }
+
             },
 
             /* 基础组件-单选框 */
@@ -191,12 +186,29 @@ export default (router) => {
 
           subRoutes: {
 
-            /* 基础组件-布局 */
-            '/page': {
-              name: 'page',
-              cnName: '分页',
+            /* 基础组件-分页器 */
+            '/pager': {
+              name: 'pager',
+              cnName: '分页器',
               component: (resolve) => {
-                require(['./views/data/page.md'], resolve)
+                require(['./views/data/pager/index.vue'], resolve)
+              },
+              subRoutes: {
+                '/v1.0.0': {
+                  name: 'pager/v1.0.0',
+                  cnName: 'v1.0.0',
+                  component: (resolve) => {
+                    require(['./views/data/pager/v1.0.0.md'], resolve)
+                  }
+                },
+                '/v0.1.0': {
+                  name: 'pager/v0.1.0',
+                  cnName: 'v0.1.0',
+                  component: (resolve) => {
+                    require(['./views/data/pager/v0.1.0.md'], resolve)
+                  }
+                }
+                
               }
             },
 

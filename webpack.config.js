@@ -28,6 +28,9 @@ module.exports = {
       test: /\.scss$/,
       loader: ExtractTextPlugin.extract('css-loader!ks-autobem-loader?type=css!sass-loader')
     }, {
+    test: /\.css$/,
+      loader: ExtractTextPlugin.extract('css-loader')
+    }, {
       test: /\.(tpl|html)$/,
       loader: 'html'
     }, {
@@ -37,7 +40,12 @@ module.exports = {
       test: /\.js$/,
       // excluding some local linked packages.
       // for normal use cases only node_modules is needed.
-      exclude: /(.\.min\.js)|node_modules|vue\/dist|vue-router\/|vue-loader\/|vue-hot-reload-api\//,
+      // exclude: /(.\.min\.js)|node_modules|vue\/dist|vue-router\/|vue-loader\/|vue-hot-reload-api\//,
+      exclude:function(path){
+        // console.log(path)
+        if(~path.indexOf('vue.common.js'))  return false
+        if(/(.\.min\.js)|node_modules|vue\/dist|vue-router\/|vue-loader\/|vue-hot-reload-api\//.test(path)) return true
+      },
       loader: 'babel'
     }, {
       test: /\.(png|jpg)$/,

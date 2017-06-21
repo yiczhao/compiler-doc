@@ -26,7 +26,7 @@ webpackConfig.plugins = webpackConfig.plugins.filter((plugin)=>{
 
 
 var dirMap = {
-    directives:path.resolve(__dirname, '../src/ks/directives'),
+    // directives:path.resolve(__dirname, '../src/ks/directives'),
     components:path.resolve(__dirname, '../src/ks/components')
 }
 
@@ -35,7 +35,6 @@ Object.keys(dirMap).map((key)=>{
     
     dependFile(dirMap[key])
         .then((vals)=>{
-            // console.log(vals)
             var matchStrs = ''
             if(argv.length){
                 vals = vals.filter((val)=>{
@@ -59,7 +58,6 @@ Object.keys(dirMap).map((key)=>{
                     
             }
             vals.forEach((val)=>{
-                // console.log(val)
                 build(val.fileName,val.filePath,val.version,key)
                 
             })

@@ -16,7 +16,7 @@
 
           <ul class="k-menuSub__container" v-if="smobj.subMenu && smobj.subMenu.length">
             <li class="k-menu__item f12" v-for="ssmobj in smobj.subMenu"
-                v-link="{name: ssmobj.link}" :data-ksa="ssmobj.ksa"
+                v-link="{name: ssmobj.link}"
                 style="padding-left: 40px">
               <i class="k-menu__icon icon" :class="ssmobj.icon"></i>
               <span v-text="ssmobj.name"></span>

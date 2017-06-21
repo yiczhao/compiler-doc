@@ -157,42 +157,6 @@
 </div>
 ```
 
-<script>
-  let btnTypeMapper = [
-    'primary',
-    'success',
-    'info',
-    'warn',
-    'danger',
-    'other'
-  ];
-  
-  let btnSizeMapper = [
-    'small',
-    'normal',
-    'middle',
-    'large'
-  ];
-
-  export default{
-    data () {
-      return {
-        btnTypeMapper,
-        btnSizeMapper,
-        
-        btnSwitch: false,
-        btnDisable: false,
-        btnEventDisable: false,
-        btnType: 'primary',
-        btnSize: 'normal'
-      }
-    },
-    
-    methods: {
-      clickTest () { alert('click me!') }
-    }
-  }
-</script>
 
 ### API
 
@@ -227,3 +191,52 @@
 | colorNormal | 用来描述按钮 normal （默认） 时的颜色, 十六进制颜色值 | props | String | `false` | 是 | - | - |
 | colorHover | 用来描述按钮 hover （鼠标悬浮） 时的颜色, 十六进制颜色值 | props | String | `false` | 是 | - | - |
 | colorActive | 用来描述按钮 active （按钮按下） 是的颜色, 十六进制颜色值 | props | String | `false` | 是 | - | - |
+
+<script>
+  console.log('button.md - script');
+  // import KsButton from 'KsComponents/KsButton'
+  // import KsSwitch from 'KsComponents/KsSwitch'
+  
+  let btnTypeMapper = [
+    'primary',
+    'success',
+    'info',
+    'warn',
+    'danger',
+    'other'
+  ];
+  
+  let btnSizeMapper = [
+    'small',
+    'normal',
+    'middle',
+    'large'
+  ];
+
+  export default{
+    kscomponents:['KsButton','KsButtonAbstract','KsSwitch'],
+    // components:Vue.util.mergeOptions(KsButton,KsSwitch),
+    init(){
+      console.log('base button.md init----')
+    },
+    data () {
+      return {
+        btnTypeMapper,
+        btnSizeMapper,
+        
+        btnSwitch: false,
+        btnDisable: false,
+        btnEventDisable: false,
+        btnType: 'primary',
+        btnSize: 'normal'
+      }
+    },
+    
+    methods: {
+      clickTest () { alert('click me!') }
+    },
+    created(){
+      console.log('created')
+    }
+  }
+</script>

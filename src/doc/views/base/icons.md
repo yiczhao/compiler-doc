@@ -140,3 +140,12 @@
 | size | 图标大小 | props | String | `false` | 否 | `2x`, `3x`, `4x`, `5x` | `13px` |
 | rotate | 图标旋转角度 | props  | String | `false` | 否 | `90`, `180`, `270` | `0` | 
 | animate | 图标动画类型 | props | String | `false` | 否 | `spin`, `pulse` | `stop` |
+
+
+
+<script type="text/javascript">
+    import KsIcon from 'KsComponents/KsIcon'
+    export default{
+        components:{KsIcon:KsIcon }
+    }
+</script>
