@@ -46,7 +46,7 @@ export default [
           // {name: 'Progress 进度条', icon: 'icon', link: ''},
           // {name: 'Tree 树形控件', icon: 'icon', link: ''},
           {name: 'Tree 树形组件', icon: 'icon', link: 'tree'},
-          {name: 'Pagination 分页器', icon: 'icon', link: 'page'},
+          {name: 'Pagination 分页器', icon: 'icon', link: 'pager'},
           {name: 'Search 模糊搜索', icon: 'icon', link: 'search'},
           {name: 'DropChoose 下拉选择', icon: 'icon', link: 'dropchoose'},
           {name: 'DialogChoose 弹出层选择', icon: 'icon', link: 'dialogchoose'},

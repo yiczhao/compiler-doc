@@ -13,8 +13,12 @@
 <script>
   import Clipboard from 'clipboard'
   import KsFonts from '../../data/icon2ClassMapper'
+  // import KsIcon from 'KsComponents/KsIcon'
+  // KsNotice
 
   export default{
+    // components:{KsIcon:KsIcon },
+    kscomponents:['KsIcon' ],
     data () {
       return {
         KsFonts,
@@ -30,7 +34,7 @@
         this.$KsNotice.success('复制成功', `恭喜你成功复制了 ${this.currentIcon} 图标`);
       });
     },
-
+    
     destroy () {
       // 销毁 Clipboard
       this.clipboard.destroy();
@@ -54,3 +58,4 @@
     }
   }
 </style>
+

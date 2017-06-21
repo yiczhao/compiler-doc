@@ -177,7 +177,7 @@ const install = function (Vue) {
     }
   });
 
-  Vue.prototype.$KsDialog = KsDialog;
+  // Vue.prototype.$KsDialog = KsDialog;
   return KsDialog;
 };
 

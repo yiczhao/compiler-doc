@@ -1,6 +1,7 @@
 <template>
     <div class="KsDateMonth" cid="KsDateMonth">
         <div class="KsDateMonth-date">
+        ss
             <div class="KsDateMonth-date-head">
                 <div class="retreat" v-on:click="prev">&lt;</div>
                 <div class="year" v-text="year+'年'"></div>

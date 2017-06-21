@@ -18,6 +18,7 @@
 </template>
 
 <script>
+  
   import KsIcon from '../../KsIcon'
   import Abstract from './abstract.vue'
   import baseBtnProps from '../mixins/baseBtnProps'
@@ -47,6 +48,7 @@
     },
 
     components: { Abstract, KsIcon }
+    
   }
 </script>
 
