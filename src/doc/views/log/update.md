@@ -14,5 +14,6 @@
 
 
 >> 添加 <a v-link="{name:'dir'}">ks-autobem-loader</a>描述
+>> 添加<a v-link="{name:'dialogchoose'}">弹出层选择内容介绍</a> 的title字段,用户可以自己选择标题
 
 

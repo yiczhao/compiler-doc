@@ -91,6 +91,8 @@
 <ks-dialog-choose 
         :list.sync = list2
         :sid = sid2
+        :title = title
+        :error-info = errorInfo
         @change = getSid ></ks-dialog-choose ><br/>
 <div>
     <span>已选门店id:{{sid2}}</span><br/>
@@ -104,6 +106,8 @@
 <ks-dialog-choose 
         :list.sync = list2
         :sid = sid2
+        :title = title
+        :errorInfo = errorInfo
         @change = getSid ></ks-dialog-choose ><br/>
 <div>
     <span>已选门店id:{{sid2}}</span><br/>
@@ -116,10 +120,10 @@
 | list | 门店列表  | Array | 无 | 无 |是 |
 | sid | 用于显示已选中的门店id  | Array | 无 | 无 |否 |
 | is_storetype | 用于判断弹出层类型(true是table类型,false是基本弹出层样式)  |  Boolean | true,false | false | 否 |
-| errorinfo | 用于显示一个没选中的错误信息  | String | 无 | *您尚未选择门店 |否 |
+| error-info | 用于显示一个没选中的错误信息  | String | 无 | *您尚未选择门店 |否 |
 | type-mate | 用于显示一个没选中的错误信息  | String | 无 | id |否 |
 | name-mate | 用于显示一个没选中的错误信息  | String | 无 | name |否 |
-
+| title | 用于显示弹出层的title  | String | 无 | 请选择交易门店 | 否 |
 <br/>
 
 #### 代码如下
@@ -140,8 +144,12 @@ export default {
             sex:[{'level':'0',levelname:'男'},{'level':'1',levelname:'女'}],
             sid1:['086021000000006'],
             sid2:[],
-            sid3:['086021000000006'],
             sid4:['086021000000006'],
+            sid3:['0'],
+            title:'请选择交易数据',
+            errorInfo:'*您尚未选择交易数据',
+            typemate:'level',
+            namemate:'levelname'
         }  
     },
     methods:{
@@ -186,6 +194,8 @@ export default {
             sid2:[],
             sid4:['086021000000006'],
             sid3:['0'],
+            title:'请选择交易数据',
+            errorInfo:'*您尚未选择交易数据',
             typemate:'level',
             namemate:'levelname'
         }  
