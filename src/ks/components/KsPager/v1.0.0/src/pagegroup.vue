@@ -23,7 +23,7 @@
     import props from './mixins'
     import page from './page.vue'
     export default {
-        VERSION:'1.1.0',
+        VERSION:'1.0.0',
         components:{
             'page':page
         },

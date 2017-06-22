@@ -52,7 +52,7 @@
     import { one_page_date } from './util/apage'
     
     export default {
-        VERSION:'0.0.1',
+        VERSION:'0.1.0',
         mixins: [mixins,multi],
         data(){
             

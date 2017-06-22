@@ -21,7 +21,7 @@
     import props from './mixins/props.js'
     import daterRange from './dater-range.vue'
     export default {
-        VERSION:'1.0.0',
+        VERSION:'0.1.0',
         mixins: [props],
         components:{
             'ks-dater-range':daterRange

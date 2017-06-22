@@ -31,7 +31,7 @@
     import dater from './dater.vue'
     import dateMonth from './date-month.vue'
     export default {
-        VERSION:'1.0.0',
+        VERSION:'0.1.0',
         components:{
             'ks-dater':dater,
             'ks-date-month':dateMonth

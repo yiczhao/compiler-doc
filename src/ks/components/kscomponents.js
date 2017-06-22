@@ -1,6 +1,6 @@
 import {Components, Plugins } from './index.js'
 
-// console.log(Components)
+console.log(Components)
 console.log(Plugins)
 
 

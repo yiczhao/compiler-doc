@@ -18,7 +18,7 @@
 
   export default{
     // components:{KsIcon:KsIcon },
-    kscomponents:['KsIcon' ],
+    kscomponents:['KsIcon_v0' ],
     data () {
       return {
         KsFonts,
