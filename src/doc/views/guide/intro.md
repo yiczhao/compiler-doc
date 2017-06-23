@@ -51,9 +51,12 @@ export default {
 `为此我们开发了vue插件用来引入版本组件，具体操作如下`
 
 ```js
-
+export default {
+    kscomponents:['KsPager_v0'],
+    ...
+}
 ```
-
+**`有了细粒度的版本控制，我们可以同时保留2个版本，对于使用老版本的项目组，在时间充裕的时候更新组件`**
 <br><br>
 
 

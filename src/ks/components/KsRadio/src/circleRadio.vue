@@ -35,7 +35,7 @@
 </script>
 
 <style lang="scss">
-  @import "../../foundation/SassMagic-master/src/sassMagic";
+  @import "~KsComponents/styles/library/SassMagic-master/src/sassMagic";
 
   $dotSize: 18px;                         // 选择点点大小
 

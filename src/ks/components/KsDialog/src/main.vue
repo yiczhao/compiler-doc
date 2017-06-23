@@ -55,7 +55,7 @@
 </script>
 
 <style lang="scss">
-  @import "../../foundation/SassMagic-master/src/sassMagic";
+  @import "~KsComponents/styles/library/SassMagic-master/src/sassMagic";
 
   $icon-size: 88px;                                                       // 图标大小
 

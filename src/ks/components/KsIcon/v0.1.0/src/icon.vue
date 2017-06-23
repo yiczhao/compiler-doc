@@ -42,6 +42,7 @@
 <style lang="scss">
   /*@import "../styles/icons";
   @import "../styles/index.css";
+  @import "../styles/font-awesome.css";
+  */
 
-  @import "../../foundation/Font-Awesome-master/css/font-awesome.min.css";*/
 </style>

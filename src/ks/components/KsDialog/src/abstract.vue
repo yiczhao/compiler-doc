@@ -31,7 +31,7 @@
 </script>
 
 <style lang="scss">
-  @import "../../foundation/SassMagic-master/src/sassMagic";
+  @import "~KsComponents/styles/library/SassMagic-master/src/sassMagic";
 
   $width: 420px;                                                          // 模态宽度
 

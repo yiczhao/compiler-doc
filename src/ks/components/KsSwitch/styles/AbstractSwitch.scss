@@ -5,7 +5,7 @@
  * @email pkeros@vip.qq.com
  */
 
-@import "../../foundation/SassMagic-master/src/sassMagic";
+@import "~KsComponents/styles/library/SassMagic-master/src/sassMagic";
 
 @include b(KSAbstractSwitch) {
   position: relative;

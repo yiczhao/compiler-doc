@@ -37,7 +37,7 @@
 </script>
 
 <style lang="scss">
-  @import "../../foundation/SassMagic-master/src/sassMagic";
+  @import "~KsComponents/styles/library/SassMagic-master/src/sassMagic";
 
   @include b (KsRadioAbstract) {
     vertical-align: middle;

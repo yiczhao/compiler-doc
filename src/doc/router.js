@@ -77,19 +77,32 @@ export default (router) => {
             '/icons': {
               name: 'icons',
               cnName: '图标',
+              goName:'icons/v0.1.0',
               component: (resolve) => {
-                require(['./views/base/icons.md'], resolve)
+                require(['./views/base/icons/index.vue'], resolve)
+              },
+              subRoutes:{
+                'v0.1.0':{
+                  name: 'icons/v0.1.0',
+                  cnName: '图标',
+                  goName:'',
+                  component: (resolve) => {
+                    require(['./views/base/icons/v0.1.0.md'], resolve)
+                  }
+                },
+                
+              }
+            },
+            /* 基础组件-图标 */
+            'icons/list': {
+              name: 'v0.1.0',
+              cnName: '卡说图标库',
+              component: (resolve) => {
+                require(['./views/base/icons/list.v0.1.0.vue'], resolve)
               }
             },
 
-            /* 基础组件-图标 */
-            '/icons-list': {
-              name: 'icons-list',
-              cnName: '卡说图标库',
-              component: (resolve) => {
-                require(['./views/base/icons-list.vue'], resolve)
-              }
-            },
+            
 
             /* 基础组件-布局 */
             '/layout': {
@@ -125,6 +138,7 @@ export default (router) => {
             '/date-picker': {
               name: 'date-picker',
               cnName: '时间选择器',
+              goName:'date-picker/v1.0.0',
               component: (resolve) => {
                 require(['./views/form/datepicker/index.vue'], resolve)
               },
@@ -132,6 +146,7 @@ export default (router) => {
                 '/v1.0.0': {
                   name: 'date-picker/v1.0.0',
                   cnName: 'v1.0.0',
+                  goName:'',
                   component: (resolve) => {
                     require(['./views/form/datepicker/v1.0.0.md'], resolve)
                   }
@@ -139,6 +154,7 @@ export default (router) => {
                 '/v0.1.0': {
                   name: 'date-picker/v0.1.0',
                   cnName: 'v0.1.0',
+                  goName:'',
                   component: (resolve) => {
                     require(['./views/form/datepicker/v0.1.0.md'], resolve)
                   }
@@ -190,6 +206,7 @@ export default (router) => {
             '/pager': {
               name: 'pager',
               cnName: '分页器',
+              goName:'pager/v1.0.0',
               component: (resolve) => {
                 require(['./views/data/pager/index.vue'], resolve)
               },
@@ -197,6 +214,7 @@ export default (router) => {
                 '/v1.0.0': {
                   name: 'pager/v1.0.0',
                   cnName: 'v1.0.0',
+                  goName:'',
                   component: (resolve) => {
                     require(['./views/data/pager/v1.0.0.md'], resolve)
                   }
@@ -204,6 +222,7 @@ export default (router) => {
                 '/v0.1.0': {
                   name: 'pager/v0.1.0',
                   cnName: 'v0.1.0',
+                  goName:'',
                   component: (resolve) => {
                     require(['./views/data/pager/v0.1.0.md'], resolve)
                   }
@@ -401,4 +420,13 @@ export default (router) => {
       }
     }
   })
+
+  
+
+  router.beforeEach(transition =>{
+    console.log(transition.to)
+    if(transition.to.goName) router.go({ name: transition.to.goName})
+    transition.next()
+  })
+
 }

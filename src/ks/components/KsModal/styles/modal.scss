@@ -4,8 +4,8 @@
 // @date: 2016/10/18.
 //
 
-@import "../../foundation/SassMagic-master/src/sassMagic";
-@import "../../styles/variables";
+@import "~KsComponents/styles/library/SassMagic-master/src/sassMagic";
+@import "~KsComponents/styles/variables";
 
 $width: 504px;                                                          // 模态宽度
 $close-size: 32px;                                                      // 关闭按钮大小

@@ -4,8 +4,8 @@
 // @date: 2016/10/18.
 //
 
-@import "../../foundation/SassMagic-master/src/sassMagic";
-@import "../../styles/variables";
+@import "~KsComponents/styles/library/SassMagic-master/src/sassMagic";
+@import "~KsComponents/styles/variables";
 
 $width: 420px;                                                          // 模态宽度
 $icon-size: 88px;                                                       // 图标大小

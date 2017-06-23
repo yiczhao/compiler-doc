@@ -53,7 +53,7 @@
 </script>
 
 <style lang="scss">
-  @import "../../foundation/SassMagic-master/src/sassMagic";
+  @import "~KsComponents/styles/library/SassMagic-master/src/sassMagic";
 
   $width: 300px;                                 // 提示信息框的长度
 
