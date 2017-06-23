@@ -343,24 +343,37 @@ export default (router) => {
             },
 
             /* 多标题表格 */
-            '/multiple-table': {
-              name: 'multiple-table',
+            '/table': {
+              name: 'table',
               cnName: '图片',
+              goName:'table/v0.1.0',
               component: (resolve) => {
-                require(['./views/table/multiple-table.md'], resolve)
+                require(['./views/data/table/index.vue'], resolve)
+              },
+              subRoutes: {
+                '/v0.1.0': {
+                  name: 'table/v0.1.0',
+                  cnName: 'v0.1.0',
+                  goName:'',
+                  component: (resolve) => {
+                    require(['./views/data/table/v0.1.0.md'], resolve)
+                  }
+                },
+                /* 定项表格 */
+                '/setitem': {
+                  name: 'table/setitem',
+                  cnName: '定项表格',
+                  component: (resolve) => {
+                    require(['./views/data/table/setitem-table.md'], resolve)
 
+                  }
+                },
+
+                
               }
             },
 
-            /* 定项表格 */
-            '/setitem-table': {
-              name: 'setitem-table',
-              cnName: '定项表格',
-              component: (resolve) => {
-                require(['./views/table/setitem-table.md'], resolve)
-
-              }
-            },
+            
 
 
           }
