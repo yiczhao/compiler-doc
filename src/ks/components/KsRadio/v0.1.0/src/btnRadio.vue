@@ -18,12 +18,13 @@
 
 <script>
   import Abstract from './abstract.vue'
-  import { KsButtonAbstract } from '../../KsButton'
+  import KsButton from 'KsComponents/KsButton/v0.1.0/'
   import baseProps from '../mixins/baseRadioProps'
 
+  var KsButtonAbstract = KsButton.KsButtonAbstract
+  
   export default {
     VERSION: '1.0.0',
-
     mixins: [baseProps],
 
     data () {

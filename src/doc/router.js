@@ -117,8 +117,19 @@ export default (router) => {
             '/button': {
               name: 'button',
               cnName: '按钮',
+              goName:'button/v0.1.0',
               component: (resolve) => {
-                require(['./views/base/button.md'], resolve)
+                require(['./views/base/button/index.vue'], resolve)
+              },
+              subRoutes:{
+                'v0.1.0':{
+                  name: 'button/v0.1.0',
+                  cnName: 'v0.1.0',
+                  goName:'',
+                  component: (resolve) => {
+                    require(['./views/base/button/v0.1.0.md'], resolve)
+                  }
+                },
               }
             }
           }
@@ -167,8 +178,19 @@ export default (router) => {
             '/radio': {
               name: 'radio',
               cnName: '单选框',
+              goName:'radio/v0.1.0',
               component: (resolve) => {
-                require(['./views/form/radio.md'], resolve)
+                require(['./views/form/radio/index.vue'], resolve)
+              },
+              subRoutes: {
+                '/v0.1.0': {
+                  name: 'radio/v0.1.0',
+                  cnName: 'v0.1.0',
+                  goName:'',
+                  component: (resolve) => {
+                    require(['./views/form/radio/v0.1.0.md'], resolve)
+                  }
+                }
               }
             },
 
@@ -176,8 +198,19 @@ export default (router) => {
             '/checkbox': {
               name: 'checkbox',
               cnName: '复选框',
+              goName:'checkbox/v0.1.0',
               component: (resolve) => {
-                require(['./views/form/checkbox.md'], resolve)
+                require(['./views/form/checkbox/index.vue'], resolve)
+              },
+              subRoutes: {
+                '/v0.1.0': {
+                  name: 'checkbox/v0.1.0',
+                  cnName: 'v0.1.0',
+                  goName:'',
+                  component: (resolve) => {
+                    require(['./views/form/checkbox/v0.1.0.md'], resolve)
+                  }
+                }
               }
             },
 
@@ -185,8 +218,19 @@ export default (router) => {
             '/switch': {
               name: 'switch',
               cnName: 'IOS 风格开关',
+              goName:'switch/v0.1.0',
               component: (resolve) => {
-                require(['./views/form/switch.md'], resolve)
+                require(['./views/form/switch/index.vue'], resolve)
+              },
+              subRoutes: {
+                '/v0.1.0': {
+                  name: 'switch/v0.1.0',
+                  cnName: 'v0.1.0',
+                  goName:'',
+                  component: (resolve) => {
+                    require(['./views/form/switch/v0.1.0.md'], resolve)
+                  }
+                }
               }
             },
           }
@@ -424,7 +468,6 @@ export default (router) => {
   
 
   router.beforeEach(transition =>{
-    console.log(transition.to)
     if(transition.to.goName) router.go({ name: transition.to.goName})
     transition.next()
   })
