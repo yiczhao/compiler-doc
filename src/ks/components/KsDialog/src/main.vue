@@ -2,7 +2,7 @@
   <div class="KsDialog">
     <abstract v-if="show">
       <aside class="KsDialog__icon" slot="icon" :style="{color: typeMapper[type].hue}">
-        <ks-icon :name="typeMapper[type].icon"></ks-icon>
+        <!-- <ks-icon :name="typeMapper[type].icon"></ks-icon> -->
       </aside>
 
       <aside class="KsDialog__article" slot="article">
@@ -27,8 +27,10 @@
 <script>
   import typeMapper from '../data/typeMapper'
   import Abstract from './abstract.vue'
-  import KsIcon from '../../KsIcon'
-  import { KsButton } from '../../KsButton'
+  import KsIcon from 'KsComponents/KsIcon/v1.0.0/'
+  import { KsButton } from 'KsComponents/KsButton/v0.1.0/'
+
+  
 
   export default {
     VERSION: '1.0.1',
@@ -49,15 +51,16 @@
       type: {type: String, default: 'success'}
     },
 
-    components: { Abstract, KsButton, KsIcon }
+    components: { Abstract, KsButton, KsIcon  }
 
   }
 </script>
 
 <style lang="scss">
   @import "~KsComponents/styles/library/SassMagic-master/src/sassMagic";
-
-  $icon-size: 88px;                                                       // 图标大小
+  
+  // 图标大小
+  $icon-size: 88px;                                                       
 
   @include b (KsDialog) {
 

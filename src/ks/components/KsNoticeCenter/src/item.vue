@@ -12,6 +12,8 @@
 </template>
 
 <script>
+  import KsIcon from 'KsComponents/KsIcon/v1.0.0/'
+
   /**
    * @description 色调映射
    * @type {{}}
@@ -24,9 +26,10 @@
     info: { background: '#26C6DA', fontColor: '#FFF' }
   };
 
+
   export default{
     VERSION: '1.0.0',
-
+    components: { KsIcon },
     data () {
       return {
         hueMapper

@@ -393,8 +393,20 @@ export default (router) => {
             '/notice-center': {
               name: 'notice-center',
               cnName: '对话框',
+              goName:'notice/v0.1.0',
               component: (resolve) => {
-                require(['./views/notice/notice-center.md'], resolve)
+                require(['./views/notice/notice-center/index.vue'], resolve)
+              },
+              subRoutes: {
+                '/v0.1.0': {
+                  name: 'notice/v0.1.0',
+                  cnName: 'v0.1.0',
+                  goName:'',
+                  component: (resolve) => {
+                    require(['./views/notice/notice-center/v0.1.0.md'], resolve)
+                  }
+                }
+                
               }
             },
 
