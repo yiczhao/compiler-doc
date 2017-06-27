@@ -5,8 +5,8 @@
  * @email pkeros@vip.qq.com
  */
 
-require('./styles/app.scss');
 
+import './styles/app.scss'
 import App from './App.vue'
 import Vue from 'vue'
 import VueRouter from 'vue-router'

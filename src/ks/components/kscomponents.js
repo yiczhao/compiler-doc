@@ -42,13 +42,13 @@ export default function install() {
 
         function inject(component,key){
             // console.log(component,key)
+            key = key.split('_')[0]
             if(component.template){
-                key = key.split('_')[0]
+                console.log(key)
                 this.$options.components[key] = Vue.extend(component)    
             }else if(component.install){
-                console.log(component)
                 this['$'+key] = component.install(Vue)
-                console.log(this['$'+key])
+                // console.log(this['$'+key],'$'+key)
             }else{
                 Object.keys(component).forEach((k)=>{
                     inject.call(this,component[k],k)

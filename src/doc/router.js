@@ -338,8 +338,7 @@ export default (router) => {
               cnName: '表格添加',
               component: (resolve) => {
                 require(['./views/data/addtable.md'], resolve)
-
-                }
+              }
             },
 
             /* 多标题表格 */
@@ -367,9 +366,7 @@ export default (router) => {
                     require(['./views/data/table/setitem-table.md'], resolve)
 
                   }
-                },
-
-                
+                }
               }
             },
 
@@ -406,7 +403,6 @@ export default (router) => {
                     require(['./views/notice/notice-center/v0.1.0.md'], resolve)
                   }
                 }
-                
               }
             },
 
@@ -414,8 +410,19 @@ export default (router) => {
             '/dialog': {
               name: 'dialog',
               cnName: '对话框',
+              goName:'dialog/v1.0.0',
               component: (resolve) => {
-                require(['./views/notice/dialog.md'], resolve)
+                require(['./views/notice/dialog/index.vue'], resolve)
+              },
+              subRoutes: {
+                '/v1.0.0': {
+                  name: 'dialog/v1.0.0',
+                  cnName: 'v1.0.0',
+                  goName:'',
+                  component: (resolve) => {
+                    require(['./views/notice/dialog/v1.0.0.md'], resolve)
+                  }
+                }
               }
             },
 
@@ -423,10 +430,22 @@ export default (router) => {
             '/modal': {
               name: 'modal',
               cnName: '模态框',
+              goName:'modal/v1.0.0',
               component: (resolve) => {
-                require(['./views/notice/modal.md'], resolve)
+                require(['./views/notice/modal/index.vue'], resolve)
+              },
+              subRoutes: {
+                '/v1.0.0': {
+                  name: 'modal/v1.0.0',
+                  cnName: 'v1.0.0',
+                  goName:'',
+                  component: (resolve) => {
+                    require(['./views/notice/modal/v1.0.0.md'], resolve)
+                  }
+                }
               }
             }
+
           }
         },
 

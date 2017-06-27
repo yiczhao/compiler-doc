@@ -41,7 +41,7 @@
 </template>
 
 <script>
-  import { KsButton } from '../../KsButton'
+  import KsButton  from 'KsComponents/KsButton/v0.1.0/src/main.vue'
   import modalProps from '../mixins/modalProps'
 
   // 类型对色调映射

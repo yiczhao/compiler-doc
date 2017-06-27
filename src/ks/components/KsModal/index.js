@@ -1,17 +1,17 @@
-/**
- * @description modal 组件
- * @summary
- *  我是一个单纯可爱的模态组件.
- * @author: pkeros.
- * @date: 2016/10/19.
- */
+import {
+    KsModal as KsModal_v1,
+    KsModalEntity as KsModalEntity_v1,
+    KsModalCenter as KsModalCenter_v1
+} from './v1.0.0/'
 
-import KsModal from './src/main.js'
-import KsModalEntity from './src/main.vue'
-import KsModalCenter from './src/center.vue'
 
+var KsModal = { KsModal_v1 }
+var KsModalEntity = { KsModalEntity_v1 }
+var KsModalCenter = { KsModalCenter_v1 }
+
+console.log(KsModal);
 export {
-  KsModal,
-  KsModalEntity,
-  KsModalCenter
+    KsModal,
+    KsModalEntity,
+    KsModalCenter
 }

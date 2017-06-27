@@ -1,15 +1,13 @@
-/**
- * @description dialog 组件
- * @summary
- *  1. 一个对话框组件.
- * @author: pkeros.
- * @date: 2016/10/25.
- */
+import {
+    KsDialog as KsDialog_v1,
+    KsDialogEntity as KsDialogEntity_v1
+} from './v1.0.0/'
 
-import KsDialog from './src/main.js'
-import KsDialogEntity from './src/main.vue'
+
+var KsDialog = { KsDialog_v1 }
+var KsDialogEntity = { KsDialogEntity_v1 }
 
 export {
-  KsDialog,
-  KsDialogEntity
+    KsDialog,
+    KsDialogEntity
 }

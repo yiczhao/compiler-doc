@@ -26,7 +26,7 @@
 </template>
 
 <script>
-  import {KsMaskEntity} from '../../KsMask';
+  import KsMaskEntity from 'KsComponents/KsMask/v1.0.0/src/main.vue';
   import KsModalEntity from './main.vue';
   import modalProps from '../mixins/modalProps'
 

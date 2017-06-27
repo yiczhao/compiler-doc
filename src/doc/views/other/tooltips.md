@@ -27,6 +27,7 @@
 
 <script>
   export default{
+    kscomponents:['KsPopup_v0','KsTips_v0'],
     data () {
 
       return {

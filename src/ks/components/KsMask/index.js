@@ -1,13 +1,13 @@
-/**
- * @description mask 组件
- * @author: pkeros.
- * @date: 2016/10/20.
- */
+import {
+    KsMask as KsMask_v1,
+    KsMaskEntity as KsMaskEntity_v1
+} from './v1.0.0/'
 
-import KsMask from './src/main.js'
-import KsMaskEntity from './src/main.vue'
+
+var KsMask = { KsMask_v1 }
+var KsMaskEntity = { KsMaskEntity_v1 }
 
 export {
-  KsMask,
-  KsMaskEntity
+    KsMask,
+    KsMaskEntity
 }

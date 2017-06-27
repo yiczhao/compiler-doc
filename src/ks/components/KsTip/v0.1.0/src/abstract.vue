@@ -14,7 +14,7 @@
 </template>
 
 <script>
-  import VuePopper from '../../utils/Popper'
+  import VuePopper from 'KsComponents/utils/Popper'
 
   export default {
     VERSION: '1.0.0',

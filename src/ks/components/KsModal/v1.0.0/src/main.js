@@ -6,7 +6,7 @@
  * @date: 2016/10/19.
  */
 import Modal from './main.vue'
-import { KsMask } from '../../KsMask'
+import { KsMask as  KsMaskRaw} from 'KsComponents/KsMask/v1.0.0/'
 
 const pueMapper = ['primary', 'success', 'info', 'warn', 'danger', 'normal']
 let defaults = {
@@ -49,6 +49,8 @@ let merge = function(target) {
 
 const install = function (Vue) {
   if (install.installed) return;
+  
+  var KsMask = KsMaskRaw.install(Vue)
   let KsModalConstructor = Vue.extend(Modal)
 
   /**

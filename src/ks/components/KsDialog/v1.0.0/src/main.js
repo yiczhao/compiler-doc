@@ -4,11 +4,11 @@
  * @data 2017/4/20
  * @email pkeros@vip.qq.com
  */
-import { KsMask } from 'KsComponents/KsMask/'
+import {KsMask as KsMaskRaw} from 'KsComponents/KsMask/v1.0.0/'
 import Dialog from './main.vue'
-import ObjectUtil from '../../utils/ObjectUtil'
+import ObjectUtil from 'KsComponents/utils/ObjectUtil'
 
-console.log(KsMask,'--')
+
 
 let KsDialog, instance, maskInstance, currentMsg, _uid = 0;
 let dialogQueue = [];
@@ -27,7 +27,9 @@ let defaults = {
 };
 
 const install = function (Vue) {
-  console.log(Vue.prototype.$KsMask)
+  var KsMask = KsMaskRaw.install(Vue)
+  // console.log(KsMask,'--')
+  // console.log(Vue.prototype.$KsMask)
   if (install.installed) return;
 
   // 实例化通知中心
@@ -66,8 +68,11 @@ const install = function (Vue) {
 
 
     // 创建遮罩 并 获取挂载点
-    Vue.prototype.$KsMask.show(currentMsg.options);
-    maskInstance = Vue.prototype.$KsMask.getInstance();
+    // Vue.prototype.$KsMask.show(currentMsg.options);
+    // maskInstance = Vue.prototype.$KsMask.getInstance();
+    KsMask.show(currentMsg.options)
+    maskInstance = KsMask.getInstance();
+
 
     // 要等待组件 Ready 才能获取到容器
     setTimeout(() => {
@@ -145,7 +150,8 @@ const install = function (Vue) {
   KsDialog.close = function () {
     instance.show = false;
     currentMsg = null;
-    Vue.prototype.$KsMask.close();
+    // Vue.prototype.$KsMask.close();
+    KsMask.close()
 
     showNextDialog();
   };

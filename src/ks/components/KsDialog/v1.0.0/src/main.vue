@@ -2,7 +2,7 @@
   <div class="KsDialog">
     <abstract v-if="show">
       <aside class="KsDialog__icon" slot="icon" :style="{color: typeMapper[type].hue}">
-        <!-- <ks-icon :name="typeMapper[type].icon"></ks-icon> -->
+        <ks-icon :name="typeMapper[type].icon"></ks-icon>
       </aside>
 
       <aside class="KsDialog__article" slot="article">
@@ -28,7 +28,7 @@
   import typeMapper from '../data/typeMapper'
   import Abstract from './abstract.vue'
   import KsIcon from 'KsComponents/KsIcon/v1.0.0/'
-  import { KsButton } from 'KsComponents/KsButton/v0.1.0/'
+  import KsButton from 'KsComponents/KsButton/v0.1.0/src/main.vue'
 
   
 

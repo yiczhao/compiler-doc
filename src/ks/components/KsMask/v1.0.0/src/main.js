@@ -2,10 +2,11 @@
  * @description mask 遮罩
  * @author: pkeros.
  * @date: 2016/10/21.
+ * VERSION: '1.0.0'
  */
 
 import Mask from './main.vue'
-import ObjectUtil from '../../utils/ObjectUtil'
+import ObjectUtil from 'KsComponents/utils/ObjectUtil'
 
 let KsMask, instance, currentMask, _uid = 0;
 let maskQueue = [];
@@ -87,6 +88,7 @@ const install = function (Vue) {
   };
 
   Vue.prototype.$KsMask = KsMask;
+  return KsMask
 };
 
 // automation register components.
