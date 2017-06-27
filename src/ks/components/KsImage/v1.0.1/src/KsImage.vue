@@ -10,6 +10,7 @@
 
 <script type="text/javascript">
     export default{
+        VERSION: '1.0.1',
         props:{
             show: { type:Boolean, default:false },
             url:{ type:String,default:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1490777740832&di=29af36b1dddd1d1a6cf8848d27049175&imgtype=0&src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201510%2F03%2F20151003150321_EuYFh.jpeg" }

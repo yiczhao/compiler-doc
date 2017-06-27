@@ -23,7 +23,7 @@ import KsDialogChoose from './KsDialogChoose'
 import KsItem from './KsFloorSelect'
 import KsDialogProgram from './KsDialogProgram'
 import KsAddTableItem from './KsAddTable'
-import {KsImage,KsImgs} from './KsImage'
+import KsImage from './KsImage'
 import KsIcon from './KsIcon'
 import KsTips from './KsTip'
 import KsTable from './KsTable'
@@ -54,7 +54,6 @@ const Components = {
   KsItem,
   KsDialogProgram,
   KsImage,
-  KsImgs,
   KsAddTableItem,
   KsTips,
   KsTable
