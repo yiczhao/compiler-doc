@@ -8,6 +8,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var hljs = require('highlight.js');
 
 module.exports = {
+
   entry: {
     app: __dirname + '/src/doc/main.js',
     vuecore: __dirname + '/src/doc/vuecore.js'
@@ -21,39 +22,48 @@ module.exports = {
   },
 
   module: {
-    loaders: [{
-      test: /\.md$/,
-      loader: 'vue-markdown-loader'
-    }, {
-      test: /\.scss$/,
-      loader: ExtractTextPlugin.extract('css-loader!ks-autobem-loader?type=css!sass-loader')
-    }, {
-    test: /\.css$/,
-      loader: ExtractTextPlugin.extract('css-loader')
-    }, {
-      test: /\.(tpl|html)$/,
-      loader: 'html'
-    }, {
-      test: /\.vue$/,
-      loader: 'vue',
-    }, {
-      test: /\.js$/,
-      // excluding some local linked packages.
-      // for normal use cases only node_modules is needed.
-      // exclude: /(.\.min\.js)|node_modules|vue\/dist|vue-router\/|vue-loader\/|vue-hot-reload-api\//,
-      exclude:function(path){
-        // console.log(path)
-        if(~path.indexOf('vue.common.js'))  return false
-        if(/(.\.min\.js)|node_modules|vue\/dist|vue-router\/|vue-loader\/|vue-hot-reload-api\//.test(path)) return true
+    loaders: [
+      {
+        test: /\.md$/,
+        loader: 'vue-markdown-loader'
       },
-      loader: 'babel'
-    }, {
-      test: /\.(png|jpg)$/,
-      loader: 'url-loader?limit=8192'
-    }, {
-      test: /\.(svg|woff|woff2|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'file-loader-path?limit=8192&name=[name].[ext]?[hash:8]&path=./[name].[ext]?[hash:8]'
-    }]
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('css-loader!ks-autobem-loader?type=css!sass-loader')
+      },
+      {
+      test: /\.css$/,
+        loader: ExtractTextPlugin.extract('css-loader')
+      },
+      {
+        test: /\.(tpl|html)$/,
+        loader: 'html'
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue',
+      },
+      {
+        test: /\.js$/,
+        // excluding some local linked packages.
+        // for normal use cases only node_modules is needed.
+        // exclude: /(.\.min\.js)|node_modules|vue\/dist|vue-router\/|vue-loader\/|vue-hot-reload-api\//,
+        exclude:function(path){
+          // console.log(path)
+          if(~path.indexOf('vue.common.js'))  return false
+          if(/(.\.min\.js)|node_modules|vue\/dist|vue-router\/|vue-loader\/|vue-hot-reload-api\//.test(path)) return true
+        },
+        loader: 'babel'
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader?limit=8192'
+      },
+      {
+        test: /\.(svg|woff|woff2|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file-loader-path?limit=8192&name=[name].[ext]?[hash:8]&path=./[name].[ext]?[hash:8]'
+      }
+    ]
   },
 
   vueMarkdown: {
@@ -142,6 +152,7 @@ module.exports = {
 
   resolve:{
     alias: {
+      '@': __dirname + '/src/ks',
       SRC: __dirname + '/src',
       Data: __dirname + '/src/doc/data',
       KsComponents: __dirname + '/src/ks/components'

@@ -18,7 +18,6 @@
 </template>
 
 <script>
-  
   import KsIcon from 'KsComponents/KsIcon/v0.1.0/'
   import Abstract from './abstract.vue'
   import baseBtnProps from '../mixins/baseBtnProps'
@@ -33,7 +32,7 @@
     data () {
       return {
         sizeMapper,
-        hueMapper,
+        hueMapper
       }
     },
 
@@ -48,7 +47,6 @@
     },
 
     components: { Abstract, KsIcon }
-    
   }
 </script>
 
