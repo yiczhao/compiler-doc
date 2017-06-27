@@ -41,7 +41,7 @@ export default [
       {
         name: '数据 Data', icon: 'icon', link: '',
         subMenu: [
-          {name: 'Table 表格', icon: 'icon', link: 'multiple-table'},
+          {name: 'Table 表格', icon: 'icon', link: 'table'},
           // {name: 'Tag 标签', icon: 'icon', link: ''},
           // {name: 'Progress 进度条', icon: 'icon', link: ''},
           // {name: 'Tree 树形控件', icon: 'icon', link: ''},
@@ -86,8 +86,6 @@ export default [
           {name: 'Tooltips 弹出提示', icon: 'icon', link: 'tooltips'},
           {name: 'Image 查看', icon: 'icon', link: 'image'},
           {name: 'ksImgs 查看', icon: 'icon', link: 'ksimg'},
-          {name: '多标题表格', icon: 'icon', link: 'multiple-table'},
-          {name: '定项表格', icon: 'icon', link: 'setitem-table'},
           // {name: 'Carousel 走马灯', icon: 'icon', link: ''},
           // {name: 'Collapse 折叠面板', icon: 'icon', link: ''}
         ]

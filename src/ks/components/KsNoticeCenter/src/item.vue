@@ -12,6 +12,8 @@
 </template>
 
 <script>
+  import KsIcon from 'KsComponents/KsIcon/v1.0.0/'
+
   /**
    * @description 色调映射
    * @type {{}}
@@ -24,9 +26,10 @@
     info: { background: '#26C6DA', fontColor: '#FFF' }
   };
 
+
   export default{
     VERSION: '1.0.0',
-
+    components: { KsIcon },
     data () {
       return {
         hueMapper
@@ -49,7 +52,7 @@
 </script>
 
 <style lang="scss">
-  @import "../../foundation/SassMagic-master/src/sassMagic";
+  @import "~KsComponents/styles/library/SassMagic-master/src/sassMagic";
 
   $width: 300px;                                 // 提示信息框的长度
 

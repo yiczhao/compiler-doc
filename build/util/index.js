@@ -73,7 +73,7 @@ function getDirs(data,dir){
             targetFile(file,dir)
                 .then((result)=>{
                     // console.log(result)
-                    // Promise.all(result)
+                    result = [].concat(result)
                     var finalDirs = result.reduce((arr,item)=>{
                         return arr.concat(item)
                     },[])
@@ -82,7 +82,6 @@ function getDirs(data,dir){
                     var fileInfos = finalDirs.map((fileInfo)=>{
                         return readFile(fileInfo.filePath)    
                     })
-                    // resolve('fileInfos')
                     // console.log(fileInfos)
                     Promise.all(fileInfos)
                         .then((res)=>{
@@ -139,6 +138,7 @@ function matchFrom(data){
 
 
 function filterFile(filePath){
+    // console.log(filePath)
     var temp
 
     if(~['.js','.vue'].indexOf(path.extname(filePath))){
@@ -157,6 +157,7 @@ function filterFile(filePath){
 }
 
 function targetFile(file,dir){
+    // console.log(file,dir)
     var subDirPath = path.resolve(dir,file.val)
     return new Promise(function(resolve,reject){
         if(~['.js','.vue'].indexOf(path.extname(subDirPath))){

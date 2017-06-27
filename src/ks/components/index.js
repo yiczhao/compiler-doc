@@ -60,7 +60,7 @@ const Components = {
 // 插件
 const Plugins = {
 
-  KsNoticeCenter,
+  KsNotice:KsNoticeCenter,
   KsDialog,
   KsMask,
   KsModal

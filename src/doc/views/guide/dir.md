@@ -31,7 +31,6 @@ export {
 > src目录下 中为具体组件
 > styles目录下 中为组件具体样式【引入公共样式方式如下，别忘了sass下的引入要加@哦】
 > 组件中的css要加上组件前缀【例：KsPager 组件 css中的前缀为 .KsPager 。落实到具体节点css为 .KsPager-btn】
-> 当然你也可以用 <a target="_blank" href="https://github.com/KS-FED/ks-autobem-loader">ks-autobem-loader</a> 去简化css和html模板书写
 
 
 ```scss

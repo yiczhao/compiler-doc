@@ -23,9 +23,6 @@
         data(transiton){
             this.active = transiton.to.name
         }
-    },
-    created(){
-      this.$router.go({name:'pager/v1.0.0'})
     }
   }
 </script>

@@ -4,9 +4,11 @@
  * @data 2017/4/20
  * @email pkeros@vip.qq.com
  */
-
+import { KsMask } from 'KsComponents/KsMask/'
 import Dialog from './main.vue'
 import ObjectUtil from '../../utils/ObjectUtil'
+
+console.log(KsMask,'--')
 
 let KsDialog, instance, maskInstance, currentMsg, _uid = 0;
 let dialogQueue = [];
@@ -25,6 +27,7 @@ let defaults = {
 };
 
 const install = function (Vue) {
+  console.log(Vue.prototype.$KsMask)
   if (install.installed) return;
 
   // 实例化通知中心
@@ -60,6 +63,7 @@ const install = function (Vue) {
 
       if (!reject) KsDialog.close();
     });
+
 
     // 创建遮罩 并 获取挂载点
     Vue.prototype.$KsMask.show(currentMsg.options);

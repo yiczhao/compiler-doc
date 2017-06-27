@@ -127,26 +127,7 @@ let defaults = {
 
 ### 脚本
 
-<script>
-  export default{
-    data () {
-      return {
-        modalShow: false,
-        modalShowCenter: false,
-      }
-    },
-    
-    methods: {
-      showModal () {
-        this.$KsModal.info('1', '2', '3')();
-      },
-      
-      showModalCenter () {
-        this.modalShowCenter = true;
-      }
-    }
-  }
-</script>
+
 
 ```html
 <script>
@@ -207,3 +188,27 @@ let defaults = {
 | @confirm | `KsModal` 确定按钮点击 事件 | event | - | - | 否 | - | - |
 | @cancel | `KsModal` 取消按钮点击 事件 | event | - | - | 否 | - | - |
 | @close | `KsModal` 关闭按钮点击 事件 | event | - | - | 否 | - | - |
+
+
+
+<script>
+  export default{
+    kscomponents:['KsSwitch_v0'],
+    data () {
+      return {
+        modalShow: false,
+        modalShowCenter: false,
+      }
+    },
+    
+    methods: {
+      showModal () {
+        this.$KsModal.info('1', '2', '3')();
+      },
+      
+      showModalCenter () {
+        this.modalShowCenter = true;
+      }
+    }
+  }
+</script>

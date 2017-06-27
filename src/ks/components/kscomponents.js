@@ -4,11 +4,13 @@ console.log(Components)
 console.log(Plugins)
 
 
-var componentFlags = flatObj(Components)
+
 // console.log(componentFlags)
 
 export default function install() {
-
+    // console.log()
+    // return
+    var componentFlags = Vue.util.mergeOptions(flatObj(Components),flatObj(Plugins))
     var _init = Vue.prototype._init
     Vue.prototype._init = function(options = {}) {
 
@@ -28,12 +30,6 @@ export default function install() {
             components = kscomponents.forEach((key) => {
                 var component = componentFlags[key]
                 if (component) {
-                    // key = key.split('_')[0]
-                    // if(component.template){
-                    //     this.$options.components[key] = Vue.extend(component)    
-                    // }else{
-
-                    // }
                     inject.call(this,component,key)
                     return
                 }
@@ -45,9 +41,14 @@ export default function install() {
         }
 
         function inject(component,key){
-            
+            // console.log(component,key)
             if(component.template){
+                key = key.split('_')[0]
                 this.$options.components[key] = Vue.extend(component)    
+            }else if(component.install){
+                console.log(component)
+                this['$'+key] = component.install(Vue)
+                console.log(this['$'+key])
             }else{
                 Object.keys(component).forEach((k)=>{
                     inject.call(this,component[k],k)
@@ -64,7 +65,7 @@ function realComponent(data,k,version,type){
         version = version || '',
         type = type || '' 
     
-    if (data[k].template) {
+    if (data[k].template || data[k].install) {
         temp = {name: k, val: data[k] ,version:version,type:type}
     } else {
         type = k.split('_')[0] || '',
@@ -85,9 +86,6 @@ function flatObj(foldData){
         return arr.concat(realComponent(foldData,k))
     }, []).forEach(function(item) {
         // console.log(item.type,item.version)
-        // var version = (item.version && '_' + item.version) || ''
-        // content[item.name+version] = item.val
-        
         if(item.version){
             content[item.type+'_'+item.version] = content[item.type+'_'+item.version] || {}
             content[item.type+'_'+item.version][item.name] = item.val
