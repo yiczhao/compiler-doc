@@ -322,16 +322,19 @@ export default (router) => {
               name: 'image',
               cnName: '图片',
               component: (resolve) => {
-                require(['./views/data/image.md'], resolve)
+                require(['./views/data/image/index.vue'], resolve)
+              },
+              subRoutes:{
+                '/v1.0.1': {
+                  name: 'image/v1.0.1',
+                  cnName: 'v1.0.1',
+                  component: (resolve) => {
+                    require(['./views/data/image/v1.0.1.md'], resolve)
+                  }
+                },                
               }
             },
-            '/ksimg': {
-              name: 'ksimg',
-              cnName: '图片',
-              component: (resolve) => {
-                require(['./views/data/ksimg.md'], resolve)
-              }
-            },            
+           
 
             '/addtable': {
               name: 'addtable',

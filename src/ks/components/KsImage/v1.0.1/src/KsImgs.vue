@@ -5,8 +5,8 @@
       <img v-for="i in src" :src="i"  track-by='$index' v-show="index==$index"  :transition="sta" >
     </div>                  
     <div class="but" v-show='src.length>1'>
-      <i class="fa fa-chevron-left  opc l" v-show='index>0' @click="move(0)"></i>
-      <i class="fa fa-chevron-right  opc r" @click="move(1)" v-show='index<src.length-1'></i>
+      <i class="  opc l" v-show='index>0' @click="move(0)"> &#9668;</i>
+      <i class="  opc r" @click="move(1)" v-show='index<src.length-1'> &#9658;</i>
     </div>
         <ul>  
           <li class="opc fa fa-repeat fa-2x" @click='rotate'>
@@ -18,21 +18,15 @@
           <li class="opc fa fa-search-minus fa-2x" @click='sacles'>
             <span>缩小</span>
           </li>
-          <li class="opc fa fa-download fa-2x"  v-if="load">
-              <a :href="src[index]" download><span>下载</span></a>
+          <li class="opc fa fa-download fa-2x"  @click='load' v-if='isload'>
+              <span>下载</span>
           </li>
         </ul>
   </div>
 </template>
 <script>
 
-    /**
-        <ksimg 
-            :show.sync="Boolean"  弹出 必填
-            :src="Array"  图片数组 必填
-            :pindex="Number"   当前要显示 的图片下标
-            ></ksimg>
-     */
+
 
   export default{
     VERSION: '1.0.1',
@@ -52,7 +46,7 @@
       show:{type:Boolean,required:true,default:false},
       src:{type:Array,required:true,default:[]},
       pindex:{type:Number,required:false,default:0},
-      load:{type:Boolean,required:false,default:true}
+      isload:{type:Boolean,required:false,default:false},
       },
     watch:{
       show:function(show){   
@@ -77,6 +71,9 @@
         this.sta=''      
         this.show=false;
         this.$emit('close')
+      },
+      load(){
+        this.$emit('load')
       },
       move:function(i){
         this.none=true;
