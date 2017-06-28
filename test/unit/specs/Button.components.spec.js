@@ -86,3 +86,26 @@ describe('KsButtonAbstract 组件测试', () => {
     Object.keys(testProperty).forEach(k => specify(`${k} 属性测试`));
   });
 });
+
+describe('KsButton 组件测试', () => {
+  let vm = null;
+  beforeEach(() => utils.destroyVM(vm));
+
+  it('loading 属性测试', () => {
+    vm = utils.createTest(KsButton, {
+      loading: true
+    });
+    let el = vm.$el;
+
+    //
+    // 1. 测试组件有没有被禁用
+    // 2. 测试组件有没有加载动画
+    //
+    expect(vm.disable).to.be.true;
+    expect(el.querySelector('i.fa-spin')).to.be.exist;
+  });
+
+  it('type 属性测试');
+
+  it('size 属性测试');
+});
