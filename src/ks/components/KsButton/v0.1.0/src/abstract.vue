@@ -3,11 +3,11 @@
 
     <!-- 普通按钮 -->
     <template v-if="mode === 'normal'">
-      <style type="text/css">#normalStyle{}</style>
+      <style type="text/css" data-type="normal">#normalStyle{}</style>
     </template>
     <!-- 幽灵按钮 -->
     <template v-if="mode === 'ghost'">
-      <style type="text/css">#ghostStyle{}</style>
+      <style type="text/css" data-type="ghost">#ghostStyle{}</style>
     </template>
 
     <button :type="nativeType" :autofocus="autoFocus" :name="name" v-if="truth"
@@ -45,9 +45,9 @@
       height: {type: String, require: true},
       fontSize: {type: String, default: '14px'},
       truth: {type: Boolean, default: true},
-      colorNormal: { type: String, require: true },
-      colorHover: { type: String, require: true },
-      colorActive: { type: String, require: true }
+      colorNormal: {type: String, require: true},
+      colorHover: {type: String, require: true},
+      colorActive: {type: String, require: true}
     },
 
     init () {
