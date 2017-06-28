@@ -28,9 +28,6 @@ import KsIcon from './KsIcon'
 import KsTips from './KsTip'
 import KsTable from './KsTable'
 
-console.log('KsMask',KsMask);
-console.log('KsDialogEntity',KsDialogEntity)
-console.log('KsModal',KsModal);
 
 
 // 组件
