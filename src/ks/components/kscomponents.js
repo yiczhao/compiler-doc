@@ -1,22 +1,14 @@
 import {Components, Plugins } from './index.js'
 
 
-
-
-
-// console.log(componentFlags)
-
 export default function install() {
-    // console.log()
-    // return
+    
     var componentFlags = Vue.util.mergeOptions(flatObj(Components),flatObj(Plugins))
     var _init = Vue.prototype._init
+    
     Vue.prototype._init = function(options = {}) {
-
         options.init = options.init ? [kscomponentInit].concat(options.init) : kscomponentInit
-
         _init.call(this, options)
-            // console.log(options.init)
     }
 
     function kscomponentInit() {
@@ -43,7 +35,7 @@ export default function install() {
             // console.log(component,key)
             key = key.split('_')[0]
             if(component.template){
-                console.log(key)
+                // console.log(key)
                 this.$options.components[key] = Vue.extend(component)    
             }else if(component.install){
                 this['$'+key] = component.install(Vue)
