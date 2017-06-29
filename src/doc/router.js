@@ -347,7 +347,7 @@ export default (router) => {
             /* 多标题表格 */
             '/table': {
               name: 'table',
-              cnName: '图片',
+              cnName: '表格',
               goName:'table/v0.1.0',
               component: (resolve) => {
                 require(['./views/data/table/index.vue'], resolve)
@@ -371,7 +371,7 @@ export default (router) => {
                   }
                 }
               }
-            },
+            }
 
             
 
@@ -452,7 +452,36 @@ export default (router) => {
           }
         },
 
-        /* validate */
+        /* Navigation 导航*/
+        '/navigation': {
+          name: 'navigation',
+          cnName: '导航',
+          component: (resolve) => {
+            require(['./views/navigation/index.vue'], resolve)
+          },
+          subRoutes: {
+            /* tab切换 */
+            '/tabs': {
+              name: 'tabs',
+              cnName: 'tab切换',
+              goName:'tabs/v0.1.0',
+              component: (resolve) => {
+                require(['./views/navigation/tabs/index.vue'], resolve)
+              },
+              subRoutes: {
+                '/v0.1.0': {
+                  name: 'tabs/v0.1.0',
+                  cnName: 'v0.1.0',
+                  goName:'',
+                  component: (resolve) => {
+                    require(['./views/navigation/tabs/v0.1.0.md'], resolve)
+                  }
+                }
+              }
+            }
+          }
+        },
+        /* validate 验证器*/
         '/validate': {
           name: 'validate',
           cnName: '验证',

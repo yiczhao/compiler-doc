@@ -54,7 +54,8 @@ const Components = {
   KsImage,
   KsAddTableItem,
   KsTips,
-  KsTable
+  KsTable,
+  KsTabs
 
 };
 

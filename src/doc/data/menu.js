@@ -67,7 +67,7 @@ export default [
       {
         name: '导航 Navigation', icon: 'icon', link: '',
         subMenu: [
-          // {name: 'Tabs 标签页', icon: 'icon', link: ''},
+          {name: 'Tabs 标签页', icon: 'icon', link: 'tabs'},
           // {name: 'Breadcrumb 面包屑', icon: 'icon', link: ''},
           // {name: 'Dropdown 下拉菜单', icon: 'icon', link: ''},
           // {name: 'Steps 步骤条', icon: 'icon', link: ''}
