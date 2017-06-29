@@ -7,6 +7,7 @@
 <!-- <tab status="prefix" content="prefix 内容"></tab> -->
 <script type="text/javascript">
     export default {
+        VERSION:'0.1.0',
         props:{
             title:{
                 type:String
@@ -22,6 +23,7 @@
             return {}
         },
         created(){
+            
             this.$parent.contents.push({
                 title:this.title,
                 status:this.status

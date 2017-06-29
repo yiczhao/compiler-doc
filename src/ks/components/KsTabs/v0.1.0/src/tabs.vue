@@ -14,7 +14,9 @@
     </div>
 </template>
 <script type="text/javascript">
+   
     export default {
+        VERSION:'0.1.0',
         kscomponents:['KsIcon_v0'],
         props:{
             type:{
@@ -54,7 +56,7 @@
                 if(index == this.active) return
                 this.active = index
                 this.$emit('change',index)
-                this.subShow(index)
+                this.subShow(this.active)
             },
             subShow(index){
                 this.$children.forEach((subvm,i)=>{
@@ -67,12 +69,13 @@
             }
         },
         created(){
-            if(typeof this.rerender != 'undefined'){
-                this.$nextTick(()=>{
+
+            this.$nextTick(()=>{
+                this.subShow(this.active)
+                if(typeof this.rerender != 'undefined'){
                     this.$compile(this.$els.titles)    
-                })
-            }
-            
+                }        
+            })
             
         }
     }
