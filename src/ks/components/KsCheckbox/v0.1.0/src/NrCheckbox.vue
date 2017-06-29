@@ -1,13 +1,13 @@
 <template>
   <div class="KSNRCheckbox" cid="KSNRCheckbox">
     <div class="_container" :class="{disable: disable}">
-      <input type="checkbox" class="_entity"
+      <input type="checkbox" class="_entity" :name="name"
              v-model="checked" @change="checkboxChangeHandle"
-             :disabled="disable && 'disabled'" :id="`KSNRCheckbox--${_uid}`" />
-      <label class="_skin" :for="`KSNRCheckbox--${_uid}`">
+             :disabled="disable && 'disabled'" :id="'KSNRCheckbox--' + _uid">
+      <label class="_skin" :for="'KSNRCheckbox--' + _uid">
         <em class="_cube" :style="{background: color}"></em>
       </label>
-      <label class="_text" :for="`KSNRCheckbox--${_uid}`" @click="$emit('label-click')">
+      <label class="_text" :for="'KSNRCheckbox--' + _uid" @click="$emit('label-click')">
         <slot>LABEL</slot>
       </label>
     </div>

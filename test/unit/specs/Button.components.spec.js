@@ -10,6 +10,13 @@ describe('KsButtonAbstract 组件测试', () => {
   let vm = null;
   beforeEach(() => utils.destroyVM(vm));
 
+  it('测试 KsButtonAbstract 组件是否能被正确创建', () => {
+    vm = utils.createTest(KsButtonAbstract);
+    let el = vm.$el;
+
+    expect(el.querySelector('.KsBtnAbstract')).to.be.exist;
+  });
+
   it('mode 属性测试', () => {
     vm = utils.createTest(KsButtonAbstract, {
       mode: 'ghost'
@@ -21,7 +28,7 @@ describe('KsButtonAbstract 组件测试', () => {
     //
     expect(el.querySelector('style').getAttribute('data-type')).to.be.equal('ghost');
   });
-  
+
   it('disabled 属性测试', () => {
     vm = utils.createTest(KsButtonAbstract, {
       disabled: true
@@ -85,11 +92,39 @@ describe('KsButtonAbstract 组件测试', () => {
     //
     Object.keys(testProperty).forEach(k => specify(`${k} 属性测试`));
   });
+
+  it('click 事件响应测试', done => {
+    let result = false;
+    vm = utils.createTest({
+      template: `
+        <div class="container">
+          <ks-button-abstract @click="handleClick"></ks-button-abstract>
+        </div>
+      `,
+      methods: {
+        handleClick() { result = true },
+      },
+      components: { KsButtonAbstract }
+    });
+    vm.$el.firstElementChild.click();
+
+    setTimeout(() => {
+      expect(result).to.be.true;
+      done();
+    }, 0);
+  });
 });
 
 describe('KsButton 组件测试', () => {
   let vm = null;
   beforeEach(() => utils.destroyVM(vm));
+
+  it('测试 KsButton 组件是否能正确的被创建', () => {
+    vm = utils.createTest(KsButton);
+    let el = vm.$el;
+
+    expect(el.classList.contains('KsButton')).to.be.true;
+  });
 
   it('loading 属性测试', () => {
     vm = utils.createTest(KsButton, {
@@ -105,7 +140,56 @@ describe('KsButton 组件测试', () => {
     expect(el.querySelector('i.fa-spin')).to.be.exist;
   });
 
-  it('type 属性测试');
+  it('type 属性测试', () => {
+    vm = utils.createTest(KsButton, {
+      type: 'success'
+    });
+    let children = vm.$children[0];
+    let testItem = {
+      colorNormal: '#4CAF50',
+      colorHover: '#66BB6A',
+      colorActive: '#43A047'
+    };
 
-  it('size 属性测试');
+    Object.keys(testItem).forEach(k => {
+      expect(children[k]).to.be.equal(testItem[k]);
+    });
+  });
+
+  it('size 属性测试', () => {
+    vm = utils.createTest(KsButton, {
+      size: 'large'
+    });
+    let children = vm.$children[0];
+    let testItem = {
+      width: '160px',
+      height: '54px',
+      fontSize: '18px'
+    };
+
+    Object.keys(testItem).forEach(k => {
+      expect(children[k]).to.be.equal(testItem[k]);
+    });
+  });
+
+  it('click 事件响应测试', done => {
+    let result = false;
+    vm = utils.createTest({
+      template: `
+        <div class="container">
+          <ks-button @click="handleClick"></ks-button>
+        </div>
+      `,
+      methods: {
+        handleClick() { result = true },
+      },
+      components: { KsButton }
+    });
+    vm.$el.firstElementChild.click();
+
+    setTimeout(() => {
+      expect(result).to.be.true;
+      done();
+    }, 0);
+  });
 });
