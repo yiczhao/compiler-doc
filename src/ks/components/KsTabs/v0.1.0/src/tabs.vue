@@ -53,6 +53,7 @@
              * @return {[type]}       [null]
              */
             tabClick(index){
+                // console.log(index ,this.active)
                 if(index == this.active) return
                 this.active = index
                 this.$emit('change',index)
@@ -63,9 +64,19 @@
                     index == i 
                         ? subvm.status = 'active'
                         : subvm.status = ''
-                    
                 })
+
+            },
+            changeUid(uid){
                 
+                this.contents.forEach((item,index)=>{
+                    if(item.uid == uid){
+                        this.active = index
+                        this.$children.forEach((subvm,i)=>{
+                            index != i && (subvm.status = '')
+                        })
+                    }
+                })
             }
         },
         created(){

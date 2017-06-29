@@ -22,14 +22,19 @@
         data(){
             return {}
         },
+        watch:{
+            status(val){
+                if('active' == val){
+                    this.$parent.changeUid(this._uid)    
+                }    
+            }
+        },
         created(){
-            
             this.$parent.contents.push({
                 title:this.title,
-                status:this.status
+                status:this.status,
+                uid:this._uid
             })
-            
-            
         }
     }
 
