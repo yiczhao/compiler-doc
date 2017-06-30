@@ -62,8 +62,8 @@
             subShow(index){
                 this.$children.forEach((subvm,i)=>{
                     index == i 
-                        ? subvm.status = 'active'
-                        : subvm.status = ''
+                        ? subvm.active = 'active'
+                        : subvm.active = ''
                 })
 
             },
@@ -72,9 +72,7 @@
                 this.contents.forEach((item,index)=>{
                     if(item.uid == uid){
                         this.active = index
-                        this.$children.forEach((subvm,i)=>{
-                            index != i && (subvm.status = '')
-                        })
+                        this.subShow(index)
                     }
                 })
             }

@@ -1,5 +1,5 @@
 <template>
-    <div v-show="status=='active'">
+    <div v-show="active=='active'">
         <slot></slot>
     </div>
 </template>
@@ -20,7 +20,9 @@
             }
         },
         data(){
-            return {}
+            return {
+                active:''
+            }
         },
         watch:{
             status(val){
