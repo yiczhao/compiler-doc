@@ -1,18 +1,23 @@
 <template>
   <li>
-  {{show}}
-      <div class="col">
+      <div>
           <input type="checkbox"  class="checkbox" 
-              v-on:change="clickchildren()" 
-              v-model="itemdata.checked"
-              v-bind:class="itemdata.checked==true"/>
-          <span v-on:click="show=!show">{{itemdata.name}}</span>
+              v-on:change="checkboxChange" 
+              v-model="itemdata[checkedKey]"
+              v-bind:class="itemdata[checkedKey]==true"/>
+          <span v-bind:class="{'KsTree-name':hasChildren}" 
+              v-on:click="show=!show">{{itemdata[nameKey]}}</span>
       </div>
-      <ul style="margin-left:50px" v-show="show">
+      <ul class="KsTree-indent" 
+          v-if="hasChildren"
+          v-show="show">
           <treeitem 
                 v-on:change="change" 
-                v-for="item in itemdata.children" 
-                v-bind:itemdata="item"></treeitem>
+                v-for="item in itemdata[childrenKey]" 
+                v-bind:itemdata="item" 
+                v-bind:name-key="nameKey" 
+                v-bind:children-key="childrenKey"
+                v-bind:checked-key="checkedKey"></treeitem>
       </ul>
   </li>
 </template>
@@ -23,35 +28,54 @@
     props:{
         itemdata:{
             type:Object
+        },
+        nameKey:{
+            type:String,
+            default:'name'
+        },
+        checkedKey:{
+            type:String,
+            default:'checked'
+        },
+        childrenKey:{
+            type:String,
+            default:'children'
         }
+
     },
     data(){
         return {
             show:true
         }
     },
+    computed:{
+        hasChildren(){
+            var children =  this.itemdata[this.childrenKey]
+            return children && children.length
+        }
+    },
     methods:{
         change(){
             this.$emit('change')
         },
-        clickchildren(){
-            // console.log('pp',this.itemdata)
-            
-            this.itemdata.forEach(item=>{
-                this.deep(item.children,item.checked)
-            })
+        checkboxChange(){
+            var checkedKey = this.checkedKey
+            this.deep(this.itemdata,this.itemdata[checkedKey])
             this.$emit('change')
         },
-        deep(children,checked){
-            children && children.forEach((item)=>{
-                item.checked = checked
-                this.deep(item.children, checked)
+        deep(node,checked){
+            var checkedKey = this.checkedKey ,
+                childrenKey = this.childrenKey
+
+            node[childrenKey] && node[childrenKey].forEach((item)=>{
+                item[checkedKey] = checked
+                this.deep(item, checked)
             })
         }
 
-    },
-    created(){
-        console.log(this._uid)
     }
   }
 </script>
+<style lang="scss">
+    @import '../styles/tree.scss'
+</style>
