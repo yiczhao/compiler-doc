@@ -56,7 +56,7 @@ export default {
             get_ints (temp_val,limit,min){
                 var ints = parseInt(temp_val, 10)
                 if(limit!='INF' && ints > limit){
-                    ints = (''+ints).substr(0,(''+ints).length-1)
+                    ints = (''+ints).substr(0,(''+limit).length-1)
                 }
 
                 return ints
