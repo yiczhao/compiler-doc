@@ -527,7 +527,22 @@ export default (router) => {
             }
           }
         },
-
+        '/directives':{
+          name: 'directives',
+          cnName: '指令',
+          component: (resolve) => {
+            require(['./views/directives/index.vue'], resolve)
+          },
+          subRoutes: {
+            '/limit-number-fixed': {
+              name: 'limit-number-fixed',
+              cnName: '限制字符输入',
+              component: (resolve) => {
+                require(['./views/directives/limit-number-fixed.md'], resolve)
+              }
+            }
+          }
+        },
         /* log */
         '/log': {
           name: 'log',

@@ -81,6 +81,12 @@ export default [
         ]
       },
       {
+        name: '指令', icon: 'icon', link: '',
+        subMenu: [
+          {name: '限制字符输入', icon: 'icon', link: 'limit-number-fixed'},
+        ]
+      },
+      {
         name: '其他 Others', icon: 'icon', link: '',
         subMenu: [
           {name: 'Tooltips 弹出提示', icon: 'icon', link: 'tooltips'},

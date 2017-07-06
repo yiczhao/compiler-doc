@@ -28,6 +28,7 @@ import KsIcon from './KsIcon'
 import KsTips from './KsTip'
 import KsTable from './KsTable'
 import KsTabs from './KsTabs'
+import KsTree from './KsTree'
 
 
 
@@ -55,7 +56,9 @@ const Components = {
   KsAddTableItem,
   KsTips,
   KsTable,
-  KsTabs
+  KsTabs,
+  KsTree
+
 
 };
 
