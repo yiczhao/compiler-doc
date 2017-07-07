@@ -279,8 +279,20 @@ export default (router) => {
             '/tree': {
               name: 'tree',
               cnName: '树形组件',
+              goName:'tree/v0.1.0',
               component: (resolve) => {
-                require(['./views/data/tree.md'], resolve)
+                require(['./views/data/tree/index.vue'], resolve)
+              },
+              subRoutes: {
+                '/v0.1.0': {
+                  name: 'tree/v0.1.0',
+                  cnName: 'v0.1.0',
+                  goName:'',
+                  component: (resolve) => {
+                    require(['./views/data/tree/v0.1.0.md'], resolve)
+                  }
+                }
+                
               }
             },
 
