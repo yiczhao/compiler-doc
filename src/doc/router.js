@@ -287,8 +287,19 @@ export default (router) => {
             '/dropchoose': {
               name: 'dropchoose',
               cnName: '下拉选择',
+              goName:'dropchoose/v0.1.0',
               component: (resolve) => {
-                require(['./views/data/dropchoose.md'], resolve)
+                require(['./views/data/dropchoose/index.vue'], resolve)
+              },
+              subRoutes: {
+                '/v0.1.0': {
+                  name: 'dropchoose/v0.1.0',
+                  cnName: 'v0.1.0',
+                  goName:'',
+                  component: (resolve) => {
+                    require(['./views/data/dropchoose/v0.1.0.md'], resolve)
+                  }
+                }
               }
             },
 
@@ -303,16 +314,40 @@ export default (router) => {
             '/dialogchoose': {
               name: 'dialogchoose',
               cnName: '弹出层选择',
+              goName:'dialogchoose/v0.1.0',
               component: (resolve) => {
-                require(['./views/data/dialogchoose.md'], resolve)
+                require(['./views/data/dialogchoose/index.vue'], resolve)
+              },
+              subRoutes: {
+                '/v0.1.0': {
+                  name: 'dialogchoose/v0.1.0',
+                  cnName: 'v0.1.0',
+                  goName:'',
+                  component: (resolve) => {
+                    require(['./views/data/dialogchoose/v0.1.0.md'], resolve)
+                  }
+                }
+                
               }
             },
 
             '/floorchoose': {
               name: 'floorchoose',
               cnName: '楼层选择',
+              goName:'floorchoose/v0.1.0',
               component: (resolve) => {
-                require(['./views/data/floorchoose.md'], resolve)
+                require(['./views/data/floorchoose/index.vue'], resolve)
+              },
+              subRoutes: {
+                '/v0.1.0': {
+                  name: 'floorchoose/v0.1.0',
+                  cnName: 'v0.1.0',
+                  goName:'',
+                  component: (resolve) => {
+                    require(['./views/data/floorchoose/v0.1.0.md'], resolve)
+                  }
+                }
+                
               }
             },
 
@@ -339,8 +374,18 @@ export default (router) => {
             '/addtable': {
               name: 'addtable',
               cnName: '表格添加',
+              goName:'addtable/v0.1.0',
               component: (resolve) => {
-                require(['./views/data/addtable.md'], resolve)
+                require(['./views/data/addtable/index.vue'], resolve)
+              },
+              subRoutes:{
+                '/v0.1.0': {
+                  name: 'addtable/v0.1.0',
+                  cnName: 'v0.1.0',
+                  component: (resolve) => {
+                    require(['./views/data/addtable/v0.1.0.md'], resolve)
+                  }
+                },                
               }
             },
 

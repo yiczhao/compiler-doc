@@ -17,10 +17,10 @@ import KsRadio from './KsRadio'
 import KsButton from './KsButton'
 import KsPage from './KsPager'
 import KsDater from './KsDater'
-import KsStore from './KsDropChoose'
+import KsStoreClick from './KsDropChoose'
 import KsSearch from './KsSearch'
-import KsDialogChoose from './KsDialogChoose'
-import KsItem from './KsFloorSelect'
+import KsDialogChoose  from './KsDialogChoose'
+import KsItemFloor from './KsFloorSelect'
 import KsDialogProgram from './KsDialogProgram'
 import KsAddTableItem from './KsAddTable'
 import KsImage from './KsImage'
@@ -47,10 +47,10 @@ const Components = {
   KsButton,
   KsPopup,
   KsDater,
-  KsStore,
+  KsStoreClick,
   KsSearch,
   KsDialogChoose,
-  KsItem,
+  KsItemFloor,
   KsDialogProgram,
   KsImage,
   KsAddTableItem,

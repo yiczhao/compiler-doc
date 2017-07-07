@@ -37,7 +37,7 @@
 <script type="text/javascript">  
 import ListStore from './ListStore.vue'
 import KsButton from 'KsComponents/KsButton/v0.1.0/src/main.vue'
-import KsDialogProgram from '../../KsDialogProgram'
+import KsDialogProgram from 'KsComponents/KsDialogProgram/v0.1.0/src/Dialog.vue'
   export default {  
     props:{
         list:{

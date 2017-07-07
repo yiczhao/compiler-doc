@@ -72,13 +72,10 @@
   </div>
 </template>
 <script type="text/javascript">
-  import KsButton from '../../KsButton'
-  import KsDialogProgram from '../../KsDialogProgram'
+import KsButton from 'KsComponents/KsButton/v0.1.0/src/main.vue'
+import KsDialogProgram from 'KsComponents/KsDialogProgram/v0.1.0/src/Dialog.vue'
   export default {
-    components:{
-      KsDialogProgram:KsDialogProgram,
-      KsButton:KsButton
-    },
+    
     props:{
       list:{
         type:Array
@@ -103,6 +100,10 @@
       prefix:{
         type:String
       }
+    },
+    components:{
+      KsDialogProgram:KsDialogProgram,
+      KsButton:KsButton,
     },
     data() {
       return {
