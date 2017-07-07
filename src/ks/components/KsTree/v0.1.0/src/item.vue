@@ -1,10 +1,13 @@
 <template>
   <li>
       <div>
-          <input type="checkbox"  class="checkbox" 
+        <ks-checkbox2 
+            v-bind:checked.sync="itemdata[checkedKey]"
+            v-on:change="checkboxChange" ></ks-checkbox2>
+          <!-- <input type="checkbox"  class="checkbox" 
               v-on:change="checkboxChange" 
               v-model="itemdata[checkedKey]"
-              v-bind:class="itemdata[checkedKey]==true"/>
+              v-bind:class="itemdata[checkedKey]==true"/> -->
           <span v-bind:class="{'KsTree-name':hasChildren}" 
               v-on:click="show=!show">{{itemdata[nameKey]}}</span>
       </div>
@@ -22,8 +25,11 @@
   </li>
 </template>
 <script type="text/javascript">
-
+  import KsCheckbox2 from 'KsComponents/KsCheckbox/v0.1.0/src/checkbox.vue'  
   export default{
+    components:{
+        KsCheckbox2
+    },
     name:'treeitem', 
     props:{
         itemdata:{
@@ -59,6 +65,7 @@
             this.$emit('change')
         },
         checkboxChange(){
+            console.log('change')
             var checkedKey = this.checkedKey
             this.deep(this.itemdata,this.itemdata[checkedKey])
             this.$emit('change')
