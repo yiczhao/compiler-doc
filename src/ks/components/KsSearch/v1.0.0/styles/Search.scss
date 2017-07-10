@@ -6,6 +6,7 @@
     input {
         @extend %input;
         width: 100%;
+        padding-right: 32px!important;
     }
     .SearchIcon {
         position: absolute;

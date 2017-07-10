@@ -318,8 +318,19 @@ export default (router) => {
             '/search': {
                 name: 'search',
                 cnName: '模糊搜索',
+                goName: 'search/v1.0.0',
                 component: (resolve) => {
-                    require(['./views/data/search.md'], resolve)
+                    require(['./views/data/search/index.vue'], resolve)
+                },
+                subRoutes: {
+                    '/v1.0.0': {
+                        name: 'search/v1.0.0',
+                        cnName: 'v1.0.0',
+                        goName: '',
+                        component: (resolve) => {
+                            require(['./views/data/search/v1.0.0.md'], resolve)
+                        }
+                    }
                 }
             },
 
