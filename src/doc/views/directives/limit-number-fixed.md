@@ -2,10 +2,13 @@
 ---
 
 {{val}}
-<input type="text" name=""
+<input type="text"
+    v-ks-limit-number-fixed limit="999" v-model="val">
+
+```html
+<input type="text"
     v-ks-limit-number-fixed v-model="val">
-
-
+```
 
 
 

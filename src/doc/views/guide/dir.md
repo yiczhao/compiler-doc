@@ -21,7 +21,7 @@ import KsButton from './src/Button.vue'
 import KsNrButton from './src/NrButton.vue'
 import KsGhostButton from './src/GhostButton.vue'
 
-export {
+export default{
   KsButton,
   KsNrButton,
   KsGhostButton
@@ -34,8 +34,8 @@ export {
 
 
 ```scss
-  @import '../../styles/base/creater/index';
-  @import '../../styles/base/ref/index';
-  @import '../../styles/common/icon-input';
+  @import '~KsComponents/styles/base/creater/index';
+  @import '~KsComponents/styles/base/ref/index';
+  @import '~KsComponents/styles/common/icon-input';
 ```
 >  组件文件夹下的index.js要导入到外层index.js 文件中，加以自测并完成文档
