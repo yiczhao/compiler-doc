@@ -586,11 +586,30 @@ export default (router) => {
           },
           subRoutes: {
             /* 更新日志 */
-            '/tooltips': {
-              name: 'tooltips',
+            '/tips': {
+              name: 'tips',
               cnName: '弹出提示',
+              goName:'tips/v1.0.0',
               component: (resolve) => {
-                require(['./views/other/tooltips.md'], resolve)
+                require(['./views/other/tips/index.vue'], resolve)
+              },
+              subRoutes: {
+                '/v0.1.0':{
+                  name: 'tips/v0.1.0',
+                  cnName: 'v0.1.0',
+                  goName:'',
+                  component: (resolve) => {
+                    require(['./views/other/tips/v0.1.0.md'], resolve)
+                  }
+                },
+                '/v1.0.0':{
+                  name: 'tips/v1.0.0',
+                  cnName: 'v1.0.0',
+                  goName:'',
+                  component: (resolve) => {
+                    require(['./views/other/tips/v1.0.0.md'], resolve)
+                  }
+                },
               }
             }
           }

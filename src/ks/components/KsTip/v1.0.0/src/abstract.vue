@@ -1,33 +1,25 @@
 <template>
-  <div v-el:reference style="display: inline-block">
+  <div class="KsPopupAbstract" v-el:reference>
     <!-- 内容 -->
-    <slot></slot>
-    <div :class="className" v-el:popper v-show="!disabled && showPopper">
+    <slot name="title"></slot>
+    <div v-bind:class="className" 
+         v-el:popper 
+         v-show="!disabled && showPopper">
           <strong v-text="content"></strong>
           <slot name="content"></slot>
-          <div class="txtr mb-20">
-              <input type="button" class="btn-dark-light mr-10" value="取消">
-              <input type="button" class="btn-primary" value="完成">             
-          </div>
     </div>
   </div>
 </template>
 
 <script>
   import VuePopper from 'KsComponents/utils/Popper'
-
+  
   export default {
-    VERSION: '0.1.0',
-
+    VERSION: '1.0.0',
     name: 'KsPopupAbstract',
-
     mixins: [VuePopper],
-
-    data () {
-      return {}
-    },
-
     props: {
+      show:Boolean,
       className: {type: String, default: 'KsPopupAbstract'},
       arrowClassName: {type: String, default: 'KsPopupAbstract-arrow'},
       disabled: Boolean,
@@ -42,6 +34,29 @@
           }
         }
       }
+    },
+    data () {
+      return {}
+    },
+    watch:{
+      show(val){
+        this.showPopper = val
+      },
+      placement(val){
+        
+        if(!this.popperJS) this.updatePopper()
+        this.showPopper = false
+        setTimeout(()=>{
+          this.doDestroy()
+          this.updatePopper()  
+          this.showPopper = true
+          this.$emit('change',this.showPopper)
+        })
+        
+      }
+    },
+    created(){
+      this.showPopper = this.show
     }
 
   }
