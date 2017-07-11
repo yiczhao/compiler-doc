@@ -32,13 +32,13 @@
 
   export default {
     VERSION: '1.0.0',
-    name: 'KsTip',
+    name: 'KsTips',
     components: { KsPopupAbstract },
     props: {
       type:{default:'hover'},
       placement:{type: String, default: 'bottom'},
-      className: {type: String, default: 'KsTip'},
-      arrowClassName: {type: String, default: 'KsTip-arrow'},
+      className: {type: String, default: 'KsTipContext'},
+      arrowClassName: {type: String, default: 'KsTipContext-arrow'},
       openDelay: {type: Number, default: 0},
       closeDelay: {type: Number, default: 0},
       disabled: {type:Boolean,default:false},
