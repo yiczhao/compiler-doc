@@ -89,7 +89,7 @@ export default [
       {
         name: '其他 Others', icon: 'icon', link: '',
         subMenu: [
-          {name: 'Tooltips 弹出提示', icon: 'icon', link: 'tooltips'},
+          {name: 'Tooltips 弹出提示', icon: 'icon', link: 'tips'},
           {name: 'Image 查看', icon: 'icon', link: 'image/v1.0.1'},
           // {name: 'ksImgs 查看', icon: 'icon', link: 'ksimg'},
           // {name: 'Carousel 走马灯', icon: 'icon', link: ''},

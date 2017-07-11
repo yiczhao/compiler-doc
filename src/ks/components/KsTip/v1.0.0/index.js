@@ -4,11 +4,10 @@
  * @date: 2016/11/14.
  */
 
-
-import KsTips_v0 from './v0.1.0/'
-import KsTips_v1 from './v1.0.0/'
+import KsAbstract from './src/abstract.vue'
+import KsTips from './src/tips.vue'
 
 export default{
-    KsTips_v0,
-    KsTips_v1
+  KsAbstract,
+  KsTips
 }
