@@ -11,8 +11,8 @@
  * @data 2017/7/10
  */
 
-$panelClassName: 'KsTip';                                    // 内容区域样式
-$arrowClassName: 'KsTip-arrow';                              // 箭头样式
+$panelClassName: 'KsTipContext';                                    // 内容区域样式
+$arrowClassName: 'KsTipContext-arrow';                              // 箭头样式
 $hue: #333;                             
                          // 主色调
 .KsTips {display: inline-block;position:relative}
