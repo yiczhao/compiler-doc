@@ -12,6 +12,7 @@
     import props from './mixins/props.js'
     import dater from './dater.vue'
     export default {
+        VERSION:'0.1.0',
         components:{
             'ks-dater':dater
         },

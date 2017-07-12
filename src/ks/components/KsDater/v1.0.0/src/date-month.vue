@@ -61,9 +61,6 @@
                 var year = dater.getFullYear()
             }
 
-            this.min = this.min.replace(/-/g,'')
-            this.max = this.max.replace(/-/g,'')
-            
             return {
                 year:year,
                 month:month,
@@ -78,7 +75,6 @@
         computed:{
             value:{
                 get(){
-                    // console.log(this.interior.year+'-'+fullzero(this.interior.month))
                     return this.interior.year+'-'+fullzero(this.interior.month)
                 },
                 set(val){
@@ -119,10 +115,19 @@
                 this.year = +this.year + 1
             },
             banLimit(val){
-                if((this.min && val < this.min)
-                    || (this.max && val > this.max)) {
-                    return true
+                if(this.min > this.max){
+                    if(this.max < val && val< this.min){
+                        return true
+                    }
+                }else{
+                    if(this.min && val < this.min){
+                        return true
+                    }
+                    if(this.max && val > this.max){
+                        return true   
+                    }    
                 }
+                
                 return false
             }, 
             pick(event){
@@ -154,13 +159,12 @@
             }
         },
         created(){
-            // if(this.value)
-            // console.log(this.value)
-            // var dater = new Date()
-            // this.year = dater.getFullYear()
-            // this.value = this.value
-            // this.curmonth()
+            this.min = this.min.replace(/-/g,'')
+            this.max = this.max.replace(/-/g,'')
+            console.log(this.min)
+            console.log(this.max)
         }
+
 
     }
 </script>
