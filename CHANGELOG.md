@@ -1,13 +1,13 @@
 ## 更新日志
 
 **2017.07.11**
-- 重构KsTips(#!/other/tips/v1.0.0)
+- 重构[KsTips](#!/other/tips/v1.0.0)
 
 **2017.07.06**
-- 重构KsTree(#!/data/tree/v0.1.0)
+- 重构[KsTree](#!/data/tree/v0.1.0)
 
 **2017.07.05**
-- 重构checkbox基础元件，KsTree中用到(#!/data/tree/v0.1.0)
+- 重构checkbox基础元件，[KsTree](#!/data/tree/v0.1.0)中用到
 
 **2017.06.19**
 - 文档添加版本

@@ -1,14 +1,20 @@
 <template>
-  <h3> 点击图标复制图标名称 ！！！</h3>
-  {{KsFonts|json}}
-  <ul class="ks-font-library">
-    <li v-for="(key, icon) in KsFonts" class="copy" @click="currentIcon = icon.des"
-        data-clipboard-action="copy" :data-clipboard-target="'#iconName' + $index">
-      <ks-icon :name="key" library="ks" rotate="90" animate="spin"></ks-icon>
-      <h6 v-text="icon.des"></h6>
-      <input type="text" :value="key" :id="'iconName' + $index" style="opacity: 0; position: absolute">
-    </li>
-  </ul>
+  <div>
+    <h3> 点击图标复制图标名称 ！！！</h3>
+    <ul class="ks-font-library">
+      <li v-for="(key, icon) in KsFonts" class="copy" @click="currentIcon = icon.des"
+          data-clipboard-action="copy" :data-clipboard-target="'#iconName' + $index">
+        <ks-icon :name="key" library="ks" rotate="90" animate="spin"></ks-icon>
+        <h6 v-text="icon.des"></h6>
+        <input type="text" :value="key" :id="'iconName' + $index" style="opacity: 0; position: absolute">
+      </li>
+    </ul>
+    <pre>
+      {{KsFonts|json}}  
+    </pre>
+    
+  </div>
+  
 </template>
 
 <script>
