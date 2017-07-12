@@ -58,8 +58,7 @@
             
             this.dater = ''
             this.timer = ''
-            this.min = this.min.replace(/-/g,'')
-            this.max = this.max.replace(/-/g,'')
+            
 
 
             return {
@@ -92,13 +91,21 @@
             },
             // 限制范围
             banLimit(val){
-                // console.log(val,this.min)
-                if((this.min && val < this.min)
-                    || (this.max && val > this.max)) {
-                    return true
+                if(this.min > this.max){
+                    if(this.max < val && val< this.min){
+                        return true
+                    }
+                }else{
+                    if(this.min && val < this.min){
+                        return true
+                    }
+                    if(this.max && val > this.max){
+                        return true   
+                    }    
                 }
+                
                 return false
-            }, 
+            },  
             // 过滤选择
             selectd(dater){
                 
@@ -209,6 +216,8 @@
 
         },
         created () {
+            this.min = this.min.replace(/-/g,'')
+            this.max = this.max.replace(/-/g,'')
             if(!this.value){this.now = parse(stringify(this.now))}
             this.update(this.value)
         }

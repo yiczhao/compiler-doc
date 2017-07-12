@@ -64,6 +64,7 @@
     import { get_range_dates , split_ym } from './util/range'
 
     export default {
+        VERSION:'1.0.0',
         mixins: [mixins],
         props:{
             range_dater:{

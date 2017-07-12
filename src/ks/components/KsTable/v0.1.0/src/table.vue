@@ -53,6 +53,7 @@
     
     import KsIcon from 'KsComponents/KsIcon/v1.0.0/src/icon.vue'
     export default {
+        VERSION:'0.1.0',
         components:{
             'ks-icon':KsIcon
         },
@@ -77,11 +78,16 @@
                         asc:'xiangshangjiantou'
                     }
                 }
-            }
+            },
+            uid:{type:Number}
         },
         
         data(){
+
             this._ksparent = this.$parent
+            while(this.uid && this._ksparent._uid != this.uid){
+                this._ksparent = this._ksparent.$parent
+            }
             this._options = {
                 templates:{},
                 columnkeys:[]
@@ -120,7 +126,8 @@
                     this.tempData = this.filterData(val,this._options.columnkeys)
                     this.allchecked = this.isAllChecked(this.tempData)
                     this.$nextTick(()=>{
-                        this.$parent.$compile(this.$els.tbody)    
+                        // this.$parent.$compile(this.$els.tbody)    
+                        this._ksparent.$compile(this.$els.tbody)    
                     })
                     
                 }
@@ -258,9 +265,7 @@
             this.columns = this.columns
             this.data = this.data
             this.$nextTick(()=>{
-                // this.$parent.$compile(this.$parent.$el)
-                // this.$parent.$destroy()
-                this.$parent.$compile(this.$els.tbody)
+                this._ksparent.$compile(this.$els.tbody)
             })
         }
     }
