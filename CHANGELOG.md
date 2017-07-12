@@ -1,5 +1,9 @@
 ## 更新日志
 
+
+**2017.07.12**
+- 优化指令[KsLimitNumberFixed](#!/directives/limit-number-fixed)
+
 **2017.07.11**
 - 重构[KsTips](#!/other/tips/v1.0.0)
 
