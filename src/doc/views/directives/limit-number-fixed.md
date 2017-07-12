@@ -3,7 +3,7 @@
 
 {{val}}
 <input type="text"
-    v-ks-limit-number-fixed:0="val" max="999" min="-90" v-model="val">
+    v-ks-limit-number-fixed:2="val" max="999" min="-90" v-model="val">
 
 ```html
 <input type="text"
