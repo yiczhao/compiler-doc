@@ -1,11 +1,11 @@
 export default {
-        params: ['limit','min'],
+        params: ['limit','min','max'],
         twoWay: true,
         bind () {
             
-            var limit = this.params.limit || 100000
+            var limit = this.params.limit || this.params.max || 100000
             var min = this.params.min || 0
-
+            
             if(this.el.addEventListener){
                 this.el.addEventListener('input', e=>{
                     this.handler.call(this,limit,min)
@@ -25,64 +25,78 @@ export default {
         },
         handler(limit,min) {
 
-                //debugger
-                // var reg = new RegExp('^[0-9]+(\\.[0-9]{0,'+this.arg+'})?$')
+            //debugger
+            // var reg = new RegExp('^[0-9]+(\\.[0-9]{0,'+this.arg+'})?$')
 
-                var temp_val = this.el.value,ints,fixed = ''
-                
-                if(temp_val.length==1&&temp_val=="-"&&min!=0) return 
-                   
-                if(parseInt(temp_val)<-1){
-                        temp_val="-"
-                }else{
-                    if(temp_val=='' || isNaN(parseInt(temp_val))) {
-                        temp_val = ''
-                    }else{
-                        ints = this.get_ints(temp_val,limit,min)
-                        fixed = this.get_fixed(temp_val,this.arg)
-                        temp_val = ints+fixed
-                    }
-                }
+            var tempVal = this.el.value
+            
+            if(tempVal.length==1 && tempVal=="-" && min!=0) return 
+               
+            if(+tempVal<-1){
+                console.log(tempVal,Math.abs(tempVal))
+                tempVal = '-'+this.getPureVal(tempVal.slice(1),Math.abs(min))
 
-                this.el.value = temp_val
-                this.set(temp_val)
-                
-            },
-
-            /**
-             * 获取整数部分
-             * INF 无穷大
-             */
-            get_ints (temp_val,limit,min){
-                var ints = parseInt(temp_val, 10)
-                if(limit!='INF' && ints > limit){
-                    ints = (''+ints).substr(0,(''+limit).length-1)
-                }
-
-                return ints
-            },
-
-            // 获取小数部分
-            get_fixed (temp_val,limit,min){
-                //debugger
-                var fixed = ''
-                if(limit && ~temp_val.indexOf('.')){
-                    if(temp_val.split('.')[1].length!=1){
-                        temp_val.split('.')[1].split('').map(t=>{
-                         fixed += isNaN(parseInt(t)) 
-                                        ? ''
-                                        : parseInt(t)
-                        })
-                    }else{
-                        fixed=temp_val.split('.')[1]
-                        fixed = isNaN(parseInt(fixed)) 
-                                        ? ''
-                                        : parseInt(fixed)
-                    }
-                    
-                   
-                    fixed = '.'+ ((''+fixed).substr(0,limit))
-                }
-                return fixed
+            }else{
+                tempVal = this.getPureVal(tempVal,limit)
             }
+
+            this.el.value = tempVal
+            this.set(tempVal)
+            
+        },
+        getPureVal(tempVal,limit){
+            var ints,fixed
+            if(tempVal=='' || isNaN(parseInt(tempVal))) {
+                tempVal = ''
+            }else{
+                ints = this.getInts(tempVal,limit)
+                fixed = this.getFixed(tempVal,this.arg)
+                tempVal = ints+fixed
+            }
+            return tempVal
+        },
+
+        /**
+         * 获取整数部分
+         * INF 无穷大
+         */
+        getInts (tempVal,limit){
+            var ints = parseInt(tempVal, 10)
+            if(limit!='INF' && ints > limit){
+                ints = (''+ints).substr(0,(''+limit).length)
+            }
+            if(limit!='INF' && ints > limit){
+                ints = (''+ints).substr(0,(''+limit).length-1)
+            }
+
+
+            return ints
+        },
+
+        // 获取小数部分
+        getFixed (tempVal,limit){
+            //debugger
+            var fixed = '',tempVal = tempVal.toString(),
+                fixedVal = tempVal.split('.')[1]
+            // console.log('tempVal',tempVal)
+            if(+limit && ~tempVal.indexOf('.')){
+                if(fixedVal.length!=1){
+                    fixedVal.split('').map(t=>{
+                     fixed += isNaN(parseInt(t)) 
+                                    ? ''
+                                    : parseInt(t)
+                    })
+                }else{
+                    fixed = fixedVal
+                    fixed = isNaN(parseInt(fixed)) 
+                                    ? ''
+                                    : parseInt(fixed)
+                }
+                
+               
+                fixed = '.'+ ((''+fixed).substr(0,limit))
+            }
+            // console.log('fixed',fixed)
+            return fixed
+        }
     }
