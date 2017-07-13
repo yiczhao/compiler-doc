@@ -1,8 +1,8 @@
 {
-  "name": "auth-manage-ui",
-  "version": "0.1.0",
-  "description": "A Vue.js project",
-  "author": "zhangjie <zhangjie@kashuo.com>",
+  "name": "KsComponents",
+  "version": "1.0.0",
+  "description": "KS 组件文档",
+  "author": "KS FED",
   "scripts": {
     "develop": "node build/dev-server.js",
     "unit": "karma start test/unit/karma.conf.js --auto-watch",
