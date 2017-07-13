@@ -1,3 +1,4 @@
+// VERSION: '0.1.0'
 export default {
     bind () {
         this.contains = (e) => {

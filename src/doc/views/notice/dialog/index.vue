@@ -4,6 +4,9 @@
         <a  class="ib tab" title=""
             v-bind:class="{'active':active=='dialog/v1.0.0'}" 
             v-link="{name:'dialog/v1.0.0'}">v1.0.0</a>
+        <a  class="ib tab" title=""
+            v-bind:class="{'active':active=='dialog/v0.1.0'}" 
+            v-link="{name:'dialog/v0.1.0'}">v0.1.0</a>
     </div>
     <router-view></router-view>
   </div>

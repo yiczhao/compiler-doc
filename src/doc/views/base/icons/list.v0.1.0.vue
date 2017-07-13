@@ -23,7 +23,7 @@
   
 
   export default{
-    kscomponents:['KsIcon_v0','KsNotice' ],
+    kscomponents:['KsIcon_v0','KsNotice_v1' ],
     data () {
       return {
         KsFonts,

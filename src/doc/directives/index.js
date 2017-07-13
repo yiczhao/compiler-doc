@@ -18,7 +18,7 @@ const install = function(Vue) {
     Vue.directive(k, Directives[k])
   })
 
-  console.log(Vue)
+  
 }
 
 // automation register components.

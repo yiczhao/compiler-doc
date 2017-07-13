@@ -11,6 +11,7 @@
 
 <script>
   export default{
+    VERSION: '0.1.0',
     props: {
       color: {type: String, default: '#00A5E0'},
       checked: {twoWay: true},

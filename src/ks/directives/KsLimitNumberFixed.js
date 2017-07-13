@@ -1,3 +1,4 @@
+// VERSION: '0.2.0'
 export default {
         params: ['limit','min','max'],
         twoWay: true,

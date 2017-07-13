@@ -161,8 +161,7 @@
         created(){
             this.min = this.min.replace(/-/g,'')
             this.max = this.max.replace(/-/g,'')
-            console.log(this.min)
-            console.log(this.max)
+            
         }
 
 

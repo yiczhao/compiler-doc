@@ -3,6 +3,7 @@
  * @author pkeros
  * @data 2017/4/20
  * @email pkeros@vip.qq.com
+ * VERSION: '1.0.0'
  */
 import {KsMask as KsMaskRaw} from 'KsComponents/KsMask/v1.0.0/'
 import Dialog from './main.vue'

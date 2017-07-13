@@ -17,6 +17,7 @@
 <script type="text/javascript">
 import item from './Item.vue'
     export default {
+        VERSION: '0.1.0',
         props:{
             floor_begin:{
                 type:String,
