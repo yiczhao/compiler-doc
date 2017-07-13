@@ -3,10 +3,11 @@
  * @author pkeros
  * @data 2017/3/31
  * @email pkeros@vip.qq.com
+ * VERSION:'1.0.0'
  */
 
 import NoticeCenter from './container.vue'
-import ObjectUtil from '../../utils/ObjectUtil'
+import ObjectUtil from 'KsComponents/utils/ObjectUtil'
 
 let KsNoticeCenter, noticeCenter, _uid = 0;
 

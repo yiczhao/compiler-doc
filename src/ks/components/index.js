@@ -7,7 +7,7 @@
  */
 
 import KsPopup from './KsPopup'
-import KsNoticeCenter from './KsNoticeCenter'
+import KsNotice from './KsNotice'
 import KsSwitch from './KsSwitch'
 import { KsDialog, KsDialogEntity } from './KsDialog'
 import { KsModal, KsModalEntity, KsModalCenter } from './KsModal'
@@ -62,10 +62,11 @@ const Components = {
 
 };
 
+
 // 插件
 const Plugins = {
 
-  KsNotice:KsNoticeCenter,
+  KsNotice,
   KsDialog,
   KsMask,
   KsModal

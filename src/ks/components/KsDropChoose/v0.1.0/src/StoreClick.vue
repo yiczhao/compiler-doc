@@ -21,6 +21,7 @@
 <script type="text/javascript">  
     import store from './Store.vue'
     export default {  
+        VERSION: '0.1.0',
         components:{
             'store':store
         },

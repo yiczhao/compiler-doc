@@ -39,6 +39,7 @@ import ListStore from './ListStore.vue'
 import KsButton from 'KsComponents/KsButton/v0.1.0/src/main.vue'
 import KsDialogProgram from 'KsComponents/KsDialogProgram/v0.1.0/src/Dialog.vue'
   export default {  
+    VERSION: '0.1.0',
     props:{
         list:{
             type:Array

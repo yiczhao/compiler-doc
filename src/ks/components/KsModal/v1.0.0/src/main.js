@@ -4,6 +4,7 @@
  *  可以进行全局调用的哦, 棒棒哒
  * @author: pkeros.
  * @date: 2016/10/19.
+ * VERSION:'1.0.0'
  */
 import Modal from './main.vue'
 import { KsMask as  KsMaskRaw} from 'KsComponents/KsMask/v1.0.0/'

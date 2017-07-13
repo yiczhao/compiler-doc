@@ -461,11 +461,19 @@ export default (router) => {
             '/notice-center': {
               name: 'notice-center',
               cnName: '对话框',
-              goName:'notice/v0.1.0',
+              goName:'notice/v1.0.0',
               component: (resolve) => {
                 require(['./views/notice/notice-center/index.vue'], resolve)
               },
               subRoutes: {
+                '/v1.0.0': {
+                  name: 'notice/v1.0.0',
+                  cnName: 'v1.0.0',
+                  goName:'',
+                  component: (resolve) => {
+                    require(['./views/notice/notice-center/v1.0.0.md'], resolve)
+                  }
+                },
                 '/v0.1.0': {
                   name: 'notice/v0.1.0',
                   cnName: 'v0.1.0',
@@ -492,6 +500,14 @@ export default (router) => {
                   goName:'',
                   component: (resolve) => {
                     require(['./views/notice/dialog/v1.0.0.md'], resolve)
+                  }
+                },
+                '/v0.1.0': {
+                  name: 'dialog/v0.1.0',
+                  cnName: 'v0.1.0',
+                  goName:'',
+                  component: (resolve) => {
+                    require(['./views/notice/dialog/v0.1.0.md'], resolve)
                   }
                 }
               }

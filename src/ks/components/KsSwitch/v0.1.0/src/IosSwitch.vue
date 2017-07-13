@@ -20,6 +20,7 @@
 
 <script>
   export default{
+    VERSION: '0.1.0',
     name: 'KsIosSwitch',
 
     props: {

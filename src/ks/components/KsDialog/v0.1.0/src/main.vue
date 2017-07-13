@@ -30,8 +30,11 @@
 </template>
 
 <script>
-  import { KsButton } from '../../KsButton'
-  import { KsMask } from '../../KsMask'
+ 
+  import { KsMask } from 'KsComponents/KsMask/v0.1.0'
+  import KsIcon from 'KsComponents/KsIcon/v0.1.0/'
+  import KsButton from 'KsComponents/KsButton/v0.1.0/src/main.vue'
+
 
   // 类型对色调映射
   const colorMapper = {
@@ -44,7 +47,7 @@
   let zIndex = 19941026
 
   export default {
-
+    VERSION: '0.1.0',
     data () {
       return { }
     },

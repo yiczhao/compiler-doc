@@ -31,6 +31,7 @@
 <script type="text/javascript">  
 
   export default {  
+    VERSION: '0.1.0',
     props:{
         store_part: {
                 // toWay:true,

@@ -27,13 +27,13 @@
 <script>
   import typeMapper from '../data/typeMapper'
   import Abstract from './abstract.vue'
-  import KsIcon from 'KsComponents/KsIcon/v1.0.0/'
+  import KsIcon from 'KsComponents/KsIcon/v0.1.0/'
   import KsButton from 'KsComponents/KsButton/v0.1.0/src/main.vue'
 
   
 
   export default {
-    VERSION: '1.0.1',
+    VERSION: '1.0.0',
 
     data () {
       return {

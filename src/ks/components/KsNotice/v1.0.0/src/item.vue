@@ -12,7 +12,7 @@
 </template>
 
 <script>
-  import KsIcon from 'KsComponents/KsIcon/v1.0.0/'
+  import KsIcon from 'KsComponents/KsIcon/v0.1.0/'
 
   /**
    * @description 色调映射

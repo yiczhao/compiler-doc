@@ -51,7 +51,7 @@
      * 
      */
     
-    import KsIcon from 'KsComponents/KsIcon/v1.0.0/src/icon.vue'
+    import KsIcon from 'KsComponents/KsIcon/v0.1.0/src/icon.vue'
     export default {
         VERSION:'0.1.0',
         components:{

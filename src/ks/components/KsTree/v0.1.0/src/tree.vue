@@ -12,6 +12,7 @@
 <script type="text/javascript">
     import treeitem from './item.vue'
     export default {
+        VERSION: '0.1.0',
         components:{
             treeitem
         },

@@ -1,7 +1,7 @@
 export default {
     bind () {
         this.contains = (e) => {
-            console.log(this.el.contains(e.target))
+            // console.log(this.el.contains(e.target))
             if (this.el.contains(e.target)) return false
             if (this.expression) {
                 this.vm[this.expression]()

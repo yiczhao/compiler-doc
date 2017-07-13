@@ -5,6 +5,6 @@
  * @email pkeros@vip.qq.com
  */
 
-import KsNoticeCenter from './src/main.js'
+import KsNotice from './src/main.js'
 
-export default KsNoticeCenter
+export default KsNotice
