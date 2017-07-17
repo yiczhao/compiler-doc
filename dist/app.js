@@ -13606,7 +13606,7 @@ webpackJsonp([0],[
 	//             </div>
 	//           </div>
 	//           <div class="bottom" >
-	//             <span class="tip">点击你需要的表格项添加或移除，也可以拖拽进行排序</span>
+	//             <span class="tip">点击你需要的表格项添加或移除，进行排序</span>
 	//             <div class="txtr btngroup">
 	//               <span class="reset" @click="reset($index)">重选</span>
 	//               <span class="checkall" @click="checkall($index)">全选</span>
@@ -13802,7 +13802,7 @@ webpackJsonp([0],[
 /* 678 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"AddTableItem\">\n  <ks-dialog-program\n    :show=\"is_show\"\n    :cb-close=\"close_dialog\"\n    :width=\"width\"\n    :is_storetype = \"is_storetype\">\n    <div class=\"dialog-main\" id = \"dialog\">\n      <div class=\"btn-group\">\n        <ul>\n          <li v-for=\"i in list\"\n              @click=\"clicktablehead($index)\"\n              :class=\"(showindex == $index) && 'check'\">\n            <span>{{i.title}}</span>\n          </li>\n          <li class=\"btn-add\"\n              @click=\"addtablename()\"\n              v-show = \"addicon && list.length < 11\"></li>\n        </ul>\n      </div>\n      <div\n        v-for = \"listitem in list\"\n        v-show = \"showindex == $index\">\n        <div class=\"top\" >\n          <div class=\"btn-input\">\n            <input type=\"text\" class=\"AddTableItem-input\"\n                   v-model = \"listitem.title\"\n                   @click = \"modifyname($event,$index)\"\n                   @keyup.enter=\"savetablename($event,$index)\">\n            <span\n              @click=\"deletetable($index)\"\n              v-show=\"$index != 0\">删除当前分组</span>\n          </div>\n          <div class=\"table-default\">\n            <ul>\n              <li\n                v-for = \"n in listitem.defaultlist\"\n                :class = \"n.ischeck && 'alreadychoose'\"\n                @click=\"removedefault(n,$index)\">\n                <span>{{n.name}}</span>\n              </li>\n            </ul>\n          </div>\n        </div>\n        <div class=\"middle\" >\n          <div class=\"ks-row mb-20\" v-for=\"first in listitem.addlist\">\n            <div class=\"ks-col title\">{{first.title}}</div>\n            <ul class=\"ks-col\">\n              <li\n                v-for=\"item in first.list_data\"\n                :class=\"(item.isdisabled) && 'disabled'\"\n                @click=\"adddefault(item,$index,first)\">\n                <span>{{item.name}}</span>\n              </li>\n            </ul>\n          </div>\n        </div>\n        <div class=\"bottom\" >\n          <span class=\"tip\">点击你需要的表格项添加或移除，也可以拖拽进行排序</span>\n          <div class=\"txtr btngroup\">\n            <span class=\"reset\" @click=\"reset($index)\">重选</span>\n            <span class=\"checkall\" @click=\"checkall($index)\">全选</span>\n            <ks-button :ghost=\"true\" type=\"other\" style=\"margin-right: 10px\"\n                       @click=\"close_dialog\">取消</ks-button>\n            <ks-button :type=\"'primary'\"\n                       @click=\"savetable()\">确认</ks-button>\n          </div>\n        </div>\n      </div>\n    </div>\n  </ks-dialog-program>\n</div>\n";
+	module.exports = "\n<div class=\"AddTableItem\">\n  <ks-dialog-program\n    :show=\"is_show\"\n    :cb-close=\"close_dialog\"\n    :width=\"width\"\n    :is_storetype = \"is_storetype\">\n    <div class=\"dialog-main\" id = \"dialog\">\n      <div class=\"btn-group\">\n        <ul>\n          <li v-for=\"i in list\"\n              @click=\"clicktablehead($index)\"\n              :class=\"(showindex == $index) && 'check'\">\n            <span>{{i.title}}</span>\n          </li>\n          <li class=\"btn-add\"\n              @click=\"addtablename()\"\n              v-show = \"addicon && list.length < 11\"></li>\n        </ul>\n      </div>\n      <div\n        v-for = \"listitem in list\"\n        v-show = \"showindex == $index\">\n        <div class=\"top\" >\n          <div class=\"btn-input\">\n            <input type=\"text\" class=\"AddTableItem-input\"\n                   v-model = \"listitem.title\"\n                   @click = \"modifyname($event,$index)\"\n                   @keyup.enter=\"savetablename($event,$index)\">\n            <span\n              @click=\"deletetable($index)\"\n              v-show=\"$index != 0\">删除当前分组</span>\n          </div>\n          <div class=\"table-default\">\n            <ul>\n              <li\n                v-for = \"n in listitem.defaultlist\"\n                :class = \"n.ischeck && 'alreadychoose'\"\n                @click=\"removedefault(n,$index)\">\n                <span>{{n.name}}</span>\n              </li>\n            </ul>\n          </div>\n        </div>\n        <div class=\"middle\" >\n          <div class=\"ks-row mb-20\" v-for=\"first in listitem.addlist\">\n            <div class=\"ks-col title\">{{first.title}}</div>\n            <ul class=\"ks-col\">\n              <li\n                v-for=\"item in first.list_data\"\n                :class=\"(item.isdisabled) && 'disabled'\"\n                @click=\"adddefault(item,$index,first)\">\n                <span>{{item.name}}</span>\n              </li>\n            </ul>\n          </div>\n        </div>\n        <div class=\"bottom\" >\n          <span class=\"tip\">点击你需要的表格项添加或移除，进行排序</span>\n          <div class=\"txtr btngroup\">\n            <span class=\"reset\" @click=\"reset($index)\">重选</span>\n            <span class=\"checkall\" @click=\"checkall($index)\">全选</span>\n            <ks-button :ghost=\"true\" type=\"other\" style=\"margin-right: 10px\"\n                       @click=\"close_dialog\">取消</ks-button>\n            <ks-button :type=\"'primary'\"\n                       @click=\"savetable()\">确认</ks-button>\n          </div>\n        </div>\n      </div>\n    </div>\n  </ks-dialog-program>\n</div>\n";
 
 /***/ },
 /* 679 */
@@ -14843,12 +14843,73 @@ webpackJsonp([0],[
 
 	var _icon2 = _interopRequireDefault(_icon);
 
+	var _checkbox = __webpack_require__(717);
+
+	var _checkbox2 = _interopRequireDefault(_checkbox);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	// <template>
+	// <div class="KsTable-striped">
+	//     <table v-on:change="change">  
+	//         <thead v-el:thead>    
+	//             <tr> 
+	//                 <th v-for="item in columns">
+	//                     <ks-icon v-bind:name="item.sortable | getIcon" 
+	//                         v-if="item.sortable"
+	//                         size="1x"
+	//                         v-on:click="sort($index)"></ks-icon>
+	//                     <input type="checkbox" name="ks-table-allchecked"
+	//                         v-model="allchecked"
+	//                         v-if="item.checked"/>
+	//                     <div v-text="item.title" 
+	//                         style="display: inline-block;" 
+	//                          v-bind:style="{'width':item.width}"></div>
+	//                 </th>      
+	//             </tr>  
+	//         </thead>  
+	//         <tbody v-el:tbody>    
+	//             <tr v-for="(index, item) in data">      
+	//                 <td v-for="(key, val) in item" >
+	//                     <input type="checkbox" id="KsTable_{{_uid}}_{{index}}"
+	//                            v-if="key=='checked'"
+	//                            v-model="item.checked"/>
+	//                     <!-- <ks-checkbox2 id="KsTable_{{_uid}}_{{index}}"
+	//                         v-if="key=='checked'"
+	//                         v-bind:checked.sync="item.checked"></ks-checkbox2>
+	//  -->                    <div v-if="key!='checked'" v-html="val | render key item index">
+	//                     </div>        
+	//                 </td>      
+	//             </tr>
+	//
+	//         </tbody>
+	//     </table>
+	// </div>
+	// </template>
+	// <script type="text/javascript">
+	/**
+	 * 1. 制定基本API columns、data、icon 图标接口
+	 * 2. 数据从父级流入处理columns
+	 *     get 和 set
+	 *     set 处理: 
+	 *     i.  map columns 数据填充 this._options
+	 *         _options: {
+	 *             //  储存了要重新渲染的模板内容，
+	 *             //  作用：用于filters的render输出页面
+	 *             templates:{},
+	 *             //  获取定义的columns中的key值，
+	 *             //  作用：用于 filterData 过滤源数据获取 columnkeys 中需要显示的数据
+	 *             columnkeys:[] 
+	 *         }
+	 * 
+	 * 
+	 */
 
 	exports.default = {
 	    VERSION: '0.1.0',
 	    components: {
-	        'ks-icon': _icon2.default
+	        'ks-icon': _icon2.default,
+	        KsCheckbox2: _checkbox2.default
 	    },
 	    props: {
 	        columns: {
@@ -14878,7 +14939,7 @@ webpackJsonp([0],[
 	    data: function data() {
 
 	        this._ksparent = this.$parent;
-	        while (this.uid && this._ksparent._uid != this.uid) {
+	        while (!isNaN(this.uid) && this._ksparent._uid != this.uid) {
 	            this._ksparent = this._ksparent.$parent;
 	        }
 	        this._options = {
@@ -15032,7 +15093,8 @@ webpackJsonp([0],[
 
 	            // console.log(event.target)
 	            this.$emit('change-checked', this.data, index);
-
+	            event.preventDefault();
+	            event.stopPropagation();
 	            // console.log(this.data)
 	        },
 
@@ -15064,58 +15126,6 @@ webpackJsonp([0],[
 	// <style lang="scss">
 	//     @import '../styles/table.scss'
 	// </style>
-	// <template>
-	// <div class="KsTable-striped">
-	//     <table v-on:change="change">  
-	//         <thead v-el:thead>    
-	//             <tr> 
-	//                 <th v-for="item in columns">
-	//                     <ks-icon v-bind:name="item.sortable | getIcon" 
-	//                         v-if="item.sortable"
-	//                         size="1x"
-	//                         v-on:click="sort($index)"></ks-icon>
-	//                     <input type="checkbox" name="ks-table-allchecked"
-	//                         v-model="allchecked"
-	//                         v-if="item.checked"/>
-	//                     <div v-text="item.title" 
-	//                         style="display: inline-block;" 
-	//                          v-bind:style="{'width':item.width}"></div>
-	//                 </th>      
-	//             </tr>  
-	//         </thead>  
-	//         <tbody v-el:tbody>    
-	//             <tr v-for="(index, item) in data">      
-	//                 <td v-for="(key, val) in item" >
-	//                     <input type="checkbox" id="KsTable_{{_uid}}_{{index}}"
-	//                            v-if="key=='checked'"
-	//                            v-model="item.checked"/>
-	//                     <div v-if="key!='checked'" v-html="val | render key item index">
-	//                     </div>        
-	//                 </td>      
-	//             </tr>
-	//
-	//         </tbody>
-	//     </table>
-	// </div>
-	// </template>
-	// <script type="text/javascript">
-	/**
-	 * 1. 制定基本API columns、data、icon 图标接口
-	 * 2. 数据从父级流入处理columns
-	 *     get 和 set
-	 *     set 处理: 
-	 *     i.  map columns 数据填充 this._options
-	 *         _options: {
-	 *             //  储存了要重新渲染的模板内容，
-	 *             //  作用：用于filters的render输出页面
-	 *             templates:{},
-	 *             //  获取定义的columns中的key值，
-	 *             //  作用：用于 filterData 过滤源数据获取 columnkeys 中需要显示的数据
-	 *             columnkeys:[] 
-	 *         }
-	 * 
-	 * 
-	 */
 
 /***/ },
 /* 717 */
@@ -15181,7 +15191,7 @@ webpackJsonp([0],[
 
 
 	// module
-	exports.push([module.id, ".KsCheckbox {\n  position: relative;\n  border: 1px solid #D0D0D5;\n  border-radius: 3px;\n  width: 18px;\n  height: 18px;\n  text-align: center;\n  vertical-align: middle; }\n  .KsCheckbox.disable {\n    opacity: .6; }\n    .KsCheckbox.disable * {\n      cursor: not-allowed; }\n\n.KsCheckbox-input {\n  position: absolute;\n  z-index: 1;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  opacity: 0; }\n  .KsCheckbox-input:checked + .KsCheckbox-cube {\n    opacity: 1; }\n\n.KsCheckbox-cube {\n  position: absolute;\n  top: 50%;\n  height: 10px;\n  width: 10px;\n  border-radius: 3px;\n  background-color: #00A5E0;\n  opacity: 0;\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n  -webkit-transform: translateX(-50%) translateY(-50%);\n          transform: translateX(-50%) translateY(-50%); }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/**\n* @file:      Neat.css V1.1.0\n* @author:    一丝\n* @update:    2013-11-22 14:55:29;\n* @copyright: 基于 normalize.css | MIT License\n* @doc:\n*/\n/**\n* Neat.css 解决的问题\n* 基于业务需要兼容的浏览器做到以下几点：\n* 1.解决BUG，特别是低级浏览器的常见BUG；\n* 2.统一效果，但不盲目追求重置为0；\n* 3.向后兼容；\n* 4.考虑响应式；\n* 5.考虑移动设备。\n*/\n/* ==========================================================================\n 有即是无，无即是有\n ========================================================================== */\nbody, dl, dd, ul, ol, h1, h2, h3, h4, h5, h6, pre, form, fieldset, legend, input, textarea, optgroup,\np, blockquote, figure, hr, menu, dir,\nthead, tbody, tfoot, th, td {\n  margin: 0;\n  padding: 0; }\n\n/**\n* 非大面积文字排版网站通常不需要列表项，如果需要可单独设置\n*/\nul, ol {\n  list-style-type: none;\n  list-style-image: none; }\n\n/* ==========================================================================\n 链接\n ========================================================================== */\n/**\n* 去除链接默认的下划线，提高文字可读性\n*/\na {\n  text-decoration: none; }\n\n/**\n* 去掉 IE 10+ 点击链接时的灰色背景\n*/\na:active {\n  background-color: transparent; }\n\n/**\n* 去掉点击时的焦点框，同时保证使用键盘可以显示焦点框\n*/\na:active,\na:hover {\n  outline: 0 none; }\n\n/**\n* 统一 Chrome 和 Safari 的焦点框样式\n* Chrome 中 thin 关键字放大页面后焦点框不会放大 http://jsbin.com/ehakom/1\n* Firefox 中 box-shadow 会导致焦点框位置偏移，需用「outline-offset」修正\n*\n*/\n/* ==========================================================================\n 字体和基础排版\n ========================================================================== */\n/**\n* 1.防止 iOS 横屏字号放大，同时保证在PC上 zoom 功能正常\n*/\nhtml {\n  -webkit-text-size-adjust: 100%;\n  -ms-text-size-adjust: 100%;\n  text-size-adjust: 100%;\n  /* 1 */\n  font-size: 62.5%;\n  /* 10/16=62.5% */ }\n\n/**\n* 所有 font-family 小写，存在空格的字体名加单引号\n* @default-font: 'helvetica neue', tahoma, \\5B8B\\4F53, sans-serif;\n* @heading-font: 'helvetica neue', tahoma, 'hiragino sans gb', stheiti,\n  \\5FAE\\8F6F\\96C5\\9ED1, \\5B8B\\4F53, 'wenquanyi micro hei', sans-serif;\n* @code-font: monaco, menlo, consolas, monospace;\n*/\n/**\n* 中文优先使用冬青黑体简体(OS X)、微软雅黑(Windows)和文泉驿微米黑(Linux)\n* 西文使用 tahoma\n* 1. 防止元素中「font-family」不能继承\n* 2. 西文字体和 OS X 字体写在前面\n* 3. Opera 12.1 之前版本不支持中文字体的英文名称\n* 4. 微软雅黑「\\5FAE\\8F6F\\96C5\\9ED1」,中易宋体「\\5B8B\\4F53」\n*/\nbody,\nbutton, input, select, textarea {\n  font-family: 'helvetica neue',arial,'hiragino sans gb',stheiti,'wenquanyi micro hei',\\5FAE\\8F6F\\96C5\\9ED1,\\5B8B\\4F53,sans-serif;\n  -ms-text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis;\n  /* 5 */\n  -ms-text-spacing: ideograph-alpha ideograph-numeric ideograph-parenthesis;\n      text-spacing: ideograph-alpha ideograph-numeric ideograph-parenthesis;\n  /* 5 **/ }\n\n/**\n* 中文小于 12px 可读性很差\n* 1. 统一 IE 6-7 中字体大小\n* 2. 统一 Firefox 4+，Safari 5 和 Chrome 中「section」和「article」内的字体大小\n*/\nh1, h2, h3, h4, h5, h6 {\n  font-weight: normal; }\n\nh1 {\n  font-size: 36px; }\n\nh2 {\n  font-size: 30px; }\n\nh3 {\n  font-size: 22px; }\n\nh4 {\n  font-size: 18px; }\n\nh5 {\n  font-size: 14px; }\n\nh6 {\n  font-size: 12px; }\n\n/**\n* 修正「abbr」元素在 Firefox 外其他浏览器没有下划线的问题\n* 添加问号光标，明确语义\n*/\nabbr,\nacronym {\n  border-bottom: 1px dotted;\n  /* 1 */\n  cursor: help;\n  /* 2 */ }\n\n/**\n* Firefox3+，Safari4/5 和 Chrome 中统一设置为粗体\n*/\nb,\nstrong {\n  font-weight: bold; }\n\n/**\n* 修正 Safari5 和 Chrome 中没有样式的问题\n*/\ndfn {\n  font-style: italic; }\n\n/**\n* 修正 Firefox 和其他浏览器之间的差异\n*/\nhr {\n  box-sizing: content-box;\n  height: 0; }\n\n/**\n* 网页标记，荧光笔\n* 修正 IE6-11 中没有样式的问题\n*/\nmark {\n  background-color: #D2E5FF;\n  color: #000; }\n\n/**\n* 统一代码的字体设置\n* 字体要能明确区分数字 0 和字母 o\n* Mac 优先使用 Monaco，Windows 优先使用 Consolas\n* XP自带 Courier New\n* Windows 7开始自带的 Consolas\n* Mac上自带的Monaco，Osaka-Mono\n*/\ncode,\nkbd,\npre,\nsamp {\n  font-family: monaco, menlo, consolas, 'courier new', courier, monospace; }\n\n/**\n* 增强所有浏览器中 pre 标签中文本的可读性\n* 1. IE 6-7 不支持 pre-wrap\n* 2. pre 标签应当包含滚溢出\n*/\npre {\n  white-space: pre;\n  white-space: pre-wrap;\n  /* 1 */\n  word-wrap: break-word;\n  overflow: auto; }\n\n/**\n* 行内引用\n* IE 6-7 不支持 quotes 属性\n* 现代浏览器去除 quotes 内容\n*/\nq {\n  quotes: none; }\n\n/**\n* Safari 4 不支持<q>标签\n*/\nq:before,\nq:after {\n  content: '';\n  content: none; }\n\n/**\n* 中文网页<small>元素字号小于 12px 不易阅读\n*/\nsmall {\n  font-size: 85.7%;\n  /* 12/14=0.8571428571 */ }\n\n/**\n* 防止所有浏览器中的<sub>和<sup>影响行高\n* http://jsbin.com/usoyal/1/edit\n*/\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* ==========================================================================\n 表格\n ========================================================================== */\n/**\n* 合并单元格边框\n*/\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n/**\n* 修复 IE 中 th 不能继承 text-align 的问题并统一左对齐\n* http://jsbin.com/evoxif/2/edit\n*/\nth {\n  text-align: left; }\n\n/**\n* 单元格添加边框\n*/\n/**\n* 表头底部边框\n*/\n/* ==========================================================================\n 嵌入元素\n ========================================================================== */\n/**\n* 1. 去除 IE6-9 和 Firefox 3 中 a 内部 img 元素默认的边框\n* 2. 修正 IE8 图片消失bug\n* 3. 防止 img 指定「height」时图片高度不能按照宽度等比缩放，导致图片变形\n    http://jsbin.com/aJoTUca/2\n* 4. 让图片支持响应式\n* 5. 去除现代浏览器图片底部的空隙\n* 6. 修复 IE7 图片缩放失真\n*/\nimg {\n  border: 0 none;\n  /* 1 */\n  width: auto\\9;\n  /* 2 */\n  height: auto;\n  /* 3 */\n  max-width: 100%;\n  /* 4 */\n  vertical-align: top;\n  /* 5 */\n  -ms-interpolation-mode: bicubic;\n  /* 6 */ }\n\n/**\n* 修复 IE9 中的「overflow」的怪异表现\n*/\nsvg:not(:root) {\n  overflow: hidden; }\n\n/* ==========================================================================\n 表单\n ========================================================================== */\n/**\n* 定义一致的边框、外边距和内边距\n*/\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em; }\n\n/**\n* 1. 修正 IE 6-9 中颜色不能继承的问题\n* 2. 修正 Firefox3 中文字不换行的问题\n* 3. 修正 IE6-7 中怪异的对齐方式\n*/\nlegend {\n  border: 0 none;\n  /* 1 */\n  white-space: normal;\n  /* 2 */\n  *margin-left: -7px;\n  /* 3 */ }\n\n/**\n* 1. 修正所有浏览器中字体不继承的问题\n* 2. 修正所有浏览器中字号不继承的问题\n* 3. 修正 Firefox 3+， Safari5 和 Chrome 中外边距不同的问题\n* 4. 改善在所有浏览器下的垂直对齐方式\n*/\nbutton,\ninput,\nselect,\ntextarea {\n  font-family: inherit;\n  /* 1 */\n  font-size: 100%;\n  /* 2 */\n  margin: 0;\n  /* 3 */\n  vertical-align: baseline;\n  /* 4 */\n  *vertical-align: middle;\n  /* 4 */ }\n\n/**\n* 修正 IE7 随着字数增加边距不断增加的问题\n*/\ninput,\nbutton {\n  *overflow: visible; }\n\n/**\n* 统一各浏览器「text-transform」不会继承的问题\n* http://jsbin.com/iqecic/1/edit\n* http://tjvantoll.com/2012/07/10/default-browser-handling-of-the-css-text-transform-property/\n*/\nbutton,\nselect {\n  text-transform: none; }\n\n/**\n* 1. 避免 Android 4.0.* 中的 WebKit bug ，该bug会破坏原生的\n 「audio」 和「video」的控制器\n* 2. 更正 iOS 中无法设置可点击的「input」的问题\n* 3. 统一其他类型的「input」的光标样式\n*/\nbutton,\nhtml input[type=\"button\"], input[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */\n  cursor: pointer;\n  /* 3 */ }\n\n/**\n* 重置按钮禁用时光标样式\n*/\nbutton[disabled],\ninput[disabled] {\n  cursor: default;\n  opacity: .6; }\n\n/**\n* 1. 修正 IE 8/9 box-sizing 被设置为「content-box」的问题\n* 2. 移除 IE 8/9 中多余的内边距\n* 3. 移除 IE7 中多余的内边距(IE6 中任然存在)\n*/\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */\n  *height: 13px;\n  /* 3 */\n  *width: 13px;\n  /* 3 */ }\n\n/**\n* 1. 修正 Safari 5 和 Chrome 中「appearance」被设置为「searchfield」的问题\n* 2. 修正 Safari 5 和 Chrome 中「box-sizing」被设置为 「border-box」的问题\n*/\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  box-sizing: content-box; }\n\n/**\n* 1.移除 OS X 中 Safari5 和 Chrome 搜索框内侧的左边距\n* 2.如果需要隐藏清除按钮需要加上\n input[type=\"search\"]::-webkit-search-cancel-button\n*/\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n* 移除 Firefox 3+ 的内边距\n*/\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0; }\n\n/**\n* 修正 Chrome 中 input [type=\"number\"] 在特定高度和 font-size 时,\n* 下面一个箭头光标变成「cursor: text」\n* @demo: http://jsfiddle.net/FFXEc/\n* 动画演示：http://gtms04.alicdn.com/tps/i4/T18kd8FCtaXXc_FhcF-330-350.gif\n*/\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n* 1. 移除 IE6-11 中默认的垂直滚动条\n* 2. 禁止水平拖动，防止破坏布局\n*/\ntextarea {\n  overflow: auto;\n  /* 1 */\n  resize: vertical;\n  /* 2 */ }\n\n/**\n* 修正 Chrome 30- option 中文字无法显示的问题\n* http://jsbin.com/avujas/1/edit\n*/\nselect:disabled option:checked,\noption:disabled:checked {\n  color: #D2D2D2; }\n\n/**\n* 修正 Safari 3+, Chrome 1+ Placeholder 居中问题\n*/\n@media screen and (-webkit-min-device-pixel-ratio: 0) {\n  input {\n    line-height: normal !important; } }\n\n/**\n* 修正 Firefox 19+ Placeholder 设置了opacity 的问题\n*/\ninput::-moz-placeholder, textarea::-moz-placeholder {\n  color: darkGray;\n  opacity: 1; }\n\n/**\n* label 元素给予手型，暗示此处可点击\n*/\nlabel {\n  cursor: pointer; }\n\n/**\n* 统一 select 样式, Firefox 中有 padding:1px 0\n* http://jsbin.com/avujas/1/edit\n*/\nselect[size],\nselect[multiple],\nselect[size][multiple] {\n  border: 1px solid #AAA;\n  padding: 0; }\n\n/* ==========================================================================\n HTML5 元素\n ========================================================================== */\n/**\n* 修正未定义为「block」的元素\n*/\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nnav,\nsection,\nsummary {\n  display: block; }\n\n/**\n* 1. 修正未定义为「inline-block」的元素\n* 2. 修正 Chrome、Firefox、Opera 中 「progress」元素 vertical-align 默认值不一致\n*/\naudio,\ncanvas,\nvideo,\nprogress {\n  display: inline-block;\n  /* 1 */\n  vertical-align: baseline;\n  /* 2 */ }\n\n/**\n* 1.防止现代浏览器将没有「controls」属性的 「audio」元素显示出来\n* 2.去掉 iOS 5 中多余的高度\n*/\naudio:not([controls]) {\n  display: none;\n  /* 1 */\n  height: 0;\n  /* 2 */ }\n\n/**\n* 修复 IE 7/8/9，Firefox 3 和 Safari 4 中 「hidden」属性不起作用的问题\n* 在IE、Safari、Firefox 22- 中隐藏「template」元素\n*/\n[hidden], template {\n  display: none; }\n\n/**\n* 为可拖动元素添加拖动的光标\n* http://jsbin.com/apavod/1/edit\n*/\n[draggable] {\n  cursor: move; }\n\n/**\n* 居中 HTML5 dialog 元素\n* Chrome 31 支持，需开启 chrome://flags/#enable-experimental-web-platform-features\n* Chrome 28 之前、Firefox 中不支持 height:fit-content;\n https://src.chromium.org/viewvc/blink?revision=148314&view=revision\n* ::backdrop 定义遮罩样式\n* @demo: http://jsbin.com/iPACab/1\n*/\ndialog {\n  border: 1px solid;\n  padding: 0;\n  margin: auto;\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content; }\n\ndialog::-webkit-backdrop {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.3); }\n\ndialog::backdrop {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.3); }\n\n.ks-row, .tb {\n  display: table;\n  table-layout: fixed;\n  border-spacing: 0; }\n\n.ks-col-top, .ks-col-auto-top, .ks-col-auto, .ks-col, .tb-cell {\n  display: table-cell;\n  vertical-align: middle;\n  word-break: break-all; }\n\n.ib-w, .ib-w.ib {\n  letter-spacing: -0.31em;\n  word-spacing: -0.43em;\n  text-rendering: optimizespeed;\n  font-family: PingFangSC-Regular, microsoft yahei, Arial, sans-serif;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  -ms-flex-flow: row wrap;\n  -ms-align-content: flex-start;\n  -ms-flex-line-pack: start;\n      align-content: flex-start; }\n\n.ib {\n  display: inline-block;\n  zoom: 1;\n  letter-spacing: normal;\n  word-spacing: normal;\n  vertical-align: top;\n  text-rendering: auto;\n  box-sizing: border-box; }\n\n.ks-col-top {\n  vertical-align: top; }\n\n.ks-col-auto-top {\n  vertical-align: top; }\n\n.ks-row-auto {\n  box-sizing: border-box;\n  width: 100%;\n  display: table;\n  border-spacing: 0;\n  table-layout: auto; }\n\n.ks-col-auto-top, .ks-col-auto {\n  width: 1px;\n  white-space: nowrap; }\n\n.ks-row, .tb {\n  box-sizing: border-box;\n  width: 100%; }\n\n/* h1 ~ h6 字体大小 */\n.h1 {\n  font-size: 30px; }\n\n.h2 {\n  font-size: 24px; }\n\n.h3 {\n  font-size: 18px; }\n\n.h4 {\n  font-size: 16px; }\n\n.h5 {\n  font-size: 14px; }\n\n.h6 {\n  font-size: 12px; }\n\n/* 颜色  primary danger info warning dark gray */\n.primary {\n  color: #2196F3;\n  border-color: #2196F3; }\n\n.primary-light {\n  color: #42A5F5;\n  border-color: #42A5F5; }\n\n.primary-deep {\n  color: #1E88E5;\n  border-color: #1E88E5; }\n\n.success {\n  color: #4CAF50;\n  border-color: #4CAF50; }\n\n.success-light {\n  color: #66BB6A;\n  border-color: #66BB6A; }\n\n.success-deep {\n  color: #43A047;\n  border-color: #43A047; }\n\n.info {\n  color: #00BCD4;\n  border-color: #00BCD4; }\n\n.info-light {\n  color: #26C6DA;\n  border-color: #26C6DA; }\n\n.info-deep {\n  color: #00ACC1;\n  border-color: #00ACC1; }\n\n.danger {\n  color: #F44336;\n  border-color: #F44336; }\n\n.danger-light {\n  color: #EF5350;\n  border-color: #EF5350; }\n\n.danger-deep {\n  color: #E53935;\n  border-color: #E53935; }\n\n.warning {\n  color: #FF5722;\n  border-color: #FF5722; }\n\n.warning-light {\n  color: #FF7043;\n  border-color: #FF7043; }\n\n.warning-deep {\n  color: #F4511E;\n  border-color: #F4511E; }\n\n.dark {\n  color: #777777;\n  border-color: #777777; }\n\n.dark-light {\n  color: #999999;\n  border-color: #999999; }\n\n.dark-deep {\n  color: #444444;\n  border-color: #444444; }\n\n.gray {\n  color: #F5F5F5;\n  border-color: #F5F5F5; }\n\n.gray-light {\n  color: #FCFCFC;\n  border-color: #FCFCFC; }\n\n.gray-deep {\n  color: #E9E9E9;\n  border-color: #E9E9E9; }\n\n.bg-primary {\n  background: #2196F3;\n  color: #fff; }\n\n.bg-primary-light {\n  background: #42A5F5;\n  color: #fff; }\n\n.bg-primary-deep {\n  background: #1E88E5;\n  color: #fff; }\n\n.bg-success {\n  background: #4CAF50;\n  color: #fff; }\n\n.bg-success-light {\n  background: #66BB6A;\n  color: #fff; }\n\n.bg-success-deep {\n  background: #43A047;\n  color: #fff; }\n\n.bg-info {\n  background: #00BCD4;\n  color: #fff; }\n\n.bg-info-light {\n  background: #26C6DA;\n  color: #fff; }\n\n.bg-info-deep {\n  background: #00ACC1;\n  color: #fff; }\n\n.bg-danger {\n  background: #F44336;\n  color: #fff; }\n\n.bg-danger-light {\n  background: #EF5350;\n  color: #fff; }\n\n.bg-danger-deep {\n  background: #E53935;\n  color: #fff; }\n\n.bg-warning {\n  background: #FF5722;\n  color: #fff; }\n\n.bg-warning-light {\n  background: #FF7043;\n  color: #fff; }\n\n.bg-warning-deep {\n  background: #F4511E;\n  color: #fff; }\n\n.bg-dark {\n  background: #777777;\n  color: #fff; }\n\n.bg-dark-light {\n  background: #999999;\n  color: #fff; }\n\n.bg-dark-deep {\n  background: #444444;\n  color: #fff; }\n\n.bg-gray {\n  background: #F5F5F5;\n  color: #fff; }\n\n.bg-gray-light {\n  background: #FCFCFC;\n  color: #fff; }\n\n.bg-gray-deep {\n  background: #E9E9E9;\n  color: #fff; }\n\nbody {\n  font: 13px/1.7 PingFangSC-Regular, microsoft yahei, Arial, sans-serif;\n  color: #444; }\n\n.KsCheckbox {\n  position: relative;\n  border: 1px solid #D0D0D5;\n  border-radius: 3px;\n  width: 18px;\n  height: 18px;\n  text-align: center;\n  vertical-align: middle; }\n  .KsCheckbox.disabled {\n    opacity: .6; }\n    .KsCheckbox.disabled * {\n      cursor: not-allowed; }\n\n.KsCheckbox-input {\n  position: absolute;\n  z-index: 1;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  opacity: 0; }\n  .KsCheckbox-input:checked + .KsCheckbox-cube {\n    opacity: 1; }\n  .KsCheckbox-input[disabled] {\n    opacity: 0; }\n\n.KsCheckbox-cube {\n  position: absolute;\n  top: 50%;\n  height: 10px;\n  width: 10px;\n  border-radius: 3px;\n  background-color: #00A5E0;\n  opacity: 0;\n  -webkit-transition: opacity .3s;\n  transition: opacity .3s;\n  -webkit-transform: translateX(-50%) translateY(-50%);\n          transform: translateX(-50%) translateY(-50%); }\n", ""]);
 
 	// exports
 
@@ -15197,12 +15207,13 @@ webpackJsonp([0],[
 	});
 	// <template>
 	//     <span class="ib KsCheckbox" 
-	//           v-bind:class="{disable: disable}">
+	//           v-bind:class="{disabled: disabled}">
 	//       <input type="checkbox" class="KsCheckbox-input" 
 	//             v-bind:name="name"
 	//             v-model="checked"
-	//             v-bind:disabled="disable && 'disabled'">
-	//       <span class="ib KsCheckbox-cube"></span>
+	//             v-bind:disabled="disabled && 'disabled'">
+	//       <span class="ib KsCheckbox-cube" v-if="color=='#00A5E0'"></span>
+	//       <span class="ib KsCheckbox-cube" v-if="color!='#00A5E0'" v-bind:style="{'background':color}"></span>
 	//     </span>
 	// </template>
 	//
@@ -15212,7 +15223,7 @@ webpackJsonp([0],[
 	  props: {
 	    color: { type: String, default: '#00A5E0' },
 	    checked: { twoWay: true },
-	    disable: { type: Boolean, default: false }
+	    disabled: { type: Boolean, default: false }
 	  },
 	  methods: {}
 	};
@@ -15226,13 +15237,13 @@ webpackJsonp([0],[
 /* 721 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<span class=\"ib KsCheckbox\" \n      v-bind:class=\"{disable: disable}\">\n  <input type=\"checkbox\" class=\"KsCheckbox-input\" \n        v-bind:name=\"name\"\n        v-model=\"checked\"\n        v-bind:disabled=\"disable && 'disabled'\">\n  <span class=\"ib KsCheckbox-cube\"></span>\n</span>\n";
+	module.exports = "\n<span class=\"ib KsCheckbox\" \n      v-bind:class=\"{disabled: disabled}\">\n  <input type=\"checkbox\" class=\"KsCheckbox-input\" \n        v-bind:name=\"name\"\n        v-model=\"checked\"\n        v-bind:disabled=\"disabled && 'disabled'\">\n  <span class=\"ib KsCheckbox-cube\" v-if=\"color=='#00A5E0'\"></span>\n  <span class=\"ib KsCheckbox-cube\" v-if=\"color!='#00A5E0'\" v-bind:style=\"{'background':color}\"></span>\n</span>\n";
 
 /***/ },
 /* 722 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"KsTable-striped\">\n    <table v-on:change=\"change\">  \n        <thead v-el:thead>    \n            <tr> \n                <th v-for=\"item in columns\">\n                    <ks-icon v-bind:name=\"item.sortable | getIcon\" \n                        v-if=\"item.sortable\"\n                        size=\"1x\"\n                        v-on:click=\"sort($index)\"></ks-icon>\n                    <input type=\"checkbox\" name=\"ks-table-allchecked\"\n                        v-model=\"allchecked\"\n                        v-if=\"item.checked\"/>\n                    <div v-text=\"item.title\" \n                        style=\"display: inline-block;\" \n                         v-bind:style=\"{'width':item.width}\"></div>\n                </th>      \n            </tr>  \n        </thead>  \n        <tbody v-el:tbody>    \n            <tr v-for=\"(index, item) in data\">      \n                <td v-for=\"(key, val) in item\" >\n                    <input type=\"checkbox\" id=\"KsTable_{{_uid}}_{{index}}\"\n                           v-if=\"key=='checked'\"\n                           v-model=\"item.checked\"/>\n                    <div v-if=\"key!='checked'\" v-html=\"val | render key item index\">\n                    </div>        \n                </td>      \n            </tr>\n            \n        </tbody>\n    </table>\n</div>\n";
+	module.exports = "\n<div class=\"KsTable-striped\">\n    <table v-on:change=\"change\">  \n        <thead v-el:thead>    \n            <tr> \n                <th v-for=\"item in columns\">\n                    <ks-icon v-bind:name=\"item.sortable | getIcon\" \n                        v-if=\"item.sortable\"\n                        size=\"1x\"\n                        v-on:click=\"sort($index)\"></ks-icon>\n                    <input type=\"checkbox\" name=\"ks-table-allchecked\"\n                        v-model=\"allchecked\"\n                        v-if=\"item.checked\"/>\n                    <div v-text=\"item.title\" \n                        style=\"display: inline-block;\" \n                         v-bind:style=\"{'width':item.width}\"></div>\n                </th>      \n            </tr>  \n        </thead>  \n        <tbody v-el:tbody>    \n            <tr v-for=\"(index, item) in data\">      \n                <td v-for=\"(key, val) in item\" >\n                    <input type=\"checkbox\" id=\"KsTable_{{_uid}}_{{index}}\"\n                           v-if=\"key=='checked'\"\n                           v-model=\"item.checked\"/>\n                    <!-- <ks-checkbox2 id=\"KsTable_{{_uid}}_{{index}}\"\n                        v-if=\"key=='checked'\"\n                        v-bind:checked.sync=\"item.checked\"></ks-checkbox2>\n -->                    <div v-if=\"key!='checked'\" v-html=\"val | render key item index\">\n                    </div>        \n                </td>      \n            </tr>\n            \n        </tbody>\n    </table>\n</div>\n";
 
 /***/ },
 /* 723 */
@@ -15834,7 +15845,7 @@ webpackJsonp([0],[
 	//       <div>
 	//         <ks-checkbox2 
 	//             v-bind:checked.sync="itemdata[checkedKey]"
-	//             v-on:change="checkboxChange" ></ks-checkbox2>
+	//             v-on:change="checkboxChange"></ks-checkbox2>
 	//           <!-- <input type="checkbox"  class="checkbox" 
 	//               v-on:change="checkboxChange" 
 	//               v-model="itemdata[checkedKey]"
@@ -15861,7 +15872,7 @@ webpackJsonp([0],[
 /* 741 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<li>\n    <div>\n      <ks-checkbox2 \n          v-bind:checked.sync=\"itemdata[checkedKey]\"\n          v-on:change=\"checkboxChange\" ></ks-checkbox2>\n        <!-- <input type=\"checkbox\"  class=\"checkbox\" \n            v-on:change=\"checkboxChange\" \n            v-model=\"itemdata[checkedKey]\"\n            v-bind:class=\"itemdata[checkedKey]==true\"/> -->\n        <span v-bind:class=\"{'KsTree-name':hasChildren}\" \n            v-on:click=\"show=!show\">{{itemdata[nameKey]}}</span>\n    </div>\n    <ul class=\"KsTree-indent\" \n        v-if=\"hasChildren\"\n        v-show=\"show\">\n        <treeitem \n              v-on:change=\"change\" \n              v-for=\"item in itemdata[childrenKey]\" \n              v-bind:itemdata=\"item\" \n              v-bind:name-key=\"nameKey\" \n              v-bind:children-key=\"childrenKey\"\n              v-bind:checked-key=\"checkedKey\"></treeitem>\n    </ul>\n</li>\n";
+	module.exports = "\n<li>\n    <div>\n      <ks-checkbox2 \n          v-bind:checked.sync=\"itemdata[checkedKey]\"\n          v-on:change=\"checkboxChange\"></ks-checkbox2>\n        <!-- <input type=\"checkbox\"  class=\"checkbox\" \n            v-on:change=\"checkboxChange\" \n            v-model=\"itemdata[checkedKey]\"\n            v-bind:class=\"itemdata[checkedKey]==true\"/> -->\n        <span v-bind:class=\"{'KsTree-name':hasChildren}\" \n            v-on:click=\"show=!show\">{{itemdata[nameKey]}}</span>\n    </div>\n    <ul class=\"KsTree-indent\" \n        v-if=\"hasChildren\"\n        v-show=\"show\">\n        <treeitem \n              v-on:change=\"change\" \n              v-for=\"item in itemdata[childrenKey]\" \n              v-bind:itemdata=\"item\" \n              v-bind:name-key=\"nameKey\" \n              v-bind:children-key=\"childrenKey\"\n              v-bind:checked-key=\"checkedKey\"></treeitem>\n    </ul>\n</li>\n";
 
 /***/ },
 /* 742 */
