@@ -56,7 +56,7 @@
             </div>
           </div>
           <div class="bottom" >
-            <span class="tip">点击你需要的表格项添加或移除，也可以拖拽进行排序</span>
+            <span class="tip">点击你需要的表格项添加或移除，进行排序</span>
             <div class="txtr btngroup">
               <span class="reset" @click="reset($index)">重选</span>
               <span class="checkall" @click="checkall($index)">全选</span>

@@ -1,6 +1,6 @@
 // @description 一个复选框样式
 // @author zdzDesigner
-
+@import '~KsComponents/styles/base/index';
 $primary-color: #00A5E0;                                        // 主色调
 $skin-size: 18px;                                               // 选择框大小
 
@@ -11,7 +11,7 @@ $skin-size: 18px;                                               // 选择框大�
   text-align: center; 
   // cursor: pointer;
   vertical-align: middle; 
-  &.disable {
+  &.disabled {
     opacity: .6;
     * { cursor: not-allowed }
   }
@@ -26,6 +26,9 @@ $skin-size: 18px;                                               // 选择框大�
   // checked 下的选择框样式
   &:checked + .KsCheckbox-cube{
     opacity: 1;
+  }
+  &[disabled] {
+    opacity: 0;
   }
 }
 
