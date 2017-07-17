@@ -4,35 +4,35 @@ webpackJsonp([0],[
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var _App = __webpack_require__(2);
+	var _App = __webpack_require__(5);
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _vue = __webpack_require__(4);
+	var _vue = __webpack_require__(7);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _vueRouter = __webpack_require__(5);
+	var _vueRouter = __webpack_require__(103);
 
 	var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
-	var _vueResource = __webpack_require__(6);
+	var _vueResource = __webpack_require__(104);
 
 	var _vueResource2 = _interopRequireDefault(_vueResource);
 
-	var _vueValidator = __webpack_require__(30);
+	var _vueValidator = __webpack_require__(763);
 
 	var _vueValidator2 = _interopRequireDefault(_vueValidator);
 
-	var _router = __webpack_require__(31);
+	var _router = __webpack_require__(128);
 
 	var _router2 = _interopRequireDefault(_router);
 
-	var _components = __webpack_require__(228);
+	var _components = __webpack_require__(408);
 
 	var _components2 = _interopRequireDefault(_components);
 
-	var _directives = __webpack_require__(551);
+	var _directives = __webpack_require__(743);
 
 	var _directives2 = _interopRequireDefault(_directives);
 
@@ -45,7 +45,7 @@ webpackJsonp([0],[
 	 * @email pkeros@vip.qq.com
 	 */
 
-	__webpack_require__(554);
+	__webpack_require__(2);
 
 	// Vue configure
 	_vue2.default.config.debug = process.env.NODE_ENV !== 'production';
@@ -77,10 +77,73 @@ webpackJsonp([0],[
 /***/ },
 /* 1 */,
 /* 2 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	// css base code, injected by the css-loader
+	module.exports = function() {
+		var list = [];
+
+		// return the list of modules as css string
+		list.toString = function toString() {
+			var result = [];
+			for(var i = 0; i < this.length; i++) {
+				var item = this[i];
+				if(item[2]) {
+					result.push("@media " + item[2] + "{" + item[1] + "}");
+				} else {
+					result.push(item[1]);
+				}
+			}
+			return result.join("");
+		};
+
+		// import a list of modules into the list
+		list.i = function(modules, mediaQuery) {
+			if(typeof modules === "string")
+				modules = [[null, modules, ""]];
+			var alreadyImportedModules = {};
+			for(var i = 0; i < this.length; i++) {
+				var id = this[i][0];
+				if(typeof id === "number")
+					alreadyImportedModules[id] = true;
+			}
+			for(i = 0; i < modules.length; i++) {
+				var item = modules[i];
+				// skip already imported module
+				// this implementation is not 100% perfect for weird media query combinations
+				//  when a module is imported multiple times with different media queries.
+				//  I hope this will never occur (Hey this way we have smaller bundles)
+				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+					if(mediaQuery && !item[2]) {
+						item[2] = mediaQuery;
+					} else if(mediaQuery) {
+						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+					}
+					list.push(item);
+				}
+			}
+		};
+		return list;
+	};
+
+
+/***/ },
+/* 4 */,
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(3)
+	__vue_script__ = __webpack_require__(6)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
@@ -103,7 +166,7 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 3 */
+/* 6 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -120,9 +183,6 @@ webpackJsonp([0],[
 	// </script>
 
 /***/ },
-/* 4 */,
-/* 5 */,
-/* 6 */,
 /* 7 */,
 /* 8 */,
 /* 9 */,
@@ -146,7 +206,3745 @@ webpackJsonp([0],[
 /* 27 */,
 /* 28 */,
 /* 29 */,
-/* 30 */
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */,
+/* 112 */,
+/* 113 */,
+/* 114 */,
+/* 115 */,
+/* 116 */,
+/* 117 */,
+/* 118 */,
+/* 119 */,
+/* 120 */,
+/* 121 */,
+/* 122 */,
+/* 123 */,
+/* 124 */,
+/* 125 */,
+/* 126 */,
+/* 127 */,
+/* 128 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	/**
+	 * @description application router file.
+	 * @author pkeros
+	 * @data 16/6/1
+	 * @email pkeros@vip.qq.com
+	 */
+
+	exports.default = function (router) {
+
+	  // 路由映射
+	  router.map({
+
+	    /* 主页 */
+	    '/': {
+	      name: 'index',
+	      cnName: '主页',
+	      component: function component(resolve) {
+	        __webpack_require__.e/* require */(67, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(129)]; (function (res) {
+	          resolve(res);
+	        }.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));});
+	      },
+
+	      subRoutes: {
+
+	        /* 欢迎页面 */
+	        '/': {
+	          name: 'welcome',
+	          cnName: '欢迎页面',
+	          component: function component(resolve) {
+	            __webpack_require__.e/* require */(68, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(145)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	          }
+	        },
+	        '/home': {
+	          name: 'welcome',
+	          cnName: '欢迎页面',
+	          component: function component(resolve) {
+	            __webpack_require__.e/* require */(68/* duplicate */, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(145)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	          }
+	        },
+
+	        /* 引导 */
+	        '/guide': {
+	          name: 'guide',
+	          cnName: '介绍',
+	          component: function component(resolve) {
+	            __webpack_require__.e/* require */(69, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(149)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	          },
+	          subRoutes: {
+	            '/intro': {
+	              name: 'intro',
+	              cnName: '介绍',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(70, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(152)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+	            '/dir': {
+	              name: 'dir',
+	              cnName: '目录结构',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(71, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(155)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            }
+	          }
+	        },
+
+	        /* 基础组件 */
+	        '/base': {
+	          name: 'base',
+	          cnName: '基础组件',
+	          component: function component(resolve) {
+	            __webpack_require__.e/* require */(72, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(158)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	          },
+
+	          subRoutes: {
+
+	            /* 基础组件-图标 */
+	            '/icons': {
+	              name: 'icons',
+	              cnName: '图标',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(73, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(764)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+
+	            /* 基础组件-图标 */
+	            '/icons-list': {
+	              name: 'icons-list',
+	              cnName: '卡说图标库',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(74, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(767)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+
+	            /* 基础组件-布局 */
+	            '/layout': {
+	              name: 'layout',
+	              cnName: '布局',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(75, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(183)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+
+	            /* 基础组件-按钮 */
+	            '/button': {
+	              name: 'button',
+	              cnName: '按钮',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(76, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(773)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            }
+	          }
+	        },
+
+	        /* form */
+	        '/form': {
+	          name: 'form',
+	          cnName: '表单',
+	          component: function component(resolve) {
+	            __webpack_require__.e/* require */(77, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(195)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	          },
+
+	          subRoutes: {
+
+	            /* 基础组件-布局 */
+	            '/date-picker': {
+	              name: 'date-picker',
+	              cnName: '时间选择器',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(78, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(779)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+
+	            /* 基础组件-单选框 */
+	            '/radio': {
+	              name: 'radio',
+	              cnName: '单选框',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(79, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(783)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+
+	            /* 基础组件-复选框 */
+	            '/checkbox': {
+	              name: 'checkbox',
+	              cnName: '复选框',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(80, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(787)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+
+	            /* 基础组件-IOS 风格开关 */
+	            '/switch': {
+	              name: 'switch',
+	              cnName: 'IOS 风格开关',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(81, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(791)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            }
+	          }
+	        },
+
+	        /* data */
+	        '/data': {
+	          name: 'data',
+	          cnName: '数据展示',
+	          component: function component(resolve) {
+	            __webpack_require__.e/* require */(82, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(230)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	          },
+
+	          subRoutes: {
+
+	            /* 基础组件-布局 */
+	            '/page': {
+	              name: 'page',
+	              cnName: '分页',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(83, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(795)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+
+	            /* 数据展示-树形组件 */
+	            '/tree': {
+	              name: 'tree',
+	              cnName: '树形组件',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(84, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(799)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+
+	            '/dropchoose': {
+	              name: 'dropchoose',
+	              cnName: '下拉选择',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(85, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(827)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+
+	            '/search': {
+	              name: 'search',
+	              cnName: '模糊搜索',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(86, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(831)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+
+	            '/dialogchoose': {
+	              name: 'dialogchoose',
+	              cnName: '弹出层选择',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(87, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(835)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+
+	            '/floorchoose': {
+	              name: 'floorchoose',
+	              cnName: '楼层选择',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(88, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(839)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+
+	            /* 基础组件-图片 */
+	            '/image': {
+	              name: 'image',
+	              cnName: '图片',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(89, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(843)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+	            '/ksimg': {
+	              name: 'ksimg',
+	              cnName: '图片',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(90, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(847)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+
+	            '/addtable': {
+	              name: 'addtable',
+	              cnName: '表格添加',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(91, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(851)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+
+	            /* 多标题表格 */
+	            '/multiple-table': {
+	              name: 'multiple-table',
+	              cnName: '图片',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(92, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(855)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+
+	            /* 定项表格 */
+	            '/setitem-table': {
+	              name: 'setitem-table',
+	              cnName: '定项表格',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(93, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(861)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            }
+
+	          }
+	        },
+
+	        /* 通知组件 */
+	        '/notice': {
+	          name: 'notice',
+	          cnName: '通知组件',
+	          component: function component(resolve) {
+	            __webpack_require__.e/* require */(94, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(332)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	          },
+
+	          subRoutes: {
+
+	            /* 通知组件-通知中心 */
+	            '/notice-center': {
+	              name: 'notice-center',
+	              cnName: '对话框',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(95, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(868)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+
+	            /* 通知组件-对话框 */
+	            '/dialog': {
+	              name: 'dialog',
+	              cnName: '对话框',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(96, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(872)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+
+	            /* 通知组件-模态框 */
+	            '/modal': {
+	              name: 'modal',
+	              cnName: '模态框',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(97, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(876)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            }
+	          }
+	        },
+
+	        /* validate */
+	        '/validate': {
+	          name: 'validate',
+	          cnName: '验证',
+	          component: function component(resolve) {
+	            __webpack_require__.e/* require */(98, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(374)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	          },
+
+	          subRoutes: {
+	            /* 说明 */
+	            '/remark': {
+	              name: 'remark',
+	              cnName: '说明',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(99, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(377)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            },
+	            /* 说明 */
+	            '/rules': {
+	              name: 'rules',
+	              cnName: '默认校验规则',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(100, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(380)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            }
+	          }
+	        },
+
+	        /* other */
+	        '/other': {
+	          name: 'other',
+	          cnName: '其他',
+	          component: function component(resolve) {
+	            __webpack_require__.e/* require */(101, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(383)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	          },
+	          subRoutes: {
+	            /* 更新日志 */
+	            '/tooltips': {
+	              name: 'tooltips',
+	              cnName: '弹出提示',
+	              component: function component(resolve) {
+	                __webpack_require__.e/* require */(102, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(880)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	              }
+	            }
+	          }
+	        },
+
+	        /* log */
+	        '/log': {
+	          name: 'log',
+	          cnName: '更新日志',
+	          component: function component(resolve) {
+	            __webpack_require__.e/* require */(103, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(404)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	          }
+	        }
+
+	      }
+	    }
+	  });
+	};
+
+/***/ },
+/* 129 */,
+/* 130 */,
+/* 131 */,
+/* 132 */,
+/* 133 */,
+/* 134 */,
+/* 135 */,
+/* 136 */,
+/* 137 */,
+/* 138 */,
+/* 139 */,
+/* 140 */,
+/* 141 */,
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */,
+/* 157 */,
+/* 158 */,
+/* 159 */,
+/* 160 */,
+/* 161 */,
+/* 162 */,
+/* 163 */,
+/* 164 */,
+/* 165 */,
+/* 166 */,
+/* 167 */,
+/* 168 */,
+/* 169 */,
+/* 170 */,
+/* 171 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	var stylesInDom = {},
+		memoize = function(fn) {
+			var memo;
+			return function () {
+				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+				return memo;
+			};
+		},
+		isOldIE = memoize(function() {
+			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+		}),
+		getHeadElement = memoize(function () {
+			return document.head || document.getElementsByTagName("head")[0];
+		}),
+		singletonElement = null,
+		singletonCounter = 0,
+		styleElementsInsertedAtTop = [];
+
+	module.exports = function(list, options) {
+		if(false) {
+			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+		}
+
+		options = options || {};
+		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+		// tags it will allow on a page
+		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
+
+		// By default, add <style> tags to the bottom of <head>.
+		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
+
+		var styles = listToStyles(list);
+		addStylesToDom(styles, options);
+
+		return function update(newList) {
+			var mayRemove = [];
+			for(var i = 0; i < styles.length; i++) {
+				var item = styles[i];
+				var domStyle = stylesInDom[item.id];
+				domStyle.refs--;
+				mayRemove.push(domStyle);
+			}
+			if(newList) {
+				var newStyles = listToStyles(newList);
+				addStylesToDom(newStyles, options);
+			}
+			for(var i = 0; i < mayRemove.length; i++) {
+				var domStyle = mayRemove[i];
+				if(domStyle.refs === 0) {
+					for(var j = 0; j < domStyle.parts.length; j++)
+						domStyle.parts[j]();
+					delete stylesInDom[domStyle.id];
+				}
+			}
+		};
+	}
+
+	function addStylesToDom(styles, options) {
+		for(var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+			if(domStyle) {
+				domStyle.refs++;
+				for(var j = 0; j < domStyle.parts.length; j++) {
+					domStyle.parts[j](item.parts[j]);
+				}
+				for(; j < item.parts.length; j++) {
+					domStyle.parts.push(addStyle(item.parts[j], options));
+				}
+			} else {
+				var parts = [];
+				for(var j = 0; j < item.parts.length; j++) {
+					parts.push(addStyle(item.parts[j], options));
+				}
+				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+			}
+		}
+	}
+
+	function listToStyles(list) {
+		var styles = [];
+		var newStyles = {};
+		for(var i = 0; i < list.length; i++) {
+			var item = list[i];
+			var id = item[0];
+			var css = item[1];
+			var media = item[2];
+			var sourceMap = item[3];
+			var part = {css: css, media: media, sourceMap: sourceMap};
+			if(!newStyles[id])
+				styles.push(newStyles[id] = {id: id, parts: [part]});
+			else
+				newStyles[id].parts.push(part);
+		}
+		return styles;
+	}
+
+	function insertStyleElement(options, styleElement) {
+		var head = getHeadElement();
+		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
+		if (options.insertAt === "top") {
+			if(!lastStyleElementInsertedAtTop) {
+				head.insertBefore(styleElement, head.firstChild);
+			} else if(lastStyleElementInsertedAtTop.nextSibling) {
+				head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
+			} else {
+				head.appendChild(styleElement);
+			}
+			styleElementsInsertedAtTop.push(styleElement);
+		} else if (options.insertAt === "bottom") {
+			head.appendChild(styleElement);
+		} else {
+			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
+		}
+	}
+
+	function removeStyleElement(styleElement) {
+		styleElement.parentNode.removeChild(styleElement);
+		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
+		if(idx >= 0) {
+			styleElementsInsertedAtTop.splice(idx, 1);
+		}
+	}
+
+	function createStyleElement(options) {
+		var styleElement = document.createElement("style");
+		styleElement.type = "text/css";
+		insertStyleElement(options, styleElement);
+		return styleElement;
+	}
+
+	function addStyle(obj, options) {
+		var styleElement, update, remove;
+
+		if (options.singleton) {
+			var styleIndex = singletonCounter++;
+			styleElement = singletonElement || (singletonElement = createStyleElement(options));
+			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
+			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
+		} else {
+			styleElement = createStyleElement(options);
+			update = applyToTag.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+			};
+		}
+
+		update(obj);
+
+		return function updateStyle(newObj) {
+			if(newObj) {
+				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
+					return;
+				update(obj = newObj);
+			} else {
+				remove();
+			}
+		};
+	}
+
+	var replaceText = (function () {
+		var textStore = [];
+
+		return function (index, replacement) {
+			textStore[index] = replacement;
+			return textStore.filter(Boolean).join('\n');
+		};
+	})();
+
+	function applyToSingletonTag(styleElement, index, remove, obj) {
+		var css = remove ? "" : obj.css;
+
+		if (styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = replaceText(index, css);
+		} else {
+			var cssNode = document.createTextNode(css);
+			var childNodes = styleElement.childNodes;
+			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
+			if (childNodes.length) {
+				styleElement.insertBefore(cssNode, childNodes[index]);
+			} else {
+				styleElement.appendChild(cssNode);
+			}
+		}
+	}
+
+	function applyToTag(styleElement, obj) {
+		var css = obj.css;
+		var media = obj.media;
+		var sourceMap = obj.sourceMap;
+
+		if (media) {
+			styleElement.setAttribute("media", media);
+		}
+
+		if (sourceMap) {
+			// https://developer.chrome.com/devtools/docs/javascript-debugging
+			// this makes source maps inside style tags work properly in Chrome
+			css += '\n/*# sourceURL=' + sourceMap.sources[0] + ' */';
+			// http://stackoverflow.com/a/26603875
+			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+		}
+
+		if (styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = css;
+		} else {
+			while(styleElement.firstChild) {
+				styleElement.removeChild(styleElement.firstChild);
+			}
+			styleElement.appendChild(document.createTextNode(css));
+		}
+	}
+
+
+/***/ },
+/* 172 */,
+/* 173 */,
+/* 174 */,
+/* 175 */,
+/* 176 */,
+/* 177 */,
+/* 178 */,
+/* 179 */,
+/* 180 */,
+/* 181 */,
+/* 182 */,
+/* 183 */,
+/* 184 */,
+/* 185 */,
+/* 186 */,
+/* 187 */,
+/* 188 */,
+/* 189 */,
+/* 190 */,
+/* 191 */,
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */,
+/* 239 */,
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */,
+/* 253 */,
+/* 254 */,
+/* 255 */,
+/* 256 */,
+/* 257 */,
+/* 258 */,
+/* 259 */,
+/* 260 */,
+/* 261 */,
+/* 262 */,
+/* 263 */,
+/* 264 */,
+/* 265 */,
+/* 266 */,
+/* 267 */,
+/* 268 */,
+/* 269 */,
+/* 270 */,
+/* 271 */,
+/* 272 */,
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */,
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */,
+/* 286 */,
+/* 287 */,
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */,
+/* 294 */,
+/* 295 */,
+/* 296 */,
+/* 297 */,
+/* 298 */,
+/* 299 */,
+/* 300 */,
+/* 301 */,
+/* 302 */,
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */,
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */,
+/* 319 */,
+/* 320 */,
+/* 321 */,
+/* 322 */,
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */,
+/* 327 */,
+/* 328 */,
+/* 329 */,
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */,
+/* 371 */,
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */,
+/* 378 */,
+/* 379 */,
+/* 380 */,
+/* 381 */,
+/* 382 */,
+/* 383 */,
+/* 384 */,
+/* 385 */,
+/* 386 */,
+/* 387 */,
+/* 388 */,
+/* 389 */,
+/* 390 */,
+/* 391 */,
+/* 392 */,
+/* 393 */,
+/* 394 */,
+/* 395 */,
+/* 396 */,
+/* 397 */,
+/* 398 */,
+/* 399 */,
+/* 400 */,
+/* 401 */,
+/* 402 */,
+/* 403 */,
+/* 404 */,
+/* 405 */,
+/* 406 */,
+/* 407 */,
+/* 408 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.Plugins = exports.Components = undefined;
+
+	var _keys = __webpack_require__(100);
+
+	var _keys2 = _interopRequireDefault(_keys);
+
+	var _KsPopup = __webpack_require__(409);
+
+	var _KsNoticeCenter = __webpack_require__(892);
+
+	var _KsNoticeCenter2 = _interopRequireDefault(_KsNoticeCenter);
+
+	var _KsSwitch = __webpack_require__(439);
+
+	var _KsSwitch2 = _interopRequireDefault(_KsSwitch);
+
+	var _KsDialog = __webpack_require__(451);
+
+	var _KsModal = __webpack_require__(487);
+
+	var _KsCheckbox = __webpack_require__(501);
+
+	var _KsCheckbox2 = _interopRequireDefault(_KsCheckbox);
+
+	var _KsMask = __webpack_require__(513);
+
+	var _KsRadio = __webpack_require__(514);
+
+	var _KsRadio2 = _interopRequireDefault(_KsRadio);
+
+	var _KsButton = __webpack_require__(538);
+
+	var _KsPager = __webpack_require__(539);
+
+	var _KsPager2 = _interopRequireDefault(_KsPager);
+
+	var _KsDater = __webpack_require__(557);
+
+	var _KsDater2 = _interopRequireDefault(_KsDater);
+
+	var _KsDropChoose = __webpack_require__(622);
+
+	var _KsDropChoose2 = _interopRequireDefault(_KsDropChoose);
+
+	var _KsSearch = __webpack_require__(634);
+
+	var _KsSearch2 = _interopRequireDefault(_KsSearch);
+
+	var _KsDialogChoose = __webpack_require__(641);
+
+	var _KsDialogChoose2 = _interopRequireDefault(_KsDialogChoose);
+
+	var _KsFloorSelect = __webpack_require__(658);
+
+	var _KsFloorSelect2 = _interopRequireDefault(_KsFloorSelect);
+
+	var _KsDialogProgram = __webpack_require__(670);
+
+	var _KsDialogProgram2 = _interopRequireDefault(_KsDialogProgram);
+
+	var _KsAddTable = __webpack_require__(672);
+
+	var _KsAddTable2 = _interopRequireDefault(_KsAddTable);
+
+	var _KsImage = __webpack_require__(679);
+
+	var _KsIcon = __webpack_require__(691);
+
+	var _KsIcon2 = _interopRequireDefault(_KsIcon);
+
+	var _KsTip = __webpack_require__(1092);
+
+	var _KsTable = __webpack_require__(711);
+
+	var _KsTable2 = _interopRequireDefault(_KsTable);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	// 版本
+	var VERSION = '1.0.0';
+
+	// 组件
+	/**
+	 * @description 卡说前端公用库
+	 * @summary
+	 *  公用库中包含了一些通用的 `组件` `指令` `过滤器` 等.
+	 * @author pkeros.
+	 * @date 2016/11/11.
+	 */
+
+	var Components = {
+
+	  VERSION: VERSION,
+	  KsMaskEntity: _KsMask.KsMaskEntity,
+	  KsDialogEntity: _KsDialog.KsDialogEntity,
+	  KsModalEntity: _KsModal.KsModalEntity,
+	  KsModalCenter: _KsModal.KsModalCenter,
+	  KsPage: _KsPager2.default,
+	  KsIcon: _KsIcon2.default,
+	  KsSwitch: _KsSwitch2.default,
+	  KsCheckbox: _KsCheckbox2.default,
+	  KsRadio: _KsRadio2.default,
+	  KsButton: _KsButton.KsButton,
+	  KsButtonAbstract: _KsButton.KsButtonAbstract,
+	  KsToolTips: _KsPopup.KsToolTips,
+	  KsDater: _KsDater2.default,
+	  KsStore: _KsDropChoose2.default,
+	  KsSearch: _KsSearch2.default,
+	  KsDialogChoose: _KsDialogChoose2.default,
+	  KsItem: _KsFloorSelect2.default,
+	  KsDialogProgram: _KsDialogProgram2.default,
+	  KsImage: _KsImage.KsImage,
+	  KsImgs: _KsImage.KsImgs,
+	  KsAddTableItem: _KsAddTable2.default,
+	  KsAbstract: _KsTip.KsAbstract,
+	  KsTips: _KsTip.KsTips,
+	  KsTable: _KsTable2.default
+
+	};
+
+	// 插件
+	var Plugins = {
+
+	  VERSION: VERSION,
+	  KsNoticeCenter: _KsNoticeCenter2.default,
+	  KsDialog: _KsDialog.KsDialog,
+	  KsMask: _KsMask.KsMask,
+	  KsModal: _KsModal.KsModal
+
+	};
+
+	var install = function install(Vue) {
+	  if (install.installed) return;
+
+	  (0, _keys2.default)(Components).reduce(function (arr, k) {
+	    var temp = void 0;
+
+	    if (Components[k].template) {
+	      temp = { name: k, val: Components[k] };
+	    } else {
+	      temp = (0, _keys2.default)(Components[k]).map(function (key) {
+	        return { name: key, val: Components[k][key] };
+	      });
+	    }
+
+	    return arr.concat(temp);
+	  }, []).forEach(function (item) {
+	    Vue.component(item.name, item.val);
+	  });
+
+	  // install plugins.
+	  (0, _keys2.default)(Plugins).forEach(function (k) {
+	    if (k === 'VERSION') return;
+	    Plugins[k].install(Vue);
+	  });
+	};
+
+	// automation register components.
+	if (typeof window !== 'undefined' && window.Vue) {
+	  install(window.Vue);
+	}
+
+	exports.default = install;
+	exports.Components = Components;
+	exports.Plugins = Plugins;
+
+/***/ },
+/* 409 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.KsToolTips = exports.KsPopup = undefined;
+
+	var _abstract = __webpack_require__(884);
+
+	var _abstract2 = _interopRequireDefault(_abstract);
+
+	var _tips = __webpack_require__(887);
+
+	var _tips2 = _interopRequireDefault(_tips);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * @description: tooltip 组件.
+	 * @author: pkeros.
+	 * @date: 2016/11/14.
+	 */
+
+	exports.KsPopup = _abstract2.default;
+	exports.KsToolTips = _tips2.default;
+
+/***/ },
+/* 410 */,
+/* 411 */,
+/* 412 */,
+/* 413 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _popper = __webpack_require__(414);
+
+	var _popper2 = _interopRequireDefault(_popper);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * @param {HTMLElement} [reference=$refs.reference] - The reference element used to position the popper.
+	 * @param {HTMLElement} [popper=$refs.popper] - The HTML element used as popper, or a configuration used to generate the popper.
+	 * @param {String} [placement=button] - Placement of the popper accepted values: top(-start, -end), right(-start, -end), bottom(-start, -right), left(-start, -end)
+	 * @param {Number} [offset=0] - Amount of pixels the popper will be shifted (can be negative).
+	 * @param {Boolean} [visible=false] Visibility of the popup element.
+	 * @param {Boolean} [visible-arrow=false] Visibility of the arrow, no style.
+	 */
+	exports.default = {
+	  props: {
+	    placement: { type: String, default: 'bottom' },
+	    boundariesPadding: { type: Number, default: 5 },
+	    reference: Object,
+	    popper: Object,
+	    offset: { default: 0 },
+	    value: Boolean,
+	    visibleArrow: Boolean,
+	    transition: String,
+	    options: { type: Object, default: function _default() {
+	        return {};
+	      }
+	    }
+	  },
+
+	  data: function data() {
+	    return {
+	      showPopper: false
+	    };
+	  },
+
+
+	  watch: {
+	    value: {
+	      immediate: true,
+	      handler: function handler(val) {
+	        this.showPopper = val;
+	        this.$emit('input', val);
+	      }
+	    },
+
+	    showPopper: function showPopper(val) {
+	      val ? this.updatePopper() : this.destroyPopper();
+	      this.$emit('input', val);
+	    }
+	  },
+
+	  methods: {
+	    createPopper: function createPopper() {
+	      var _this = this;
+
+	      if (!/^(top|bottom|left|right)(-start|-end)?$/g.test(this.placement)) {
+	        return;
+	      }
+
+	      var options = this.options;
+	      var popper = this.popper || this.$els.popper;
+	      var reference = this.reference || this.$els.reference;
+
+	      if (!popper || !reference) return;
+	      if (this.visibleArrow) {
+	        this.appendArrow(popper);
+	      }
+
+	      if (this.popperJS && this.popperJS.hasOwnProperty('destroy')) {
+	        this.popperJS.destroy();
+	      }
+
+	      options.placement = this.placement;
+	      options.offset = this.offset;
+
+	      this.$nextTick(function () {
+	        _this.popperJS = new _popper2.default(reference, popper, options);
+	        _this.popperJS.onCreate(function (popper) {
+	          _this.resetTransformOrigin(popper);
+	          _this.$emit('created', _this);
+	        });
+	      });
+	    },
+	    updatePopper: function updatePopper() {
+	      if (this.popperJS) {
+	        this.popperJS.update();
+	      } else {
+	        this.createPopper();
+	      }
+	    },
+	    doDestroy: function doDestroy() {
+	      if (this.showPopper) return;
+	      this.popperJS.destroy();
+	      this.popperJS = null;
+	    },
+	    destroyPopper: function destroyPopper() {
+	      if (this.popperJS) {
+	        this.resetTransformOrigin(this.popperJS);
+	      }
+	    },
+	    resetTransformOrigin: function resetTransformOrigin(popper) {
+	      var placementMap = { top: 'bottom', bottom: 'top', left: 'right', right: 'left' };
+	      var placement = popper._popper.getAttribute('x-placement').split('-')[0];
+	      var origin = placementMap[placement];
+	      popper._popper.style.transformOrigin = ['top', 'bottom'].indexOf(placement) > -1 ? 'center ' + origin : origin + ' center';
+	    },
+	    appendArrow: function appendArrow(element) {
+	      var hash = void 0;
+	      if (this.appended) {
+	        return;
+	      }
+
+	      this.appended = true;
+
+	      for (var item in element.attributes) {
+	        if (/^_v-/.test(element.attributes[item].name)) {
+	          hash = element.attributes[item].name;
+	          break;
+	        }
+	      }
+
+	      var arrow = document.createElement('div');
+
+	      if (hash) {
+	        arrow.setAttribute(hash, '');
+	      }
+	      arrow.setAttribute('x-arrow', '');
+	      arrow.className = this.arrowClassName;
+	      element.appendChild(arrow);
+	    }
+	  },
+
+	  beforeDestroy: function beforeDestroy() {
+	    if (this.popperJS) {
+	      this.popperJS.destroy();
+	    }
+	  }
+	};
+
+/***/ },
+/* 414 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
+
+	var _getOwnPropertyDescriptor = __webpack_require__(8);
+
+	var _getOwnPropertyDescriptor2 = _interopRequireDefault(_getOwnPropertyDescriptor);
+
+	var _keys = __webpack_require__(100);
+
+	var _keys2 = _interopRequireDefault(_keys);
+
+	var _assign = __webpack_require__(415);
+
+	var _assign2 = _interopRequireDefault(_assign);
+
+	var _typeof2 = __webpack_require__(70);
+
+	var _typeof3 = _interopRequireDefault(_typeof2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * @fileOverview Kickass library to create and place poppers near their reference elements.
+	 * @version {{version}}
+	 * @license
+	 * Copyright (c) 2016 Federico Zivolo and contributors
+	 *
+	 * Permission is hereby granted, free of charge, to any person obtaining a copy
+	 * of this software and associated documentation files (the "Software"), to deal
+	 * in the Software without restriction, including without limitation the rights
+	 * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	 * copies of the Software, and to permit persons to whom the Software is
+	 * furnished to do so, subject to the following conditions:
+	 *
+	 * The above copyright notice and this permission notice shall be included in all
+	 * copies or substantial portions of the Software.
+	 *
+	 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	 * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	 * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	 * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	 * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	 * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+	 * SOFTWARE.
+	 */
+
+	//
+	// Cross module loader
+	// Supported: Node, AMD, Browser globals
+	//
+	;(function (root, factory) {
+	    if (true) {
+	        // AMD. Register as an anonymous module.
+	        !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	    } else if ((typeof module === 'undefined' ? 'undefined' : (0, _typeof3.default)(module)) === 'object' && module.exports) {
+	        // Node. Does not work with strict CommonJS, but
+	        // only CommonJS-like environments that support module.exports,
+	        // like Node.
+	        module.exports = factory();
+	    } else {
+	        // Browser globals (root is window)
+	        root.Popper = factory();
+	    }
+	})(undefined, function () {
+
+	    'use strict';
+
+	    var root = window;
+
+	    // default options
+	    var DEFAULTS = {
+	        // placement of the popper
+	        placement: 'bottom',
+
+	        gpuAcceleration: true,
+
+	        // shift popper from its origin by the given amount of pixels (can be negative)
+	        offset: 0,
+
+	        // the element which will act as boundary of the popper
+	        boundariesElement: 'viewport',
+
+	        // amount of pixel used to define a minimum distance between the boundaries and the popper
+	        boundariesPadding: 5,
+
+	        // popper will try to prevent overflow following this order,
+	        // by default, then, it could overflow on the left and on top of the boundariesElement
+	        preventOverflowOrder: ['left', 'right', 'top', 'bottom'],
+
+	        // the behavior used by flip to change the placement of the popper
+	        flipBehavior: 'flip',
+
+	        arrowElement: '[x-arrow]',
+
+	        // list of functions used to modify the offsets before they are applied to the popper
+	        modifiers: ['shift', 'offset', 'preventOverflow', 'keepTogether', 'arrow', 'flip', 'applyStyle'],
+
+	        modifiersIgnored: [],
+
+	        forceAbsolute: false
+	    };
+
+	    /**
+	     * Create a new Popper.js instance
+	     * @constructor Popper
+	     * @param {HTMLElement} reference - The reference element used to position the popper
+	     * @param {HTMLElement|Object} popper
+	     *      The HTML element used as popper, or a configuration used to generate the popper.
+	     * @param {String} [popper.tagName='div'] The tag name of the generated popper.
+	     * @param {Array} [popper.classNames=['popper']] Array of classes to apply to the generated popper.
+	     * @param {Array} [popper.attributes] Array of attributes to apply, specify `attr:value` to assign a value to it.
+	     * @param {HTMLElement|String} [popper.parent=window.document.body] The parent element, given as HTMLElement or as query string.
+	     * @param {String} [popper.content=''] The content of the popper, it can be text, html, or node; if it is not text, set `contentType` to `html` or `node`.
+	     * @param {String} [popper.contentType='text'] If `html`, the `content` will be parsed as HTML. If `node`, it will be appended as-is.
+	     * @param {String} [popper.arrowTagName='div'] Same as `popper.tagName` but for the arrow element.
+	     * @param {Array} [popper.arrowClassNames='popper__arrow'] Same as `popper.classNames` but for the arrow element.
+	     * @param {String} [popper.arrowAttributes=['x-arrow']] Same as `popper.attributes` but for the arrow element.
+	     * @param {Object} options
+	     * @param {String} [options.placement=bottom]
+	     *      Placement of the popper accepted values: `top(-start, -end), right(-start, -end), bottom(-start, -right),
+	     *      left(-start, -end)`
+	     *
+	     * @param {HTMLElement|String} [options.arrowElement='[x-arrow]']
+	     *      The DOM Node used as arrow for the popper, or a CSS selector used to get the DOM node. It must be child of
+	     *      its parent Popper. Popper.js will apply to the given element the style required to align the arrow with its
+	     *      reference element.
+	     *      By default, it will look for a child node of the popper with the `x-arrow` attribute.
+	     *
+	     * @param {Boolean} [options.gpuAcceleration=true]
+	     *      When this property is set to true, the popper position will be applied using CSS3 translate3d, allowing the
+	     *      browser to use the GPU to accelerate the rendering.
+	     *      If set to false, the popper will be placed using `top` and `left` properties, not using the GPU.
+	     *
+	     * @param {Number} [options.offset=0]
+	     *      Amount of pixels the popper will be shifted (can be negative).
+	     *
+	     * @param {String|Element} [options.boundariesElement='viewport']
+	     *      The element which will define the boundaries of the popper position, the popper will never be placed outside
+	     *      of the defined boundaries (except if `keepTogether` is enabled)
+	     *
+	     * @param {Number} [options.boundariesPadding=5]
+	     *      Additional padding for the boundaries
+	     *
+	     * @param {Array} [options.preventOverflowOrder=['left', 'right', 'top', 'bottom']]
+	     *      Order used when Popper.js tries to avoid overflows from the boundaries, they will be checked in order,
+	     *      this means that the last ones will never overflow
+	     *
+	     * @param {String|Array} [options.flipBehavior='flip']
+	     *      The behavior used by the `flip` modifier to change the placement of the popper when the latter is trying to
+	     *      overlap its reference element. Defining `flip` as value, the placement will be flipped on
+	     *      its axis (`right - left`, `top - bottom`).
+	     *      You can even pass an array of placements (eg: `['right', 'left', 'top']` ) to manually specify
+	     *      how alter the placement when a flip is needed. (eg. in the above example, it would first flip from right to left,
+	     *      then, if even in its new placement, the popper is overlapping its reference element, it will be moved to top)
+	     *
+	     * @param {Array} [options.modifiers=[ 'shift', 'offset', 'preventOverflow', 'keepTogether', 'arrow', 'flip', 'applyStyle']]
+	     *      List of functions used to modify the data before they are applied to the popper, add your custom functions
+	     *      to this array to edit the offsets and placement.
+	     *      The function should reflect the @params and @returns of preventOverflow
+	     *
+	     * @param {Array} [options.modifiersIgnored=[]]
+	     *      Put here any built-in modifier name you want to exclude from the modifiers list
+	     *      The function should reflect the @params and @returns of preventOverflow
+	     *
+	     * @param {Boolean} [options.removeOnDestroy=false]
+	     *      Set to true if you want to automatically remove the popper when you call the `destroy` method.
+	     */
+	    function Popper(reference, popper, options) {
+	        this._reference = reference.jquery ? reference[0] : reference;
+	        this.state = {};
+
+	        // if the popper variable is a configuration object, parse it to generate an HTMLElement
+	        // generate a default popper if is not defined
+	        var isNotDefined = typeof popper === 'undefined' || popper === null;
+	        var isConfig = popper && Object.prototype.toString.call(popper) === '[object Object]';
+	        if (isNotDefined || isConfig) {
+	            this._popper = this.parse(isConfig ? popper : {});
+	        }
+	        // otherwise, use the given HTMLElement as popper
+	        else {
+	                this._popper = popper.jquery ? popper[0] : popper;
+	            }
+
+	        // with {} we create a new object with the options inside it
+	        this._options = (0, _assign2.default)({}, DEFAULTS, options);
+
+	        // refactoring modifiers' list
+	        this._options.modifiers = this._options.modifiers.map(function (modifier) {
+	            // remove ignored modifiers
+	            if (this._options.modifiersIgnored.indexOf(modifier) !== -1) return;
+
+	            // set the x-placement attribute before everything else because it could be used to add margins to the popper
+	            // margins needs to be calculated to get the correct popper offsets
+	            if (modifier === 'applyStyle') {
+	                this._popper.setAttribute('x-placement', this._options.placement);
+	            }
+
+	            // return predefined modifier identified by string or keep the custom one
+	            return this.modifiers[modifier] || modifier;
+	        }.bind(this));
+
+	        // make sure to apply the popper position before any computation
+	        this.state.position = this._getPosition(this._popper, this._reference);
+	        setStyle(this._popper, { position: this.state.position });
+
+	        // fire the first update to position the popper in the right place
+	        this.update();
+
+	        // setup event listeners, they will take care of update the position in specific situations
+	        this._setupEventListeners();
+	        return this;
+	    }
+
+	    //
+	    // Methods
+	    //
+	    /**
+	     * Destroy the popper
+	     * @method
+	     * @memberof Popper
+	     */
+	    Popper.prototype.destroy = function () {
+	        this._popper.removeAttribute('x-placement');
+	        this._popper.style.left = '';
+	        this._popper.style.position = '';
+	        this._popper.style.top = '';
+	        this._popper.style[getSupportedPropertyName('transform')] = '';
+	        this._removeEventListeners();
+
+	        // remove the popper if user explicity asked for the deletion on destroy
+	        if (this._options.removeOnDestroy) {
+	            this._popper.remove();
+	        }
+	        return this;
+	    };
+
+	    /**
+	     * Updates the position of the popper, computing the new offsets and applying the new style
+	     * @method
+	     * @memberof Popper
+	     */
+	    Popper.prototype.update = function () {
+	        var data = { instance: this, styles: {} };
+
+	        // store placement inside the data object, modifiers will be able to edit `placement` if needed
+	        // and refer to _originalPlacement to know the original value
+	        data.placement = this._options.placement;
+	        data._originalPlacement = this._options.placement;
+
+	        // compute the popper and reference offsets and put them inside data.offsets
+	        data.offsets = this._getOffsets(this._popper, this._reference, data.placement);
+
+	        // get boundaries
+	        data.boundaries = this._getBoundaries(data, this._options.boundariesPadding, this._options.boundariesElement);
+
+	        data = this.runModifiers(data, this._options.modifiers);
+
+	        if (typeof this.state.updateCallback === 'function') {
+	            this.state.updateCallback(data);
+	        }
+	    };
+
+	    /**
+	     * If a function is passed, it will be executed after the initialization of popper with as first argument the Popper instance.
+	     * @method
+	     * @memberof Popper
+	     * @param {Function} callback
+	     */
+	    Popper.prototype.onCreate = function (callback) {
+	        // the createCallbacks return as first argument the popper instance
+	        callback(this);
+	        return this;
+	    };
+
+	    /**
+	     * If a function is passed, it will be executed after each update of popper with as first argument the set of coordinates and informations
+	     * used to style popper and its arrow.
+	     * NOTE: it doesn't get fired on the first call of the `Popper.update()` method inside the `Popper` constructor!
+	     * @method
+	     * @memberof Popper
+	     * @param {Function} callback
+	     */
+	    Popper.prototype.onUpdate = function (callback) {
+	        this.state.updateCallback = callback;
+	        return this;
+	    };
+
+	    /**
+	     * Helper used to generate poppers from a configuration file
+	     * @method
+	     * @memberof Popper
+	     * @param config {Object} configuration
+	     * @returns {HTMLElement} popper
+	     */
+	    Popper.prototype.parse = function (config) {
+	        var defaultConfig = {
+	            tagName: 'div',
+	            classNames: ['popper'],
+	            attributes: [],
+	            parent: root.document.body,
+	            content: '',
+	            contentType: 'text',
+	            arrowTagName: 'div',
+	            arrowClassNames: ['popper__arrow'],
+	            arrowAttributes: ['x-arrow']
+	        };
+	        config = (0, _assign2.default)({}, defaultConfig, config);
+
+	        var d = root.document;
+
+	        var popper = d.createElement(config.tagName);
+	        addClassNames(popper, config.classNames);
+	        addAttributes(popper, config.attributes);
+	        if (config.contentType === 'node') {
+	            popper.appendChild(config.content.jquery ? config.content[0] : config.content);
+	        } else if (config.contentType === 'html') {
+	            popper.innerHTML = config.content;
+	        } else {
+	            popper.textContent = config.content;
+	        }
+
+	        if (config.arrowTagName) {
+	            var arrow = d.createElement(config.arrowTagName);
+	            addClassNames(arrow, config.arrowClassNames);
+	            addAttributes(arrow, config.arrowAttributes);
+	            popper.appendChild(arrow);
+	        }
+
+	        var parent = config.parent.jquery ? config.parent[0] : config.parent;
+
+	        // if the given parent is a string, use it to match an element
+	        // if more than one element is matched, the first one will be used as parent
+	        // if no elements are matched, the script will throw an error
+	        if (typeof parent === 'string') {
+	            parent = d.querySelectorAll(config.parent);
+	            if (parent.length > 1) {
+	                console.warn('WARNING: the given `parent` query(' + config.parent + ') matched more than one element, the first one will be used');
+	            }
+	            if (parent.length === 0) {
+	                throw 'ERROR: the given `parent` doesn\'t exists!';
+	            }
+	            parent = parent[0];
+	        }
+	        // if the given parent is a DOM nodes list or an array of nodes with more than one element,
+	        // the first one will be used as parent
+	        if (parent.length > 1 && parent instanceof Element === false) {
+	            console.warn('WARNING: you have passed as parent a list of elements, the first one will be used');
+	            parent = parent[0];
+	        }
+
+	        // append the generated popper to its parent
+	        parent.appendChild(popper);
+
+	        return popper;
+
+	        /**
+	         * Adds class names to the given element
+	         * @function
+	         * @ignore
+	         * @param {HTMLElement} target
+	         * @param {Array} classes
+	         */
+	        function addClassNames(element, classNames) {
+	            classNames.forEach(function (className) {
+	                element.classList.add(className);
+	            });
+	        }
+
+	        /**
+	         * Adds attributes to the given element
+	         * @function
+	         * @ignore
+	         * @param {HTMLElement} target
+	         * @param {Array} attributes
+	         * @example
+	         * addAttributes(element, [ 'data-info:foobar' ]);
+	         */
+	        function addAttributes(element, attributes) {
+	            attributes.forEach(function (attribute) {
+	                element.setAttribute(attribute.split(':')[0], attribute.split(':')[1] || '');
+	            });
+	        }
+	    };
+
+	    /**
+	     * Helper used to get the position which will be applied to the popper
+	     * @method
+	     * @memberof Popper
+	     * @param config {HTMLElement} popper element
+	     * @returns {HTMLElement} reference element
+	     */
+	    Popper.prototype._getPosition = function (popper, reference) {
+	        var container = getOffsetParent(reference);
+
+	        if (this._options.forceAbsolute) {
+	            return 'absolute';
+	        }
+
+	        // Decide if the popper will be fixed
+	        // If the reference element is inside a fixed context, the popper will be fixed as well to allow them to scroll together
+	        var isParentFixed = isFixed(reference, container);
+	        return isParentFixed ? 'fixed' : 'absolute';
+	    };
+
+	    /**
+	     * Get offsets to the popper
+	     * @method
+	     * @memberof Popper
+	     * @access private
+	     * @param {Element} popper - the popper element
+	     * @param {Element} reference - the reference element (the popper will be relative to this)
+	     * @returns {Object} An object containing the offsets which will be applied to the popper
+	     */
+	    Popper.prototype._getOffsets = function (popper, reference, placement) {
+	        placement = placement.split('-')[0];
+	        var popperOffsets = {};
+
+	        popperOffsets.position = this.state.position;
+	        var isParentFixed = popperOffsets.position === 'fixed';
+
+	        //
+	        // Get reference element position
+	        //
+	        var referenceOffsets = getOffsetRectRelativeToCustomParent(reference, getOffsetParent(popper), isParentFixed);
+
+	        //
+	        // Get popper sizes
+	        //
+	        var popperRect = getOuterSizes(popper);
+
+	        //
+	        // Compute offsets of popper
+	        //
+
+	        // depending by the popper placement we have to compute its offsets slightly differently
+	        if (['right', 'left'].indexOf(placement) !== -1) {
+	            popperOffsets.top = referenceOffsets.top + referenceOffsets.height / 2 - popperRect.height / 2;
+	            if (placement === 'left') {
+	                popperOffsets.left = referenceOffsets.left - popperRect.width;
+	            } else {
+	                popperOffsets.left = referenceOffsets.right;
+	            }
+	        } else {
+	            popperOffsets.left = referenceOffsets.left + referenceOffsets.width / 2 - popperRect.width / 2;
+	            if (placement === 'top') {
+	                popperOffsets.top = referenceOffsets.top - popperRect.height;
+	            } else {
+	                popperOffsets.top = referenceOffsets.bottom;
+	            }
+	        }
+
+	        // Add width and height to our offsets object
+	        popperOffsets.width = popperRect.width;
+	        popperOffsets.height = popperRect.height;
+
+	        return {
+	            popper: popperOffsets,
+	            reference: referenceOffsets
+	        };
+	    };
+
+	    /**
+	     * Setup needed event listeners used to update the popper position
+	     * @method
+	     * @memberof Popper
+	     * @access private
+	     */
+	    Popper.prototype._setupEventListeners = function () {
+	        // NOTE: 1 DOM access here
+	        this.state.updateBound = this.update.bind(this);
+	        root.addEventListener('resize', this.state.updateBound);
+	        // if the boundariesElement is window we don't need to listen for the scroll event
+	        if (this._options.boundariesElement !== 'window') {
+	            var target = getScrollParent(this._reference);
+	            // here it could be both `body` or `documentElement` thanks to Firefox, we then check both
+	            if (target === root.document.body || target === root.document.documentElement) {
+	                target = root;
+	            }
+	            target.addEventListener('scroll', this.state.updateBound);
+	        }
+	    };
+
+	    /**
+	     * Remove event listeners used to update the popper position
+	     * @method
+	     * @memberof Popper
+	     * @access private
+	     */
+	    Popper.prototype._removeEventListeners = function () {
+	        // NOTE: 1 DOM access here
+	        root.removeEventListener('resize', this.state.updateBound);
+	        if (this._options.boundariesElement !== 'window') {
+	            var target = getScrollParent(this._reference);
+	            // here it could be both `body` or `documentElement` thanks to Firefox, we then check both
+	            if (target === root.document.body || target === root.document.documentElement) {
+	                target = root;
+	            }
+	            target.removeEventListener('scroll', this.state.updateBound);
+	        }
+	        this.state.updateBound = null;
+	    };
+
+	    /**
+	     * Computed the boundaries limits and return them
+	     * @method
+	     * @memberof Popper
+	     * @access private
+	     * @param {Object} data - Object containing the property "offsets" generated by `_getOffsets`
+	     * @param {Number} padding - Boundaries padding
+	     * @param {Element} boundariesElement - Element used to define the boundaries
+	     * @returns {Object} Coordinates of the boundaries
+	     */
+	    Popper.prototype._getBoundaries = function (data, padding, boundariesElement) {
+	        // NOTE: 1 DOM access here
+	        var boundaries = {};
+	        var width, height;
+	        if (boundariesElement === 'window') {
+	            var body = root.document.body,
+	                html = root.document.documentElement;
+
+	            height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+	            width = Math.max(body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth);
+
+	            boundaries = {
+	                top: 0,
+	                right: width,
+	                bottom: height,
+	                left: 0
+	            };
+	        } else if (boundariesElement === 'viewport') {
+	            var offsetParent = getOffsetParent(this._popper);
+	            var scrollParent = getScrollParent(this._popper);
+	            var offsetParentRect = getOffsetRect(offsetParent);
+
+	            // if the popper is fixed we don't have to substract scrolling from the boundaries
+	            var scrollTop = data.offsets.popper.position === 'fixed' ? 0 : scrollParent.scrollTop;
+	            var scrollLeft = data.offsets.popper.position === 'fixed' ? 0 : scrollParent.scrollLeft;
+
+	            boundaries = {
+	                top: 0 - (offsetParentRect.top - scrollTop),
+	                right: root.document.documentElement.clientWidth - (offsetParentRect.left - scrollLeft),
+	                bottom: root.document.documentElement.clientHeight - (offsetParentRect.top - scrollTop),
+	                left: 0 - (offsetParentRect.left - scrollLeft)
+	            };
+	        } else {
+	            if (getOffsetParent(this._popper) === boundariesElement) {
+	                boundaries = {
+	                    top: 0,
+	                    left: 0,
+	                    right: boundariesElement.clientWidth,
+	                    bottom: boundariesElement.clientHeight
+	                };
+	            } else {
+	                boundaries = getOffsetRect(boundariesElement);
+	            }
+	        }
+	        boundaries.left += padding;
+	        boundaries.right -= padding;
+	        boundaries.top = boundaries.top + padding;
+	        boundaries.bottom = boundaries.bottom - padding;
+	        return boundaries;
+	    };
+
+	    /**
+	     * Loop trough the list of modifiers and run them in order, each of them will then edit the data object
+	     * @method
+	     * @memberof Popper
+	     * @access public
+	     * @param {Object} data
+	     * @param {Array} modifiers
+	     * @param {Function} ends
+	     */
+	    Popper.prototype.runModifiers = function (data, modifiers, ends) {
+	        var modifiersToRun = modifiers.slice();
+	        if (ends !== undefined) {
+	            modifiersToRun = this._options.modifiers.slice(0, getArrayKeyIndex(this._options.modifiers, ends));
+	        }
+
+	        modifiersToRun.forEach(function (modifier) {
+	            if (isFunction(modifier)) {
+	                data = modifier.call(this, data);
+	            }
+	        }.bind(this));
+
+	        return data;
+	    };
+
+	    /**
+	     * Helper used to know if the given modifier depends from another one.
+	     * @method
+	     * @memberof Popper
+	     * @returns {Boolean}
+	     */
+
+	    Popper.prototype.isModifierRequired = function (requesting, requested) {
+	        var index = getArrayKeyIndex(this._options.modifiers, requesting);
+	        return !!this._options.modifiers.slice(0, index).filter(function (modifier) {
+	            return modifier === requested;
+	        }).length;
+	    };
+
+	    //
+	    // Modifiers
+	    //
+
+	    /**
+	     * Modifiers list
+	     * @namespace Popper.modifiers
+	     * @memberof Popper
+	     * @type {Object}
+	     */
+	    Popper.prototype.modifiers = {};
+
+	    /**
+	     * Apply the computed styles to the popper element
+	     * @method
+	     * @memberof Popper.modifiers
+	     * @argument {Object} data - The data object generated by `update` method
+	     * @returns {Object} The same data object
+	     */
+	    Popper.prototype.modifiers.applyStyle = function (data) {
+	        // apply the final offsets to the popper
+	        // NOTE: 1 DOM access here
+	        var styles = {
+	            position: data.offsets.popper.position
+	        };
+
+	        // round top and left to avoid blurry text
+	        var left = Math.round(data.offsets.popper.left);
+	        var top = Math.round(data.offsets.popper.top);
+
+	        // if gpuAcceleration is set to true and transform is supported, we use `translate3d` to apply the position to the popper
+	        // we automatically use the supported prefixed version if needed
+	        var prefixedProperty;
+	        if (this._options.gpuAcceleration && (prefixedProperty = getSupportedPropertyName('transform'))) {
+	            styles[prefixedProperty] = 'translate3d(' + left + 'px, ' + top + 'px, 0)';
+	            styles.top = 0;
+	            styles.left = 0;
+	        }
+	        // othwerise, we use the standard `left` and `top` properties
+	        else {
+	                styles.left = left;
+	                styles.top = top;
+	            }
+
+	        // any property present in `data.styles` will be applied to the popper,
+	        // in this way we can make the 3rd party modifiers add custom styles to it
+	        // Be aware, modifiers could override the properties defined in the previous
+	        // lines of this modifier!
+	        (0, _assign2.default)(styles, data.styles);
+
+	        setStyle(this._popper, styles);
+
+	        // set an attribute which will be useful to style the tooltip (use it to properly position its arrow)
+	        // NOTE: 1 DOM access here
+	        this._popper.setAttribute('x-placement', data.placement);
+
+	        // if the arrow modifier is required and the arrow style has been computed, apply the arrow style
+	        if (this.isModifierRequired(this.modifiers.applyStyle, this.modifiers.arrow) && data.offsets.arrow) {
+	            setStyle(data.arrowElement, data.offsets.arrow);
+	        }
+
+	        return data;
+	    };
+
+	    /**
+	     * Modifier used to shift the popper on the start or end of its reference element side
+	     * @method
+	     * @memberof Popper.modifiers
+	     * @argument {Object} data - The data object generated by `update` method
+	     * @returns {Object} The data object, properly modified
+	     */
+	    Popper.prototype.modifiers.shift = function (data) {
+	        var placement = data.placement;
+	        var basePlacement = placement.split('-')[0];
+	        var shiftVariation = placement.split('-')[1];
+
+	        // if shift shiftVariation is specified, run the modifier
+	        if (shiftVariation) {
+	            var reference = data.offsets.reference;
+	            var popper = getPopperClientRect(data.offsets.popper);
+
+	            var shiftOffsets = {
+	                y: {
+	                    start: { top: reference.top },
+	                    end: { top: reference.top + reference.height - popper.height }
+	                },
+	                x: {
+	                    start: { left: reference.left },
+	                    end: { left: reference.left + reference.width - popper.width }
+	                }
+	            };
+
+	            var axis = ['bottom', 'top'].indexOf(basePlacement) !== -1 ? 'x' : 'y';
+
+	            data.offsets.popper = (0, _assign2.default)(popper, shiftOffsets[axis][shiftVariation]);
+	        }
+
+	        return data;
+	    };
+
+	    /**
+	     * Modifier used to make sure the popper does not overflows from it's boundaries
+	     * @method
+	     * @memberof Popper.modifiers
+	     * @argument {Object} data - The data object generated by `update` method
+	     * @returns {Object} The data object, properly modified
+	     */
+	    Popper.prototype.modifiers.preventOverflow = function (data) {
+	        var order = this._options.preventOverflowOrder;
+	        var popper = getPopperClientRect(data.offsets.popper);
+
+	        var check = {
+	            left: function left() {
+	                var left = popper.left;
+	                if (popper.left < data.boundaries.left) {
+	                    left = Math.max(popper.left, data.boundaries.left);
+	                }
+	                return { left: left };
+	            },
+	            right: function right() {
+	                var left = popper.left;
+	                if (popper.right > data.boundaries.right) {
+	                    left = Math.min(popper.left, data.boundaries.right - popper.width);
+	                }
+	                return { left: left };
+	            },
+	            top: function top() {
+	                var top = popper.top;
+	                if (popper.top < data.boundaries.top) {
+	                    top = Math.max(popper.top, data.boundaries.top);
+	                }
+	                return { top: top };
+	            },
+	            bottom: function bottom() {
+	                var top = popper.top;
+	                if (popper.bottom > data.boundaries.bottom) {
+	                    top = Math.min(popper.top, data.boundaries.bottom - popper.height);
+	                }
+	                return { top: top };
+	            }
+	        };
+
+	        order.forEach(function (direction) {
+	            data.offsets.popper = (0, _assign2.default)(popper, check[direction]());
+	        });
+
+	        return data;
+	    };
+
+	    /**
+	     * Modifier used to make sure the popper is always near its reference
+	     * @method
+	     * @memberof Popper.modifiers
+	     * @argument {Object} data - The data object generated by _update method
+	     * @returns {Object} The data object, properly modified
+	     */
+	    Popper.prototype.modifiers.keepTogether = function (data) {
+	        var popper = getPopperClientRect(data.offsets.popper);
+	        var reference = data.offsets.reference;
+	        var f = Math.floor;
+
+	        if (popper.right < f(reference.left)) {
+	            data.offsets.popper.left = f(reference.left) - popper.width;
+	        }
+	        if (popper.left > f(reference.right)) {
+	            data.offsets.popper.left = f(reference.right);
+	        }
+	        if (popper.bottom < f(reference.top)) {
+	            data.offsets.popper.top = f(reference.top) - popper.height;
+	        }
+	        if (popper.top > f(reference.bottom)) {
+	            data.offsets.popper.top = f(reference.bottom);
+	        }
+
+	        return data;
+	    };
+
+	    /**
+	     * Modifier used to flip the placement of the popper when the latter is starting overlapping its reference element.
+	     * Requires the `preventOverflow` modifier before it in order to work.
+	     * **NOTE:** This modifier will run all its previous modifiers everytime it tries to flip the popper!
+	     * @method
+	     * @memberof Popper.modifiers
+	     * @argument {Object} data - The data object generated by _update method
+	     * @returns {Object} The data object, properly modified
+	     */
+	    Popper.prototype.modifiers.flip = function (data) {
+	        // check if preventOverflow is in the list of modifiers before the flip modifier.
+	        // otherwise flip would not work as expected.
+	        if (!this.isModifierRequired(this.modifiers.flip, this.modifiers.preventOverflow)) {
+	            console.warn('WARNING: preventOverflow modifier is required by flip modifier in order to work, be sure to include it before flip!');
+	            return data;
+	        }
+
+	        if (data.flipped && data.placement === data._originalPlacement) {
+	            // seems like flip is trying to loop, probably there's not enough space on any of the flippable sides
+	            return data;
+	        }
+
+	        var placement = data.placement.split('-')[0];
+	        var placementOpposite = getOppositePlacement(placement);
+	        var variation = data.placement.split('-')[1] || '';
+
+	        var flipOrder = [];
+	        if (this._options.flipBehavior === 'flip') {
+	            flipOrder = [placement, placementOpposite];
+	        } else {
+	            flipOrder = this._options.flipBehavior;
+	        }
+
+	        flipOrder.forEach(function (step, index) {
+	            if (placement !== step || flipOrder.length === index + 1) {
+	                return;
+	            }
+
+	            placement = data.placement.split('-')[0];
+	            placementOpposite = getOppositePlacement(placement);
+
+	            var popperOffsets = getPopperClientRect(data.offsets.popper);
+
+	            // this boolean is used to distinguish right and bottom from top and left
+	            // they need different computations to get flipped
+	            var a = ['right', 'bottom'].indexOf(placement) !== -1;
+
+	            // using Math.floor because the reference offsets may contain decimals we are not going to consider here
+	            if (a && Math.floor(data.offsets.reference[placement]) > Math.floor(popperOffsets[placementOpposite]) || !a && Math.floor(data.offsets.reference[placement]) < Math.floor(popperOffsets[placementOpposite])) {
+	                // we'll use this boolean to detect any flip loop
+	                data.flipped = true;
+	                data.placement = flipOrder[index + 1];
+	                if (variation) {
+	                    data.placement += '-' + variation;
+	                }
+	                data.offsets.popper = this._getOffsets(this._popper, this._reference, data.placement).popper;
+
+	                data = this.runModifiers(data, this._options.modifiers, this._flip);
+	            }
+	        }.bind(this));
+	        return data;
+	    };
+
+	    /**
+	     * Modifier used to add an offset to the popper, useful if you more granularity positioning your popper.
+	     * The offsets will shift the popper on the side of its reference element.
+	     * @method
+	     * @memberof Popper.modifiers
+	     * @argument {Object} data - The data object generated by _update method
+	     * @returns {Object} The data object, properly modified
+	     */
+	    Popper.prototype.modifiers.offset = function (data) {
+	        var offset = this._options.offset;
+	        var popper = data.offsets.popper;
+
+	        if (data.placement.indexOf('left') !== -1) {
+	            popper.top -= offset;
+	        } else if (data.placement.indexOf('right') !== -1) {
+	            popper.top += offset;
+	        } else if (data.placement.indexOf('top') !== -1) {
+	            popper.left -= offset;
+	        } else if (data.placement.indexOf('bottom') !== -1) {
+	            popper.left += offset;
+	        }
+	        return data;
+	    };
+
+	    /**
+	     * Modifier used to move the arrows on the edge of the popper to make sure them are always between the popper and the reference element
+	     * It will use the CSS outer size of the arrow element to know how many pixels of conjuction are needed
+	     * @method
+	     * @memberof Popper.modifiers
+	     * @argument {Object} data - The data object generated by _update method
+	     * @returns {Object} The data object, properly modified
+	     */
+	    Popper.prototype.modifiers.arrow = function (data) {
+	        var arrow = this._options.arrowElement;
+
+	        // if the arrowElement is a string, suppose it's a CSS selector
+	        if (typeof arrow === 'string') {
+	            arrow = this._popper.querySelector(arrow);
+	        }
+
+	        // if arrow element is not found, don't run the modifier
+	        if (!arrow) {
+	            return data;
+	        }
+
+	        // the arrow element must be child of its popper
+	        if (!this._popper.contains(arrow)) {
+	            console.warn('WARNING: `arrowElement` must be child of its popper element!');
+	            return data;
+	        }
+
+	        // arrow depends on keepTogether in order to work
+	        if (!this.isModifierRequired(this.modifiers.arrow, this.modifiers.keepTogether)) {
+	            console.warn('WARNING: keepTogether modifier is required by arrow modifier in order to work, be sure to include it before arrow!');
+	            return data;
+	        }
+
+	        var arrowStyle = {};
+	        var placement = data.placement.split('-')[0];
+	        var popper = getPopperClientRect(data.offsets.popper);
+	        var reference = data.offsets.reference;
+	        var isVertical = ['left', 'right'].indexOf(placement) !== -1;
+
+	        var len = isVertical ? 'height' : 'width';
+	        var side = isVertical ? 'top' : 'left';
+	        var altSide = isVertical ? 'left' : 'top';
+	        var opSide = isVertical ? 'bottom' : 'right';
+	        var arrowSize = getOuterSizes(arrow)[len];
+
+	        //
+	        // extends keepTogether behavior making sure the popper and its reference have enough pixels in conjuction
+	        //
+
+	        // top/left side
+	        if (reference[opSide] - arrowSize < popper[side]) {
+	            data.offsets.popper[side] -= popper[side] - (reference[opSide] - arrowSize);
+	        }
+	        // bottom/right side
+	        if (reference[side] + arrowSize > popper[opSide]) {
+	            data.offsets.popper[side] += reference[side] + arrowSize - popper[opSide];
+	        }
+
+	        // compute center of the popper
+	        var center = reference[side] + reference[len] / 2 - arrowSize / 2;
+
+	        var sideValue = center - popper[side];
+
+	        // prevent arrow from being placed not contiguously to its popper
+	        sideValue = Math.max(Math.min(popper[len] - arrowSize, sideValue), 0);
+	        arrowStyle[side] = sideValue;
+	        arrowStyle[altSide] = ''; // make sure to remove any old style from the arrow
+
+	        data.offsets.arrow = arrowStyle;
+	        data.arrowElement = arrow;
+
+	        return data;
+	    };
+
+	    //
+	    // Helpers
+	    //
+
+	    /**
+	     * Get the outer sizes of the given element (offset size + margins)
+	     * @function
+	     * @ignore
+	     * @argument {Element} element
+	     * @returns {Object} object containing width and height properties
+	     */
+	    function getOuterSizes(element) {
+	        // NOTE: 1 DOM access here
+	        var _display = element.style.display,
+	            _visibility = element.style.visibility;
+	        element.style.display = 'block';element.style.visibility = 'hidden';
+	        var calcWidthToForceRepaint = element.offsetWidth;
+
+	        // original method
+	        var styles = root.getComputedStyle(element);
+	        var x = parseFloat(styles.marginTop) + parseFloat(styles.marginBottom);
+	        var y = parseFloat(styles.marginLeft) + parseFloat(styles.marginRight);
+	        var result = { width: element.offsetWidth + y, height: element.offsetHeight + x };
+
+	        // reset element styles
+	        element.style.display = _display;element.style.visibility = _visibility;
+	        return result;
+	    }
+
+	    /**
+	     * Get the opposite placement of the given one/
+	     * @function
+	     * @ignore
+	     * @argument {String} placement
+	     * @returns {String} flipped placement
+	     */
+	    function getOppositePlacement(placement) {
+	        var hash = { left: 'right', right: 'left', bottom: 'top', top: 'bottom' };
+	        return placement.replace(/left|right|bottom|top/g, function (matched) {
+	            return hash[matched];
+	        });
+	    }
+
+	    /**
+	     * Given the popper offsets, generate an output similar to getBoundingClientRect
+	     * @function
+	     * @ignore
+	     * @argument {Object} popperOffsets
+	     * @returns {Object} ClientRect like output
+	     */
+	    function getPopperClientRect(popperOffsets) {
+	        var offsets = (0, _assign2.default)({}, popperOffsets);
+	        offsets.right = offsets.left + offsets.width;
+	        offsets.bottom = offsets.top + offsets.height;
+	        return offsets;
+	    }
+
+	    /**
+	     * Given an array and the key to find, returns its index
+	     * @function
+	     * @ignore
+	     * @argument {Array} arr
+	     * @argument keyToFind
+	     * @returns index or null
+	     */
+	    function getArrayKeyIndex(arr, keyToFind) {
+	        var i = 0,
+	            key;
+	        for (key in arr) {
+	            if (arr[key] === keyToFind) {
+	                return i;
+	            }
+	            i++;
+	        }
+	        return null;
+	    }
+
+	    /**
+	     * Get CSS computed property of the given element
+	     * @function
+	     * @ignore
+	     * @argument {Eement} element
+	     * @argument {String} property
+	     */
+	    function getStyleComputedProperty(element, property) {
+	        // NOTE: 1 DOM access here
+	        var css = root.getComputedStyle(element, null);
+	        return css[property];
+	    }
+
+	    /**
+	     * Returns the offset parent of the given element
+	     * @function
+	     * @ignore
+	     * @argument {Element} element
+	     * @returns {Element} offset parent
+	     */
+	    function getOffsetParent(element) {
+	        // NOTE: 1 DOM access here
+	        var offsetParent = element.offsetParent;
+	        return offsetParent === root.document.body || !offsetParent ? root.document.documentElement : offsetParent;
+	    }
+
+	    /**
+	     * Returns the scrolling parent of the given element
+	     * @function
+	     * @ignore
+	     * @argument {Element} element
+	     * @returns {Element} offset parent
+	     */
+	    function getScrollParent(element) {
+	        if (element === root.document) {
+	            // Firefox puts the scrollTOp value on `documentElement` instead of `body`, we then check which of them is
+	            // greater than 0 and return the proper element
+	            if (root.document.body.scrollTop) {
+	                return root.document.body;
+	            } else {
+	                return root.document.documentElement;
+	            }
+	        }
+
+	        // Firefox want us to check `-x` and `-y` variations as well
+	        if (['scroll', 'auto'].indexOf(getStyleComputedProperty(element, 'overflow')) !== -1 || ['scroll', 'auto'].indexOf(getStyleComputedProperty(element, 'overflow-x')) !== -1 || ['scroll', 'auto'].indexOf(getStyleComputedProperty(element, 'overflow-y')) !== -1) {
+	            return element;
+	        }
+	        return element.parentNode ? getScrollParent(element.parentNode) : element;
+	    }
+
+	    /**
+	     * Check if the given element is fixed or is inside a fixed parent
+	     * @function
+	     * @ignore
+	     * @argument {Element} element
+	     * @argument {Element} customContainer
+	     * @returns {Boolean} answer to "isFixed?"
+	     */
+	    function isFixed(element) {
+	        if (element === root.document.body) {
+	            return false;
+	        }
+	        if (getStyleComputedProperty(element, 'position') === 'fixed') {
+	            return true;
+	        }
+	        return element.parentNode ? isFixed(element.parentNode) : element;
+	    }
+
+	    /**
+	     * Set the style to the given popper
+	     * @function
+	     * @ignore
+	     * @argument {Element} element - Element to apply the style to
+	     * @argument {Object} styles - Object with a list of properties and values which will be applied to the element
+	     */
+	    function setStyle(element, styles) {
+	        function is_numeric(n) {
+	            return n !== '' && !isNaN(parseFloat(n)) && isFinite(n);
+	        }
+	        (0, _keys2.default)(styles).forEach(function (prop) {
+	            var unit = '';
+	            // add unit if the value is numeric and is one of the following
+	            if (['width', 'height', 'top', 'right', 'bottom', 'left'].indexOf(prop) !== -1 && is_numeric(styles[prop])) {
+	                unit = 'px';
+	            }
+	            element.style[prop] = styles[prop] + unit;
+	        });
+	    }
+
+	    /**
+	     * Check if the given variable is a function
+	     * @function
+	     * @ignore
+	     * @argument {Element} element - Element to check
+	     * @returns {Boolean} answer to: is a function?
+	     */
+	    function isFunction(functionToCheck) {
+	        var getType = {};
+	        return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
+	    }
+
+	    /**
+	     * Get the position of the given element, relative to its offset parent
+	     * @function
+	     * @ignore
+	     * @param {Element} element
+	     * @return {Object} position - Coordinates of the element and its `scrollTop`
+	     */
+	    function getOffsetRect(element) {
+	        var elementRect = {
+	            width: element.offsetWidth,
+	            height: element.offsetHeight,
+	            left: element.offsetLeft,
+	            top: element.offsetTop
+	        };
+
+	        elementRect.right = elementRect.left + elementRect.width;
+	        elementRect.bottom = elementRect.top + elementRect.height;
+
+	        // position
+	        return elementRect;
+	    }
+
+	    /**
+	     * Get bounding client rect of given element
+	     * @function
+	     * @ignore
+	     * @param {HTMLElement} element
+	     * @return {Object} client rect
+	     */
+	    function getBoundingClientRect(element) {
+	        var rect = element.getBoundingClientRect();
+	        return {
+	            left: rect.left,
+	            top: rect.top,
+	            right: rect.right,
+	            bottom: rect.bottom,
+	            width: rect.right - rect.left,
+	            height: rect.bottom - rect.top
+	        };
+	    }
+
+	    /**
+	     * Given an element and one of its parents, return the offset
+	     * @function
+	     * @ignore
+	     * @param {HTMLElement} element
+	     * @param {HTMLElement} parent
+	     * @return {Object} rect
+	     */
+	    function getOffsetRectRelativeToCustomParent(element, parent, fixed) {
+	        var elementRect = getBoundingClientRect(element);
+	        var parentRect = getBoundingClientRect(parent);
+
+	        if (fixed) {
+	            var scrollParent = getScrollParent(parent);
+	            parentRect.top += scrollParent.scrollTop;
+	            parentRect.bottom += scrollParent.scrollTop;
+	            parentRect.left += scrollParent.scrollLeft;
+	            parentRect.right += scrollParent.scrollLeft;
+	        }
+
+	        var rect = {
+	            top: elementRect.top - parentRect.top,
+	            left: elementRect.left - parentRect.left,
+	            bottom: elementRect.top - parentRect.top + elementRect.height,
+	            right: elementRect.left - parentRect.left + elementRect.width,
+	            width: elementRect.width,
+	            height: elementRect.height
+	        };
+	        return rect;
+	    }
+
+	    /**
+	     * Get the prefixed supported property name
+	     * @function
+	     * @ignore
+	     * @argument {String} property (camelCase)
+	     * @returns {String} prefixed property (camelCase)
+	     */
+	    function getSupportedPropertyName(property) {
+	        var prefixes = ['', 'ms', 'webkit', 'moz', 'o'];
+
+	        for (var i = 0; i < prefixes.length; i++) {
+	            var toCheck = prefixes[i] ? prefixes[i] + property.charAt(0).toUpperCase() + property.slice(1) : property;
+	            if (typeof root.document.body.style[toCheck] !== 'undefined') {
+	                return toCheck;
+	            }
+	        }
+	        return null;
+	    }
+
+	    /**
+	     * The Object.assign() method is used to copy the values of all enumerable own properties from one or more source
+	     * objects to a target object. It will return the target object.
+	     * This polyfill doesn't support symbol properties, since ES5 doesn't have symbols anyway
+	     * Source: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+	     * @function
+	     * @ignore
+	     */
+	    if (!_assign2.default) {
+	        Object.defineProperty(Object, 'assign', {
+	            enumerable: false,
+	            configurable: true,
+	            writable: true,
+	            value: function value(target) {
+	                if (target === undefined || target === null) {
+	                    throw new TypeError('Cannot convert first argument to object');
+	                }
+
+	                var to = Object(target);
+	                for (var i = 1; i < arguments.length; i++) {
+	                    var nextSource = arguments[i];
+	                    if (nextSource === undefined || nextSource === null) {
+	                        continue;
+	                    }
+	                    nextSource = Object(nextSource);
+
+	                    var keysArray = (0, _keys2.default)(nextSource);
+	                    for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+	                        var nextKey = keysArray[nextIndex];
+	                        var desc = (0, _getOwnPropertyDescriptor2.default)(nextSource, nextKey);
+	                        if (desc !== undefined && desc.enumerable) {
+	                            to[nextKey] = nextSource[nextKey];
+	                        }
+	                    }
+	                }
+	                return to;
+	            }
+	        });
+	    }
+
+	    return Popper;
+	});
+
+/***/ },
+/* 415 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(416), __esModule: true };
+
+/***/ },
+/* 416 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(417);
+	module.exports = __webpack_require__(28).Object.assign;
+
+/***/ },
+/* 417 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.3.1 Object.assign(target, source)
+	var $export = __webpack_require__(27);
+
+	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(418)});
+
+/***/ },
+/* 418 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// 19.1.2.1 Object.assign(target, source, ...)
+	var getKeys  = __webpack_require__(55)
+	  , gOPS     = __webpack_require__(95)
+	  , pIE      = __webpack_require__(16)
+	  , toObject = __webpack_require__(83)
+	  , IObject  = __webpack_require__(12)
+	  , $assign  = Object.assign;
+
+	// should work with symbols and should have deterministic property order (V8 bug)
+	module.exports = !$assign || __webpack_require__(23)(function(){
+	  var A = {}
+	    , B = {}
+	    , S = Symbol()
+	    , K = 'abcdefghijklmnopqrst';
+	  A[S] = 7;
+	  K.split('').forEach(function(k){ B[k] = k; });
+	  return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join('') != K;
+	}) ? function assign(target, source){ // eslint-disable-line no-unused-vars
+	  var T     = toObject(target)
+	    , aLen  = arguments.length
+	    , index = 1
+	    , getSymbols = gOPS.f
+	    , isEnum     = pIE.f;
+	  while(aLen > index){
+	    var S      = IObject(arguments[index++])
+	      , keys   = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S)
+	      , length = keys.length
+	      , j      = 0
+	      , key;
+	    while(length > j)if(isEnum.call(S, key = keys[j++]))T[key] = S[key];
+	  } return T;
+	} : $assign;
+
+/***/ },
+/* 419 */,
+/* 420 */,
+/* 421 */,
+/* 422 */,
+/* 423 */,
+/* 424 */,
+/* 425 */,
+/* 426 */,
+/* 427 */,
+/* 428 */,
+/* 429 */,
+/* 430 */,
+/* 431 */,
+/* 432 */,
+/* 433 */,
+/* 434 */,
+/* 435 */,
+/* 436 */,
+/* 437 */,
+/* 438 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	/**
+	 * @description 操作对象的工具方法.
+	 * @author pkeros
+	 * @data 2017/3/31
+	 * @email pkeros@vip.qq.com
+	 */
+
+	/**
+	 * @description 合并选项
+	 * @param target 需要合并的目标
+	 * @return {*} 目标
+	 */
+	var merge = function merge(target) {
+	  for (var i = 1, j = arguments.length; i < j; i++) {
+	    var source = arguments[i];
+	    for (var prop in source) {
+	      if (source.hasOwnProperty(prop)) {
+	        var value = source[prop];
+	        if (value !== undefined) {
+	          target[prop] = value;
+	        }
+	      }
+	    }
+	  }
+
+	  return target;
+	};
+
+	exports.default = {
+	  merge: merge
+	};
+
+/***/ },
+/* 439 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _IosSwitch = __webpack_require__(904);
+
+	var _IosSwitch2 = _interopRequireDefault(_IosSwitch);
+
+	var _AbstractSwitch = __webpack_require__(909);
+
+	var _AbstractSwitch2 = _interopRequireDefault(_AbstractSwitch);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * @description: 封装了一些列的的开关组件。
+	 * @summary:
+	 *  KsSwitch 中封装了多种 Switch, 它们可以分别导入。
+	 * @author: pkeros.
+	 * @date: 2016/10/11.
+	 */
+
+	exports.default = {
+	  KsSwitch: _IosSwitch2.default,
+	  KsAbstractSwitch: _AbstractSwitch2.default
+	};
+
+/***/ },
+/* 440 */,
+/* 441 */,
+/* 442 */,
+/* 443 */,
+/* 444 */,
+/* 445 */,
+/* 446 */,
+/* 447 */,
+/* 448 */,
+/* 449 */,
+/* 450 */,
+/* 451 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.KsDialogEntity = exports.KsDialog = undefined;
+
+	var _main = __webpack_require__(914);
+
+	var _main2 = _interopRequireDefault(_main);
+
+	var _main3 = __webpack_require__(915);
+
+	var _main4 = _interopRequireDefault(_main3);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * @description dialog 组件
+	 * @summary
+	 *  1. 一个对话框组件.
+	 * @author: pkeros.
+	 * @date: 2016/10/25.
+	 */
+
+	exports.KsDialog = _main2.default;
+	exports.KsDialogEntity = _main4.default;
+
+/***/ },
+/* 452 */,
+/* 453 */,
+/* 454 */,
+/* 455 */,
+/* 456 */,
+/* 457 */,
+/* 458 */,
+/* 459 */,
+/* 460 */,
+/* 461 */,
+/* 462 */,
+/* 463 */,
+/* 464 */,
+/* 465 */,
+/* 466 */,
+/* 467 */,
+/* 468 */,
+/* 469 */,
+/* 470 */,
+/* 471 */,
+/* 472 */,
+/* 473 */,
+/* 474 */,
+/* 475 */,
+/* 476 */,
+/* 477 */,
+/* 478 */,
+/* 479 */,
+/* 480 */,
+/* 481 */,
+/* 482 */,
+/* 483 */,
+/* 484 */,
+/* 485 */,
+/* 486 */,
+/* 487 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.KsModalCenter = exports.KsModalEntity = exports.KsModal = undefined;
+
+	var _main = __webpack_require__(946);
+
+	var _main2 = _interopRequireDefault(_main);
+
+	var _main3 = __webpack_require__(947);
+
+	var _main4 = _interopRequireDefault(_main3);
+
+	var _center = __webpack_require__(959);
+
+	var _center2 = _interopRequireDefault(_center);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.KsModal = _main2.default;
+	exports.KsModalEntity = _main4.default;
+	exports.KsModalCenter = _center2.default; /**
+	                                           * @description modal 组件
+	                                           * @summary
+	                                           *  我是一个单纯可爱的模态组件.
+	                                           * @author: pkeros.
+	                                           * @date: 2016/10/19.
+	                                           */
+
+/***/ },
+/* 488 */,
+/* 489 */,
+/* 490 */,
+/* 491 */,
+/* 492 */,
+/* 493 */,
+/* 494 */,
+/* 495 */,
+/* 496 */,
+/* 497 */,
+/* 498 */,
+/* 499 */,
+/* 500 */,
+/* 501 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _NrCheckbox = __webpack_require__(964);
+
+	var _NrCheckbox2 = _interopRequireDefault(_NrCheckbox);
+
+	var _CheckboxGroup = __webpack_require__(969);
+
+	var _CheckboxGroup2 = _interopRequireDefault(_CheckboxGroup);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * @description: 封装了一些列的的复选框组件。
+	 * @summary:
+	 *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
+	 * @author: pkeros.
+	 * @date: 2016/10/11.
+	 */
+
+	exports.default = {
+	  KsCheckbox: _NrCheckbox2.default,
+	  KsCheckboxGroup: _CheckboxGroup2.default
+	};
+
+/***/ },
+/* 502 */,
+/* 503 */,
+/* 504 */,
+/* 505 */,
+/* 506 */,
+/* 507 */,
+/* 508 */,
+/* 509 */,
+/* 510 */,
+/* 511 */,
+/* 512 */,
+/* 513 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.KsMaskEntity = exports.KsMask = undefined;
+
+	var _main = __webpack_require__(953);
+
+	var _main2 = _interopRequireDefault(_main);
+
+	var _main3 = __webpack_require__(954);
+
+	var _main4 = _interopRequireDefault(_main3);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * @description mask 组件
+	 * @author: pkeros.
+	 * @date: 2016/10/20.
+	 */
+
+	exports.KsMask = _main2.default;
+	exports.KsMaskEntity = _main4.default;
+
+/***/ },
+/* 514 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _circleRadio = __webpack_require__(974);
+
+	var _circleRadio2 = _interopRequireDefault(_circleRadio);
+
+	var _BtnRadio = __webpack_require__(985);
+
+	var _BtnRadio2 = _interopRequireDefault(_BtnRadio);
+
+	var _radioGroup = __webpack_require__(990);
+
+	var _radioGroup2 = _interopRequireDefault(_radioGroup);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  KsRadio: _circleRadio2.default,
+	  KsBtnRadio: _BtnRadio2.default,
+	  KsRadioGroup: _radioGroup2.default
+	}; /**
+	    * @description: 封装了一些列的单选组件。
+	    * @summary:
+	    *  KsRadio 中封装了多种 Radio, 它们可以分别导入。
+	    * @author: pkeros.
+	    * @date: 2016/10/14.
+	    */
+
+/***/ },
+/* 515 */,
+/* 516 */,
+/* 517 */,
+/* 518 */,
+/* 519 */,
+/* 520 */,
+/* 521 */,
+/* 522 */,
+/* 523 */,
+/* 524 */,
+/* 525 */,
+/* 526 */,
+/* 527 */,
+/* 528 */,
+/* 529 */,
+/* 530 */,
+/* 531 */,
+/* 532 */,
+/* 533 */,
+/* 534 */,
+/* 535 */,
+/* 536 */,
+/* 537 */,
+/* 538 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.KsButtonAbstract = exports.KsButton = undefined;
+
+	var _main = __webpack_require__(931);
+
+	var _main2 = _interopRequireDefault(_main);
+
+	var _abstract = __webpack_require__(935);
+
+	var _abstract2 = _interopRequireDefault(_abstract);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * @description KsButton 组件
+	 * @author: pkeros.
+	 * @date: 2016/10/18.
+	 * @email pkeros@vip.qq.com
+	 */
+
+	exports.KsButton = _main2.default;
+	exports.KsButtonAbstract = _abstract2.default;
+
+/***/ },
+/* 539 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _page = __webpack_require__(995);
+
+	var _page2 = _interopRequireDefault(_page);
+
+	var _pagegroup = __webpack_require__(1001);
+
+	var _pagegroup2 = _interopRequireDefault(_pagegroup);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  KsPage: _page2.default,
+	  KsPageGroup: _pagegroup2.default
+	};
+
+/***/ },
+/* 540 */,
+/* 541 */,
+/* 542 */,
+/* 543 */,
+/* 544 */,
+/* 545 */,
+/* 546 */,
+/* 547 */,
+/* 548 */,
+/* 549 */,
+/* 550 */,
+/* 551 */,
+/* 552 */,
+/* 553 */,
+/* 554 */,
+/* 555 */,
+/* 556 */,
+/* 557 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _dater = __webpack_require__(1006);
+
+	var _dater2 = _interopRequireDefault(_dater);
+
+	var _daterPure = __webpack_require__(1016);
+
+	var _daterPure2 = _interopRequireDefault(_daterPure);
+
+	var _datePicker = __webpack_require__(1022);
+
+	var _datePicker2 = _interopRequireDefault(_datePicker);
+
+	var _daterRange = __webpack_require__(1030);
+
+	var _daterRange2 = _interopRequireDefault(_daterRange);
+
+	var _dateRangePicker = __webpack_require__(1034);
+
+	var _dateRangePicker2 = _interopRequireDefault(_dateRangePicker);
+
+	var _dateMonth = __webpack_require__(1026);
+
+	var _dateMonth2 = _interopRequireDefault(_dateMonth);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  KsDater: _dater2.default,
+	  KsDaterPure: _daterPure2.default,
+	  KsDatePicker: _datePicker2.default,
+	  KsDaterRange: _daterRange2.default,
+	  KsDateRangePicker: _dateRangePicker2.default,
+	  KsDateMonth: _dateMonth2.default
+	};
+
+/***/ },
+/* 558 */,
+/* 559 */,
+/* 560 */,
+/* 561 */,
+/* 562 */,
+/* 563 */,
+/* 564 */,
+/* 565 */,
+/* 566 */,
+/* 567 */,
+/* 568 */,
+/* 569 */,
+/* 570 */,
+/* 571 */,
+/* 572 */,
+/* 573 */,
+/* 574 */,
+/* 575 */,
+/* 576 */,
+/* 577 */,
+/* 578 */,
+/* 579 */,
+/* 580 */,
+/* 581 */,
+/* 582 */,
+/* 583 */,
+/* 584 */,
+/* 585 */,
+/* 586 */,
+/* 587 */,
+/* 588 */,
+/* 589 */,
+/* 590 */,
+/* 591 */,
+/* 592 */,
+/* 593 */,
+/* 594 */,
+/* 595 */,
+/* 596 */,
+/* 597 */,
+/* 598 */,
+/* 599 */,
+/* 600 */,
+/* 601 */,
+/* 602 */,
+/* 603 */,
+/* 604 */,
+/* 605 */,
+/* 606 */,
+/* 607 */,
+/* 608 */,
+/* 609 */,
+/* 610 */,
+/* 611 */,
+/* 612 */,
+/* 613 */,
+/* 614 */,
+/* 615 */,
+/* 616 */,
+/* 617 */,
+/* 618 */,
+/* 619 */,
+/* 620 */,
+/* 621 */,
+/* 622 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _Store = __webpack_require__(1037);
+
+	var _Store2 = _interopRequireDefault(_Store);
+
+	var _StoreClick = __webpack_require__(1042);
+
+	var _StoreClick2 = _interopRequireDefault(_StoreClick);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * @description: 封装了一些列的的复选框组件。
+	 * @summary:
+	 *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
+	 * @author: pkeros.
+	 * @date: 2016/10/11.
+	 */
+
+	exports.default = {
+	  KsStore: _Store2.default,
+	  KsStoreClick: _StoreClick2.default
+	};
+
+/***/ },
+/* 623 */,
+/* 624 */,
+/* 625 */,
+/* 626 */,
+/* 627 */,
+/* 628 */,
+/* 629 */,
+/* 630 */,
+/* 631 */,
+/* 632 */,
+/* 633 */,
+/* 634 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _Search = __webpack_require__(1047);
+
+	var _Search2 = _interopRequireDefault(_Search);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  KsSearch: _Search2.default
+	}; /**
+	    * @description search 组件
+	    * @summary
+	    *  模糊搜索组件
+	    */
+
+/***/ },
+/* 635 */,
+/* 636 */,
+/* 637 */,
+/* 638 */,
+/* 639 */,
+/* 640 */,
+/* 641 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _KsDialogChoose = __webpack_require__(1052);
+
+	var _KsDialogChoose2 = _interopRequireDefault(_KsDialogChoose);
+
+	var _ListStore = __webpack_require__(1056);
+
+	var _ListStore2 = _interopRequireDefault(_ListStore);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * @description: 封装了一些列的的复选框组件。
+	 * @summary:
+	 *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
+	 * @author: pkeros.
+	 * @date: 2016/10/11.
+	 */
+
+	exports.default = {
+	  KsDialogChoose: _KsDialogChoose2.default,
+	  KsList: _ListStore2.default
+	};
+
+/***/ },
+/* 642 */,
+/* 643 */,
+/* 644 */,
+/* 645 */,
+/* 646 */,
+/* 647 */,
+/* 648 */,
+/* 649 */,
+/* 650 */,
+/* 651 */,
+/* 652 */,
+/* 653 */,
+/* 654 */,
+/* 655 */,
+/* 656 */,
+/* 657 */,
+/* 658 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _Item = __webpack_require__(1067);
+
+	var _Item2 = _interopRequireDefault(_Item);
+
+	var _ItemFloor = __webpack_require__(1072);
+
+	var _ItemFloor2 = _interopRequireDefault(_ItemFloor);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * @description: 封装了一些列的的复选框组件。
+	 * @summary:
+	 *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
+	 * @author: pkeros.
+	 * @date: 2016/10/11.
+	 */
+
+	exports.default = {
+	  KsItem: _Item2.default,
+	  KsItemFloor: _ItemFloor2.default
+	};
+
+/***/ },
+/* 659 */,
+/* 660 */,
+/* 661 */,
+/* 662 */,
+/* 663 */,
+/* 664 */,
+/* 665 */,
+/* 666 */,
+/* 667 */,
+/* 668 */,
+/* 669 */,
+/* 670 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _Dialog = __webpack_require__(1061);
+
+	var _Dialog2 = _interopRequireDefault(_Dialog);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _Dialog2.default; /**
+	                                     * @description: 封装了一些列的的复选框组件。
+	                                     * @summary:
+	                                     *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
+	                                     * @author: pkeros.
+	                                     * @date: 2016/10/11.
+	                                     */
+
+/***/ },
+/* 671 */,
+/* 672 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _AddTableItem = __webpack_require__(1077);
+
+	var _AddTableItem2 = _interopRequireDefault(_AddTableItem);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _AddTableItem2.default; /**
+	                                           * @description: 封装了一些列的的复选框组件。
+	                                           * @summary:
+	                                           *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
+	                                           * @author: pkeros.
+	                                           * @date: 2016/10/11.
+	                                           */
+
+/***/ },
+/* 673 */,
+/* 674 */,
+/* 675 */,
+/* 676 */,
+/* 677 */,
+/* 678 */,
+/* 679 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.KsImgs = exports.KsImage = undefined;
+
+	var _KsImage = __webpack_require__(1082);
+
+	var _KsImage2 = _interopRequireDefault(_KsImage);
+
+	var _KsImgs = __webpack_require__(1087);
+
+	var _KsImgs2 = _interopRequireDefault(_KsImgs);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * @description: 封装了一些列的的复选框组件。
+	 * @summary:
+	 *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
+	 * @author: pkeros.
+	 * @date: 2016/10/11.
+	 */
+
+	exports.KsImage = _KsImage2.default;
+	exports.KsImgs = _KsImgs2.default;
+
+/***/ },
+/* 680 */,
+/* 681 */,
+/* 682 */,
+/* 683 */,
+/* 684 */,
+/* 685 */,
+/* 686 */,
+/* 687 */,
+/* 688 */,
+/* 689 */,
+/* 690 */,
+/* 691 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _icon = __webpack_require__(926);
+
+	var _icon2 = _interopRequireDefault(_icon);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _icon2.default; /**
+	                                   * @description 图标 图标 图标.
+	                                   * @author pkeros
+	                                   * @data 2017/4/11
+	                                   * @email pkeros@vip.qq.com
+	                                   */
+
+/***/ },
+/* 692 */,
+/* 693 */,
+/* 694 */,
+/* 695 */,
+/* 696 */,
+/* 697 */,
+/* 698 */,
+/* 699 */,
+/* 700 */,
+/* 701 */,
+/* 702 */,
+/* 703 */,
+/* 704 */,
+/* 705 */,
+/* 706 */,
+/* 707 */,
+/* 708 */,
+/* 709 */,
+/* 710 */,
+/* 711 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _table = __webpack_require__(1101);
+
+	var _table2 = _interopRequireDefault(_table);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	    KsTable: _table2.default
+	};
+
+/***/ },
+/* 712 */,
+/* 713 */,
+/* 714 */,
+/* 715 */,
+/* 716 */,
+/* 717 */,
+/* 718 */,
+/* 719 */,
+/* 720 */,
+/* 721 */,
+/* 722 */,
+/* 723 */,
+/* 724 */,
+/* 725 */,
+/* 726 */,
+/* 727 */,
+/* 728 */,
+/* 729 */,
+/* 730 */,
+/* 731 */,
+/* 732 */,
+/* 733 */,
+/* 734 */,
+/* 735 */,
+/* 736 */,
+/* 737 */,
+/* 738 */,
+/* 739 */,
+/* 740 */,
+/* 741 */,
+/* 742 */,
+/* 743 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _keys = __webpack_require__(100);
+
+	var _keys2 = _interopRequireDefault(_keys);
+
+	exports.default = install;
+
+	var _KsLimitNumberFixed = __webpack_require__(744);
+
+	var _KsLimitNumberFixed2 = _interopRequireDefault(_KsLimitNumberFixed);
+
+	var _KsClickOutside = __webpack_require__(745);
+
+	var _KsClickOutside2 = _interopRequireDefault(_KsClickOutside);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var directives = {
+	    KsLimitNumberFixed: _KsLimitNumberFixed2.default,
+	    KsClickOutside: _KsClickOutside2.default
+	};
+	function install(Vue) {
+	    if (!Vue) {
+	        console.error('please install Vue');
+	    }
+	    (0, _keys2.default)(directives).forEach(function (k) {
+	        return Vue.directive(k, directives[k]);
+	    });
+	};
+
+/***/ },
+/* 744 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = {
+	    params: ['limit', 'min'],
+	    twoWay: true,
+	    bind: function bind() {
+	        var _this = this;
+
+	        var limit = this.params.limit || 100000;
+	        var min = this.params.min || 0;
+
+	        if (this.el.addEventListener) {
+	            this.el.addEventListener('input', function (e) {
+	                _this.handler.call(_this, limit, min);
+	            });
+	        } else if (this.el.attachEvent) {
+	            this.el.attachEvent('onpropertychange', function (event) {
+	                if (event.propertyName != 'value') return;
+	                _this.handler.call(_this, limit, min);
+	            });
+	        } else {
+	            this.el.addEventListener('keyup', function () {
+	                _this.handler.call(_this, limit, min);
+	            });
+	        }
+	    },
+	    handler: function handler(limit, min) {
+
+	        //debugger
+	        // var reg = new RegExp('^[0-9]+(\\.[0-9]{0,'+this.arg+'})?$')
+
+	        var temp_val = this.el.value,
+	            ints,
+	            fixed = '';
+
+	        if (temp_val.length == 1 && temp_val == "-" && min != 0) return;
+
+	        if (parseInt(temp_val) < -1) {
+	            temp_val = "-";
+	        } else {
+	            if (temp_val == '' || isNaN(parseInt(temp_val))) {
+	                temp_val = '';
+	            } else {
+	                ints = this.get_ints(temp_val, limit, min);
+	                fixed = this.get_fixed(temp_val, this.arg);
+	                temp_val = ints + fixed;
+	            }
+	        }
+
+	        this.el.value = temp_val;
+	        this.set(temp_val);
+	    },
+
+
+	    /**
+	     * 获取整数部分
+	     * INF 无穷大
+	     */
+	    get_ints: function get_ints(temp_val, limit, min) {
+	        var ints = parseInt(temp_val, 10);
+	        if (limit != 'INF' && ints > limit) {
+	            ints = ('' + ints).substr(0, ('' + ints).length - 1);
+	        }
+
+	        return ints;
+	    },
+
+
+	    // 获取小数部分
+	    get_fixed: function get_fixed(temp_val, limit, min) {
+	        //debugger
+	        var fixed = '';
+	        if (limit && ~temp_val.indexOf('.')) {
+	            if (temp_val.split('.')[1].length != 1) {
+	                temp_val.split('.')[1].split('').map(function (t) {
+	                    fixed += isNaN(parseInt(t)) ? '' : parseInt(t);
+	                });
+	            } else {
+	                fixed = temp_val.split('.')[1];
+	                fixed = isNaN(parseInt(fixed)) ? '' : parseInt(fixed);
+	            }
+
+	            fixed = '.' + ('' + fixed).substr(0, limit);
+	        }
+	        return fixed;
+	    }
+	};
+
+/***/ },
+/* 745 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = {
+	    bind: function bind() {
+	        var _this = this;
+
+	        this.contains = function (e) {
+
+	            var equ;
+
+	            if (_this.el.contains(e.target)) return false;
+
+	            // console.log(this.expression)
+	            if (_this.expression && 'function' == typeof _this.vm[_this.expression]) {
+
+	                _this.vm[_this.expression]();
+	                return;
+	            }
+
+	            if (equ = splitEqu(_this.expression)) {
+	                // console.log(equ.name, equ.value)
+	                _this.vm[equ.name] = equ.value;
+	            } else {
+
+	                _this.vm.hasOwnProperty('show') && (_this.vm['show'] = false);
+	            }
+	        };
+	        document.addEventListener('click', this.contains, false);
+	    },
+	    unbind: function unbind() {
+	        document.removeEventListener('click', this.contains, false);
+	    }
+	};
+
+
+	function splitEqu(expression) {
+	    var arr = (expression || '').split('=');
+	    // console.log(arr)
+	    return arr.length > 1 ? { name: arr[0].trim(), value: arr[1].trim() == 'true' } : false;
+	}
+
+/***/ },
+/* 746 */,
+/* 747 */,
+/* 748 */,
+/* 749 */,
+/* 750 */,
+/* 751 */,
+/* 752 */,
+/* 753 */,
+/* 754 */,
+/* 755 */,
+/* 756 */,
+/* 757 */,
+/* 758 */,
+/* 759 */,
+/* 760 */,
+/* 761 */,
+/* 762 */,
+/* 763 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/*!
@@ -2751,1557 +6549,136 @@ webpackJsonp([0],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 31 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	/**
-	 * @description application router file.
-	 * @author pkeros
-	 * @data 16/6/1
-	 * @email pkeros@vip.qq.com
-	 */
-
-	exports.default = function (router) {
-
-	  // 路由映射
-	  router.map({
-
-	    /* 主页 */
-	    '/': {
-	      name: 'index',
-	      cnName: '主页',
-	      component: function component(resolve) {
-	        __webpack_require__.e/* require */(1, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(32)]; (function (res) {
-	          resolve(res);
-	        }.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));});
-	      },
-
-	      subRoutes: {
-
-	        /* 欢迎页面 */
-	        '/': {
-	          name: 'welcome',
-	          cnName: '欢迎页面',
-	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(2, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(48)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	          }
-	        },
-	        '/home': {
-	          name: 'welcome',
-	          cnName: '欢迎页面',
-	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(2/* duplicate */, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(48)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	          }
-	        },
-
-	        /* 引导 */
-	        '/guide': {
-	          name: 'guide',
-	          cnName: '介绍',
-	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(3, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(52)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	          },
-	          subRoutes: {
-	            '/intro': {
-	              name: 'intro',
-	              cnName: '介绍',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(4, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(55)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-	            '/dir': {
-	              name: 'dir',
-	              cnName: '目录结构',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(5, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(58)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            }
-	          }
-	        },
-
-	        /* 基础组件 */
-	        '/base': {
-	          name: 'base',
-	          cnName: '基础组件',
-	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(6, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(61)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	          },
-
-	          subRoutes: {
-
-	            /* 基础组件-图标 */
-	            '/icons': {
-	              name: 'icons',
-	              cnName: '图标',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(7, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(64)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-
-	            /* 基础组件-图标 */
-	            '/icons-list': {
-	              name: 'icons-list',
-	              cnName: '卡说图标库',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(8, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(67)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-
-	            /* 基础组件-布局 */
-	            '/layout': {
-	              name: 'layout',
-	              cnName: '布局',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(9, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(83)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-
-	            /* 基础组件-按钮 */
-	            '/button': {
-	              name: 'button',
-	              cnName: '按钮',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(10, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(86)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            }
-	          }
-	        },
-
-	        /* form */
-	        '/form': {
-	          name: 'form',
-	          cnName: '表单',
-	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(11, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(92)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	          },
-
-	          subRoutes: {
-
-	            /* 基础组件-布局 */
-	            '/date-picker': {
-	              name: 'date-picker',
-	              cnName: '时间选择器',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(12, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(95)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-
-	            /* 基础组件-单选框 */
-	            '/radio': {
-	              name: 'radio',
-	              cnName: '单选框',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(13, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(99)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-
-	            /* 基础组件-复选框 */
-	            '/checkbox': {
-	              name: 'checkbox',
-	              cnName: '复选框',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(14, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(103)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-
-	            /* 基础组件-IOS 风格开关 */
-	            '/switch': {
-	              name: 'switch',
-	              cnName: 'IOS 风格开关',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(15, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(107)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            }
-	          }
-	        },
-
-	        /* data */
-	        '/data': {
-	          name: 'data',
-	          cnName: '数据展示',
-	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(16, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(111)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	          },
-
-	          subRoutes: {
-
-	            /* 基础组件-布局 */
-	            '/page': {
-	              name: 'page',
-	              cnName: '分页',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(17, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(114)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-
-	            /* 数据展示-树形组件 */
-	            '/tree': {
-	              name: 'tree',
-	              cnName: '树形组件',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(18, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(118)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-
-	            '/dropchoose': {
-	              name: 'dropchoose',
-	              cnName: '下拉选择',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(19, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(148)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-
-	            '/search': {
-	              name: 'search',
-	              cnName: '模糊搜索',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(20, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(153)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-
-	            '/dialogchoose': {
-	              name: 'dialogchoose',
-	              cnName: '弹出层选择',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(21, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(157)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-
-	            '/floorchoose': {
-	              name: 'floorchoose',
-	              cnName: '楼层选择',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(22, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(164)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-
-	            /* 基础组件-图片 */
-	            '/image': {
-	              name: 'image',
-	              cnName: '图片',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(23, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(168)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-	            '/ksimg': {
-	              name: 'ksimg',
-	              cnName: '图片',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(24, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(172)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-
-	            '/addtable': {
-	              name: 'addtable',
-	              cnName: '表格添加',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(25, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(176)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-
-	            /* 多标题表格 */
-	            '/multiple-table': {
-	              name: 'multiple-table',
-	              cnName: '图片',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(26, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(181)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-
-	            /* 定项表格 */
-	            '/setitem-table': {
-	              name: 'setitem-table',
-	              cnName: '定项表格',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(27, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(187)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            }
-
-	          }
-	        },
-
-	        /* 通知组件 */
-	        '/notice': {
-	          name: 'notice',
-	          cnName: '通知组件',
-	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(28, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(194)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	          },
-
-	          subRoutes: {
-
-	            /* 通知组件-通知中心 */
-	            '/notice-center': {
-	              name: 'notice-center',
-	              cnName: '对话框',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(29, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(197)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-
-	            /* 通知组件-对话框 */
-	            '/dialog': {
-	              name: 'dialog',
-	              cnName: '对话框',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(30, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(201)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-
-	            /* 通知组件-模态框 */
-	            '/modal': {
-	              name: 'modal',
-	              cnName: '模态框',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(31, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(205)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            }
-	          }
-	        },
-
-	        /* validate */
-	        '/validate': {
-	          name: 'validate',
-	          cnName: '验证',
-	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(32, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(209)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	          },
-
-	          subRoutes: {
-	            /* 说明 */
-	            '/remark': {
-	              name: 'remark',
-	              cnName: '说明',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(33, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(212)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            },
-	            /* 说明 */
-	            '/rules': {
-	              name: 'rules',
-	              cnName: '默认校验规则',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(34, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(215)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            }
-	          }
-	        },
-
-	        /* other */
-	        '/other': {
-	          name: 'other',
-	          cnName: '其他',
-	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(35, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(218)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	          },
-	          subRoutes: {
-	            /* 更新日志 */
-	            '/tooltips': {
-	              name: 'tooltips',
-	              cnName: '弹出提示',
-	              component: function component(resolve) {
-	                __webpack_require__.e/* require */(36, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(221)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	              }
-	            }
-	          }
-	        },
-
-	        /* log */
-	        '/log': {
-	          name: 'log',
-	          cnName: '更新日志',
-	          component: function component(resolve) {
-	            __webpack_require__.e/* require */(37, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(225)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
-	          }
-	        }
-
-	      }
-	    }
-	  });
-	};
-
-/***/ },
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */,
-/* 36 */,
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */,
-/* 60 */,
-/* 61 */,
-/* 62 */,
-/* 63 */,
-/* 64 */,
-/* 65 */,
-/* 66 */,
-/* 67 */,
-/* 68 */,
-/* 69 */,
-/* 70 */
-/***/ function(module, exports) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	// css base code, injected by the css-loader
-	module.exports = function() {
-		var list = [];
-
-		// return the list of modules as css string
-		list.toString = function toString() {
-			var result = [];
-			for(var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if(item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-
-		// import a list of modules into the list
-		list.i = function(modules, mediaQuery) {
-			if(typeof modules === "string")
-				modules = [[null, modules, ""]];
-			var alreadyImportedModules = {};
-			for(var i = 0; i < this.length; i++) {
-				var id = this[i][0];
-				if(typeof id === "number")
-					alreadyImportedModules[id] = true;
-			}
-			for(i = 0; i < modules.length; i++) {
-				var item = modules[i];
-				// skip already imported module
-				// this implementation is not 100% perfect for weird media query combinations
-				//  when a module is imported multiple times with different media queries.
-				//  I hope this will never occur (Hey this way we have smaller bundles)
-				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-					if(mediaQuery && !item[2]) {
-						item[2] = mediaQuery;
-					} else if(mediaQuery) {
-						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-					}
-					list.push(item);
-				}
-			}
-		};
-		return list;
-	};
-
-
-/***/ },
-/* 71 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	var stylesInDom = {},
-		memoize = function(fn) {
-			var memo;
-			return function () {
-				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
-				return memo;
-			};
-		},
-		isOldIE = memoize(function() {
-			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
-		}),
-		getHeadElement = memoize(function () {
-			return document.head || document.getElementsByTagName("head")[0];
-		}),
-		singletonElement = null,
-		singletonCounter = 0,
-		styleElementsInsertedAtTop = [];
-
-	module.exports = function(list, options) {
-		if(false) {
-			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
-		}
-
-		options = options || {};
-		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-		// tags it will allow on a page
-		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
-
-		// By default, add <style> tags to the bottom of <head>.
-		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
-
-		var styles = listToStyles(list);
-		addStylesToDom(styles, options);
-
-		return function update(newList) {
-			var mayRemove = [];
-			for(var i = 0; i < styles.length; i++) {
-				var item = styles[i];
-				var domStyle = stylesInDom[item.id];
-				domStyle.refs--;
-				mayRemove.push(domStyle);
-			}
-			if(newList) {
-				var newStyles = listToStyles(newList);
-				addStylesToDom(newStyles, options);
-			}
-			for(var i = 0; i < mayRemove.length; i++) {
-				var domStyle = mayRemove[i];
-				if(domStyle.refs === 0) {
-					for(var j = 0; j < domStyle.parts.length; j++)
-						domStyle.parts[j]();
-					delete stylesInDom[domStyle.id];
-				}
-			}
-		};
-	}
-
-	function addStylesToDom(styles, options) {
-		for(var i = 0; i < styles.length; i++) {
-			var item = styles[i];
-			var domStyle = stylesInDom[item.id];
-			if(domStyle) {
-				domStyle.refs++;
-				for(var j = 0; j < domStyle.parts.length; j++) {
-					domStyle.parts[j](item.parts[j]);
-				}
-				for(; j < item.parts.length; j++) {
-					domStyle.parts.push(addStyle(item.parts[j], options));
-				}
-			} else {
-				var parts = [];
-				for(var j = 0; j < item.parts.length; j++) {
-					parts.push(addStyle(item.parts[j], options));
-				}
-				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
-			}
-		}
-	}
-
-	function listToStyles(list) {
-		var styles = [];
-		var newStyles = {};
-		for(var i = 0; i < list.length; i++) {
-			var item = list[i];
-			var id = item[0];
-			var css = item[1];
-			var media = item[2];
-			var sourceMap = item[3];
-			var part = {css: css, media: media, sourceMap: sourceMap};
-			if(!newStyles[id])
-				styles.push(newStyles[id] = {id: id, parts: [part]});
-			else
-				newStyles[id].parts.push(part);
-		}
-		return styles;
-	}
-
-	function insertStyleElement(options, styleElement) {
-		var head = getHeadElement();
-		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
-		if (options.insertAt === "top") {
-			if(!lastStyleElementInsertedAtTop) {
-				head.insertBefore(styleElement, head.firstChild);
-			} else if(lastStyleElementInsertedAtTop.nextSibling) {
-				head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
-			} else {
-				head.appendChild(styleElement);
-			}
-			styleElementsInsertedAtTop.push(styleElement);
-		} else if (options.insertAt === "bottom") {
-			head.appendChild(styleElement);
-		} else {
-			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
-		}
-	}
-
-	function removeStyleElement(styleElement) {
-		styleElement.parentNode.removeChild(styleElement);
-		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
-		if(idx >= 0) {
-			styleElementsInsertedAtTop.splice(idx, 1);
-		}
-	}
-
-	function createStyleElement(options) {
-		var styleElement = document.createElement("style");
-		styleElement.type = "text/css";
-		insertStyleElement(options, styleElement);
-		return styleElement;
-	}
-
-	function addStyle(obj, options) {
-		var styleElement, update, remove;
-
-		if (options.singleton) {
-			var styleIndex = singletonCounter++;
-			styleElement = singletonElement || (singletonElement = createStyleElement(options));
-			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
-			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
-		} else {
-			styleElement = createStyleElement(options);
-			update = applyToTag.bind(null, styleElement);
-			remove = function() {
-				removeStyleElement(styleElement);
-			};
-		}
-
-		update(obj);
-
-		return function updateStyle(newObj) {
-			if(newObj) {
-				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
-					return;
-				update(obj = newObj);
-			} else {
-				remove();
-			}
-		};
-	}
-
-	var replaceText = (function () {
-		var textStore = [];
-
-		return function (index, replacement) {
-			textStore[index] = replacement;
-			return textStore.filter(Boolean).join('\n');
-		};
-	})();
-
-	function applyToSingletonTag(styleElement, index, remove, obj) {
-		var css = remove ? "" : obj.css;
-
-		if (styleElement.styleSheet) {
-			styleElement.styleSheet.cssText = replaceText(index, css);
-		} else {
-			var cssNode = document.createTextNode(css);
-			var childNodes = styleElement.childNodes;
-			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
-			if (childNodes.length) {
-				styleElement.insertBefore(cssNode, childNodes[index]);
-			} else {
-				styleElement.appendChild(cssNode);
-			}
-		}
-	}
-
-	function applyToTag(styleElement, obj) {
-		var css = obj.css;
-		var media = obj.media;
-		var sourceMap = obj.sourceMap;
-
-		if (media) {
-			styleElement.setAttribute("media", media);
-		}
-
-		if (sourceMap) {
-			// https://developer.chrome.com/devtools/docs/javascript-debugging
-			// this makes source maps inside style tags work properly in Chrome
-			css += '\n/*# sourceURL=' + sourceMap.sources[0] + ' */';
-			// http://stackoverflow.com/a/26603875
-			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
-		}
-
-		if (styleElement.styleSheet) {
-			styleElement.styleSheet.cssText = css;
-		} else {
-			while(styleElement.firstChild) {
-				styleElement.removeChild(styleElement.firstChild);
-			}
-			styleElement.appendChild(document.createTextNode(css));
-		}
-	}
-
-
-/***/ },
-/* 72 */,
-/* 73 */,
-/* 74 */,
-/* 75 */,
-/* 76 */,
-/* 77 */,
-/* 78 */,
-/* 79 */,
-/* 80 */,
-/* 81 */,
-/* 82 */,
-/* 83 */,
-/* 84 */,
-/* 85 */,
-/* 86 */,
-/* 87 */,
-/* 88 */,
-/* 89 */,
-/* 90 */,
-/* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */,
-/* 111 */,
-/* 112 */,
-/* 113 */,
-/* 114 */,
-/* 115 */,
-/* 116 */,
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */,
-/* 124 */,
-/* 125 */,
-/* 126 */,
-/* 127 */,
-/* 128 */,
-/* 129 */,
-/* 130 */,
-/* 131 */,
-/* 132 */,
-/* 133 */,
-/* 134 */,
-/* 135 */,
-/* 136 */,
-/* 137 */,
-/* 138 */,
-/* 139 */,
-/* 140 */,
-/* 141 */,
-/* 142 */,
-/* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */,
-/* 154 */,
-/* 155 */,
-/* 156 */,
-/* 157 */,
-/* 158 */,
-/* 159 */,
-/* 160 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(161), __esModule: true };
-
-/***/ },
-/* 161 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var core  = __webpack_require__(162)
-	  , $JSON = core.JSON || (core.JSON = {stringify: JSON.stringify});
-	module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
-	  return $JSON.stringify.apply($JSON, arguments);
-	};
-
-/***/ },
-/* 162 */
-/***/ function(module, exports) {
-
-	var core = module.exports = {version: '2.4.0'};
-	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
-
-/***/ },
-/* 163 */,
-/* 164 */,
-/* 165 */,
-/* 166 */,
-/* 167 */,
-/* 168 */,
-/* 169 */,
-/* 170 */,
-/* 171 */,
-/* 172 */,
-/* 173 */,
-/* 174 */,
-/* 175 */,
-/* 176 */,
-/* 177 */,
-/* 178 */,
-/* 179 */,
-/* 180 */,
-/* 181 */,
-/* 182 */,
-/* 183 */,
-/* 184 */,
-/* 185 */,
-/* 186 */,
-/* 187 */,
-/* 188 */,
-/* 189 */,
-/* 190 */,
-/* 191 */,
-/* 192 */,
-/* 193 */,
-/* 194 */,
-/* 195 */,
-/* 196 */,
-/* 197 */,
-/* 198 */,
-/* 199 */,
-/* 200 */,
-/* 201 */,
-/* 202 */,
-/* 203 */,
-/* 204 */,
-/* 205 */,
-/* 206 */,
-/* 207 */,
-/* 208 */,
-/* 209 */,
-/* 210 */,
-/* 211 */,
-/* 212 */,
-/* 213 */,
-/* 214 */,
-/* 215 */,
-/* 216 */,
-/* 217 */,
-/* 218 */,
-/* 219 */,
-/* 220 */,
-/* 221 */,
-/* 222 */,
-/* 223 */,
-/* 224 */,
-/* 225 */,
-/* 226 */,
-/* 227 */,
-/* 228 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.Plugins = exports.Components = undefined;
-
-	var _keys = __webpack_require__(229);
-
-	var _keys2 = _interopRequireDefault(_keys);
-
-	var _KsPopup = __webpack_require__(263);
-
-	var _KsNoticeCenter = __webpack_require__(318);
-
-	var _KsNoticeCenter2 = _interopRequireDefault(_KsNoticeCenter);
-
-	var _KsSwitch = __webpack_require__(331);
-
-	var _KsSwitch2 = _interopRequireDefault(_KsSwitch);
-
-	var _KsDialog = __webpack_require__(342);
-
-	var _KsModal = __webpack_require__(377);
-
-	var _KsCheckbox = __webpack_require__(397);
-
-	var _KsCheckbox2 = _interopRequireDefault(_KsCheckbox);
-
-	var _KsMask = __webpack_require__(385);
-
-	var _KsRadio = __webpack_require__(408);
-
-	var _KsRadio2 = _interopRequireDefault(_KsRadio);
-
-	var _KsButton = __webpack_require__(361);
-
-	var _KsPager = __webpack_require__(430);
-
-	var _KsPager2 = _interopRequireDefault(_KsPager);
-
-	var _KsDater = __webpack_require__(442);
-
-	var _KsDater2 = _interopRequireDefault(_KsDater);
-
-	var _KsDropChoose = __webpack_require__(474);
-
-	var _KsDropChoose2 = _interopRequireDefault(_KsDropChoose);
-
-	var _KsSearch = __webpack_require__(485);
-
-	var _KsSearch2 = _interopRequireDefault(_KsSearch);
-
-	var _KsDialogChoose = __webpack_require__(491);
-
-	var _KsDialogChoose2 = _interopRequireDefault(_KsDialogChoose);
-
-	var _KsFloorSelect = __webpack_require__(508);
-
-	var _KsFloorSelect2 = _interopRequireDefault(_KsFloorSelect);
-
-	var _KsDialogProgram = __webpack_require__(501);
-
-	var _KsDialogProgram2 = _interopRequireDefault(_KsDialogProgram);
-
-	var _KsAddTable = __webpack_require__(519);
-
-	var _KsAddTable2 = _interopRequireDefault(_KsAddTable);
-
-	var _KsImage = __webpack_require__(525);
-
-	var _KsIcon = __webpack_require__(355);
-
-	var _KsIcon2 = _interopRequireDefault(_KsIcon);
-
-	var _KsTip = __webpack_require__(536);
-
-	var _KsTable = __webpack_require__(545);
-
-	var _KsTable2 = _interopRequireDefault(_KsTable);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	// 版本
-	var VERSION = '1.0.0';
-
-	// 组件
-	/**
-	 * @description 卡说前端公用库
-	 * @summary
-	 *  公用库中包含了一些通用的 `组件` `指令` `过滤器` 等.
-	 * @author pkeros.
-	 * @date 2016/11/11.
-	 */
-
-	var Components = {
-
-	  VERSION: VERSION,
-	  KsMaskEntity: _KsMask.KsMaskEntity,
-	  KsDialogEntity: _KsDialog.KsDialogEntity,
-	  KsModalEntity: _KsModal.KsModalEntity,
-	  KsModalCenter: _KsModal.KsModalCenter,
-	  KsPage: _KsPager2.default,
-	  KsIcon: _KsIcon2.default,
-	  KsSwitch: _KsSwitch2.default,
-	  KsCheckbox: _KsCheckbox2.default,
-	  KsRadio: _KsRadio2.default,
-	  KsButton: _KsButton.KsButton,
-	  KsButtonAbstract: _KsButton.KsButtonAbstract,
-	  KsToolTips: _KsPopup.KsToolTips,
-	  KsDater: _KsDater2.default,
-	  KsStore: _KsDropChoose2.default,
-	  KsSearch: _KsSearch2.default,
-	  KsDialogChoose: _KsDialogChoose2.default,
-	  KsItem: _KsFloorSelect2.default,
-	  KsDialogProgram: _KsDialogProgram2.default,
-	  KsImage: _KsImage.KsImage,
-	  KsImgs: _KsImage.KsImgs,
-	  KsAddTableItem: _KsAddTable2.default,
-	  KsAbstract: _KsTip.KsAbstract,
-	  KsTips: _KsTip.KsTips,
-	  KsTable: _KsTable2.default
-
-	};
-
-	// 插件
-	var Plugins = {
-
-	  VERSION: VERSION,
-	  KsNoticeCenter: _KsNoticeCenter2.default,
-	  KsDialog: _KsDialog.KsDialog,
-	  KsMask: _KsMask.KsMask,
-	  KsModal: _KsModal.KsModal
-
-	};
-
-	var install = function install(Vue) {
-	  if (install.installed) return;
-
-	  (0, _keys2.default)(Components).reduce(function (arr, k) {
-	    var temp = void 0;
-
-	    if (Components[k].template) {
-	      temp = { name: k, val: Components[k] };
-	    } else {
-	      temp = (0, _keys2.default)(Components[k]).map(function (key) {
-	        return { name: key, val: Components[k][key] };
-	      });
-	    }
-
-	    return arr.concat(temp);
-	  }, []).forEach(function (item) {
-	    Vue.component(item.name, item.val);
-	  });
-
-	  // install plugins.
-	  (0, _keys2.default)(Plugins).forEach(function (k) {
-	    if (k === 'VERSION') return;
-	    Plugins[k].install(Vue);
-	  });
-	};
-
-	// automation register components.
-	if (typeof window !== 'undefined' && window.Vue) {
-	  install(window.Vue);
-	}
-
-	exports.default = install;
-	exports.Components = Components;
-	exports.Plugins = Plugins;
-
-/***/ },
-/* 229 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(230), __esModule: true };
-
-/***/ },
-/* 230 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(231);
-	module.exports = __webpack_require__(162).Object.keys;
-
-/***/ },
-/* 231 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.14 Object.keys(O)
-	var toObject = __webpack_require__(232)
-	  , $keys    = __webpack_require__(234);
-
-	__webpack_require__(249)('keys', function(){
-	  return function keys(it){
-	    return $keys(toObject(it));
-	  };
-	});
-
-/***/ },
-/* 232 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 7.1.13 ToObject(argument)
-	var defined = __webpack_require__(233);
-	module.exports = function(it){
-	  return Object(defined(it));
-	};
-
-/***/ },
-/* 233 */
-/***/ function(module, exports) {
-
-	// 7.2.1 RequireObjectCoercible(argument)
-	module.exports = function(it){
-	  if(it == undefined)throw TypeError("Can't call method on  " + it);
-	  return it;
-	};
-
-/***/ },
-/* 234 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.14 / 15.2.3.14 Object.keys(O)
-	var $keys       = __webpack_require__(235)
-	  , enumBugKeys = __webpack_require__(248);
-
-	module.exports = Object.keys || function keys(O){
-	  return $keys(O, enumBugKeys);
-	};
-
-/***/ },
-/* 235 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var has          = __webpack_require__(236)
-	  , toIObject    = __webpack_require__(237)
-	  , arrayIndexOf = __webpack_require__(240)(false)
-	  , IE_PROTO     = __webpack_require__(244)('IE_PROTO');
-
-	module.exports = function(object, names){
-	  var O      = toIObject(object)
-	    , i      = 0
-	    , result = []
-	    , key;
-	  for(key in O)if(key != IE_PROTO)has(O, key) && result.push(key);
-	  // Don't enum bug & hidden keys
-	  while(names.length > i)if(has(O, key = names[i++])){
-	    ~arrayIndexOf(result, key) || result.push(key);
-	  }
-	  return result;
-	};
-
-/***/ },
-/* 236 */
-/***/ function(module, exports) {
-
-	var hasOwnProperty = {}.hasOwnProperty;
-	module.exports = function(it, key){
-	  return hasOwnProperty.call(it, key);
-	};
-
-/***/ },
-/* 237 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// to indexed object, toObject with fallback for non-array-like ES3 strings
-	var IObject = __webpack_require__(238)
-	  , defined = __webpack_require__(233);
-	module.exports = function(it){
-	  return IObject(defined(it));
-	};
-
-/***/ },
-/* 238 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// fallback for non-array-like ES3 and non-enumerable old V8 strings
-	var cof = __webpack_require__(239);
-	module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
-	  return cof(it) == 'String' ? it.split('') : Object(it);
-	};
-
-/***/ },
-/* 239 */
-/***/ function(module, exports) {
-
-	var toString = {}.toString;
-
-	module.exports = function(it){
-	  return toString.call(it).slice(8, -1);
-	};
-
-/***/ },
-/* 240 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// false -> Array#indexOf
-	// true  -> Array#includes
-	var toIObject = __webpack_require__(237)
-	  , toLength  = __webpack_require__(241)
-	  , toIndex   = __webpack_require__(243);
-	module.exports = function(IS_INCLUDES){
-	  return function($this, el, fromIndex){
-	    var O      = toIObject($this)
-	      , length = toLength(O.length)
-	      , index  = toIndex(fromIndex, length)
-	      , value;
-	    // Array#includes uses SameValueZero equality algorithm
-	    if(IS_INCLUDES && el != el)while(length > index){
-	      value = O[index++];
-	      if(value != value)return true;
-	    // Array#toIndex ignores holes, Array#includes - not
-	    } else for(;length > index; index++)if(IS_INCLUDES || index in O){
-	      if(O[index] === el)return IS_INCLUDES || index || 0;
-	    } return !IS_INCLUDES && -1;
-	  };
-	};
-
-/***/ },
-/* 241 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 7.1.15 ToLength
-	var toInteger = __webpack_require__(242)
-	  , min       = Math.min;
-	module.exports = function(it){
-	  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
-	};
-
-/***/ },
-/* 242 */
-/***/ function(module, exports) {
-
-	// 7.1.4 ToInteger
-	var ceil  = Math.ceil
-	  , floor = Math.floor;
-	module.exports = function(it){
-	  return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
-	};
-
-/***/ },
-/* 243 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var toInteger = __webpack_require__(242)
-	  , max       = Math.max
-	  , min       = Math.min;
-	module.exports = function(index, length){
-	  index = toInteger(index);
-	  return index < 0 ? max(index + length, 0) : min(index, length);
-	};
-
-/***/ },
-/* 244 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var shared = __webpack_require__(245)('keys')
-	  , uid    = __webpack_require__(247);
-	module.exports = function(key){
-	  return shared[key] || (shared[key] = uid(key));
-	};
-
-/***/ },
-/* 245 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var global = __webpack_require__(246)
-	  , SHARED = '__core-js_shared__'
-	  , store  = global[SHARED] || (global[SHARED] = {});
-	module.exports = function(key){
-	  return store[key] || (store[key] = {});
-	};
-
-/***/ },
-/* 246 */
-/***/ function(module, exports) {
-
-	// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
-	var global = module.exports = typeof window != 'undefined' && window.Math == Math
-	  ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
-	if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
-
-/***/ },
-/* 247 */
-/***/ function(module, exports) {
-
-	var id = 0
-	  , px = Math.random();
-	module.exports = function(key){
-	  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
-	};
-
-/***/ },
-/* 248 */
-/***/ function(module, exports) {
-
-	// IE 8- don't enum bug keys
-	module.exports = (
-	  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
-	).split(',');
-
-/***/ },
-/* 249 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// most Object methods by ES6 should accept primitives
-	var $export = __webpack_require__(250)
-	  , core    = __webpack_require__(162)
-	  , fails   = __webpack_require__(259);
-	module.exports = function(KEY, exec){
-	  var fn  = (core.Object || {})[KEY] || Object[KEY]
-	    , exp = {};
-	  exp[KEY] = exec(fn);
-	  $export($export.S + $export.F * fails(function(){ fn(1); }), 'Object', exp);
-	};
-
-/***/ },
-/* 250 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var global    = __webpack_require__(246)
-	  , core      = __webpack_require__(162)
-	  , ctx       = __webpack_require__(251)
-	  , hide      = __webpack_require__(253)
-	  , PROTOTYPE = 'prototype';
-
-	var $export = function(type, name, source){
-	  var IS_FORCED = type & $export.F
-	    , IS_GLOBAL = type & $export.G
-	    , IS_STATIC = type & $export.S
-	    , IS_PROTO  = type & $export.P
-	    , IS_BIND   = type & $export.B
-	    , IS_WRAP   = type & $export.W
-	    , exports   = IS_GLOBAL ? core : core[name] || (core[name] = {})
-	    , expProto  = exports[PROTOTYPE]
-	    , target    = IS_GLOBAL ? global : IS_STATIC ? global[name] : (global[name] || {})[PROTOTYPE]
-	    , key, own, out;
-	  if(IS_GLOBAL)source = name;
-	  for(key in source){
-	    // contains in native
-	    own = !IS_FORCED && target && target[key] !== undefined;
-	    if(own && key in exports)continue;
-	    // export native or passed
-	    out = own ? target[key] : source[key];
-	    // prevent global pollution for namespaces
-	    exports[key] = IS_GLOBAL && typeof target[key] != 'function' ? source[key]
-	    // bind timers to global for call from export context
-	    : IS_BIND && own ? ctx(out, global)
-	    // wrap global constructors for prevent change them in library
-	    : IS_WRAP && target[key] == out ? (function(C){
-	      var F = function(a, b, c){
-	        if(this instanceof C){
-	          switch(arguments.length){
-	            case 0: return new C;
-	            case 1: return new C(a);
-	            case 2: return new C(a, b);
-	          } return new C(a, b, c);
-	        } return C.apply(this, arguments);
-	      };
-	      F[PROTOTYPE] = C[PROTOTYPE];
-	      return F;
-	    // make static versions for prototype methods
-	    })(out) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
-	    // export proto methods to core.%CONSTRUCTOR%.methods.%NAME%
-	    if(IS_PROTO){
-	      (exports.virtual || (exports.virtual = {}))[key] = out;
-	      // export proto methods to core.%CONSTRUCTOR%.prototype.%NAME%
-	      if(type & $export.R && expProto && !expProto[key])hide(expProto, key, out);
-	    }
-	  }
-	};
-	// type bitmap
-	$export.F = 1;   // forced
-	$export.G = 2;   // global
-	$export.S = 4;   // static
-	$export.P = 8;   // proto
-	$export.B = 16;  // bind
-	$export.W = 32;  // wrap
-	$export.U = 64;  // safe
-	$export.R = 128; // real proto method for `library` 
-	module.exports = $export;
-
-/***/ },
-/* 251 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// optional / simple context binding
-	var aFunction = __webpack_require__(252);
-	module.exports = function(fn, that, length){
-	  aFunction(fn);
-	  if(that === undefined)return fn;
-	  switch(length){
-	    case 1: return function(a){
-	      return fn.call(that, a);
-	    };
-	    case 2: return function(a, b){
-	      return fn.call(that, a, b);
-	    };
-	    case 3: return function(a, b, c){
-	      return fn.call(that, a, b, c);
-	    };
-	  }
-	  return function(/* ...args */){
-	    return fn.apply(that, arguments);
-	  };
-	};
-
-/***/ },
-/* 252 */
-/***/ function(module, exports) {
-
-	module.exports = function(it){
-	  if(typeof it != 'function')throw TypeError(it + ' is not a function!');
-	  return it;
-	};
-
-/***/ },
-/* 253 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var dP         = __webpack_require__(254)
-	  , createDesc = __webpack_require__(262);
-	module.exports = __webpack_require__(258) ? function(object, key, value){
-	  return dP.f(object, key, createDesc(1, value));
-	} : function(object, key, value){
-	  object[key] = value;
-	  return object;
-	};
-
-/***/ },
-/* 254 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var anObject       = __webpack_require__(255)
-	  , IE8_DOM_DEFINE = __webpack_require__(257)
-	  , toPrimitive    = __webpack_require__(261)
-	  , dP             = Object.defineProperty;
-
-	exports.f = __webpack_require__(258) ? Object.defineProperty : function defineProperty(O, P, Attributes){
-	  anObject(O);
-	  P = toPrimitive(P, true);
-	  anObject(Attributes);
-	  if(IE8_DOM_DEFINE)try {
-	    return dP(O, P, Attributes);
-	  } catch(e){ /* empty */ }
-	  if('get' in Attributes || 'set' in Attributes)throw TypeError('Accessors not supported!');
-	  if('value' in Attributes)O[P] = Attributes.value;
-	  return O;
-	};
-
-/***/ },
-/* 255 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var isObject = __webpack_require__(256);
-	module.exports = function(it){
-	  if(!isObject(it))throw TypeError(it + ' is not an object!');
-	  return it;
-	};
-
-/***/ },
-/* 256 */
-/***/ function(module, exports) {
-
-	module.exports = function(it){
-	  return typeof it === 'object' ? it !== null : typeof it === 'function';
-	};
-
-/***/ },
-/* 257 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = !__webpack_require__(258) && !__webpack_require__(259)(function(){
-	  return Object.defineProperty(__webpack_require__(260)('div'), 'a', {get: function(){ return 7; }}).a != 7;
-	});
-
-/***/ },
-/* 258 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// Thank's IE8 for his funny defineProperty
-	module.exports = !__webpack_require__(259)(function(){
-	  return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
-	});
-
-/***/ },
-/* 259 */
-/***/ function(module, exports) {
-
-	module.exports = function(exec){
-	  try {
-	    return !!exec();
-	  } catch(e){
-	    return true;
-	  }
-	};
-
-/***/ },
-/* 260 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var isObject = __webpack_require__(256)
-	  , document = __webpack_require__(246).document
-	  // in old IE typeof document.createElement is 'object'
-	  , is = isObject(document) && isObject(document.createElement);
-	module.exports = function(it){
-	  return is ? document.createElement(it) : {};
-	};
-
-/***/ },
-/* 261 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 7.1.1 ToPrimitive(input [, PreferredType])
-	var isObject = __webpack_require__(256);
-	// instead of the ES6 spec version, we didn't implement @@toPrimitive case
-	// and the second argument - flag - preferred type is a string
-	module.exports = function(it, S){
-	  if(!isObject(it))return it;
-	  var fn, val;
-	  if(S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it)))return val;
-	  if(typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it)))return val;
-	  if(!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it)))return val;
-	  throw TypeError("Can't convert object to primitive value");
-	};
-
-/***/ },
-/* 262 */
-/***/ function(module, exports) {
-
-	module.exports = function(bitmap, value){
-	  return {
-	    enumerable  : !(bitmap & 1),
-	    configurable: !(bitmap & 2),
-	    writable    : !(bitmap & 4),
-	    value       : value
-	  };
-	};
-
-/***/ },
-/* 263 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.KsToolTips = exports.KsPopup = undefined;
-
-	var _abstract = __webpack_require__(264);
-
-	var _abstract2 = _interopRequireDefault(_abstract);
-
-	var _tips = __webpack_require__(313);
-
-	var _tips2 = _interopRequireDefault(_tips);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * @description: tooltip 组件.
-	 * @author: pkeros.
-	 * @date: 2016/11/14.
-	 */
-
-	exports.KsPopup = _abstract2.default;
-	exports.KsToolTips = _tips2.default;
-
-/***/ },
-/* 264 */
+/* 764 */,
+/* 765 */,
+/* 766 */,
+/* 767 */,
+/* 768 */,
+/* 769 */,
+/* 770 */,
+/* 771 */,
+/* 772 */,
+/* 773 */,
+/* 774 */,
+/* 775 */,
+/* 776 */,
+/* 777 */,
+/* 778 */,
+/* 779 */,
+/* 780 */,
+/* 781 */,
+/* 782 */,
+/* 783 */,
+/* 784 */,
+/* 785 */,
+/* 786 */,
+/* 787 */,
+/* 788 */,
+/* 789 */,
+/* 790 */,
+/* 791 */,
+/* 792 */,
+/* 793 */,
+/* 794 */,
+/* 795 */,
+/* 796 */,
+/* 797 */,
+/* 798 */,
+/* 799 */,
+/* 800 */,
+/* 801 */,
+/* 802 */,
+/* 803 */,
+/* 804 */,
+/* 805 */,
+/* 806 */,
+/* 807 */,
+/* 808 */,
+/* 809 */,
+/* 810 */,
+/* 811 */,
+/* 812 */,
+/* 813 */,
+/* 814 */,
+/* 815 */,
+/* 816 */,
+/* 817 */,
+/* 818 */,
+/* 819 */,
+/* 820 */,
+/* 821 */,
+/* 822 */,
+/* 823 */,
+/* 824 */,
+/* 825 */,
+/* 826 */,
+/* 827 */,
+/* 828 */,
+/* 829 */,
+/* 830 */,
+/* 831 */,
+/* 832 */,
+/* 833 */,
+/* 834 */,
+/* 835 */,
+/* 836 */,
+/* 837 */,
+/* 838 */,
+/* 839 */,
+/* 840 */,
+/* 841 */,
+/* 842 */,
+/* 843 */,
+/* 844 */,
+/* 845 */,
+/* 846 */,
+/* 847 */,
+/* 848 */,
+/* 849 */,
+/* 850 */,
+/* 851 */,
+/* 852 */,
+/* 853 */,
+/* 854 */,
+/* 855 */,
+/* 856 */,
+/* 857 */,
+/* 858 */,
+/* 859 */,
+/* 860 */,
+/* 861 */,
+/* 862 */,
+/* 863 */,
+/* 864 */,
+/* 865 */,
+/* 866 */,
+/* 867 */,
+/* 868 */,
+/* 869 */,
+/* 870 */,
+/* 871 */,
+/* 872 */,
+/* 873 */,
+/* 874 */,
+/* 875 */,
+/* 876 */,
+/* 877 */,
+/* 878 */,
+/* 879 */,
+/* 880 */,
+/* 881 */,
+/* 882 */,
+/* 883 */,
+/* 884 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(265)
+	__vue_script__ = __webpack_require__(885)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsPopup/src/abstract.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(312)
+	__vue_template__ = __webpack_require__(886)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -4320,7 +6697,7 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 265 */
+/* 885 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4329,7 +6706,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _Popper = __webpack_require__(266);
+	var _Popper = __webpack_require__(413);
 
 	var _Popper2 = _interopRequireDefault(_Popper);
 
@@ -4381,2368 +6758,23 @@ webpackJsonp([0],[
 	// <script>
 
 /***/ },
-/* 266 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _popper = __webpack_require__(267);
-
-	var _popper2 = _interopRequireDefault(_popper);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * @param {HTMLElement} [reference=$refs.reference] - The reference element used to position the popper.
-	 * @param {HTMLElement} [popper=$refs.popper] - The HTML element used as popper, or a configuration used to generate the popper.
-	 * @param {String} [placement=button] - Placement of the popper accepted values: top(-start, -end), right(-start, -end), bottom(-start, -right), left(-start, -end)
-	 * @param {Number} [offset=0] - Amount of pixels the popper will be shifted (can be negative).
-	 * @param {Boolean} [visible=false] Visibility of the popup element.
-	 * @param {Boolean} [visible-arrow=false] Visibility of the arrow, no style.
-	 */
-	exports.default = {
-	  props: {
-	    placement: { type: String, default: 'bottom' },
-	    boundariesPadding: { type: Number, default: 5 },
-	    reference: Object,
-	    popper: Object,
-	    offset: { default: 0 },
-	    value: Boolean,
-	    visibleArrow: Boolean,
-	    transition: String,
-	    options: { type: Object, default: function _default() {
-	        return {};
-	      }
-	    }
-	  },
-
-	  data: function data() {
-	    return {
-	      showPopper: false
-	    };
-	  },
-
-
-	  watch: {
-	    value: {
-	      immediate: true,
-	      handler: function handler(val) {
-	        this.showPopper = val;
-	        this.$emit('input', val);
-	      }
-	    },
-
-	    showPopper: function showPopper(val) {
-	      val ? this.updatePopper() : this.destroyPopper();
-	      this.$emit('input', val);
-	    }
-	  },
-
-	  methods: {
-	    createPopper: function createPopper() {
-	      var _this = this;
-
-	      if (!/^(top|bottom|left|right)(-start|-end)?$/g.test(this.placement)) {
-	        return;
-	      }
-
-	      var options = this.options;
-	      var popper = this.popper || this.$els.popper;
-	      var reference = this.reference || this.$els.reference;
-
-	      if (!popper || !reference) return;
-	      if (this.visibleArrow) {
-	        this.appendArrow(popper);
-	      }
-
-	      if (this.popperJS && this.popperJS.hasOwnProperty('destroy')) {
-	        this.popperJS.destroy();
-	      }
-
-	      options.placement = this.placement;
-	      options.offset = this.offset;
-
-	      this.$nextTick(function () {
-	        _this.popperJS = new _popper2.default(reference, popper, options);
-	        _this.popperJS.onCreate(function (popper) {
-	          _this.resetTransformOrigin(popper);
-	          _this.$emit('created', _this);
-	        });
-	      });
-	    },
-	    updatePopper: function updatePopper() {
-	      if (this.popperJS) {
-	        this.popperJS.update();
-	      } else {
-	        this.createPopper();
-	      }
-	    },
-	    doDestroy: function doDestroy() {
-	      if (this.showPopper) return;
-	      this.popperJS.destroy();
-	      this.popperJS = null;
-	    },
-	    destroyPopper: function destroyPopper() {
-	      if (this.popperJS) {
-	        this.resetTransformOrigin(this.popperJS);
-	      }
-	    },
-	    resetTransformOrigin: function resetTransformOrigin(popper) {
-	      var placementMap = { top: 'bottom', bottom: 'top', left: 'right', right: 'left' };
-	      var placement = popper._popper.getAttribute('x-placement').split('-')[0];
-	      var origin = placementMap[placement];
-	      popper._popper.style.transformOrigin = ['top', 'bottom'].indexOf(placement) > -1 ? 'center ' + origin : origin + ' center';
-	    },
-	    appendArrow: function appendArrow(element) {
-	      var hash = void 0;
-	      if (this.appended) {
-	        return;
-	      }
-
-	      this.appended = true;
-
-	      for (var item in element.attributes) {
-	        if (/^_v-/.test(element.attributes[item].name)) {
-	          hash = element.attributes[item].name;
-	          break;
-	        }
-	      }
-
-	      var arrow = document.createElement('div');
-
-	      if (hash) {
-	        arrow.setAttribute(hash, '');
-	      }
-	      arrow.setAttribute('x-arrow', '');
-	      arrow.className = this.arrowClassName;
-	      element.appendChild(arrow);
-	    }
-	  },
-
-	  beforeDestroy: function beforeDestroy() {
-	    if (this.popperJS) {
-	      this.popperJS.destroy();
-	    }
-	  }
-	};
-
-/***/ },
-/* 267 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
-
-	var _getOwnPropertyDescriptor = __webpack_require__(268);
-
-	var _getOwnPropertyDescriptor2 = _interopRequireDefault(_getOwnPropertyDescriptor);
-
-	var _keys = __webpack_require__(229);
-
-	var _keys2 = _interopRequireDefault(_keys);
-
-	var _assign = __webpack_require__(273);
-
-	var _assign2 = _interopRequireDefault(_assign);
-
-	var _typeof2 = __webpack_require__(278);
-
-	var _typeof3 = _interopRequireDefault(_typeof2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * @fileOverview Kickass library to create and place poppers near their reference elements.
-	 * @version {{version}}
-	 * @license
-	 * Copyright (c) 2016 Federico Zivolo and contributors
-	 *
-	 * Permission is hereby granted, free of charge, to any person obtaining a copy
-	 * of this software and associated documentation files (the "Software"), to deal
-	 * in the Software without restriction, including without limitation the rights
-	 * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-	 * copies of the Software, and to permit persons to whom the Software is
-	 * furnished to do so, subject to the following conditions:
-	 *
-	 * The above copyright notice and this permission notice shall be included in all
-	 * copies or substantial portions of the Software.
-	 *
-	 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-	 * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-	 * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-	 * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-	 * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-	 * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-	 * SOFTWARE.
-	 */
-
-	//
-	// Cross module loader
-	// Supported: Node, AMD, Browser globals
-	//
-	;(function (root, factory) {
-	    if (true) {
-	        // AMD. Register as an anonymous module.
-	        !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	    } else if ((typeof module === 'undefined' ? 'undefined' : (0, _typeof3.default)(module)) === 'object' && module.exports) {
-	        // Node. Does not work with strict CommonJS, but
-	        // only CommonJS-like environments that support module.exports,
-	        // like Node.
-	        module.exports = factory();
-	    } else {
-	        // Browser globals (root is window)
-	        root.Popper = factory();
-	    }
-	})(undefined, function () {
-
-	    'use strict';
-
-	    var root = window;
-
-	    // default options
-	    var DEFAULTS = {
-	        // placement of the popper
-	        placement: 'bottom',
-
-	        gpuAcceleration: true,
-
-	        // shift popper from its origin by the given amount of pixels (can be negative)
-	        offset: 0,
-
-	        // the element which will act as boundary of the popper
-	        boundariesElement: 'viewport',
-
-	        // amount of pixel used to define a minimum distance between the boundaries and the popper
-	        boundariesPadding: 5,
-
-	        // popper will try to prevent overflow following this order,
-	        // by default, then, it could overflow on the left and on top of the boundariesElement
-	        preventOverflowOrder: ['left', 'right', 'top', 'bottom'],
-
-	        // the behavior used by flip to change the placement of the popper
-	        flipBehavior: 'flip',
-
-	        arrowElement: '[x-arrow]',
-
-	        // list of functions used to modify the offsets before they are applied to the popper
-	        modifiers: ['shift', 'offset', 'preventOverflow', 'keepTogether', 'arrow', 'flip', 'applyStyle'],
-
-	        modifiersIgnored: [],
-
-	        forceAbsolute: false
-	    };
-
-	    /**
-	     * Create a new Popper.js instance
-	     * @constructor Popper
-	     * @param {HTMLElement} reference - The reference element used to position the popper
-	     * @param {HTMLElement|Object} popper
-	     *      The HTML element used as popper, or a configuration used to generate the popper.
-	     * @param {String} [popper.tagName='div'] The tag name of the generated popper.
-	     * @param {Array} [popper.classNames=['popper']] Array of classes to apply to the generated popper.
-	     * @param {Array} [popper.attributes] Array of attributes to apply, specify `attr:value` to assign a value to it.
-	     * @param {HTMLElement|String} [popper.parent=window.document.body] The parent element, given as HTMLElement or as query string.
-	     * @param {String} [popper.content=''] The content of the popper, it can be text, html, or node; if it is not text, set `contentType` to `html` or `node`.
-	     * @param {String} [popper.contentType='text'] If `html`, the `content` will be parsed as HTML. If `node`, it will be appended as-is.
-	     * @param {String} [popper.arrowTagName='div'] Same as `popper.tagName` but for the arrow element.
-	     * @param {Array} [popper.arrowClassNames='popper__arrow'] Same as `popper.classNames` but for the arrow element.
-	     * @param {String} [popper.arrowAttributes=['x-arrow']] Same as `popper.attributes` but for the arrow element.
-	     * @param {Object} options
-	     * @param {String} [options.placement=bottom]
-	     *      Placement of the popper accepted values: `top(-start, -end), right(-start, -end), bottom(-start, -right),
-	     *      left(-start, -end)`
-	     *
-	     * @param {HTMLElement|String} [options.arrowElement='[x-arrow]']
-	     *      The DOM Node used as arrow for the popper, or a CSS selector used to get the DOM node. It must be child of
-	     *      its parent Popper. Popper.js will apply to the given element the style required to align the arrow with its
-	     *      reference element.
-	     *      By default, it will look for a child node of the popper with the `x-arrow` attribute.
-	     *
-	     * @param {Boolean} [options.gpuAcceleration=true]
-	     *      When this property is set to true, the popper position will be applied using CSS3 translate3d, allowing the
-	     *      browser to use the GPU to accelerate the rendering.
-	     *      If set to false, the popper will be placed using `top` and `left` properties, not using the GPU.
-	     *
-	     * @param {Number} [options.offset=0]
-	     *      Amount of pixels the popper will be shifted (can be negative).
-	     *
-	     * @param {String|Element} [options.boundariesElement='viewport']
-	     *      The element which will define the boundaries of the popper position, the popper will never be placed outside
-	     *      of the defined boundaries (except if `keepTogether` is enabled)
-	     *
-	     * @param {Number} [options.boundariesPadding=5]
-	     *      Additional padding for the boundaries
-	     *
-	     * @param {Array} [options.preventOverflowOrder=['left', 'right', 'top', 'bottom']]
-	     *      Order used when Popper.js tries to avoid overflows from the boundaries, they will be checked in order,
-	     *      this means that the last ones will never overflow
-	     *
-	     * @param {String|Array} [options.flipBehavior='flip']
-	     *      The behavior used by the `flip` modifier to change the placement of the popper when the latter is trying to
-	     *      overlap its reference element. Defining `flip` as value, the placement will be flipped on
-	     *      its axis (`right - left`, `top - bottom`).
-	     *      You can even pass an array of placements (eg: `['right', 'left', 'top']` ) to manually specify
-	     *      how alter the placement when a flip is needed. (eg. in the above example, it would first flip from right to left,
-	     *      then, if even in its new placement, the popper is overlapping its reference element, it will be moved to top)
-	     *
-	     * @param {Array} [options.modifiers=[ 'shift', 'offset', 'preventOverflow', 'keepTogether', 'arrow', 'flip', 'applyStyle']]
-	     *      List of functions used to modify the data before they are applied to the popper, add your custom functions
-	     *      to this array to edit the offsets and placement.
-	     *      The function should reflect the @params and @returns of preventOverflow
-	     *
-	     * @param {Array} [options.modifiersIgnored=[]]
-	     *      Put here any built-in modifier name you want to exclude from the modifiers list
-	     *      The function should reflect the @params and @returns of preventOverflow
-	     *
-	     * @param {Boolean} [options.removeOnDestroy=false]
-	     *      Set to true if you want to automatically remove the popper when you call the `destroy` method.
-	     */
-	    function Popper(reference, popper, options) {
-	        this._reference = reference.jquery ? reference[0] : reference;
-	        this.state = {};
-
-	        // if the popper variable is a configuration object, parse it to generate an HTMLElement
-	        // generate a default popper if is not defined
-	        var isNotDefined = typeof popper === 'undefined' || popper === null;
-	        var isConfig = popper && Object.prototype.toString.call(popper) === '[object Object]';
-	        if (isNotDefined || isConfig) {
-	            this._popper = this.parse(isConfig ? popper : {});
-	        }
-	        // otherwise, use the given HTMLElement as popper
-	        else {
-	                this._popper = popper.jquery ? popper[0] : popper;
-	            }
-
-	        // with {} we create a new object with the options inside it
-	        this._options = (0, _assign2.default)({}, DEFAULTS, options);
-
-	        // refactoring modifiers' list
-	        this._options.modifiers = this._options.modifiers.map(function (modifier) {
-	            // remove ignored modifiers
-	            if (this._options.modifiersIgnored.indexOf(modifier) !== -1) return;
-
-	            // set the x-placement attribute before everything else because it could be used to add margins to the popper
-	            // margins needs to be calculated to get the correct popper offsets
-	            if (modifier === 'applyStyle') {
-	                this._popper.setAttribute('x-placement', this._options.placement);
-	            }
-
-	            // return predefined modifier identified by string or keep the custom one
-	            return this.modifiers[modifier] || modifier;
-	        }.bind(this));
-
-	        // make sure to apply the popper position before any computation
-	        this.state.position = this._getPosition(this._popper, this._reference);
-	        setStyle(this._popper, { position: this.state.position });
-
-	        // fire the first update to position the popper in the right place
-	        this.update();
-
-	        // setup event listeners, they will take care of update the position in specific situations
-	        this._setupEventListeners();
-	        return this;
-	    }
-
-	    //
-	    // Methods
-	    //
-	    /**
-	     * Destroy the popper
-	     * @method
-	     * @memberof Popper
-	     */
-	    Popper.prototype.destroy = function () {
-	        this._popper.removeAttribute('x-placement');
-	        this._popper.style.left = '';
-	        this._popper.style.position = '';
-	        this._popper.style.top = '';
-	        this._popper.style[getSupportedPropertyName('transform')] = '';
-	        this._removeEventListeners();
-
-	        // remove the popper if user explicity asked for the deletion on destroy
-	        if (this._options.removeOnDestroy) {
-	            this._popper.remove();
-	        }
-	        return this;
-	    };
-
-	    /**
-	     * Updates the position of the popper, computing the new offsets and applying the new style
-	     * @method
-	     * @memberof Popper
-	     */
-	    Popper.prototype.update = function () {
-	        var data = { instance: this, styles: {} };
-
-	        // store placement inside the data object, modifiers will be able to edit `placement` if needed
-	        // and refer to _originalPlacement to know the original value
-	        data.placement = this._options.placement;
-	        data._originalPlacement = this._options.placement;
-
-	        // compute the popper and reference offsets and put them inside data.offsets
-	        data.offsets = this._getOffsets(this._popper, this._reference, data.placement);
-
-	        // get boundaries
-	        data.boundaries = this._getBoundaries(data, this._options.boundariesPadding, this._options.boundariesElement);
-
-	        data = this.runModifiers(data, this._options.modifiers);
-
-	        if (typeof this.state.updateCallback === 'function') {
-	            this.state.updateCallback(data);
-	        }
-	    };
-
-	    /**
-	     * If a function is passed, it will be executed after the initialization of popper with as first argument the Popper instance.
-	     * @method
-	     * @memberof Popper
-	     * @param {Function} callback
-	     */
-	    Popper.prototype.onCreate = function (callback) {
-	        // the createCallbacks return as first argument the popper instance
-	        callback(this);
-	        return this;
-	    };
-
-	    /**
-	     * If a function is passed, it will be executed after each update of popper with as first argument the set of coordinates and informations
-	     * used to style popper and its arrow.
-	     * NOTE: it doesn't get fired on the first call of the `Popper.update()` method inside the `Popper` constructor!
-	     * @method
-	     * @memberof Popper
-	     * @param {Function} callback
-	     */
-	    Popper.prototype.onUpdate = function (callback) {
-	        this.state.updateCallback = callback;
-	        return this;
-	    };
-
-	    /**
-	     * Helper used to generate poppers from a configuration file
-	     * @method
-	     * @memberof Popper
-	     * @param config {Object} configuration
-	     * @returns {HTMLElement} popper
-	     */
-	    Popper.prototype.parse = function (config) {
-	        var defaultConfig = {
-	            tagName: 'div',
-	            classNames: ['popper'],
-	            attributes: [],
-	            parent: root.document.body,
-	            content: '',
-	            contentType: 'text',
-	            arrowTagName: 'div',
-	            arrowClassNames: ['popper__arrow'],
-	            arrowAttributes: ['x-arrow']
-	        };
-	        config = (0, _assign2.default)({}, defaultConfig, config);
-
-	        var d = root.document;
-
-	        var popper = d.createElement(config.tagName);
-	        addClassNames(popper, config.classNames);
-	        addAttributes(popper, config.attributes);
-	        if (config.contentType === 'node') {
-	            popper.appendChild(config.content.jquery ? config.content[0] : config.content);
-	        } else if (config.contentType === 'html') {
-	            popper.innerHTML = config.content;
-	        } else {
-	            popper.textContent = config.content;
-	        }
-
-	        if (config.arrowTagName) {
-	            var arrow = d.createElement(config.arrowTagName);
-	            addClassNames(arrow, config.arrowClassNames);
-	            addAttributes(arrow, config.arrowAttributes);
-	            popper.appendChild(arrow);
-	        }
-
-	        var parent = config.parent.jquery ? config.parent[0] : config.parent;
-
-	        // if the given parent is a string, use it to match an element
-	        // if more than one element is matched, the first one will be used as parent
-	        // if no elements are matched, the script will throw an error
-	        if (typeof parent === 'string') {
-	            parent = d.querySelectorAll(config.parent);
-	            if (parent.length > 1) {
-	                console.warn('WARNING: the given `parent` query(' + config.parent + ') matched more than one element, the first one will be used');
-	            }
-	            if (parent.length === 0) {
-	                throw 'ERROR: the given `parent` doesn\'t exists!';
-	            }
-	            parent = parent[0];
-	        }
-	        // if the given parent is a DOM nodes list or an array of nodes with more than one element,
-	        // the first one will be used as parent
-	        if (parent.length > 1 && parent instanceof Element === false) {
-	            console.warn('WARNING: you have passed as parent a list of elements, the first one will be used');
-	            parent = parent[0];
-	        }
-
-	        // append the generated popper to its parent
-	        parent.appendChild(popper);
-
-	        return popper;
-
-	        /**
-	         * Adds class names to the given element
-	         * @function
-	         * @ignore
-	         * @param {HTMLElement} target
-	         * @param {Array} classes
-	         */
-	        function addClassNames(element, classNames) {
-	            classNames.forEach(function (className) {
-	                element.classList.add(className);
-	            });
-	        }
-
-	        /**
-	         * Adds attributes to the given element
-	         * @function
-	         * @ignore
-	         * @param {HTMLElement} target
-	         * @param {Array} attributes
-	         * @example
-	         * addAttributes(element, [ 'data-info:foobar' ]);
-	         */
-	        function addAttributes(element, attributes) {
-	            attributes.forEach(function (attribute) {
-	                element.setAttribute(attribute.split(':')[0], attribute.split(':')[1] || '');
-	            });
-	        }
-	    };
-
-	    /**
-	     * Helper used to get the position which will be applied to the popper
-	     * @method
-	     * @memberof Popper
-	     * @param config {HTMLElement} popper element
-	     * @returns {HTMLElement} reference element
-	     */
-	    Popper.prototype._getPosition = function (popper, reference) {
-	        var container = getOffsetParent(reference);
-
-	        if (this._options.forceAbsolute) {
-	            return 'absolute';
-	        }
-
-	        // Decide if the popper will be fixed
-	        // If the reference element is inside a fixed context, the popper will be fixed as well to allow them to scroll together
-	        var isParentFixed = isFixed(reference, container);
-	        return isParentFixed ? 'fixed' : 'absolute';
-	    };
-
-	    /**
-	     * Get offsets to the popper
-	     * @method
-	     * @memberof Popper
-	     * @access private
-	     * @param {Element} popper - the popper element
-	     * @param {Element} reference - the reference element (the popper will be relative to this)
-	     * @returns {Object} An object containing the offsets which will be applied to the popper
-	     */
-	    Popper.prototype._getOffsets = function (popper, reference, placement) {
-	        placement = placement.split('-')[0];
-	        var popperOffsets = {};
-
-	        popperOffsets.position = this.state.position;
-	        var isParentFixed = popperOffsets.position === 'fixed';
-
-	        //
-	        // Get reference element position
-	        //
-	        var referenceOffsets = getOffsetRectRelativeToCustomParent(reference, getOffsetParent(popper), isParentFixed);
-
-	        //
-	        // Get popper sizes
-	        //
-	        var popperRect = getOuterSizes(popper);
-
-	        //
-	        // Compute offsets of popper
-	        //
-
-	        // depending by the popper placement we have to compute its offsets slightly differently
-	        if (['right', 'left'].indexOf(placement) !== -1) {
-	            popperOffsets.top = referenceOffsets.top + referenceOffsets.height / 2 - popperRect.height / 2;
-	            if (placement === 'left') {
-	                popperOffsets.left = referenceOffsets.left - popperRect.width;
-	            } else {
-	                popperOffsets.left = referenceOffsets.right;
-	            }
-	        } else {
-	            popperOffsets.left = referenceOffsets.left + referenceOffsets.width / 2 - popperRect.width / 2;
-	            if (placement === 'top') {
-	                popperOffsets.top = referenceOffsets.top - popperRect.height;
-	            } else {
-	                popperOffsets.top = referenceOffsets.bottom;
-	            }
-	        }
-
-	        // Add width and height to our offsets object
-	        popperOffsets.width = popperRect.width;
-	        popperOffsets.height = popperRect.height;
-
-	        return {
-	            popper: popperOffsets,
-	            reference: referenceOffsets
-	        };
-	    };
-
-	    /**
-	     * Setup needed event listeners used to update the popper position
-	     * @method
-	     * @memberof Popper
-	     * @access private
-	     */
-	    Popper.prototype._setupEventListeners = function () {
-	        // NOTE: 1 DOM access here
-	        this.state.updateBound = this.update.bind(this);
-	        root.addEventListener('resize', this.state.updateBound);
-	        // if the boundariesElement is window we don't need to listen for the scroll event
-	        if (this._options.boundariesElement !== 'window') {
-	            var target = getScrollParent(this._reference);
-	            // here it could be both `body` or `documentElement` thanks to Firefox, we then check both
-	            if (target === root.document.body || target === root.document.documentElement) {
-	                target = root;
-	            }
-	            target.addEventListener('scroll', this.state.updateBound);
-	        }
-	    };
-
-	    /**
-	     * Remove event listeners used to update the popper position
-	     * @method
-	     * @memberof Popper
-	     * @access private
-	     */
-	    Popper.prototype._removeEventListeners = function () {
-	        // NOTE: 1 DOM access here
-	        root.removeEventListener('resize', this.state.updateBound);
-	        if (this._options.boundariesElement !== 'window') {
-	            var target = getScrollParent(this._reference);
-	            // here it could be both `body` or `documentElement` thanks to Firefox, we then check both
-	            if (target === root.document.body || target === root.document.documentElement) {
-	                target = root;
-	            }
-	            target.removeEventListener('scroll', this.state.updateBound);
-	        }
-	        this.state.updateBound = null;
-	    };
-
-	    /**
-	     * Computed the boundaries limits and return them
-	     * @method
-	     * @memberof Popper
-	     * @access private
-	     * @param {Object} data - Object containing the property "offsets" generated by `_getOffsets`
-	     * @param {Number} padding - Boundaries padding
-	     * @param {Element} boundariesElement - Element used to define the boundaries
-	     * @returns {Object} Coordinates of the boundaries
-	     */
-	    Popper.prototype._getBoundaries = function (data, padding, boundariesElement) {
-	        // NOTE: 1 DOM access here
-	        var boundaries = {};
-	        var width, height;
-	        if (boundariesElement === 'window') {
-	            var body = root.document.body,
-	                html = root.document.documentElement;
-
-	            height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-	            width = Math.max(body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth);
-
-	            boundaries = {
-	                top: 0,
-	                right: width,
-	                bottom: height,
-	                left: 0
-	            };
-	        } else if (boundariesElement === 'viewport') {
-	            var offsetParent = getOffsetParent(this._popper);
-	            var scrollParent = getScrollParent(this._popper);
-	            var offsetParentRect = getOffsetRect(offsetParent);
-
-	            // if the popper is fixed we don't have to substract scrolling from the boundaries
-	            var scrollTop = data.offsets.popper.position === 'fixed' ? 0 : scrollParent.scrollTop;
-	            var scrollLeft = data.offsets.popper.position === 'fixed' ? 0 : scrollParent.scrollLeft;
-
-	            boundaries = {
-	                top: 0 - (offsetParentRect.top - scrollTop),
-	                right: root.document.documentElement.clientWidth - (offsetParentRect.left - scrollLeft),
-	                bottom: root.document.documentElement.clientHeight - (offsetParentRect.top - scrollTop),
-	                left: 0 - (offsetParentRect.left - scrollLeft)
-	            };
-	        } else {
-	            if (getOffsetParent(this._popper) === boundariesElement) {
-	                boundaries = {
-	                    top: 0,
-	                    left: 0,
-	                    right: boundariesElement.clientWidth,
-	                    bottom: boundariesElement.clientHeight
-	                };
-	            } else {
-	                boundaries = getOffsetRect(boundariesElement);
-	            }
-	        }
-	        boundaries.left += padding;
-	        boundaries.right -= padding;
-	        boundaries.top = boundaries.top + padding;
-	        boundaries.bottom = boundaries.bottom - padding;
-	        return boundaries;
-	    };
-
-	    /**
-	     * Loop trough the list of modifiers and run them in order, each of them will then edit the data object
-	     * @method
-	     * @memberof Popper
-	     * @access public
-	     * @param {Object} data
-	     * @param {Array} modifiers
-	     * @param {Function} ends
-	     */
-	    Popper.prototype.runModifiers = function (data, modifiers, ends) {
-	        var modifiersToRun = modifiers.slice();
-	        if (ends !== undefined) {
-	            modifiersToRun = this._options.modifiers.slice(0, getArrayKeyIndex(this._options.modifiers, ends));
-	        }
-
-	        modifiersToRun.forEach(function (modifier) {
-	            if (isFunction(modifier)) {
-	                data = modifier.call(this, data);
-	            }
-	        }.bind(this));
-
-	        return data;
-	    };
-
-	    /**
-	     * Helper used to know if the given modifier depends from another one.
-	     * @method
-	     * @memberof Popper
-	     * @returns {Boolean}
-	     */
-
-	    Popper.prototype.isModifierRequired = function (requesting, requested) {
-	        var index = getArrayKeyIndex(this._options.modifiers, requesting);
-	        return !!this._options.modifiers.slice(0, index).filter(function (modifier) {
-	            return modifier === requested;
-	        }).length;
-	    };
-
-	    //
-	    // Modifiers
-	    //
-
-	    /**
-	     * Modifiers list
-	     * @namespace Popper.modifiers
-	     * @memberof Popper
-	     * @type {Object}
-	     */
-	    Popper.prototype.modifiers = {};
-
-	    /**
-	     * Apply the computed styles to the popper element
-	     * @method
-	     * @memberof Popper.modifiers
-	     * @argument {Object} data - The data object generated by `update` method
-	     * @returns {Object} The same data object
-	     */
-	    Popper.prototype.modifiers.applyStyle = function (data) {
-	        // apply the final offsets to the popper
-	        // NOTE: 1 DOM access here
-	        var styles = {
-	            position: data.offsets.popper.position
-	        };
-
-	        // round top and left to avoid blurry text
-	        var left = Math.round(data.offsets.popper.left);
-	        var top = Math.round(data.offsets.popper.top);
-
-	        // if gpuAcceleration is set to true and transform is supported, we use `translate3d` to apply the position to the popper
-	        // we automatically use the supported prefixed version if needed
-	        var prefixedProperty;
-	        if (this._options.gpuAcceleration && (prefixedProperty = getSupportedPropertyName('transform'))) {
-	            styles[prefixedProperty] = 'translate3d(' + left + 'px, ' + top + 'px, 0)';
-	            styles.top = 0;
-	            styles.left = 0;
-	        }
-	        // othwerise, we use the standard `left` and `top` properties
-	        else {
-	                styles.left = left;
-	                styles.top = top;
-	            }
-
-	        // any property present in `data.styles` will be applied to the popper,
-	        // in this way we can make the 3rd party modifiers add custom styles to it
-	        // Be aware, modifiers could override the properties defined in the previous
-	        // lines of this modifier!
-	        (0, _assign2.default)(styles, data.styles);
-
-	        setStyle(this._popper, styles);
-
-	        // set an attribute which will be useful to style the tooltip (use it to properly position its arrow)
-	        // NOTE: 1 DOM access here
-	        this._popper.setAttribute('x-placement', data.placement);
-
-	        // if the arrow modifier is required and the arrow style has been computed, apply the arrow style
-	        if (this.isModifierRequired(this.modifiers.applyStyle, this.modifiers.arrow) && data.offsets.arrow) {
-	            setStyle(data.arrowElement, data.offsets.arrow);
-	        }
-
-	        return data;
-	    };
-
-	    /**
-	     * Modifier used to shift the popper on the start or end of its reference element side
-	     * @method
-	     * @memberof Popper.modifiers
-	     * @argument {Object} data - The data object generated by `update` method
-	     * @returns {Object} The data object, properly modified
-	     */
-	    Popper.prototype.modifiers.shift = function (data) {
-	        var placement = data.placement;
-	        var basePlacement = placement.split('-')[0];
-	        var shiftVariation = placement.split('-')[1];
-
-	        // if shift shiftVariation is specified, run the modifier
-	        if (shiftVariation) {
-	            var reference = data.offsets.reference;
-	            var popper = getPopperClientRect(data.offsets.popper);
-
-	            var shiftOffsets = {
-	                y: {
-	                    start: { top: reference.top },
-	                    end: { top: reference.top + reference.height - popper.height }
-	                },
-	                x: {
-	                    start: { left: reference.left },
-	                    end: { left: reference.left + reference.width - popper.width }
-	                }
-	            };
-
-	            var axis = ['bottom', 'top'].indexOf(basePlacement) !== -1 ? 'x' : 'y';
-
-	            data.offsets.popper = (0, _assign2.default)(popper, shiftOffsets[axis][shiftVariation]);
-	        }
-
-	        return data;
-	    };
-
-	    /**
-	     * Modifier used to make sure the popper does not overflows from it's boundaries
-	     * @method
-	     * @memberof Popper.modifiers
-	     * @argument {Object} data - The data object generated by `update` method
-	     * @returns {Object} The data object, properly modified
-	     */
-	    Popper.prototype.modifiers.preventOverflow = function (data) {
-	        var order = this._options.preventOverflowOrder;
-	        var popper = getPopperClientRect(data.offsets.popper);
-
-	        var check = {
-	            left: function left() {
-	                var left = popper.left;
-	                if (popper.left < data.boundaries.left) {
-	                    left = Math.max(popper.left, data.boundaries.left);
-	                }
-	                return { left: left };
-	            },
-	            right: function right() {
-	                var left = popper.left;
-	                if (popper.right > data.boundaries.right) {
-	                    left = Math.min(popper.left, data.boundaries.right - popper.width);
-	                }
-	                return { left: left };
-	            },
-	            top: function top() {
-	                var top = popper.top;
-	                if (popper.top < data.boundaries.top) {
-	                    top = Math.max(popper.top, data.boundaries.top);
-	                }
-	                return { top: top };
-	            },
-	            bottom: function bottom() {
-	                var top = popper.top;
-	                if (popper.bottom > data.boundaries.bottom) {
-	                    top = Math.min(popper.top, data.boundaries.bottom - popper.height);
-	                }
-	                return { top: top };
-	            }
-	        };
-
-	        order.forEach(function (direction) {
-	            data.offsets.popper = (0, _assign2.default)(popper, check[direction]());
-	        });
-
-	        return data;
-	    };
-
-	    /**
-	     * Modifier used to make sure the popper is always near its reference
-	     * @method
-	     * @memberof Popper.modifiers
-	     * @argument {Object} data - The data object generated by _update method
-	     * @returns {Object} The data object, properly modified
-	     */
-	    Popper.prototype.modifiers.keepTogether = function (data) {
-	        var popper = getPopperClientRect(data.offsets.popper);
-	        var reference = data.offsets.reference;
-	        var f = Math.floor;
-
-	        if (popper.right < f(reference.left)) {
-	            data.offsets.popper.left = f(reference.left) - popper.width;
-	        }
-	        if (popper.left > f(reference.right)) {
-	            data.offsets.popper.left = f(reference.right);
-	        }
-	        if (popper.bottom < f(reference.top)) {
-	            data.offsets.popper.top = f(reference.top) - popper.height;
-	        }
-	        if (popper.top > f(reference.bottom)) {
-	            data.offsets.popper.top = f(reference.bottom);
-	        }
-
-	        return data;
-	    };
-
-	    /**
-	     * Modifier used to flip the placement of the popper when the latter is starting overlapping its reference element.
-	     * Requires the `preventOverflow` modifier before it in order to work.
-	     * **NOTE:** This modifier will run all its previous modifiers everytime it tries to flip the popper!
-	     * @method
-	     * @memberof Popper.modifiers
-	     * @argument {Object} data - The data object generated by _update method
-	     * @returns {Object} The data object, properly modified
-	     */
-	    Popper.prototype.modifiers.flip = function (data) {
-	        // check if preventOverflow is in the list of modifiers before the flip modifier.
-	        // otherwise flip would not work as expected.
-	        if (!this.isModifierRequired(this.modifiers.flip, this.modifiers.preventOverflow)) {
-	            console.warn('WARNING: preventOverflow modifier is required by flip modifier in order to work, be sure to include it before flip!');
-	            return data;
-	        }
-
-	        if (data.flipped && data.placement === data._originalPlacement) {
-	            // seems like flip is trying to loop, probably there's not enough space on any of the flippable sides
-	            return data;
-	        }
-
-	        var placement = data.placement.split('-')[0];
-	        var placementOpposite = getOppositePlacement(placement);
-	        var variation = data.placement.split('-')[1] || '';
-
-	        var flipOrder = [];
-	        if (this._options.flipBehavior === 'flip') {
-	            flipOrder = [placement, placementOpposite];
-	        } else {
-	            flipOrder = this._options.flipBehavior;
-	        }
-
-	        flipOrder.forEach(function (step, index) {
-	            if (placement !== step || flipOrder.length === index + 1) {
-	                return;
-	            }
-
-	            placement = data.placement.split('-')[0];
-	            placementOpposite = getOppositePlacement(placement);
-
-	            var popperOffsets = getPopperClientRect(data.offsets.popper);
-
-	            // this boolean is used to distinguish right and bottom from top and left
-	            // they need different computations to get flipped
-	            var a = ['right', 'bottom'].indexOf(placement) !== -1;
-
-	            // using Math.floor because the reference offsets may contain decimals we are not going to consider here
-	            if (a && Math.floor(data.offsets.reference[placement]) > Math.floor(popperOffsets[placementOpposite]) || !a && Math.floor(data.offsets.reference[placement]) < Math.floor(popperOffsets[placementOpposite])) {
-	                // we'll use this boolean to detect any flip loop
-	                data.flipped = true;
-	                data.placement = flipOrder[index + 1];
-	                if (variation) {
-	                    data.placement += '-' + variation;
-	                }
-	                data.offsets.popper = this._getOffsets(this._popper, this._reference, data.placement).popper;
-
-	                data = this.runModifiers(data, this._options.modifiers, this._flip);
-	            }
-	        }.bind(this));
-	        return data;
-	    };
-
-	    /**
-	     * Modifier used to add an offset to the popper, useful if you more granularity positioning your popper.
-	     * The offsets will shift the popper on the side of its reference element.
-	     * @method
-	     * @memberof Popper.modifiers
-	     * @argument {Object} data - The data object generated by _update method
-	     * @returns {Object} The data object, properly modified
-	     */
-	    Popper.prototype.modifiers.offset = function (data) {
-	        var offset = this._options.offset;
-	        var popper = data.offsets.popper;
-
-	        if (data.placement.indexOf('left') !== -1) {
-	            popper.top -= offset;
-	        } else if (data.placement.indexOf('right') !== -1) {
-	            popper.top += offset;
-	        } else if (data.placement.indexOf('top') !== -1) {
-	            popper.left -= offset;
-	        } else if (data.placement.indexOf('bottom') !== -1) {
-	            popper.left += offset;
-	        }
-	        return data;
-	    };
-
-	    /**
-	     * Modifier used to move the arrows on the edge of the popper to make sure them are always between the popper and the reference element
-	     * It will use the CSS outer size of the arrow element to know how many pixels of conjuction are needed
-	     * @method
-	     * @memberof Popper.modifiers
-	     * @argument {Object} data - The data object generated by _update method
-	     * @returns {Object} The data object, properly modified
-	     */
-	    Popper.prototype.modifiers.arrow = function (data) {
-	        var arrow = this._options.arrowElement;
-
-	        // if the arrowElement is a string, suppose it's a CSS selector
-	        if (typeof arrow === 'string') {
-	            arrow = this._popper.querySelector(arrow);
-	        }
-
-	        // if arrow element is not found, don't run the modifier
-	        if (!arrow) {
-	            return data;
-	        }
-
-	        // the arrow element must be child of its popper
-	        if (!this._popper.contains(arrow)) {
-	            console.warn('WARNING: `arrowElement` must be child of its popper element!');
-	            return data;
-	        }
-
-	        // arrow depends on keepTogether in order to work
-	        if (!this.isModifierRequired(this.modifiers.arrow, this.modifiers.keepTogether)) {
-	            console.warn('WARNING: keepTogether modifier is required by arrow modifier in order to work, be sure to include it before arrow!');
-	            return data;
-	        }
-
-	        var arrowStyle = {};
-	        var placement = data.placement.split('-')[0];
-	        var popper = getPopperClientRect(data.offsets.popper);
-	        var reference = data.offsets.reference;
-	        var isVertical = ['left', 'right'].indexOf(placement) !== -1;
-
-	        var len = isVertical ? 'height' : 'width';
-	        var side = isVertical ? 'top' : 'left';
-	        var altSide = isVertical ? 'left' : 'top';
-	        var opSide = isVertical ? 'bottom' : 'right';
-	        var arrowSize = getOuterSizes(arrow)[len];
-
-	        //
-	        // extends keepTogether behavior making sure the popper and its reference have enough pixels in conjuction
-	        //
-
-	        // top/left side
-	        if (reference[opSide] - arrowSize < popper[side]) {
-	            data.offsets.popper[side] -= popper[side] - (reference[opSide] - arrowSize);
-	        }
-	        // bottom/right side
-	        if (reference[side] + arrowSize > popper[opSide]) {
-	            data.offsets.popper[side] += reference[side] + arrowSize - popper[opSide];
-	        }
-
-	        // compute center of the popper
-	        var center = reference[side] + reference[len] / 2 - arrowSize / 2;
-
-	        var sideValue = center - popper[side];
-
-	        // prevent arrow from being placed not contiguously to its popper
-	        sideValue = Math.max(Math.min(popper[len] - arrowSize, sideValue), 0);
-	        arrowStyle[side] = sideValue;
-	        arrowStyle[altSide] = ''; // make sure to remove any old style from the arrow
-
-	        data.offsets.arrow = arrowStyle;
-	        data.arrowElement = arrow;
-
-	        return data;
-	    };
-
-	    //
-	    // Helpers
-	    //
-
-	    /**
-	     * Get the outer sizes of the given element (offset size + margins)
-	     * @function
-	     * @ignore
-	     * @argument {Element} element
-	     * @returns {Object} object containing width and height properties
-	     */
-	    function getOuterSizes(element) {
-	        // NOTE: 1 DOM access here
-	        var _display = element.style.display,
-	            _visibility = element.style.visibility;
-	        element.style.display = 'block';element.style.visibility = 'hidden';
-	        var calcWidthToForceRepaint = element.offsetWidth;
-
-	        // original method
-	        var styles = root.getComputedStyle(element);
-	        var x = parseFloat(styles.marginTop) + parseFloat(styles.marginBottom);
-	        var y = parseFloat(styles.marginLeft) + parseFloat(styles.marginRight);
-	        var result = { width: element.offsetWidth + y, height: element.offsetHeight + x };
-
-	        // reset element styles
-	        element.style.display = _display;element.style.visibility = _visibility;
-	        return result;
-	    }
-
-	    /**
-	     * Get the opposite placement of the given one/
-	     * @function
-	     * @ignore
-	     * @argument {String} placement
-	     * @returns {String} flipped placement
-	     */
-	    function getOppositePlacement(placement) {
-	        var hash = { left: 'right', right: 'left', bottom: 'top', top: 'bottom' };
-	        return placement.replace(/left|right|bottom|top/g, function (matched) {
-	            return hash[matched];
-	        });
-	    }
-
-	    /**
-	     * Given the popper offsets, generate an output similar to getBoundingClientRect
-	     * @function
-	     * @ignore
-	     * @argument {Object} popperOffsets
-	     * @returns {Object} ClientRect like output
-	     */
-	    function getPopperClientRect(popperOffsets) {
-	        var offsets = (0, _assign2.default)({}, popperOffsets);
-	        offsets.right = offsets.left + offsets.width;
-	        offsets.bottom = offsets.top + offsets.height;
-	        return offsets;
-	    }
-
-	    /**
-	     * Given an array and the key to find, returns its index
-	     * @function
-	     * @ignore
-	     * @argument {Array} arr
-	     * @argument keyToFind
-	     * @returns index or null
-	     */
-	    function getArrayKeyIndex(arr, keyToFind) {
-	        var i = 0,
-	            key;
-	        for (key in arr) {
-	            if (arr[key] === keyToFind) {
-	                return i;
-	            }
-	            i++;
-	        }
-	        return null;
-	    }
-
-	    /**
-	     * Get CSS computed property of the given element
-	     * @function
-	     * @ignore
-	     * @argument {Eement} element
-	     * @argument {String} property
-	     */
-	    function getStyleComputedProperty(element, property) {
-	        // NOTE: 1 DOM access here
-	        var css = root.getComputedStyle(element, null);
-	        return css[property];
-	    }
-
-	    /**
-	     * Returns the offset parent of the given element
-	     * @function
-	     * @ignore
-	     * @argument {Element} element
-	     * @returns {Element} offset parent
-	     */
-	    function getOffsetParent(element) {
-	        // NOTE: 1 DOM access here
-	        var offsetParent = element.offsetParent;
-	        return offsetParent === root.document.body || !offsetParent ? root.document.documentElement : offsetParent;
-	    }
-
-	    /**
-	     * Returns the scrolling parent of the given element
-	     * @function
-	     * @ignore
-	     * @argument {Element} element
-	     * @returns {Element} offset parent
-	     */
-	    function getScrollParent(element) {
-	        if (element === root.document) {
-	            // Firefox puts the scrollTOp value on `documentElement` instead of `body`, we then check which of them is
-	            // greater than 0 and return the proper element
-	            if (root.document.body.scrollTop) {
-	                return root.document.body;
-	            } else {
-	                return root.document.documentElement;
-	            }
-	        }
-
-	        // Firefox want us to check `-x` and `-y` variations as well
-	        if (['scroll', 'auto'].indexOf(getStyleComputedProperty(element, 'overflow')) !== -1 || ['scroll', 'auto'].indexOf(getStyleComputedProperty(element, 'overflow-x')) !== -1 || ['scroll', 'auto'].indexOf(getStyleComputedProperty(element, 'overflow-y')) !== -1) {
-	            return element;
-	        }
-	        return element.parentNode ? getScrollParent(element.parentNode) : element;
-	    }
-
-	    /**
-	     * Check if the given element is fixed or is inside a fixed parent
-	     * @function
-	     * @ignore
-	     * @argument {Element} element
-	     * @argument {Element} customContainer
-	     * @returns {Boolean} answer to "isFixed?"
-	     */
-	    function isFixed(element) {
-	        if (element === root.document.body) {
-	            return false;
-	        }
-	        if (getStyleComputedProperty(element, 'position') === 'fixed') {
-	            return true;
-	        }
-	        return element.parentNode ? isFixed(element.parentNode) : element;
-	    }
-
-	    /**
-	     * Set the style to the given popper
-	     * @function
-	     * @ignore
-	     * @argument {Element} element - Element to apply the style to
-	     * @argument {Object} styles - Object with a list of properties and values which will be applied to the element
-	     */
-	    function setStyle(element, styles) {
-	        function is_numeric(n) {
-	            return n !== '' && !isNaN(parseFloat(n)) && isFinite(n);
-	        }
-	        (0, _keys2.default)(styles).forEach(function (prop) {
-	            var unit = '';
-	            // add unit if the value is numeric and is one of the following
-	            if (['width', 'height', 'top', 'right', 'bottom', 'left'].indexOf(prop) !== -1 && is_numeric(styles[prop])) {
-	                unit = 'px';
-	            }
-	            element.style[prop] = styles[prop] + unit;
-	        });
-	    }
-
-	    /**
-	     * Check if the given variable is a function
-	     * @function
-	     * @ignore
-	     * @argument {Element} element - Element to check
-	     * @returns {Boolean} answer to: is a function?
-	     */
-	    function isFunction(functionToCheck) {
-	        var getType = {};
-	        return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
-	    }
-
-	    /**
-	     * Get the position of the given element, relative to its offset parent
-	     * @function
-	     * @ignore
-	     * @param {Element} element
-	     * @return {Object} position - Coordinates of the element and its `scrollTop`
-	     */
-	    function getOffsetRect(element) {
-	        var elementRect = {
-	            width: element.offsetWidth,
-	            height: element.offsetHeight,
-	            left: element.offsetLeft,
-	            top: element.offsetTop
-	        };
-
-	        elementRect.right = elementRect.left + elementRect.width;
-	        elementRect.bottom = elementRect.top + elementRect.height;
-
-	        // position
-	        return elementRect;
-	    }
-
-	    /**
-	     * Get bounding client rect of given element
-	     * @function
-	     * @ignore
-	     * @param {HTMLElement} element
-	     * @return {Object} client rect
-	     */
-	    function getBoundingClientRect(element) {
-	        var rect = element.getBoundingClientRect();
-	        return {
-	            left: rect.left,
-	            top: rect.top,
-	            right: rect.right,
-	            bottom: rect.bottom,
-	            width: rect.right - rect.left,
-	            height: rect.bottom - rect.top
-	        };
-	    }
-
-	    /**
-	     * Given an element and one of its parents, return the offset
-	     * @function
-	     * @ignore
-	     * @param {HTMLElement} element
-	     * @param {HTMLElement} parent
-	     * @return {Object} rect
-	     */
-	    function getOffsetRectRelativeToCustomParent(element, parent, fixed) {
-	        var elementRect = getBoundingClientRect(element);
-	        var parentRect = getBoundingClientRect(parent);
-
-	        if (fixed) {
-	            var scrollParent = getScrollParent(parent);
-	            parentRect.top += scrollParent.scrollTop;
-	            parentRect.bottom += scrollParent.scrollTop;
-	            parentRect.left += scrollParent.scrollLeft;
-	            parentRect.right += scrollParent.scrollLeft;
-	        }
-
-	        var rect = {
-	            top: elementRect.top - parentRect.top,
-	            left: elementRect.left - parentRect.left,
-	            bottom: elementRect.top - parentRect.top + elementRect.height,
-	            right: elementRect.left - parentRect.left + elementRect.width,
-	            width: elementRect.width,
-	            height: elementRect.height
-	        };
-	        return rect;
-	    }
-
-	    /**
-	     * Get the prefixed supported property name
-	     * @function
-	     * @ignore
-	     * @argument {String} property (camelCase)
-	     * @returns {String} prefixed property (camelCase)
-	     */
-	    function getSupportedPropertyName(property) {
-	        var prefixes = ['', 'ms', 'webkit', 'moz', 'o'];
-
-	        for (var i = 0; i < prefixes.length; i++) {
-	            var toCheck = prefixes[i] ? prefixes[i] + property.charAt(0).toUpperCase() + property.slice(1) : property;
-	            if (typeof root.document.body.style[toCheck] !== 'undefined') {
-	                return toCheck;
-	            }
-	        }
-	        return null;
-	    }
-
-	    /**
-	     * The Object.assign() method is used to copy the values of all enumerable own properties from one or more source
-	     * objects to a target object. It will return the target object.
-	     * This polyfill doesn't support symbol properties, since ES5 doesn't have symbols anyway
-	     * Source: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
-	     * @function
-	     * @ignore
-	     */
-	    if (!_assign2.default) {
-	        Object.defineProperty(Object, 'assign', {
-	            enumerable: false,
-	            configurable: true,
-	            writable: true,
-	            value: function value(target) {
-	                if (target === undefined || target === null) {
-	                    throw new TypeError('Cannot convert first argument to object');
-	                }
-
-	                var to = Object(target);
-	                for (var i = 1; i < arguments.length; i++) {
-	                    var nextSource = arguments[i];
-	                    if (nextSource === undefined || nextSource === null) {
-	                        continue;
-	                    }
-	                    nextSource = Object(nextSource);
-
-	                    var keysArray = (0, _keys2.default)(nextSource);
-	                    for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
-	                        var nextKey = keysArray[nextIndex];
-	                        var desc = (0, _getOwnPropertyDescriptor2.default)(nextSource, nextKey);
-	                        if (desc !== undefined && desc.enumerable) {
-	                            to[nextKey] = nextSource[nextKey];
-	                        }
-	                    }
-	                }
-	                return to;
-	            }
-	        });
-	    }
-
-	    return Popper;
-	});
-
-/***/ },
-/* 268 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(269), __esModule: true };
-
-/***/ },
-/* 269 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(270);
-	var $Object = __webpack_require__(162).Object;
-	module.exports = function getOwnPropertyDescriptor(it, key){
-	  return $Object.getOwnPropertyDescriptor(it, key);
-	};
-
-/***/ },
-/* 270 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
-	var toIObject                 = __webpack_require__(237)
-	  , $getOwnPropertyDescriptor = __webpack_require__(271).f;
-
-	__webpack_require__(249)('getOwnPropertyDescriptor', function(){
-	  return function getOwnPropertyDescriptor(it, key){
-	    return $getOwnPropertyDescriptor(toIObject(it), key);
-	  };
-	});
-
-/***/ },
-/* 271 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var pIE            = __webpack_require__(272)
-	  , createDesc     = __webpack_require__(262)
-	  , toIObject      = __webpack_require__(237)
-	  , toPrimitive    = __webpack_require__(261)
-	  , has            = __webpack_require__(236)
-	  , IE8_DOM_DEFINE = __webpack_require__(257)
-	  , gOPD           = Object.getOwnPropertyDescriptor;
-
-	exports.f = __webpack_require__(258) ? gOPD : function getOwnPropertyDescriptor(O, P){
-	  O = toIObject(O);
-	  P = toPrimitive(P, true);
-	  if(IE8_DOM_DEFINE)try {
-	    return gOPD(O, P);
-	  } catch(e){ /* empty */ }
-	  if(has(O, P))return createDesc(!pIE.f.call(O, P), O[P]);
-	};
-
-/***/ },
-/* 272 */
-/***/ function(module, exports) {
-
-	exports.f = {}.propertyIsEnumerable;
-
-/***/ },
-/* 273 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(274), __esModule: true };
-
-/***/ },
-/* 274 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(275);
-	module.exports = __webpack_require__(162).Object.assign;
-
-/***/ },
-/* 275 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.3.1 Object.assign(target, source)
-	var $export = __webpack_require__(250);
-
-	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(276)});
-
-/***/ },
-/* 276 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	// 19.1.2.1 Object.assign(target, source, ...)
-	var getKeys  = __webpack_require__(234)
-	  , gOPS     = __webpack_require__(277)
-	  , pIE      = __webpack_require__(272)
-	  , toObject = __webpack_require__(232)
-	  , IObject  = __webpack_require__(238)
-	  , $assign  = Object.assign;
-
-	// should work with symbols and should have deterministic property order (V8 bug)
-	module.exports = !$assign || __webpack_require__(259)(function(){
-	  var A = {}
-	    , B = {}
-	    , S = Symbol()
-	    , K = 'abcdefghijklmnopqrst';
-	  A[S] = 7;
-	  K.split('').forEach(function(k){ B[k] = k; });
-	  return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join('') != K;
-	}) ? function assign(target, source){ // eslint-disable-line no-unused-vars
-	  var T     = toObject(target)
-	    , aLen  = arguments.length
-	    , index = 1
-	    , getSymbols = gOPS.f
-	    , isEnum     = pIE.f;
-	  while(aLen > index){
-	    var S      = IObject(arguments[index++])
-	      , keys   = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S)
-	      , length = keys.length
-	      , j      = 0
-	      , key;
-	    while(length > j)if(isEnum.call(S, key = keys[j++]))T[key] = S[key];
-	  } return T;
-	} : $assign;
-
-/***/ },
-/* 277 */
-/***/ function(module, exports) {
-
-	exports.f = Object.getOwnPropertySymbols;
-
-/***/ },
-/* 278 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	exports.__esModule = true;
-
-	var _iterator = __webpack_require__(279);
-
-	var _iterator2 = _interopRequireDefault(_iterator);
-
-	var _symbol = __webpack_require__(299);
-
-	var _symbol2 = _interopRequireDefault(_symbol);
-
-	var _typeof = typeof _symbol2.default === "function" && typeof _iterator2.default === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj; };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.default) === "symbol" ? function (obj) {
-	  return typeof obj === "undefined" ? "undefined" : _typeof(obj);
-	} : function (obj) {
-	  return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
-	};
-
-/***/ },
-/* 279 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(280), __esModule: true };
-
-/***/ },
-/* 280 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(281);
-	__webpack_require__(294);
-	module.exports = __webpack_require__(298).f('iterator');
-
-/***/ },
-/* 281 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var $at  = __webpack_require__(282)(true);
-
-	// 21.1.3.27 String.prototype[@@iterator]()
-	__webpack_require__(283)(String, 'String', function(iterated){
-	  this._t = String(iterated); // target
-	  this._i = 0;                // next index
-	// 21.1.5.2.1 %StringIteratorPrototype%.next()
-	}, function(){
-	  var O     = this._t
-	    , index = this._i
-	    , point;
-	  if(index >= O.length)return {value: undefined, done: true};
-	  point = $at(O, index);
-	  this._i += point.length;
-	  return {value: point, done: false};
-	});
-
-/***/ },
-/* 282 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var toInteger = __webpack_require__(242)
-	  , defined   = __webpack_require__(233);
-	// true  -> String#at
-	// false -> String#codePointAt
-	module.exports = function(TO_STRING){
-	  return function(that, pos){
-	    var s = String(defined(that))
-	      , i = toInteger(pos)
-	      , l = s.length
-	      , a, b;
-	    if(i < 0 || i >= l)return TO_STRING ? '' : undefined;
-	    a = s.charCodeAt(i);
-	    return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff
-	      ? TO_STRING ? s.charAt(i) : a
-	      : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
-	  };
-	};
-
-/***/ },
-/* 283 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var LIBRARY        = __webpack_require__(284)
-	  , $export        = __webpack_require__(250)
-	  , redefine       = __webpack_require__(285)
-	  , hide           = __webpack_require__(253)
-	  , has            = __webpack_require__(236)
-	  , Iterators      = __webpack_require__(286)
-	  , $iterCreate    = __webpack_require__(287)
-	  , setToStringTag = __webpack_require__(291)
-	  , getPrototypeOf = __webpack_require__(293)
-	  , ITERATOR       = __webpack_require__(292)('iterator')
-	  , BUGGY          = !([].keys && 'next' in [].keys()) // Safari has buggy iterators w/o `next`
-	  , FF_ITERATOR    = '@@iterator'
-	  , KEYS           = 'keys'
-	  , VALUES         = 'values';
-
-	var returnThis = function(){ return this; };
-
-	module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED){
-	  $iterCreate(Constructor, NAME, next);
-	  var getMethod = function(kind){
-	    if(!BUGGY && kind in proto)return proto[kind];
-	    switch(kind){
-	      case KEYS: return function keys(){ return new Constructor(this, kind); };
-	      case VALUES: return function values(){ return new Constructor(this, kind); };
-	    } return function entries(){ return new Constructor(this, kind); };
-	  };
-	  var TAG        = NAME + ' Iterator'
-	    , DEF_VALUES = DEFAULT == VALUES
-	    , VALUES_BUG = false
-	    , proto      = Base.prototype
-	    , $native    = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT]
-	    , $default   = $native || getMethod(DEFAULT)
-	    , $entries   = DEFAULT ? !DEF_VALUES ? $default : getMethod('entries') : undefined
-	    , $anyNative = NAME == 'Array' ? proto.entries || $native : $native
-	    , methods, key, IteratorPrototype;
-	  // Fix native
-	  if($anyNative){
-	    IteratorPrototype = getPrototypeOf($anyNative.call(new Base));
-	    if(IteratorPrototype !== Object.prototype){
-	      // Set @@toStringTag to native iterators
-	      setToStringTag(IteratorPrototype, TAG, true);
-	      // fix for some old engines
-	      if(!LIBRARY && !has(IteratorPrototype, ITERATOR))hide(IteratorPrototype, ITERATOR, returnThis);
-	    }
-	  }
-	  // fix Array#{values, @@iterator}.name in V8 / FF
-	  if(DEF_VALUES && $native && $native.name !== VALUES){
-	    VALUES_BUG = true;
-	    $default = function values(){ return $native.call(this); };
-	  }
-	  // Define iterator
-	  if((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])){
-	    hide(proto, ITERATOR, $default);
-	  }
-	  // Plug for library
-	  Iterators[NAME] = $default;
-	  Iterators[TAG]  = returnThis;
-	  if(DEFAULT){
-	    methods = {
-	      values:  DEF_VALUES ? $default : getMethod(VALUES),
-	      keys:    IS_SET     ? $default : getMethod(KEYS),
-	      entries: $entries
-	    };
-	    if(FORCED)for(key in methods){
-	      if(!(key in proto))redefine(proto, key, methods[key]);
-	    } else $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods);
-	  }
-	  return methods;
-	};
-
-/***/ },
-/* 284 */
-/***/ function(module, exports) {
-
-	module.exports = true;
-
-/***/ },
-/* 285 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(253);
-
-/***/ },
-/* 286 */
-/***/ function(module, exports) {
-
-	module.exports = {};
-
-/***/ },
-/* 287 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var create         = __webpack_require__(288)
-	  , descriptor     = __webpack_require__(262)
-	  , setToStringTag = __webpack_require__(291)
-	  , IteratorPrototype = {};
-
-	// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-	__webpack_require__(253)(IteratorPrototype, __webpack_require__(292)('iterator'), function(){ return this; });
-
-	module.exports = function(Constructor, NAME, next){
-	  Constructor.prototype = create(IteratorPrototype, {next: descriptor(1, next)});
-	  setToStringTag(Constructor, NAME + ' Iterator');
-	};
-
-/***/ },
-/* 288 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-	var anObject    = __webpack_require__(255)
-	  , dPs         = __webpack_require__(289)
-	  , enumBugKeys = __webpack_require__(248)
-	  , IE_PROTO    = __webpack_require__(244)('IE_PROTO')
-	  , Empty       = function(){ /* empty */ }
-	  , PROTOTYPE   = 'prototype';
-
-	// Create object with fake `null` prototype: use iframe Object with cleared prototype
-	var createDict = function(){
-	  // Thrash, waste and sodomy: IE GC bug
-	  var iframe = __webpack_require__(260)('iframe')
-	    , i      = enumBugKeys.length
-	    , lt     = '<'
-	    , gt     = '>'
-	    , iframeDocument;
-	  iframe.style.display = 'none';
-	  __webpack_require__(290).appendChild(iframe);
-	  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
-	  // createDict = iframe.contentWindow.Object;
-	  // html.removeChild(iframe);
-	  iframeDocument = iframe.contentWindow.document;
-	  iframeDocument.open();
-	  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
-	  iframeDocument.close();
-	  createDict = iframeDocument.F;
-	  while(i--)delete createDict[PROTOTYPE][enumBugKeys[i]];
-	  return createDict();
-	};
-
-	module.exports = Object.create || function create(O, Properties){
-	  var result;
-	  if(O !== null){
-	    Empty[PROTOTYPE] = anObject(O);
-	    result = new Empty;
-	    Empty[PROTOTYPE] = null;
-	    // add "__proto__" for Object.getPrototypeOf polyfill
-	    result[IE_PROTO] = O;
-	  } else result = createDict();
-	  return Properties === undefined ? result : dPs(result, Properties);
-	};
-
-
-/***/ },
-/* 289 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var dP       = __webpack_require__(254)
-	  , anObject = __webpack_require__(255)
-	  , getKeys  = __webpack_require__(234);
-
-	module.exports = __webpack_require__(258) ? Object.defineProperties : function defineProperties(O, Properties){
-	  anObject(O);
-	  var keys   = getKeys(Properties)
-	    , length = keys.length
-	    , i = 0
-	    , P;
-	  while(length > i)dP.f(O, P = keys[i++], Properties[P]);
-	  return O;
-	};
-
-/***/ },
-/* 290 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(246).document && document.documentElement;
-
-/***/ },
-/* 291 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var def = __webpack_require__(254).f
-	  , has = __webpack_require__(236)
-	  , TAG = __webpack_require__(292)('toStringTag');
-
-	module.exports = function(it, tag, stat){
-	  if(it && !has(it = stat ? it : it.prototype, TAG))def(it, TAG, {configurable: true, value: tag});
-	};
-
-/***/ },
-/* 292 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var store      = __webpack_require__(245)('wks')
-	  , uid        = __webpack_require__(247)
-	  , Symbol     = __webpack_require__(246).Symbol
-	  , USE_SYMBOL = typeof Symbol == 'function';
-
-	var $exports = module.exports = function(name){
-	  return store[name] || (store[name] =
-	    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
-	};
-
-	$exports.store = store;
-
-/***/ },
-/* 293 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
-	var has         = __webpack_require__(236)
-	  , toObject    = __webpack_require__(232)
-	  , IE_PROTO    = __webpack_require__(244)('IE_PROTO')
-	  , ObjectProto = Object.prototype;
-
-	module.exports = Object.getPrototypeOf || function(O){
-	  O = toObject(O);
-	  if(has(O, IE_PROTO))return O[IE_PROTO];
-	  if(typeof O.constructor == 'function' && O instanceof O.constructor){
-	    return O.constructor.prototype;
-	  } return O instanceof Object ? ObjectProto : null;
-	};
-
-/***/ },
-/* 294 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(295);
-	var global        = __webpack_require__(246)
-	  , hide          = __webpack_require__(253)
-	  , Iterators     = __webpack_require__(286)
-	  , TO_STRING_TAG = __webpack_require__(292)('toStringTag');
-
-	for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList', 'CSSRuleList'], i = 0; i < 5; i++){
-	  var NAME       = collections[i]
-	    , Collection = global[NAME]
-	    , proto      = Collection && Collection.prototype;
-	  if(proto && !proto[TO_STRING_TAG])hide(proto, TO_STRING_TAG, NAME);
-	  Iterators[NAME] = Iterators.Array;
-	}
-
-/***/ },
-/* 295 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var addToUnscopables = __webpack_require__(296)
-	  , step             = __webpack_require__(297)
-	  , Iterators        = __webpack_require__(286)
-	  , toIObject        = __webpack_require__(237);
-
-	// 22.1.3.4 Array.prototype.entries()
-	// 22.1.3.13 Array.prototype.keys()
-	// 22.1.3.29 Array.prototype.values()
-	// 22.1.3.30 Array.prototype[@@iterator]()
-	module.exports = __webpack_require__(283)(Array, 'Array', function(iterated, kind){
-	  this._t = toIObject(iterated); // target
-	  this._i = 0;                   // next index
-	  this._k = kind;                // kind
-	// 22.1.5.2.1 %ArrayIteratorPrototype%.next()
-	}, function(){
-	  var O     = this._t
-	    , kind  = this._k
-	    , index = this._i++;
-	  if(!O || index >= O.length){
-	    this._t = undefined;
-	    return step(1);
-	  }
-	  if(kind == 'keys'  )return step(0, index);
-	  if(kind == 'values')return step(0, O[index]);
-	  return step(0, [index, O[index]]);
-	}, 'values');
-
-	// argumentsList[@@iterator] is %ArrayProto_values% (9.4.4.6, 9.4.4.7)
-	Iterators.Arguments = Iterators.Array;
-
-	addToUnscopables('keys');
-	addToUnscopables('values');
-	addToUnscopables('entries');
-
-/***/ },
-/* 296 */
-/***/ function(module, exports) {
-
-	module.exports = function(){ /* empty */ };
-
-/***/ },
-/* 297 */
-/***/ function(module, exports) {
-
-	module.exports = function(done, value){
-	  return {value: value, done: !!done};
-	};
-
-/***/ },
-/* 298 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports.f = __webpack_require__(292);
-
-/***/ },
-/* 299 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(300), __esModule: true };
-
-/***/ },
-/* 300 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(301);
-	__webpack_require__(309);
-	__webpack_require__(310);
-	__webpack_require__(311);
-	module.exports = __webpack_require__(162).Symbol;
-
-/***/ },
-/* 301 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	// ECMAScript 6 symbols shim
-	var global         = __webpack_require__(246)
-	  , has            = __webpack_require__(236)
-	  , DESCRIPTORS    = __webpack_require__(258)
-	  , $export        = __webpack_require__(250)
-	  , redefine       = __webpack_require__(285)
-	  , META           = __webpack_require__(302).KEY
-	  , $fails         = __webpack_require__(259)
-	  , shared         = __webpack_require__(245)
-	  , setToStringTag = __webpack_require__(291)
-	  , uid            = __webpack_require__(247)
-	  , wks            = __webpack_require__(292)
-	  , wksExt         = __webpack_require__(298)
-	  , wksDefine      = __webpack_require__(303)
-	  , keyOf          = __webpack_require__(304)
-	  , enumKeys       = __webpack_require__(305)
-	  , isArray        = __webpack_require__(306)
-	  , anObject       = __webpack_require__(255)
-	  , toIObject      = __webpack_require__(237)
-	  , toPrimitive    = __webpack_require__(261)
-	  , createDesc     = __webpack_require__(262)
-	  , _create        = __webpack_require__(288)
-	  , gOPNExt        = __webpack_require__(307)
-	  , $GOPD          = __webpack_require__(271)
-	  , $DP            = __webpack_require__(254)
-	  , $keys          = __webpack_require__(234)
-	  , gOPD           = $GOPD.f
-	  , dP             = $DP.f
-	  , gOPN           = gOPNExt.f
-	  , $Symbol        = global.Symbol
-	  , $JSON          = global.JSON
-	  , _stringify     = $JSON && $JSON.stringify
-	  , PROTOTYPE      = 'prototype'
-	  , HIDDEN         = wks('_hidden')
-	  , TO_PRIMITIVE   = wks('toPrimitive')
-	  , isEnum         = {}.propertyIsEnumerable
-	  , SymbolRegistry = shared('symbol-registry')
-	  , AllSymbols     = shared('symbols')
-	  , OPSymbols      = shared('op-symbols')
-	  , ObjectProto    = Object[PROTOTYPE]
-	  , USE_NATIVE     = typeof $Symbol == 'function'
-	  , QObject        = global.QObject;
-	// Don't use setters in Qt Script, https://github.com/zloirock/core-js/issues/173
-	var setter = !QObject || !QObject[PROTOTYPE] || !QObject[PROTOTYPE].findChild;
-
-	// fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687
-	var setSymbolDesc = DESCRIPTORS && $fails(function(){
-	  return _create(dP({}, 'a', {
-	    get: function(){ return dP(this, 'a', {value: 7}).a; }
-	  })).a != 7;
-	}) ? function(it, key, D){
-	  var protoDesc = gOPD(ObjectProto, key);
-	  if(protoDesc)delete ObjectProto[key];
-	  dP(it, key, D);
-	  if(protoDesc && it !== ObjectProto)dP(ObjectProto, key, protoDesc);
-	} : dP;
-
-	var wrap = function(tag){
-	  var sym = AllSymbols[tag] = _create($Symbol[PROTOTYPE]);
-	  sym._k = tag;
-	  return sym;
-	};
-
-	var isSymbol = USE_NATIVE && typeof $Symbol.iterator == 'symbol' ? function(it){
-	  return typeof it == 'symbol';
-	} : function(it){
-	  return it instanceof $Symbol;
-	};
-
-	var $defineProperty = function defineProperty(it, key, D){
-	  if(it === ObjectProto)$defineProperty(OPSymbols, key, D);
-	  anObject(it);
-	  key = toPrimitive(key, true);
-	  anObject(D);
-	  if(has(AllSymbols, key)){
-	    if(!D.enumerable){
-	      if(!has(it, HIDDEN))dP(it, HIDDEN, createDesc(1, {}));
-	      it[HIDDEN][key] = true;
-	    } else {
-	      if(has(it, HIDDEN) && it[HIDDEN][key])it[HIDDEN][key] = false;
-	      D = _create(D, {enumerable: createDesc(0, false)});
-	    } return setSymbolDesc(it, key, D);
-	  } return dP(it, key, D);
-	};
-	var $defineProperties = function defineProperties(it, P){
-	  anObject(it);
-	  var keys = enumKeys(P = toIObject(P))
-	    , i    = 0
-	    , l = keys.length
-	    , key;
-	  while(l > i)$defineProperty(it, key = keys[i++], P[key]);
-	  return it;
-	};
-	var $create = function create(it, P){
-	  return P === undefined ? _create(it) : $defineProperties(_create(it), P);
-	};
-	var $propertyIsEnumerable = function propertyIsEnumerable(key){
-	  var E = isEnum.call(this, key = toPrimitive(key, true));
-	  if(this === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key))return false;
-	  return E || !has(this, key) || !has(AllSymbols, key) || has(this, HIDDEN) && this[HIDDEN][key] ? E : true;
-	};
-	var $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(it, key){
-	  it  = toIObject(it);
-	  key = toPrimitive(key, true);
-	  if(it === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key))return;
-	  var D = gOPD(it, key);
-	  if(D && has(AllSymbols, key) && !(has(it, HIDDEN) && it[HIDDEN][key]))D.enumerable = true;
-	  return D;
-	};
-	var $getOwnPropertyNames = function getOwnPropertyNames(it){
-	  var names  = gOPN(toIObject(it))
-	    , result = []
-	    , i      = 0
-	    , key;
-	  while(names.length > i){
-	    if(!has(AllSymbols, key = names[i++]) && key != HIDDEN && key != META)result.push(key);
-	  } return result;
-	};
-	var $getOwnPropertySymbols = function getOwnPropertySymbols(it){
-	  var IS_OP  = it === ObjectProto
-	    , names  = gOPN(IS_OP ? OPSymbols : toIObject(it))
-	    , result = []
-	    , i      = 0
-	    , key;
-	  while(names.length > i){
-	    if(has(AllSymbols, key = names[i++]) && (IS_OP ? has(ObjectProto, key) : true))result.push(AllSymbols[key]);
-	  } return result;
-	};
-
-	// 19.4.1.1 Symbol([description])
-	if(!USE_NATIVE){
-	  $Symbol = function Symbol(){
-	    if(this instanceof $Symbol)throw TypeError('Symbol is not a constructor!');
-	    var tag = uid(arguments.length > 0 ? arguments[0] : undefined);
-	    var $set = function(value){
-	      if(this === ObjectProto)$set.call(OPSymbols, value);
-	      if(has(this, HIDDEN) && has(this[HIDDEN], tag))this[HIDDEN][tag] = false;
-	      setSymbolDesc(this, tag, createDesc(1, value));
-	    };
-	    if(DESCRIPTORS && setter)setSymbolDesc(ObjectProto, tag, {configurable: true, set: $set});
-	    return wrap(tag);
-	  };
-	  redefine($Symbol[PROTOTYPE], 'toString', function toString(){
-	    return this._k;
-	  });
-
-	  $GOPD.f = $getOwnPropertyDescriptor;
-	  $DP.f   = $defineProperty;
-	  __webpack_require__(308).f = gOPNExt.f = $getOwnPropertyNames;
-	  __webpack_require__(272).f  = $propertyIsEnumerable;
-	  __webpack_require__(277).f = $getOwnPropertySymbols;
-
-	  if(DESCRIPTORS && !__webpack_require__(284)){
-	    redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
-	  }
-
-	  wksExt.f = function(name){
-	    return wrap(wks(name));
-	  }
-	}
-
-	$export($export.G + $export.W + $export.F * !USE_NATIVE, {Symbol: $Symbol});
-
-	for(var symbols = (
-	  // 19.4.2.2, 19.4.2.3, 19.4.2.4, 19.4.2.6, 19.4.2.8, 19.4.2.9, 19.4.2.10, 19.4.2.11, 19.4.2.12, 19.4.2.13, 19.4.2.14
-	  'hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables'
-	).split(','), i = 0; symbols.length > i; )wks(symbols[i++]);
-
-	for(var symbols = $keys(wks.store), i = 0; symbols.length > i; )wksDefine(symbols[i++]);
-
-	$export($export.S + $export.F * !USE_NATIVE, 'Symbol', {
-	  // 19.4.2.1 Symbol.for(key)
-	  'for': function(key){
-	    return has(SymbolRegistry, key += '')
-	      ? SymbolRegistry[key]
-	      : SymbolRegistry[key] = $Symbol(key);
-	  },
-	  // 19.4.2.5 Symbol.keyFor(sym)
-	  keyFor: function keyFor(key){
-	    if(isSymbol(key))return keyOf(SymbolRegistry, key);
-	    throw TypeError(key + ' is not a symbol!');
-	  },
-	  useSetter: function(){ setter = true; },
-	  useSimple: function(){ setter = false; }
-	});
-
-	$export($export.S + $export.F * !USE_NATIVE, 'Object', {
-	  // 19.1.2.2 Object.create(O [, Properties])
-	  create: $create,
-	  // 19.1.2.4 Object.defineProperty(O, P, Attributes)
-	  defineProperty: $defineProperty,
-	  // 19.1.2.3 Object.defineProperties(O, Properties)
-	  defineProperties: $defineProperties,
-	  // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
-	  getOwnPropertyDescriptor: $getOwnPropertyDescriptor,
-	  // 19.1.2.7 Object.getOwnPropertyNames(O)
-	  getOwnPropertyNames: $getOwnPropertyNames,
-	  // 19.1.2.8 Object.getOwnPropertySymbols(O)
-	  getOwnPropertySymbols: $getOwnPropertySymbols
-	});
-
-	// 24.3.2 JSON.stringify(value [, replacer [, space]])
-	$JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function(){
-	  var S = $Symbol();
-	  // MS Edge converts symbol values to JSON as {}
-	  // WebKit converts symbol values to JSON as null
-	  // V8 throws on boxed symbols
-	  return _stringify([S]) != '[null]' || _stringify({a: S}) != '{}' || _stringify(Object(S)) != '{}';
-	})), 'JSON', {
-	  stringify: function stringify(it){
-	    if(it === undefined || isSymbol(it))return; // IE8 returns string on undefined
-	    var args = [it]
-	      , i    = 1
-	      , replacer, $replacer;
-	    while(arguments.length > i)args.push(arguments[i++]);
-	    replacer = args[1];
-	    if(typeof replacer == 'function')$replacer = replacer;
-	    if($replacer || !isArray(replacer))replacer = function(key, value){
-	      if($replacer)value = $replacer.call(this, key, value);
-	      if(!isSymbol(value))return value;
-	    };
-	    args[1] = replacer;
-	    return _stringify.apply($JSON, args);
-	  }
-	});
-
-	// 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
-	$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(253)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
-	// 19.4.3.5 Symbol.prototype[@@toStringTag]
-	setToStringTag($Symbol, 'Symbol');
-	// 20.2.1.9 Math[@@toStringTag]
-	setToStringTag(Math, 'Math', true);
-	// 24.3.3 JSON[@@toStringTag]
-	setToStringTag(global.JSON, 'JSON', true);
-
-/***/ },
-/* 302 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var META     = __webpack_require__(247)('meta')
-	  , isObject = __webpack_require__(256)
-	  , has      = __webpack_require__(236)
-	  , setDesc  = __webpack_require__(254).f
-	  , id       = 0;
-	var isExtensible = Object.isExtensible || function(){
-	  return true;
-	};
-	var FREEZE = !__webpack_require__(259)(function(){
-	  return isExtensible(Object.preventExtensions({}));
-	});
-	var setMeta = function(it){
-	  setDesc(it, META, {value: {
-	    i: 'O' + ++id, // object ID
-	    w: {}          // weak collections IDs
-	  }});
-	};
-	var fastKey = function(it, create){
-	  // return primitive with prefix
-	  if(!isObject(it))return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
-	  if(!has(it, META)){
-	    // can't set metadata to uncaught frozen object
-	    if(!isExtensible(it))return 'F';
-	    // not necessary to add metadata
-	    if(!create)return 'E';
-	    // add missing metadata
-	    setMeta(it);
-	  // return object ID
-	  } return it[META].i;
-	};
-	var getWeak = function(it, create){
-	  if(!has(it, META)){
-	    // can't set metadata to uncaught frozen object
-	    if(!isExtensible(it))return true;
-	    // not necessary to add metadata
-	    if(!create)return false;
-	    // add missing metadata
-	    setMeta(it);
-	  // return hash weak collections IDs
-	  } return it[META].w;
-	};
-	// add metadata on freeze-family methods calling
-	var onFreeze = function(it){
-	  if(FREEZE && meta.NEED && isExtensible(it) && !has(it, META))setMeta(it);
-	  return it;
-	};
-	var meta = module.exports = {
-	  KEY:      META,
-	  NEED:     false,
-	  fastKey:  fastKey,
-	  getWeak:  getWeak,
-	  onFreeze: onFreeze
-	};
-
-/***/ },
-/* 303 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var global         = __webpack_require__(246)
-	  , core           = __webpack_require__(162)
-	  , LIBRARY        = __webpack_require__(284)
-	  , wksExt         = __webpack_require__(298)
-	  , defineProperty = __webpack_require__(254).f;
-	module.exports = function(name){
-	  var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
-	  if(name.charAt(0) != '_' && !(name in $Symbol))defineProperty($Symbol, name, {value: wksExt.f(name)});
-	};
-
-/***/ },
-/* 304 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var getKeys   = __webpack_require__(234)
-	  , toIObject = __webpack_require__(237);
-	module.exports = function(object, el){
-	  var O      = toIObject(object)
-	    , keys   = getKeys(O)
-	    , length = keys.length
-	    , index  = 0
-	    , key;
-	  while(length > index)if(O[key = keys[index++]] === el)return key;
-	};
-
-/***/ },
-/* 305 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// all enumerable object keys, includes symbols
-	var getKeys = __webpack_require__(234)
-	  , gOPS    = __webpack_require__(277)
-	  , pIE     = __webpack_require__(272);
-	module.exports = function(it){
-	  var result     = getKeys(it)
-	    , getSymbols = gOPS.f;
-	  if(getSymbols){
-	    var symbols = getSymbols(it)
-	      , isEnum  = pIE.f
-	      , i       = 0
-	      , key;
-	    while(symbols.length > i)if(isEnum.call(it, key = symbols[i++]))result.push(key);
-	  } return result;
-	};
-
-/***/ },
-/* 306 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 7.2.2 IsArray(argument)
-	var cof = __webpack_require__(239);
-	module.exports = Array.isArray || function isArray(arg){
-	  return cof(arg) == 'Array';
-	};
-
-/***/ },
-/* 307 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
-	var toIObject = __webpack_require__(237)
-	  , gOPN      = __webpack_require__(308).f
-	  , toString  = {}.toString;
-
-	var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
-	  ? Object.getOwnPropertyNames(window) : [];
-
-	var getWindowNames = function(it){
-	  try {
-	    return gOPN(it);
-	  } catch(e){
-	    return windowNames.slice();
-	  }
-	};
-
-	module.exports.f = function getOwnPropertyNames(it){
-	  return windowNames && toString.call(it) == '[object Window]' ? getWindowNames(it) : gOPN(toIObject(it));
-	};
-
-
-/***/ },
-/* 308 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-	var $keys      = __webpack_require__(235)
-	  , hiddenKeys = __webpack_require__(248).concat('length', 'prototype');
-
-	exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O){
-	  return $keys(O, hiddenKeys);
-	};
-
-/***/ },
-/* 309 */
-/***/ function(module, exports) {
-
-	
-
-/***/ },
-/* 310 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(303)('asyncIterator');
-
-/***/ },
-/* 311 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(303)('observable');
-
-/***/ },
-/* 312 */
+/* 886 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div v-el:reference style=\"display: inline-block\">\n  <!-- 内容 -->\n  <slot></slot>\n  <div :class=\"className\" v-el:popper v-show=\"!disabled && showPopper\">\n    <strong v-text=\"content\"></strong>\n    <slot name=\"content\"></slot>\n  </div>\n</div>\n";
 
 /***/ },
-/* 313 */
+/* 887 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(314)
-	__vue_script__ = __webpack_require__(316)
+	__webpack_require__(888)
+	__vue_script__ = __webpack_require__(890)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsPopup/src/tips.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(317)
+	__vue_template__ = __webpack_require__(891)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -6761,12 +6793,12 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 314 */
-[556, 315],
-/* 315 */
+/* 888 */
+[1106, 889],
+/* 889 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -6777,7 +6809,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 316 */
+/* 890 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6786,7 +6818,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _abstract = __webpack_require__(264);
+	var _abstract = __webpack_require__(884);
 
 	var _abstract2 = _interopRequireDefault(_abstract);
 
@@ -6864,13 +6896,13 @@ webpackJsonp([0],[
 	// <script>
 
 /***/ },
-/* 317 */
+/* 891 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div cid=\"KsToolTip\" style=\"display: inline-block\">\n  <ks-popup-abstract :class-name=\"className\" :arrow-class-name=\"arrowClassName\"\n                         :disabled=\"disable\" :content=\"content\"\n                         :visible-arrow=\"visibleArrow\" :transition=\"transition\"\n                         :options=\"options\" :show-popper.sync=\"showPopper\"\n  >\n    <!-- 弹出依靠 -->\n    <div class=\"container\" @mouseenter=\"handleShowPopper\" @mouseleave=\"handleClosePopper\">\n      <slot></slot>\n    </div>\n    <!-- 弹出内容部分 -->\n    <slot name=\"content\" slot=\"content\"></slot>\n  </ks-popup-abstract>\n</div>\n";
 
 /***/ },
-/* 318 */
+/* 892 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6879,7 +6911,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _main = __webpack_require__(319);
+	var _main = __webpack_require__(893);
 
 	var _main2 = _interopRequireDefault(_main);
 
@@ -6893,7 +6925,7 @@ webpackJsonp([0],[
 	                                   */
 
 /***/ },
-/* 319 */
+/* 893 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6902,11 +6934,11 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _container = __webpack_require__(320);
+	var _container = __webpack_require__(894);
 
 	var _container2 = _interopRequireDefault(_container);
 
-	var _ObjectUtil = __webpack_require__(330);
+	var _ObjectUtil = __webpack_require__(438);
 
 	var _ObjectUtil2 = _interopRequireDefault(_ObjectUtil);
 
@@ -7029,17 +7061,17 @@ webpackJsonp([0],[
 	exports.default = { install: install };
 
 /***/ },
-/* 320 */
+/* 894 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(321)
-	__vue_script__ = __webpack_require__(323)
+	__webpack_require__(895)
+	__vue_script__ = __webpack_require__(897)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsNoticeCenter/src/container.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(329)
+	__vue_template__ = __webpack_require__(903)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -7058,16 +7090,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 321 */
+/* 895 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(322);
+	var content = __webpack_require__(896);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -7084,10 +7116,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 322 */
+/* 896 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -7098,7 +7130,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 323 */
+/* 897 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7107,7 +7139,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _item = __webpack_require__(324);
+	var _item = __webpack_require__(898);
 
 	var _item2 = _interopRequireDefault(_item);
 
@@ -7186,17 +7218,17 @@ webpackJsonp([0],[
 	// <script>
 
 /***/ },
-/* 324 */
+/* 898 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(325)
-	__vue_script__ = __webpack_require__(327)
+	__webpack_require__(899)
+	__vue_script__ = __webpack_require__(901)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsNoticeCenter/src/item.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(328)
+	__vue_template__ = __webpack_require__(902)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -7215,16 +7247,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 325 */
+/* 899 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(326);
+	var content = __webpack_require__(900);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -7241,10 +7273,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 326 */
+/* 900 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -7255,7 +7287,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 327 */
+/* 901 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7343,103 +7375,29 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 328 */
+/* 902 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"noticeCenterItem\" :style=\"{background: hueMapper[hue]['background'], color: hueMapper[hue]['fontColor']}\">\n  <h3 class=\"noticeCenterItem__title\">\n    <strong>{{{title}}}</strong>\n    <i class=\"noticeCenterItem__close\" @click=\"$emit('close')\" v-if=\"closeBtn\">\n      <!-- close 图标 -->\n      <ks-icon name=\"cuowutubiao\" size=\"13px\"></ks-icon>\n    </i>\n  </h3>\n  <p class=\"noticeCenterItem__content\">{{{content}}}</p>\n</div>\n";
 
 /***/ },
-/* 329 */
+/* 903 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"notice-center-container\">\n  <ul class=\"noticeCenterContainer\" v-if=\"show\">\n    <li class=\"noticeCenterContainer__li\" v-for=\"msg in queue\">\n      <notice-center-item :id=\"msg._uid\"\n                          :hue=\"msg['options'].hue\"\n                          :title=\"msg['options'].title\"\n                          :content=\"msg['options'].content\"\n                          :delay=\"msg['options'].delay\"\n                          :close-btn=\"msg['options'].closeBtn\"\n                          @close=\"closeHandle(msg._uid)\"\n      ></notice-center-item>\n    </li>\n  </ul>\n</div>\n";
 
 /***/ },
-/* 330 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	/**
-	 * @description 操作对象的工具方法.
-	 * @author pkeros
-	 * @data 2017/3/31
-	 * @email pkeros@vip.qq.com
-	 */
-
-	/**
-	 * @description 合并选项
-	 * @param target 需要合并的目标
-	 * @return {*} 目标
-	 */
-	var merge = function merge(target) {
-	  for (var i = 1, j = arguments.length; i < j; i++) {
-	    var source = arguments[i];
-	    for (var prop in source) {
-	      if (source.hasOwnProperty(prop)) {
-	        var value = source[prop];
-	        if (value !== undefined) {
-	          target[prop] = value;
-	        }
-	      }
-	    }
-	  }
-
-	  return target;
-	};
-
-	exports.default = {
-	  merge: merge
-	};
-
-/***/ },
-/* 331 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _IosSwitch = __webpack_require__(332);
-
-	var _IosSwitch2 = _interopRequireDefault(_IosSwitch);
-
-	var _AbstractSwitch = __webpack_require__(337);
-
-	var _AbstractSwitch2 = _interopRequireDefault(_AbstractSwitch);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * @description: 封装了一些列的的开关组件。
-	 * @summary:
-	 *  KsSwitch 中封装了多种 Switch, 它们可以分别导入。
-	 * @author: pkeros.
-	 * @date: 2016/10/11.
-	 */
-
-	exports.default = {
-	  KsSwitch: _IosSwitch2.default,
-	  KsAbstractSwitch: _AbstractSwitch2.default
-	};
-
-/***/ },
-/* 332 */
+/* 904 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(333)
-	__vue_script__ = __webpack_require__(335)
+	__webpack_require__(905)
+	__vue_script__ = __webpack_require__(907)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsSwitch/src/IosSwitch.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(336)
+	__vue_template__ = __webpack_require__(908)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -7458,16 +7416,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 333 */
+/* 905 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(334);
+	var content = __webpack_require__(906);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -7484,10 +7442,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 334 */
+/* 906 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -7498,7 +7456,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 335 */
+/* 907 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7575,23 +7533,23 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 336 */
+/* 908 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :class=\"classesSize\">\n  <!-- IosSwitch 背景自定义 -->\n  <style type=\"text/css\">\n    {{ '.KSIosSwitch__UID--' + _uid }} .KSIosSwitch__entity:checked + .KSIosSwitch__slide {\n      {{ styleBgColor }}\n    }\n  </style>\n  <input class=\"KSIosSwitch__entity\" type=\"checkbox\"\n         v-model=\"checked\"\n         :checked=\"defChecked && 'checked'\"\n         :disabled=\"disable && 'disabled'\"/>\n  <div class=\"KSIosSwitch__slide\">\n    <small class=\"KSIosSwitch__btn\"></small>\n    <slot name=\"checkedChildren\"></slot>\n    <slot name=\"unCheckedChildren\"></slot>\n  </div>\n</div>\n";
 
 /***/ },
-/* 337 */
+/* 909 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(338)
-	__vue_script__ = __webpack_require__(340)
+	__webpack_require__(910)
+	__vue_script__ = __webpack_require__(912)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsSwitch/src/AbstractSwitch.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(341)
+	__vue_template__ = __webpack_require__(913)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -7610,16 +7568,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 338 */
+/* 910 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(339);
+	var content = __webpack_require__(911);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -7636,10 +7594,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 339 */
+/* 911 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -7650,7 +7608,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 340 */
+/* 912 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7659,7 +7617,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _keys = __webpack_require__(229);
+	var _keys = __webpack_require__(100);
 
 	var _keys2 = _interopRequireDefault(_keys);
 
@@ -7802,45 +7760,13 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 341 */
+/* 913 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :class=\"classes\">\n  <style type=\"text/css\">\n    {{ '.KSAbstractSwitch__UID--' + _uid }} .KSAbstractSwitch__slide {\n      {{ slideStyles }}\n    }\n    {{ '.KSAbstractSwitch__UID--' + _uid }} .KSAbstractSwitch__dot {\n      {{ dotStyles }}\n    }\n    {{ '.KSAbstractSwitch__UID--' + _uid }} .KSAbstractSwitch__slide--selected {\n      {{ selectedSlide }}\n    }\n    {{ '.KSAbstractSwitch__UID--' + _uid }} .KSAbstractSwitch__text {\n      {{ textStyles }}\n    }\n    {{ '.KSAbstractSwitch__UID--' + _uid }} .KSAbstractSwitch__dot--selected {\n      {{ selectedDot }}\n    }\n  </style>\n  <div class=\"KSAbstractSwitch__slide\" @click=\"slideClickHandle\"\n       :class=\"{'KSAbstractSwitch__slide--selected': count % 2}\"\n  >\n    <span class=\"KSAbstractSwitch__text\" :class=\"{'KSAbstractSwitch__text--selected': count % 2}\">\n      <slot></slot> {{statusMapper[status].text}}\n    </span>\n    <div class=\"KSAbstractSwitch__dot\" :class=\"{'KSAbstractSwitch__dot--selected': count % 2}\"></div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 342 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.KsDialogEntity = exports.KsDialog = undefined;
-
-	var _main = __webpack_require__(343);
-
-	var _main2 = _interopRequireDefault(_main);
-
-	var _main3 = __webpack_require__(344);
-
-	var _main4 = _interopRequireDefault(_main3);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * @description dialog 组件
-	 * @summary
-	 *  1. 一个对话框组件.
-	 * @author: pkeros.
-	 * @date: 2016/10/25.
-	 */
-
-	exports.KsDialog = _main2.default;
-	exports.KsDialogEntity = _main4.default;
-
-/***/ },
-/* 343 */
+/* 914 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7849,11 +7775,11 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _main = __webpack_require__(344);
+	var _main = __webpack_require__(915);
 
 	var _main2 = _interopRequireDefault(_main);
 
-	var _ObjectUtil = __webpack_require__(330);
+	var _ObjectUtil = __webpack_require__(438);
 
 	var _ObjectUtil2 = _interopRequireDefault(_ObjectUtil);
 
@@ -8066,17 +7992,17 @@ webpackJsonp([0],[
 	exports.default = { install: install };
 
 /***/ },
-/* 344 */
+/* 915 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(345)
-	__vue_script__ = __webpack_require__(347)
+	__webpack_require__(916)
+	__vue_script__ = __webpack_require__(918)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDialog/src/main.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(376)
+	__vue_template__ = __webpack_require__(945)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -8095,12 +8021,12 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 345 */
-[557, 346],
-/* 346 */
+/* 916 */
+[1107, 917],
+/* 917 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -8111,7 +8037,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 347 */
+/* 918 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8120,19 +8046,19 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _typeMapper = __webpack_require__(348);
+	var _typeMapper = __webpack_require__(919);
 
 	var _typeMapper2 = _interopRequireDefault(_typeMapper);
 
-	var _abstract = __webpack_require__(349);
+	var _abstract = __webpack_require__(920);
 
 	var _abstract2 = _interopRequireDefault(_abstract);
 
-	var _KsIcon = __webpack_require__(355);
+	var _KsIcon = __webpack_require__(691);
 
 	var _KsIcon2 = _interopRequireDefault(_KsIcon);
 
-	var _KsButton = __webpack_require__(361);
+	var _KsButton = __webpack_require__(538);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8233,7 +8159,7 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 348 */
+/* 919 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8256,17 +8182,17 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 349 */
+/* 920 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(350)
-	__vue_script__ = __webpack_require__(352)
+	__webpack_require__(921)
+	__vue_script__ = __webpack_require__(923)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDialog/src/abstract.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(354)
+	__vue_template__ = __webpack_require__(925)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -8285,12 +8211,12 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 350 */
-[558, 351],
-/* 351 */
+/* 921 */
+[1108, 922],
+/* 922 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -8301,7 +8227,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 352 */
+/* 923 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8310,7 +8236,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _dialogBaseProps = __webpack_require__(353);
+	var _dialogBaseProps = __webpack_require__(924);
 
 	var _dialogBaseProps2 = _interopRequireDefault(_dialogBaseProps);
 
@@ -8365,7 +8291,7 @@ webpackJsonp([0],[
 	// <script>
 
 /***/ },
-/* 353 */
+/* 924 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -8387,46 +8313,23 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 354 */
+/* 925 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsDialogAbstract\">\n  <div class=\"KsDialogAbstract__wrapper\">\n    <aside class=\"KsDialogAbstract__icon\">\n      <slot name=\"icon\"></slot>\n    </aside>\n\n    <article class=\"KsDialogAbstract__article\">\n      <slot name=\"article\"></slot>\n    </article>\n\n    <footer class=\"KsDialogAbstract__operation\">\n      <slot name=\"operation\"></slot>\n    </footer>\n  </div>\n</div>\n";
 
 /***/ },
-/* 355 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _icon = __webpack_require__(356);
-
-	var _icon2 = _interopRequireDefault(_icon);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _icon2.default; /**
-	                                   * @description 图标 图标 图标.
-	                                   * @author pkeros
-	                                   * @data 2017/4/11
-	                                   * @email pkeros@vip.qq.com
-	                                   */
-
-/***/ },
-/* 356 */
+/* 926 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(357)
-	__vue_script__ = __webpack_require__(359)
+	__webpack_require__(927)
+	__vue_script__ = __webpack_require__(929)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsIcon/src/icon.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(360)
+	__vue_template__ = __webpack_require__(930)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -8445,16 +8348,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 357 */
+/* 927 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(358);
+	var content = __webpack_require__(928);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -8471,10 +8374,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 358 */
+/* 928 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -8485,7 +8388,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 359 */
+/* 929 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8541,54 +8444,23 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 360 */
+/* 930 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<i :class=\"classes\" :style=\"styles\"></i>\n";
 
 /***/ },
-/* 361 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.KsButtonAbstract = exports.KsButton = undefined;
-
-	var _main = __webpack_require__(362);
-
-	var _main2 = _interopRequireDefault(_main);
-
-	var _abstract = __webpack_require__(366);
-
-	var _abstract2 = _interopRequireDefault(_abstract);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * @description KsButton 组件
-	 * @author: pkeros.
-	 * @date: 2016/10/18.
-	 * @email pkeros@vip.qq.com
-	 */
-
-	exports.KsButton = _main2.default;
-	exports.KsButtonAbstract = _abstract2.default;
-
-/***/ },
-/* 362 */
+/* 931 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(363)
-	__vue_script__ = __webpack_require__(365)
+	__webpack_require__(932)
+	__vue_script__ = __webpack_require__(934)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsButton/src/main.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(375)
+	__vue_template__ = __webpack_require__(944)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -8607,12 +8479,12 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 363 */
-[557, 364],
-/* 364 */
+/* 932 */
+[1107, 933],
+/* 933 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -8623,7 +8495,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 365 */
+/* 934 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8632,23 +8504,23 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _KsIcon = __webpack_require__(355);
+	var _KsIcon = __webpack_require__(691);
 
 	var _KsIcon2 = _interopRequireDefault(_KsIcon);
 
-	var _abstract = __webpack_require__(366);
+	var _abstract = __webpack_require__(935);
 
 	var _abstract2 = _interopRequireDefault(_abstract);
 
-	var _baseBtnProps = __webpack_require__(370);
+	var _baseBtnProps = __webpack_require__(939);
 
 	var _baseBtnProps2 = _interopRequireDefault(_baseBtnProps);
 
-	var _sizeMapper = __webpack_require__(373);
+	var _sizeMapper = __webpack_require__(942);
 
 	var _sizeMapper2 = _interopRequireDefault(_sizeMapper);
 
-	var _hueMapper = __webpack_require__(374);
+	var _hueMapper = __webpack_require__(943);
 
 	var _hueMapper2 = _interopRequireDefault(_hueMapper);
 
@@ -8712,17 +8584,17 @@ webpackJsonp([0],[
 	// <script>
 
 /***/ },
-/* 366 */
+/* 935 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(367)
-	__vue_script__ = __webpack_require__(369)
+	__webpack_require__(936)
+	__vue_script__ = __webpack_require__(938)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsButton/src/abstract.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(372)
+	__vue_template__ = __webpack_require__(941)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -8741,12 +8613,12 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 367 */
-[558, 368],
-/* 368 */
+/* 936 */
+[1108, 937],
+/* 937 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -8757,7 +8629,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 369 */
+/* 938 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8766,11 +8638,11 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _baseBtnProps = __webpack_require__(370);
+	var _baseBtnProps = __webpack_require__(939);
 
 	var _baseBtnProps2 = _interopRequireDefault(_baseBtnProps);
 
-	var _styles = __webpack_require__(371);
+	var _styles = __webpack_require__(940);
 
 	var styles = _interopRequireWildcard(_styles);
 
@@ -8862,7 +8734,7 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 370 */
+/* 939 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8891,7 +8763,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 371 */
+/* 940 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -8913,13 +8785,13 @@ webpackJsonp([0],[
 	var ghost = exports.ghost = "\n  /* \u9ED8\u8BA4\u72B6\u6001 */\n  .KsBtnAbstract--UID-{{ _uid }} .KsBtnAbstract {\n    color: {{ colorNormal }};\n    background: white;\n    border: 1px solid {{ colorNormal }};\n  }\n  /* hover \u72B6\u6001 */\n  .KsBtnAbstract--UID-{{ _uid }} .KsBtnAbstract:hover {\n    color: {{ colorHover }};\n    border: 1px solid {{ colorHover }};\n  }\n  .KsBtnAbstract--UID-{{ _uid }} .KsBtnAbstract[disabled]:hover {\n    color: {{ colorNormal }};\n    border: 1px solid {{ colorNormal }};\n  }\n  /* active \u72B6\u6001 */\n  .KsBtnAbstract--UID-{{ _uid }} .KsBtnAbstract:active {\n    color: {{ colorActive }};\n    border: 1px solid {{ colorActive }};\n  }\n  .KsBtnAbstract--UID-{{ _uid }} .KsBtnAbstract[disabled]:active {\n    color: {{ colorNormal }};\n    border: 1px solid {{ colorNormal }};\n  }\n";
 
 /***/ },
-/* 372 */
+/* 941 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<span :class=\"'KsBtnAbstract--UID-' + _uid\">\n\n  <!-- 普通按钮 -->\n  <template v-if=\"mode === 'normal'\">\n    <style type=\"text/css\">#normalStyle{}</style>\n  </template>\n  <!-- 幽灵按钮 -->\n  <template v-if=\"mode === 'ghost'\">\n    <style type=\"text/css\">#ghostStyle{}</style>\n  </template>\n\n  <button :type=\"nativeType\" :autofocus=\"autoFocus\" :name=\"name\" v-if=\"truth\"\n          :disabled=\"disabled\" :form=\"form\" :style=\"style\"\n          class=\"KsBtnAbstract\" :class=\"{'KsBtnAbstract--disabled': disabled}\"\n          :id=\"'KsBtnAbstract--UID-' + _uid\"\n  >\n    <slot></slot>\n  </button>\n\n  <a :disabled=\"disabled\" :style=\"style\" v-if=\"!truth\"\n     class=\"KsBtnAbstract\" :class=\"{'KsBtnAbstract--disabled': disabled}\"\n     :id=\"'KsBtnAbstract--UID-' + _uid\"\n  >\n    <slot></slot>\n  </a>\n</span>\n";
 
 /***/ },
-/* 373 */
+/* 942 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8942,7 +8814,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 374 */
+/* 943 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8967,54 +8839,19 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 375 */
+/* 944 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<span class=\"KsButton\">\n  <abstract :form=\"form\" :disabled=\"disable\" :auto-focus=\"autoFocus\"\n            :name=\"name\" :native-type=\"nativeType\" :mode=\"mode\"\n            :width=\"sizeMapper[size].width\"\n            :height=\"sizeMapper[size].height\"\n            :font-size=\"sizeMapper[size].fontSize\"\n            :color-normal=\"hueMapper[type].normal\"\n            :color-hover=\"hueMapper[type].hover\"\n            :color-active=\"hueMapper[type].active\"\n  >\n    <ks-icon name=\"circle-o-notch\" animate=\"spin\" library=\"fa\"\n             :size=\"sizeMapper[size].fontSize\" v-if=\"loading\"\n    ></ks-icon>\n    <slot></slot>\n  </abstract>\n</span>\n";
 
 /***/ },
-/* 376 */
+/* 945 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsDialog\">\n  <abstract v-if=\"show\">\n    <aside class=\"KsDialog__icon\" slot=\"icon\" :style=\"{color: typeMapper[type].hue}\">\n      <ks-icon :name=\"typeMapper[type].icon\"></ks-icon>\n    </aside>\n\n    <aside class=\"KsDialog__article\" slot=\"article\">\n      <h3 class=\"KsDialog__title\" v-text=\"title\"></h3>\n      <p class=\"KsDialog__content\" v-text=\"content\"></p>\n    </aside>\n\n    <aside class=\"KsDialog__operation\" slot=\"operation\">\n      <ks-button type=\"other\" mode=\"ghost\" style=\"margin-right: 12px\"\n                 v-if=\"showCancelBtn\" @click=\"$emit('cancel')\"\n      >\n        {{cancelBtnText}}\n      </ks-button>\n      <ks-button :type=\"type\" @click=\"$emit('confirm')\">\n        {{confirmBtnText}}\n      </ks-button>\n    </aside>\n  </abstract>\n</div>\n";
 
 /***/ },
-/* 377 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.KsModalCenter = exports.KsModalEntity = exports.KsModal = undefined;
-
-	var _main = __webpack_require__(378);
-
-	var _main2 = _interopRequireDefault(_main);
-
-	var _main3 = __webpack_require__(379);
-
-	var _main4 = _interopRequireDefault(_main3);
-
-	var _center = __webpack_require__(392);
-
-	var _center2 = _interopRequireDefault(_center);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.KsModal = _main2.default;
-	exports.KsModalEntity = _main4.default;
-	exports.KsModalCenter = _center2.default; /**
-	                                           * @description modal 组件
-	                                           * @summary
-	                                           *  我是一个单纯可爱的模态组件.
-	                                           * @author: pkeros.
-	                                           * @date: 2016/10/19.
-	                                           */
-
-/***/ },
-/* 378 */
+/* 946 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9023,15 +8860,15 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _vue = __webpack_require__(4);
+	var _vue = __webpack_require__(7);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _main = __webpack_require__(379);
+	var _main = __webpack_require__(947);
 
 	var _main2 = _interopRequireDefault(_main);
 
-	var _KsMask = __webpack_require__(385);
+	var _KsMask = __webpack_require__(513);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -9291,17 +9128,17 @@ webpackJsonp([0],[
 	exports.default = { install: install };
 
 /***/ },
-/* 379 */
+/* 947 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(380)
-	__vue_script__ = __webpack_require__(382)
+	__webpack_require__(948)
+	__vue_script__ = __webpack_require__(950)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsModal/src/main.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(384)
+	__vue_template__ = __webpack_require__(952)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -9320,12 +9157,12 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 380 */
-[557, 381],
-/* 381 */
+/* 948 */
+[1107, 949],
+/* 949 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -9336,7 +9173,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 382 */
+/* 950 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9345,9 +9182,9 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _KsButton = __webpack_require__(361);
+	var _KsButton = __webpack_require__(538);
 
-	var _modalProps = __webpack_require__(383);
+	var _modalProps = __webpack_require__(951);
 
 	var _modalProps2 = _interopRequireDefault(_modalProps);
 
@@ -9463,7 +9300,7 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 383 */
+/* 951 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -9494,43 +9331,13 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 384 */
+/* 952 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KSModal__wrapper\">\n  <div class=\"KSModal\" v-if=\"show\" :style=\"modalWidth\">\n    <header class=\"KSModal__header\" :style=\"modalHeaderStyle\">\n      <div class=\"innerWrap\">\n        <h3 class=\"KSModal__title\">\n          {{ title }} <slot name=\"title\"></slot>\n        </h3>\n\n        <i class=\"KSModal__close\" v-if=\"showCloseBtn\"\n           @click=\"$emit('close') && (show = false)\">\n          <!-- close 图标 -->\n          <svg class=\"icon\" width=\"24\" height=\"24\" viewBox=\"0 0 32 32\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">\n            <g transform=\"scale(0.03125, 0.03125)\">\n              <path\n                d=\"M557.312 513.248l265.28-263.904c12.544-12.48 12.608-32.704 0.128-45.248-12.512-12.576-32.704-12.608-45.248-0.128l-265.344 263.936-263.04-263.84C236.64 191.584 216.384 191.52 203.84 204 191.328 216.48 191.296 236.736 203.776 249.28l262.976 263.776L201.6 776.8c-12.544 12.48-12.608 32.704-0.128 45.248 6.24 6.272 14.464 9.44 22.688 9.44 8.16 0 16.32-3.104 22.56-9.312l265.216-263.808 265.44 266.24c6.24 6.272 14.432 9.408 22.656 9.408 8.192 0 16.352-3.136 22.592-9.344 12.512-12.48 12.544-32.704 0.064-45.248L557.312 513.248z\">\n              </path>\n            </g>\n          </svg>\n        </i>\n\n        <!-- 神奇的分隔线 -->\n        <div class=\"KSModal__separation\" v-if=\"type === 'normal'\"></div>\n      </div>\n    </header>\n    <article class=\"KSModal__content\">\n      {{ content }} <slot name=\"content\"></slot>\n    </article>\n    <footer class=\"KSModal__footer\" :style=\"type !== 'normal' && 'padding-top: 0'\">\n      <aside class=\"KSModal__btnWarp\">\n        <ks-button mode=\"ghost\" type=\"other\" @click=\"$emit('cancel')\"\n                   v-if=\"showCancelBtn\" style=\"margin-right: 10px\"\n        >{{ cancelBtnText }}</ks-button>\n        <ks-button :type=\"type === 'normal' ? 'primary' : type\" @click=\"$emit('confirm')\"\n                   v-if=\"showConfirmBtn\"\n        >{{ confirmBtnText }}</ks-button>\n      </aside>\n    </footer>\n  </div>\n</div>\n";
 
 /***/ },
-/* 385 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.KsMaskEntity = exports.KsMask = undefined;
-
-	var _main = __webpack_require__(386);
-
-	var _main2 = _interopRequireDefault(_main);
-
-	var _main3 = __webpack_require__(387);
-
-	var _main4 = _interopRequireDefault(_main3);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * @description mask 组件
-	 * @author: pkeros.
-	 * @date: 2016/10/20.
-	 */
-
-	exports.KsMask = _main2.default;
-	exports.KsMaskEntity = _main4.default;
-
-/***/ },
-/* 386 */
+/* 953 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9539,11 +9346,11 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _main = __webpack_require__(387);
+	var _main = __webpack_require__(954);
 
 	var _main2 = _interopRequireDefault(_main);
 
-	var _ObjectUtil = __webpack_require__(330);
+	var _ObjectUtil = __webpack_require__(438);
 
 	var _ObjectUtil2 = _interopRequireDefault(_ObjectUtil);
 
@@ -9649,17 +9456,17 @@ webpackJsonp([0],[
 	exports.default = { install: install };
 
 /***/ },
-/* 387 */
+/* 954 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(388)
-	__vue_script__ = __webpack_require__(390)
+	__webpack_require__(955)
+	__vue_script__ = __webpack_require__(957)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsMask/src/main.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(391)
+	__vue_template__ = __webpack_require__(958)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -9678,12 +9485,12 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 388 */
-[557, 389],
-/* 389 */
+/* 955 */
+[1107, 956],
+/* 956 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -9694,7 +9501,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 390 */
+/* 957 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -9760,23 +9567,23 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 391 */
+/* 958 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsMask\">\n  <div class=\"KsMask__wrapper\" :style=\"maskStyle\" v-if=\"show\">\n    <div class=\"KsMask__container\" :style=\"containerStyle\"\n         v-el:container @click=\"$emit('spaceClick')\"\n    >\n      <slot></slot>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 392 */
+/* 959 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(393)
-	__vue_script__ = __webpack_require__(395)
+	__webpack_require__(960)
+	__vue_script__ = __webpack_require__(962)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsModal/src/center.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(396)
+	__vue_template__ = __webpack_require__(963)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -9795,16 +9602,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 393 */
+/* 960 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(394);
+	var content = __webpack_require__(961);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -9821,10 +9628,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 394 */
+/* 961 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -9835,7 +9642,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 395 */
+/* 962 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9844,13 +9651,13 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _KsMask = __webpack_require__(385);
+	var _KsMask = __webpack_require__(513);
 
-	var _main = __webpack_require__(379);
+	var _main = __webpack_require__(947);
 
 	var _main2 = _interopRequireDefault(_main);
 
-	var _modalProps = __webpack_require__(383);
+	var _modalProps = __webpack_require__(951);
 
 	var _modalProps2 = _interopRequireDefault(_modalProps);
 
@@ -9913,56 +9720,23 @@ webpackJsonp([0],[
 	// <script>
 
 /***/ },
-/* 396 */
+/* 963 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"ks-modal-center\" v-if=\"show\">\n  <ks-mask-entity :fill-mode=\"'full'\"\n                  :show.sync=\"show\"\n  >\n    <ks-modal-entity\n      class=\"ks-modal-center\"\n      :show-confirm-btn=\"showConfirmBtn\"\n      :show-cancel-btn=\"showCancelBtn\"\n      :show-close-btn=\"showCloseBtn\"\n      :confirm-btn-text=\"confirmBtnText\"\n      :title=\"title\"\n      :content=\"content\"\n      :type=\"type\"\n      :width=\"width\"\n      :mask=\"mask\"\n      :show.sync=\"show\"\n      @cancel=\"$emit('cancel')\"\n      @confirm=\"$emit('confirm')\"\n      @close=\"$emit('close')\"\n    >\n      <slot name=\"content\" slot=\"content\"></slot>\n    </ks-modal-entity>\n  </ks-mask-entity>\n</div>\n";
 
 /***/ },
-/* 397 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _NrCheckbox = __webpack_require__(398);
-
-	var _NrCheckbox2 = _interopRequireDefault(_NrCheckbox);
-
-	var _CheckboxGroup = __webpack_require__(403);
-
-	var _CheckboxGroup2 = _interopRequireDefault(_CheckboxGroup);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * @description: 封装了一些列的的复选框组件。
-	 * @summary:
-	 *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
-	 * @author: pkeros.
-	 * @date: 2016/10/11.
-	 */
-
-	exports.default = {
-	  KsCheckbox: _NrCheckbox2.default,
-	  KsCheckboxGroup: _CheckboxGroup2.default
-	};
-
-/***/ },
-/* 398 */
+/* 964 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(399)
-	__vue_script__ = __webpack_require__(401)
+	__webpack_require__(965)
+	__vue_script__ = __webpack_require__(967)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsCheckbox/src/NrCheckbox.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(402)
+	__vue_template__ = __webpack_require__(968)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -9981,16 +9755,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 399 */
+/* 965 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(400);
+	var content = __webpack_require__(966);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10007,10 +9781,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 400 */
+/* 966 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -10021,7 +9795,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 401 */
+/* 967 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -10083,23 +9857,23 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 402 */
+/* 968 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KSNRCheckbox\" cid=\"KSNRCheckbox\">\n  <div class=\"KSNRCheckbox-container\" :class=\"{disable: disable}\">\n    <input type=\"checkbox\" class=\"KSNRCheckbox-container-entity\"\n           v-model=\"checked\" @change=\"checkboxChangeHandle\"\n           :disabled=\"disable && 'disabled'\" :id=\"`KSNRCheckbox--${_uid}`\" />\n    <label class=\"KSNRCheckbox-container-skin\" :for=\"`KSNRCheckbox--${_uid}`\">\n      <em class=\"KSNRCheckbox-container-skin-cube\" :style=\"{background: color}\"></em>\n    </label>\n    <label class=\"KSNRCheckbox-container-text\" :for=\"`KSNRCheckbox--${_uid}`\" @click=\"$emit('label-click')\">\n      <slot>LABEL</slot>\n    </label>\n  </div>\n</div>\n";
 
 /***/ },
-/* 403 */
+/* 969 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(404)
-	__vue_script__ = __webpack_require__(406)
+	__webpack_require__(970)
+	__vue_script__ = __webpack_require__(972)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsCheckbox/src/CheckboxGroup.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(407)
+	__vue_template__ = __webpack_require__(973)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -10118,16 +9892,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 404 */
+/* 970 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(405);
+	var content = __webpack_require__(971);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10144,10 +9918,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 405 */
+/* 971 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -10158,7 +9932,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 406 */
+/* 972 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -10225,59 +9999,23 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 407 */
+/* 973 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"ks-checkbox-group\">\n  <slot></slot>\n</div>\n";
 
 /***/ },
-/* 408 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _circleRadio = __webpack_require__(409);
-
-	var _circleRadio2 = _interopRequireDefault(_circleRadio);
-
-	var _BtnRadio = __webpack_require__(420);
-
-	var _BtnRadio2 = _interopRequireDefault(_BtnRadio);
-
-	var _radioGroup = __webpack_require__(425);
-
-	var _radioGroup2 = _interopRequireDefault(_radioGroup);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	  KsRadio: _circleRadio2.default,
-	  KsBtnRadio: _BtnRadio2.default,
-	  KsRadioGroup: _radioGroup2.default
-	}; /**
-	    * @description: 封装了一些列的单选组件。
-	    * @summary:
-	    *  KsRadio 中封装了多种 Radio, 它们可以分别导入。
-	    * @author: pkeros.
-	    * @date: 2016/10/14.
-	    */
-
-/***/ },
-/* 409 */
+/* 974 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(410)
-	__vue_script__ = __webpack_require__(412)
+	__webpack_require__(975)
+	__vue_script__ = __webpack_require__(977)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsRadio/src/circleRadio.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(419)
+	__vue_template__ = __webpack_require__(984)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -10296,16 +10034,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 410 */
+/* 975 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(411);
+	var content = __webpack_require__(976);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10322,10 +10060,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 411 */
+/* 976 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -10336,7 +10074,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 412 */
+/* 977 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10345,11 +10083,11 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _abstract = __webpack_require__(413);
+	var _abstract = __webpack_require__(978);
 
 	var _abstract2 = _interopRequireDefault(_abstract);
 
-	var _baseRadioProps = __webpack_require__(417);
+	var _baseRadioProps = __webpack_require__(982);
 
 	var _baseRadioProps2 = _interopRequireDefault(_baseRadioProps);
 
@@ -10417,17 +10155,17 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 413 */
+/* 978 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(414)
-	__vue_script__ = __webpack_require__(416)
+	__webpack_require__(979)
+	__vue_script__ = __webpack_require__(981)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsRadio/src/abstract.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(418)
+	__vue_template__ = __webpack_require__(983)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -10446,12 +10184,12 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 414 */
-[558, 415],
-/* 415 */
+/* 979 */
+[1108, 980],
+/* 980 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -10462,7 +10200,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 416 */
+/* 981 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10471,7 +10209,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _baseRadioProps = __webpack_require__(417);
+	var _baseRadioProps = __webpack_require__(982);
 
 	var _baseRadioProps2 = _interopRequireDefault(_baseRadioProps);
 
@@ -10539,7 +10277,7 @@ webpackJsonp([0],[
 	// <script>
 
 /***/ },
-/* 417 */
+/* 982 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -10567,29 +10305,29 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 418 */
+/* 983 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :class=\"'KsRadioAbstract KsRadioAbstract--UID-' + _uid\">\n  <input type=\"radio\" class=\"KsRadioAbstract__entity\" :id=\"Id\" :name=\"name\"\n         :checked=\"defChecked\" :value=\"value\" :disabled=\"disabled\"\n         v-model=\"model\"\n  >\n\n  <label class=\"KsRadioAbstract__dot\" :for=\"Id\">\n    <slot name=\"dot\"></slot>\n  </label>\n\n  <label class=\"KsRadioAbstract__label\" :for=\"Id\">\n    <slot name=\"label\"></slot>\n  </label>\n</div>\n";
 
 /***/ },
-/* 419 */
+/* 984 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsCircleRadio\" :style=\"{opacity: disabled ? '0.6' : '1'}\">\n  <abstract :name=\"name\" :value=\"value\" :disabled=\"disabled\"\n            :model.sync=\"model\" :def-checked=\"defChecked\"\n  >\n    <div class=\"KsCircleRadio__dotContainer\" slot=\"dot\">\n      <div class=\"KsCircleRadio__dotInner\"\n           :style=\"{backgroundColor: model === value ? color : 'white'}\"></div>\n    </div>\n\n    <slot slot=\"label\">Label...</slot>\n  </abstract>\n</div>\n";
 
 /***/ },
-/* 420 */
+/* 985 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(421)
-	__vue_script__ = __webpack_require__(423)
+	__webpack_require__(986)
+	__vue_script__ = __webpack_require__(988)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsRadio/src/BtnRadio.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(424)
+	__vue_template__ = __webpack_require__(989)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -10608,16 +10346,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 421 */
+/* 986 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(422);
+	var content = __webpack_require__(987);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10634,10 +10372,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 422 */
+/* 987 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -10648,7 +10386,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 423 */
+/* 988 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10657,13 +10395,13 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _abstract = __webpack_require__(413);
+	var _abstract = __webpack_require__(978);
 
 	var _abstract2 = _interopRequireDefault(_abstract);
 
-	var _KsButton = __webpack_require__(361);
+	var _KsButton = __webpack_require__(538);
 
-	var _baseRadioProps = __webpack_require__(417);
+	var _baseRadioProps = __webpack_require__(982);
 
 	var _baseRadioProps2 = _interopRequireDefault(_baseRadioProps);
 
@@ -10725,23 +10463,23 @@ webpackJsonp([0],[
 	// <script>
 
 /***/ },
-/* 424 */
+/* 989 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :class=\"'KsBtnRadio KsBtnRadio--UID-' + _uid\">\n  <abstract :name=\"name\" :value=\"value\" :disabled=\"disabled\"\n            :model.sync=\"model\" :def-checked=\"defChecked\"\n  >\n    <ks-button-abstract slot=\"label\" :truth=\"false\"\n                        :width=\"width\" :height=\"height\"\n                        :disabled=\"disabled\"\n                        :color-hover=\"color\"\n                        :color-normal=\"color\"\n                        :color-active=\"color\"\n                        :mode=\"model === value ? 'normal' : 'ghost'\">\n      <slot></slot>\n    </ks-button-abstract>\n  </abstract>\n</div>\n";
 
 /***/ },
-/* 425 */
+/* 990 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(426)
-	__vue_script__ = __webpack_require__(428)
+	__webpack_require__(991)
+	__vue_script__ = __webpack_require__(993)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsRadio/src/radioGroup.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(429)
+	__vue_template__ = __webpack_require__(994)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -10760,16 +10498,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 426 */
+/* 991 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(427);
+	var content = __webpack_require__(992);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10786,10 +10524,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 427 */
+/* 992 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -10800,7 +10538,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 428 */
+/* 993 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -10852,48 +10590,23 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 429 */
+/* 994 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsRadioGroup\">\n  <slot></slot>\n</div>\n";
 
 /***/ },
-/* 430 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _page = __webpack_require__(431);
-
-	var _page2 = _interopRequireDefault(_page);
-
-	var _pagegroup = __webpack_require__(437);
-
-	var _pagegroup2 = _interopRequireDefault(_pagegroup);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	  KsPage: _page2.default,
-	  KsPageGroup: _pagegroup2.default
-	};
-
-/***/ },
-/* 431 */
+/* 995 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(432)
-	__vue_script__ = __webpack_require__(434)
+	__webpack_require__(996)
+	__vue_script__ = __webpack_require__(998)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsPager/src/page.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(436)
+	__vue_template__ = __webpack_require__(1000)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -10912,16 +10625,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 432 */
+/* 996 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(433);
+	var content = __webpack_require__(997);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10938,10 +10651,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 433 */
+/* 997 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -10952,7 +10665,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 434 */
+/* 998 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10961,7 +10674,7 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _mixins = __webpack_require__(435);
+	var _mixins = __webpack_require__(999);
 
 	var _mixins2 = _interopRequireDefault(_mixins);
 
@@ -11121,7 +10834,7 @@ webpackJsonp([0],[
 	// <script type="text/javascript">
 
 /***/ },
-/* 435 */
+/* 999 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -11144,23 +10857,23 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 436 */
+/* 1000 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<ul v-show=\"total\" class=\"KsPage\" cid=\"KsPage\" @click=\"emitClick($event)\">\n    <li :class=\"{'disabled':current == 1}\">&lt;</li>\n    <li v-for=\"i in pages\"\n        track-by=\"$index\"\n        :class=\"{'active':current == i}\" v-text=\"i\"></li>\n    <li :class=\"{'disabled':current == pages[pages.length-1]}\">&gt;</li>\n</ul>\n";
 
 /***/ },
-/* 437 */
+/* 1001 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(438)
-	__vue_script__ = __webpack_require__(440)
+	__webpack_require__(1002)
+	__vue_script__ = __webpack_require__(1004)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsPager/src/pagegroup.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(441)
+	__vue_template__ = __webpack_require__(1005)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -11179,16 +10892,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 438 */
+/* 1002 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(439);
+	var content = __webpack_require__(1003);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -11205,10 +10918,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 439 */
+/* 1003 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -11219,7 +10932,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 440 */
+/* 1004 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11228,11 +10941,11 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _mixins = __webpack_require__(435);
+	var _mixins = __webpack_require__(999);
 
 	var _mixins2 = _interopRequireDefault(_mixins);
 
-	var _page = __webpack_require__(431);
+	var _page = __webpack_require__(995);
 
 	var _page2 = _interopRequireDefault(_page);
 
@@ -11306,68 +11019,23 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 441 */
+/* 1005 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsPageGroup\" cid=\"KsPageGroup\">\n    <div class=\"KsPageGroup-statistical\">共<span>{{total}}</span>条</div>\n    <div class=\"ks-col\">\n        每页\n        <select class=\"input\" v-on:change.stop v-model=\"size\">\n            <option \n                v-for=\"i in sizes\" \n                v-bind:value=\"i\">{{i}}</option>\n        </select>\n        条\n    </div>\n    <page \n        class=\"ks-col-auto\"\n        v-bind:current.sync=\"current\" \n        v-bind:length=\"length\"\n        v-bind:total=\"total\"\n        v-bind:size=\"size\"\n        v-on:change=\"currentChange\"></page>    \n</div>\n";
 
 /***/ },
-/* 442 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _dater = __webpack_require__(443);
-
-	var _dater2 = _interopRequireDefault(_dater);
-
-	var _daterPure = __webpack_require__(453);
-
-	var _daterPure2 = _interopRequireDefault(_daterPure);
-
-	var _datePicker = __webpack_require__(459);
-
-	var _datePicker2 = _interopRequireDefault(_datePicker);
-
-	var _daterRange = __webpack_require__(467);
-
-	var _daterRange2 = _interopRequireDefault(_daterRange);
-
-	var _dateRangePicker = __webpack_require__(471);
-
-	var _dateRangePicker2 = _interopRequireDefault(_dateRangePicker);
-
-	var _dateMonth = __webpack_require__(463);
-
-	var _dateMonth2 = _interopRequireDefault(_dateMonth);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	  KsDater: _dater2.default,
-	  KsDaterPure: _daterPure2.default,
-	  KsDatePicker: _datePicker2.default,
-	  KsDaterRange: _daterRange2.default,
-	  KsDateRangePicker: _dateRangePicker2.default,
-	  KsDateMonth: _dateMonth2.default
-	};
-
-/***/ },
-/* 443 */
+/* 1006 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(444)
-	__vue_script__ = __webpack_require__(446)
+	__webpack_require__(1007)
+	__vue_script__ = __webpack_require__(1009)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/dater.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(452)
+	__vue_template__ = __webpack_require__(1015)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -11386,16 +11054,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 444 */
+/* 1007 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(445);
+	var content = __webpack_require__(1008);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -11412,10 +11080,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 445 */
+/* 1008 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -11426,7 +11094,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 446 */
+/* 1009 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11435,17 +11103,17 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _index = __webpack_require__(447);
+	var _index = __webpack_require__(1010);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _multi = __webpack_require__(450);
+	var _multi = __webpack_require__(1013);
 
 	var _multi2 = _interopRequireDefault(_multi);
 
-	var _lang = __webpack_require__(448);
+	var _lang = __webpack_require__(1011);
 
-	var _apage = __webpack_require__(451);
+	var _apage = __webpack_require__(1014);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11668,7 +11336,7 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 447 */
+/* 1010 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11677,9 +11345,9 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _lang = __webpack_require__(448);
+	var _lang = __webpack_require__(1011);
 
-	var _props = __webpack_require__(449);
+	var _props = __webpack_require__(1012);
 
 	var _props2 = _interopRequireDefault(_props);
 
@@ -11723,12 +11391,12 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 448 */
+/* 1011 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _keys = __webpack_require__(229);
+	var _keys = __webpack_require__(100);
 
 	var _keys2 = _interopRequireDefault(_keys);
 
@@ -11938,7 +11606,7 @@ webpackJsonp([0],[
 	exports.format_conver = format_conver;
 
 /***/ },
-/* 449 */
+/* 1012 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11947,7 +11615,7 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _lang = __webpack_require__(448);
+	var _lang = __webpack_require__(1011);
 
 	exports.default = {
 	    props: {
@@ -11966,7 +11634,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 450 */
+/* 1013 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11975,9 +11643,9 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _lang = __webpack_require__(448);
+	var _lang = __webpack_require__(1011);
 
-	var _props = __webpack_require__(449);
+	var _props = __webpack_require__(1012);
 
 	var _props2 = _interopRequireDefault(_props);
 
@@ -12028,12 +11696,12 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 451 */
+/* 1014 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _lang = __webpack_require__(448);
+	var _lang = __webpack_require__(1011);
 
 	/**
 	 * [one_page_date 获取某页日期数据 上个月(部分) + 当前月(满月) + 下个月(部分)]
@@ -12172,22 +11840,22 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 452 */
+/* 1015 */
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"KsDater\" cid=\"KsDater\">\n  <div class=\"KsDater-date\">\n    <div class=\"KsDater-date-head\">\n      <div class=\"retreat\" v-on:click.stop=\"click_month(-1)\">&lt;</div>\n      <div class=\"year\">{{now.getFullYear()}}年</div>\n      <div class=\"interstice\"></div>\n      <div class=\"month\">{{now.getMonth()+1}}月</div>\n      <div class=\"next\" v-on:click.stop=\"click_month(1)\">&gt;</div>\n    </div>\n    <div class=\"KsDater-date-week\">\n      <span v-for=\"day in days\" :class=\"{'week':day=='六'||day=='日'}\">{{day}}</span>\n    </div>\n    <div v-on:click.stop=\"pick_date($event)\">\n      <div class=\"KsDater-date-days\"\n           v-for=\"week in 6\">\n              <span\n                v-for=\"day in  7\"\n                v-bind:id=\"'dater'+_uid\n                          +'_'+(+week * 7 + day)\n                          +'_'+(dates[week * 7 + day] && dates[week * 7 + day].status)\"\n                v-bind:class=\"{\n                      'pass':dates[week * 7 + day] && dates[week * 7 + day].status=='disabled',\n                      'active':dates[week * 7 + day] && dates[week * 7 + day].status=='active'}\">\n                      {{dates[week * 7 + day] && +dates[week * 7 + day].datetext}}</span>\n      </div>\n    </div>\n    <div class=\"KsDater-date-btn\" v-if=\"type=='datetime'\">\n      <select class=\"input\" v-model=\"times[0]\" v-on:change.stop=\"pick_time\">\n        <option v-bind:value=\"i|fr_limit\" v-for=\"i in 24\">{{i|fr_limit}}</option>\n      </select>\n      <select class=\"input mlr-10\" v-model=\"times[1]\" v-on:change.stop=\"pick_time\">\n        <option v-bind:value=\"i|fr_limit\" v-for=\"i in 60\">{{i|fr_limit}}</option>\n      </select>\n      <select class=\"input\" v-model=\"times[2]\" v-on:change.stop=\"pick_time\">\n        <option v-bind:value=\"i|fr_limit\" v-for=\"i in 60\">{{i|fr_limit}}</option>\n      </select>\n    </div>\n    <div class=\"KsDater-date-btn\" v-if=\"type!='datemulti'\">\n      <span class=\"today\" v-on:click.stop=\"today()\">今天</span>\n      <span class=\"clear\" v-on:click.stop=\"clear()\">清除</span>\n    </div>\n  </div>\n</div>\n\n";
 
 /***/ },
-/* 453 */
+/* 1016 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(454)
+	__vue_script__ = __webpack_require__(1017)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/dater-pure.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(458)
+	__vue_template__ = __webpack_require__(1021)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -12206,7 +11874,7 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 454 */
+/* 1017 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12215,13 +11883,13 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _sub = __webpack_require__(455);
+	var _sub = __webpack_require__(1018);
 
 	var _sub2 = _interopRequireDefault(_sub);
 
-	var _lang = __webpack_require__(448);
+	var _lang = __webpack_require__(1011);
 
-	var _apage = __webpack_require__(451);
+	var _apage = __webpack_require__(1014);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12379,16 +12047,16 @@ webpackJsonp([0],[
 	// <script>
 
 /***/ },
-/* 455 */
+/* 1018 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(456)
+	__vue_script__ = __webpack_require__(1019)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/sub.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(457)
+	__vue_template__ = __webpack_require__(1020)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -12407,7 +12075,7 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 456 */
+/* 1019 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -12451,29 +12119,29 @@ webpackJsonp([0],[
 	// </script>
 
 /***/ },
-/* 457 */
+/* 1020 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div v-on:click=\"click\">\n    {{val}}\n</div>\n";
 
 /***/ },
-/* 458 */
+/* 1021 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsDater\" cid=\"KsDater\"\n    v-on:click=\"pick($event)\">\n\n<div class=\"KsDater-date\" v-for=\"(key,date) in dates\">\n<div>\n    <div class=\"KsDater-date-days\"\n        v-for=\"week in 6\">\n        <span \n            v-for=\"day in  7\"\n            :id=\"'dater'+_uid+'_'+key+'_'+(+week * 7 + day)\"\n            :class=\"{\n                'pass':date[week * 7 + day] && date[week * 7 + day].status=='disabled',\n                'active':date[week * 7 + day] && date[week * 7 + day].status=='active'}\">\n                {{date[week * 7 + day] && +date[week * 7 + day].datetext}}</span>\n    </div>\n</div>\n</div>\n\n<!-- <div class=\"date-bd\" v-for=\"(key,data) in dates\">\n<div>\n    <div class=\"date-days\"\n        v-for=\"week in 6\">\n        <span \n            v-for=\"day in  7\"\n            :id=\"'dater'+_uid+'_'+key+'_'+(+week * 7 + day)\"\n            :class=\"{\n                'pass':data.date[week * 7 + day] && data.date[week * 7 + day].status=='disabled',\n                'active':data.date[week * 7 + day] && data.date[week * 7 + day].status=='active'}\">\n                {{data.date[week * 7 + day] && +data.date[week * 7 + day].datetext}}</span>\n    </div>\n</div>\n</div> -->\n\n<!-- <div class=\"_date\">\n<div>\n    <div class=\"_days\"\n        v-for=\"week in 6\">\n        <span \n            v-for=\"day in  7\"\n            :id=\"'dater'+_uid+'_'+(+week * 7 + day)\"\n            :class=\"{\n                'pass':dates[week * 7 + day] && dates[week * 7 + day].status=='disabled',\n                'active':dates[week * 7 + day] && dates[week * 7 + day].status=='active'}\">\n                {{dates[week * 7 + day] && +dates[week * 7 + day].datetext}}</span>\n    </div>\n</div>\n</div> -->\n{{val}}\n<sub :val=\"val\" v-on:change=\"val_change\"></sub>\n</div>\n";
 
 /***/ },
-/* 459 */
+/* 1022 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(460)
-	__vue_script__ = __webpack_require__(462)
+	__webpack_require__(1023)
+	__vue_script__ = __webpack_require__(1025)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/date-picker.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(466)
+	__vue_template__ = __webpack_require__(1029)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -12492,16 +12160,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 460 */
+/* 1023 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(461);
+	var content = __webpack_require__(1024);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -12518,9 +12186,9 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 461 */
-445,
-/* 462 */
+/* 1024 */
+1008,
+/* 1025 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12529,15 +12197,15 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _props = __webpack_require__(449);
+	var _props = __webpack_require__(1012);
 
 	var _props2 = _interopRequireDefault(_props);
 
-	var _dater = __webpack_require__(443);
+	var _dater = __webpack_require__(1006);
 
 	var _dater2 = _interopRequireDefault(_dater);
 
-	var _dateMonth = __webpack_require__(463);
+	var _dateMonth = __webpack_require__(1026);
 
 	var _dateMonth2 = _interopRequireDefault(_dateMonth);
 
@@ -12627,16 +12295,16 @@ webpackJsonp([0],[
 	// <script>
 
 /***/ },
-/* 463 */
+/* 1026 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(464)
+	__vue_script__ = __webpack_require__(1027)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/date-month.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(465)
+	__vue_template__ = __webpack_require__(1028)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -12655,7 +12323,7 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 464 */
+/* 1027 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12664,7 +12332,7 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _lang = __webpack_require__(448);
+	var _lang = __webpack_require__(1011);
 
 	var _months = (0, _lang.getMonths)(); // <template>
 	//     <div class="KsDateMonth" cid="KsDateMonth">
@@ -12828,28 +12496,28 @@ webpackJsonp([0],[
 	// </script>
 
 /***/ },
-/* 465 */
+/* 1028 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsDateMonth\" cid=\"KsDateMonth\">\n    <div class=\"KsDateMonth-date\">\n        <div class=\"KsDateMonth-date-head\">\n            <div class=\"retreat\" v-on:click=\"prev\">&lt;</div>\n            <div class=\"year\" v-text=\"year+'年'\"></div>\n            <div class=\"next\" v-on:click=\"next\">&gt;</div>\n        </div>\n        <div v-on:click=\"pick($event)\">\n            <div class=\"KsDateMonth-date-days\"\n                v-for=\"row in 3\">\n                <span v-bind:id=\"'month'+_uid\n                          +'_'+[4*row+index]\n                          +'_'+(months[4*row+index] \n                           && months[4*row+index].status)\" \n                    v-bind:class=\"{\n                    'pass':months[4*row+index] \n                           && months[4*row+index].status == 'disabled',\n                    'active':months[4*row+index] \n                           && months[4*row+index].status == 'active',\n                    }\" \n                    v-for=\"(index,item) in 4\">{{months[4*row+index].val}}</span>\n            </div>\n        </div>\n        <div class=\"KsDateMonth-date-btn\">\n            <span class=\"today\" v-on:click=\"curmonth\">本月</span>\n            <span class=\"clear\" v-on:click=\"clearmonth\">清除</span>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 466 */
+/* 1029 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsDatePicker\" cid=\"KsDatePicker\"\n     :class=\"{'readonly':readonly}\">\n  <div class=\"KsDatePicker-input\" v-on:mouseup=\"show=!show\">\n    <div class=\"ks-col-auto date-icon\"><i class=\"icon\"></i></div>\n    <input type=\"text\" class=\"ks-col\" placeholder=\"{{placeholder}}\" v-model=\"value\" readonly>\n  </div>\n  <ks-dater \n      v-bind:min=\"min\" \n      v-bind:max=\"max\"\n      v-if=\"type!='datemonth'\"\n      v-show=\"show\" \n      v-bind:value=\"value\" \n      v-bind:type=\"type\" \n      v-bind:readonly=\"readonly\" \n      v-on:change=\"change\"></ks-dater>\n  <ks-date-month \n      v-bind:min=\"min\" \n      v-bind:max=\"max\"\n      v-if=\"type=='datemonth'\"\n      v-show=\"show\" \n      v-bind:value=\"value\" \n      v-bind:type=\"type\" \n      v-bind:readonly=\"readonly\" \n      v-on:change=\"change\"></ks-date-month>\n\n</div>\n";
 
 /***/ },
-/* 467 */
+/* 1030 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(468)
+	__vue_script__ = __webpack_require__(1031)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/dater-range.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(470)
+	__vue_template__ = __webpack_require__(1033)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -12868,7 +12536,7 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 468 */
+/* 1031 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12877,15 +12545,15 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _index = __webpack_require__(447);
+	var _index = __webpack_require__(1010);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _lang = __webpack_require__(448);
+	var _lang = __webpack_require__(1011);
 
-	var _apage = __webpack_require__(451);
+	var _apage = __webpack_require__(1014);
 
-	var _range = __webpack_require__(469);
+	var _range = __webpack_require__(1032);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -13123,14 +12791,14 @@ webpackJsonp([0],[
 	// </script>
 
 /***/ },
-/* 469 */
+/* 1032 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _lang = __webpack_require__(448);
+	var _lang = __webpack_require__(1011);
 
-	var _apage = __webpack_require__(451);
+	var _apage = __webpack_require__(1014);
 
 	// 选择范围取值
 	function get_range_dates(range_dater) {
@@ -13246,22 +12914,22 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 470 */
+/* 1033 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsDaterMulti\" cid=\"KsDaterMulti\">\n    <div class=\"KsDaterMulti-date\">\n        <div class=\"KsDaterMulti-date-head\">\n            <div class=\"retreat\" v-on:click=\"click_month(-1)\">&lt;</div>\n            <div class=\"year\">{{now.getFullYear()}}年</div>\n            <div class=\"interstice\"></div>\n            <div class=\"month\">{{now.getMonth()+1}}月</div>\n            <div class=\"next\" v-on:click=\"click_month(1)\">&gt;</div>\n        </div>\n        <div class=\"KsDaterMulti-date-week\">\n            <span v-for=\"day in days\" :class=\"{'week':day=='六'||day=='日'}\">{{day}}</span>\n        </div>\n        <div v-on:mousedown=\"pick_date($event)\">\n            <div class=\"KsDaterMulti-date-days\" v-for=\"week in 6\">\n                <span \n                    v-for=\"day in  7\"\n                    :id=\"'dater'+_uid+'_'+(+week * 7 + day)+'_'+(dates[week * 7 + day] && dates[week * 7 + day].status)\"\n                    :class=\"{\n                        'pass':dates[week * 7 + day] && dates[week * 7 + day].status=='disabled',\n                        'scope-bg':dates[week * 7 + day] && dates[week * 7 + day].status=='scope-bg',\n                        'active':dates[week * 7 + day] && dates[week * 7 + day].status=='active'}\">\n                        {{dates[week * 7 + day] && +dates[week * 7 + day].datetext}}</span>\n            </div>\n        </div>\n        <div class=\"KsDaterMulti-date-btn\">\n            <span class=\"reset\" v-on:click=\"reset()\">重置</span>\n        </div>\n    </div>\n    <div class=\"KsDaterMulti-date\">\n        <div class=\"KsDaterMulti-date-head\">\n            <div class=\"retreat\" v-on:click=\"click_next_month(-1)\">&lt;</div>\n            <div class=\"year\">{{next_data.year}}年</div>\n            <div class=\"interstice\"></div>\n            <div class=\"month\">{{next_data.month+1}}月</div>\n            <div class=\"next\" v-on:click=\"click_next_month(1)\">&gt;</div>\n        </div>\n        <div class=\"KsDaterMulti-date-week\">\n            <span v-for=\"day in days\" :class=\"{'week':day=='六'||day=='日'}\">{{day}}</span>\n        </div>\n        <div v-on:mousedown=\"pick_date($event)\">\n            <div class=\"KsDaterMulti-date-days\"\n                v-for=\"week in 6\">\n                <span \n                    v-for=\"day in  7\"\n                    :id=\"'dater'+_uid+'_'+(42+week * 7 + day)+'_'+(next_dates[week * 7 + day] && next_dates[week * 7 + day].status)\"\n                    :class=\"{\n                        'pass':next_dates[week * 7 + day] && next_dates[week * 7 + day].status=='disabled',\n                        'scope-bg':next_dates[week * 7 + day] && next_dates[week * 7 + day].status=='scope-bg',\n                        'active':next_dates[week * 7 + day] && next_dates[week * 7 + day].status=='active'}\">\n                        {{next_dates[week * 7 + day] && +next_dates[week * 7 + day].datetext}}</span>\n            </div>\n        </div>\n        <div class=\"KsDaterMulti-date-btn\">\n            <span class=\"selects\">已选择{{range_daters_length}}天</span>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 471 */
+/* 1034 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(472)
+	__vue_script__ = __webpack_require__(1035)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDater/src/date-range-picker.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(473)
+	__vue_template__ = __webpack_require__(1036)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -13280,7 +12948,7 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 472 */
+/* 1035 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13289,11 +12957,11 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _props = __webpack_require__(449);
+	var _props = __webpack_require__(1012);
 
 	var _props2 = _interopRequireDefault(_props);
 
-	var _daterRange = __webpack_require__(467);
+	var _daterRange = __webpack_require__(1030);
 
 	var _daterRange2 = _interopRequireDefault(_daterRange);
 
@@ -13377,56 +13045,23 @@ webpackJsonp([0],[
 	// </script>
 
 /***/ },
-/* 473 */
+/* 1036 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsDaterMultiPicker\" :class=\"{'readonly':readonly}\" cid=\"KsDaterMultiPicker\">\n    <div class=\"KsDaterMultiPicker-input\" v-on:mouseup=\"show=!show\">\n        <div class=\"ks-col-auto date-icon\"><i class=\"icon\">&#xe615;</i></div>\n        <div class=\"ks-col\">\n            <div class=\"ks-row-auto\">\n                <div class=\"ks-col\">\n                    <input type=\"text\" readonly placeholder=\"{{placeholder[0]}}\" :value=\"titles[0]\">\n                </div>\n                <i class=\"icon ks-col-auto scope-icon\">&#xe677;</i>\n                <div class=\"ks-col\">\n                    <input type=\"text\" readonly placeholder=\"{{placeholder[1]}}\" :value=\"titles[1]\">\n                </div>\n            </div>\n        </div>\n    </div>\n    <ks-dater-range v-show=\"show\" v-on:change=\"change\" :range_dater=\"range\"></ks-dater-range> \n</div>\n";
 
 /***/ },
-/* 474 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _Store = __webpack_require__(475);
-
-	var _Store2 = _interopRequireDefault(_Store);
-
-	var _StoreClick = __webpack_require__(480);
-
-	var _StoreClick2 = _interopRequireDefault(_StoreClick);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * @description: 封装了一些列的的复选框组件。
-	 * @summary:
-	 *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
-	 * @author: pkeros.
-	 * @date: 2016/10/11.
-	 */
-
-	exports.default = {
-	  KsStore: _Store2.default,
-	  KsStoreClick: _StoreClick2.default
-	};
-
-/***/ },
-/* 475 */
+/* 1037 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(476)
-	__vue_script__ = __webpack_require__(478)
+	__webpack_require__(1038)
+	__vue_script__ = __webpack_require__(1040)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDropChoose/src/Store.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(479)
+	__vue_template__ = __webpack_require__(1041)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -13445,16 +13080,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 476 */
+/* 1038 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(477);
+	var content = __webpack_require__(1039);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -13471,10 +13106,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 477 */
+/* 1039 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -13485,7 +13120,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 478 */
+/* 1040 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13494,7 +13129,7 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _typeof2 = __webpack_require__(278);
+	var _typeof2 = __webpack_require__(70);
 
 	var _typeof3 = _interopRequireDefault(_typeof2);
 
@@ -13665,23 +13300,23 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 479 */
+/* 1041 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsStore\" \n    :style=\"max_height | filter_style min_width\">\n    <div class=\"perstore \">\n        <div v-if=\"is_havechecked\" class=\"checkboxall\">\n                 <input type=\"checkbox\" \n                 @change = \"checkAll()\"\n                 v-model = \"allchecked\">\n                 <span>全选</span>\n        </div>\n        <div class=\"checkboxwhole\">\n            <div class=\"whole\" v-show=\"!list.length && list.xhr\">\n                您还未配置门店~\n            </div>\n      \n            <div class=\"checkbox1 whole\" v-for=\"t in list\">\n              <label>\n                <!-- <input type=\"checkbox\" name=\"\" :value=\"3\" v-model=\"[3,4]\"> -->\n                <!-- {{checkeds}} -->\n                <input type=\"checkbox\" :value=\"t.id\" v-model=\"checkeds\">\n                <span class=\"wholetext\" v-text=\"t.name\"></span>\n                <span class=\"wholeaddress\" v-text=\"t.addr\"></span>\n              </label>\n            </div>\n\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 480 */
+/* 1042 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(481)
-	__vue_script__ = __webpack_require__(483)
+	__webpack_require__(1043)
+	__vue_script__ = __webpack_require__(1045)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDropChoose/src/StoreClick.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(484)
+	__vue_template__ = __webpack_require__(1046)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -13700,16 +13335,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 481 */
+/* 1043 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(482);
+	var content = __webpack_require__(1044);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -13726,9 +13361,9 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 482 */
-477,
-/* 483 */
+/* 1044 */
+1039,
+/* 1045 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13737,7 +13372,7 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _Store = __webpack_require__(475);
+	var _Store = __webpack_require__(1037);
 
 	var _Store2 = _interopRequireDefault(_Store);
 
@@ -13841,47 +13476,23 @@ webpackJsonp([0],[
 	// <script type="text/javascript">
 
 /***/ },
-/* 484 */
+/* 1046 */
 /***/ function(module, exports) {
 
 	module.exports = "  \n<div class=\"KsStoreClick\"  v-el:name>            \n    <div class=\"radiofir \">\n            <i :class=\"store_list_show ? 'icondown' : 'iconup'\"></i>\n            <input type=\"text\" class=\"KsStoreClick-input full\" \n                @click=\"clickinput()\" \n                readonly=\"readonly\"\n                value=\"{{store_part | filter_name}}\"\n                />\n                <store class=\"store_pos\"\n                    v-show=\"store_list_show\"\n                    :store_part.sync = \"store_part\"\n                    :list.sync = \"list\"\n                    :is_havechecked = \"is_havechecked\"\n                    :max_height = \"max_height\"\n                    :min_width = \"min_width\"></store>\n    </div>\n</div>\n";
 
 /***/ },
-/* 485 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _Search = __webpack_require__(486);
-
-	var _Search2 = _interopRequireDefault(_Search);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	  KsSearch: _Search2.default
-	}; /**
-	    * @description search 组件
-	    * @summary
-	    *  模糊搜索组件
-	    */
-
-/***/ },
-/* 486 */
+/* 1047 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(487)
-	__vue_script__ = __webpack_require__(489)
+	__webpack_require__(1048)
+	__vue_script__ = __webpack_require__(1050)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsSearch/src/Search.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(490)
+	__vue_template__ = __webpack_require__(1051)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -13900,16 +13511,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 487 */
+/* 1048 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(488);
+	var content = __webpack_require__(1049);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -13926,10 +13537,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 488 */
+/* 1049 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -13940,7 +13551,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 489 */
+/* 1050 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -14042,56 +13653,23 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 490 */
+/* 1051 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsSearch ks-col\">\n    <input type=\"text\" class=\"input\"\n            v-model=\"keywords\"\n            :disabled=\"disabled\"\n            :placeholder=\"placeholder\"\n            :debounce=\"debounce\"\n            >\n    <a class=\"icon SearchIcon\" @click=\"getList($event)\" v-if=\"!disabled\">&#xe617;</a>\n    <div class=\"SearchResult\" v-show=\"resultShow\">\n        <ul>\n            <template v-if=\"fuzzydata.length >= 1\">\n                <template v-if=\"datalabel == 'name'\">\n                    <li v-for=\"item in fuzzydata\" @click=\"selectItem($event)\" :data-backCode=\"item.backCode\"\n                        :data-channelCode=\"item.channelCode\" :data-key=\"item.key\" :data-id=\"item.id\">{{item.name}}\n                    </li>\n                </template>\n                <template v-if=\"datalabel == 'label'\">\n                    <li v-for=\"item in fuzzydata\" @click=\"selectItem($event)\" :data-backCode=\"item.backCode\"\n                        :data-channelCode=\"item.channelCode\" :data-key=\"item.key\" :data-id=\"item.id\">{{item.label}}\n                    </li>\n                </template>\n                <template v-if=\"datalabel == 'channelName'\">\n                    <li v-for=\"item in fuzzydata\" @click=\"selectItem($event)\" :data-backCode=\"item.backCode\"\n                        :data-channelCode=\"item.channelCode\" :data-key=\"item.key\" :data-id=\"item.id\">{{item.channelName}}\n                    </li>\n                </template>\n            </template>\n            <template v-else>\n                <li @click=\"selectItem($event)\">当前无搜索结果</li>\n            </template>\n        </ul>\n    </div>\n</div>\n";
 
 /***/ },
-/* 491 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _KsDialogChoose = __webpack_require__(492);
-
-	var _KsDialogChoose2 = _interopRequireDefault(_KsDialogChoose);
-
-	var _ListStore = __webpack_require__(496);
-
-	var _ListStore2 = _interopRequireDefault(_ListStore);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * @description: 封装了一些列的的复选框组件。
-	 * @summary:
-	 *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
-	 * @author: pkeros.
-	 * @date: 2016/10/11.
-	 */
-
-	exports.default = {
-	  KsDialogChoose: _KsDialogChoose2.default,
-	  KsList: _ListStore2.default
-	};
-
-/***/ },
-/* 492 */
+/* 1052 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(493)
-	__vue_script__ = __webpack_require__(495)
+	__webpack_require__(1053)
+	__vue_script__ = __webpack_require__(1055)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDialogChoose/src/KsDialogChoose.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(507)
+	__vue_template__ = __webpack_require__(1066)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -14110,16 +13688,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 493 */
+/* 1053 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(494);
+	var content = __webpack_require__(1054);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -14136,10 +13714,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 494 */
+/* 1054 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -14150,7 +13728,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 495 */
+/* 1055 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14159,19 +13737,19 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _stringify = __webpack_require__(160);
+	var _stringify = __webpack_require__(65);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
-	var _ListStore = __webpack_require__(496);
+	var _ListStore = __webpack_require__(1056);
 
 	var _ListStore2 = _interopRequireDefault(_ListStore);
 
-	var _KsButton = __webpack_require__(361);
+	var _KsButton = __webpack_require__(538);
 
 	var _KsButton2 = _interopRequireDefault(_KsButton);
 
-	var _KsDialogProgram = __webpack_require__(501);
+	var _KsDialogProgram = __webpack_require__(670);
 
 	var _KsDialogProgram2 = _interopRequireDefault(_KsDialogProgram);
 
@@ -14408,17 +13986,17 @@ webpackJsonp([0],[
 	// <script type="text/javascript">
 
 /***/ },
-/* 496 */
+/* 1056 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(497)
-	__vue_script__ = __webpack_require__(499)
+	__webpack_require__(1057)
+	__vue_script__ = __webpack_require__(1059)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDialogChoose/src/ListStore.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(500)
+	__vue_template__ = __webpack_require__(1060)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -14437,16 +14015,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 497 */
+/* 1057 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(498);
+	var content = __webpack_require__(1058);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -14463,9 +14041,9 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 498 */
-494,
-/* 499 */
+/* 1058 */
+1054,
+/* 1059 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -14546,47 +14124,23 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 500 */
+/* 1060 */
 /***/ function(module, exports) {
 
 	module.exports = " \n<div class=\"KsList\">\n\t<ul>\n\t    <li v-for = \"i in list\" \n\t        :class=\"i.ischecked && 'check'\"\n\t        @click=\"choosestore($index)\">\n\t        <span>{{i[nameMate]}}</span>\n\t        <i></i>\n\t    </li>\n\t</ul>\n</div> \n";
 
 /***/ },
-/* 501 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _Dialog = __webpack_require__(502);
-
-	var _Dialog2 = _interopRequireDefault(_Dialog);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _Dialog2.default; /**
-	                                     * @description: 封装了一些列的的复选框组件。
-	                                     * @summary:
-	                                     *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
-	                                     * @author: pkeros.
-	                                     * @date: 2016/10/11.
-	                                     */
-
-/***/ },
-/* 502 */
+/* 1061 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(503)
-	__vue_script__ = __webpack_require__(505)
+	__webpack_require__(1062)
+	__vue_script__ = __webpack_require__(1064)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsDialogProgram/src/Dialog.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(506)
+	__vue_template__ = __webpack_require__(1065)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -14605,16 +14159,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 503 */
+/* 1062 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(504);
+	var content = __webpack_require__(1063);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -14631,10 +14185,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 504 */
+/* 1063 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -14645,7 +14199,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 505 */
+/* 1064 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -14707,62 +14261,29 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 506 */
+/* 1065 */
 /***/ function(module, exports) {
 
 	module.exports = "\n    <div  v-show=\"show\">\n    <div class=\"dialog\" :style=\"{width:width+'px'}\">\n        <div class=\"dialog-hd dialog-primary-title\" v-show=\"!is_storetype\">\n            <h2 v-text=\"title\"></h2>\n            <a href=\"javascript:;\" class=\"icon-clear\" @click=\"_close()\"><i class=\"icon\">&#xe611;</i></a>\n        </div>\n\n\n        <div class=\"dialog-bd\"  :class=\"{'dialog-bd':!is_storetype}\">\n            <slot></slot>\n        </div>\n        \n    </div>\n    <div class=\"dialog-mask\"></div>\n</div>\n";
 
 /***/ },
-/* 507 */
+/* 1066 */
 /***/ function(module, exports) {
 
 	module.exports = "  \n<div class=\"KsDialogChoose\">            \n    <div class=\"radiofir \">\n        <input type=\"text\" class=\"KsDialogChoose-input full\" \n            @click=\"clickinput()\" \n            readonly=\"readonly\"\n            v-model=\"showtxt\"\n            />\n    </div>\n    <ks-dialog-program  \n        :title=\"'请选择交易门店'\" \n        :show=\"is_show\" \n        :cb-close=\"close_dialog\"\n        :width = \"width\" >\n        <div class=\"trade_store\">\n            <list-store\n                :list = \"list\"\n                :sid.sync = \"sid\"\n                :type-mate = \"typeMate\"\n                :name-mate = \"nameMate\">\n                <!-- @change = getsid -->\n            </list-store>\n            <div class=\"txtr btngroup\">\n                <span class=\"errortxt\" v-show = \"errorshow\">{{errorInfo}}</span>\n                <span class=\"reset\" @click=\"reset()\">重选</span>\n                <span class=\"checkall\" @click=\"checkall()\">全选</span>\n                <ks-button :ghost=\"true\" type=\"other\" style=\"margin-right: 10px\"\n                    @click=\"close_dialog\">取消</ks-button>\n                <ks-button :type=\"'primary'\"\n                    @click=\"save()\">确认</ks-button>\n            </div>\n        </div>\n    </ks-dialog-program>\n</div>\n";
 
 /***/ },
-/* 508 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _Item = __webpack_require__(509);
-
-	var _Item2 = _interopRequireDefault(_Item);
-
-	var _ItemFloor = __webpack_require__(514);
-
-	var _ItemFloor2 = _interopRequireDefault(_ItemFloor);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * @description: 封装了一些列的的复选框组件。
-	 * @summary:
-	 *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
-	 * @author: pkeros.
-	 * @date: 2016/10/11.
-	 */
-
-	exports.default = {
-	  KsItem: _Item2.default,
-	  KsItemFloor: _ItemFloor2.default
-	};
-
-/***/ },
-/* 509 */
+/* 1067 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(510)
-	__vue_script__ = __webpack_require__(512)
+	__webpack_require__(1068)
+	__vue_script__ = __webpack_require__(1070)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsFloorSelect/src/Item.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(513)
+	__vue_template__ = __webpack_require__(1071)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -14781,16 +14302,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 510 */
+/* 1068 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(511);
+	var content = __webpack_require__(1069);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -14807,10 +14328,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 511 */
+/* 1069 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -14821,7 +14342,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 512 */
+/* 1070 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -14974,23 +14495,23 @@ webpackJsonp([0],[
 	//
 
 /***/ },
-/* 513 */
+/* 1071 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"ks-col  KsItem\"  \n    v-el:floor\n    @click=\"clickinput()\" >\n    <input type=\"text\" class=\"KsItem-input full\" \n        readonly=\"readonly\"\n        v-model=\"floor_value\" />\n    <i :class=\"floor_show ? 'icondown' : 'iconup'\"></i>\n    <ul v-show = \"floor_show\">\n        <li \n            v-for=\"item in floorlist\"\n            :class=\"{\n                'check':ischeck == $index ,\n                'disabled': item.isdisabled ? true :false\n            }\"\n            @click=\"choosefloor(item)\">\n            <span>{{item.name }}</span>\n            <i></i>\n        </li>\n    </ul>\n</div>\n";
 
 /***/ },
-/* 514 */
+/* 1072 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(515)
-	__vue_script__ = __webpack_require__(517)
+	__webpack_require__(1073)
+	__vue_script__ = __webpack_require__(1075)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsFloorSelect/src/ItemFloor.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(518)
+	__vue_template__ = __webpack_require__(1076)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -15009,16 +14530,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 515 */
+/* 1073 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(516);
+	var content = __webpack_require__(1074);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -15035,9 +14556,9 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 516 */
-511,
-/* 517 */
+/* 1074 */
+1069,
+/* 1075 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15046,7 +14567,7 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _Item = __webpack_require__(509);
+	var _Item = __webpack_require__(1067);
 
 	var _Item2 = _interopRequireDefault(_Item);
 
@@ -15118,47 +14639,23 @@ webpackJsonp([0],[
 	// <script type="text/javascript">
 
 /***/ },
-/* 518 */
+/* 1076 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsItemFloor ks-row\">\n    <item\n        :floor_value.sync = \"floor_begin\"\n        :limit_before.sync = \"limit_before\"></item>\n    <div class=\"ks-col turnright\">\n        <span class=\"iconright\"></span>\n        <span class=\"iconarrow\"></span>\n    </div>\n    \n    <item\n        :floor_value.sync = \"floor_end\"\n        :limit_after.sync = \"limit_after\"\n        :isdisabled.sync = \"isdisabled\"></item>\n</div>\n";
 
 /***/ },
-/* 519 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _AddTableItem = __webpack_require__(520);
-
-	var _AddTableItem2 = _interopRequireDefault(_AddTableItem);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _AddTableItem2.default; /**
-	                                           * @description: 封装了一些列的的复选框组件。
-	                                           * @summary:
-	                                           *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
-	                                           * @author: pkeros.
-	                                           * @date: 2016/10/11.
-	                                           */
-
-/***/ },
-/* 520 */
+/* 1077 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(521)
-	__vue_script__ = __webpack_require__(523)
+	__webpack_require__(1078)
+	__vue_script__ = __webpack_require__(1080)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsAddTable/src/AddTableItem.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(524)
+	__vue_template__ = __webpack_require__(1081)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -15177,16 +14674,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 521 */
+/* 1078 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(522);
+	var content = __webpack_require__(1079);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -15203,10 +14700,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 522 */
+/* 1079 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -15217,7 +14714,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 523 */
+/* 1080 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15226,15 +14723,15 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _stringify = __webpack_require__(160);
+	var _stringify = __webpack_require__(65);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
-	var _KsButton = __webpack_require__(361);
+	var _KsButton = __webpack_require__(538);
 
 	var _KsButton2 = _interopRequireDefault(_KsButton);
 
-	var _KsDialogProgram = __webpack_require__(501);
+	var _KsDialogProgram = __webpack_require__(670);
 
 	var _KsDialogProgram2 = _interopRequireDefault(_KsDialogProgram);
 
@@ -15490,55 +14987,23 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 524 */
+/* 1081 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"AddTableItem\">\n  <ks-dialog-program\n    :show=\"is_show\"\n    :cb-close=\"close_dialog\"\n    :width=\"width\"\n    :is_storetype = \"is_storetype\">\n    <div class=\"dialog-main\" id = \"dialog\">\n      <div class=\"btn-group\">\n        <ul>\n          <li v-for=\"i in list\"\n              @click=\"clicktablehead($index)\"\n              :class=\"(showindex == $index) && 'check'\">\n            <span>{{i.title}}</span>\n          </li>\n          <li class=\"btn-add\"\n              @click=\"addtablename()\"\n              v-show = \"addicon && list.length < 11\"></li>\n        </ul>\n      </div>\n      <div\n        v-for = \"listitem in list\"\n        v-show = \"showindex == $index\">\n        <div class=\"top\" >\n          <div class=\"btn-input\">\n            <input type=\"text\" class=\"AddTableItem-input\"\n                   v-model = \"listitem.title\"\n                   @click = \"modifyname($event,$index)\"\n                   @keyup.enter=\"savetablename($event,$index)\">\n            <span\n              @click=\"deletetable($index)\"\n              v-show=\"$index != 0\">删除当前分组</span>\n          </div>\n          <div class=\"table-default\">\n            <ul>\n              <li\n                v-for = \"n in listitem.defaultlist\"\n                :class = \"n.ischeck && 'alreadychoose'\"\n                @click=\"removedefault(n,$index)\">\n                <span>{{n.name}}</span>\n              </li>\n            </ul>\n          </div>\n        </div>\n        <div class=\"middle\" >\n          <div class=\"ks-row mb-20\" v-for=\"first in listitem.addlist\">\n            <div class=\"ks-col title\">{{first.title}}</div>\n            <ul class=\"ks-col\">\n              <li\n                v-for=\"item in first.list_data\"\n                :class=\"(item.isdisabled) && 'disabled'\"\n                @click=\"adddefault(item,$index,first)\">\n                <span>{{item.name}}</span>\n              </li>\n            </ul>\n          </div>\n        </div>\n        <div class=\"bottom\" >\n          <span class=\"tip\">点击你需要的表格项添加或移除，也可以拖拽进行排序</span>\n          <div class=\"txtr btngroup\">\n            <span class=\"reset\" @click=\"reset($index)\">重选</span>\n            <span class=\"checkall\" @click=\"checkall($index)\">全选</span>\n            <ks-button :ghost=\"true\" type=\"other\" style=\"margin-right: 10px\"\n                       @click=\"close_dialog\">取消</ks-button>\n            <ks-button :type=\"'primary'\"\n                       @click=\"savetable()\">确认</ks-button>\n          </div>\n        </div>\n      </div>\n    </div>\n  </ks-dialog-program>\n</div>\n";
 
 /***/ },
-/* 525 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.KsImgs = exports.KsImage = undefined;
-
-	var _KsImage = __webpack_require__(526);
-
-	var _KsImage2 = _interopRequireDefault(_KsImage);
-
-	var _KsImgs = __webpack_require__(531);
-
-	var _KsImgs2 = _interopRequireDefault(_KsImgs);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * @description: 封装了一些列的的复选框组件。
-	 * @summary:
-	 *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
-	 * @author: pkeros.
-	 * @date: 2016/10/11.
-	 */
-
-	exports.KsImage = _KsImage2.default;
-	exports.KsImgs = _KsImgs2.default;
-
-/***/ },
-/* 526 */
+/* 1082 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(527)
-	__vue_script__ = __webpack_require__(529)
+	__webpack_require__(1083)
+	__vue_script__ = __webpack_require__(1085)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsImage/src/KsImage.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(530)
+	__vue_template__ = __webpack_require__(1086)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -15557,16 +15022,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 527 */
+/* 1083 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(528);
+	var content = __webpack_require__(1084);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -15583,10 +15048,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 528 */
+/* 1084 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -15597,7 +15062,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 529 */
+/* 1085 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -15639,23 +15104,23 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 530 */
+/* 1086 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"ks-image-box\" v-show=\"show\">\n    <div class=\"image-content\">\n        <img :src=\"url\">\n        <i class=\"icon\" @click=\"close\">&#xe60d;</i>\n    </div>\n</div>\n";
 
 /***/ },
-/* 531 */
+/* 1087 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(532)
-	__vue_script__ = __webpack_require__(534)
+	__webpack_require__(1088)
+	__vue_script__ = __webpack_require__(1090)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsImage/src/KsImgs.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(535)
+	__vue_template__ = __webpack_require__(1091)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -15674,16 +15139,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 532 */
+/* 1088 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(533);
+	var content = __webpack_require__(1089);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -15700,10 +15165,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 533 */
+/* 1089 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -15714,7 +15179,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 534 */
+/* 1090 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -15834,13 +15299,13 @@ webpackJsonp([0],[
 	// </style>
 
 /***/ },
-/* 535 */
+/* 1091 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"img_box \" v-show=\"show\" _v-d19a38f4=\"\">\n  <i class=\"icon ic  opc\" @click=\"close\" _v-d19a38f4=\"\"></i>\n  <div class=\"box\" :style=\"{transform:'rotate('+(90*rot)+'deg)'+' scale('+(1+sca)+')'}\" :class=\"{tran:!none}\" _v-d19a38f4=\"\">\n    <img v-for=\"i in src\" :src=\"i\" track-by=\"$index\" v-show=\"index==$index\" :transition=\"sta\" _v-d19a38f4=\"\">\n  </div>                  \n  <div class=\"but\" v-show=\"src.length>1\" _v-d19a38f4=\"\">\n    <i class=\"fa fa-chevron-left  opc l\" v-show=\"index>0\" @click=\"move(0)\" _v-d19a38f4=\"\"></i>\n    <i class=\"fa fa-chevron-right  opc r\" @click=\"move(1)\" v-show=\"index<src.length-1\" _v-d19a38f4=\"\"></i>\n  </div>\n      <ul _v-d19a38f4=\"\">  \n        <li class=\"opc fa fa-repeat fa-2x\" @click=\"rotate\" _v-d19a38f4=\"\">\n          <span _v-d19a38f4=\"\">旋转</span>\n        </li>\n        <li class=\"opc  fa fa-search fa-2x\" @click=\"scale\" _v-d19a38f4=\"\">\n          <span _v-d19a38f4=\"\">放大</span>\n        </li>\n        <li class=\"opc fa fa-search-minus fa-2x\" @click=\"sacles\" _v-d19a38f4=\"\">\n          <span _v-d19a38f4=\"\">缩小</span>\n        </li>\n        <li class=\"opc fa fa-download fa-2x\" v-if=\"load\" _v-d19a38f4=\"\">\n            <a :href=\"src[index]\" download=\"\" _v-d19a38f4=\"\"><span _v-d19a38f4=\"\">下载</span></a>\n        </li>\n      </ul>\n</div>\n";
 
 /***/ },
-/* 536 */
+/* 1092 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15850,11 +15315,11 @@ webpackJsonp([0],[
 	});
 	exports.KsTips = exports.KsAbstract = undefined;
 
-	var _abstract = __webpack_require__(537);
+	var _abstract = __webpack_require__(1093);
 
 	var _abstract2 = _interopRequireDefault(_abstract);
 
-	var _tips = __webpack_require__(540);
+	var _tips = __webpack_require__(1096);
 
 	var _tips2 = _interopRequireDefault(_tips);
 
@@ -15870,16 +15335,16 @@ webpackJsonp([0],[
 	exports.KsTips = _tips2.default;
 
 /***/ },
-/* 537 */
+/* 1093 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(538)
+	__vue_script__ = __webpack_require__(1094)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsTip/src/abstract.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(539)
+	__vue_template__ = __webpack_require__(1095)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -15898,7 +15363,7 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 538 */
+/* 1094 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15907,7 +15372,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _Popper = __webpack_require__(266);
+	var _Popper = __webpack_require__(413);
 
 	var _Popper2 = _interopRequireDefault(_Popper);
 
@@ -15962,23 +15427,23 @@ webpackJsonp([0],[
 	// <script>
 
 /***/ },
-/* 539 */
+/* 1095 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div v-el:reference style=\"display: inline-block\">\n  <!-- 内容 -->\n  <slot></slot>\n  <div :class=\"className\" v-el:popper v-show=\"!disabled && showPopper\">\n        <strong v-text=\"content\"></strong>\n        <slot name=\"content\"></slot>\n        <div class=\"txtr mb-20\">\n            <input type=\"button\" class=\"btn-dark-light mr-10\" value=\"取消\">\n            <input type=\"button\" class=\"btn-primary\" value=\"完成\">             \n        </div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 540 */
+/* 1096 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(541)
-	__vue_script__ = __webpack_require__(543)
+	__webpack_require__(1097)
+	__vue_script__ = __webpack_require__(1099)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsTip/src/tips.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(544)
+	__vue_template__ = __webpack_require__(1100)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -15997,12 +15462,12 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 541 */
-[556, 542],
-/* 542 */
+/* 1097 */
+[1106, 1098],
+/* 1098 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -16013,7 +15478,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 543 */
+/* 1099 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16022,7 +15487,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 
-	var _abstract = __webpack_require__(537);
+	var _abstract = __webpack_require__(1093);
 
 	var _abstract2 = _interopRequireDefault(_abstract);
 
@@ -16100,43 +15565,23 @@ webpackJsonp([0],[
 	// <script>
 
 /***/ },
-/* 544 */
+/* 1100 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div cid=\"KsToolTip\" style=\"display: inline-block;position:relative\">\n  <ks-popup-abstract :class-name=\"className\" :arrow-class-name=\"arrowClassName\"\n                         :disabled=\"disable\" :content=\"content\"\n                         :visible-arrow=\"visibleArrow\" :transition=\"transition\"\n                         :options=\"options\" :show-popper.sync=\"showPopper\"\n  >\n    <!-- 弹出依靠 -->\n    <div class=\"container\" @click=\"handleShowPopper\">\n      <slot></slot>\n    </div>\n    <!-- 弹出内容部分 -->\n    <slot name=\"content\" slot=\"content\"></slot>\n  </ks-popup-abstract>\n</div>\n";
 
 /***/ },
-/* 545 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _table = __webpack_require__(546);
-
-	var _table2 = _interopRequireDefault(_table);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	    KsTable: _table2.default
-	};
-
-/***/ },
-/* 546 */
+/* 1101 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(547)
-	__vue_script__ = __webpack_require__(549)
+	__webpack_require__(1102)
+	__vue_script__ = __webpack_require__(1104)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/ks/components/KsTable/src/table.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(550)
+	__vue_template__ = __webpack_require__(1105)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -16155,16 +15600,16 @@ webpackJsonp([0],[
 	})()}
 
 /***/ },
-/* 547 */
+/* 1102 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(548);
+	var content = __webpack_require__(1103);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -16181,10 +15626,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 548 */
+/* 1103 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(70)();
+	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
@@ -16195,7 +15640,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 549 */
+/* 1104 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16204,7 +15649,7 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _icon = __webpack_require__(356);
+	var _icon = __webpack_require__(926);
 
 	var _icon2 = _interopRequireDefault(_icon);
 
@@ -16478,202 +15923,13 @@ webpackJsonp([0],[
 	 */
 
 /***/ },
-/* 550 */
+/* 1105 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"KsTable-striped\">\n    <table v-on:change=\"change\">  \n        <thead v-el:thead>    \n            <tr> \n                <th v-for=\"item in columns\">\n                    <ks-icon v-bind:name=\"item.sortable | getIcon\" \n                        v-if=\"item.sortable\"\n                        size=\"1x\"\n                        v-on:click=\"sort($index)\"></ks-icon>\n                    <input type=\"checkbox\" name=\"ks-table-allchecked\"\n                        v-model=\"allchecked\"\n                        v-if=\"item.checked\"/>\n                    <div v-text=\"item.title\" \n                        style=\"display: inline-block;\" \n                         v-bind:style=\"{'width':item.width}\"></div>\n                </th>      \n            </tr>  \n        </thead>  \n        <tbody v-el:tbody>    \n            <tr v-for=\"(index, item) in data\">      \n                <td v-for=\"(key, val) in item\" >\n                    <input type=\"checkbox\" id=\"KsTable_{{_uid}}_{{index}}\"\n                           v-if=\"key=='checked'\"\n                           v-model=\"item.checked\"/>\n                    <div v-if=\"key!='checked'\" v-html=\"val | render key item index\">\n                    </div>        \n                </td>      \n            </tr>\n            \n        </tbody>\n    </table>\n</div>\n";
 
 /***/ },
-/* 551 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _keys = __webpack_require__(229);
-
-	var _keys2 = _interopRequireDefault(_keys);
-
-	exports.default = install;
-
-	var _KsLimitNumberFixed = __webpack_require__(552);
-
-	var _KsLimitNumberFixed2 = _interopRequireDefault(_KsLimitNumberFixed);
-
-	var _KsClickOutside = __webpack_require__(553);
-
-	var _KsClickOutside2 = _interopRequireDefault(_KsClickOutside);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var directives = {
-	    KsLimitNumberFixed: _KsLimitNumberFixed2.default,
-	    KsClickOutside: _KsClickOutside2.default
-	};
-	function install(Vue) {
-	    if (!Vue) {
-	        console.error('please install Vue');
-	    }
-	    (0, _keys2.default)(directives).forEach(function (k) {
-	        return Vue.directive(k, directives[k]);
-	    });
-	};
-
-/***/ },
-/* 552 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.default = {
-	    params: ['limit', 'min'],
-	    twoWay: true,
-	    bind: function bind() {
-	        var _this = this;
-
-	        var limit = this.params.limit || 100000;
-	        var min = this.params.min || 0;
-
-	        if (this.el.addEventListener) {
-	            this.el.addEventListener('input', function (e) {
-	                _this.handler.call(_this, limit, min);
-	            });
-	        } else if (this.el.attachEvent) {
-	            this.el.attachEvent('onpropertychange', function (event) {
-	                if (event.propertyName != 'value') return;
-	                _this.handler.call(_this, limit, min);
-	            });
-	        } else {
-	            this.el.addEventListener('keyup', function () {
-	                _this.handler.call(_this, limit, min);
-	            });
-	        }
-	    },
-	    handler: function handler(limit, min) {
-
-	        //debugger
-	        // var reg = new RegExp('^[0-9]+(\\.[0-9]{0,'+this.arg+'})?$')
-
-	        var temp_val = this.el.value,
-	            ints,
-	            fixed = '';
-
-	        if (temp_val.length == 1 && temp_val == "-" && min != 0) return;
-
-	        if (parseInt(temp_val) < -1) {
-	            temp_val = "-";
-	        } else {
-	            if (temp_val == '' || isNaN(parseInt(temp_val))) {
-	                temp_val = '';
-	            } else {
-	                ints = this.get_ints(temp_val, limit, min);
-	                fixed = this.get_fixed(temp_val, this.arg);
-	                temp_val = ints + fixed;
-	            }
-	        }
-
-	        this.el.value = temp_val;
-	        this.set(temp_val);
-	    },
-
-
-	    /**
-	     * 获取整数部分
-	     * INF 无穷大
-	     */
-	    get_ints: function get_ints(temp_val, limit, min) {
-	        var ints = parseInt(temp_val, 10);
-	        if (limit != 'INF' && ints > limit) {
-	            ints = ('' + ints).substr(0, ('' + ints).length - 1);
-	        }
-
-	        return ints;
-	    },
-
-
-	    // 获取小数部分
-	    get_fixed: function get_fixed(temp_val, limit, min) {
-	        //debugger
-	        var fixed = '';
-	        if (limit && ~temp_val.indexOf('.')) {
-	            if (temp_val.split('.')[1].length != 1) {
-	                temp_val.split('.')[1].split('').map(function (t) {
-	                    fixed += isNaN(parseInt(t)) ? '' : parseInt(t);
-	                });
-	            } else {
-	                fixed = temp_val.split('.')[1];
-	                fixed = isNaN(parseInt(fixed)) ? '' : parseInt(fixed);
-	            }
-
-	            fixed = '.' + ('' + fixed).substr(0, limit);
-	        }
-	        return fixed;
-	    }
-	};
-
-/***/ },
-/* 553 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.default = {
-	    bind: function bind() {
-	        var _this = this;
-
-	        this.contains = function (e) {
-
-	            var equ;
-
-	            if (_this.el.contains(e.target)) return false;
-
-	            // console.log(this.expression)
-	            if (_this.expression && 'function' == typeof _this.vm[_this.expression]) {
-
-	                _this.vm[_this.expression]();
-	                return;
-	            }
-
-	            if (equ = splitEqu(_this.expression)) {
-	                // console.log(equ.name, equ.value)
-	                _this.vm[equ.name] = equ.value;
-	            } else {
-
-	                _this.vm.hasOwnProperty('show') && (_this.vm['show'] = false);
-	            }
-	        };
-	        document.addEventListener('click', this.contains, false);
-	    },
-	    unbind: function unbind() {
-	        document.removeEventListener('click', this.contains, false);
-	    }
-	};
-
-
-	function splitEqu(expression) {
-	    var arr = (expression || '').split('=');
-	    // console.log(arr)
-	    return arr.length > 1 ? { name: arr[0].trim(), value: arr[1].trim() == 'true' } : false;
-	}
-
-/***/ },
-/* 554 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 555 */,
-/* 556 */
+/* 1106 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
@@ -16682,7 +15938,7 @@ webpackJsonp([0],[
 	var content = __webpack_require__(__webpack_module_template_argument_0__);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -16699,7 +15955,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 557 */
+/* 1107 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
@@ -16708,7 +15964,7 @@ webpackJsonp([0],[
 	var content = __webpack_require__(__webpack_module_template_argument_0__);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -16725,7 +15981,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 558 */
+/* 1108 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
@@ -16734,7 +15990,7 @@ webpackJsonp([0],[
 	var content = __webpack_require__(__webpack_module_template_argument_0__);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(71)(content, {});
+	var update = __webpack_require__(171)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
