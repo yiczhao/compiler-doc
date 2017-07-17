@@ -3,7 +3,7 @@
       <div>
         <ks-checkbox2 
             v-bind:checked.sync="itemdata[checkedKey]"
-            v-on:change="checkboxChange" ></ks-checkbox2>
+            v-on:change="checkboxChange"></ks-checkbox2>
           <!-- <input type="checkbox"  class="checkbox" 
               v-on:change="checkboxChange" 
               v-model="itemdata[checkedKey]"

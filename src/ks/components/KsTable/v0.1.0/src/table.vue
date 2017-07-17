@@ -23,7 +23,10 @@
                     <input type="checkbox" id="KsTable_{{_uid}}_{{index}}"
                            v-if="key=='checked'"
                            v-model="item.checked"/>
-                    <div v-if="key!='checked'" v-html="val | render key item index">
+                    <!-- <ks-checkbox2 id="KsTable_{{_uid}}_{{index}}"
+                        v-if="key=='checked'"
+                        v-bind:checked.sync="item.checked"></ks-checkbox2>
+ -->                    <div v-if="key!='checked'" v-html="val | render key item index">
                     </div>        
                 </td>      
             </tr>
@@ -52,10 +55,12 @@
      */
     
     import KsIcon from 'KsComponents/KsIcon/v0.1.0/src/icon.vue'
+    import KsCheckbox2 from 'KsComponents/KsCheckbox/v0.1.0/src/checkbox.vue' 
     export default {
         VERSION:'0.1.0',
         components:{
-            'ks-icon':KsIcon
+            'ks-icon':KsIcon,
+            KsCheckbox2
         },
         props:{
             columns:{
@@ -85,7 +90,7 @@
         data(){
 
             this._ksparent = this.$parent
-            while(this.uid && this._ksparent._uid != this.uid){
+            while(!isNaN(this.uid) && this._ksparent._uid != this.uid){
                 this._ksparent = this._ksparent.$parent
             }
             this._options = {
@@ -243,7 +248,8 @@
 
                 // console.log(event.target)
                 this.$emit('change-checked',this.data,index)
-
+                event.preventDefault()
+                event.stopPropagation()
                 // console.log(this.data)
             },
             /**
