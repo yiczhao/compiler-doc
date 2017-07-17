@@ -41,12 +41,12 @@ export default [
       {
         name: '数据 Data', icon: 'icon', link: '',
         subMenu: [
-          {name: 'Table 表格', icon: 'icon', link: 'multiple-table'},
+          {name: 'Table 表格', icon: 'icon', link: 'table'},
           // {name: 'Tag 标签', icon: 'icon', link: ''},
           // {name: 'Progress 进度条', icon: 'icon', link: ''},
           // {name: 'Tree 树形控件', icon: 'icon', link: ''},
           {name: 'Tree 树形组件', icon: 'icon', link: 'tree'},
-          {name: 'Pagination 分页器', icon: 'icon', link: 'page'},
+          {name: 'Pagination 分页器', icon: 'icon', link: 'pager'},
           {name: 'Search 模糊搜索', icon: 'icon', link: 'search'},
           {name: 'DropChoose 下拉选择', icon: 'icon', link: 'dropchoose'},
           {name: 'DialogChoose 弹出层选择', icon: 'icon', link: 'dialogchoose'},
@@ -67,7 +67,7 @@ export default [
       {
         name: '导航 Navigation', icon: 'icon', link: '',
         subMenu: [
-          // {name: 'Tabs 标签页', icon: 'icon', link: ''},
+          {name: 'Tabs 标签页', icon: 'icon', link: 'tabs'},
           // {name: 'Breadcrumb 面包屑', icon: 'icon', link: ''},
           // {name: 'Dropdown 下拉菜单', icon: 'icon', link: ''},
           // {name: 'Steps 步骤条', icon: 'icon', link: ''}
@@ -81,13 +81,17 @@ export default [
         ]
       },
       {
+        name: '指令', icon: 'icon', link: '',
+        subMenu: [
+          {name: '限制字符输入', icon: 'icon', link: 'limit-number-fixed'},
+        ]
+      },
+      {
         name: '其他 Others', icon: 'icon', link: '',
         subMenu: [
-          {name: 'Tooltips 弹出提示', icon: 'icon', link: 'tooltips'},
-          {name: 'Image 查看', icon: 'icon', link: 'image'},
-          {name: 'ksImgs 查看', icon: 'icon', link: 'ksimg'},
-          {name: '多标题表格', icon: 'icon', link: 'multiple-table'},
-          {name: '定项表格', icon: 'icon', link: 'setitem-table'},
+          {name: 'Tooltips 弹出提示', icon: 'icon', link: 'tips'},
+          {name: 'Image 查看', icon: 'icon', link: 'image/v1.0.1'},
+          // {name: 'ksImgs 查看', icon: 'icon', link: 'ksimg'},
           // {name: 'Carousel 走马灯', icon: 'icon', link: ''},
           // {name: 'Collapse 折叠面板', icon: 'icon', link: ''}
         ]

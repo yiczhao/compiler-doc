@@ -23,10 +23,11 @@
   import KCrumbs from './core/KCrumbs.vue'
 
   export default{
+    components: { KHeader, KMenu, KFooter, KCrumbs },
     data () {
       return { }
     },
-
-    components: { KHeader, KMenu, KFooter, KCrumbs }
+    created(){}
+    
   }
 </script>

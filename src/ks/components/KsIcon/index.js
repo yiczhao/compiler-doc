@@ -1,10 +1,7 @@
-/**
- * @description 图标 图标 图标.
- * @author pkeros
- * @data 2017/4/11
- * @email pkeros@vip.qq.com
- */
+import KsIcon_v0 from './v0.1.0/'
 
-import KsIcon from './src/icon.vue'
 
-export default KsIcon;
+
+export default {
+  KsIcon_v0
+}

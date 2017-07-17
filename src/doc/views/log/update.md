@@ -1,6 +1,7 @@
-# 更新记录
+# 更新记录 (已变更到最为层 CHANGELOG.md文件下)
 
 > 日志更新记录
+
 
 >> 添加 <a v-link="{name:'intro'}">npm run min 介绍</a> 和 <a v-link="{name:'dir'}">组件目录结构文档描述</a> 【2017.03.27】
 
@@ -14,5 +15,6 @@
 
 
 >> 添加 <a v-link="{name:'dir'}">ks-autobem-loader</a>描述
+>> 添加<a v-link="{name:'dialogchoose'}">弹出层选择内容介绍</a> 的title字段,用户可以自己选择标题
 
 

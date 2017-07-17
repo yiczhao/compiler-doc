@@ -1,5 +1,5 @@
-import KsTable from './src/table.vue'
+import KsTable_v0 from './v0.1.0/'
 
-export default{
-    KsTable
+export default {
+  KsTable_v0
 }

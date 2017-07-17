@@ -1,14 +1,5 @@
-/**
- * @description KsButton 组件
- * @author: pkeros.
- * @date: 2016/10/18.
- * @email pkeros@vip.qq.com
- */
+import KsButton_v0 from './v0.1.0/'
 
-import KsButton from './src/main.vue'
-import KsButtonAbstract from './src/abstract.vue'
-
-export {
-  KsButton,
-  KsButtonAbstract
+export default {
+  KsButton_v0
 }

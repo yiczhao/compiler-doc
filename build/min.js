@@ -32,36 +32,37 @@ var dirMap = {
 
 
 Object.keys(dirMap).map((key)=>{
-    
     dependFile(dirMap[key])
         .then((vals)=>{
             // console.log(vals)
-            var matchStrs = ''
-            if(argv.length){
-                vals = vals.filter((val)=>{
-                    return ~argv.indexOf(val.fileName)
-                })
-                matchStrs = vals.map((val)=>{
-                    return val.fileName
-                })
 
-                argv = argv.sort()
-                matchStrs = matchStrs.sort()
-                // console.log((argv.join(' ')))
-                // console.log((matchStrs.join(' ')))
-                matchStrs = (argv.join(' ')).replace(matchStrs.join(' '),'')
-                if(matchStrs) {
-                    console.warn((`${key}中没找到模块:${matchStrs} ✘ `).grey.bgWhite)
-                }else{
-                    console.log((`${key}中找到模块 : ${argv.join(' ')} ️✔`).green)
+            if(argv.length){
+                vals = vals.filter((val)=> ~argv.indexOf(val.fileName) )
+                var matchStrs = vals.map((val)=> val.fileName )
+                // console.log(matchStrs) // [ 'KsIcon', ... ]
+                // { has: [], none: [] }
+                var result = argv.reduce(function(obj,key){
+                    if(~matchStrs.indexOf(key)){
+                        obj.has.push(key)
+                    }else{
+                        obj.none.push(key)
+                    }
+                    return obj
+                },{has:[],none:[]})
+                // console.log(result)
+
+                // return
+                if(result.none.length){
+                    console.warn((`${key}中没找到模块:${result.none.join(' ')} ✘ `).grey.bgWhite)
+                }   
+                if(result.has.length) {
+                    console.log((`${key}中找到模块 : ${result.has.join(' ')} ️✔`).green)
                     console.log(('☞  构建中 ...').green)
                 }
-                    
             }
-            vals.forEach((val)=>{
-                // console.log(val)
+            
+            vals.forEach(function(val){
                 build(val.fileName,val.filePath,val.version,key)
-                
             })
         
             
@@ -105,11 +106,7 @@ function build(name, file_path,version,root) {
                 }
             },
             plugins: [
-                // new CleanWebpackPlugin(['ks'], {
-                //     root: path.resolve(__dirname,'../min'),
-                //     verbose: true,
-                //     dry: false
-                // }),
+                
                 new webpack.optimize.UglifyJsPlugin({
                     compress: {
                         warnings: false
@@ -138,11 +135,14 @@ function build(name, file_path,version,root) {
                     zindex: false
                 })
             }).then((result) => {
-                fs.writeFileSync(path.resolve(outPath, './style'+dotVersion+'.css'), result.css)
+                if(result.css){
+                    fs.writeFileSync(path.resolve(outPath, './style'+dotVersion+'.css'), result.css)    
+                }else{
+                    // console.warn(outPath,'无样式...'.yellow)
+                }
                 fs.unlinkSync(path.resolve(outPath, './app.css'))
                 traceProgress(stats, name, version, count, time_start)
             }).catch((e) => {
-                console.warn('无样式...'.yellow)
                 traceProgress(stats, name, version, count, time_start)
             })
 

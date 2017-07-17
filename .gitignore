@@ -4,5 +4,6 @@ Thumbs.db
 .editorconfig
 *.sublime-project
 *.sublime-workspace
+test/unit/coverage
 npm-debug.log
 node_modules

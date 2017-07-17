@@ -1,6 +1,20 @@
 ## 更新日志
 
-### 1.0.0
+
+**2017.07.12**
+- 优化指令[KsLimitNumberFixed](#!/directives/limit-number-fixed)
+
+**2017.07.11**
+- 重构[KsTips](#!/other/tips/v1.0.0)
+
+**2017.07.06**
+- 重构[KsTree](#!/data/tree/v0.1.0)
+
+**2017.07.05**
+- 重构checkbox基础元件，[KsTree](#!/data/tree/v0.1.0)中用到
+
+**2017.06.19**
+- 文档添加版本
 
 **2017.04.26**
 - 修复了 webpack -p 命令式会压缩样式将差值表达式去除的样式不生效的问题，为此重新设计了自定样式的代码。
@@ -8,7 +22,6 @@
 **2017.04.25**
 - 修改了完善优化了[KsRadio](#!/notice/dialog)组件。
 - 重构了 `KsDialog` 组件。
-
 
 **2017.04.21**
 - 添加[KsIcon](#!/base/icons-list) 向上箭头、向下箭头

@@ -1,15 +1,8 @@
-/**
- * @description: 封装了一些列的的复选框组件。
- * @summary:
- *  KsCheckbox 中封装了多种 Checkbox, 它们可以分别导入。
- * @author: pkeros.
- * @date: 2016/10/11.
- */
+import KsStoreClick_v0 from './v0.1.0'
 
-import KsStore from './src/Store.vue'
-import KsStoreClick from './src/StoreClick.vue'
-
-export default {
-  KsStore,
-  KsStoreClick
+export  default{
+    KsStoreClick_v0
 }
+
+
+

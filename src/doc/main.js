@@ -5,17 +5,16 @@
  * @email pkeros@vip.qq.com
  */
 
-require('./styles/app.scss');
 
+import './styles/app.scss'
 import App from './App.vue'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
-import VueValidator from 'vue-validator'
+// import VueValidator from 'vue-validator'
 
 import RouterMap from './router'
-
-import KsComponents from '../ks/components'
+import KsComponents from '../ks/components/kscomponents.js'
 import Directives from '../ks/directives'
 
 // Vue configure
@@ -24,7 +23,7 @@ Vue.config.debug = process.env.NODE_ENV !== 'production';
 // attach plugin.
 Vue.use(VueResource);
 Vue.use(VueRouter);
-Vue.use(VueValidator);
+// Vue.use(VueValidator);
 
 // attach utils
 Vue.use(Directives);

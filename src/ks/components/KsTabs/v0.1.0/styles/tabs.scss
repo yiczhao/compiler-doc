@@ -1,0 +1,105 @@
+@import '~KsComponents/styles/base/creater/index';
+
+
+.KsTabs-title-ul {
+    border-bottom: 1px solid #e9e9e9;
+}
+
+ .KsTabs-title-wrap{
+    padding: 10px 20px;
+ }
+
+%kstabs-wl {
+    content: " ";
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+}
+%kstabs-wl-downtemp {
+    @extend %kstabs-wl;
+    height: 1px;
+    bottom: -1px;
+    background: #fff;
+}
+
+
+// .KsTabs-cover 面，待续
+
+.KsTabs-border {
+    .KsTabs-title-ul {
+        border-bottom: 1px solid #d9d9d9;
+    }
+
+    .KsTabs-title-li {
+        position: relative;
+        border-radius:4px 4px 0 0;
+        border-top:1px solid #e9e9e9;
+        border-right:1px solid #e9e9e9;   
+        border-left:1px solid #e9e9e9;
+        margin-right: 10px;
+        cursor: pointer;
+        
+        &.active ,&.disable {
+            border-color: #d9d9d9;
+            &:after{
+                @extend %kstabs-wl-downtemp;
+            }
+        }
+        &.disable {
+            &:after{
+
+            }
+        }
+    }
+}
+
+// 只有一个框，选中蓝线
+ .KsTabs-overline {
+    .KsTabs-title-li {
+        position: relative;
+        border-top:1px solid transparent;
+        border-left:1px solid transparent;   
+        border-right:1px solid transparent; 
+        cursor: pointer;
+        
+        &.active {
+            
+            border-left:1px solid #e9e9e9;   
+            border-right:1px solid #e9e9e9;
+            &:before{
+                @extend %kstabs-wl;
+                height: 2px;
+                top:0px;
+                background: #42a5f5;
+            }
+            &:after{
+                @extend %kstabs-wl-downtemp;
+            }
+            &:first-child {
+                border-left:1px solid transparent;   
+            }
+            
+        }
+    }
+ }
+
+// 选中只有下蓝线
+ .KsTabs-underline {
+    .KsTabs-title-li {
+        position: relative;
+        cursor: pointer;
+        
+        &.active {
+            
+            &:after{
+                @extend %kstabs-wl;
+                height: 2px;
+                bottom: -1px;
+                background: #42a5f5;
+            }
+            
+        }
+    }
+ }
+ 

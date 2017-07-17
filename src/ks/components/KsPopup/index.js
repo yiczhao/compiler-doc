@@ -4,10 +4,8 @@
  * @date: 2016/11/14.
  */
 
-import KsPopup from './src/abstract.vue'
-import KsToolTips from './src/tips.vue'
+import KsPopup_v0 from './v0.1.0'
 
-export {
-  KsPopup,
-  KsToolTips
+export default{
+  KsPopup_v0
 }

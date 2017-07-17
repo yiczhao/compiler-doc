@@ -6,35 +6,35 @@
  * @date 2016/11/11.
  */
 
-import { KsToolTips } from './KsPopup'
-import KsNoticeCenter from './KsNoticeCenter'
+import KsPopup from './KsPopup'
+import KsNotice from './KsNotice'
 import KsSwitch from './KsSwitch'
 import { KsDialog, KsDialogEntity } from './KsDialog'
 import { KsModal, KsModalEntity, KsModalCenter } from './KsModal'
 import KsCheckbox from './KsCheckbox'
 import { KsMask, KsMaskEntity } from './KsMask'
 import KsRadio from './KsRadio'
-import { KsButton, KsButtonAbstract } from './KsButton'
+import KsButton from './KsButton'
 import KsPage from './KsPager'
 import KsDater from './KsDater'
-import KsStore from './KsDropChoose'
+import KsStoreClick from './KsDropChoose'
 import KsSearch from './KsSearch'
-import KsDialogChoose from './KsDialogChoose'
-import KsItem from './KsFloorSelect'
+import KsDialogChoose  from './KsDialogChoose'
+import KsItemFloor from './KsFloorSelect'
 import KsDialogProgram from './KsDialogProgram'
 import KsAddTableItem from './KsAddTable'
-import {KsImage,KsImgs} from './KsImage'
+import KsImage from './KsImage'
 import KsIcon from './KsIcon'
-import { KsAbstract,KsTips } from './KsTip'
+import KsTips from './KsTips'
 import KsTable from './KsTable'
+import KsTabs from './KsTabs'
+import KsTree from './KsTree'
 
-// 版本
-const VERSION = '1.0.0';
+
 
 // 组件
 const Components = {
 
-  VERSION,
   KsMaskEntity,
   KsDialogEntity,
   KsModalEntity,
@@ -45,65 +45,33 @@ const Components = {
   KsCheckbox,
   KsRadio,
   KsButton,
-  KsButtonAbstract,
-  KsToolTips,
+  KsPopup,
   KsDater,
-  KsStore,
+  KsStoreClick,
   KsSearch,
   KsDialogChoose,
-  KsItem,
+  KsItemFloor,
   KsDialogProgram,
   KsImage,
-  KsImgs,
   KsAddTableItem,
-  KsAbstract,
   KsTips,
-  KsTable
+  KsTable,
+  KsTabs,
+  KsTree
+
 
 };
+
 
 // 插件
 const Plugins = {
 
-  VERSION,
-  KsNoticeCenter,
+  KsNotice,
   KsDialog,
   KsMask,
   KsModal
 
 };
 
-const install = function(Vue) {
-  if (install.installed) return;
 
-  Object.keys(Components).reduce((arr, k) => {
-    let temp;
-
-    if(Components[k].template) {
-      temp = { name: k, val: Components[k] };
-    } else {
-      temp = Object.keys(Components[k]).map((key) => {
-        return { name: key, val: Components[k][key] }
-      });
-    }
-
-    return arr.concat(temp);
-  }, []).forEach((item) => {
-    Vue.component(item.name, item.val)
-  });
-
-  // install plugins.
-  Object.keys(Plugins).forEach(k => {
-    if (k === 'VERSION') return;
-    Plugins[k].install(Vue);
-  });
-
-};
-
-// automation register components.
-if (typeof window !== 'undefined' && window.Vue) {
-  install(window.Vue);
-}
-
-export default install
 export { Components, Plugins }
