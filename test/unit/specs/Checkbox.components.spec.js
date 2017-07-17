@@ -73,7 +73,7 @@ describe('KsCheckbox 组件测试', () => {
     });
     let entityEl = vm.$el.querySelector('input');
     entityEl.click();
-
+    
     expect(vm.checked).to.be.true;
   });
 
