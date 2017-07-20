@@ -8,9 +8,12 @@
                         v-if="item.sortable"
                         size="1x"
                         v-on:click="sort($index)"></ks-icon>
-                    <input type="checkbox" name="ks-table-allchecked"
+                    <!-- <input type="checkbox" name="ks-table-allchecked"
                         v-model="allchecked"
-                        v-if="item.checked"/>
+                        v-if="item.checked"/> -->
+                    <ks-checkbox2 name="ks-table-allchecked"
+                        v-if="item.checked"
+                        v-bind:checked.sync="allchecked"></ks-checkbox2>
                     <div v-text="item.title" 
                         style="display: inline-block;" 
                          v-bind:style="{'width':item.width}"></div>
@@ -20,13 +23,13 @@
         <tbody v-el:tbody>    
             <tr v-for="(index, item) in data">      
                 <td v-for="(key, val) in item" >
-                    <input type="checkbox" id="KsTable_{{_uid}}_{{index}}"
+                    <!-- <input type="checkbox" id="KsTable_{{_uid}}_{{index}}"
                            v-if="key=='checked'"
-                           v-model="item.checked"/>
-                    <!-- <ks-checkbox2 id="KsTable_{{_uid}}_{{index}}"
+                           v-model="item.checked"/> -->
+                    <ks-checkbox2 id="KsTable_{{_uid}}_{{index}}"
                         v-if="key=='checked'"
                         v-bind:checked.sync="item.checked"></ks-checkbox2>
- -->                    <div v-if="key!='checked'" v-html="val | render key item index">
+                    <div v-if="key!='checked'" v-html="val | render key item index">
                     </div>        
                 </td>      
             </tr>

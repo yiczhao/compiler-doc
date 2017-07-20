@@ -21,6 +21,7 @@
     },
     props: {
       color: {type: String, default: '#00A5E0'},
+      name:{type:String},
       checked: {twoWay: true},
       disabled: {type: Boolean, default: false}
     },
