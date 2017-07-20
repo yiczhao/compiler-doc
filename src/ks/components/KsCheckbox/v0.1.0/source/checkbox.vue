@@ -5,10 +5,8 @@
             v-bind:name="name"
             v-model="checked"
             v-bind:disabled="disabled && 'disabled'">
-      <ks-icon class="ib KsCheckbox-cube"
-        v-bind:class="{'KsCheckbox-cube-checked':checked,'KsCheckbox-cube-disabled':disabled}"
-        v-bind:name="ksIconName"
-        v-bind:style="cubeStyle"></ks-icon>
+      <span class="ib KsCheckbox-cube" 
+        v-bind:style="cubeStyle"></span>
     </span>
 </template>
 
@@ -28,11 +26,6 @@
       cubeStyle(){
         var color = this.color
         return color!='#00A5E0'? `background:${color}`: ''
-      },
-      ksIconName(){
-          return this.checked ? 
-                      this.disabled ? 'fuxuanbukexuan':'fuxuanxuanze' 
-                      : 'fuxuanweixuan'
       }
     },
     methods: {}
