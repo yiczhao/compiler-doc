@@ -40,13 +40,15 @@
     },
     watch:{
       show(val){
-        this.showPopper = val
+        this.$nextTick(()=>{
+          this.showPopper = val  
+        })
       },
       placement(val){
         
         if(!this.popperJS) this.updatePopper()
         this.showPopper = false
-        setTimeout(()=>{
+        this.$nextTick(()=>{
           this.doDestroy()
           this.updatePopper()  
           this.showPopper = true
